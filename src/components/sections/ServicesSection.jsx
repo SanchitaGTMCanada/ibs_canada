@@ -529,422 +529,671 @@ export default function ServicesSection() {
           {/* =================================================
               RIGHT — INNOVATION ICON
           ================================================= */}
+{/* =================================================
+    RIGHT — PREMIUM INNOVATION VISUAL
+================================================= */}
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: 50,
-              scale: 0.92,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-              scale: 1,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.25,
-            }}
-            transition={{
-              duration: 0.9,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="
-              relative
-              flex
-              min-h-[390px]
-              items-center
-              justify-center
-              lg:min-h-[440px]
-            "
-          >
-            {/* =================================================
-                SOFT TEAL GLOW
-            ================================================= */}
+<motion.div
+  initial={{
+    opacity: 0,
+    x: 50,
+    scale: 0.94,
+  }}
+  whileInView={{
+    opacity: 1,
+    x: 0,
+    scale: 1,
+  }}
+  viewport={{
+    once: true,
+    amount: 0.25,
+  }}
+  transition={{
+    duration: 1,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+  className="
+    relative
+    flex
+    min-h-[390px]
+    items-center
+    justify-center
+    lg:min-h-[440px]
+  "
+>
+  {/* =================================================
+      AMBIENT GLOW
+  ================================================= */}
 
-            <div
-              className="
-                absolute
-                h-[330px]
-                w-[330px]
-                rounded-full
-                bg-[radial-gradient(circle,rgba(8,127,140,0.12)_0%,rgba(8,127,140,0.045)_45%,transparent_72%)]
-                blur-2xl
-              "
-            />
+  <motion.div
+    animate={{
+      scale: [1, 1.08, 1],
+      opacity: [0.35, 0.55, 0.35],
+    }}
+    transition={{
+      duration: 6,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      absolute
+      h-[340px]
+      w-[340px]
+      rounded-full
+      bg-[radial-gradient(circle,rgba(8,127,140,0.16)_0%,rgba(8,127,140,0.055)_45%,transparent_72%)]
+      blur-2xl
+    "
+  />
 
-            {/* =================================================
-                OUTER ORBIT
-            ================================================= */}
+  {/* =================================================
+      SOFT GOLD GLOW
+  ================================================= */}
 
-            <motion.div
-              animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 22,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="
-                absolute
-                h-[300px]
-                w-[300px]
-                rounded-full
-                border
-                border-dashed
-                border-[#087F8C]/30
-                sm:h-[340px]
-                sm:w-[340px]
-              "
-            >
-              {/* Gold orbit dot */}
+  <motion.div
+    animate={{
+      scale: [0.9, 1.15, 0.9],
+      opacity: [0.08, 0.18, 0.08],
+    }}
+    transition={{
+      duration: 7,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      absolute
+      h-[220px]
+      w-[220px]
+      rounded-full
+      bg-[#C6A15B]
+      blur-[90px]
+    "
+  />
 
-              <span
-                className="
-                  absolute
-                  left-[8%]
-                  top-[13%]
-                  h-2.5
-                  w-2.5
-                  rounded-full
-                  bg-[#C6A15B]
-                  shadow-[0_0_0_5px_rgba(198,161,91,0.10)]
-                "
-              />
 
-              {/* Teal orbit dot */}
+  {/* =================================================
+      OUTER ORBIT
+  ================================================= */}
 
-              <span
-                className="
-                  absolute
-                  bottom-[14%]
-                  right-[8%]
-                  h-2
-                  w-2
-                  rounded-full
-                  bg-[#087F8C]
-                "
-              />
-            </motion.div>
+  <motion.div
+    animate={{
+      rotate: 360,
+    }}
+    transition={{
+      duration: 32,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+    className="
+      absolute
+      h-[300px]
+      w-[300px]
+      rounded-full
+      border
+      border-dashed
+      border-[#087F8C]/25
+      sm:h-[340px]
+      sm:w-[340px]
+    "
+  >
 
-            {/* =================================================
-                CENTER TARGET
-            ================================================= */}
+    {/* Gold orbital particle */}
 
-            <motion.div
-              animate={{
-                y: [0, -8, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                relative
-                z-20
-                flex
-                h-[205px]
-                w-[205px]
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-[#087F8C]
-                bg-white
-                shadow-[0_25px_60px_rgba(11,31,58,0.10)]
-                sm:h-[225px]
-                sm:w-[225px]
-              "
-            >
-              {/* Rings */}
+    <motion.span
+      animate={{
+        scale: [1, 1.5, 1],
+        opacity: [0.65, 1, 0.65],
+      }}
+      transition={{
+        duration: 2.5,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      className="
+        absolute
+        left-[8%]
+        top-[13%]
+        h-2.5
+        w-2.5
+        rounded-full
+        bg-[#C6A15B]
+        shadow-[0_0_0_5px_rgba(198,161,91,0.08),0_0_20px_rgba(198,161,91,0.35)]
+      "
+    />
 
-              <div
-                className="
-                  absolute
-                  inset-[22px]
-                  rounded-full
-                  border-[3px]
-                  border-[#087F8C]/80
-                "
-              />
+    {/* Teal orbital particle */}
 
-              <div
-                className="
-                  absolute
-                  inset-[47px]
-                  rounded-full
-                  border-[3px]
-                  border-[#087F8C]/70
-                "
-              />
+    <motion.span
+      animate={{
+        scale: [1, 1.4, 1],
+        opacity: [0.5, 1, 0.5],
+      }}
+      transition={{
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      className="
+        absolute
+        bottom-[14%]
+        right-[8%]
+        h-2
+        w-2
+        rounded-full
+        bg-[#087F8C]
+        shadow-[0_0_15px_rgba(8,127,140,0.35)]
+      "
+    />
 
-              <div
-                className="
-                  absolute
-                  inset-[70px]
-                  rounded-full
-                  bg-[#E0F3F4]
-                "
-              />
+  </motion.div>
 
-              {/* Target icon */}
 
-              <Target
-                size={78}
-                strokeWidth={1.3}
-                className="
-                  relative
-                  z-10
-                  text-[#087F8C]
-                "
-              />
+  {/* =================================================
+      INNER ORBIT
+  ================================================= */}
 
-              {/* Gold arrow */}
+  <motion.div
+    animate={{
+      rotate: -360,
+    }}
+    transition={{
+      duration: 24,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+    className="
+      absolute
+      h-[235px]
+      w-[235px]
+      rounded-full
+      border
+      border-[#C6A15B]/20
+      sm:h-[270px]
+      sm:w-[270px]
+    "
+  >
 
-              <motion.div
-                initial={{
-                  rotate: -45,
-                }}
-                animate={{
-                  rotate: 0,
-                }}
-                transition={{
-                  duration: 1,
-                  delay: 0.4,
-                }}
-                className="
-                  absolute
-                  right-[58px]
-                  top-[45px]
-                  z-20
-                "
-              >
-                <ArrowUpRight
-                  size={55}
-                  strokeWidth={2.2}
-                  className="
-                    text-[#C6A15B]
-                  "
-                />
-              </motion.div>
-            </motion.div>
+    {/* Orbit highlight */}
 
-            {/* =================================================
-                TOP ICON — INNOVATION
-            ================================================= */}
+    <motion.span
+      animate={{
+        opacity: [0, 1, 0],
+        scale: [0.7, 1.2, 0.7],
+      }}
+      transition={{
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      className="
+        absolute
+        right-[5%]
+        top-[45%]
+        h-2
+        w-2
+        rounded-full
+        bg-[#C6A15B]
+        shadow-[0_0_18px_rgba(198,161,91,0.5)]
+      "
+    />
 
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0.6,
-              }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.5,
-                delay: 0.4,
-              }}
-              className="
-                absolute
-                left-[50%]
-                top-[4px]
-                z-30
-                flex
-                h-[64px]
-                w-[64px]
-                -translate-x-1/2
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-[#C6A15B]/50
-                bg-white
-                shadow-[0_12px_30px_rgba(11,31,58,0.08)]
-              "
-            >
-              <Lightbulb
-                size={27}
-                strokeWidth={1.6}
-                className="
-                  text-[#C6A15B]
-                "
-              />
-            </motion.div>
+  </motion.div>
 
-            {/* =================================================
-                LEFT ICON — COLLABORATION
-            ================================================= */}
 
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: -20,
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.5,
-                delay: 0.55,
-              }}
-              className="
-                absolute
-                left-[4%]
-                top-[43%]
-                z-30
-                flex
-                h-[64px]
-                w-[64px]
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-[#087F8C]/40
-                bg-white
-                shadow-[0_12px_30px_rgba(11,31,58,0.08)]
-              "
-            >
-              <Handshake
-                size={27}
-                strokeWidth={1.6}
-                className="
-                  text-[#087F8C]
-                "
-              />
-            </motion.div>
+  {/* =================================================
+      CENTER BREATHING RING
+  ================================================= */}
 
-            {/* =================================================
-                RIGHT ICON — GROWTH
-            ================================================= */}
+  <motion.div
+    animate={{
+      scale: [1, 1.12, 1],
+      opacity: [0.2, 0.4, 0.2],
+    }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      absolute
+      h-[230px]
+      w-[230px]
+      rounded-full
+      border
+      border-[#087F8C]/30
+    "
+  />
 
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: 20,
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.5,
-                delay: 0.65,
-              }}
-              className="
-                absolute
-                right-[3%]
-                top-[40%]
-                z-30
-                flex
-                h-[64px]
-                w-[64px]
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-[#087F8C]/40
-                bg-white
-                shadow-[0_12px_30px_rgba(11,31,58,0.08)]
-              "
-            >
-              <ChartNoAxesCombined
-                size={27}
-                strokeWidth={1.6}
-                className="
-                  text-[#087F8C]
-                "
-              />
-            </motion.div>
 
-            {/* =================================================
-                BOTTOM ICON — PEOPLE
-            ================================================= */}
+  {/* =================================================
+      CENTER CARD
+  ================================================= */}
 
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.5,
-                delay: 0.75,
-              }}
-              className="
-                absolute
-                bottom-[3%]
-                left-[50%]
-                z-30
-                flex
-                h-[64px]
-                w-[64px]
-                -translate-x-1/2
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-[#0B1F3A]/20
-                bg-white
-                shadow-[0_12px_30px_rgba(11,31,58,0.08)]
-              "
-            >
-              <Users
-                size={27}
-                strokeWidth={1.6}
-                className="
-                  text-[#0B1F3A]
-                "
-              />
-            </motion.div>
+  <motion.div
+    animate={{
+      y: [0, -6, 0],
+    }}
+    transition={{
+      duration: 5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      relative
+      z-20
+      flex
+      h-[205px]
+      w-[205px]
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-[#087F8C]/80
+      bg-white
+      shadow-[0_30px_80px_rgba(11,31,58,0.13)]
+      sm:h-[225px]
+      sm:w-[225px]
+    "
+  >
 
-            {/* =================================================
-                SMALL GOLD ACCENTS
-            ================================================= */}
+    {/* Inner ring */}
 
-            <span
-              className="
-                absolute
-                right-[18%]
-                top-[10%]
-                h-2
-                w-2
-                rounded-full
-                bg-[#C6A15B]
-              "
-            />
+    <div
+      className="
+        absolute
+        inset-[21px]
+        rounded-full
+        border-[2px]
+        border-[#087F8C]/60
+      "
+    />
 
-            <span
-              className="
-                absolute
-                bottom-[16%]
-                left-[18%]
-                h-1.5
-                w-1.5
-                rounded-full
-                bg-[#087F8C]
-              "
-            />
-          </motion.div>
+    <div
+      className="
+        absolute
+        inset-[43px]
+        rounded-full
+        border
+        border-[#087F8C]/30
+      "
+    />
+
+
+    {/* Soft center */}
+
+    <motion.div
+      animate={{
+        scale: [1, 1.06, 1],
+      }}
+      transition={{
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      className="
+        absolute
+        inset-[66px]
+        rounded-full
+        bg-[#E0F3F4]
+      "
+    />
+
+
+    {/* =================================================
+        TARGET ICON
+    ================================================= */}
+
+    <motion.div
+      animate={{
+        rotate: [0, 3, -3, 0],
+      }}
+      transition={{
+        duration: 6,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      className="
+        relative
+        z-10
+      "
+    >
+      <Target
+        size={72}
+        strokeWidth={1.25}
+        className="
+          text-[#087F8C]
+        "
+      />
+    </motion.div>
+
+
+    {/* =================================================
+        GOLD ARROW
+    ================================================= */}
+
+    <motion.div
+      initial={{
+        opacity: 0,
+        scale: 0.7,
+        rotate: -25,
+      }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        rotate: 0,
+      }}
+      viewport={{
+        once: true,
+      }}
+      transition={{
+        duration: 0.8,
+        delay: 0.6,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      animate={{
+        y: [0, -4, 0],
+      }}
+      className="
+        absolute
+        right-[56px]
+        top-[43px]
+        z-20
+      "
+    >
+      <ArrowUpRight
+        size={52}
+        strokeWidth={2}
+        className="
+          text-[#C6A15B]
+          drop-shadow-[0_4px_8px_rgba(198,161,91,0.25)]
+        "
+      />
+    </motion.div>
+
+  </motion.div>
+
+
+  {/* =================================================
+      TOP — INNOVATION
+  ================================================= */}
+
+  <motion.div
+    initial={{
+      opacity: 0,
+      y: -25,
+      scale: 0.8,
+    }}
+    whileInView={{
+      opacity: 1,
+      y: 0,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+    }}
+    transition={{
+      duration: 0.7,
+      delay: 0.45,
+      ease: [0.22, 1, 0.36, 1],
+    }}
+    animate={{
+      y: [0, -7, 0],
+    }}
+    className="
+      absolute
+      left-1/2
+      top-[2px]
+      z-30
+      flex
+      h-[66px]
+      w-[66px]
+      -translate-x-1/2
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-[#C6A15B]/45
+      bg-white
+      shadow-[0_15px_40px_rgba(11,31,58,0.10)]
+    "
+  >
+
+    <motion.div
+      animate={{
+        rotate: [0, -6, 6, 0],
+      }}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+    >
+      <Lightbulb
+        size={28}
+        strokeWidth={1.5}
+        className="
+          text-[#C6A15B]
+        "
+      />
+    </motion.div>
+
+  </motion.div>
+
+
+  {/* =================================================
+      LEFT — COLLABORATION
+  ================================================= */}
+
+  <motion.div
+    initial={{
+      opacity: 0,
+      x: -25,
+      scale: 0.8,
+    }}
+    whileInView={{
+      opacity: 1,
+      x: 0,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+    }}
+    transition={{
+      duration: 0.7,
+      delay: 0.55,
+      ease: [0.22, 1, 0.36, 1],
+    }}
+    animate={{
+      y: [0, 5, 0],
+    }}
+    className="
+      absolute
+      left-[3%]
+      top-[43%]
+      z-30
+      flex
+      h-[66px]
+      w-[66px]
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-[#087F8C]/35
+      bg-white
+      shadow-[0_15px_40px_rgba(11,31,58,0.10)]
+    "
+  >
+
+    <Handshake
+      size={28}
+      strokeWidth={1.5}
+      className="
+        text-[#087F8C]
+      "
+    />
+
+  </motion.div>
+
+
+  {/* =================================================
+      RIGHT — GROWTH
+  ================================================= */}
+
+  <motion.div
+    initial={{
+      opacity: 0,
+      x: 25,
+      scale: 0.8,
+    }}
+    whileInView={{
+      opacity: 1,
+      x: 0,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+    }}
+    transition={{
+      duration: 0.7,
+      delay: 0.65,
+      ease: [0.22, 1, 0.36, 1],
+    }}
+    animate={{
+      y: [0, -5, 0],
+    }}
+    className="
+      absolute
+      right-[2%]
+      top-[40%]
+      z-30
+      flex
+      h-[66px]
+      w-[66px]
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-[#087F8C]/35
+      bg-white
+      shadow-[0_15px_40px_rgba(11,31,58,0.10)]
+    "
+  >
+
+    <ChartNoAxesCombined
+      size={28}
+      strokeWidth={1.5}
+      className="
+        text-[#087F8C]
+      "
+    />
+
+  </motion.div>
+
+
+  {/* =================================================
+      BOTTOM — PEOPLE
+  ================================================= */}
+
+  <motion.div
+    initial={{
+      opacity: 0,
+      y: 25,
+      scale: 0.8,
+    }}
+    whileInView={{
+      opacity: 1,
+      y: 0,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+    }}
+    transition={{
+      duration: 0.7,
+      delay: 0.75,
+      ease: [0.22, 1, 0.36, 1],
+    }}
+    animate={{
+      y: [0, 6, 0],
+    }}
+    className="
+      absolute
+      bottom-[2%]
+      left-1/2
+      z-30
+      flex
+      h-[66px]
+      w-[66px]
+      -translate-x-1/2
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-[#0B1F3A]/20
+      bg-white
+      shadow-[0_15px_40px_rgba(11,31,58,0.10)]
+    "
+  >
+
+    <Users
+      size={28}
+      strokeWidth={1.5}
+      className="
+        text-[#0B1F3A]
+      "
+    />
+
+  </motion.div>
+
+
+  {/* =================================================
+      FLOATING PARTICLES
+  ================================================= */}
+
+  <motion.span
+    animate={{
+      y: [0, -10, 0],
+      opacity: [0.35, 0.9, 0.35],
+    }}
+    transition={{
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      absolute
+      right-[18%]
+      top-[10%]
+      h-2
+      w-2
+      rounded-full
+      bg-[#C6A15B]
+      shadow-[0_0_15px_rgba(198,161,91,0.4)]
+    "
+  />
+
+  <motion.span
+    animate={{
+      y: [0, 8, 0],
+      opacity: [0.3, 0.8, 0.3],
+    }}
+    transition={{
+      duration: 3.5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      absolute
+      bottom-[16%]
+      left-[17%]
+      h-1.5
+      w-1.5
+      rounded-full
+      bg-[#087F8C]
+      shadow-[0_0_15px_rgba(8,127,140,0.4)]
+    "
+  />
+
+</motion.div>
         </div>
 
         {/* =====================================================
