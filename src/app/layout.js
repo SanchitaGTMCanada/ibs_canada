@@ -13,10 +13,14 @@ export const metadata = {
     "Innovative Business Solutions for Indigenous organizations and entrepreneurs.",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}) {
   return (
     <html lang="en">
-      <body className={manrope.variable}>{children}</body>
+      <body className={manrope.variable}>
+        {children}
+      </body>
     </html>
   );
 }

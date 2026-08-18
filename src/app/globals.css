@@ -5,15 +5,24 @@
 ========================================================= */
 
 :root {
+  /* Brand */
+
   --ibs-navy: #0b1f3a;
   --ibs-teal: #087f8c;
   --ibs-gold: #c6a15b;
 
+  /* Text */
+
   --ibs-charcoal: #202832;
   --ibs-muted: #6c7781;
 
+  /* Backgrounds */
+
   --ibs-ivory: #f6f4ef;
   --ibs-white: #ffffff;
+
+  /* Border */
+
   --ibs-silver: #dce2e7;
 }
 
@@ -36,14 +45,30 @@ body {
   background: var(--ibs-white);
   color: var(--ibs-charcoal);
 
-  font-family: var(--font-manrope), sans-serif;
+  font-family:
+    var(--font-manrope),
+    Arial,
+    Helvetica,
+    sans-serif;
 
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
 }
 
 img {
@@ -51,39 +76,72 @@ img {
   max-width: 100%;
 }
 
-button {
-  cursor: pointer;
-  font: inherit;
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  background: var(--ibs-teal);
+  color: var(--ibs-white);
 }
 
 /* =========================================================
-   CONTAINER
+   SCROLLBAR
 ========================================================= */
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ibs-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: var(--ibs-teal);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ibs-navy);
+}
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+/*
+  IMPORTANT:
+
+  Navbar and Hero both use this exact container.
+
+  This keeps the entire page aligned to one grid.
+*/
+
 .ibs-container {
-  width: 100%;
-  max-width: 1320px;
+  width: min(100% - 48px, 1440px);
 
-  margin: auto;
-
-  padding-inline: 24px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
   .ibs-container {
-    padding-inline: 40px;
+    width: min(100% - 80px, 1440px);
   }
 }
 
 @media (min-width: 1280px) {
   .ibs-container {
-    padding-inline: 50px;
+    width: min(100% - 96px, 1440px);
   }
 }
 
 /* =========================================================
    TYPOGRAPHY
 ========================================================= */
+
+/* Hero */
 
 .ibs-hero {
   font-size: 56px;
@@ -92,17 +150,25 @@ button {
   letter-spacing: -0.04em;
 }
 
+/* H1 */
+
 .ibs-h1 {
   font-size: 48px;
   font-weight: 700;
   line-height: 1.1;
+  letter-spacing: -0.03em;
 }
+
+/* H2 */
 
 .ibs-h2 {
   font-size: 36px;
   font-weight: 650;
   line-height: 1.2;
+  letter-spacing: -0.025em;
 }
+
+/* H3 */
 
 .ibs-h3 {
   font-size: 24px;
@@ -110,22 +176,27 @@ button {
   line-height: 1.3;
 }
 
+/* Body */
+
 .ibs-body {
   font-size: 17px;
   font-weight: 400;
   line-height: 1.65;
 }
 
+/* Navigation */
+
 .ibs-nav {
   font-size: 15px;
   font-weight: 500;
+  line-height: 1.4;
 }
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE TYPOGRAPHY
 ========================================================= */
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .ibs-hero {
     font-size: 48px;
   }
@@ -142,6 +213,7 @@ button {
 @media (max-width: 640px) {
   .ibs-hero {
     font-size: 40px;
+    line-height: 1.1;
   }
 
   .ibs-h1 {
@@ -149,7 +221,7 @@ button {
   }
 
   .ibs-h2 {
-    font-size: 28px;
+    font-size: 29px;
   }
 
   .ibs-h3 {
@@ -170,55 +242,132 @@ button {
 
   align-items: center;
   justify-content: center;
+
   gap: 10px;
 
-  padding: 16px 30px;
+  min-height: 52px;
+
+  padding: 0 24px;
 
   border-radius: 999px;
 
   background: var(--ibs-teal);
 
-  color: white;
+  color: var(--ibs-white);
 
   font-size: 15px;
   font-weight: 600;
 
-  transition: 0.35s;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .ibs-btn:hover {
-  background: var(--ibs-navy);
   transform: translateY(-2px);
-}
 
-/* Secondary */
+  background: var(--ibs-navy);
 
-.ibs-btn-outline {
-  border: 1px solid rgba(255, 255, 255, 0.35);
-
-  background: transparent;
-
-  color: white;
-
-  backdrop-filter: blur(10px);
-
-  transition: 0.35s;
-}
-
-.ibs-btn-outline:hover {
-  background: white;
-  color: var(--ibs-navy);
+  box-shadow:
+    0 14px 35px
+    rgba(8, 127, 140, 0.22);
 }
 
 /* =========================================================
-   SCROLLBAR
+   HERO BUTTON
 ========================================================= */
 
-::-webkit-scrollbar {
-  width: 8px;
+.ibs-btn-gold {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 56px;
+
+  padding: 0 28px;
+
+  border-radius: 999px;
+
+  background: var(--ibs-gold);
+
+  color: var(--ibs-navy);
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-::-webkit-scrollbar-thumb {
+.ibs-btn-gold:hover {
+  transform: translateY(-2px);
+
+  background: var(--ibs-white);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   OUTLINE BUTTON
+========================================================= */
+
+.ibs-btn-outline {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 56px;
+
+  padding: 0 28px;
+
+  border: 1px solid var(--ibs-teal);
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  color: var(--ibs-white);
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ibs-btn-outline:hover {
+  transform: translateY(-2px);
+
   background: var(--ibs-teal);
-  border-radius: 20px;
+
+  color: var(--ibs-white);
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.ibs-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 767px) {
+  .ibs-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }

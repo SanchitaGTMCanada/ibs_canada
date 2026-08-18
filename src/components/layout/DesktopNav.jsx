@@ -32,55 +32,23 @@ const navigation = [
 ];
 
 const services = [
-  {
-    title: "Education & Training",
-    href: "/services",
-  },
-  {
-    title: "Engineering & Technical",
-    href: "/services",
-  },
-  {
-    title: "Infrastructure",
-    href: "/services",
-  },
-  {
-    title: "Technology & Innovation",
-    href: "/services",
-  },
-  {
-    title: "Social & Economic",
-    href: "/services",
-  },
-  {
-    title: "Financial Management",
-    href: "/services",
-  },
-  {
-    title: "Governance",
-    href: "/services",
-  },
+  "Education & Training",
+  "Engineering & Technical",
+  "Infrastructure",
+  "Technology & Innovation",
+  "Social & Economic",
+  "Financial Management",
+  "Governance",
 ];
 
-export default function DesktopNav({
-  scrolled,
-}) {
+export default function DesktopNav() {
   const [servicesOpen, setServicesOpen] =
     useState(false);
 
   return (
-    <nav
-      className="
-        hidden
-        items-center
-        md:flex
-      "
-    >
-      {/* =====================================
-          MAIN NAVIGATION
-      ====================================== */}
-
+    <nav className="hidden items-center md:flex">
       <div className="flex items-center">
+
         {navigation.map((item) => {
           const isServices =
             item.label === "Services";
@@ -105,75 +73,73 @@ export default function DesktopNav({
                 }
               }}
             >
-  <Link
-  href={item.href}
-  style={{
-    color: scrolled ? "#202832" : "#FFFFFF",
-  }}
-  className="
-    group
-    relative
-    flex
-    h-[80px]
-    items-center
-    gap-1.5
-    whitespace-nowrap
-    text-[15px]
-    font-medium
-    leading-none
-    transition-colors
-    duration-300
-  "
->
-  <span
-    className="
-      transition-colors
-      duration-300
-      group-hover:text-[#C6A15B]
-      [@media(min-width:768px)]:group-hover:text-[#087F8C]
-    "
-  >
-    {item.label}
-  </span>
+              {/* =================================================
+                  NAV ITEM
+              ================================================= */}
 
-  {isServices && (
-    <motion.span
-      animate={{
-        rotate: servicesOpen ? 180 : 0,
-      }}
-      transition={{
-        duration: 0.25,
-      }}
-    >
-      <ChevronDown
-        size={16}
-        strokeWidth={1.7}
-      />
-    </motion.span>
-  )}
+              <Link
+                href={item.href}
+                className="
+                  group
+                  relative
+                  flex
+                  h-[88px]
+                  items-center
+                  gap-1.5
+                  whitespace-nowrap
+                  text-[15px]
+                  font-medium
+                  leading-none
+                  text-[#0B1F3A]
+                  transition-colors
+                  duration-300
+                  hover:text-[#087F8C]
+                "
+              >
+                <span>
+                  {item.label}
+                </span>
 
-  <span
-    className={`
-      absolute
-      bottom-[21px]
-      left-0
-      h-[2px]
-      rounded-full
-      bg-[#C6A15B]
-      transition-all
-      duration-300
-      ${
-        isServices && servicesOpen
-          ? "w-full"
-          : "w-0 group-hover:w-full"
-      }
-    `}
-  />
-</Link>
+                {isServices && (
+                  <motion.span
+                    animate={{
+                      rotate:
+                        servicesOpen
+                          ? 180
+                          : 0,
+                    }}
+                    transition={{
+                      duration: 0.25,
+                    }}
+                  >
+                    <ChevronDown
+                      size={15}
+                      strokeWidth={1.8}
+                    />
+                  </motion.span>
+                )}
 
-              {/* =================================
+                {/* Gold underline */}
+
+                <span
+                  className="
+                    absolute
+                    bottom-[22px]
+                    left-0
+                    h-[2px]
+                    w-0
+                    rounded-full
+                    bg-[#C6A15B]
+                    transition-all
+                    duration-300
+                    group-hover:w-full
+                  "
+                />
+              </Link>
+
+              {/* =================================================
                   SERVICES DROPDOWN
-              ================================== */}
+              ================================================= */}
 
               {isServices && (
                 <AnimatePresence>
@@ -206,7 +172,7 @@ export default function DesktopNav({
                       className="
                         absolute
                         left-1/2
-                        top-[80px]
+                        top-[82px]
                         z-[150]
                         w-[350px]
                         -translate-x-1/2
@@ -216,7 +182,7 @@ export default function DesktopNav({
                       <div
                         className="
                           overflow-hidden
-                          rounded-[20px]
+                          rounded-[22px]
                           border
                           border-[#DCE2E7]
                           bg-white
@@ -224,21 +190,44 @@ export default function DesktopNav({
                           shadow-[0_25px_70px_rgba(11,31,58,0.14)]
                         "
                       >
-                        {/* Dropdown heading */}
+                        {/* Heading */}
 
-                        <div className="border-b border-[#DCE2E7] px-4 pb-4 pt-3">
-                          <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#C6A15B]">
+                        <div
+                          className="
+                            border-b
+                            border-[#DCE2E7]
+                            px-4
+                            pb-4
+                            pt-3
+                          "
+                        >
+                          <p
+                            className="
+                              text-[10px]
+                              font-medium
+                              uppercase
+                              tracking-[0.2em]
+                              text-[#C6A15B]
+                            "
+                          >
                             Our Services
                           </p>
 
-                          <p className="mt-1.5 text-[13px] leading-5 text-[#6C7781]">
+                          <p
+                            className="
+                              mt-1.5
+                              text-[13px]
+                              leading-5
+                              text-[#6C7781]
+                            "
+                          >
                             Professional solutions
                             designed for lasting
                             impact.
                           </p>
                         </div>
 
-                        {/* Services */}
+                        {/* Service items */}
 
                         <div className="mt-2">
                           {services.map(
@@ -247,9 +236,7 @@ export default function DesktopNav({
                               index
                             ) => (
                               <motion.div
-                                key={
-                                  service.title
-                                }
+                                key={service}
                                 initial={{
                                   opacity: 0,
                                   x: -10,
@@ -267,9 +254,7 @@ export default function DesktopNav({
                                 }}
                               >
                                 <Link
-                                  href={
-                                    service.href
-                                  }
+                                  href="/services"
                                   className="
                                     group
                                     flex
@@ -288,17 +273,14 @@ export default function DesktopNav({
                                   "
                                 >
                                   <span>
-                                    {
-                                      service.title
-                                    }
+                                    {service}
                                   </span>
 
                                   <ArrowUpRight
-                                    size={
-                                      15
-                                    }
+                                    size={15}
                                     className="
                                       -translate-x-1
+                                      text-[#C6A15B]
                                       opacity-0
                                       transition-all
                                       duration-200

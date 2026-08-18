@@ -11,13 +11,17 @@ import {
   AnimatePresence,
   motion,
 } from "framer-motion";
+import Image from "next/image";
 
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] =
+    useState(false);
+
+  const [mobileOpen, setMobileOpen] =
+    useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +33,9 @@ export default function Header() {
     window.addEventListener(
       "scroll",
       handleScroll,
-      { passive: true }
+      {
+        passive: true,
+      }
     );
 
     return () => {
@@ -41,9 +47,8 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = mobileOpen
-      ? "hidden"
-      : "";
+    document.body.style.overflow =
+      mobileOpen ? "hidden" : "";
 
     return () => {
       document.body.style.overflow = "";
@@ -52,286 +57,256 @@ export default function Header() {
 
   return (
     <>
-      {/* =========================================
-          HEADER
-      ========================================== */}
+      {/* =================================================
+          FLOATING HEADER
+      ================================================= */}
 
       <motion.header
         initial={{
-          y: -100,
           opacity: 0,
+          y: -30,
         }}
         animate={{
-          y: 0,
           opacity: 1,
+          y: 0,
         }}
         transition={{
-          duration: 0.8,
+          duration: 0.7,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className={`
+        className="
           fixed
           left-0
           top-0
           z-[100]
           w-full
-          transition-all
-          duration-500
-          ${
-            scrolled
-              ? "bg-white shadow-[0_8px_30px_rgba(11,31,58,0.08)]"
-              : "bg-[#0B1F3A]"
-          }
-        `}
+          px-4
+          pt-5
+          sm:px-6
+          sm:pt-6
+          lg:px-8
+          lg:pt-8
+        "
       >
-        <div
-          className={`
-            mx-auto
-            flex
-            max-w-[1440px]
-            items-center
-            px-6
-            sm:px-8
-            lg:px-10
-            xl:px-14
-            transition-all
-            duration-500
-            ${
-              scrolled
-                ? "h-[80px]"
-                : "h-[92px]"
-            }
-          `}
-        >
-          {/* =====================================
-              LOGO
-          ====================================== */}
+        {/* =================================================
+            NAVBAR PILL
+        ================================================= */}
 
-          <Link
-            href="/"
+       <div
+  className={`
+    ibs-container
+    relative
+    flex
+    items-center
+    rounded-[30px]
+    bg-white
+    px-5
+    shadow-[0_15px_50px_rgba(11,31,58,0.12)]
+    transition-all
+    duration-500
+    sm:px-7
+    lg:px-8
+    xl:px-10
+${
+  scrolled
+    ? "h-[88px] shadow-[0_18px_55px_rgba(11,31,58,0.16)]"
+    : "h-[88px]"
+}
+  `}
+
+  style={{margin:"0px", width:"100%"}}
+>
+          {/* =================================================
+              LOGO
+          ================================================= */}
+
+<Link
+  href="/"
+  onClick={() => setMobileOpen(false)}
+  className="
+    relative
+    z-[120]
+    flex
+    h-full
+    w-[170px]
+    shrink-0
+    items-center
+    overflow-hidden
+  "
+>
+  <Image
+    src="/logo/logo.jpg"
+    alt="IBS Group Canada"
+    width={170}
+    height={88}
+    priority
+    className="
+      h-[82px]
+      w-[165px]
+      object-contain
+      object-left
+    "
+  />
+</Link>
+          {/* =================================================
+              CENTER NAV
+          ================================================= */}
+
+          <div
             className="
-              relative
-              z-[120]
+              absolute
+              left-1/2
+              hidden
+              -translate-x-1/2
+              md:block
+            "
+          >
+            <DesktopNav />
+          </div>
+
+          {/* =================================================
+              RIGHT SIDE
+          ================================================= */}
+
+          <div
+            className="
+              ml-auto
               flex
-              shrink-0
               items-center
               gap-3
             "
-            onClick={() =>
-              setMobileOpen(false)
-            }
           >
-            {/* Brand mark */}
+            {/* Contact button */}
 
-            <motion.div
-              animate={{
-                scale: scrolled ? 0.92 : 1,
-              }}
-              transition={{
-                duration: 0.35,
-              }}
-              className={`
+          <Link
+  href="/contact"
+  className="
+    group
+    hidden
+    items-center
+    gap-2
+    rounded-full
+    bg-[#087F8C]
+    px-5
+    py-3
+    text-[15px]
+    font-medium
+    !text-white
+    transition-all
+    duration-300
+    hover:-translate-y-0.5
+    hover:bg-[#0B1F3A]
+    hover:!text-white
+    md:inline-flex
+  "
+>
+  <span className="!text-white">
+    Contact Us
+  </span>
+
+  <span
+    className="
+      flex
+      h-7
+      w-7
+      items-center
+      justify-center
+      rounded-full
+      bg-[#0B1F3A]
+      !text-white
+      transition-transform
+      duration-300
+      group-hover:-translate-y-0.5
+      group-hover:translate-x-0.5
+    "
+  >
+    <ArrowUpRight
+      size={15}
+      strokeWidth={2}
+      className="!text-white"
+    />
+  </span>
+</Link>
+
+            {/* Mobile */}
+
+            <button
+              type="button"
+              aria-label={
+                mobileOpen
+                  ? "Close navigation"
+                  : "Open navigation"
+              }
+              onClick={() =>
+                setMobileOpen(!mobileOpen)
+              }
+              className="
+                relative
+                z-[120]
                 flex
-                h-[48px]
-                w-[48px]
-                shrink-0
+                h-[46px]
+                w-[46px]
                 items-center
                 justify-center
                 rounded-full
-                border-2
-                text-[14px]
-                font-bold
+                bg-[#0B1F3A]
+                text-white
                 transition-colors
                 duration-300
-                ${
-                  scrolled
-                    ? "border-[#087F8C] text-[#087F8C]"
-                    : "border-[#C6A15B] text-[#C6A15B]"
-                }
-              `}
+                hover:bg-[#087F8C]
+                md:hidden
+              "
             >
-              IBS
-            </motion.div>
-
-            {/* Logo text */}
-
-            <motion.div
-              animate={{
-                opacity: 1,
-              }}
-              className="hidden sm:block"
-            >
-              <p
-                className={`
-                  text-[17px]
-                  font-bold
-                  leading-none
-                  tracking-[-0.02em]
-                  transition-colors
-                  duration-300
-                  ${
-                    scrolled
-                      ? "text-[#0B1F3A]"
-                      : "text-white"
-                  }
-                `}
+              <AnimatePresence
+                mode="wait"
+                initial={false}
               >
-                IBS Group
-              </p>
-
-              <p
-                className={`
-                  mt-1
-                  text-[9px]
-                  font-medium
-                  uppercase
-                  tracking-[0.18em]
-                  transition-colors
-                  duration-300
-                  ${
-                    scrolled
-                      ? "text-[#6C7781]"
-                      : "text-white/65"
-                  }
-                `}
-              >
-                Canada
-              </p>
-            </motion.div>
-          </Link>
-
-          {/* =====================================
-              DESKTOP NAV
-          ====================================== */}
-
-          <div className="ml-auto flex items-center">
-            <DesktopNav
-              scrolled={scrolled}
-            />
-
-            {/* =================================
-                CONTACT BUTTON
-            ================================= */}
-
-            <Link
-              href="/contact"
-              className={`
-                group
-                ml-5
-                hidden
-                items-center
-                gap-2
-                rounded-full
-                px-5
-                py-3
-                text-[15px]
-                font-medium
-                transition-all
-                duration-300
-                md:inline-flex
-                ${
-                  scrolled
-                    ? "bg-[#087F8C] text-white hover:bg-[#0B1F3A]"
-                    : "border border-[#C6A15B] bg-[#C6A15B] text-[#0B1F3A] hover:bg-white hover:text-[#0B1F3A]"
-                }
-              `}
-            >
-              Contact Us
-
-              <ArrowUpRight
-                size={17}
-                strokeWidth={1.8}
-                className="
-                  transition-transform
-                  duration-300
-                  group-hover:-translate-y-0.5
-                  group-hover:translate-x-0.5
-                "
-              />
-            </Link>
+                {mobileOpen ? (
+                  <motion.span
+                    key="close"
+                    initial={{
+                      opacity: 0,
+                      rotate: -90,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      rotate: 0,
+                    }}
+                    exit={{
+                      opacity: 0,
+                      rotate: 90,
+                    }}
+                  >
+                    <X size={21} />
+                  </motion.span>
+                ) : (
+                  <motion.span
+                    key="menu"
+                    initial={{
+                      opacity: 0,
+                      rotate: 90,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      rotate: 0,
+                    }}
+                    exit={{
+                      opacity: 0,
+                      rotate: -90,
+                    }}
+                  >
+                    <Menu size={21} />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </button>
           </div>
-
-          {/* =====================================
-              MOBILE BUTTON
-          ====================================== */}
-
-          <button
-            type="button"
-            aria-label={
-              mobileOpen
-                ? "Close navigation"
-                : "Open navigation"
-            }
-            onClick={() =>
-              setMobileOpen(!mobileOpen)
-            }
-            className={`
-              relative
-              z-[120]
-              ml-auto
-              flex
-              h-[46px]
-              w-[46px]
-              items-center
-              justify-center
-              rounded-full
-              md:hidden
-              ${
-                scrolled
-                  ? "bg-[#0B1F3A] text-white"
-                  : "border border-white/30 text-white"
-              }
-            `}
-          >
-            <AnimatePresence
-              mode="wait"
-              initial={false}
-            >
-              {mobileOpen ? (
-                <motion.span
-                  key="close"
-                  initial={{
-                    opacity: 0,
-                    rotate: -90,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    rotate: 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    rotate: 90,
-                  }}
-                >
-                  <X size={22} />
-                </motion.span>
-              ) : (
-                <motion.span
-                  key="menu"
-                  initial={{
-                    opacity: 0,
-                    rotate: 90,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    rotate: 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    rotate: -90,
-                  }}
-                >
-                  <Menu size={22} />
-                </motion.span>
-              )}
-            </AnimatePresence>
-          </button>
         </div>
       </motion.header>
 
-      {/* =========================================
+      {/* =================================================
           MOBILE NAV
-      ========================================== */}
+      ================================================= */}
 
       <AnimatePresence>
         {mobileOpen && (
