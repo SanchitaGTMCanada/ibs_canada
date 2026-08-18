@@ -45,13 +45,19 @@ export default function DesktopNav() {
   const [servicesOpen, setServicesOpen] =
     useState(false);
 
+  const [hoveredItem, setHoveredItem] =
+    useState(null);
+
   return (
-    <nav className="hidden items-center md:flex">
+    <nav className="hidden md:flex">
       <div className="flex items-center">
 
         {navigation.map((item) => {
           const isServices =
             item.label === "Services";
+
+          const isHovered =
+            hoveredItem === item.label;
 
           return (
             <div
@@ -63,24 +69,35 @@ export default function DesktopNav() {
                 xl:px-5
               "
               onMouseEnter={() => {
+                setHoveredItem(item.label);
+
                 if (isServices) {
                   setServicesOpen(true);
+                } else {
+                  setServicesOpen(false);
                 }
               }}
               onMouseLeave={() => {
                 if (isServices) {
-                  setServicesOpen(false);
+                  /*
+                   * Small delay gives the cursor
+                   * time to move into the dropdown.
+                   */
+                  setTimeout(() => {
+                    setServicesOpen(false);
+                  }, 120);
                 }
+
+                setHoveredItem(null);
               }}
             >
               {/* =================================================
-                  NAV ITEM
+                  MAIN NAVIGATION LINK
               ================================================= */}
 
               <Link
                 href={item.href}
-                className="
-                  group
+                className={`
                   relative
                   flex
                   h-[88px]
@@ -90,15 +107,22 @@ export default function DesktopNav() {
                   text-[15px]
                   font-medium
                   leading-none
-                  text-[#0B1F3A]
                   transition-colors
                   duration-300
-                  hover:text-[#087F8C]
-                "
+                  ${
+                    isHovered ||
+                    (isServices &&
+                      servicesOpen)
+                      ? "text-[#087F8C]"
+                      : "text-[#0B1F3A]"
+                  }
+                `}
               >
                 <span>
                   {item.label}
                 </span>
+
+                {/* Services arrow */}
 
                 {isServices && (
                   <motion.span
@@ -110,7 +134,12 @@ export default function DesktopNav() {
                     }}
                     transition={{
                       duration: 0.25,
+                      ease: "easeOut",
                     }}
+                    className="
+                      flex
+                      items-center
+                    "
                   >
                     <ChevronDown
                       size={15}
@@ -119,20 +148,32 @@ export default function DesktopNav() {
                   </motion.span>
                 )}
 
-                {/* Gold underline */}
+                {/* =================================================
+                    UNDERLINE
+                ================================================= */}
 
-                <span
+                <motion.span
+                  initial={false}
+                  animate={{
+                    width:
+                      isHovered ||
+                      (isServices &&
+                        servicesOpen)
+                        ? "100%"
+                        : "0%",
+                  }}
+                  transition={{
+                    duration: 0.25,
+                    ease: "easeOut",
+                  }}
                   className="
+                    pointer-events-none
                     absolute
-                    bottom-[22px]
+                    bottom-[21px]
                     left-0
                     h-[2px]
-                    w-0
                     rounded-full
                     bg-[#C6A15B]
-                    transition-all
-                    duration-300
-                    group-hover:w-full
                   "
                 />
               </Link>
@@ -147,8 +188,8 @@ export default function DesktopNav() {
                     <motion.div
                       initial={{
                         opacity: 0,
-                        y: 12,
-                        scale: 0.97,
+                        y: 8,
+                        scale: 0.98,
                       }}
                       animate={{
                         opacity: 1,
@@ -161,7 +202,7 @@ export default function DesktopNav() {
                         scale: 0.98,
                       }}
                       transition={{
-                        duration: 0.22,
+                        duration: 0.2,
                         ease: [
                           0.22,
                           1,
@@ -172,25 +213,53 @@ export default function DesktopNav() {
                       className="
                         absolute
                         left-1/2
-                        top-[82px]
-                        z-[150]
-                        w-[350px]
+                        top-[76px]
+                        z-[999]
+                        w-[360px]
                         -translate-x-1/2
-                        pt-3
                       "
+                      onMouseEnter={() => {
+                        setServicesOpen(true);
+                        setHoveredItem(
+                          "Services"
+                        );
+                      }}
+                      onMouseLeave={() => {
+                        setServicesOpen(false);
+                        setHoveredItem(null);
+                      }}
                     >
+                      {/* =================================================
+                          HOVER BRIDGE
+                      ================================================= */}
+
                       <div
                         className="
+                          absolute
+                          left-0
+                          right-0
+                          top-[-10px]
+                          h-[14px]
+                        "
+                      />
+
+                      {/* =================================================
+                          DROPDOWN BOX
+                      ================================================= */}
+
+                      <div
+                        className="
+                          relative
                           overflow-hidden
                           rounded-[22px]
                           border
                           border-[#DCE2E7]
                           bg-white
                           p-3
-                          shadow-[0_25px_70px_rgba(11,31,58,0.14)]
+                          shadow-[0_25px_70px_rgba(11,31,58,0.18)]
                         "
                       >
-                        {/* Heading */}
+                        {/* Dropdown header */}
 
                         <div
                           className="
@@ -204,7 +273,7 @@ export default function DesktopNav() {
                           <p
                             className="
                               text-[10px]
-                              font-medium
+                              font-semibold
                               uppercase
                               tracking-[0.2em]
                               text-[#C6A15B]
@@ -227,7 +296,7 @@ export default function DesktopNav() {
                           </p>
                         </div>
 
-                        {/* Service items */}
+                        {/* Service list */}
 
                         <div className="mt-2">
                           {services.map(
@@ -239,7 +308,7 @@ export default function DesktopNav() {
                                 key={service}
                                 initial={{
                                   opacity: 0,
-                                  x: -10,
+                                  x: -8,
                                 }}
                                 animate={{
                                   opacity: 1,
@@ -250,7 +319,7 @@ export default function DesktopNav() {
                                     index *
                                     0.035,
                                   duration:
-                                    0.22,
+                                    0.2,
                                 }}
                               >
                                 <Link
@@ -279,12 +348,11 @@ export default function DesktopNav() {
                                   <ArrowUpRight
                                     size={15}
                                     className="
-                                      -translate-x-1
                                       text-[#C6A15B]
                                       opacity-0
                                       transition-all
                                       duration-200
-                                      group-hover:translate-x-0
+                                      group-hover:translate-x-1
                                       group-hover:opacity-100
                                     "
                                   />
