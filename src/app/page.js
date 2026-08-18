@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import CTASection from "@/components/sections/CTASection";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <AboutSection />
         <ServicesSection />
         <CTASection/>
+        <Footer/>
 
       
       </main>
