@@ -11,8 +11,16 @@ import {
   Users,
   WalletCards,
   Landmark,
+  Target,
+  Lightbulb,
+  Handshake,
+  ChartNoAxesCombined,
+  Settings2,
 } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+} from "framer-motion";
 
 const services = [
   {
@@ -88,7 +96,8 @@ const services = [
 ];
 
 export default function ServicesSection() {
-  const [activeService, setActiveService] = useState(0);
+  const [activeService, setActiveService] =
+    useState(0);
 
   const active = services[activeService];
 
@@ -154,24 +163,28 @@ export default function ServicesSection() {
         "
       >
         {/* =====================================================
-            HEADER
+            SERVICES HEADER
         ===================================================== */}
 
         <div
           className="
             grid
-            gap-10
-            lg:grid-cols-[0.65fr_1.35fr]
-            lg:items-end
-            lg:gap-20
+            items-center
+            gap-12
+            lg:grid-cols-[1.25fr_0.75fr]
+            lg:gap-16
+            xl:grid-cols-[1.2fr_0.8fr]
+            xl:gap-20
           "
         >
-          {/* LEFT LABEL */}
+          {/* =================================================
+              LEFT — MAIN HEADING
+          ================================================= */}
 
           <motion.div
             initial={{
               opacity: 0,
-              x: -30,
+              x: -40,
             }}
             whileInView={{
               opacity: 1,
@@ -179,14 +192,55 @@ export default function ServicesSection() {
             }}
             viewport={{
               once: true,
-              amount: 0.3,
+              amount: 0.25,
             }}
             transition={{
-              duration: 0.7,
+              duration: 0.85,
+              ease: [0.22, 1, 0.36, 1],
             }}
+            className="
+              relative
+              z-10
+            "
           >
+            {/* Soft glow */}
+
             <div
               className="
+                pointer-events-none
+                absolute
+                -left-20
+                top-0
+                h-[420px]
+                w-[650px]
+                rounded-full
+                bg-[radial-gradient(ellipse_at_center,rgba(8,127,140,0.10)_0%,rgba(8,127,140,0.035)_42%,transparent_72%)]
+                blur-3xl
+              "
+            />
+
+            {/* =================================================
+                EYEBROW
+            ================================================= */}
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 15,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.6,
+              }}
+              className="
+                relative
+                mb-6
                 flex
                 items-center
                 gap-3
@@ -194,8 +248,8 @@ export default function ServicesSection() {
             >
               <span
                 className="
-                  h-[9px]
-                  w-[9px]
+                  h-[3px]
+                  w-12
                   rounded-full
                   bg-[#C6A15B]
                 "
@@ -203,86 +257,698 @@ export default function ServicesSection() {
 
               <span
                 className="
-                  text-[11px]
-                  font-semibold
+                  text-[10px]
+                  font-bold
                   uppercase
-                  tracking-[0.23em]
+                  tracking-[0.26em]
                   text-[#087F8C]
                 "
               >
-                What we do
+                Built around your needs
               </span>
-            </div>
 
-            <div
-              className="
-                mt-7
-                h-px
-                w-[120px]
-                bg-[#DCE2E7]
-              "
-            />
+              <span
+                className="
+                  h-1.5
+                  w-1.5
+                  rounded-full
+                  bg-[#C6A15B]
+                "
+              />
+            </motion.div>
 
-            <p
+            {/* =================================================
+                MAIN HEADING
+            ================================================= */}
+
+            <h2
               className="
-                mt-7
-                max-w-[260px]
-                text-[14px]
-                leading-6
-                text-[#68737D]
+                relative
+                max-w-[900px]
+                text-[45px]
+                font-bold
+                leading-[0.98]
+                tracking-[-0.055em]
+                text-[#202832]
+                sm:text-[58px]
+                md:text-[68px]
+                lg:text-[70px]
+                xl:text-[82px]
+                2xl:text-[88px]
               "
             >
-              Professional solutions built around
-              the unique needs of organizations,
-              communities, and entrepreneurs.
-            </p>
+              <span className="block">
+                Expertise that
+              </span>
+
+              <span
+                className="
+                  relative
+                  mt-2
+                  block
+                "
+              >
+                <span>
+                  moves you
+                </span>
+
+                {/* Teal word */}
+
+                <span
+                  className="
+                    relative
+                    ml-3
+                    inline-block
+                    text-[#087F8C]
+                  "
+                >
+                  {/* Highlight */}
+
+                  <span
+                    className="
+                      absolute
+                      -bottom-1
+                      -left-3
+                      -right-3
+                      top-[15%]
+                      -z-10
+                      rounded-[12px]
+                      bg-[#087F8C]/[0.075]
+                    "
+                  />
+
+                  forward
+
+                  {/* Gold underline */}
+
+                  <motion.span
+                    initial={{
+                      width: 0,
+                    }}
+                    whileInView={{
+                      width:
+                        "calc(100% + 18px)",
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    transition={{
+                      duration: 1,
+                      delay: 0.5,
+                      ease: [
+                        0.22,
+                        1,
+                        0.36,
+                        1,
+                      ],
+                    }}
+                    className="
+                      absolute
+                      bottom-[-12px]
+                      left-[-2px]
+                      h-[5px]
+                      rounded-full
+                      bg-[#C6A15B]
+                    "
+                  />
+                </span>
+
+                {/* Gold dot */}
+
+                <motion.span
+                  initial={{
+                    scale: 0,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    scale: 1,
+                    opacity: 1,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 0.4,
+                    delay: 0.9,
+                  }}
+                  className="
+                    absolute
+                    -right-8
+                    bottom-2
+                    h-3
+                    w-3
+                    rounded-full
+                    bg-[#C6A15B]
+                    shadow-[0_0_0_6px_rgba(198,161,91,0.10)]
+                  "
+                />
+              </span>
+            </h2>
+
+            {/* =================================================
+                DESCRIPTION
+            ================================================= */}
+
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: 0.3,
+              }}
+              className="
+                relative
+                mt-10
+                max-w-[760px]
+                border-l-2
+                border-[#C6A15B]
+                pl-5
+                text-[16px]
+                leading-7
+                text-[#68737D]
+                sm:text-[17px]
+                sm:leading-8
+              "
+            >
+              From strategy and technology to
+              infrastructure and financial management,
+              our capabilities come together to create
+              practical solutions with lasting impact.
+            </motion.p>
+
+            {/* =================================================
+                EXPERTISE BADGE
+            ================================================= */}
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: 0.5,
+              }}
+              className="
+                relative
+                mt-8
+                inline-flex
+                items-center
+                gap-3
+                rounded-full
+                border
+                border-[#DCE2E7]
+                bg-white
+                px-4
+                py-2.5
+                shadow-[0_12px_35px_rgba(11,31,58,0.08)]
+              "
+            >
+              <span
+                className="
+                  relative
+                  flex
+                  h-8
+                  w-8
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#087F8C]
+                "
+              >
+                <span
+                  className="
+                    h-2.5
+                    w-2.5
+                    rounded-full
+                    bg-white
+                  "
+                />
+
+                <span
+                  className="
+                    absolute
+                    inset-1
+                    rounded-full
+                    border
+                    border-white/30
+                  "
+                />
+              </span>
+
+              <span
+                className="
+                  text-[11px]
+                  font-bold
+                  uppercase
+                  tracking-[0.15em]
+                  text-[#202832]
+                "
+              >
+                7 areas of expertise
+              </span>
+            </motion.div>
           </motion.div>
 
-          {/* RIGHT HEADING */}
+          {/* =================================================
+              RIGHT — INNOVATION ICON
+          ================================================= */}
 
           <motion.div
             initial={{
               opacity: 0,
-              y: 35,
+              x: 50,
+              scale: 0.92,
             }}
             whileInView={{
               opacity: 1,
-              y: 0,
+              x: 0,
+              scale: 1,
             }}
             viewport={{
               once: true,
-              amount: 0.3,
+              amount: 0.25,
             }}
             transition={{
-              duration: 0.85,
+              duration: 0.9,
               ease: [0.22, 1, 0.36, 1],
             }}
+            className="
+              relative
+              flex
+              min-h-[390px]
+              items-center
+              justify-center
+              lg:min-h-[440px]
+            "
           >
-            <h2
+            {/* =================================================
+                SOFT TEAL GLOW
+            ================================================= */}
+
+            <div
               className="
-                max-w-[850px]
-                text-[42px]
-                font-bold
-                leading-[1.02]
-                tracking-[-0.045em]
-                text-[#202832]
-                sm:text-[54px]
-                md:text-[64px]
-                lg:text-[70px]
-                xl:text-[78px]
+                absolute
+                h-[330px]
+                w-[330px]
+                rounded-full
+                bg-[radial-gradient(circle,rgba(8,127,140,0.12)_0%,rgba(8,127,140,0.045)_45%,transparent_72%)]
+                blur-2xl
+              "
+            />
+
+            {/* =================================================
+                OUTER ORBIT
+            ================================================= */}
+
+            <motion.div
+              animate={{
+                rotate: 360,
+              }}
+              transition={{
+                duration: 22,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="
+                absolute
+                h-[300px]
+                w-[300px]
+                rounded-full
+                border
+                border-dashed
+                border-[#087F8C]/30
+                sm:h-[340px]
+                sm:w-[340px]
               "
             >
-              Solutions that create
-              <span className="text-[#087F8C]">
-                {" "}
-                meaningful impact.
-              </span>
-            </h2>
+              {/* Gold orbit dot */}
+
+              <span
+                className="
+                  absolute
+                  left-[8%]
+                  top-[13%]
+                  h-2.5
+                  w-2.5
+                  rounded-full
+                  bg-[#C6A15B]
+                  shadow-[0_0_0_5px_rgba(198,161,91,0.10)]
+                "
+              />
+
+              {/* Teal orbit dot */}
+
+              <span
+                className="
+                  absolute
+                  bottom-[14%]
+                  right-[8%]
+                  h-2
+                  w-2
+                  rounded-full
+                  bg-[#087F8C]
+                "
+              />
+            </motion.div>
+
+            {/* =================================================
+                CENTER TARGET
+            ================================================= */}
+
+            <motion.div
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="
+                relative
+                z-20
+                flex
+                h-[205px]
+                w-[205px]
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#087F8C]
+                bg-white
+                shadow-[0_25px_60px_rgba(11,31,58,0.10)]
+                sm:h-[225px]
+                sm:w-[225px]
+              "
+            >
+              {/* Rings */}
+
+              <div
+                className="
+                  absolute
+                  inset-[22px]
+                  rounded-full
+                  border-[3px]
+                  border-[#087F8C]/80
+                "
+              />
+
+              <div
+                className="
+                  absolute
+                  inset-[47px]
+                  rounded-full
+                  border-[3px]
+                  border-[#087F8C]/70
+                "
+              />
+
+              <div
+                className="
+                  absolute
+                  inset-[70px]
+                  rounded-full
+                  bg-[#E0F3F4]
+                "
+              />
+
+              {/* Target icon */}
+
+              <Target
+                size={78}
+                strokeWidth={1.3}
+                className="
+                  relative
+                  z-10
+                  text-[#087F8C]
+                "
+              />
+
+              {/* Gold arrow */}
+
+              <motion.div
+                initial={{
+                  rotate: -45,
+                }}
+                animate={{
+                  rotate: 0,
+                }}
+                transition={{
+                  duration: 1,
+                  delay: 0.4,
+                }}
+                className="
+                  absolute
+                  right-[58px]
+                  top-[45px]
+                  z-20
+                "
+              >
+                <ArrowUpRight
+                  size={55}
+                  strokeWidth={2.2}
+                  className="
+                    text-[#C6A15B]
+                  "
+                />
+              </motion.div>
+            </motion.div>
+
+            {/* =================================================
+                TOP ICON — INNOVATION
+            ================================================= */}
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0.6,
+              }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.4,
+              }}
+              className="
+                absolute
+                left-[50%]
+                top-[4px]
+                z-30
+                flex
+                h-[64px]
+                w-[64px]
+                -translate-x-1/2
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#C6A15B]/50
+                bg-white
+                shadow-[0_12px_30px_rgba(11,31,58,0.08)]
+              "
+            >
+              <Lightbulb
+                size={27}
+                strokeWidth={1.6}
+                className="
+                  text-[#C6A15B]
+                "
+              />
+            </motion.div>
+
+            {/* =================================================
+                LEFT ICON — COLLABORATION
+            ================================================= */}
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: -20,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.55,
+              }}
+              className="
+                absolute
+                left-[4%]
+                top-[43%]
+                z-30
+                flex
+                h-[64px]
+                w-[64px]
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#087F8C]/40
+                bg-white
+                shadow-[0_12px_30px_rgba(11,31,58,0.08)]
+              "
+            >
+              <Handshake
+                size={27}
+                strokeWidth={1.6}
+                className="
+                  text-[#087F8C]
+                "
+              />
+            </motion.div>
+
+            {/* =================================================
+                RIGHT ICON — GROWTH
+            ================================================= */}
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: 20,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.65,
+              }}
+              className="
+                absolute
+                right-[3%]
+                top-[40%]
+                z-30
+                flex
+                h-[64px]
+                w-[64px]
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#087F8C]/40
+                bg-white
+                shadow-[0_12px_30px_rgba(11,31,58,0.08)]
+              "
+            >
+              <ChartNoAxesCombined
+                size={27}
+                strokeWidth={1.6}
+                className="
+                  text-[#087F8C]
+                "
+              />
+            </motion.div>
+
+            {/* =================================================
+                BOTTOM ICON — PEOPLE
+            ================================================= */}
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.75,
+              }}
+              className="
+                absolute
+                bottom-[3%]
+                left-[50%]
+                z-30
+                flex
+                h-[64px]
+                w-[64px]
+                -translate-x-1/2
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#0B1F3A]/20
+                bg-white
+                shadow-[0_12px_30px_rgba(11,31,58,0.08)]
+              "
+            >
+              <Users
+                size={27}
+                strokeWidth={1.6}
+                className="
+                  text-[#0B1F3A]
+                "
+              />
+            </motion.div>
+
+            {/* =================================================
+                SMALL GOLD ACCENTS
+            ================================================= */}
+
+            <span
+              className="
+                absolute
+                right-[18%]
+                top-[10%]
+                h-2
+                w-2
+                rounded-full
+                bg-[#C6A15B]
+              "
+            />
+
+            <span
+              className="
+                absolute
+                bottom-[16%]
+                left-[18%]
+                h-1.5
+                w-1.5
+                rounded-full
+                bg-[#087F8C]
+              "
+            />
           </motion.div>
         </div>
 
         {/* =====================================================
-            SERVICES EXPERIENCE
+            SERVICES GRID
         ===================================================== */}
 
         <div
@@ -325,176 +991,181 @@ export default function ServicesSection() {
               shadow-[0_20px_60px_rgba(11,31,58,0.06)]
             "
           >
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              const isActive =
-                activeService === index;
+            {services.map(
+              (service, index) => {
+                const Icon = service.icon;
 
-              return (
-                <button
-                  key={service.number}
-                  type="button"
-                  onMouseEnter={() =>
-                    setActiveService(index)
-                  }
-                  onFocus={() =>
-                    setActiveService(index)
-                  }
-                  onClick={() =>
-                    setActiveService(index)
-                  }
-                  className="
-                    group
-                    relative
-                    flex
-                    w-full
-                    items-center
-                    gap-4
-                    rounded-[22px]
-                    px-4
-                    py-5
-                    text-left
-                    transition-all
-                    duration-300
-                    sm:px-5
-                  "
-                >
-                  {/* ACTIVE BACKGROUND */}
+                const isActive =
+                  activeService === index;
 
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeService"
-                      className="
-                        absolute
-                        inset-0
-                        rounded-[22px]
-                      "
-                      style={{
-                        backgroundColor:
-                          service.softColor,
-                      }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 350,
-                        damping: 30,
-                      }}
-                    />
-                  )}
-
-                  {/* NUMBER */}
-
-                  <span
+                return (
+                  <button
+                    key={service.number}
+                    type="button"
+                    onMouseEnter={() =>
+                      setActiveService(index)
+                    }
+                    onFocus={() =>
+                      setActiveService(index)
+                    }
+                    onClick={() =>
+                      setActiveService(index)
+                    }
                     className="
+                      group
                       relative
-                      z-10
                       flex
-                      h-[42px]
-                      w-[42px]
-                      shrink-0
+                      w-full
                       items-center
-                      justify-center
-                      rounded-full
-                      border
-                      bg-white
-                      text-[11px]
-                      font-bold
-                      tracking-[0.08em]
-                    "
-                    style={{
-                      borderColor:
-                        service.color,
-                      color: service.color,
-                    }}
-                  >
-                    {service.number}
-                  </span>
-
-                  {/* ICON */}
-
-                  <span
-                    className="
-                      relative
-                      z-10
-                      hidden
-                      h-[38px]
-                      w-[38px]
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-full
-                      bg-white
-                      sm:flex
-                    "
-                    style={{
-                      color: service.color,
-                    }}
-                  >
-                    <Icon
-                      size={18}
-                      strokeWidth={1.8}
-                    />
-                  </span>
-
-                  {/* TITLE */}
-
-                  <span
-                    className={`
-                      relative
-                      z-10
-                      flex-1
-                      text-[16px]
-                      font-semibold
-                      transition-colors
-                      duration-300
-                      sm:text-[17px]
-                      ${
-                        isActive
-                          ? "text-[#202832]"
-                          : "text-[#59636D]"
-                      }
-                    `}
-                  >
-                    {service.title}
-                  </span>
-
-                  {/* ARROW */}
-
-                  <span
-                    className={`
-                      relative
-                      z-10
-                      flex
-                      h-[38px]
-                      w-[38px]
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      bg-white
+                      gap-4
+                      rounded-[22px]
+                      px-4
+                      py-5
+                      text-left
                       transition-all
                       duration-300
-                      ${
-                        isActive
-                          ? "border-[#C6A15B] bg-[#C6A15B] text-[#0B1F3A]"
-                          : "border-[#DCE2E7] text-[#68737D]"
-                      }
-                    `}
+                      sm:px-5
+                    "
                   >
-                    <ArrowUpRight
-                      size={17}
-                      strokeWidth={1.8}
+                    {/* Active background */}
+
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeService"
+                        className="
+                          absolute
+                          inset-0
+                          rounded-[22px]
+                        "
+                        style={{
+                          backgroundColor:
+                            service.softColor,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 350,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+
+                    {/* Number */}
+
+                    <span
                       className="
-                        transition-transform
-                        duration-300
-                        group-hover:translate-x-0.5
-                        group-hover:-translate-y-0.5
+                        relative
+                        z-10
+                        flex
+                        h-[42px]
+                        w-[42px]
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        border
+                        bg-white
+                        text-[11px]
+                        font-bold
+                        tracking-[0.08em]
                       "
-                    />
-                  </span>
-                </button>
-              );
-            })}
+                      style={{
+                        borderColor:
+                          service.color,
+                        color:
+                          service.color,
+                      }}
+                    >
+                      {service.number}
+                    </span>
+
+                    {/* Icon */}
+
+                    <span
+                      className="
+                        relative
+                        z-10
+                        hidden
+                        h-[38px]
+                        w-[38px]
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        bg-white
+                        sm:flex
+                      "
+                      style={{
+                        color:
+                          service.color,
+                      }}
+                    >
+                      <Icon
+                        size={18}
+                        strokeWidth={1.8}
+                      />
+                    </span>
+
+                    {/* Title */}
+
+                    <span
+                      className={`
+                        relative
+                        z-10
+                        flex-1
+                        text-[16px]
+                        font-semibold
+                        transition-colors
+                        duration-300
+                        sm:text-[17px]
+                        ${
+                          isActive
+                            ? "text-[#202832]"
+                            : "text-[#59636D]"
+                        }
+                      `}
+                    >
+                      {service.title}
+                    </span>
+
+                    {/* Arrow */}
+
+                    <span
+                      className={`
+                        relative
+                        z-10
+                        flex
+                        h-[38px]
+                        w-[38px]
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        border
+                        bg-white
+                        transition-all
+                        duration-300
+                        ${
+                          isActive
+                            ? "border-[#C6A15B] bg-[#C6A15B] text-[#0B1F3A]"
+                            : "border-[#DCE2E7] text-[#68737D]"
+                        }
+                      `}
+                    >
+                      <ArrowUpRight
+                        size={17}
+                        strokeWidth={1.8}
+                        className="
+                          transition-transform
+                          duration-300
+                          group-hover:translate-x-0.5
+                          group-hover:-translate-y-0.5
+                        "
+                      />
+                    </span>
+                  </button>
+                );
+              }
+            )}
           </motion.div>
 
           {/* =================================================
@@ -527,23 +1198,9 @@ export default function ServicesSection() {
               shadow-[0_25px_70px_rgba(11,31,58,0.16)]
             "
           >
-            {/* =================================================
-                BACKGROUND SHAPE
-            ================================================= */}
+            {/* Background circles */}
 
-            <motion.div
-              key={active.number}
-              initial={{
-                scale: 0.7,
-                opacity: 0,
-              }}
-              animate={{
-                scale: 1,
-                opacity: 1,
-              }}
-              transition={{
-                duration: 0.7,
-              }}
+            <div
               className="
                 absolute
                 -right-[100px]
@@ -556,34 +1213,34 @@ export default function ServicesSection() {
               "
             />
 
-            <motion.div
-              key={`inner-${active.number}`}
-              initial={{
-                scale: 0.6,
-                opacity: 0,
-              }}
-              animate={{
-                scale: 1,
-                opacity: 1,
-              }}
-              transition={{
-                duration: 0.8,
-              }}
+            <div
               className="
                 absolute
-                right-[-20px]
-                top-[-20px]
+                -right-[20px]
+                -top-[20px]
                 h-[270px]
                 w-[270px]
                 rounded-full
+                bg-[#087F8C]/[0.13]
               "
-              style={{
-                backgroundColor:
-                  `${active.color}22`,
-              }}
             />
 
-            {/* GOLD ACCENT */}
+            {/* Decorative grid */}
+
+            <div
+              className="
+                absolute
+                right-10
+                top-10
+                h-[180px]
+                w-[180px]
+                opacity-[0.08]
+                [background-image:radial-gradient(#ffffff_1px,transparent_1px)]
+                [background-size:12px_12px]
+              "
+            />
+
+            {/* Gold bottom line */}
 
             <div
               className="
@@ -596,11 +1253,9 @@ export default function ServicesSection() {
               "
             />
 
-            {/* =================================================
-                CONTENT
-            ================================================= */}
-
-            <AnimatePresence mode="wait">
+            <AnimatePresence
+              mode="wait"
+            >
               <motion.div
                 key={active.number}
                 initial={{
@@ -650,7 +1305,8 @@ export default function ServicesSection() {
                       bg-white
                     "
                     style={{
-                      color: active.color,
+                      color:
+                        active.color,
                     }}
                   >
                     <active.icon
@@ -661,20 +1317,24 @@ export default function ServicesSection() {
 
                   <span
                     className="
-                      text-[90px]
+                      text-[80px]
                       font-bold
                       leading-none
                       tracking-[-0.08em]
-                      text-white/[0.06]
+                      text-white/[0.05]
                     "
                   >
                     {active.number}
                   </span>
                 </div>
 
-                {/* MIDDLE */}
+                {/* CONTENT */}
 
-                <div className="max-w-[650px]">
+                <div
+                  className="
+                    max-w-[650px]
+                  "
+                >
                   <p
                     className="
                       mb-5
@@ -753,8 +1413,14 @@ export default function ServicesSection() {
                   <Link
                     href={`/services/${active.shortTitle
                       .toLowerCase()
-                      .replaceAll(" ", "-")
-                      .replaceAll("&", "and")}`}
+                      .replaceAll(
+                        " ",
+                        "-"
+                      )
+                      .replaceAll(
+                        "&",
+                        "and"
+                      )}`}
                     className="
                       group
                       inline-flex
@@ -773,7 +1439,11 @@ export default function ServicesSection() {
                       hover:bg-[#C6A15B]
                     "
                   >
-                    <span className="!text-[#0B1F3A]">
+                    <span
+                      className="
+                        !text-[#0B1F3A]
+                      "
+                    >
                       Explore service
                     </span>
 
@@ -804,7 +1474,7 @@ export default function ServicesSection() {
         </div>
 
         {/* =====================================================
-            BOTTOM STATEMENT
+            BOTTOM CTA
         ===================================================== */}
 
         <motion.div
@@ -822,7 +1492,6 @@ export default function ServicesSection() {
           }}
           transition={{
             duration: 0.7,
-            delay: 0.15,
           }}
           className="
             mt-8
