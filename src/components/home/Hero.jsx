@@ -251,38 +251,43 @@ export default function Hero() {
                 </span>
               </Link>
 
-              <Link
-                href="/services"
-                className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-3
-                  rounded-full
-                  border
-                  border-[#087F8C]
-                  px-7
-                  py-4
-                  text-[15px]
-                  font-semibold
-                  text-[#087F8C]
-                  transition-all
-                  duration-300
-                  hover:bg-[#087F8C]
-                  hover:text-white
-                "
-              >
-                Our Services
+ <Link
+  href="/services"
+  className="
+    group
+    inline-flex
+    items-center
+    gap-3
+    rounded-full
+    border
+    border-[#087F8C]
+    bg-transparent
+    px-7
+    py-4
+    text-[15px]
+    font-semibold
+    !text-white
+    transition-all
+    duration-300
+    hover:bg-[#087F8C]
+    hover:!text-white
+  "
+>
+  <span className="!text-white">
+    Our Services
+  </span>
 
-                <ArrowRight
-                  size={18}
-                  className="
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                  "
-                />
-              </Link>
+  <ArrowRight
+    size={18}
+    strokeWidth={2}
+    className="
+      !text-white
+      transition-transform
+      duration-300
+      group-hover:translate-x-1
+    "
+  />
+</Link>
 
             </motion.div>
 
