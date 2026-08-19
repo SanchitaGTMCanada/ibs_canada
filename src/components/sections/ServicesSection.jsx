@@ -33,7 +33,10 @@ const services = [
     icon: GraduationCap,
     color: "#087F8C",
     softColor: "#E0F3F4",
+    image:
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=85",
   },
+
   {
     number: "02",
     title: "Engineering & Technical",
@@ -43,7 +46,10 @@ const services = [
     icon: HardHat,
     color: "#4A789C",
     softColor: "#E5EDF4",
+    image:
+      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=85",
   },
+
   {
     number: "03",
     title: "Infrastructure",
@@ -53,7 +59,10 @@ const services = [
     icon: Building2,
     color: "#087F8C",
     softColor: "#E0F3F4",
+    image:
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=85",
   },
+
   {
     number: "04",
     title: "Technology & Innovation",
@@ -63,7 +72,10 @@ const services = [
     icon: Cpu,
     color: "#5A7090",
     softColor: "#E9EEF5",
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85",
   },
+
   {
     number: "05",
     title: "Social & Economic",
@@ -73,7 +85,10 @@ const services = [
     icon: Users,
     color: "#087F8C",
     softColor: "#E0F3F4",
+    image:
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85",
   },
+
   {
     number: "06",
     title: "Financial Management",
@@ -83,7 +98,10 @@ const services = [
     icon: WalletCards,
     color: "#C6A15B",
     softColor: "#FFF3D5",
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=85",
   },
+
   {
     number: "07",
     title: "Governance",
@@ -93,6 +111,8 @@ const services = [
     icon: Landmark,
     color: "#0B1F3A",
     softColor: "#E9EEF4",
+    image:
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=85",
   },
 ];
 
@@ -1028,6 +1048,7 @@ export default function ServicesSection() {
             {services.map(
               (service, index) => {
                 const Icon = service.icon;
+
                 const isActive =
                   activeService === index;
 
@@ -1222,8 +1243,122 @@ export default function ServicesSection() {
               shadow-[0_25px_70px_rgba(11,31,58,0.16)]
             "
           >
+            {/* =================================================
+                SERVICE BACKGROUND IMAGE
+            ================================================= */}
+
+            <AnimatePresence mode="sync">
+              <motion.img
+                key={active.image}
+                src={active.image}
+                alt={active.title}
+                initial={{
+                  opacity: 0,
+                  scale: 1.10,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 1.04,
+                }}
+                transition={{
+                  duration: 0.75,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="
+                  absolute
+                  inset-0
+                  h-full
+                  w-full
+                  object-cover
+                "
+              />
+            </AnimatePresence>
+
+            {/* =================================================
+                DARK TEAL OVERLAY
+            ================================================= */}
+
             <div
               className="
+                absolute
+                inset-0
+                bg-gradient-to-t
+                from-[#031F25]
+                via-[#063F46]/85
+                to-[#063F46]/30
+              "
+            />
+
+            {/* =================================================
+                IMAGE COLOR TREATMENT
+            ================================================= */}
+
+            <motion.div
+              key={`color-${active.number}`}
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.6,
+              }}
+              className="
+                absolute
+                inset-0
+                bg-[#063F46]/20
+                mix-blend-multiply
+              "
+            />
+
+            {/* =================================================
+                TEAL GLOW
+            ================================================= */}
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -right-[100px]
+                -top-[100px]
+                h-[430px]
+                w-[430px]
+                rounded-full
+                bg-[#087F8C]/25
+                blur-[100px]
+              "
+            />
+
+            {/* =================================================
+                GOLD GLOW
+            ================================================= */}
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -bottom-[120px]
+                left-[15%]
+                h-[300px]
+                w-[300px]
+                rounded-full
+                bg-[#C6A15B]/10
+                blur-[100px]
+              "
+            />
+
+            {/* =================================================
+                DECORATIVE CIRCLE
+            ================================================= */}
+
+            <div
+              className="
+                pointer-events-none
                 absolute
                 -right-[100px]
                 -top-[100px]
@@ -1235,20 +1370,13 @@ export default function ServicesSection() {
               "
             />
 
-            <div
-              className="
-                absolute
-                -right-[20px]
-                -top-[20px]
-                h-[270px]
-                w-[270px]
-                rounded-full
-                bg-[#087F8C]/[0.13]
-              "
-            />
+            {/* =================================================
+                DOT PATTERN
+            ================================================= */}
 
             <div
               className="
+                pointer-events-none
                 absolute
                 right-10
                 top-10
@@ -1260,6 +1388,10 @@ export default function ServicesSection() {
               "
             />
 
+            {/* =================================================
+                GOLD BOTTOM ACCENT
+            ================================================= */}
+
             <div
               className="
                 absolute
@@ -1270,6 +1402,10 @@ export default function ServicesSection() {
                 bg-[#C6A15B]
               "
             />
+
+            {/* =================================================
+                ACTIVE SERVICE CONTENT
+            ================================================= */}
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -1287,11 +1423,12 @@ export default function ServicesSection() {
                   y: -20,
                 }}
                 transition={{
-                  duration: 0.4,
+                  duration: 0.45,
+                  ease: [0.22, 1, 0.36, 1],
                 }}
                 className="
                   relative
-                  z-10
+                  z-20
                   flex
                   min-h-[500px]
                   flex-col
@@ -1301,6 +1438,10 @@ export default function ServicesSection() {
                   lg:p-10
                 "
               >
+                {/* =================================================
+                    TOP
+                ================================================= */}
+
                 <div
                   className="
                     flex
@@ -1308,7 +1449,19 @@ export default function ServicesSection() {
                     justify-between
                   "
                 >
-                  <div
+                  <motion.div
+                    initial={{
+                      scale: 0.8,
+                      opacity: 0,
+                    }}
+                    animate={{
+                      scale: 1,
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.45,
+                      delay: 0.1,
+                    }}
                     className="
                       flex
                       h-[68px]
@@ -1316,18 +1469,20 @@ export default function ServicesSection() {
                       items-center
                       justify-center
                       rounded-full
-                      bg-white
+                      border
+                      border-white/20
+                      bg-white/95
+                      shadow-[0_15px_40px_rgba(0,0,0,0.15)]
                     "
                     style={{
-                      color:
-                        active.color,
+                      color: active.color,
                     }}
                   >
                     <active.icon
                       size={30}
                       strokeWidth={1.6}
                     />
-                  </div>
+                  </motion.div>
 
                   <span
                     className="
@@ -1335,30 +1490,46 @@ export default function ServicesSection() {
                       font-bold
                       leading-none
                       tracking-[-0.08em]
-                      text-white/[0.05]
+                      text-white/10
                     "
                   >
                     {active.number}
                   </span>
                 </div>
 
+                {/* =================================================
+                    MIDDLE CONTENT
+                ================================================= */}
+
                 <div
                   className="
                     max-w-[650px]
                   "
                 >
-                  <p
+                  <motion.p
+                    initial={{
+                      opacity: 0,
+                      x: -10,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                    }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.08,
+                    }}
                     className="
                       mb-4
                       text-[10px]
                       font-semibold
                       uppercase
                       tracking-[0.22em]
-                      text-[#C6A15B]
+                      text-[#D7C17A]
                     "
                   >
                     IBS Solutions
-                  </p>
+                  </motion.p>
 
                   <h3
                     className="
@@ -1380,13 +1551,17 @@ export default function ServicesSection() {
                       max-w-[550px]
                       text-[15px]
                       leading-7
-                      text-white/65
+                      text-white/70
                       sm:text-[16px]
                     "
                   >
                     {active.description}
                   </p>
                 </div>
+
+                {/* =================================================
+                    BOTTOM CONTENT
+                ================================================= */}
 
                 <div
                   className="
@@ -1404,7 +1579,7 @@ export default function ServicesSection() {
                         font-semibold
                         uppercase
                         tracking-[0.2em]
-                        text-white/40
+                        text-white/45
                       "
                     >
                       Professional
@@ -1431,16 +1606,19 @@ export default function ServicesSection() {
                       items-center
                       gap-3
                       rounded-full
+                      border
+                      border-white/20
                       bg-white
                       px-5
                       py-3
                       text-[13px]
                       font-semibold
                       !text-[#0B1F3A]
+                      shadow-[0_12px_30px_rgba(0,0,0,0.12)]
                       transition-all
                       duration-300
                       hover:-translate-y-1
-                      hover:bg-[#C6A15B]
+                      hover:bg-[#D7C17A]
                     "
                   >
                     <span className="!text-[#0B1F3A]">
@@ -1457,13 +1635,15 @@ export default function ServicesSection() {
                         rounded-full
                         bg-[#087F8C]
                         text-white
-                        transition-transform
+                        transition-all
                         duration-300
                         group-hover:translate-x-1
+                        group-hover:bg-[#0B1F3A]
                       "
                     >
                       <ArrowUpRight
                         size={14}
+                        strokeWidth={2}
                       />
                     </span>
                   </Link>
@@ -1502,10 +1682,10 @@ export default function ServicesSection() {
             rounded-[30px]
             border
             border-[#C8D9D7]
-         bg-gradient-to-br
-from-[#063F46]
-via-[#087F8C]
-to-[#4FAEB0]
+            bg-gradient-to-br
+            from-[#063F46]
+            via-[#087F8C]
+            to-[#4FAEB0]
             px-6
             py-6
             shadow-[0_18px_55px_rgba(73,61,39,0.10)]
@@ -1603,241 +1783,237 @@ to-[#4FAEB0]
               CTA CONTENT
           ================================================= */}
 
-         {/* =================================================
-    CTA CONTENT
-================================================= */}
+          <div
+            className="
+              relative
+              z-10
+              flex
+              flex-col
+              gap-6
+              lg:flex-row
+              lg:items-center
+              lg:justify-between
+            "
+          >
+            {/* LEFT */}
 
-<div
-  className="
-    relative
-    z-10
-    flex
-    flex-col
-    gap-6
-    lg:flex-row
-    lg:items-center
-    lg:justify-between
-  "
->
-  {/* LEFT */}
+            <div
+              className="
+                flex
+                items-center
+                gap-4
+              "
+            >
+              {/* Premium icon */}
 
-  <div
-    className="
-      flex
-      items-center
-      gap-4
-    "
-  >
-    {/* Premium icon */}
+              <motion.div
+                whileHover={{
+                  scale: 1.06,
+                  rotate: 4,
+                }}
+                transition={{
+                  duration: 0.3,
+                }}
+                className="
+                  relative
+                  flex
+                  h-[58px]
+                  w-[58px]
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-[18px]
+                  border
+                  border-white/20
+                  bg-white/10
+                  shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+                  backdrop-blur-md
+                "
+              >
+                <span
+                  className="
+                    absolute
+                    inset-[7px]
+                    rounded-[13px]
+                    border
+                    border-white/10
+                  "
+                />
 
-    <motion.div
-      whileHover={{
-        scale: 1.06,
-        rotate: 4,
-      }}
-      transition={{
-        duration: 0.3,
-      }}
-      className="
-        relative
-        flex
-        h-[58px]
-        w-[58px]
-        shrink-0
-        items-center
-        justify-center
-        rounded-[18px]
-        border
-        border-white/20
-        bg-white/10
-        shadow-[0_10px_30px_rgba(0,0,0,0.12)]
-        backdrop-blur-md
-      "
-    >
-      <span
-        className="
-          absolute
-          inset-[7px]
-          rounded-[13px]
-          border
-          border-white/10
-        "
-      />
+                <Handshake
+                  size={25}
+                  strokeWidth={1.4}
+                  className="
+                    relative
+                    z-10
+                    text-[#D7C17A]
+                  "
+                />
+              </motion.div>
 
-      <Handshake
-        size={25}
-        strokeWidth={1.4}
-        className="
-          relative
-          z-10
-          text-[#D7C17A]
-        "
-      />
-    </motion.div>
+              <div>
+                {/* Eyebrow */}
 
-    <div>
-      {/* Eyebrow */}
+                <div
+                  className="
+                    flex
+                    items-center
+                    gap-2
+                  "
+                >
+                  <span
+                    className="
+                      h-[6px]
+                      w-[6px]
+                      rounded-full
+                      bg-[#D7C17A]
+                      shadow-[0_0_10px_rgba(215,193,122,0.7)]
+                    "
+                  />
 
-      <div
-        className="
-          flex
-          items-center
-          gap-2
-        "
-      >
-        <span
-          className="
-            h-[6px]
-            w-[6px]
-            rounded-full
-            bg-[#D7C17A]
-            shadow-[0_0_10px_rgba(215,193,122,0.7)]
-          "
-        />
+                  <span
+                    className="
+                      text-[9px]
+                      font-bold
+                      uppercase
+                      tracking-[0.25em]
+                      text-[#D7C17A]
+                    "
+                  >
+                    Let's work together
+                  </span>
+                </div>
 
-        <span
-          className="
-            text-[9px]
-            font-bold
-            uppercase
-            tracking-[0.25em]
-            text-[#D7C17A]
-          "
-        >
-          Let's work together
-        </span>
-      </div>
+                {/* Heading */}
 
-      {/* Heading */}
+                <h3
+                  className="
+                    mt-1.5
+                    text-[21px]
+                    font-semibold
+                    tracking-[-0.035em]
+                    text-white
+                    sm:text-[24px]
+                  "
+                >
+                  One partner.
 
-      <h3
-        className="
-          mt-1.5
-          text-[21px]
-          font-semibold
-          tracking-[-0.035em]
-          text-white
-          sm:text-[24px]
-        "
-      >
-        One partner.
+                  <span
+                    className="
+                      ml-1.5
+                      text-[#B9E8E5]
+                    "
+                  >
+                    Multiple capabilities.
+                  </span>
+                </h3>
 
-        <span
-          className="
-            ml-1.5
-            text-[#B9E8E5]
-          "
-        >
-          Multiple capabilities.
-        </span>
-      </h3>
+                {/* Description */}
 
-      {/* Description */}
+                <p
+                  className="
+                    mt-1
+                    max-w-[560px]
+                    text-[12px]
+                    leading-5
+                    text-white/65
+                    sm:text-[13px]
+                  "
+                >
+                  Tailored professional support for
+                  organizations and entrepreneurs.
+                </p>
+              </div>
+            </div>
 
-      <p
-        className="
-          mt-1
-          max-w-[560px]
-          text-[12px]
-          leading-5
-          text-white/65
-          sm:text-[13px]
-        "
-      >
-        Tailored professional support for
-        organizations and entrepreneurs.
-      </p>
-    </div>
-  </div>
+            {/* =================================================
+                CTA BUTTON
+            ================================================= */}
 
-  {/* =================================================
-      CTA BUTTON
-  ================================================= */}
+            <Link
+              href="/contact"
+              className="
+                group/cta
+                relative
+                inline-flex
+                shrink-0
+                items-center
+                justify-center
+                gap-3
+                overflow-hidden
+                rounded-full
+                border
+                border-white/20
+                bg-white
+                px-5
+                py-3
+                text-[11px]
+                font-bold
+                uppercase
+                tracking-[0.1em]
+                !text-[#064951]
+                shadow-[0_12px_30px_rgba(0,0,0,0.14)]
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-[#D7C17A]
+                hover:bg-[#D7C17A]
+                hover:shadow-[0_18px_38px_rgba(0,0,0,0.18)]
+              "
+            >
+              {/* Shine */}
 
-  <Link
-    href="/contact"
-    className="
-      group/cta
-      relative
-      inline-flex
-      shrink-0
-      items-center
-      justify-center
-      gap-3
-      overflow-hidden
-      rounded-full
-      border
-      border-white/20
-      bg-white
-      px-5
-      py-3
-      text-[11px]
-      font-bold
-      uppercase
-      tracking-[0.1em]
-      !text-[#064951]
-      shadow-[0_12px_30px_rgba(0,0,0,0.14)]
-      transition-all
-      duration-300
-      hover:-translate-y-1
-      hover:border-[#D7C17A]
-      hover:bg-[#D7C17A]
-      hover:shadow-[0_18px_38px_rgba(0,0,0,0.18)]
-    "
-  >
-    {/* Shine */}
+              <span
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-y-0
+                  -left-[80%]
+                  w-[45%]
+                  rotate-[20deg]
+                  bg-white/50
+                  blur-md
+                  transition-all
+                  duration-700
+                  group-hover/cta:left-[130%]
+                "
+              />
 
-    <span
-      className="
-        pointer-events-none
-        absolute
-        inset-y-0
-        -left-[80%]
-        w-[45%]
-        rotate-[20deg]
-        bg-white/50
-        blur-md
-        transition-all
-        duration-700
-        group-hover/cta:left-[130%]
-      "
-    />
+              <span
+                className="
+                  relative
+                  z-10
+                  !text-[#064951]
+                "
+              >
+                Let's work together
+              </span>
 
-    <span
-      className="
-        relative
-        z-10
-        !text-[#064951]
-      "
-    >
-      Let's work together
-    </span>
-
-    <span
-      className="
-        relative
-        z-10
-        flex
-        h-8
-        w-8
-        items-center
-        justify-center
-        rounded-full
-        bg-[#087F8C]
-        text-white
-        transition-all
-        duration-300
-        group-hover/cta:translate-x-1
-        group-hover/cta:bg-[#0B1F3A]
-      "
-    >
-      <ArrowUpRight
-        size={15}
-        strokeWidth={2}
-      />
-    </span>
-  </Link>
-</div>
+              <span
+                className="
+                  relative
+                  z-10
+                  flex
+                  h-8
+                  w-8
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#087F8C]
+                  text-white
+                  transition-all
+                  duration-300
+                  group-hover/cta:translate-x-1
+                  group-hover/cta:bg-[#0B1F3A]
+                "
+              >
+                <ArrowUpRight
+                  size={15}
+                  strokeWidth={2}
+                />
+              </span>
+            </Link>
+          </div>
 
           {/* =================================================
               BOTTOM DETAILS
