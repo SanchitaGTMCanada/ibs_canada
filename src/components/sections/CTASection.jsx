@@ -67,20 +67,25 @@ export default function CTASection() {
   ];
 
   return (
-    <section
+ <section
   className="
     relative
     overflow-hidden
+
     bg-gradient-to-b
-    from-[#087F8C]
-    via-[#16737A]
-    to-[#236B70]
+    from-[#0B1F3A]
+    via-[#123A5A]
+    to-[#087F8C]
+
     pb-12
     pt-16
+
     sm:pb-14
     sm:pt-20
+
     lg:pb-16
     lg:pt-24
+
     xl:pb-20
     xl:pt-28
   "
