@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import {
   ArrowUpRight,
   Handshake,
@@ -8,7 +9,15 @@ import {
   Puzzle,
   Sparkles,
   UsersRound,
+  Lightbulb,
+  Target,
+  ChartNoAxesCombined,
+  Building2,
+  Cpu,
+  ShieldCheck,
+  Network,
 } from "lucide-react";
+
 import { motion } from "framer-motion";
 
 export default function CTASection() {
@@ -59,59 +68,472 @@ export default function CTASection() {
 
   return (
     <section
-      className="
-        relative
-        overflow-hidden
-        bg-white
-        pb-10
-        pt-20
-        sm:pt-24
-        lg:pt-28
-        xl:pt-32
-      "
-    >
+  className="
+    relative
+    overflow-hidden
+    bg-gradient-to-b
+    from-[#087F8C]
+    via-[#16737A]
+    to-[#236B70]
+    pb-12
+    pt-16
+    sm:pb-14
+    sm:pt-20
+    lg:pb-16
+    lg:pt-24
+    xl:pb-20
+    xl:pt-28
+  "
+>
       {/* =====================================================
-          SUBTLE BACKGROUND DECORATION
+          PREMIUM BACKGROUND
       ===================================================== */}
 
-      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div
-          className="
-            absolute
-            left-[5%]
-            top-[12%]
-            h-[420px]
-            w-[420px]
-            rounded-full
-            bg-[#087F8C]/[0.025]
-            blur-[110px]
-          "
-        />
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          overflow-hidden
+        "
+      >
+        {/* Top aqua glow */}
 
-        <motion.span
+        <motion.div
           animate={{
-            y: [0, -6, 0],
-            opacity: [0.35, 0.75, 0.35],
+            x: [0, 35, 0],
+            y: [0, -20, 0],
+            scale: [1, 1.08, 1],
           }}
           transition={{
-            duration: 4,
+            duration: 14,
             repeat: Infinity,
             ease: "easeInOut",
           }}
           className="
             absolute
-            right-[8%]
-            top-[12%]
-            h-3
-            w-3
+            -left-[180px]
+            -top-[100px]
+            h-[520px]
+            w-[520px]
             rounded-full
-            bg-[#C6A15B]
+            bg-[#8DE1DE]/15
+            blur-[130px]
           "
         />
 
+        {/* Right aqua glow */}
+
+        <motion.div
+          animate={{
+            x: [0, -30, 0],
+            y: [0, 25, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            -right-[170px]
+            top-[12%]
+            h-[460px]
+            w-[460px]
+            rounded-full
+            bg-[#4FAEB0]/10
+            blur-[120px]
+          "
+        />
+
+        {/* Bottom deep glow */}
+
+        <motion.div
+          animate={{
+            scale: [1, 1.12, 1],
+            opacity: [0.15, 0.25, 0.15],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            bottom-[-180px]
+            left-[30%]
+            h-[420px]
+            w-[420px]
+            rounded-full
+            bg-[#011F23]/40
+            blur-[120px]
+          "
+        />
+
+        {/* =================================================
+            SUBTLE GRID
+        ================================================= */}
+
+        <div
+          className="
+            absolute
+            inset-0
+            opacity-[0.035]
+            [background-image:linear-gradient(rgba(255,255,255,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.35)_1px,transparent_1px)]
+            [background-size:70px_70px]
+          "
+        />
+
+        {/* =================================================
+            LARGE ORBIT
+        ================================================= */}
+
+        <motion.div
+          animate={{
+            rotate: 360,
+          }}
+          transition={{
+            duration: 40,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="
+            absolute
+            left-[43%]
+            top-[8%]
+            h-[520px]
+            w-[520px]
+            rounded-full
+            border
+            border-white/[0.06]
+          "
+        >
+          <span
+            className="
+              absolute
+              left-[12%]
+              top-[8%]
+              h-2
+              w-2
+              rounded-full
+              bg-[#C6A15B]
+              shadow-[0_0_18px_rgba(198,161,91,0.8)]
+            "
+          />
+
+          <span
+            className="
+              absolute
+              bottom-[12%]
+              right-[10%]
+              h-1.5
+              w-1.5
+              rounded-full
+              bg-[#8DE1DE]
+              shadow-[0_0_15px_rgba(141,225,222,0.8)]
+            "
+          />
+        </motion.div>
+
+        <motion.div
+          animate={{
+            rotate: -360,
+          }}
+          transition={{
+            duration: 32,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="
+            absolute
+            left-[47%]
+            top-[12%]
+            h-[420px]
+            w-[420px]
+            rounded-full
+            border
+            border-[#C6A15B]/[0.08]
+          "
+        />
+
+        {/* =================================================
+            FLOATING TARGET
+        ================================================= */}
+
+        <motion.div
+          animate={{
+            y: [0, -15, 0],
+            rotate: [0, 4, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            left-[3%]
+            top-[18%]
+            hidden
+            h-[76px]
+            w-[76px]
+            items-center
+            justify-center
+            rounded-[22px]
+            border
+            border-white/10
+            bg-white/[0.06]
+            text-[#9CE5E1]/55
+            shadow-[0_20px_50px_rgba(0,0,0,0.12)]
+            backdrop-blur-md
+            lg:flex
+          "
+        >
+          <Target
+            size={31}
+            strokeWidth={1.2}
+          />
+        </motion.div>
+
+        {/* =================================================
+            FLOATING LIGHTBULB
+        ================================================= */}
+
+        <motion.div
+          animate={{
+            y: [0, 13, 0],
+            rotate: [0, -5, 0],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            right-[5%]
+            top-[10%]
+            hidden
+            h-[72px]
+            w-[72px]
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-[#C6A15B]/20
+            bg-white/[0.06]
+            text-[#D8C27D]/70
+            shadow-[0_20px_50px_rgba(0,0,0,0.12)]
+            backdrop-blur-md
+            lg:flex
+          "
+        >
+          <Lightbulb
+            size={29}
+            strokeWidth={1.2}
+          />
+        </motion.div>
+
+        {/* =================================================
+            FLOATING CHART
+        ================================================= */}
+
+        <motion.div
+          animate={{
+            y: [0, -11, 0],
+            rotate: [0, 3, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            bottom-[22%]
+            right-[3%]
+            hidden
+            h-[78px]
+            w-[78px]
+            items-center
+            justify-center
+            rounded-[24px]
+            border
+            border-white/10
+            bg-white/[0.06]
+            text-[#9CE5E1]/45
+            backdrop-blur-md
+            lg:flex
+          "
+        >
+          <ChartNoAxesCombined
+            size={32}
+            strokeWidth={1.2}
+          />
+        </motion.div>
+
+        {/* =================================================
+            FLOATING BUILDING
+        ================================================= */}
+
+        <motion.div
+          animate={{
+            y: [0, 10, 0],
+            rotate: [0, -3, 0],
+          }}
+          transition={{
+            duration: 7.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            bottom-[13%]
+            left-[4%]
+            hidden
+            h-[66px]
+            w-[66px]
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/10
+            bg-white/[0.05]
+            text-white/30
+            backdrop-blur-md
+            lg:flex
+          "
+        >
+          <Building2
+            size={27}
+            strokeWidth={1.2}
+          />
+        </motion.div>
+
+        {/* =================================================
+            FLOATING CPU
+        ================================================= */}
+
+        <motion.div
+          animate={{
+            y: [0, -8, 0],
+            rotate: [0, 4, 0],
+          }}
+          transition={{
+            duration: 6.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            bottom-[8%]
+            right-[21%]
+            hidden
+            h-[54px]
+            w-[54px]
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/10
+            bg-white/[0.05]
+            text-[#9CE5E1]/30
+            backdrop-blur-md
+            lg:flex
+          "
+        >
+          <Cpu
+            size={23}
+            strokeWidth={1.2}
+          />
+        </motion.div>
+
+        {/* =================================================
+            FLOATING NETWORK
+        ================================================= */}
+
+        <motion.div
+          animate={{
+            y: [0, 8, 0],
+            rotate: [0, -4, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            left-[28%]
+            top-[7%]
+            hidden
+            h-[52px]
+            w-[52px]
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-[#C6A15B]/15
+            bg-white/[0.04]
+            text-[#D8C27D]/45
+            backdrop-blur-md
+            lg:flex
+          "
+        >
+          <Network
+            size={22}
+            strokeWidth={1.2}
+          />
+        </motion.div>
+
+        {/* =================================================
+            FLOATING SHIELD
+        ================================================= */}
+
+        <motion.div
+          animate={{
+            y: [0, -7, 0],
+            opacity: [0.25, 0.55, 0.25],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            right-[29%]
+            bottom-[14%]
+            hidden
+            h-[48px]
+            w-[48px]
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/10
+            bg-white/[0.04]
+            text-[#9CE5E1]/30
+            backdrop-blur-md
+            lg:flex
+          "
+        >
+          <ShieldCheck
+            size={21}
+            strokeWidth={1.2}
+          />
+        </motion.div>
+
+        {/* =================================================
+            FLOATING PARTICLES
+        ================================================= */}
+
         <motion.span
           animate={{
-            y: [0, 5, 0],
+            y: [0, -13, 0],
+            opacity: [0.3, 0.9, 0.3],
+            scale: [1, 1.3, 1],
           }}
           transition={{
             duration: 3.5,
@@ -120,15 +542,98 @@ export default function CTASection() {
           }}
           className="
             absolute
-            right-[13%]
-            top-[21%]
+            left-[17%]
+            top-[12%]
             h-2
             w-2
             rounded-full
-            bg-[#087F8C]/50
+            bg-[#C6A15B]
+            shadow-[0_0_15px_rgba(198,161,91,0.7)]
+          "
+        />
+
+        <motion.span
+          animate={{
+            y: [0, 9, 0],
+            opacity: [0.2, 0.8, 0.2],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            right-[28%]
+            top-[27%]
+            h-1.5
+            w-1.5
+            rounded-full
+            bg-[#9CE5E1]
+          "
+        />
+
+        <motion.span
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.2, 0.8, 0.2],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            bottom-[18%]
+            left-[25%]
+            h-2
+            w-2
+            rounded-full
+            bg-[#C6A15B]
+          "
+        />
+
+        <motion.span
+          animate={{
+            y: [0, -8, 0],
+            opacity: [0.2, 0.7, 0.2],
+          }}
+          transition={{
+            duration: 4.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            right-[39%]
+            bottom-[12%]
+            h-1.5
+            w-1.5
+            rounded-full
+            bg-[#9CE5E1]
           "
         />
       </div>
+
+      {/* =====================================================
+          TOP EDGE
+      ===================================================== */}
+
+      <div
+        className="
+          absolute
+          left-0
+          right-0
+          top-0
+          z-30
+          h-px
+          bg-gradient-to-r
+          from-transparent
+          via-[#D7C17A]/40
+          to-transparent
+        "
+      />
 
       {/* =====================================================
           MAIN CONTENT
@@ -212,7 +717,7 @@ export default function CTASection() {
                 className="
                   h-[3px]
                   rounded-full
-                  bg-[#C6A15B]
+                  bg-[#D7C17A]
                 "
               />
 
@@ -222,7 +727,7 @@ export default function CTASection() {
                   font-bold
                   uppercase
                   tracking-[0.28em]
-                  text-[#087F8C]
+                  text-[#BCEBE8]
                 "
               >
                 YOUR NEXT MOVE STARTS HERE
@@ -238,14 +743,10 @@ export default function CTASection() {
                 font-bold
                 leading-[0.94]
                 tracking-[-0.055em]
-                text-[#142133]
-
+                text-white
                 sm:text-[64px]
-
                 md:text-[72px]
-
                 lg:text-[76px]
-
                 xl:text-[88px]
               "
             >
@@ -287,11 +788,13 @@ export default function CTASection() {
                 }}
                 className="
                   block
-                  text-[#087F8C]
+                  text-[#BCEBE8]
                 "
               >
                 what&apos;s next
-                <span className="text-[#C6A15B]">.</span>
+                <span className="text-[#D7C17A]">
+                  .
+                </span>
               </motion.span>
             </h2>
 
@@ -315,7 +818,9 @@ export default function CTASection() {
                 mt-7
                 h-[4px]
                 rounded-full
-                bg-[#C6A15B]
+                bg-gradient-to-r
+                from-[#D7C17A]
+                to-[#A88B4A]
               "
             />
 
@@ -342,18 +847,16 @@ export default function CTASection() {
                 max-w-[520px]
                 text-[16px]
                 leading-7
-                text-[#627286]
-
+                text-white/70
                 sm:text-[17px]
                 sm:leading-8
               "
             >
-              Turn ideas into practical solutions and meaningful outcomes.
+              Turn ideas into practical solutions
+              and meaningful outcomes.
             </motion.p>
 
-            {/* =================================================
-                BENEFITS
-            ================================================= */}
+            {/* BENEFITS */}
 
             <div
               className="
@@ -381,7 +884,8 @@ export default function CTASection() {
                     }}
                     transition={{
                       duration: 0.6,
-                      delay: 0.35 + index * 0.12,
+                      delay:
+                        0.35 + index * 0.12,
                     }}
                     className="
                       group
@@ -391,8 +895,6 @@ export default function CTASection() {
                       sm:gap-5
                     "
                   >
-                    {/* ICON */}
-
                     <motion.div
                       whileHover={{
                         y: -4,
@@ -408,17 +910,17 @@ export default function CTASection() {
                         shrink-0
                         items-center
                         justify-center
-                        rounded-full
+                        rounded-[15px]
                         border
-                        border-[#E5E9EA]
-                        bg-white
-                        text-[#087F8C]
-                        shadow-[0_8px_25px_rgba(20,33,51,0.07)]
+                        border-white/10
+                        bg-white/[0.07]
+                        text-[#BCEBE8]
+                        shadow-[0_12px_30px_rgba(0,0,0,0.12)]
+                        backdrop-blur-md
                         transition-all
                         duration-300
-
-                        group-hover:border-[#087F8C]/30
-                        group-hover:shadow-[0_12px_30px_rgba(8,127,140,0.12)]
+                        group-hover:border-[#BCEBE8]/30
+                        group-hover:bg-white/[0.12]
                       "
                     >
                       <Icon
@@ -427,8 +929,6 @@ export default function CTASection() {
                       />
                     </motion.div>
 
-                    {/* NUMBER */}
-
                     <div
                       className="
                         flex
@@ -436,7 +936,7 @@ export default function CTASection() {
                         items-center
                         justify-center
                         border-l
-                        border-[#C6A15B]
+                        border-[#D7C17A]/60
                         pl-4
                       "
                     >
@@ -445,14 +945,12 @@ export default function CTASection() {
                           text-[27px]
                           font-light
                           tracking-[-0.04em]
-                          text-[#C6A15B]
+                          text-[#D7C17A]
                         "
                       >
                         {item.number}
                       </span>
                     </div>
-
-                    {/* TEXT */}
 
                     <div>
                       <p
@@ -461,7 +959,7 @@ export default function CTASection() {
                           font-bold
                           uppercase
                           tracking-[0.15em]
-                          text-[#142133]
+                          text-white
                         "
                       >
                         {item.title}
@@ -473,7 +971,7 @@ export default function CTASection() {
                           max-w-[390px]
                           text-[12px]
                           leading-5
-                          text-[#718092]
+                          text-white/55
                         "
                       >
                         {item.text}
@@ -492,7 +990,7 @@ export default function CTASection() {
           <motion.div
             initial={{
               opacity: 0,
-              y: 40,
+              y: 45,
               scale: 0.97,
             }}
             whileInView={{
@@ -515,15 +1013,24 @@ export default function CTASection() {
               lg:-mt-4
             "
           >
-            {/* FORM GLOW */}
+            {/* FORM OUTER GLOW */}
 
-            <div
+            <motion.div
+              animate={{
+                scale: [1, 1.025, 1],
+                opacity: [0.25, 0.5, 0.25],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
               className="
                 pointer-events-none
                 absolute
-                -inset-4
-                rounded-[34px]
-                bg-[#087F8C]/[0.055]
+                -inset-5
+                rounded-[38px]
+                bg-[#9CE5E1]/20
                 blur-2xl
               "
             />
@@ -533,23 +1040,51 @@ export default function CTASection() {
             <div
               className="
                 relative
-                z-[110]
                 overflow-hidden
-                rounded-[28px]
+                rounded-[30px]
                 border
-                border-[#E1E5E7]
-                bg-white
+                border-white/20
+                bg-[#F4F8F6]
                 p-6
-                shadow-[0_25px_70px_rgba(20,33,51,0.13)]
-
+                shadow-[0_35px_90px_rgba(0,0,0,0.30)]
                 sm:p-8
-
                 lg:p-9
-
                 xl:p-10
               "
             >
-              {/* TOP ACCENT */}
+              {/* Card aqua highlight */}
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-[80px]
+                  -top-[80px]
+                  h-[260px]
+                  w-[260px]
+                  rounded-full
+                  bg-[#087F8C]/[0.10]
+                  blur-[80px]
+                "
+              />
+
+              {/* Card gold highlight */}
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  bottom-[-100px]
+                  left-[20%]
+                  h-[260px]
+                  w-[260px]
+                  rounded-full
+                  bg-[#C6A15B]/[0.08]
+                  blur-[80px]
+                "
+              />
+
+              {/* Metallic top line */}
 
               <div
                 className="
@@ -559,9 +1094,10 @@ export default function CTASection() {
                   top-0
                   h-[4px]
                   bg-gradient-to-r
-                  from-[#087F8C]
-                  via-[#C6A15B]
-                  to-[#087F8C]
+                  from-[#063F46]
+                  via-[#087F8C]
+                  via-[#D7C17A]
+                  to-[#4FAEB0]
                 "
               />
 
@@ -569,6 +1105,8 @@ export default function CTASection() {
 
               <div
                 className="
+                  relative
+                  z-10
                   mb-7
                   flex
                   items-start
@@ -596,8 +1134,7 @@ export default function CTASection() {
                       font-bold
                       leading-tight
                       tracking-[-0.04em]
-                      text-[#142133]
-
+                      text-[#102A32]
                       sm:text-[32px]
                     "
                   >
@@ -610,18 +1147,18 @@ export default function CTASection() {
                       max-w-[400px]
                       text-[12px]
                       leading-6
-                      text-[#7B8793]
+                      text-[#65777C]
                     "
                   >
-                    Share a few details and we&apos;ll get back to you.
+                    Share a few details and we&apos;ll
+                    get back to you.
                   </p>
                 </div>
 
-                {/* FLOATING ICON */}
-
                 <motion.div
                   animate={{
-                    y: [0, -4, 0],
+                    y: [0, -5, 0],
+                    rotate: [0, 3, 0],
                   }}
                   transition={{
                     duration: 4,
@@ -629,22 +1166,35 @@ export default function CTASection() {
                     ease: "easeInOut",
                   }}
                   className="
+                    relative
                     flex
-                    h-12
-                    w-12
+                    h-14
+                    w-14
                     shrink-0
                     items-center
                     justify-center
-                    rounded-full
+                    rounded-[18px]
                     border
                     border-[#087F8C]/15
-                    bg-[#E5F4F5]
+                    bg-white
                     text-[#087F8C]
+                    shadow-[0_12px_30px_rgba(8,127,140,0.10)]
                   "
                 >
+                  <span
+                    className="
+                      absolute
+                      inset-[6px]
+                      rounded-[13px]
+                      border
+                      border-[#C6A15B]/20
+                    "
+                  />
+
                   <ArrowUpRight
-                    size={21}
-                    strokeWidth={1.6}
+                    size={23}
+                    strokeWidth={1.5}
+                    className="relative z-10"
                   />
                 </motion.div>
               </div>
@@ -653,7 +1203,11 @@ export default function CTASection() {
 
               <form
                 onSubmit={handleSubmit}
-                className="space-y-5"
+                className="
+                  relative
+                  z-10
+                  space-y-5
+                "
               >
                 {/* NAME */}
 
@@ -667,7 +1221,7 @@ export default function CTASection() {
                       font-bold
                       uppercase
                       tracking-[0.15em]
-                      text-[#53616F]
+                      text-[#53676D]
                     "
                   >
                     Name
@@ -679,7 +1233,9 @@ export default function CTASection() {
                     type="text"
                     value={formData.name}
                     onChange={handleChange}
-                    onFocus={() => setFocused("name")}
+                    onFocus={() =>
+                      setFocused("name")
+                    }
                     onBlur={() => setFocused("")}
                     placeholder="Your name"
                     required
@@ -688,19 +1244,19 @@ export default function CTASection() {
                       w-full
                       rounded-[11px]
                       border
-                      bg-[#FCFCFB]
+                      bg-white
                       px-4
                       text-[14px]
-                      text-[#142133]
+                      text-[#102A32]
                       outline-none
                       transition-all
                       duration-300
-                      placeholder:text-[#A2ACB4]
+                      placeholder:text-[#A0ADB0]
 
                       ${
                         focused === "name"
-                          ? "border-[#087F8C] bg-white shadow-[0_0_0_4px_rgba(8,127,140,0.07)]"
-                          : "border-[#E1E5E7]"
+                          ? "border-[#087F8C] shadow-[0_0_0_4px_rgba(8,127,140,0.08)]"
+                          : "border-[#D9E3E2]"
                       }
                     `}
                   />
@@ -718,7 +1274,7 @@ export default function CTASection() {
                       font-bold
                       uppercase
                       tracking-[0.15em]
-                      text-[#53616F]
+                      text-[#53676D]
                     "
                   >
                     Phone Number
@@ -730,7 +1286,9 @@ export default function CTASection() {
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    onFocus={() => setFocused("phone")}
+                    onFocus={() =>
+                      setFocused("phone")
+                    }
                     onBlur={() => setFocused("")}
                     placeholder="+1 000 000 0000"
                     required
@@ -739,19 +1297,19 @@ export default function CTASection() {
                       w-full
                       rounded-[11px]
                       border
-                      bg-[#FCFCFB]
+                      bg-white
                       px-4
                       text-[14px]
-                      text-[#142133]
+                      text-[#102A32]
                       outline-none
                       transition-all
                       duration-300
-                      placeholder:text-[#A2ACB4]
+                      placeholder:text-[#A0ADB0]
 
                       ${
                         focused === "phone"
-                          ? "border-[#087F8C] bg-white shadow-[0_0_0_4px_rgba(8,127,140,0.07)]"
-                          : "border-[#E1E5E7]"
+                          ? "border-[#087F8C] shadow-[0_0_0_4px_rgba(8,127,140,0.08)]"
+                          : "border-[#D9E3E2]"
                       }
                     `}
                   />
@@ -769,7 +1327,7 @@ export default function CTASection() {
                       font-bold
                       uppercase
                       tracking-[0.15em]
-                      text-[#53616F]
+                      text-[#53676D]
                     "
                   >
                     Email
@@ -781,7 +1339,9 @@ export default function CTASection() {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    onFocus={() => setFocused("email")}
+                    onFocus={() =>
+                      setFocused("email")
+                    }
                     onBlur={() => setFocused("")}
                     placeholder="you@example.com"
                     required
@@ -790,19 +1350,19 @@ export default function CTASection() {
                       w-full
                       rounded-[11px]
                       border
-                      bg-[#FCFCFB]
+                      bg-white
                       px-4
                       text-[14px]
-                      text-[#142133]
+                      text-[#102A32]
                       outline-none
                       transition-all
                       duration-300
-                      placeholder:text-[#A2ACB4]
+                      placeholder:text-[#A0ADB0]
 
                       ${
                         focused === "email"
-                          ? "border-[#087F8C] bg-white shadow-[0_0_0_4px_rgba(8,127,140,0.07)]"
-                          : "border-[#E1E5E7]"
+                          ? "border-[#087F8C] shadow-[0_0_0_4px_rgba(8,127,140,0.08)]"
+                          : "border-[#D9E3E2]"
                       }
                     `}
                   />
@@ -820,7 +1380,7 @@ export default function CTASection() {
                       font-bold
                       uppercase
                       tracking-[0.15em]
-                      text-[#53616F]
+                      text-[#53676D]
                     "
                   >
                     Comment
@@ -832,7 +1392,9 @@ export default function CTASection() {
                     rows={4}
                     value={formData.comment}
                     onChange={handleChange}
-                    onFocus={() => setFocused("comment")}
+                    onFocus={() =>
+                      setFocused("comment")
+                    }
                     onBlur={() => setFocused("")}
                     placeholder="Tell us a little about your project..."
                     required
@@ -842,21 +1404,21 @@ export default function CTASection() {
                       resize-none
                       rounded-[11px]
                       border
-                      bg-[#FCFCFB]
+                      bg-white
                       px-4
                       py-3.5
                       text-[14px]
                       leading-6
-                      text-[#142133]
+                      text-[#102A32]
                       outline-none
                       transition-all
                       duration-300
-                      placeholder:text-[#A2ACB4]
+                      placeholder:text-[#A0ADB0]
 
                       ${
                         focused === "comment"
-                          ? "border-[#087F8C] bg-white shadow-[0_0_0_4px_rgba(8,127,140,0.07)]"
-                          : "border-[#E1E5E7]"
+                          ? "border-[#087F8C] shadow-[0_0_0_4px_rgba(8,127,140,0.08)]"
+                          : "border-[#D9E3E2]"
                       }
                     `}
                   />
@@ -883,17 +1445,20 @@ export default function CTASection() {
                     gap-3
                     overflow-hidden
                     rounded-[11px]
-                    bg-[#087F8C]
+                    bg-gradient-to-r
+                    from-[#063F46]
+                    via-[#087F8C]
+                    to-[#159FA2]
                     px-6
                     font-semibold
                     !text-white
-                    shadow-[0_15px_30px_rgba(8,127,140,0.18)]
+                    shadow-[0_15px_35px_rgba(8,127,140,0.24)]
                     transition-all
                     duration-300
-                    hover:bg-[#0B1F3A]
+                    hover:shadow-[0_20px_42px_rgba(8,127,140,0.32)]
                   "
                 >
-                  {/* BUTTON SHINE */}
+                  {/* Shine */}
 
                   <span
                     className="
@@ -904,7 +1469,7 @@ export default function CTASection() {
                       h-full
                       w-[60%]
                       skew-x-[-20deg]
-                      bg-white/10
+                      bg-white/20
                       transition-all
                       duration-700
                       group-hover:left-[120%]
@@ -931,11 +1496,12 @@ export default function CTASection() {
                       items-center
                       justify-center
                       rounded-full
-                      bg-[#C6A15B]
-                      !text-[#0B1F3A]
-                      transition-transform
+                      bg-[#D7C17A]
+                      !text-[#063F46]
+                      transition-all
                       duration-300
                       group-hover:translate-x-1
+                      group-hover:bg-[#E3D294]
                     "
                   >
                     <ArrowUpRight
@@ -965,7 +1531,7 @@ export default function CTASection() {
                   <span
                     className="
                       text-[10px]
-                      text-[#8A949A]
+                      text-[#7C8C91]
                     "
                   >
                     Your information is safe with us.
@@ -975,64 +1541,72 @@ export default function CTASection() {
             </div>
           </motion.div>
         </div>
-      </div>
 
-      {/* =====================================================
-          RESPONSIVE WAVY LOWER TRANSITION
+        {/* =====================================================
+            BOTTOM DETAIL
+        ===================================================== */}
 
-          MOBILE:
-          - Separate softer geometry
-          - Shallower wave
-          - Less aggressive curve
-
-          DESKTOP:
-          - Larger premium wave
-          - Multiple contour lines
-
-          Z-INDEX:
-          Form card  = 110
-          Form        = 100
-          Wave        = 30
-      ===================================================== */}
-
-      
-
-      {/* =====================================================
-          SMALL ROTATING DETAIL
-      ===================================================== */}
-
-      <motion.div
-        animate={{
-          rotate: 360,
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          bottom-[55px]
-          left-[48%]
-          z-40
-          hidden
-          h-10
-          w-10
-          items-center
-          justify-center
-          rounded-full
-          border
-          border-dashed
-          border-[#C6A15B]/45
-          lg:flex
-        "
-      >
-        <Sparkles
-          size={14}
-          className="text-[#C6A15B]"
+        <motion.div
+          initial={{
+            opacity: 0,
+            scaleX: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            scaleX: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 1,
+            delay: 0.3,
+          }}
+          className="
+            mx-auto
+            mt-14
+            h-px
+            w-[220px]
+            origin-center
+            bg-gradient-to-r
+            from-transparent
+            via-[#9CE5E1]/35
+            to-transparent
+          "
         />
-      </motion.div>
+
+        {/* ROTATING GOLD DETAIL */}
+
+        <motion.div
+          animate={{
+            rotate: 360,
+          }}
+          transition={{
+            duration: 24,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="
+            mx-auto
+            mt-4
+            flex
+            h-9
+            w-9
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-dashed
+            border-[#D7C17A]/40
+          "
+        >
+          <Sparkles
+            size={13}
+            strokeWidth={1.4}
+            className="text-[#D7C17A]"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }
