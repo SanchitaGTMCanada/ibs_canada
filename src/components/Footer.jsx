@@ -667,89 +667,39 @@ export default function Footer() {
             "
           >
 
-            <motion.div
-              animate={{
-                rotate: [0, 2, 0, -2, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                relative
-                flex
-                h-10
-                w-10
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-[#C6A15B]/70
-                bg-[#C6A15B]/[0.04]
-              "
-            >
-
-              <motion.div
-                animate={{
-                  rotate: [45, 135, 225, 315, 405],
-                }}
-                transition={{
-                  duration: 18,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                className="
-                  absolute
-                  h-6
-                  w-6
-                  border
-                  border-[#C6A15B]/50
-                "
-              />
-
-              <span
-                className="
-                  relative
-                  z-10
-                  text-[9px]
-                  font-bold
-                  tracking-[0.08em]
-                  text-white
-                "
-              >
-                IBS
-              </span>
-
-            </motion.div>
+         
 
 
-            <div>
-
-              <p
-                className="
-                  text-[14px]
-                  font-semibold
-                  tracking-[-0.02em]
-                  text-white
-                "
-              >
-                IBS
-              </p>
-
-              <p
-                className="
-                  text-[7px]
-                  font-bold
-                  uppercase
-                  tracking-[0.32em]
-                  text-[#C6A15B]
-                "
-              >
-                Canada
-              </p>
-
-            </div>
+<div
+  className="
+    flex
+    h-[90px]
+    w-[130px]
+    items-center
+    justify-center
+    overflow-hidden
+    rounded-[20px]
+    border
+    border-white/20
+    bg-white
+    shadow-[0_10px_30px_rgba(0,0,0,0.20)]
+    transition-all
+    duration-300
+    hover:scale-105
+    hover:border-[#C6A15B]/60
+  "
+>
+  <img
+    src="/logo/logo.jpg"
+    alt="IBS Canada"
+    className="
+      h-full
+      w-full
+      object-contain
+      p-0
+    "
+  />
+</div>
 
           </a>
 

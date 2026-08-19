@@ -445,85 +445,260 @@ export default function Hero() {
                 MISSION CARD
             ================================================= */}
 
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 25,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                delay: 0.9,
-                duration: 0.6,
-              }}
-              className="
-                absolute
-                bottom-[25px]
-                left-[-15px]
-                z-40
-                w-[280px]
-                rounded-[22px]
-                bg-white
-                p-5
-                shadow-[0_20px_55px_rgba(0,0,0,0.18)]
-                lg:bottom-[35px]
-              "
-            >
-              <div className="flex gap-4">
-                <div
-                  className="
-                    flex
-                    h-11
-                    w-11
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#087F8C]
-                    text-white
-                  "
-                >
-                  <Users size={20} />
-                </div>
+       <motion.div
+  initial={{
+    opacity: 0,
+    y: 25,
+  }}
+  animate={{
+    opacity: 1,
+    y: 0,
+  }}
+  transition={{
+    delay: 0.9,
+    duration: 0.6,
+  }}
+  className="
+    group
+    absolute
+    bottom-[25px]
+    left-[-15px]
+    z-40
+    w-[280px]
+    overflow-hidden
+    rounded-[22px]
+    border
+    border-[#D8E5E4]
+    bg-gradient-to-br
+    from-white
+    via-white
+    to-[#EEF7F6]
+    p-5
+    shadow-[0_20px_55px_rgba(8,63,70,0.14)]
+    backdrop-blur-xl
+    transition-all
+    duration-500
+    hover:-translate-y-1
+    hover:border-[#087F8C]/30
+    hover:shadow-[0_25px_65px_rgba(8,63,70,0.18)]
+    lg:bottom-[35px]
+  "
+>
+  {/* =====================================================
+      PREMIUM BACKGROUND GLOW
+  ===================================================== */}
 
-                <div>
-                  <p
-                    className="
-                      text-[17px]
-                      font-semibold
-                      text-[#202832]
-                    "
-                  >
-                    Our Mission
-                  </p>
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-10
+      -top-10
+      h-[120px]
+      w-[120px]
+      rounded-full
+      bg-[#087F8C]/10
+      blur-[35px]
+      transition-all
+      duration-500
+      group-hover:bg-[#C6A15B]/15
+    "
+  />
 
-                  <p
-                    className="
-                      mt-1
-                      text-[13px]
-                      leading-5
-                      text-[#6C7781]
-                    "
-                  >
-                    Empowering communities
-                    through innovation,
-                    collaboration and
-                    sustainable growth.
-                  </p>
-                </div>
-              </div>
+  {/* =====================================================
+      GOLD SIDE ACCENT
+  ===================================================== */}
 
-              <div
-                className="
-                  mt-5
-                  h-[2px]
-                  w-[42px]
-                  bg-[#C6A15B]
-                "
-              />
-            </motion.div>
+  <div
+    className="
+      absolute
+      bottom-0
+      left-0
+      top-0
+      w-[3px]
+      bg-gradient-to-b
+      from-[#C6A15B]
+      via-[#087F8C]
+      to-[#087F8C]/20
+    "
+  />
+
+  {/* =====================================================
+      CONTENT
+  ===================================================== */}
+
+  <div
+    className="
+      relative
+      z-10
+      flex
+      gap-4
+    "
+  >
+    {/* =================================================
+        ICON
+    ================================================= */}
+
+    <motion.div
+      whileHover={{
+        scale: 1.06,
+        rotate: 4,
+      }}
+      transition={{
+        duration: 0.3,
+      }}
+      className="
+        relative
+        flex
+        h-11
+        w-11
+        shrink-0
+        items-center
+        justify-center
+        rounded-[14px]
+        border
+        border-[#087F8C]/20
+        bg-[#E4F3F2]
+        text-[#087F8C]
+        shadow-[0_8px_20px_rgba(8,127,140,0.08)]
+        transition-all
+        duration-500
+        group-hover:border-[#C6A15B]/40
+        group-hover:bg-[#F8F1E1]
+        group-hover:text-[#A47C2F]
+      "
+    >
+      {/* Inner border */}
+
+      <span
+        className="
+          absolute
+          inset-[5px]
+          rounded-[10px]
+          border
+          border-current
+          opacity-10
+        "
+      />
+
+      <Users
+        size={20}
+        strokeWidth={1.6}
+      />
+    </motion.div>
+
+    {/* =================================================
+        TEXT
+    ================================================= */}
+
+    <div className="min-w-0">
+      {/* Label */}
+
+      <div
+        className="
+          flex
+          items-center
+          gap-2
+        "
+      >
+        <p
+          className="
+            text-[10px]
+            font-bold
+            uppercase
+            tracking-[0.22em]
+            text-[#087F8C]
+            transition-colors
+            duration-300
+            group-hover:text-[#A47C2F]
+          "
+        >
+          Our Mission
+        </p>
+
+        <span
+          className="
+            h-1
+            w-1
+            shrink-0
+            rounded-full
+            bg-[#C6A15B]
+          "
+        />
+      </div>
+
+      {/* Description */}
+
+      <p
+        className="
+          mt-1.5
+          text-[13px]
+          font-medium
+          leading-[1.55]
+          tracking-[-0.01em]
+          text-[#405158]
+        "
+      >
+        Empowering communities through
+        innovation, collaboration and
+        sustainable growth.
+      </p>
+    </div>
+  </div>
+
+  {/* =====================================================
+      BOTTOM ACCENT
+  ===================================================== */}
+
+  <div
+    className="
+      relative
+      z-10
+      mt-5
+      flex
+      items-center
+      gap-2
+    "
+  >
+    <div
+      className="
+        h-[2px]
+        w-[42px]
+        rounded-full
+        bg-gradient-to-r
+        from-[#C6A15B]
+        to-[#087F8C]
+      "
+    />
+
+    <div
+      className="
+        h-[2px]
+        w-[8px]
+        rounded-full
+        bg-[#C6A15B]/30
+      "
+    />
+  </div>
+
+  {/* =====================================================
+      SUBTLE SHINE
+  ===================================================== */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      bottom-0
+      right-0
+      h-[1px]
+      w-[90px]
+      bg-gradient-to-l
+      from-[#C6A15B]/40
+      to-transparent
+    "
+  />
+</motion.div>
           </motion.div>
         </div>
       </div>
