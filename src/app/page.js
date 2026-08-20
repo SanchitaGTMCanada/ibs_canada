@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import IndustriesSection from "@/components/sections/IndustriesSection";
 
 
+
 export default function Home() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function Home() {
         <ServicesSection />
         <CTASection/>
         <IndustriesSection/>
+       
         <Footer/>
 
       
