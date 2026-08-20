@@ -17,7 +17,11 @@ import {
   BrainCircuit,
   Handshake,
   Award,
+   TrendingUp
 } from "lucide-react";
+import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+
 
 /*
   =========================================================
@@ -166,11 +170,13 @@ function FloatingIcon({
 
 export default function OurTeamPage() {
   return (
-    <main className="overflow-hidden bg-[#F6F4EF] text-[#202832]">
+    <>
+     <main className="overflow-hidden bg-[#F6F4EF] text-[#202832]">
 
       {/* =====================================================
           HERO
       ===================================================== */}
+      <Header/>
 
       <section
         className="
@@ -1495,399 +1501,1246 @@ export default function OurTeamPage() {
           LEADERSHIP
       ===================================================== */}
 
-      <section
+{/* =========================================================
+    LEADERSHIP
+========================================================= */}
+
+<section
+  className="
+    relative
+    overflow-hidden
+    bg-[#0B1F3A]
+    px-6
+    py-20
+    sm:px-8
+    lg:px-10
+    lg:py-24
+    xl:px-12
+  "
+>
+  {/* =======================================================
+      BACKGROUND IMAGE
+  ======================================================= */}
+
+  <div className="absolute inset-0">
+
+    <img
+      src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2200&q=90"
+      alt=""
+      aria-hidden="true"
+      className="
+        h-full
+        w-full
+        object-cover
+        object-center
+        opacity-20
+      "
+    />
+
+    {/* Navy image overlay */}
+
+    <div
+      className="
+        absolute
+        inset-0
+        bg-[#0B1F3A]/90
+      "
+    />
+
+    {/* Executive gradient */}
+
+    <div
+      className="
+        absolute
+        inset-0
+        bg-gradient-to-br
+        from-[#0B1F3A]
+        via-[#123A5A]/95
+        to-[#087F8C]/70
+      "
+    />
+
+    {/* Subtle image fade */}
+
+    <div
+      className="
+        absolute
+        inset-0
+        bg-gradient-to-r
+        from-[#0B1F3A]
+        via-transparent
+        to-[#087F8C]/20
+      "
+    />
+
+  </div>
+
+
+  {/* =======================================================
+      LARGE ANIMATED BACKGROUND ICONS
+  ======================================================= */}
+
+  {/* Leadership / Award */}
+
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.8,
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+    }}
+    animate={{
+      y: [0, -18, 0],
+      rotate: [0, 4, 0],
+    }}
+    transition={{
+      opacity: {
+        duration: 1,
+      },
+      scale: {
+        duration: 1,
+      },
+      y: {
+        duration: 7,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+      rotate: {
+        duration: 9,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    }}
+    className="
+      pointer-events-none
+      absolute
+      -left-10
+      top-[10%]
+      z-[1]
+      hidden
+      text-[#C6A15B]/15
+      lg:block
+    "
+  >
+    <Award
+      size={190}
+      strokeWidth={0.7}
+    />
+  </motion.div>
+
+
+  {/* Strategy / Target */}
+
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.8,
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+    }}
+    animate={{
+      x: [0, 20, 0],
+      y: [0, 12, 0],
+      rotate: [0, -5, 0],
+    }}
+    transition={{
+      opacity: {
+        duration: 1,
+      },
+      scale: {
+        duration: 1,
+      },
+      x: {
+        duration: 10,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+      y: {
+        duration: 8,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+      rotate: {
+        duration: 12,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    }}
+    className="
+      pointer-events-none
+      absolute
+      right-[3%]
+      top-[5%]
+      z-[1]
+      hidden
+      text-[#087F8C]/20
+      lg:block
+    "
+  >
+    <Target
+      size={240}
+      strokeWidth={0.7}
+    />
+  </motion.div>
+
+
+  {/* Collaboration / Users */}
+
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.8,
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+    }}
+    animate={{
+      y: [0, 20, 0],
+      x: [0, -12, 0],
+    }}
+    transition={{
+      opacity: {
+        duration: 1,
+      },
+      scale: {
+        duration: 1,
+      },
+      y: {
+        duration: 9,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+      x: {
+        duration: 11,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    }}
+    className="
+      pointer-events-none
+      absolute
+      bottom-[4%]
+      left-[26%]
+      z-[1]
+      hidden
+      text-[#087F8C]/15
+      lg:block
+    "
+  >
+    <UsersRound
+      size={210}
+      strokeWidth={0.7}
+    />
+  </motion.div>
+
+
+  {/* Growth / Trending Up */}
+
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.8,
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+    }}
+    animate={{
+      y: [0, -15, 0],
+      rotate: [0, -3, 0],
+    }}
+    transition={{
+      opacity: {
+        duration: 1,
+      },
+      scale: {
+        duration: 1,
+      },
+      y: {
+        duration: 8,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+      rotate: {
+        duration: 10,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    }}
+    className="
+      pointer-events-none
+      absolute
+      bottom-[8%]
+      right-[8%]
+      z-[1]
+      hidden
+      text-[#C6A15B]/15
+      lg:block
+    "
+  >
+    <TrendingUp
+      size={180}
+      strokeWidth={0.7}
+    />
+  </motion.div>
+
+
+  {/* Handshake */}
+
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.8,
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+    }}
+    animate={{
+      y: [0, 14, 0],
+      rotate: [0, 3, 0],
+    }}
+    transition={{
+      opacity: {
+        duration: 1,
+      },
+      scale: {
+        duration: 1,
+      },
+      y: {
+        duration: 7,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+      rotate: {
+        duration: 9,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    }}
+    className="
+      pointer-events-none
+      absolute
+      left-[48%]
+      top-[8%]
+      z-[1]
+      hidden
+      text-[#C6A15B]/10
+      lg:block
+    "
+  >
+    <Handshake
+      size={150}
+      strokeWidth={0.7}
+    />
+  </motion.div>
+
+
+  {/* =======================================================
+      DECORATIVE CIRCLES
+  ======================================================= */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-40
+      -top-40
+      z-[1]
+      h-[600px]
+      w-[600px]
+      rounded-full
+      border
+      border-[#C6A15B]/10
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-20
+      -top-20
+      z-[1]
+      h-[400px]
+      w-[400px]
+      rounded-full
+      border
+      border-[#087F8C]/15
+    "
+  />
+
+
+  {/* =======================================================
+      MAIN CONTENT
+  ======================================================= */}
+
+  <div
+    className="
+      relative
+      z-10
+      mx-auto
+      max-w-[1280px]
+    "
+  >
+
+    <div
+      className="
+        grid
+        gap-14
+        lg:grid-cols-[0.82fr_1.18fr]
+        lg:items-center
+      "
+    >
+
+      {/* ===================================================
+          LEFT CONTENT
+      =================================================== */}
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        variants={stagger}
         className="
           relative
-          overflow-hidden
-          bg-[#F6F4EF]
-          px-6
-          py-16
-          sm:px-8
-          lg:px-10
-          lg:py-20
-          xl:px-12
+          z-20
+          max-w-[560px]
         "
       >
 
+        {/* Label */}
+
+        <motion.div
+          variants={fadeUp}
+          className="
+            flex
+            items-center
+            gap-3
+          "
+        >
+
+          <span
+            className="
+              h-[2px]
+              w-12
+              bg-[#C6A15B]
+            "
+          />
+
+          <span
+            className="
+              text-[9px]
+              font-bold
+              uppercase
+              tracking-[0.3em]
+              text-[#C6A15B]
+            "
+          >
+            Leadership
+          </span>
+
+        </motion.div>
+
+
+        {/* Heading */}
+
+        <motion.h2
+          variants={fadeUp}
+          className="
+            mt-6
+            max-w-[520px]
+            text-[44px]
+            font-semibold
+            leading-[0.95]
+            tracking-[-0.055em]
+            text-white
+            sm:text-[56px]
+            lg:text-[64px]
+          "
+        >
+          Guiding with
+
+          <span
+            className="
+              block
+              bg-gradient-to-r
+              from-[#C6A15B]
+              via-[#D8B866]
+              to-[#087F8C]
+              bg-clip-text
+              text-transparent
+            "
+          >
+            Vision.
+          </span>
+
+        </motion.h2>
+
+
+        {/* Description */}
+
+        <motion.p
+          variants={fadeUp}
+          className="
+            mt-6
+            max-w-[430px]
+            text-[13px]
+            leading-7
+            text-[#DCE2E7]
+          "
+        >
+          Our leadership team brings experience,
+          perspective and a practical approach to
+          building long-term success.
+        </motion.p>
+
+
+        {/* CTA */}
+
+        <motion.div
+          variants={fadeUp}
+          className="mt-8"
+        >
+
+          <Link
+            href="#team"
+            className="
+              group
+              inline-flex
+              items-center
+              gap-4
+              rounded-full
+              bg-[#C6A15B]
+              px-6
+              py-3
+              text-[10px]
+              font-bold
+              uppercase
+              tracking-[0.12em]
+              text-[#0B1F3A]
+              shadow-[0_12px_30px_rgba(0,0,0,.18)]
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:bg-white
+            "
+          >
+
+            Meet Our Leadership
+
+            <span
+              className="
+                flex
+                h-7
+                w-7
+                items-center
+                justify-center
+                rounded-full
+                bg-[#0B1F3A]
+                text-white
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+              "
+            >
+              <ArrowRight size={13} />
+            </span>
+
+          </Link>
+
+        </motion.div>
+
+
+        {/* =================================================
+            STATS
+        ================================================= */}
+
+        <motion.div
+          variants={fadeUp}
+          className="
+            mt-11
+            flex
+            flex-wrap
+            items-center
+            gap-7
+          "
+        >
+
+          {/* Experience */}
+
+          <div className="flex items-center gap-3">
+
+            <div
+              className="
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-2xl
+                border
+                border-[#C6A15B]/30
+                bg-[#0B1F3A]/70
+                text-[#C6A15B]
+                backdrop-blur-sm
+              "
+            >
+              <Award
+                size={19}
+                strokeWidth={1.4}
+              />
+            </div>
+
+            <div>
+
+              <p
+                className="
+                  text-[24px]
+                  font-semibold
+                  leading-none
+                  text-white
+                "
+              >
+                20+
+              </p>
+
+              <p
+                className="
+                  mt-1.5
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.18em]
+                  text-[#8FA0AD]
+                "
+              >
+                Years Experience
+              </p>
+
+            </div>
+
+          </div>
+
+
+          {/* Divider */}
+
+          <span
+            className="
+              hidden
+              h-10
+              w-px
+              bg-white/15
+              sm:block
+            "
+          />
+
+
+          {/* Commitment */}
+
+          <div className="flex items-center gap-3">
+
+            <div
+              className="
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-2xl
+                border
+                border-[#087F8C]/40
+                bg-[#087F8C]/20
+                text-[#087F8C]
+              "
+            >
+              <Target
+                size={19}
+                strokeWidth={1.4}
+              />
+            </div>
+
+            <div>
+
+              <p
+                className="
+                  text-[24px]
+                  font-semibold
+                  leading-none
+                  text-white
+                "
+              >
+                100%
+              </p>
+
+              <p
+                className="
+                  mt-1.5
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.18em]
+                  text-[#8FA0AD]
+                "
+              >
+                Commitment
+              </p>
+
+            </div>
+
+          </div>
+
+        </motion.div>
+
+
+        {/* Bottom statement */}
+
+        <motion.div
+          variants={fadeUp}
+          className="
+            mt-12
+            flex
+            items-center
+            gap-3
+          "
+        >
+
+          <span
+            className="
+              h-px
+              w-16
+              bg-[#C6A15B]
+            "
+          />
+
+          <span
+            className="
+              text-[8px]
+              font-bold
+              uppercase
+              tracking-[0.25em]
+              text-[#C6A15B]
+            "
+          >
+            People · Vision · Impact
+          </span>
+
+        </motion.div>
+
+      </motion.div>
+
+
+      {/* ===================================================
+          RIGHT LEADERSHIP PANEL
+      =================================================== */}
+
+      <div
+        className="
+          relative
+          rounded-[32px]
+          bg-gradient-to-br
+          from-[#0B1F3A]
+          via-[#123A5A]
+          to-[#087F8C]
+          p-3
+          shadow-[0_30px_80px_rgba(0,0,0,.25)]
+          lg:p-4
+        "
+      >
+
+        {/* Panel highlight */}
+
         <div
           className="
+            pointer-events-none
             absolute
-            inset-x-0
-            top-0
-            h-px
-            bg-[#DCE2E7]
+            inset-0
+            rounded-[32px]
+            border
+            border-white/10
           "
         />
 
-        <FloatingIcon
-          Icon={Award}
-          delay={0}
-          className="right-[7%] top-[12%]"
+        {/* Gold top line */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-10
+            right-10
+            top-0
+            h-[2px]
+            bg-gradient-to-r
+            from-transparent
+            via-[#C6A15B]
+            to-transparent
+          "
         />
 
-        <FloatingIcon
-          Icon={Target}
-          delay={1.4}
-          className="left-[4%] bottom-[15%]"
-        />
+
+        {/* =================================================
+            CARDS
+        ================================================= */}
 
         <div
           className="
             relative
-            mx-auto
             grid
-            max-w-[1280px]
-            gap-12
-            lg:grid-cols-[.72fr_1.28fr]
-            lg:items-center
+            gap-4
+            sm:grid-cols-2
           "
         >
 
-          {/* Leadership intro */}
+          {leaders.map((leader, index) => (
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{
-              once: true,
-              amount: 0.2,
-            }}
-            variants={stagger}
-          >
+            <motion.article
+              key={leader.name}
 
-            <motion.div
-              variants={fadeUp}
-              className="flex items-center gap-3"
-            >
+              initial={{
+                opacity: 0,
+                y: 35,
+              }}
 
-              <span
-                className="
-                  h-[2px]
-                  w-10
-                  bg-[#C6A15B]
-                "
-              />
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
 
-              <span
-                className="
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.25em]
-                  text-[#A47C2F]
-                "
-              >
-                Leadership
-              </span>
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
 
-            </motion.div>
+              transition={{
+                duration: 0.65,
+                delay: index * 0.15,
+              }}
 
-            <motion.h2
-              variants={fadeUp}
+              whileHover={{
+                y: -8,
+              }}
+
               className="
-                mt-5
-                text-[42px]
-                font-semibold
-                leading-[.98]
-                tracking-[-0.05em]
-                text-[#0B1F3A]
-                sm:text-[52px]
+                group
+                relative
+                overflow-hidden
+                rounded-[25px]
+                border
+                border-white/10
+                bg-[#F6F4EF]
+                shadow-[0_20px_50px_rgba(0,0,0,.20)]
               "
             >
-              Guiding with
 
-              <span className="block text-[#087F8C]">
-                Vision.
-              </span>
-            </motion.h2>
+              {/* ===========================================
+                  IMAGE
+              =========================================== */}
 
-            <motion.p
-              variants={fadeUp}
-              className="
-                mt-5
-                max-w-[410px]
-                text-[13px]
-                leading-6
-                text-[#68737D]
-              "
-            >
-              Our leadership team brings experience,
-              perspective and a practical approach to
-              long-term success.
-            </motion.p>
-
-            <motion.div
-              variants={fadeUp}
-              className="mt-7"
-            >
-
-              <Link
-                href="#team"
+              <div
                 className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-3
-                  rounded-full
-                  bg-[#0B1F3A]
-                  px-5
-                  py-3
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-[0.1em]
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:bg-[#087F8C]
+                  relative
+                  h-[300px]
+                  overflow-hidden
                 "
               >
-                Meet Our Leadership
 
-                <ArrowRight
-                  size={14}
+                <img
+                  src={leader.image}
+                  alt={leader.name}
                   className="
+                    h-full
+                    w-full
+                    object-cover
+                    object-center
                     transition-transform
-                    duration-300
-                    group-hover:translate-x-1
+                    duration-700
+                    group-hover:scale-110
                   "
                 />
-              </Link>
 
-            </motion.div>
+                {/* Image overlay */}
 
-          </motion.div>
-
-          {/* Leadership cards */}
-
-          <div
-            className="
-              grid
-              gap-5
-              sm:grid-cols-2
-            "
-          >
-
-            {leaders.map(
-              (leader, index) => (
-                <motion.article
-                  key={leader.name}
-                  initial={{
-                    opacity: 0,
-                    y: 35,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.2,
-                  }}
-                  transition={{
-                    duration: 0.65,
-                    delay: index * 0.12,
-                  }}
-                  whileHover={{
-                    y: -10,
-                  }}
+                <div
                   className="
-                    group
-                    overflow-hidden
-                    rounded-[22px]
+                    absolute
+                    inset-0
+                    bg-gradient-to-t
+                    from-[#0B1F3A]
+                    via-[#0B1F3A]/25
+                    to-transparent
+                  "
+                />
+
+
+                {/* Leadership icon */}
+
+                <div
+                  className="
+                    absolute
+                    left-5
+                    top-5
+                    flex
+                    h-12
+                    w-12
+                    items-center
+                    justify-center
+                    rounded-2xl
                     border
-                    border-[#DCE2E7]
-                    bg-white
-                    shadow-[0_18px_50px_rgba(11,31,58,.09)]
+                    border-white/20
+                    bg-[#0B1F3A]
+                    text-[#C6A15B]
+                    shadow-[0_10px_25px_rgba(0,0,0,.20)]
                   "
                 >
 
-                  <div
+                  {index === 0 ? (
+                    <Award
+                      size={22}
+                      strokeWidth={1.3}
+                    />
+                  ) : (
+                    <Target
+                      size={22}
+                      strokeWidth={1.3}
+                    />
+                  )}
+
+                </div>
+
+
+                {/* Badge */}
+
+                <div
+                  className="
+                    absolute
+                    right-5
+                    top-5
+                    rounded-full
+                    border
+                    border-[#C6A15B]/50
+                    bg-[#0B1F3A]
+                    px-3
+                    py-1.5
+                    text-[8px]
+                    font-bold
+                    uppercase
+                    tracking-[0.18em]
+                    text-[#C6A15B]
+                  "
+                >
+                  Leadership
+                </div>
+
+
+                {/* Name */}
+
+                <div
+                  className="
+                    absolute
+                    bottom-5
+                    left-5
+                    right-5
+                  "
+                >
+
+                  <p
                     className="
-                      relative
-                      h-[285px]
-                      overflow-hidden
+                      text-[8px]
+                      font-bold
+                      uppercase
+                      tracking-[0.2em]
+                      text-[#C6A15B]
                     "
                   >
+                    Executive Team
+                  </p>
 
-                    <img
-                      src={leader.image}
-                      alt={leader.name}
-                      className="
-                        h-full
-                        w-full
-                        object-cover
-                        transition-transform
-                        duration-700
-                        group-hover:scale-110
-                      "
-                    />
+                  <h3
+                    className="
+                      mt-2
+                      text-[23px]
+                      font-semibold
+                      tracking-[-0.035em]
+                      text-white
+                    "
+                  >
+                    {leader.name}
+                  </h3>
 
-                    <div
-                      className="
-                        absolute
-                        inset-0
-                        bg-gradient-to-t
-                        from-[#0B1F3A]/70
-                        via-transparent
-                        to-transparent
-                      "
-                    />
+                </div>
 
-                    <div
-                      className="
-                        absolute
-                        left-5
-                        top-5
-                        rounded-full
-                        border
-                        border-white/20
-                        bg-[#087F8C]/90
-                        px-3
-                        py-1.5
-                        text-[8px]
-                        font-bold
-                        uppercase
-                        tracking-[0.18em]
-                        text-white
-                        backdrop-blur-md
-                      "
-                    >
-                      Leadership
-                    </div>
+              </div>
 
-                    <motion.div
-                      whileHover={{
-                        rotate: 8,
-                        scale: 1.1,
-                      }}
+
+              {/* ===========================================
+                  CONTENT
+              =========================================== */}
+
+              <div className="p-6">
+
+                <div
+                  className="
+                    flex
+                    items-center
+                    justify-between
+                    gap-4
+                  "
+                >
+
+                  <p
+                    className="
+                      text-[9px]
+                      font-bold
+                      uppercase
+                      tracking-[0.16em]
+                      text-[#087F8C]
+                    "
+                  >
+                    {leader.role}
+                  </p>
+
+                  <div
+                    className="
+                      flex
+                      h-9
+                      w-9
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-full
+                      bg-[#E8F3F2]
+                      text-[#087F8C]
+                      transition-all
+                      duration-300
+                      group-hover:bg-[#087F8C]
+                      group-hover:text-white
+                    "
+                  >
+                    <ArrowUpRight size={15} />
+                  </div>
+
+                </div>
+
+
+                {/* Gold divider */}
+
+                <div
+                  className="
+                    mt-5
+                    h-[2px]
+                    w-10
+                    bg-[#C6A15B]
+                    transition-all
+                    duration-500
+                    group-hover:w-16
+                  "
+                />
+
+
+                <p
+                  className="
+                    mt-4
+                    text-[11px]
+                    leading-6
+                    text-[#68737D]
+                  "
+                >
+                  {leader.description}
+                </p>
+
+
+                {/* Bottom row */}
+
+                <div
+                  className="
+                    mt-6
+                    flex
+                    items-center
+                    justify-between
+                    border-t
+                    border-[#DCE2E7]
+                    pt-4
+                  "
+                >
+
+                  <div className="flex items-center gap-2">
+
+                    <span
                       className="
-                        absolute
-                        bottom-5
-                        right-5
                         flex
-                        h-10
-                        w-10
+                        h-7
+                        w-7
                         items-center
                         justify-center
                         rounded-full
-                        bg-[#C6A15B]
-                        text-[#0B1F3A]
+                        bg-[#0B1F3A]
+                        text-white
                       "
                     >
-                      <ArrowUpRight size={16} />
-                    </motion.div>
+                      <UsersRound size={12} />
+                    </span>
 
-                  </div>
-
-                  <div className="p-6">
-
-                    <h3
+                    <span
                       className="
-                        text-[21px]
-                        font-semibold
-                        tracking-[-0.03em]
-                        text-[#202832]
-                      "
-                    >
-                      {leader.name}
-                    </h3>
-
-                    <p
-                      className="
-                        mt-1.5
                         text-[8px]
                         font-bold
                         uppercase
-                        tracking-[0.16em]
-                        text-[#087F8C]
+                        tracking-[0.15em]
+                        text-[#8C989E]
                       "
                     >
-                      {leader.role}
-                    </p>
-
-                    <div
-                      className="
-                        mt-4
-                        h-[2px]
-                        w-9
-                        bg-[#C6A15B]
-                      "
-                    />
-
-                    <p
-                      className="
-                        mt-4
-                        text-[11px]
-                        leading-5
-                        text-[#68737D]
-                      "
-                    >
-                      {leader.description}
-                    </p>
-
-                    <div
-                      className="
-                        mt-5
-                        flex
-                        gap-2
-                      "
-                    >
-
-                      <button
-                        type="button"
-                        aria-label={`Email ${leader.name}`}
-                        className="
-                          flex
-                          h-8
-                          w-8
-                          items-center
-                          justify-center
-                          rounded-full
-                          bg-[#E8F3F2]
-                          text-[#087F8C]
-                          transition-all
-                          hover:bg-[#087F8C]
-                          hover:text-white
-                        "
-                      >
-                        <Mail size={13} />
-                      </button>
-
-                      <button
-                        type="button"
-                        aria-label={`View ${leader.name}`}
-                        className="
-                          flex
-                          h-8
-                          w-8
-                          items-center
-                          justify-center
-                          rounded-full
-                          bg-[#0B1F3A]
-                          text-white
-                          transition-all
-                          hover:bg-[#C6A15B]
-                          hover:text-[#0B1F3A]
-                        "
-                      >
-                        <ArrowUpRight size={13} />
-                      </button>
-
-                    </div>
+                      IBS Canada
+                    </span>
 
                   </div>
 
-                </motion.article>
-              )
-            )}
 
-          </div>
+                  <button
+                    type="button"
+                    aria-label={`Email ${leader.name}`}
+                    className="
+                      flex
+                      h-8
+                      w-8
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-[#DCE2E7]
+                      bg-[#F6F4EF]
+                      text-[#087F8C]
+                      transition-all
+                      duration-300
+                      hover:border-[#087F8C]
+                      hover:bg-[#087F8C]
+                      hover:text-white
+                    "
+                  >
+                    <Mail size={13} />
+                  </button>
+
+                </div>
+
+              </div>
+
+
+              {/* Bottom animated gold line */}
+
+              <div
+                className="
+                  absolute
+                  bottom-0
+                  left-0
+                  h-[3px]
+                  w-0
+                  bg-gradient-to-r
+                  from-[#C6A15B]
+                  via-[#087F8C]
+                  to-[#C6A15B]
+                  transition-all
+                  duration-700
+                  group-hover:w-full
+                "
+              />
+
+            </motion.article>
+
+          ))}
 
         </div>
 
-      </section>
+      </div>
+
+    </div>
+
+
+    {/* =======================================================
+        FOOTER LABEL
+    ======================================================= */}
+
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      viewport={{
+        once: true,
+      }}
+      transition={{
+        duration: 0.8,
+        delay: 0.25,
+      }}
+      className="
+        mt-10
+        flex
+        items-center
+        justify-between
+        border-t
+        border-white/10
+        pt-5
+      "
+    >
+
+      <span
+        className="
+          text-[8px]
+          font-bold
+          uppercase
+          tracking-[0.25em]
+          text-[#8FA0AD]
+        "
+      >
+        Executive Leadership
+      </span>
+
+      <span
+        className="
+          bg-gradient-to-r
+          from-[#C6A15B]
+          via-[#D8B866]
+          to-[#087F8C]
+          bg-clip-text
+          text-[8px]
+          font-bold
+          uppercase
+          tracking-[0.25em]
+          text-transparent
+        "
+      >
+        People · Vision · Impact
+      </span>
+
+    </motion.div>
+
+  </div>
+
+</section>
 
       {/* =====================================================
           TEAM
@@ -2240,179 +3093,11 @@ export default function OurTeamPage() {
           CTA
       ===================================================== */}
 
-      <section
-        className="
-          relative
-          overflow-hidden
-          bg-gradient-to-r
-          from-[#0B1F3A]
-          via-[#123A5A]
-          to-[#087F8C]
-          px-6
-          py-16
-          sm:px-8
-          lg:px-10
-          xl:px-12
-        "
-      >
-
-        {/* Decorative circles */}
-
-        <div
-          className="
-            absolute
-            -right-20
-            -top-32
-            h-[360px]
-            w-[360px]
-            rounded-full
-            border
-            border-white/10
-          "
-        />
-
-        <div
-          className="
-            absolute
-            -right-5
-            -top-16
-            h-[220px]
-            w-[220px]
-            rounded-full
-            border
-            border-[#C6A15B]/15
-          "
-        />
-
-        <div
-          className="
-            absolute
-            bottom-0
-            left-[10%]
-            h-px
-            w-[240px]
-            bg-[#C6A15B]/40
-          "
-        />
-
-        <FloatingIcon
-          Icon={Sparkles}
-          delay={0}
-          className="right-[28%] top-[24%]"
-        />
-
-        <div
-          className="
-            relative
-            z-10
-            mx-auto
-            flex
-            max-w-[1100px]
-            flex-col
-            justify-between
-            gap-8
-            md:flex-row
-            md:items-center
-          "
-        >
-
-          <div>
-
-            <div
-              className="
-                flex
-                items-center
-                gap-3
-              "
-            >
-
-              <Sparkles
-                size={15}
-                className="text-[#C6A15B]"
-              />
-
-              <span
-                className="
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.25em]
-                  text-[#8ED8D6]
-                "
-              >
-                Let&apos;s Connect
-              </span>
-
-            </div>
-
-            <h2
-              className="
-                mt-3
-                text-[32px]
-                font-semibold
-                tracking-[-0.04em]
-                text-white
-                sm:text-[40px]
-              "
-            >
-              Let&apos;s build something{" "}
-              <span className="text-[#C6A15B]">
-                meaningful.
-              </span>
-            </h2>
-
-          </div>
-
-          <Link
-            href="/contact"
-            className="
-              group
-              inline-flex
-              shrink-0
-              items-center
-              gap-3
-              rounded-full
-              bg-[#C6A15B]
-              px-6
-              py-3
-              text-[10px]
-              font-bold
-              uppercase
-              tracking-[0.1em]
-              text-[#0B1F3A]
-              transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:bg-white
-            "
-          >
-
-            Get In Touch
-
-            <span
-              className="
-                flex
-                h-6
-                w-6
-                items-center
-                justify-center
-                rounded-full
-                bg-[#0B1F3A]
-                text-white
-                transition-transform
-                duration-300
-                group-hover:translate-x-1
-              "
-            >
-              <ArrowRight size={12} />
-            </span>
-
-          </Link>
-
-        </div>
-
-      </section>
+     
 
     </main>
+    <Footer/>
+    </>
+   
   );
 }
