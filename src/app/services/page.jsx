@@ -20,6 +20,7 @@ import {
   TrendingUp,
   UsersRound,
   Wrench,
+   Compass
 } from "lucide-react";
 
 /* =========================================================
