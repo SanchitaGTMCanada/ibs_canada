@@ -1,16 +1,18 @@
 "use client";
 
-// import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
   Building2,
   CheckCircle2,
   UsersRound,
-   Clock3,
+  Clock3,
 } from "lucide-react";
 
 export default function Hero() {
+  const auroraImage =
+    "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&w=2400&q=90";
+
   return (
     <section
       className="
@@ -30,42 +32,106 @@ export default function Hero() {
         xl:px-12
       "
     >
-
       {/* =====================================================
-          HERO BACKGROUND IMAGE
-      ===================================================== */}
+          WIDE CINEMATIC AURORA BACKGROUND
+      ====================================================== */}
 
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={auroraImage}
+          alt="Northern lights over the Canadian landscape"
+          className="
+            absolute
+            left-1/2
+            top-1/2
+            h-full
+            w-[140%]
+            max-w-none
+            -translate-x-1/2
+            -translate-y-1/2
+            object-cover
+            object-center
+          "
+        />
 
-       <img
-  src="https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=2000&q=90"
-  alt="Canadian city skyline"
-  className="
-    absolute
-    inset-0
-    h-full
-    w-full
-    object-cover
-    object-center
-    transition-transform
-    duration-[1800ms]
-  "
-/>
-
-
-        {/* Main dark overlay */}
+        {/* Dark readability overlay */}
 
         <div
           className="
             absolute
             inset-0
             bg-gradient-to-r
-            from-[#0B1F3A]
-            via-[#0B1F3A]/95
-            to-[#0B1F3A]/35
+            from-[#06182F]/95
+            via-[#0B1F3A]/55
+            to-[#0B1F3A]/10
           "
         />
 
+        {/* Wide teal Aurora enhancement */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            bg-gradient-to-r
+            from-[#087F8C]/5
+            via-[#087F8C]/25
+            to-[#087F8C]/10
+            mix-blend-screen
+          "
+        />
+
+        {/* =================================================
+            WIDE HORIZONTAL AURORA GLOW
+        ================================================= */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-[-15%]
+            top-[10%]
+            h-[280px]
+            w-[130%]
+            rounded-[50%]
+            bg-[#087F8C]/20
+            blur-[110px]
+          "
+        />
+
+        {/* Second Aurora band */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-[-20%]
+            top-[2%]
+            h-[190px]
+            w-[140%]
+            rotate-[-4deg]
+            rounded-[50%]
+            bg-[#6EC6D1]/10
+            blur-[95px]
+          "
+        />
+
+        {/* Gold atmospheric glow */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            right-[-10%]
+            top-[5%]
+            h-[420px]
+            w-[420px]
+            rounded-full
+            bg-[#C6A15B]/8
+            blur-[120px]
+          "
+        />
 
         {/* Bottom fade */}
 
@@ -74,48 +140,47 @@ export default function Hero() {
             absolute
             inset-x-0
             bottom-0
-            h-[280px]
+            h-[300px]
             bg-gradient-to-t
             from-[#0B1F3A]
-            via-[#0B1F3A]/70
+            via-[#0B1F3A]/65
             to-transparent
           "
         />
 
-
-        {/* Teal atmospheric glow */}
+        {/* Left readability fade */}
 
         <div
           className="
             absolute
-            right-[10%]
-            top-[20%]
-            h-[420px]
-            w-[420px]
-            rounded-full
-            bg-[#087F8C]/10
-            blur-[120px]
+            inset-y-0
+            left-0
+            w-[60%]
+            bg-gradient-to-r
+            from-[#06182F]/40
+            to-transparent
           "
         />
-
       </div>
 
-
       {/* =====================================================
-          DECORATIVE CIRCLES
-      ===================================================== */}
+          SUBTLE BACKGROUND STROKES
+          NOT GIANT CIRCLES
+      ====================================================== */}
 
       <div
         className="
           pointer-events-none
           absolute
-          -right-40
-          -top-40
-          h-[600px]
-          w-[600px]
-          rounded-full
-          border
-          border-[#C6A15B]/10
+          left-[-100px]
+          top-[15%]
+          h-[1px]
+          w-[55%]
+          rotate-[-3deg]
+          bg-gradient-to-r
+          from-transparent
+          via-[#C6A15B]/20
+          to-transparent
         "
       />
 
@@ -123,20 +188,21 @@ export default function Hero() {
         className="
           pointer-events-none
           absolute
-          -right-20
-          -top-20
-          h-[420px]
-          w-[420px]
-          rounded-full
-          border
-          border-[#087F8C]/15
+          right-[-100px]
+          top-[34%]
+          h-[1px]
+          w-[45%]
+          rotate-[3deg]
+          bg-gradient-to-r
+          from-transparent
+          via-[#087F8C]/25
+          to-transparent
         "
       />
 
-
       {/* =====================================================
-          SMALL DOT PATTERN
-      ===================================================== */}
+          BACKGROUND DOT FIELD
+      ====================================================== */}
 
       <div
         className="
@@ -144,8 +210,8 @@ export default function Hero() {
           absolute
           right-[5%]
           top-[20%]
-          h-[180px]
-          w-[180px]
+          h-[190px]
+          w-[190px]
           opacity-20
         "
         style={{
@@ -155,10 +221,9 @@ export default function Hero() {
         }}
       />
 
-
       {/* =====================================================
           MAIN CONTENT
-      ===================================================== */}
+      ====================================================== */}
 
       <div
         className="
@@ -172,10 +237,9 @@ export default function Hero() {
           lg:grid-cols-[1fr_0.9fr]
         "
       >
-
         {/* ===================================================
             LEFT CONTENT
-        =================================================== */}
+        ==================================================== */}
 
         <motion.div
           initial={{
@@ -196,24 +260,10 @@ export default function Hero() {
             max-w-[670px]
           "
         >
-
           {/* Eyebrow */}
 
-          <div
-            className="
-              flex
-              items-center
-              gap-3
-            "
-          >
-
-            <span
-              className="
-                h-[2px]
-                w-12
-                bg-[#C6A15B]
-              "
-            />
+          <div className="flex items-center gap-3">
+            <span className="h-[2px] w-12 bg-[#C6A15B]" />
 
             <span
               className="
@@ -226,9 +276,7 @@ export default function Hero() {
             >
               Innovative Business Solutions
             </span>
-
           </div>
-
 
           {/* Heading */}
 
@@ -261,47 +309,18 @@ export default function Hero() {
               communities
             </span>
 
-            <span
-              className="
-                block
-                text-white
-              "
-            >
+            <span className="block text-white">
               through innovation.
             </span>
-
           </h1>
 
+          {/* Divider */}
 
-          {/* Gold divider */}
+          <div className="mt-7 flex items-center gap-3">
+            <span className="h-[2px] w-16 bg-[#C6A15B]" />
 
-          <div
-            className="
-              mt-7
-              flex
-              items-center
-              gap-3
-            "
-          >
-
-            <span
-              className="
-                h-[2px]
-                w-16
-                bg-[#C6A15B]
-              "
-            />
-
-            <span
-              className="
-                h-[2px]
-                w-5
-                bg-[#087F8C]
-              "
-            />
-
+            <span className="h-[2px] w-5 bg-[#087F8C]" />
           </div>
-
 
           {/* Description */}
 
@@ -321,7 +340,6 @@ export default function Hero() {
             impact.
           </p>
 
-
           {/* =================================================
               BUTTONS
           ================================================= */}
@@ -335,7 +353,6 @@ export default function Hero() {
               gap-4
             "
           >
-
             {/* Primary */}
 
             <a
@@ -361,7 +378,6 @@ export default function Hero() {
                 hover:bg-white
               "
             >
-
               Contact Us
 
               <span
@@ -381,467 +397,357 @@ export default function Hero() {
               >
                 <ArrowRight size={13} />
               </span>
-
             </a>
 
-
             {/* Secondary */}
-<a
-  href="/services"
-  className="
-    group
-    inline-flex
-    items-center
-    gap-3
-    rounded-full
-    border
-    border-white/20
-    bg-white/[0.05]
-    px-6
-    py-3.5
-    text-[9px]
-    font-bold
-    uppercase
-    tracking-[0.15em]
-    text-white
-    backdrop-blur-md
-    transition-all
-    duration-300
-    hover:-translate-y-1
-    hover:border-[#087F8C]
-    hover:bg-[#087F8C]
-    hover:text-white
-  "
->
-  <span className="text-white">
-    Explore Services
-  </span>
 
-  <ArrowRight
-    size={14}
-    className="
-      text-white
-      transition-transform
-      duration-300
-      group-hover:translate-x-1
-      group-hover:text-white
-    "
-  />
-</a>
+            <a
+              href="/services"
+              className="
+                group
+                inline-flex
+                items-center
+                gap-3
+                rounded-full
+                border
+                border-white/20
+                bg-white/[0.05]
+                px-6
+                py-3.5
+                text-[9px]
+                font-bold
+                uppercase
+                tracking-[0.15em]
+                text-white
+                backdrop-blur-md
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-[#087F8C]
+                hover:bg-[#087F8C]
+              "
+            >
+              Explore Services
 
+              <ArrowRight
+                size={14}
+                className="
+                  text-white
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                "
+              />
+            </a>
           </div>
-
 
           {/* =================================================
               STATS
           ================================================= */}
 
-     {/* =================================================
-    PREMIUM STATS
-================================================= */}
+          <div
+            className="
+              mt-12
+              grid
+              max-w-[600px]
+              grid-cols-1
+              gap-3
+              sm:grid-cols-3
+            "
+          >
+            {/* STAT 1 */}
 
-<div
-  className="
-    mt-12
-    grid
-    max-w-[600px]
-    grid-cols-1
-    gap-3
-    sm:grid-cols-3
-  "
->
+            <motion.div
+              whileHover={{
+                y: -5,
+              }}
+              transition={{
+                duration: 0.25,
+              }}
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[20px]
+                border
+                border-white/10
+                bg-white/[0.06]
+                p-5
+                backdrop-blur-md
+                transition-all
+                duration-300
+                hover:border-[#C6A15B]/40
+                hover:bg-white/[0.09]
+              "
+            >
+              <div
+                className="
+                  absolute
+                  left-0
+                  top-0
+                  h-[3px]
+                  w-10
+                  bg-[#C6A15B]
+                  transition-all
+                  duration-300
+                  group-hover:w-full
+                "
+              />
 
-  {/* =================================================
-      STAT 1
-  ================================================= */}
+              <div className="flex items-center justify-between">
+                <div
+                  className="
+                    flex
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-[#C6A15B]/10
+                    text-[#C6A15B]
+                    transition-all
+                    duration-300
+                    group-hover:bg-[#C6A15B]
+                    group-hover:text-[#0B1F3A]
+                  "
+                >
+                  <Building2
+                    size={19}
+                    strokeWidth={1.4}
+                  />
+                </div>
 
-  <motion.div
-    whileHover={{
-      y: -5,
-    }}
-    transition={{
-      duration: 0.25,
-    }}
-    className="
-      group
-      relative
-      overflow-hidden
-      rounded-[20px]
-      border
-      border-white/10
-      bg-white/[0.06]
-      p-5
-      backdrop-blur-md
-      transition-all
-      duration-300
-      hover:border-[#C6A15B]/40
-      hover:bg-white/[0.09]
-      hover:shadow-[0_15px_35px_rgba(0,0,0,.18)]
-    "
-  >
+                <span className="text-[8px] font-bold tracking-[0.2em] text-white/30">
+                  01
+                </span>
+              </div>
 
-    {/* Gold accent */}
+              <p
+                className="
+                  mt-5
+                  text-[28px]
+                  font-semibold
+                  leading-none
+                  tracking-[-0.05em]
+                  text-white
+                "
+              >
+                20+
+              </p>
 
-    <div
-      className="
-        absolute
-        left-0
-        top-0
-        h-[3px]
-        w-10
-        bg-[#C6A15B]
-        transition-all
-        duration-300
-        group-hover:w-full
-      "
-    />
+              <p
+                className="
+                  mt-2
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.18em]
+                  text-[#8FA0AD]
+                "
+              >
+                Service Areas
+              </p>
+            </motion.div>
 
+            {/* STAT 2 */}
 
-    <div
-      className="
-        flex
-        items-center
-        justify-between
-      "
-    >
+            <motion.div
+              whileHover={{
+                y: -5,
+              }}
+              transition={{
+                duration: 0.25,
+              }}
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[20px]
+                border
+                border-white/10
+                bg-white/[0.06]
+                p-5
+                backdrop-blur-md
+                transition-all
+                duration-300
+                hover:border-[#087F8C]/50
+                hover:bg-white/[0.09]
+              "
+            >
+              <div
+                className="
+                  absolute
+                  left-0
+                  top-0
+                  h-[3px]
+                  w-10
+                  bg-[#087F8C]
+                  transition-all
+                  duration-300
+                  group-hover:w-full
+                "
+              />
 
-      {/* Icon */}
+              <div className="flex items-center justify-between">
+                <div
+                  className="
+                    flex
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-[#087F8C]/10
+                    text-[#087F8C]
+                    transition-all
+                    duration-300
+                    group-hover:bg-[#087F8C]
+                    group-hover:text-white
+                  "
+                >
+                  <Clock3
+                    size={19}
+                    strokeWidth={1.4}
+                  />
+                </div>
 
-      <div
-        className="
-          flex
-          h-10
-          w-10
-          items-center
-          justify-center
-          rounded-xl
-          bg-[#C6A15B]/10
-          text-[#C6A15B]
-          transition-all
-          duration-300
-          group-hover:bg-[#C6A15B]
-          group-hover:text-[#0B1F3A]
-        "
-      >
-        <Building2
-          size={19}
-          strokeWidth={1.4}
-        />
-      </div>
+                <span className="text-[8px] font-bold tracking-[0.2em] text-white/30">
+                  02
+                </span>
+              </div>
 
+              <p
+                className="
+                  mt-5
+                  text-[28px]
+                  font-semibold
+                  leading-none
+                  tracking-[-0.05em]
+                  text-white
+                "
+              >
+                24/7
+              </p>
 
-      {/* Number */}
+              <p
+                className="
+                  mt-2
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.18em]
+                  text-[#8FA0AD]
+                "
+              >
+                Support
+              </p>
+            </motion.div>
 
-      <span
-        className="
-          text-[8px]
-          font-bold
-          uppercase
-          tracking-[0.2em]
-          text-white/30
-        "
-      >
-        01
-      </span>
+            {/* STAT 3 */}
 
-    </div>
+            <motion.div
+              whileHover={{
+                y: -5,
+              }}
+              transition={{
+                duration: 0.25,
+              }}
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[20px]
+                border
+                border-white/10
+                bg-white/[0.06]
+                p-5
+                backdrop-blur-md
+                transition-all
+                duration-300
+                hover:border-[#C6A15B]/40
+                hover:bg-white/[0.09]
+              "
+            >
+              <div
+                className="
+                  absolute
+                  left-0
+                  top-0
+                  h-[3px]
+                  w-10
+                  bg-gradient-to-r
+                  from-[#C6A15B]
+                  to-[#087F8C]
+                  transition-all
+                  duration-300
+                  group-hover:w-full
+                "
+              />
 
+              <div className="flex items-center justify-between">
+                <div
+                  className="
+                    flex
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-gradient-to-br
+                    from-[#C6A15B]/15
+                    to-[#087F8C]/15
+                    text-[#C6A15B]
+                    transition-all
+                    duration-300
+                    group-hover:bg-gradient-to-br
+                    group-hover:from-[#C6A15B]
+                    group-hover:to-[#087F8C]
+                    group-hover:text-white
+                  "
+                >
+                  <CheckCircle2
+                    size={19}
+                    strokeWidth={1.4}
+                  />
+                </div>
 
-    <p
-      className="
-        mt-5
-        text-[28px]
-        font-semibold
-        leading-none
-        tracking-[-0.05em]
-        text-white
-      "
-    >
-      20+
-    </p>
+                <span className="text-[8px] font-bold tracking-[0.2em] text-white/30">
+                  03
+                </span>
+              </div>
 
+              <p
+                className="
+                  mt-5
+                  text-[28px]
+                  font-semibold
+                  leading-none
+                  tracking-[-0.05em]
+                  text-white
+                "
+              >
+                100%
+              </p>
 
-    <p
-      className="
-        mt-2
-        text-[8px]
-        font-bold
-        uppercase
-        tracking-[0.18em]
-        text-[#8FA0AD]
-      "
-    >
-      Service Areas
-    </p>
-
-  </motion.div>
-
-
-  {/* =================================================
-      STAT 2
-  ================================================= */}
-
-  <motion.div
-    whileHover={{
-      y: -5,
-    }}
-    transition={{
-      duration: 0.25,
-    }}
-    className="
-      group
-      relative
-      overflow-hidden
-      rounded-[20px]
-      border
-      border-white/10
-      bg-white/[0.06]
-      p-5
-      backdrop-blur-md
-      transition-all
-      duration-300
-      hover:border-[#087F8C]/50
-      hover:bg-white/[0.09]
-      hover:shadow-[0_15px_35px_rgba(0,0,0,.18)]
-    "
-  >
-
-    {/* Teal accent */}
-
-    <div
-      className="
-        absolute
-        left-0
-        top-0
-        h-[3px]
-        w-10
-        bg-[#087F8C]
-        transition-all
-        duration-300
-        group-hover:w-full
-      "
-    />
-
-
-    <div
-      className="
-        flex
-        items-center
-        justify-between
-      "
-    >
-
-      {/* Icon */}
-
-      <div
-        className="
-          flex
-          h-10
-          w-10
-          items-center
-          justify-center
-          rounded-xl
-          bg-[#087F8C]/10
-          text-[#087F8C]
-          transition-all
-          duration-300
-          group-hover:bg-[#087F8C]
-          group-hover:text-white
-        "
-      >
-        <Clock3
-          size={19}
-          strokeWidth={1.4}
-        />
-      </div>
-
-
-      {/* Number */}
-
-      <span
-        className="
-          text-[8px]
-          font-bold
-          uppercase
-          tracking-[0.2em]
-          text-white/30
-        "
-      >
-        02
-      </span>
-
-    </div>
-
-
-    <p
-      className="
-        mt-5
-        text-[28px]
-        font-semibold
-        leading-none
-        tracking-[-0.05em]
-        text-white
-      "
-    >
-      24/7
-    </p>
-
-
-    <p
-      className="
-        mt-2
-        text-[8px]
-        font-bold
-        uppercase
-        tracking-[0.18em]
-        text-[#8FA0AD]
-      "
-    >
-      Support
-    </p>
-
-  </motion.div>
-
-
-  {/* =================================================
-      STAT 3
-  ================================================= */}
-
-  <motion.div
-    whileHover={{
-      y: -5,
-    }}
-    transition={{
-      duration: 0.25,
-    }}
-    className="
-      group
-      relative
-      overflow-hidden
-      rounded-[20px]
-      border
-      border-white/10
-      bg-white/[0.06]
-      p-5
-      backdrop-blur-md
-      transition-all
-      duration-300
-      hover:border-[#C6A15B]/40
-      hover:bg-white/[0.09]
-      hover:shadow-[0_15px_35px_rgba(0,0,0,.18)]
-    "
-  >
-
-    {/* Gold accent */}
-
-    <div
-      className="
-        absolute
-        left-0
-        top-0
-        h-[3px]
-        w-10
-        bg-gradient-to-r
-        from-[#C6A15B]
-        to-[#087F8C]
-        transition-all
-        duration-300
-        group-hover:w-full
-      "
-    />
-
-
-    <div
-      className="
-        flex
-        items-center
-        justify-between
-      "
-    >
-
-      {/* Icon */}
-
-      <div
-        className="
-          flex
-          h-10
-          w-10
-          items-center
-          justify-center
-          rounded-xl
-          bg-gradient-to-br
-          from-[#C6A15B]/15
-          to-[#087F8C]/15
-          text-[#C6A15B]
-          transition-all
-          duration-300
-          group-hover:bg-gradient-to-br
-          group-hover:from-[#C6A15B]
-          group-hover:to-[#087F8C]
-          group-hover:text-white
-        "
-      >
-        <CheckCircle2
-          size={19}
-          strokeWidth={1.4}
-        />
-      </div>
-
-
-      {/* Number */}
-
-      <span
-        className="
-          text-[8px]
-          font-bold
-          uppercase
-          tracking-[0.2em]
-          text-white/30
-        "
-      >
-        03
-      </span>
-
-    </div>
-
-
-    <p
-      className="
-        mt-5
-        text-[28px]
-        font-semibold
-        leading-none
-        tracking-[-0.05em]
-        text-white
-      "
-    >
-      100%
-    </p>
-
-
-    <p
-      className="
-        mt-2
-        text-[8px]
-        font-bold
-        uppercase
-        tracking-[0.18em]
-        text-[#8FA0AD]
-      "
-    >
-      Commitment
-    </p>
-
-  </motion.div>
-
-</div>
-
+              <p
+                className="
+                  mt-2
+                  text-[8px]
+                  font-bold
+                  uppercase
+                  tracking-[0.18em]
+                  text-[#8FA0AD]
+                "
+              >
+                Commitment
+              </p>
+            </motion.div>
+          </div>
         </motion.div>
 
-
         {/* ===================================================
-            RIGHT IMAGE / VISUAL
-        =================================================== */}
+            RIGHT VISUAL
+        ==================================================== */}
 
         <motion.div
           initial={{
@@ -863,9 +769,8 @@ export default function Hero() {
             lg:min-h-[560px]
           "
         >
-
           {/* =================================================
-              TEAL BACKING
+              TEAL BACKING LAYER
           ================================================= */}
 
           <div
@@ -881,20 +786,11 @@ export default function Hero() {
             "
           />
 
-
           {/* =================================================
-              IMAGE
+              STILL AURORA IMAGE
           ================================================= */}
 
-          <motion.div
-            animate={{
-              y: [0, -8, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
+          <div
             className="
               absolute
               right-0
@@ -911,22 +807,18 @@ export default function Hero() {
               lg:h-[530px]
             "
           >
-
-          <img
-  src="https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=2000&q=90"
-  alt="Canadian city skyline"
-  className="
-    absolute
-    inset-0
-    h-full
-    w-full
-    object-cover
-    object-center
-    transition-transform
-    duration-[1800ms]
-  "
-/>
-
+            <img
+              src={auroraImage}
+              alt="Northern lights over the Canadian landscape"
+              className="
+                absolute
+                inset-0
+                h-full
+                w-full
+                object-cover
+                object-center
+              "
+            />
 
             {/* Image overlay */}
 
@@ -935,12 +827,25 @@ export default function Hero() {
                 absolute
                 inset-0
                 bg-gradient-to-t
-                from-[#0B1F3A]/80
-                via-[#0B1F3A]/10
+                from-[#0B1F3A]/75
+                via-[#0B1F3A]/20
                 to-transparent
               "
             />
 
+            {/* Aurora tint */}
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                inset-0
+                bg-gradient-to-br
+                from-[#087F8C]/10
+                via-transparent
+                to-[#0B1F3A]/25
+              "
+            />
 
             {/* Image label */}
 
@@ -958,7 +863,6 @@ export default function Hero() {
                 backdrop-blur-md
               "
             >
-
               <span
                 className="
                   text-[8px]
@@ -968,16 +872,47 @@ export default function Hero() {
                   text-[#C6A15B]
                 "
               >
-                Canada
+                Northern Canada
               </span>
-
             </div>
 
-          </motion.div>
+            {/* Image location */}
 
+            <div
+              className="
+                absolute
+                bottom-6
+                right-6
+                flex
+                items-center
+                gap-2
+                rounded-full
+                border
+                border-white/10
+                bg-[#0B1F3A]/60
+                px-3
+                py-2
+                backdrop-blur-md
+              "
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-[#087F8C]" />
+
+              <span
+                className="
+                  text-[7px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.18em]
+                  text-white/70
+                "
+              >
+                Northern Lights
+              </span>
+            </div>
+          </div>
 
           {/* =================================================
-              FLOATING MISSION CARD
+              MISSION CARD
           ================================================= */}
 
           <motion.div
@@ -1010,25 +945,8 @@ export default function Hero() {
               lg:bottom-[25px]
             "
           >
-
-            {/* Card header */}
-
-            <div
-              className="
-                flex
-                items-center
-                justify-between
-              "
-            >
-
-              <div
-                className="
-                  flex
-                  items-center
-                  gap-3
-                "
-              >
-
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
                 <div
                   className="
                     flex
@@ -1041,17 +959,13 @@ export default function Hero() {
                     text-[#0B1F3A]
                   "
                 >
-
                   <Building2
                     size={19}
                     strokeWidth={1.5}
                   />
-
                 </div>
 
-
                 <div>
-
                   <p
                     className="
                       text-[8px]
@@ -1074,21 +988,14 @@ export default function Hero() {
                   >
                     Innovation with purpose
                   </p>
-
                 </div>
-
               </div>
-
 
               <CheckCircle2
                 size={18}
                 className="text-[#087F8C]"
               />
-
             </div>
-
-
-            {/* Card text */}
 
             <p
               className="
@@ -1103,41 +1010,15 @@ export default function Hero() {
               innovation.
             </p>
 
+            <div className="mt-5 flex items-center gap-2">
+              <span className="h-[2px] w-8 bg-[#C6A15B]" />
 
-            {/* Card line */}
-
-            <div
-              className="
-                mt-5
-                flex
-                items-center
-                gap-2
-              "
-            >
-
-              <span
-                className="
-                  h-[2px]
-                  w-8
-                  bg-[#C6A15B]
-                "
-              />
-
-              <span
-                className="
-                  h-[2px]
-                  w-3
-                  bg-[#087F8C]
-                "
-              />
-
+              <span className="h-[2px] w-3 bg-[#087F8C]" />
             </div>
-
           </motion.div>
 
-
           {/* =================================================
-              FLOATING USERS ICON
+              USERS FLOATING ICON
           ================================================= */}
 
           <motion.div
@@ -1169,17 +1050,14 @@ export default function Hero() {
               backdrop-blur-md
             "
           >
-
             <UsersRound
               size={32}
               strokeWidth={1.1}
             />
-
           </motion.div>
 
-
           {/* =================================================
-              FOLDED GOLD CORNER
+              GOLD CORNER
           ================================================= */}
 
           <div
@@ -1197,15 +1075,12 @@ export default function Hero() {
                 "polygon(0 0, 100% 100%, 0 100%)",
             }}
           />
-
         </motion.div>
-
       </div>
 
-
       {/* =====================================================
-          BOTTOM SCROLL INDICATOR
-      ===================================================== */}
+          SCROLL INDICATOR
+      ====================================================== */}
 
       <motion.div
         initial={{
@@ -1229,7 +1104,6 @@ export default function Hero() {
           lg:flex
         "
       >
-
         <span
           className="
             text-[8px]
@@ -1256,9 +1130,7 @@ export default function Hero() {
             bg-[#C6A15B]
           "
         />
-
       </motion.div>
-
     </section>
   );
 }
