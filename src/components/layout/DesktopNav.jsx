@@ -2,14 +2,20 @@
 
 import { useState } from "react";
 import Link from "next/link";
+
 import {
   ChevronDown,
   ArrowUpRight,
 } from "lucide-react";
+
 import {
   AnimatePresence,
   motion,
 } from "framer-motion";
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 const navigation = [
   {
@@ -18,7 +24,7 @@ const navigation = [
   },
   {
     label: "Services",
-    href: "/services",
+    href: "#",
     dropdown: true,
   },
   {
@@ -31,15 +37,51 @@ const navigation = [
   },
 ];
 
+/* =========================================================
+   SERVICES
+========================================================= */
+
 const services = [
-  "Education & Training",
-  "Engineering & Technical",
-  "Infrastructure",
-  "Technology & Innovation",
-  "Social & Economic",
-  "Financial Management",
-  "Governance",
+  {
+    number: "01",
+    title: "Education & Training",
+    href: "/services/education-training",
+  },
+  {
+    number: "02",
+    title: "Engineering & Technical",
+    href: "/services/engineering-technical",
+  },
+  {
+    number: "03",
+    title: "Infrastructure",
+    href: "/services/infrastructure",
+  },
+  {
+    number: "04",
+    title: "Technology & Innovation",
+    href: "/services/technology-innovation",
+  },
+  {
+    number: "05",
+    title: "Social & Economic",
+    href: "/services/social-economic",
+  },
+  {
+    number: "06",
+    title: "Financial Management",
+    href: "/services/financial-management",
+  },
+  {
+    number: "07",
+    title: "Governance",
+    href: "/services/governance",
+  },
 ];
+
+/* =========================================================
+   COMPONENT
+========================================================= */
 
 export default function DesktopNav() {
   const [servicesOpen, setServicesOpen] =
@@ -50,9 +92,11 @@ export default function DesktopNav() {
 
   return (
     <nav className="hidden md:flex">
+
       <div className="flex items-center">
 
         {navigation.map((item) => {
+
           const isServices =
             item.label === "Services";
 
@@ -69,6 +113,7 @@ export default function DesktopNav() {
                 xl:px-5
               "
               onMouseEnter={() => {
+
                 setHoveredItem(item.label);
 
                 if (isServices) {
@@ -76,27 +121,45 @@ export default function DesktopNav() {
                 } else {
                   setServicesOpen(false);
                 }
+
               }}
               onMouseLeave={() => {
+
                 if (isServices) {
+
                   /*
                    * Small delay gives the cursor
-                   * time to move into the dropdown.
+                   * time to move into dropdown.
                    */
+
                   setTimeout(() => {
                     setServicesOpen(false);
                   }, 120);
+
                 }
 
                 setHoveredItem(null);
+
               }}
             >
+
               {/* =================================================
                   MAIN NAVIGATION LINK
               ================================================= */}
 
               <Link
-                href={item.href}
+                href={isServices ? "#" : item.href}
+                onClick={(event) => {
+
+                  if (isServices) {
+                    event.preventDefault();
+
+                    setServicesOpen(
+                      (previous) => !previous
+                    );
+                  }
+
+                }}
                 className={`
                   relative
                   flex
@@ -118,13 +181,18 @@ export default function DesktopNav() {
                   }
                 `}
               >
+
                 <span>
                   {item.label}
                 </span>
 
-                {/* Services arrow */}
+
+                {/* =================================================
+                    SERVICES ARROW
+                ================================================= */}
 
                 {isServices && (
+
                   <motion.span
                     animate={{
                       rotate:
@@ -141,12 +209,16 @@ export default function DesktopNav() {
                       items-center
                     "
                   >
+
                     <ChevronDown
                       size={15}
                       strokeWidth={1.8}
                     />
+
                   </motion.span>
+
                 )}
+
 
                 {/* =================================================
                     UNDERLINE
@@ -176,15 +248,20 @@ export default function DesktopNav() {
                     bg-[#C6A15B]
                   "
                 />
+
               </Link>
+
 
               {/* =================================================
                   SERVICES DROPDOWN
               ================================================= */}
 
               {isServices && (
+
                 <AnimatePresence>
+
                   {servicesOpen && (
+
                     <motion.div
                       initial={{
                         opacity: 0,
@@ -215,20 +292,27 @@ export default function DesktopNav() {
                         left-1/2
                         top-[76px]
                         z-[999]
-                        w-[360px]
+                        w-[380px]
                         -translate-x-1/2
                       "
                       onMouseEnter={() => {
+
                         setServicesOpen(true);
+
                         setHoveredItem(
                           "Services"
                         );
+
                       }}
                       onMouseLeave={() => {
+
                         setServicesOpen(false);
+
                         setHoveredItem(null);
+
                       }}
                     >
+
                       {/* =================================================
                           HOVER BRIDGE
                       ================================================= */}
@@ -242,6 +326,7 @@ export default function DesktopNav() {
                           h-[14px]
                         "
                       />
+
 
                       {/* =================================================
                           DROPDOWN BOX
@@ -259,7 +344,10 @@ export default function DesktopNav() {
                           shadow-[0_25px_70px_rgba(11,31,58,0.18)]
                         "
                       >
-                        {/* Dropdown header */}
+
+                        {/* =================================================
+                            DROPDOWN HEADER
+                        ================================================= */}
 
                         <div
                           className="
@@ -270,42 +358,77 @@ export default function DesktopNav() {
                             pt-3
                           "
                         >
-                          <p
-                            className="
-                              text-[10px]
-                              font-semibold
-                              uppercase
-                              tracking-[0.2em]
-                              text-[#C6A15B]
-                            "
-                          >
-                            Our Services
-                          </p>
 
-                          <p
-                            className="
-                              mt-1.5
-                              text-[13px]
-                              leading-5
-                              text-[#6C7781]
-                            "
-                          >
-                            Professional solutions
-                            designed for lasting
-                            impact.
-                          </p>
+                          <div className="flex items-start justify-between gap-4">
+
+                            <div>
+
+                              <p
+                                className="
+                                  text-[10px]
+                                  font-semibold
+                                  uppercase
+                                  tracking-[0.2em]
+                                  text-[#C6A15B]
+                                "
+                              >
+                                Our Services
+                              </p>
+
+                              <p
+                                className="
+                                  mt-1.5
+                                  text-[13px]
+                                  leading-5
+                                  text-[#6C7781]
+                                "
+                              >
+                                Professional solutions
+                                designed for lasting
+                                impact.
+                              </p>
+
+                            </div>
+
+                            <div
+                              className="
+                                flex
+                                h-8
+                                w-8
+                                shrink-0
+                                items-center
+                                justify-center
+                                rounded-full
+                                bg-[#087F8C]/10
+                                text-[#087F8C]
+                              "
+                            >
+
+                              <ArrowUpRight
+                                size={14}
+                              />
+
+                            </div>
+
+                          </div>
+
                         </div>
 
-                        {/* Service list */}
+
+                        {/* =================================================
+                            SERVICE LIST
+                        ================================================= */}
 
                         <div className="mt-2">
+
                           {services.map(
                             (
                               service,
                               index
                             ) => (
+
                               <motion.div
-                                key={service}
+                                key={service.href}
                                 initial={{
                                   opacity: 0,
                                   x: -8,
@@ -322,13 +445,23 @@ export default function DesktopNav() {
                                     0.2,
                                 }}
                               >
+
                                 <Link
-                                  href="/services"
+                                  href={
+                                    service.href
+                                  }
+                                  onClick={() =>
+                                    setServicesOpen(
+                                      false
+                                    )
+                                  }
                                   className="
                                     group
+                                    relative
                                     flex
                                     items-center
                                     justify-between
+                                    overflow-hidden
                                     rounded-[11px]
                                     px-4
                                     py-3
@@ -341,35 +474,90 @@ export default function DesktopNav() {
                                     hover:text-[#087F8C]
                                   "
                                 >
-                                  <span>
-                                    {service}
+
+                                  {/* GOLD HOVER LINE */}
+
+                                  <span
+                                    className="
+                                      absolute
+                                      left-0
+                                      top-0
+                                      h-full
+                                      w-[2px]
+                                      origin-bottom
+                                      scale-y-0
+                                      bg-[#C6A15B]
+                                      transition-transform
+                                      duration-300
+                                      group-hover:scale-y-100
+                                    "
+                                  />
+
+
+                                  {/* NUMBER + TITLE */}
+
+                                  <span className="flex min-w-0 items-center gap-3">
+
+                                    <span
+                                      className="
+                                        shrink-0
+                                        font-mono
+                                        text-[8px]
+                                        text-[#C6A15B]
+                                      "
+                                    >
+                                      {service.number}
+                                    </span>
+
+                                    <span className="truncate">
+                                      {service.title}
+                                    </span>
+
                                   </span>
+
+
+                                  {/* ARROW */}
 
                                   <ArrowUpRight
                                     size={15}
                                     className="
+                                      ml-3
+                                      shrink-0
                                       text-[#C6A15B]
                                       opacity-0
                                       transition-all
                                       duration-200
                                       group-hover:translate-x-1
+                                      group-hover:-translate-y-1
                                       group-hover:opacity-100
                                     "
                                   />
+
                                 </Link>
+
                               </motion.div>
+
                             )
                           )}
+
                         </div>
+
                       </div>
+
                     </motion.div>
+
                   )}
+
                 </AnimatePresence>
+
               )}
+
             </div>
           );
         })}
+
       </div>
+
     </nav>
   );
 }

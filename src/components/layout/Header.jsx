@@ -2,26 +2,68 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+
 import {
   Menu,
   X,
   ArrowUpRight,
 } from "lucide-react";
+
 import {
   AnimatePresence,
   motion,
 } from "framer-motion";
+
 import Image from "next/image";
 
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 
-export default function Header() {
-  const [navbarVisible, setNavbarVisible] =
-    useState(true);
+/* =========================================================
+   SERVICE LINKS
+========================================================= */
 
-  const [mobileOpen, setMobileOpen] =
-    useState(false);
+const serviceLinks = [
+  {
+    number: "01",
+    title: "Education & Training",
+    href: "/services/education-training",
+  },
+  {
+    number: "02",
+    title: "Engineering & Technical",
+    href: "/services/engineering-technical",
+  },
+  {
+    number: "03",
+    title: "Infrastructure",
+    href: "/services/infrastructure",
+  },
+  {
+    number: "04",
+    title: "Technology & Innovation",
+    href: "/services/technology-innovation",
+  },
+  {
+    number: "05",
+    title: "Social & Economic",
+    href: "/services/social-economic",
+  },
+  {
+    number: "06",
+    title: "Financial Management",
+    href: "/services/financial-management",
+  },
+  {
+    number: "07",
+    title: "Governance",
+    href: "/services/governance",
+  },
+];
+
+export default function Header() {
+  const [navbarVisible, setNavbarVisible] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const lastScrollY = useRef(0);
 
@@ -37,51 +79,41 @@ export default function Header() {
     lastScrollY.current = window.scrollY;
 
     const handleScroll = () => {
-      const currentScrollY =
-        window.scrollY;
+      const currentScrollY = window.scrollY;
+      const previousScrollY = lastScrollY.current;
 
-      const previousScrollY =
-        lastScrollY.current;
+      /* Always show navbar at top */
 
-      // Always show navbar at top
       if (currentScrollY <= 40) {
         setNavbarVisible(true);
-
-        lastScrollY.current =
-          currentScrollY;
-
+        lastScrollY.current = currentScrollY;
         return;
       }
 
-      // Ignore tiny movements
-      const scrollDifference =
-        Math.abs(
-          currentScrollY -
-            previousScrollY
-        );
+      /* Ignore tiny movements */
+
+      const scrollDifference = Math.abs(
+        currentScrollY - previousScrollY
+      );
 
       if (scrollDifference < 8) {
         return;
       }
 
-      // Scrolling down
-      if (
-        currentScrollY >
-        previousScrollY
-      ) {
+      /* Scrolling down */
+
+      if (currentScrollY > previousScrollY) {
         setNavbarVisible(false);
+        setMobileOpen(false);
       }
 
-      // Scrolling up
-      else if (
-        currentScrollY <
-        previousScrollY
-      ) {
+      /* Scrolling up */
+
+      else if (currentScrollY < previousScrollY) {
         setNavbarVisible(true);
       }
 
-      lastScrollY.current =
-        currentScrollY;
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener(
@@ -146,6 +178,7 @@ export default function Header() {
           lg:pt-8
         "
       >
+
         {/* =================================================
             NAVBAR PILL
         ================================================= */}
@@ -174,6 +207,7 @@ export default function Header() {
             width: "100%",
           }}
         >
+
           {/* =================================================
               BACKGROUND DECORATION
           ================================================= */}
@@ -188,7 +222,8 @@ export default function Header() {
               rounded-[30px]
             "
           >
-            {/* Base background */}
+
+            {/* BASE */}
 
             <div
               className="
@@ -201,9 +236,8 @@ export default function Header() {
               "
             />
 
-            {/* =================================================
-                TEAL GLOW
-            ================================================= */}
+
+            {/* TEAL GLOW */}
 
             <motion.div
               className="
@@ -228,9 +262,8 @@ export default function Header() {
               }}
             />
 
-            {/* =================================================
-                GOLD GLOW
-            ================================================= */}
+
+            {/* GOLD GLOW */}
 
             <motion.div
               className="
@@ -255,9 +288,8 @@ export default function Header() {
               }}
             />
 
-            {/* =================================================
-                TEAL CIRCLE
-            ================================================= */}
+
+            {/* TEAL CIRCLE */}
 
             <div
               className="
@@ -272,9 +304,8 @@ export default function Header() {
               "
             />
 
-            {/* =================================================
-                GOLD CIRCLE
-            ================================================= */}
+
+            {/* GOLD CIRCLE */}
 
             <div
               className="
@@ -289,9 +320,8 @@ export default function Header() {
               "
             />
 
-            {/* =================================================
-                DOT PATTERN
-            ================================================= */}
+
+            {/* DOT PATTERN */}
 
             <div
               className="
@@ -311,9 +341,8 @@ export default function Header() {
               }}
             />
 
-            {/* =================================================
-                GOLD DOTS
-            ================================================= */}
+
+            {/* GOLD DOTS */}
 
             <div
               className="
@@ -351,9 +380,8 @@ export default function Header() {
               "
             />
 
-            {/* =================================================
-                LEFT GOLD DOT
-            ================================================= */}
+
+            {/* LEFT GOLD DOT */}
 
             <div
               className="
@@ -367,9 +395,8 @@ export default function Header() {
               "
             />
 
-            {/* =================================================
-                TEAL LINE
-            ================================================= */}
+
+            {/* TEAL LINE */}
 
             <div
               className="
@@ -384,14 +411,12 @@ export default function Header() {
                 to-transparent
               "
             />
+
           </div>
+
 
           {/* =================================================
               NAVBAR CONTENT
-
-              IMPORTANT:
-              This stays outside the clipped
-              background decoration.
           ================================================= */}
 
           <div
@@ -403,15 +428,14 @@ export default function Header() {
               items-center
             "
           >
+
             {/* =================================================
                 LOGO
             ================================================= */}
 
             <Link
               href="/"
-              onClick={() =>
-                setMobileOpen(false)
-              }
+              onClick={() => setMobileOpen(false)}
               className="
                 relative
                 z-[220]
@@ -423,6 +447,7 @@ export default function Header() {
                 overflow-hidden
               "
             >
+
               <Image
                 src="/logo/logo.jpg"
                 alt="IBS Group Canada"
@@ -436,7 +461,9 @@ export default function Header() {
                   object-left
                 "
               />
+
             </Link>
+
 
             {/* =================================================
                 CENTER NAVIGATION
@@ -450,11 +477,15 @@ export default function Header() {
                 hidden
                 -translate-x-1/2
                 md:block
-                
               "
             >
-              <DesktopNav />
+
+              <DesktopNav
+                services={serviceLinks}
+              />
+
             </div>
+
 
             {/* =================================================
                 RIGHT SIDE
@@ -470,9 +501,8 @@ export default function Header() {
                 gap-3
               "
             >
-              {/* =================================================
-                  CONTACT BUTTON
-              ================================================= */}
+
+              {/* CONTACT */}
 
               <Link
                 href="/contact"
@@ -498,6 +528,7 @@ export default function Header() {
                   md:inline-flex
                 "
               >
+
                 <span className="!text-white">
                   Contact Us
                 </span>
@@ -518,17 +549,19 @@ export default function Header() {
                     group-hover:translate-x-0.5
                   "
                 >
+
                   <ArrowUpRight
                     size={15}
                     strokeWidth={2}
                     className="!text-white"
                   />
+
                 </span>
+
               </Link>
 
-              {/* =================================================
-                  MOBILE MENU BUTTON
-              ================================================= */}
+
+              {/* MOBILE MENU */}
 
               <button
                 type="button"
@@ -557,11 +590,14 @@ export default function Header() {
                   md:hidden
                 "
               >
+
                 <AnimatePresence
                   mode="wait"
                   initial={false}
                 >
+
                   {mobileOpen ? (
+
                     <motion.span
                       key="close"
                       initial={{
@@ -579,7 +615,9 @@ export default function Header() {
                     >
                       <X size={21} />
                     </motion.span>
+
                   ) : (
+
                     <motion.span
                       key="menu"
                       initial={{
@@ -597,27 +635,39 @@ export default function Header() {
                     >
                       <Menu size={21} />
                     </motion.span>
+
                   )}
+
                 </AnimatePresence>
+
               </button>
+
             </div>
+
           </div>
+
         </div>
+
       </motion.header>
+
 
       {/* =================================================
           MOBILE NAVIGATION
       ================================================= */}
 
       <AnimatePresence>
+
         {mobileOpen && (
+
           <MobileNav
-            onClose={() =>
-              setMobileOpen(false)
-            }
+            onClose={() => setMobileOpen(false)}
+            services={serviceLinks}
           />
+
         )}
+
       </AnimatePresence>
+
     </>
   );
 }
