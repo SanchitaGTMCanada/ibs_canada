@@ -1145,7 +1145,7 @@ export default function AboutPage() {
 
                     <div className="grid gap-4 sm:grid-cols-[50px_85px_1fr] sm:items-center lg:grid-cols-[70px_110px_0.8fr_1fr] lg:gap-7">
 
-                      <span className="font-mono text-[9px] tracking-[0.2em] text-[#C6A15B] sm:text-[10px]">
+                      <span className="font-mono text-[9px] tracking-[0.2em] text-[#C6A15B] sm:text-[19px]">
                         {item.number}
                       </span>
 
@@ -1348,7 +1348,7 @@ export default function AboutPage() {
 
                       <div className="flex gap-4 sm:gap-5">
 
-                        <span className="w-6 shrink-0 pt-2 font-mono text-[8px] text-[#202832]/40 sm:w-8 sm:text-[9px]">
+                        <span className="w-6 shrink-0 pt-2 font-mono text-[8px] text-[#202832]/40 sm:w-8 sm:text-[19px]">
                           {item.number}
                         </span>
 
