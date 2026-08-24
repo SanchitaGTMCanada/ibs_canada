@@ -186,6 +186,8 @@ export default function OurTeamPage() {
           overflow-hidden
           bg-[#0B1F3A]
         "
+
+        style={{paddingTop:"75px"}}
       >
 
         {/* ===================================================
@@ -438,51 +440,53 @@ export default function OurTeamPage() {
               className="mt-8"
             >
 
-              <Link
-                href="#team"
-                className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-3
-                  rounded-full
-                  border
-                  border-[#C6A15B]
-                  px-5
-                  py-2.5
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-[0.12em]
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:bg-[#C6A15B]
-                  hover:text-[#0B1F3A]
-                "
-              >
+            <Link
+  href="#team"
+  className="
+    group
+    inline-flex
+    items-center
+    gap-3
+    rounded-full
+    border
+    border-[#C6A15B]
+    px-5
+    py-2.5
+    text-[10px]
+    font-bold
+    uppercase
+    tracking-[0.12em]
+    text-white
+    transition-all
+    duration-300
+    hover:bg-[#C6A15B]
+    hover:text-[#0B1F3A]
+  "
+>
+  <span className="text-white transition-colors duration-300 group-hover:text-[#0B1F3A]">
+    Meet Our Team
+  </span>
 
-                Meet Our Team
-
-                <span
-                  className="
-                    flex
-                    h-7
-                    w-7
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#C6A15B]
-                    text-[#0B1F3A]
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                  "
-                >
-                  <ArrowRight size={13} />
-                </span>
-
-              </Link>
+  <span
+    className="
+      flex
+      h-7
+      w-7
+      items-center
+      justify-center
+      rounded-full
+      bg-[#C6A15B]
+      text-[#0B1F3A]
+      transition-all
+      duration-300
+      group-hover:translate-x-1
+      group-hover:bg-[#0B1F3A]
+      group-hover:text-white
+    "
+  >
+    <ArrowRight size={13} />
+  </span>
+</Link>
 
             </motion.div>
 

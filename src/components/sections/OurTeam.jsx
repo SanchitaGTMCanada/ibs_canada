@@ -252,6 +252,8 @@ export default function OurTeam() {
             lg:px-10
             xl:px-12
           "
+
+      
         >
           <div className="max-w-[850px]">
 
