@@ -20,6 +20,8 @@ import {
   UsersRound,
   Zap,
 } from "lucide-react";
+import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
 
 /* =========================================================
    EXTERNAL IMAGES
@@ -84,7 +86,7 @@ export default function AboutPage() {
       {/* =====================================================
           01 — HERO
       ===================================================== */}
-
+<Header/>
       <section
         className="
           relative
@@ -97,6 +99,7 @@ export default function AboutPage() {
           lg:pt-[180px]
         "
       >
+        
 
         {/* =================================================
             BACKGROUND LIGHT
@@ -2442,226 +2445,8 @@ export default function AboutPage() {
           08 — FINAL CTA
       ===================================================== */}
 
-      <section
-        className="
-          relative
-          overflow-hidden
-          bg-[#0B1F3A]
-          px-6
-          py-28
-          sm:px-8
-          lg:px-10
-          lg:py-36
-          xl:px-14
-        "
-      >
-
-        {/* Aurora */}
-
-        <motion.div
-          animate={{
-            x: [-100, 100, -100],
-            scale: [1, 1.15, 1],
-            opacity: [0.15, 0.25, 0.15],
-          }}
-          transition={{
-            duration: 16,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            pointer-events-none
-            absolute
-            left-1/2
-            top-1/2
-            h-[500px]
-            w-[900px]
-            -translate-x-1/2
-            -translate-y-1/2
-            rounded-full
-            bg-[#087F8C]
-            blur-[140px]
-          "
-        />
-
-        {/* Floating circles */}
-
-        <motion.div
-          animate={{
-            rotate: 360,
-          }}
-          transition={{
-            duration: 35,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="
-            pointer-events-none
-            absolute
-            -right-[120px]
-            -top-[120px]
-            h-[360px]
-            w-[360px]
-            rounded-full
-            border
-            border-[#C6A15B]/15
-          "
-        />
-
-        <motion.div
-          animate={{
-            rotate: -360,
-          }}
-          transition={{
-            duration: 28,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="
-            pointer-events-none
-            absolute
-            -right-[70px]
-            -top-[70px]
-            h-[260px]
-            w-[260px]
-            rounded-full
-            border
-            border-[#087F8C]/20
-          "
-        />
-
-
-        <div
-          className="
-            relative
-            z-10
-            mx-auto
-            max-w-[1100px]
-            text-center
-          "
-        >
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 25,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.8,
-            }}
-          >
-
-            <span
-              className="
-                text-[9px]
-                font-bold
-                uppercase
-                tracking-[0.3em]
-                text-[#C6A15B]
-              "
-            >
-              07 / Next chapter
-            </span>
-
-            <h2
-              className="
-                mx-auto
-                mt-7
-                max-w-[900px]
-                text-[48px]
-                font-bold
-                leading-[0.95]
-                tracking-[-0.06em]
-                text-white
-                sm:text-[68px]
-                lg:text-[88px]
-              "
-            >
-              Let&apos;s create what
-
-              <span className="block text-[#BCEBE8]">
-                comes next.
-              </span>
-
-            </h2>
-
-            <p
-              className="
-                mx-auto
-                mt-7
-                max-w-[580px]
-                text-[15px]
-                leading-7
-                text-white/45
-              "
-            >
-              Whether you have a challenge, an idea or an
-              opportunity, we would love to explore what
-              could be possible together.
-            </p>
-
-            <div className="mt-9 flex justify-center">
-
-              <Link
-                href="/contact"
-                className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-3
-                  rounded-full
-                  bg-[#C6A15B]
-                  px-7
-                  py-4
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-[0.15em]
-                  text-[#0B1F3A]
-                  shadow-[0_20px_60px_rgba(0,0,0,0.25)]
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:bg-[#D7C17A]
-                "
-              >
-
-                Start a Conversation
-
-                <span
-                  className="
-                    flex
-                    h-8
-                    w-8
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#0B1F3A]
-                    text-white
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                  "
-                >
-                  <ArrowRight size={14} />
-                </span>
-
-              </Link>
-
-            </div>
-
-          </motion.div>
-
-        </div>
-
-      </section>
+     
+      <Footer/>
 
     </main>
   );
