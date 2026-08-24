@@ -269,6 +269,7 @@ export default function ServiceHero({
             }}
             className="
               mt-7
+              mb-5
               max-w-[780px]
               text-[58px]
               font-medium

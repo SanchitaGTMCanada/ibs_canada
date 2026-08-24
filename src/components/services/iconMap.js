@@ -23,6 +23,12 @@ import {
   Leaf,
   HeartHandshake,
   Settings2,
+
+  // Infrastructure
+  Home,
+  Route,
+  ClipboardCheck,
+  BadgeCheck,
 } from "lucide-react";
 
 export const iconMap = {
@@ -50,4 +56,10 @@ export const iconMap = {
   Leaf,
   HeartHandshake,
   Settings2,
+
+  // Infrastructure
+  Home,
+  Route,
+  ClipboardCheck,
+  BadgeCheck,
 };

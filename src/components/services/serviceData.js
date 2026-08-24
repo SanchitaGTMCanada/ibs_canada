@@ -147,869 +147,1321 @@ export const serviceData = {
     ],
   },
 
-  engineeringTechnical: {
-    slug: "engineering-technical",
-
-    label: "Engineering & Technical",
-
-    title: "Engineering",
-
-    titleAccent: "& Technical",
-
-    description:
-      "Technical expertise, engineering knowledge and practical solutions supporting complex projects and Northern development.",
-
-    image:
-      "/images/services/engineering-technical/engineering.jpg",
-
-    heroIcon: "Settings2",
-
-    features: [
-      {
-        icon: "Settings2",
-        title: "Technical Expertise",
-      },
-      {
-        icon: "HardHat",
-        title: "Project Support",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Reliable Solutions",
-      },
-    ],
-
-    journeyTitle: "Technical",
-
-    journeyAccent: "expertise that delivers.",
-
-    journeyDescription:
-      "Practical engineering and technical capabilities designed around real-world requirements.",
-
-    programs: [
-      {
-        title: "Engineering Consulting",
-        description:
-          "Technical expertise supporting planning, design and project delivery.",
-        icon: "Settings2",
-        tone: "navy",
-      },
-      {
-        title: "Technical Advisory",
-        description:
-          "Specialized guidance supporting organizations through complex technical challenges.",
-        icon: "Lightbulb",
-        tone: "gold",
-      },
-      {
-        title: "Project Engineering",
-        description:
-          "Engineering support throughout project planning and implementation.",
-        icon: "HardHat",
-        tone: "teal",
-      },
-      {
-        title: "Technical Assessment",
-        description:
-          "Structured assessment and technical evaluation for informed decisions.",
-        icon: "BarChart3",
-        tone: "gold",
-      },
-    ],
-
-    centresTitle: "Technical",
-
-    centresAccent: "Capabilities.",
-
-    centresDescription:
-      "A connected network of expertise supporting technical and engineering requirements.",
-
-    centres: [
-      {
-        title: "Engineering Services",
-        icon: "Settings2",
-      },
-      {
-        title: "Project Management",
-        icon: "Workflow",
-      },
-      {
-        title: "Technical Advisory",
-        icon: "Lightbulb",
-      },
-      {
-        title: "Infrastructure Planning",
-        icon: "Building2",
-      },
-      {
-        title: "Field Support",
-        icon: "HardHat",
-      },
-      {
-        title: "Technical Assessment",
-        icon: "BarChart3",
-      },
-      {
-        title: "Quality Assurance",
-        icon: "ShieldCheck",
-      },
-    ],
-
-    impactTitle: "Technical knowledge.",
-
-    impactAccent: "Practical impact.",
-
-    impactDescription:
-      "Our approach connects technical expertise with practical outcomes.",
-
-    benefits: [
-      {
-        icon: "Settings2",
-        title: "Technical Depth",
-        text: "Experienced technical capabilities for complex requirements.",
-      },
-      {
-        icon: "Workflow",
-        title: "Project Integration",
-        text: "Solutions aligned with project objectives.",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Quality",
-        text: "Structured processes supporting reliable outcomes.",
-      },
-      {
-        icon: "Target",
-        title: "Outcome Focus",
-        text: "Technical decisions connected to measurable objectives.",
-      },
-      {
-        icon: "UsersRound",
-        title: "Collaboration",
-        text: "Working closely with clients and communities.",
-      },
-    ],
-  },
-
-  infrastructure: {
-    slug: "infrastructure",
-
-    label: "Infrastructure",
-
-    title: "Infrastructure",
-
-    titleAccent: "& Development",
-
-    description:
-      "Supporting resilient infrastructure planning, development and implementation for communities and organizations.",
-
-    image:
-      "/images/services/infrastructure/infrastructure.jpg",
-
-    heroIcon: "Building2",
-
-    features: [
-      {
-        icon: "Building2",
-        title: "Infrastructure",
-      },
-      {
-        icon: "HardHat",
-        title: "Development",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Resilience",
-      },
-    ],
-
-    journeyTitle: "Building",
-
-    journeyAccent: "what lasts.",
-
-    journeyDescription:
-      "Infrastructure solutions designed to support long-term community and organizational growth.",
-
-    programs: [
-      {
-        title: "Infrastructure Planning",
-        description:
-          "Strategic planning for sustainable infrastructure development.",
-        icon: "Building2",
-        tone: "navy",
-      },
-      {
-        title: "Project Development",
-        description:
-          "Support throughout infrastructure project development.",
-        icon: "HardHat",
-        tone: "gold",
-      },
-      {
-        title: "Asset Management",
-        description:
-          "Structured approaches to managing infrastructure assets.",
-        icon: "Workflow",
-        tone: "teal",
-      },
-      {
-        title: "Infrastructure Advisory",
-        description:
-          "Expert guidance for complex infrastructure decisions.",
-        icon: "Lightbulb",
-        tone: "gold",
-      },
-    ],
-
-    centresTitle: "Infrastructure",
-
-    centresAccent: "in action.",
-
-    centresDescription:
-      "Connected capabilities supporting infrastructure development.",
-
-    centres: [
-      {
-        title: "Planning",
-        icon: "Building2",
-      },
-      {
-        title: "Development",
-        icon: "HardHat",
-      },
-      {
-        title: "Asset Management",
-        icon: "Workflow",
-      },
-      {
-        title: "Advisory",
-        icon: "Lightbulb",
-      },
-      {
-        title: "Community Infrastructure",
-        icon: "UsersRound",
-      },
-      {
-        title: "Resilience",
-        icon: "ShieldCheck",
-      },
-      {
-        title: "Sustainability",
-        icon: "Leaf",
-      },
-    ],
-
-    impactTitle: "Build with",
-
-    impactAccent: "purpose.",
-
-    impactDescription:
-      "Infrastructure should create lasting value for people, organizations and communities.",
-
-    benefits: [
-      {
-        icon: "Building2",
-        title: "Strategic Planning",
-        text: "Infrastructure planning aligned with long-term goals.",
-      },
-      {
-        icon: "HardHat",
-        title: "Project Delivery",
-        text: "Practical support throughout project execution.",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Resilience",
-        text: "Solutions designed for lasting performance.",
-      },
-      {
-        icon: "Leaf",
-        title: "Sustainability",
-        text: "Development with environmental considerations.",
-      },
-      {
-        icon: "Target",
-        title: "Long-Term Value",
-        text: "Infrastructure designed around meaningful outcomes.",
-      },
-    ],
-  },
-
-  technologyInnovation: {
-    slug: "technology-innovation",
-
-    label: "Technology & Innovation",
-
-    title: "Technology",
-
-    titleAccent: "& Innovation",
-
-    description:
-      "Technology-enabled thinking and innovation strategies helping organizations adapt, connect and grow.",
-
-    image:
-      "/images/services/technology-innovation/technology.jpg",
-
-    heroIcon: "Cpu",
-
-    features: [
-      {
-        icon: "Cpu",
-        title: "Technology",
-      },
-      {
-        icon: "Lightbulb",
-        title: "Innovation",
-      },
-      {
-        icon: "Network",
-        title: "Connectivity",
-      },
-    ],
-
-    journeyTitle: "Think",
-
-    journeyAccent: "forward.",
-
-    journeyDescription:
-      "Technology and innovation solutions designed to create smarter ways of working.",
-
-    programs: [
-      {
-        title: "Digital Transformation",
-        description:
-          "Helping organizations modernize systems, processes and experiences.",
-        icon: "Cpu",
-        tone: "navy",
-      },
-      {
-        title: "Innovation Strategy",
-        description:
-          "Turning emerging opportunities into practical strategies.",
-        icon: "Lightbulb",
-        tone: "gold",
-      },
-      {
-        title: "Technology Advisory",
-        description:
-          "Technology guidance aligned with organizational objectives.",
-        icon: "Network",
-        tone: "teal",
-      },
-      {
-        title: "Digital Solutions",
-        description:
-          "Practical technology solutions designed around user needs.",
-        icon: "Workflow",
-        tone: "gold",
-      },
-    ],
-
-    centresTitle: "Innovation",
-
-    centresAccent: "in motion.",
-
-    centresDescription:
-      "Technology, creativity and strategy working together.",
-
-    centres: [
-      {
-        title: "Digital Strategy",
-        icon: "Cpu",
-      },
-      {
-        title: "Innovation",
-        icon: "Lightbulb",
-      },
-      {
-        title: "Technology Advisory",
-        icon: "Network",
-      },
-      {
-        title: "Digital Platforms",
-        icon: "Globe2",
-      },
-      {
-        title: "Data & Analytics",
-        icon: "BarChart3",
-      },
-      {
-        title: "Process Innovation",
-        icon: "Workflow",
-      },
-      {
-        title: "Future Readiness",
-        icon: "Sparkles",
-      },
-    ],
-
-    impactTitle: "Technology",
-
-    impactAccent: "with purpose.",
-
-    impactDescription:
-      "Innovation becomes meaningful when it solves real problems and creates measurable value.",
-
-    benefits: [
-      {
-        icon: "Cpu",
-        title: "Modern Thinking",
-        text: "Technology strategies designed for changing environments.",
-      },
-      {
-        icon: "Lightbulb",
-        title: "Innovation",
-        text: "Creative approaches to complex organizational challenges.",
-      },
-      {
-        icon: "Network",
-        title: "Connected",
-        text: "Solutions that connect people, processes and technology.",
-      },
-      {
-        icon: "BarChart3",
-        title: "Data Driven",
-        text: "Better decisions supported by meaningful information.",
-      },
-      {
-        icon: "Sparkles",
-        title: "Future Ready",
-        text: "Preparing organizations for what comes next.",
-      },
-    ],
-  },
-
-  socialEconomic: {
-    slug: "social-economic",
-
-    label: "Social & Economic",
-
-    title: "Social",
-
-    titleAccent: "& Economic",
-
-    description:
-      "Supporting inclusive social and economic development through practical research, partnerships and community-focused strategies.",
-
-    image:
-      "/images/services/social-economic/social-economic.jpg",
-
-    heroIcon: "HeartHandshake",
-
-    features: [
-      {
-        icon: "HeartHandshake",
-        title: "Community",
-      },
-      {
-        icon: "UsersRound",
-        title: "Inclusion",
-      },
-      {
-        icon: "Globe2",
-        title: "Development",
-      },
-    ],
-
-    journeyTitle: "People",
-
-    journeyAccent: "at the centre.",
-
-    journeyDescription:
-      "Creating strategies that connect social progress with sustainable economic opportunity.",
-
-    programs: [
-      {
-        title: "Community Development",
-        description:
-          "Supporting communities through practical development strategies.",
-        icon: "UsersRound",
-        tone: "navy",
-      },
-      {
-        title: "Economic Development",
-        description:
-          "Strategies supporting sustainable economic opportunity.",
-        icon: "BarChart3",
-        tone: "gold",
-      },
-      {
-        title: "Partnership Development",
-        description:
-          "Building productive partnerships between organizations and communities.",
-        icon: "Handshake",
-        tone: "teal",
-      },
-      {
-        title: "Social Impact",
-        description:
-          "Programs designed around measurable community outcomes.",
-        icon: "HeartHandshake",
-        tone: "gold",
-      },
-    ],
-
-    centresTitle: "Community",
-
-    centresAccent: "impact.",
-
-    centresDescription:
-      "Building stronger connections between people, organizations and opportunities.",
-
-    centres: [
-      {
-        title: "Community Development",
-        icon: "UsersRound",
-      },
-      {
-        title: "Economic Development",
-        icon: "BarChart3",
-      },
-      {
-        title: "Partnerships",
-        icon: "Handshake",
-      },
-      {
-        title: "Social Research",
-        icon: "Lightbulb",
-      },
-      {
-        title: "Community Engagement",
-        icon: "HeartHandshake",
-      },
-      {
-        title: "Strategic Planning",
-        icon: "Target",
-      },
-      {
-        title: "Inclusive Growth",
-        icon: "Globe2",
-      },
-    ],
-
-    impactTitle: "Growth that",
-
-    impactAccent: "includes everyone.",
-
-    impactDescription:
-      "Sustainable progress is built through collaboration, opportunity and meaningful community participation.",
-
-    benefits: [
-      {
-        icon: "UsersRound",
-        title: "Community Focus",
-        text: "People and communities remain at the centre.",
-      },
-      {
-        icon: "Handshake",
-        title: "Partnerships",
-        text: "Collaborative approaches create stronger outcomes.",
-      },
-      {
-        icon: "BarChart3",
-        title: "Economic Opportunity",
-        text: "Supporting sustainable economic participation.",
-      },
-      {
-        icon: "HeartHandshake",
-        title: "Social Impact",
-        text: "Strategies designed for meaningful outcomes.",
-      },
-      {
-        icon: "Globe2",
-        title: "Inclusive Growth",
-        text: "Development that creates opportunity.",
-      },
-    ],
-  },
-
-  financialManagement: {
-    slug: "financial-management",
-
-    label: "Financial Management",
-
-    title: "Financial",
-
-    titleAccent: "Management",
-
-    description:
-      "Financial planning, analysis and management solutions supporting informed decisions and sustainable organizational performance.",
-
-    image:
-      "/images/services/financial-management/financial.jpg",
-
-    heroIcon: "Coins",
-
-    features: [
-      {
-        icon: "Coins",
-        title: "Financial Strategy",
-      },
-      {
-        icon: "BarChart3",
-        title: "Analysis",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Governance",
-      },
-    ],
-
-    journeyTitle: "Make every",
-
-    journeyAccent: "decision count.",
-
-    journeyDescription:
-      "Financial management built around clarity, accountability and long-term sustainability.",
-
-    programs: [
-      {
-        title: "Financial Planning",
-        description:
-          "Planning frameworks supporting informed financial decisions.",
-        icon: "Coins",
-        tone: "navy",
-      },
-      {
-        title: "Financial Analysis",
-        description:
-          "Analysis supporting better organizational decision-making.",
-        icon: "BarChart3",
-        tone: "gold",
-      },
-      {
-        title: "Budget Management",
-        description:
-          "Structured approaches to effective resource management.",
-        icon: "Target",
-        tone: "teal",
-      },
-      {
-        title: "Financial Advisory",
-        description:
-          "Strategic financial guidance supporting long-term objectives.",
-        icon: "BriefcaseBusiness",
-        tone: "gold",
-      },
-    ],
-
-    centresTitle: "Financial",
-
-    centresAccent: "clarity.",
-
-    centresDescription:
-      "Capabilities supporting stronger financial decision-making.",
-
-    centres: [
-      {
-        title: "Financial Planning",
-        icon: "Coins",
-      },
-      {
-        title: "Budgeting",
-        icon: "BarChart3",
-      },
-      {
-        title: "Analysis",
-        icon: "Target",
-      },
-      {
-        title: "Advisory",
-        icon: "BriefcaseBusiness",
-      },
-      {
-        title: "Reporting",
-        icon: "BookOpen",
-      },
-      {
-        title: "Governance",
-        icon: "ShieldCheck",
-      },
-      {
-        title: "Strategy",
-        icon: "Workflow",
-      },
-    ],
-
-    impactTitle: "Financial",
-
-    impactAccent: "clarity creates confidence.",
-
-    impactDescription:
-      "Clear financial thinking enables stronger organizations and better long-term decisions.",
-
-    benefits: [
-      {
-        icon: "Coins",
-        title: "Financial Discipline",
-        text: "Structured approaches to financial management.",
-      },
-      {
-        icon: "BarChart3",
-        title: "Better Analysis",
-        text: "Meaningful insights supporting decisions.",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Accountability",
-        text: "Processes supporting transparent management.",
-      },
-      {
-        icon: "Target",
-        title: "Strategic Focus",
-        text: "Financial decisions connected to objectives.",
-      },
-      {
-        icon: "BriefcaseBusiness",
-        title: "Professional Advice",
-        text: "Practical guidance for complex requirements.",
-      },
-    ],
-  },
-
-  governance: {
-    slug: "governance",
-
-    label: "Governance",
-
-    title: "Strong",
-
-    titleAccent: "Governance.",
-
-    description:
-      "Governance frameworks, strategic oversight and organizational practices supporting accountability, transparency and long-term confidence.",
-
-    image:
-      "/images/services/governance/governance.jpg",
-
-    heroIcon: "Scale",
-
-    features: [
-      {
-        icon: "Scale",
-        title: "Accountability",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Transparency",
-      },
-      {
-        icon: "Landmark",
-        title: "Leadership",
-      },
-    ],
-
-    journeyTitle: "Lead",
-
-    journeyAccent: "with confidence.",
-
-    journeyDescription:
-      "Governance structures that help organizations make stronger decisions and build lasting trust.",
-
-    programs: [
-      {
-        title: "Governance Frameworks",
-        description:
-          "Practical governance structures supporting organizational effectiveness.",
-        icon: "Scale",
-        tone: "navy",
-      },
-      {
-        title: "Board Advisory",
-        description:
-          "Support for boards and leadership teams navigating complex decisions.",
-        icon: "Landmark",
-        tone: "gold",
-      },
-      {
-        title: "Policy Development",
-        description:
-          "Policies designed around accountability and organizational needs.",
-        icon: "BookOpen",
-        tone: "teal",
-      },
-      {
-        title: "Organizational Strategy",
-        description:
-          "Strategic frameworks connecting governance and long-term objectives.",
-        icon: "Target",
-        tone: "gold",
-      },
-    ],
-
-    centresTitle: "Governance",
-
-    centresAccent: "that works.",
-
-    centresDescription:
-      "Clear structures, stronger leadership and accountable decision-making.",
-
-    centres: [
-      {
-        title: "Governance Frameworks",
-        icon: "Scale",
-      },
-      {
-        title: "Board Advisory",
-        icon: "Landmark",
-      },
-      {
-        title: "Policy",
-        icon: "BookOpen",
-      },
-      {
-        title: "Risk Management",
-        icon: "ShieldCheck",
-      },
-      {
-        title: "Leadership",
-        icon: "UsersRound",
-      },
-      {
-        title: "Strategy",
-        icon: "Target",
-      },
-      {
-        title: "Accountability",
-        icon: "Award",
-      },
-    ],
-
-    impactTitle: "Good governance",
-
-    impactAccent: "builds trust.",
-
-    impactDescription:
-      "Strong organizations are built on transparent decision-making, accountability and responsible leadership.",
-
-    benefits: [
-      {
-        icon: "Scale",
-        title: "Accountability",
-        text: "Clear structures supporting responsible decisions.",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Risk Awareness",
-        text: "Approaches designed to identify and manage risk.",
-      },
-      {
-        icon: "Landmark",
-        title: "Leadership",
-        text: "Supporting boards and leadership teams.",
-      },
-      {
-        icon: "Target",
-        title: "Strategic Alignment",
-        text: "Governance connected to organizational objectives.",
-      },
-      {
-        icon: "Award",
-        title: "Trust",
-        text: "Building confidence through transparency.",
-      },
-    ],
-  },
+ engineeringTechnical: {
+  slug: "engineering-technical",
+
+  label: "Engineering & Technical",
+
+  title: "Engineering",
+
+  titleAccent: "& Technical",
+
+  description:
+    "Technical planning, feasibility analysis, regulatory compliance and risk mitigation.",
+
+  image:
+    "/images/services/engineering-technical/engineering.jpg",
+
+  heroIcon: "Settings2",
+
+  features: [
+    {
+      icon: "Settings2",
+      title: "Technical Planning",
+    },
+    {
+      icon: "BarChart3",
+      title: "Feasibility Analysis",
+    },
+    {
+      icon: "ShieldCheck",
+      title: "Regulatory Compliance",
+    },
+    {
+      icon: "Target",
+      title: "Risk Mitigation",
+    },
+  ],
+
+  journeyTitle: "How",
+
+  journeyAccent: "We Work",
+
+  journeyDescription:
+    "Our approach combines detailed technical planning, continuous monitoring, industry standards, engineering collaboration and innovative solutions to overcome technical challenges.",
+
+  programs: [
+    {
+      title: "Technical Planning",
+      description:
+        "Detailed technical planning and feasibility analysis.",
+      icon: "Settings2",
+      tone: "navy",
+    },
+    {
+      title: "Continuous Monitoring",
+      description:
+        "Continuous monitoring and evaluation of project progress.",
+      icon: "Workflow",
+      tone: "gold",
+    },
+    {
+      title: "Regulatory Compliance",
+      description:
+        "Adherence to industry-specific standards and regulations.",
+      icon: "ShieldCheck",
+      tone: "teal",
+    },
+    {
+      title: "Engineering Collaboration",
+      description:
+        "Collaboration with engineers to ensure technical integrity.",
+      icon: "UsersRound",
+      tone: "gold",
+    },
+    {
+      title: "Innovative Solutions",
+      description:
+        "Implementation of innovative solutions to overcome technical challenges.",
+      icon: "Lightbulb",
+      tone: "navy",
+    },
+  ],
+
+  centresTitle: "Technical",
+
+  centresAccent: "Excellence.",
+
+  centresDescription:
+    "Engineering and technical capabilities focused on planning, compliance, project monitoring and practical solutions.",
+
+  centres: [
+    {
+      title: "Technical Planning",
+      icon: "Settings2",
+    },
+    {
+      title: "Feasibility Analysis",
+      icon: "BarChart3",
+    },
+    {
+      title: "Project Monitoring",
+      icon: "Workflow",
+    },
+    {
+      title: "Regulatory Compliance",
+      icon: "ShieldCheck",
+    },
+    {
+      title: "Engineering Collaboration",
+      icon: "UsersRound",
+    },
+    {
+      title: "Risk Mitigation",
+      icon: "Target",
+    },
+    {
+      title: "Innovative Solutions",
+      icon: "Lightbulb",
+    },
+  ],
+
+  impactTitle: "Technical",
+
+  impactAccent: "Integrity.",
+
+  impactDescription:
+    "Detailed planning, continuous evaluation, regulatory compliance and engineering collaboration help ensure technical integrity throughout project delivery.",
+
+  benefits: [
+    {
+      icon: "Settings2",
+      title: "Technical Planning",
+      text:
+        "Detailed technical planning and feasibility analysis.",
+    },
+    {
+      icon: "Workflow",
+      title: "Project Monitoring",
+      text:
+        "Continuous monitoring and evaluation of project progress.",
+    },
+    {
+      icon: "ShieldCheck",
+      title: "Regulatory Compliance",
+      text:
+        "Adherence to industry-specific standards and regulations.",
+    },
+    {
+      icon: "UsersRound",
+      title: "Engineering Collaboration",
+      text:
+        "Collaboration with engineers to ensure technical integrity.",
+    },
+    {
+      icon: "Lightbulb",
+      title: "Innovative Solutions",
+      text:
+        "Implementation of innovative solutions to overcome technical challenges.",
+    },
+  ],
+},
+
+infrastructure: {
+  slug: "infrastructure",
+
+  label: "Infrastructure",
+
+  title: "Infrastructure",
+
+  titleAccent: "",
+
+  description:
+    "Infrastructure and construction services supporting building renovation, modular home construction, road construction and professional engineering oversight.",
+
+  image:
+    "/images/services/infrastructure/infrastructure.jpg",
+
+  heroIcon: "Building2",
+
+  // =========================================================
+  // HERO SERVICES
+  // Original website:
+  // Building Renovation
+  // Modular Home Construction
+  // Road Construction
+  // Professional Engineering Oversight
+  // =========================================================
+
+  features: [
+    {
+      icon: "Building2",
+      title: "Building Renovation",
+    },
+    {
+      icon: "Home",
+      title: "Modular Home Construction",
+    },
+    {
+      icon: "Route",
+      title: "Road Construction",
+    },
+    {
+      icon: "HardHat",
+      title: "Professional Engineering Oversight",
+    },
+  ],
+
+  // =========================================================
+  // PROJECT MANAGEMENT SECTION
+  // =========================================================
+
+  journeyTitle: "Our Project",
+
+  journeyAccent: "Management Services",
+
+  journeyDescription:
+    "Comprehensive project management services focused on planning, execution, risk management, budgeting, stakeholder engagement and quality assurance.",
+
+  programs: [
+    {
+      title: "Project Planning & Execution",
+
+      description:
+        "Comprehensive project planning and execution.",
+
+      icon: "ClipboardCheck",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Risk Management",
+
+      description:
+        "Risk management and mitigation strategies.",
+
+      icon: "ShieldCheck",
+
+      tone: "gold",
+    },
+
+    {
+      title: "Budget & Resources",
+
+      description:
+        "Budgeting and resource allocation.",
+
+      icon: "Coins",
+
+      tone: "teal",
+    },
+
+    {
+      title: "Stakeholder Engagement",
+
+      description:
+        "Stakeholder communication and engagement.",
+
+      icon: "UsersRound",
+
+      tone: "gold",
+    },
+
+    {
+      title: "Quality Assurance",
+
+      description:
+        "Quality control and assurance measures.",
+
+      icon: "BadgeCheck",
+
+      tone: "navy",
+    },
+  ],
+
+  // =========================================================
+  // CAPABILITIES
+  // =========================================================
+
+  centresTitle: "Infrastructure",
+
+  centresAccent: "Capabilities.",
+
+  centresDescription:
+    "Construction and project management capabilities supporting infrastructure projects from planning through execution and quality assurance.",
+
+  centres: [
+    {
+      title: "Building Renovation",
+      icon: "Building2",
+    },
+    {
+      title: "Modular Home Construction",
+      icon: "Home",
+    },
+    {
+      title: "Road Construction",
+      icon: "Route",
+    },
+    {
+      title: "Engineering Oversight",
+      icon: "HardHat",
+    },
+    {
+      title: "Project Management",
+      icon: "ClipboardCheck",
+    },
+    {
+      title: "Risk Management",
+      icon: "ShieldCheck",
+    },
+    {
+      title: "Quality Assurance",
+      icon: "BadgeCheck",
+    },
+  ],
+
+  // =========================================================
+  // IMPACT / BENEFITS
+  // =========================================================
+
+  impactTitle: "Building with",
+
+  impactAccent: "confidence.",
+
+  impactDescription:
+    "Our infrastructure approach combines comprehensive planning, responsible resource management, stakeholder communication and quality assurance to support successful project delivery.",
+
+  benefits: [
+    {
+      icon: "ClipboardCheck",
+
+      title: "Project Planning",
+
+      text:
+        "Comprehensive project planning and execution.",
+    },
+
+    {
+      icon: "ShieldCheck",
+
+      title: "Risk Management",
+
+      text:
+        "Risk management and mitigation strategies.",
+    },
+
+    {
+      icon: "Coins",
+
+      title: "Resource Allocation",
+
+      text:
+        "Budgeting and resource allocation throughout project delivery.",
+    },
+
+    {
+      icon: "UsersRound",
+
+      title: "Stakeholder Engagement",
+
+      text:
+        "Stakeholder communication and engagement.",
+    },
+
+    {
+      icon: "BadgeCheck",
+
+      title: "Quality Assurance",
+
+      text:
+        "Quality control and assurance measures.",
+    },
+  ],
+},
+technologyInnovation: {
+  slug: "technology-innovation",
+
+  label: "Technology & Innovation",
+
+  title: "Technology",
+
+  titleAccent: "& Innovation",
+
+  description:
+    "Web, software development, logo and graphic design, IT infrastructure and digital marketing services.",
+
+  image:
+    "/images/services/technology-innovation/technology.jpg",
+
+  heroIcon: "Cpu",
+
+  // =========================================================
+  // HERO SERVICES
+  // =========================================================
+
+  features: [
+    {
+      icon: "Globe2",
+      title: "Web, Software Development",
+    },
+    {
+      icon: "Sparkles",
+      title: "Logo, Graphic Design",
+    },
+    {
+      icon: "Network",
+      title: "IT Infrastructure",
+    },
+    {
+      icon: "BarChart3",
+      title: "Digital Marketing Services",
+    },
+  ],
+
+  // =========================================================
+  // INTRO / HOW WE WORK
+  // =========================================================
+
+  journeyTitle: "Offering a Diverse Range of",
+
+  journeyAccent: "IT, Design & Creative Services",
+
+  journeyDescription:
+    "Backed by a group of highly qualified developers, writers, and designers, GTM Canada provides a wide range of excellent services in IT, infrastructure, web, and software development.",
+
+  programs: [
+    {
+      title: "Logo Design",
+
+      description:
+        "We specialize in designing unique and compelling logos that perfectly represent your brand.",
+
+      icon: "Sparkles",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Website Development",
+
+      description:
+        "We deliver powerful dynamic, responsive, and user-friendly website development tailored to your business needs.",
+
+      icon: "Globe2",
+
+      tone: "teal",
+    },
+
+    {
+      title: "Creative Design Services",
+
+      description:
+        "Get a full suite of creative services designed to elevate your brand and captivate your audience.",
+
+      icon: "Lightbulb",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Digital Marketing Solutions",
+
+      description:
+        "We deliver comprehensive digital marketing services tailored to the unique needs of engagement and audience reach.",
+
+      icon: "BarChart3",
+
+      tone: "teal",
+    },
+
+    {
+      title: "IT Infrastructure Services",
+
+      description:
+        "Providing top-notch IT infrastructure services for the Northern entities and around the world.",
+
+      icon: "Network",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Software Development Services",
+
+      description:
+        "Providing top-notch IT infrastructure services for the Northern entities and around the world.",
+
+      icon: "Cpu",
+
+      tone: "teal",
+    },
+  ],
+
+  // =========================================================
+  // CAPABILITIES
+  // =========================================================
+
+  centresTitle: "Technology",
+
+  centresAccent: "Capabilities.",
+
+  centresDescription:
+    "A diverse range of technology, design, infrastructure, web and digital services delivered through qualified technical and creative expertise.",
+
+  centres: [
+    {
+      title: "Logo Design",
+      icon: "Sparkles",
+    },
+
+    {
+      title: "Website Development",
+      icon: "Globe2",
+    },
+
+    {
+      title: "Creative Design",
+      icon: "Lightbulb",
+    },
+
+    {
+      title: "Digital Marketing",
+      icon: "BarChart3",
+    },
+
+    {
+      title: "IT Infrastructure",
+      icon: "Network",
+    },
+
+    {
+      title: "Software Development",
+      icon: "Cpu",
+    },
+
+    {
+      title: "Technical Innovation",
+      icon: "Settings2",
+    },
+  ],
+
+  // =========================================================
+  // IMPACT / DIFFERENCE
+  // =========================================================
+
+  impactTitle: "Technical",
+
+  impactAccent: "Excellence.",
+
+  impactDescription:
+    "We ensure that every technical and innovation project is managed with the industry-leading expertise and skill to excellence and a reputation for delivering outstanding results.",
+
+  benefits: [
+    {
+      icon: "Cpu",
+
+      title: "Software Development",
+
+      text:
+        "Powerful, dynamic, responsive and user-friendly software and web development tailored to business needs.",
+    },
+
+    {
+      icon: "Sparkles",
+
+      title: "Creative Design",
+
+      text:
+        "Creative design services that elevate brands and help them captivate their audiences.",
+    },
+
+    {
+      icon: "Network",
+
+      title: "IT Infrastructure",
+
+      text:
+        "Top-notch IT infrastructure services supporting Northern entities and organizations around the world.",
+    },
+
+    {
+      icon: "BarChart3",
+
+      title: "Digital Marketing",
+
+      text:
+        "Comprehensive digital marketing services tailored to engagement and audience reach.",
+    },
+
+    {
+      icon: "Globe2",
+
+      title: "Web Development",
+
+      text:
+        "Dynamic, responsive and user-friendly website development tailored to business requirements.",
+    },
+  ],
+},
+
+socialEconomic: {
+  slug: "social-economic",
+
+  label: "Social & Economic",
+
+  title: "Social",
+
+  titleAccent: "& Economic",
+
+  description:
+    "Housing strategies, capacity building, social policy and land claims negotiations.",
+
+  image:
+    "/images/services/social-economic/social-economic.jpg",
+
+  heroIcon: "HeartHandshake",
+
+  // =========================================================
+  // HERO SERVICES
+  // =========================================================
+
+  features: [
+    {
+      icon: "Building2",
+      title: "Housing Strategies",
+    },
+
+    {
+      icon: "UsersRound",
+      title: "Capacity Building",
+    },
+
+    {
+      icon: "Scale",
+      title: "Social Policy",
+    },
+
+    {
+      icon: "Handshake",
+      title: "Land Claims Negotiations",
+    },
+  ],
+
+  // =========================================================
+  // ENVIRONMENTAL ASSESSMENT & SUSTAINABILITY
+  // =========================================================
+
+  journeyTitle: "Environmental Assessment &",
+
+  journeyAccent: "Sustainability Projects",
+
+  journeyDescription:
+    "Our environmental and sustainability work combines assessment, sustainable design, water management, regulatory compliance and risk mitigation to support responsible project development.",
+
+  programs: [
+    {
+      title: "Water Quality, Control & Assessment",
+
+      description:
+        "Water quality, control and assessment using various modeling tools.",
+
+      icon: "Leaf",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Holistic Environmental Assessments",
+
+      description:
+        "Conducting comprehensive evaluations to understand the ecological impact of projects.",
+
+      icon: "Globe2",
+
+      tone: "teal",
+    },
+
+    {
+      title: "Sustainable Design Solutions",
+
+      description:
+        "Implementing environmentally friendly design practices to minimize ecological footprint.",
+
+      icon: "Lightbulb",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Sustainability Reporting",
+
+      description:
+        "Supporting sustainability reporting and watershed management.",
+
+      icon: "BarChart3",
+
+      tone: "teal",
+    },
+
+    {
+      title: "Regulatory Compliance",
+
+      description:
+        "Ensuring adherence to environmental regulations and standards throughout project lifecycle.",
+
+      icon: "ShieldCheck",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Risk Mitigation Strategies",
+
+      description:
+        "Developing and implementing measures to mitigate environmental risks and hazards.",
+
+      icon: "Target",
+
+      tone: "gold",
+    },
+  ],
+
+  // =========================================================
+  // SOCIAL & ECONOMIC CAPABILITIES
+  // =========================================================
+
+  centresTitle: "Social &",
+
+  centresAccent: "Economic Impact.",
+
+  centresDescription:
+    "Supporting communities through housing strategies, capacity building, social policy and land claims negotiations.",
+
+  centres: [
+    {
+      title: "Housing Strategies",
+      icon: "Building2",
+    },
+
+    {
+      title: "Capacity Building",
+      icon: "UsersRound",
+    },
+
+    {
+      title: "Social Policy",
+      icon: "Scale",
+    },
+
+    {
+      title: "Land Claims Negotiations",
+      icon: "Handshake",
+    },
+
+    {
+      title: "Environmental Assessment",
+      icon: "Globe2",
+    },
+
+    {
+      title: "Sustainable Design",
+      icon: "Leaf",
+    },
+
+    {
+      title: "Risk Mitigation",
+      icon: "Target",
+    },
+  ],
+
+  // =========================================================
+  // IMPACT / BENEFITS
+  // =========================================================
+
+  impactTitle: "Responsible",
+
+  impactAccent: "Development.",
+
+  impactDescription:
+    "Our approach integrates social, economic and environmental considerations to support responsible projects, regulatory compliance and long-term community outcomes.",
+
+  benefits: [
+    {
+      icon: "Building2",
+
+      title: "Housing Strategies",
+
+      text:
+        "Developing housing strategies that respond to community needs and long-term development goals.",
+    },
+
+    {
+      icon: "UsersRound",
+
+      title: "Capacity Building",
+
+      text:
+        "Supporting capacity building and strengthening community capabilities.",
+    },
+
+    {
+      icon: "Scale",
+
+      title: "Social Policy",
+
+      text:
+        "Supporting social policy initiatives and community-focused development.",
+    },
+
+    {
+      icon: "Handshake",
+
+      title: "Land Claims Negotiations",
+
+      text:
+        "Supporting land claims negotiations through structured engagement and collaboration.",
+    },
+
+    {
+      icon: "Leaf",
+
+      title: "Environmental Sustainability",
+
+      text:
+        "Developing sustainable approaches while addressing environmental risks, regulations and ecological impacts.",
+    },
+  ],
+},
+
+financialManagement: {
+  slug: "financial-management",
+
+  label: "Financial Management",
+
+  title: "Financial",
+
+  titleAccent: "Management",
+
+  description:
+    "Accounting and auditing, capital budgeting, inventory management, pricing and cost control.",
+
+  image:
+    "/images/services/financial-management/financial.jpg",
+
+  heroIcon: "Coins",
+
+  // =========================================================
+  // HERO SERVICES
+  // =========================================================
+
+  features: [
+    {
+      icon: "BookOpen",
+      title: "Accounting and Auditing",
+    },
+    {
+      icon: "BarChart3",
+      title: "Capital Budgeting",
+    },
+    {
+      icon: "Coins",
+      title: "Inventory Management",
+    },
+    {
+      icon: "Target",
+      title: "Pricing and Cost Control",
+    },
+  ],
+
+  // =========================================================
+  // FINANCIAL MANAGEMENT
+  // =========================================================
+
+  journeyTitle: "Financial",
+
+  journeyAccent: "Management",
+
+  journeyDescription:
+    "It is of paramount importance that your organization safeguards its financial resources prudently and cautiously. We provide exceptional financial management services in the areas of:",
+
+  programs: [
+    {
+      title: "Budget Development",
+
+      description:
+        "Budget development and budget adjustment.",
+
+      icon: "BarChart3",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Budget Management",
+
+      description:
+        "Structured budget management and financial oversight.",
+
+      icon: "Coins",
+
+      tone: "teal",
+    },
+
+    {
+      title: "Variance Report Preparation",
+
+      description:
+        "Preparation and review of variance reports.",
+
+      icon: "BarChart3",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Cash Flow Projections",
+
+      description:
+        "Cash flow planning and financial forecasting.",
+
+      icon: "Workflow",
+
+      tone: "gold",
+    },
+
+    {
+      title: "Financial Forecasts",
+
+      description:
+        "Developing financial forecasts to support informed decisions.",
+
+      icon: "Target",
+
+      tone: "teal",
+    },
+
+    {
+      title: "Internal Control Development",
+
+      description:
+        "Development of internal controls and financial procedures.",
+
+      icon: "ShieldCheck",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Internal & Forensic Audits",
+
+      description:
+        "Internal and forensic audit support.",
+
+      icon: "ShieldCheck",
+
+      tone: "gold",
+    },
+
+    {
+      title: "Financial Updates",
+
+      description:
+        "Periodic financial updates for boards, councils and executives.",
+
+      icon: "BookOpen",
+
+      tone: "teal",
+    },
+
+    {
+      title: "Policies & Procedures",
+
+      description:
+        "Developing financial policies and procedures.",
+
+      icon: "Scale",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Knowledge Transfer",
+
+      description:
+        "Providing training and implementing knowledge transfer.",
+
+      icon: "GraduationCap",
+
+      tone: "gold",
+    },
+  ],
+
+  // =========================================================
+  // ACCOUNTING & FUNDING CAPABILITIES
+  // =========================================================
+
+  centresTitle: "Financial",
+
+  centresAccent: "Services.",
+
+  centresDescription:
+    "Comprehensive financial management, accounting and funding assistance designed to meet organizational requirements.",
+
+  centres: [
+    {
+      title: "Accounting Services",
+      icon: "BookOpen",
+    },
+
+    {
+      title: "Catch-up Accounting",
+      icon: "Workflow",
+    },
+
+    {
+      title: "Accounting System Set-up",
+      icon: "Settings2",
+    },
+
+    {
+      title: "Stop-gap Services",
+      icon: "UsersRound",
+    },
+
+    {
+      title: "Year-end Assistance",
+      icon: "Coins",
+    },
+
+    {
+      title: "Bookkeeping Services",
+      icon: "BarChart3",
+    },
+
+    {
+      title: "Funding Assistance",
+      icon: "Handshake",
+    },
+  ],
+
+  // =========================================================
+  // IMPACT / DIFFERENCE
+  // =========================================================
+
+  impactTitle: "Financial",
+
+  impactAccent: "Confidence.",
+
+  impactDescription:
+    "We help organizations safeguard their financial resources prudently and cautiously while providing practical accounting, financial management and funding support.",
+
+  benefits: [
+    {
+      icon: "BookOpen",
+
+      title: "Accounting Services",
+
+      text:
+        "We offer a wide range of customized accounting services to meet all the specific needs and requirements of each of our clients.",
+    },
+
+    {
+      icon: "Coins",
+
+      title: "Funding Assistance",
+
+      text:
+        "The IBS team is highly skilled at finding the right funding sources for your project.",
+    },
+
+    {
+      icon: "BarChart3",
+
+      title: "Financial Management",
+
+      text:
+        "Budget development, budget management, variance reporting, cash flow projections and financial forecasts.",
+    },
+
+    {
+      icon: "ShieldCheck",
+
+      title: "Internal Controls",
+
+      text:
+        "Internal control development, internal and forensic audits and financial accountability.",
+    },
+
+    {
+      icon: "GraduationCap",
+
+      title: "Knowledge Transfer",
+
+      text:
+        "Providing training and implementing knowledge transfer to strengthen organizational financial capabilities.",
+    },
+  ],
+},
+
+ governance: {
+  slug: "governance",
+
+  label: "Governance",
+
+  title: "Governance",
+
+  titleAccent: "",
+
+  description:
+    "Policies and procedures development, strategic planning, organizational structure optimization and business processes.",
+
+  image:
+    "/images/services/governance/governance.jpg",
+
+  heroIcon: "Scale",
+
+  // =========================================================
+  // HERO SERVICES
+  // =========================================================
+
+  features: [
+    {
+      icon: "BookOpen",
+      title: "Policies and Procedures Development",
+    },
+
+    {
+      icon: "Target",
+      title: "Strategic Planning",
+    },
+
+    {
+      icon: "Network",
+      title: "Organizational Structure Optimization",
+    },
+
+    {
+      icon: "Workflow",
+      title: "Business Processes",
+    },
+  ],
+
+  // =========================================================
+  // CORPORATE GOVERNANCE
+  // =========================================================
+
+  journeyTitle: "Corporate",
+
+  journeyAccent: "Governance",
+
+  journeyDescription:
+    "Our corporate governance approach for your organization would be developed to help build an environment of trust, transparency and accountability necessary for fostering long-term investment, financial stability and business integrity, thereby supporting stronger growth.",
+
+  programs: [
+    {
+      title: "Organization Structure & Corporate Governance",
+
+      description:
+        "Developing organizational structures and corporate governance practices that support accountability and effective decision-making.",
+
+      icon: "Network",
+
+      tone: "navy",
+    },
+
+    {
+      title: "Board & Council Orientation and Training",
+
+      description:
+        "Supporting boards and councils through orientation and training designed to strengthen governance capabilities.",
+
+      icon: "UsersRound",
+
+      tone: "gold",
+    },
+
+    {
+      title: "Strategic Planning",
+
+      description:
+        "Developing strategic planning approaches aligned with organizational objectives and long-term growth.",
+
+      icon: "Target",
+
+      tone: "teal",
+    },
+
+    {
+      title: "Performance Measurement and Management",
+
+      description:
+        "Supporting performance measurement and management to improve organizational effectiveness.",
+
+      icon: "BarChart3",
+
+      tone: "gold",
+    },
+
+    {
+      title: "Policies and Procedures Development",
+
+      description:
+        "Developing policies and procedures that provide clear organizational direction and operational consistency.",
+
+      icon: "BookOpen",
+
+      tone: "navy",
+    },
+  ],
+
+  // =========================================================
+  // GOVERNANCE CAPABILITIES
+  // =========================================================
+
+  centresTitle: "Organizational",
+
+  centresAccent: "Excellence.",
+
+  centresDescription:
+    "Governance, organizational management and policy development designed to strengthen accountability, structure and operational effectiveness.",
+
+  centres: [
+    {
+      title: "Corporate Governance",
+      icon: "Scale",
+    },
+
+    {
+      title: "Organizational Management",
+      icon: "Network",
+    },
+
+    {
+      title: "Strategic Planning",
+      icon: "Target",
+    },
+
+    {
+      title: "Performance Management",
+      icon: "BarChart3",
+    },
+
+    {
+      title: "Policy Development",
+      icon: "BookOpen",
+    },
+
+    {
+      title: "Business Processes",
+      icon: "Workflow",
+    },
+
+    {
+      title: "Board & Council Training",
+      icon: "UsersRound",
+    },
+  ],
+
+  // =========================================================
+  // IMPACT / BENEFITS
+  // =========================================================
+
+  impactTitle: "Stronger",
+
+  impactAccent: "Organizations.",
+
+  impactDescription:
+    "Our governance services help organizations strengthen their structures, policies, processes and strategic direction while building an environment of trust, transparency and accountability.",
+
+  benefits: [
+    {
+      icon: "Network",
+
+      title: "Organizational Management",
+
+      text:
+        "IBS's organization management process helps organizations with planning and managing resources with the goal of achieving strategic objectives.",
+    },
+
+    {
+      icon: "BookOpen",
+
+      title: "Policy Development",
+
+      text:
+        "IBS has significant experience in developing policies around finance, governance, HR and operations.",
+    },
+
+    {
+      icon: "UsersRound",
+
+      title: "Human Resource Management",
+
+      text:
+        "Supporting organizational human resource management and staffing requirements.",
+    },
+
+    {
+      icon: "Coins",
+
+      title: "Financial Management Services",
+
+      text:
+        "Supporting organizations with financial management requirements as part of broader organizational management.",
+    },
+
+    {
+      icon: "GraduationCap",
+
+      title: "Training & Development",
+
+      text:
+        "Providing training and supporting the development of organizational capabilities.",
+    },
+  ],
+},
 };
 
 export const relatedServices = [
