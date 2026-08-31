@@ -16,6 +16,7 @@ import {
   Lightbulb,
   Handshake,
   ChartNoAxesCombined,
+  Compass
 } from "lucide-react";
 
 import {
@@ -26,63 +27,11 @@ import {
 const services = [
   {
     number: "01",
-    title: "Education & Training",
-    shortTitle: "Education",
+    title: "Consulting",
+    shortTitle: "Consulting",
     description:
-      "Building knowledge, capabilities, and practical skills through tailored education and training solutions.",
-    icon: GraduationCap,
-    color: "#087F8C",
-    softColor: "#E0F3F4",
-    image:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=85",
-  },
-
-  {
-    number: "02",
-    title: "Engineering & Technical",
-    shortTitle: "Engineering",
-    description:
-      "Professional technical expertise and practical solutions designed around complex organizational requirements.",
-    icon: HardHat,
-    color: "#4A789C",
-    softColor: "#E5EDF4",
-    image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=85",
-  },
-
-  {
-    number: "03",
-    title: "Infrastructure",
-    shortTitle: "Infrastructure",
-    description:
-      "Supporting sustainable infrastructure initiatives that strengthen communities and create long-term value.",
-    icon: Building2,
-    color: "#087F8C",
-    softColor: "#E0F3F4",
-    image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=85",
-  },
-
-  {
-    number: "04",
-    title: "Technology & Innovation",
-    shortTitle: "Technology",
-    description:
-      "Technology-driven solutions that improve operations, connectivity, efficiency, and business performance.",
-    icon: Cpu,
-    color: "#5A7090",
-    softColor: "#E9EEF5",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85",
-  },
-
-  {
-    number: "05",
-    title: "Social & Economic",
-    shortTitle: "Social & Economic",
-    description:
-      "Strategies that support community development, economic participation, and sustainable opportunities.",
-    icon: Users,
+      "Helping leaders make informed decisions and move forward with confidence through strategic, operational, financial, governance and growth-focused consulting.",
+    icon: Compass,
     color: "#087F8C",
     softColor: "#E0F3F4",
     image:
@@ -90,11 +39,24 @@ const services = [
   },
 
   {
-    number: "06",
+    number: "02",
+    title: "Project Execution",
+    shortTitle: "Project Execution",
+    description:
+      "Turning strategy and plans into coordinated action through disciplined project planning, resource management, risk control, stakeholder coordination and implementation support.",
+    icon: HardHat,
+    color: "#4A789C",
+    softColor: "#E5EDF4",
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=85",
+  },
+
+  {
+    number: "03",
     title: "Financial Management",
     shortTitle: "Financial",
     description:
-      "Financial planning, management, funding assistance, proposal writing, and accounting support.",
+      "Strengthening financial management through budgeting, forecasting, accounting, financial controls, reporting, audit support and funding assistance.",
     icon: WalletCards,
     color: "#C6A15B",
     softColor: "#FFF3D5",
@@ -103,16 +65,81 @@ const services = [
   },
 
   {
-    number: "07",
-    title: "Governance",
+    number: "04",
+    title: "Corporate Governance",
     shortTitle: "Governance",
     description:
-      "Strategic governance and organizational guidance designed to support stronger decision-making.",
+      "Strengthening governance frameworks, organizational structures, policies and performance systems to create greater clarity, accountability and confidence.",
     icon: Landmark,
     color: "#0B1F3A",
     softColor: "#E9EEF4",
     image:
       "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=85",
+  },
+
+  {
+    number: "05",
+    title: "Technology & IT Services",
+    shortTitle: "Technology & IT",
+    description:
+      "Providing practical technology, IT infrastructure, digital and creative services tailored to organizational needs, including software, websites, IT operations and modernization.",
+    icon: Cpu,
+    color: "#087F8C",
+    softColor: "#E0F3F4",
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85",
+  },
+
+  {
+    number: "06",
+    title: "Education & Training",
+    shortTitle: "Education",
+    description:
+      "Building the skills organizations and workforces need through industry-focused education, professional designation pathways, executive education and corporate training.",
+    icon: GraduationCap,
+    color: "#5A7090",
+    softColor: "#E9EEF5",
+    image:
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=85",
+  },
+
+  {
+    number: "07",
+    title: "Social & Economic Development",
+    shortTitle: "Social & Economic",
+    description:
+      "Building stronger communities through informed planning, capacity building and sustainable development across social, economic and environmental priorities.",
+    icon: Users,
+    color: "#087F8C",
+    softColor: "#E0F3F4",
+    image:
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85",
+  },
+
+  {
+    number: "08",
+    title: "Engineering & Technical Services",
+    shortTitle: "Engineering",
+    description:
+      "Supporting clients through technical planning, feasibility analysis, project monitoring, regulatory compliance and risk management from concept to implementation.",
+    icon: HardHat,
+    color: "#4A789C",
+    softColor: "#E5EDF4",
+    image:
+      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=85",
+  },
+
+  {
+    number: "09",
+    title: "Infrastructure & Project Delivery",
+    shortTitle: "Infrastructure",
+    description:
+      "Supporting projects from concept to delivery through project planning, execution, risk management, budgeting, resource allocation, stakeholder coordination and quality control.",
+    icon: Building2,
+    color: "#087F8C",
+    softColor: "#E0F3F4",
+    image:
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=85",
   },
 ];
 
