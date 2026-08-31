@@ -913,105 +913,95 @@ export default function Hero() {
               MISSION CARD
           ================================================= */}
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.7,
-              delay: 0.8,
-            }}
-            className="
-              absolute
-              bottom-[5px]
-              left-[-20px]
-              z-40
-              w-[310px]
-              rounded-[24px]
-              border
-              border-white/10
-              bg-[#0B1F3A]/95
-              p-6
-              shadow-[0_25px_65px_rgba(0,0,0,.35)]
-              backdrop-blur-xl
-              sm:w-[340px]
-              lg:bottom-[25px]
-            "
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div
-                  className="
-                    flex
-                    h-11
-                    w-11
-                    items-center
-                    justify-center
-                    rounded-[14px]
-                    bg-[#C6A15B]
-                    text-[#0B1F3A]
-                  "
-                >
-                  <Building2
-                    size={19}
-                    strokeWidth={1.5}
-                  />
-                </div>
+       <motion.div
+  initial={{
+    opacity: 0,
+    y: 30,
+  }}
+  animate={{
+    opacity: 1,
+    y: 0,
+  }}
+  transition={{
+    duration: 0.7,
+    delay: 0.8,
+  }}
+  className="
+    absolute
+    bottom-[5px]
+    left-[-20px]
+    z-40
+    w-[220px]
+    rounded-[22px]
+    border
+    border-white/10
+    bg-[#0B1F3A]/95
+    p-5
+    shadow-[0_25px_65px_rgba(0,0,0,.35)]
+    backdrop-blur-xl
+    sm:w-[280px]
+    lg:bottom-[25px]
+  "
+>
+  <div className="flex items-center justify-between">
+    <div className="flex items-center gap-3">
+      <div
+        className="
+          flex
+          h-10
+          w-10
+          shrink-0
+          items-center
+          justify-center
+          rounded-[12px]
+          bg-[#C6A15B]
+          text-[#0B1F3A]
+        "
+      >
+        <Building2
+          size={18}
+          strokeWidth={1.5}
+        />
+      </div>
 
-                <div>
-                  <p
-                    className="
-                      text-[8px]
-                      font-bold
-                      uppercase
-                      tracking-[0.2em]
-                      text-[#C6A15B]
-                    "
-                  >
-                    Our Mission
-                  </p>
+      <div>
+        <p
+          className="
+            text-[8px]
+            font-bold
+            uppercase
+            tracking-[0.2em]
+            text-[#C6A15B]
+          "
+        >
+          Our Mission
+        </p>
 
-                  <p
-                    className="
-                      mt-1
-                      text-[11px]
-                      font-medium
-                      text-white
-                    "
-                  >
-                    From Strategy to Delivery
-                  </p>
-                </div>
-              </div>
+        <p
+          className="
+            mt-1
+            text-[10px]
+            font-medium
+            text-white
+          "
+        >
+          From Strategy to Delivery
+        </p>
+      </div>
+    </div>
 
-              <CheckCircle2
-                size={18}
-                className="text-[#087F8C]"
-              />
-            </div>
+    <CheckCircle2
+      size={17}
+      className="shrink-0 text-[#087F8C]"
+    />
+  </div>
 
-            <p
-              className="
-                mt-5
-                text-[11px]
-                leading-6
-                text-[#B9C5CC]
-              "
-            >
-             Consulting → Strategy, Analysis & Advice → Project Execution → Implementation & Delivery
-            </p>
+  <div className="mt-4 flex items-center gap-2">
+    <span className="h-[2px] w-7 bg-[#C6A15B]" />
 
-            <div className="mt-5 flex items-center gap-2">
-              <span className="h-[2px] w-8 bg-[#C6A15B]" />
-
-              <span className="h-[2px] w-3 bg-[#087F8C]" />
-            </div>
-          </motion.div>
+    <span className="h-[2px] w-3 bg-[#087F8C]" />
+  </div>
+</motion.div>
 
           {/* =================================================
               USERS FLOATING ICON
