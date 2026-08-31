@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import {
   ArrowUpRight,
-  Handshake,
   LockKeyhole,
   Puzzle,
   Sparkles,
@@ -15,6 +14,7 @@ import {
   Building2,
   Cpu,
   ShieldCheck,
+  MapPin,
   Network,
 } from "lucide-react";
 
@@ -45,64 +45,82 @@ export default function CTASection() {
     console.log("CTA Form:", formData);
   };
 
+  /* =========================================================
+     WHY IBS
+  ========================================================= */
+
   const benefits = [
     {
-      number: "01",
-      icon: UsersRound,
-      title: "Practical expertise",
-      text: "Real-world experience that delivers meaningful results.",
+      icon: MapPin,
+      title: "Deep Northern Canada Experience",
+      text:
+        "Deep experience working across Northern Canada and its unique operating environments.",
     },
+
     {
-      number: "02",
       icon: Puzzle,
-      title: "Tailored solutions",
-      text: "Approaches designed around your goals and challenges.",
+      title: "Client-Tailored Consulting",
+      text:
+        "Practical consulting solutions designed around each client’s priorities, context and needs.",
     },
+
     {
-      number: "03",
-      icon: Handshake,
-      title: "Long-term partnership",
-      text: "Relationships built on trust, collaboration and impact.",
+      icon: Network,
+      title: "Cross-Functional Expertise",
+      text:
+        "Professional expertise spanning multiple disciplines to address complex organizational challenges.",
+    },
+
+    {
+      icon: Target,
+      title: "Implementation Support",
+      text:
+        "Support that goes beyond strategy to help clients execute priorities and achieve results.",
+    },
+
+    {
+      icon: UsersRound,
+      title: "Indigenous, Government & Business Experience",
+      text:
+        "Experience working with Indigenous organizations, governments and businesses across diverse contexts.",
+    },
+
+    {
+      icon: ShieldCheck,
+      title: "Sustainable Outcomes",
+      text:
+        "A focus on long-term organizational capacity, resilience and sustainable outcomes.",
     },
   ];
 
   return (
- <section
-  className="
-    relative
-    overflow-hidden
-
-    bg-gradient-to-b
-    from-[#0B1F3A]
-    via-[#123A5A]
-    to-[#087F8C]
-
-    pb-12
-    pt-16
-
-    sm:pb-14
-    sm:pt-20
-
-    lg:pb-16
-    lg:pt-24
-
-    xl:pb-20
-    xl:pt-28
-  "
->
+    <section
+      className="
+        relative
+        overflow-hidden
+        bg-gradient-to-b
+        from-[#0B1F3A]
+        via-[#123A5A]
+        to-[#087F8C]
+        pb-12
+        pt-16
+        sm:pb-14
+        sm:pt-20
+        lg:pb-16
+        lg:pt-24
+        xl:pb-20
+        xl:pt-28
+      "
+    >
       {/* =====================================================
-          PREMIUM BACKGROUND
+          BACKGROUND
       ===================================================== */}
 
-      <div
-        className="
-          pointer-events-none
-          absolute
-          inset-0
-          overflow-hidden
-        "
-      >
-        {/* Top aqua glow */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+
+        {/* =================================================
+            MAIN TEAL GLOW
+        ================================================= */}
 
         <motion.div
           animate={{
@@ -127,7 +145,9 @@ export default function CTASection() {
           "
         />
 
-        {/* Right aqua glow */}
+        {/* =================================================
+            RIGHT TEAL GLOW
+        ================================================= */}
 
         <motion.div
           animate={{
@@ -152,7 +172,9 @@ export default function CTASection() {
           "
         />
 
-        {/* Bottom deep glow */}
+        {/* =================================================
+            BOTTOM DARK GLOW
+        ================================================= */}
 
         <motion.div
           animate={{
@@ -177,7 +199,7 @@ export default function CTASection() {
         />
 
         {/* =================================================
-            SUBTLE GRID
+            GRID
         ================================================= */}
 
         <div
@@ -191,7 +213,7 @@ export default function CTASection() {
         />
 
         {/* =================================================
-            LARGE ORBIT
+            ORBIT 01
         ================================================= */}
 
         <motion.div
@@ -241,6 +263,10 @@ export default function CTASection() {
           />
         </motion.div>
 
+        {/* =================================================
+            ORBIT 02
+        ================================================= */}
+
         <motion.div
           animate={{
             rotate: -360,
@@ -263,7 +289,7 @@ export default function CTASection() {
         />
 
         {/* =================================================
-            FLOATING TARGET
+            FLOATING ICON 01
         ================================================= */}
 
         <motion.div
@@ -290,7 +316,6 @@ export default function CTASection() {
             border-white/10
             bg-white/[0.06]
             text-[#9CE5E1]/55
-            shadow-[0_20px_50px_rgba(0,0,0,0.12)]
             backdrop-blur-md
             lg:flex
           "
@@ -302,7 +327,7 @@ export default function CTASection() {
         </motion.div>
 
         {/* =================================================
-            FLOATING LIGHTBULB
+            FLOATING ICON 02
         ================================================= */}
 
         <motion.div
@@ -329,7 +354,6 @@ export default function CTASection() {
             border-[#C6A15B]/20
             bg-white/[0.06]
             text-[#D8C27D]/70
-            shadow-[0_20px_50px_rgba(0,0,0,0.12)]
             backdrop-blur-md
             lg:flex
           "
@@ -341,7 +365,7 @@ export default function CTASection() {
         </motion.div>
 
         {/* =================================================
-            FLOATING CHART
+            FLOATING ICON 03
         ================================================= */}
 
         <motion.div
@@ -379,7 +403,7 @@ export default function CTASection() {
         </motion.div>
 
         {/* =================================================
-            FLOATING BUILDING
+            FLOATING ICON 04
         ================================================= */}
 
         <motion.div
@@ -417,7 +441,7 @@ export default function CTASection() {
         </motion.div>
 
         {/* =================================================
-            FLOATING CPU
+            FLOATING ICON 05
         ================================================= */}
 
         <motion.div
@@ -455,7 +479,7 @@ export default function CTASection() {
         </motion.div>
 
         {/* =================================================
-            FLOATING NETWORK
+            FLOATING ICON 06
         ================================================= */}
 
         <motion.div
@@ -493,7 +517,7 @@ export default function CTASection() {
         </motion.div>
 
         {/* =================================================
-            FLOATING SHIELD
+            FLOATING ICON 07
         ================================================= */}
 
         <motion.div
@@ -508,8 +532,8 @@ export default function CTASection() {
           }}
           className="
             absolute
-            right-[29%]
             bottom-[14%]
+            right-[29%]
             hidden
             h-[48px]
             w-[48px]
@@ -531,7 +555,7 @@ export default function CTASection() {
         </motion.div>
 
         {/* =================================================
-            FLOATING PARTICLES
+            PARTICLES
         ================================================= */}
 
         <motion.span
@@ -599,26 +623,6 @@ export default function CTASection() {
           "
         />
 
-        <motion.span
-          animate={{
-            y: [0, -8, 0],
-            opacity: [0.2, 0.7, 0.2],
-          }}
-          transition={{
-            duration: 4.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            right-[39%]
-            bottom-[12%]
-            h-1.5
-            w-1.5
-            rounded-full
-            bg-[#9CE5E1]
-          "
-        />
       </div>
 
       {/* =====================================================
@@ -641,7 +645,7 @@ export default function CTASection() {
       />
 
       {/* =====================================================
-          MAIN CONTENT
+          MAIN CONTAINER
       ===================================================== */}
 
       <div
@@ -657,18 +661,24 @@ export default function CTASection() {
           xl:px-12
         "
       >
+
+        {/* =================================================
+            TWO COLUMN LAYOUT
+        ================================================= */}
+
         <div
           className="
             grid
-            gap-14
-            lg:grid-cols-[0.92fr_1.08fr]
-            lg:items-start
-            lg:gap-16
-            xl:gap-24
+            items-stretch
+            gap-12
+            lg:grid-cols-[0.9fr_1.1fr]
+            lg:gap-20
+            xl:gap-28
           "
         >
+
           {/* =================================================
-              LEFT CONTENT
+              LEFT SIDE
           ================================================= */}
 
           <motion.div
@@ -691,305 +701,548 @@ export default function CTASection() {
             className="
               relative
               z-30
-              max-w-[650px]
+              flex
+              h-full
+              flex-col
+              justify-between
               pt-3
+              lg:min-h-full
               lg:pt-8
             "
           >
-            {/* EYEBROW */}
 
-            <div
-              className="
-                mb-6
-                flex
-                items-center
-                gap-4
-              "
-            >
-              <motion.span
+            {/* =================================================
+                TOP CONTENT
+            ================================================= */}
+
+            <div>
+
+              {/* =================================================
+                  EYEBROW
+              ================================================= */}
+
+              <div className="mb-6 flex items-center gap-4">
+
+                <motion.span
+                  initial={{
+                    width: 0,
+                  }}
+                  whileInView={{
+                    width: 48,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 0.7,
+                  }}
+                  className="
+                    h-[3px]
+                    rounded-full
+                    bg-gradient-to-r
+                    from-[#D7C17A]
+                    to-[#087F8C]
+                  "
+                />
+
+                <span
+                  className="
+                    text-[10px]
+                    font-bold
+                    uppercase
+                    tracking-[0.28em]
+                    text-[#BCEBE8]
+                  "
+                >
+                  YOUR NEXT MOVE STARTS HERE
+                </span>
+
+              </div>
+
+              {/* =================================================
+                  MAIN HEADING
+              ================================================= */}
+
+              <h2
+                className="
+                  max-w-[620px]
+                  text-[50px]
+                  font-bold
+                  leading-[0.94]
+                  tracking-[-0.055em]
+                  text-white
+                  sm:text-[60px]
+                  md:text-[66px]
+                  lg:text-[70px]
+                  xl:text-[80px]
+                "
+              >
+
+                <motion.span
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 0.65,
+                  }}
+                  className="block"
+                >
+                  Let&apos;s work on
+                </motion.span>
+
+                <motion.span
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 0.65,
+                    delay: 0.1,
+                  }}
+                  className="
+                    block
+                    bg-gradient-to-r
+                    from-[#E2FAF8]
+                    via-[#A9E5E1]
+                    to-[#D7C17A]
+                    bg-clip-text
+                    text-transparent
+                  "
+                >
+                  what&apos;s next
+                  <span className="text-[#D7C17A]">
+                    .
+                  </span>
+                </motion.span>
+
+              </h2>
+
+              {/* =================================================
+                  ACCENT LINE
+              ================================================= */}
+
+              <motion.div
                 initial={{
                   width: 0,
                 }}
                 whileInView={{
-                  width: 48,
+                  width: 75,
                 }}
                 viewport={{
                   once: true,
                 }}
                 transition={{
                   duration: 0.7,
+                  delay: 0.25,
                 }}
                 className="
+                  mt-7
                   h-[3px]
                   rounded-full
-                  bg-[#D7C17A]
+                  bg-gradient-to-r
+                  from-[#D7C17A]
+                  via-[#9CE5E1]
+                  to-transparent
                 "
               />
 
-              <span
+              {/* =================================================
+                  DESCRIPTION
+              ================================================= */}
+
+              <motion.p
+                initial={{
+                  opacity: 0,
+                  y: 15,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.25,
+                }}
                 className="
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-[0.28em]
-                  text-[#BCEBE8]
+                  mt-6
+                  max-w-[560px]
+                  text-[14px]
+                  leading-7
+                  text-white/65
+                  sm:text-[15px]
+                  sm:leading-7
                 "
               >
-                YOUR NEXT MOVE STARTS HERE
-              </span>
+                Whether you are strengthening governance, improving
+                financial performance, planning an investment,
+                modernizing operations or building organizational
+                capacity, IBS can help define the challenge and move
+                toward practical action.
+              </motion.p>
+
             </div>
 
-            {/* HEADING */}
-
-            <h2
-              className="
-                max-w-[650px]
-                text-[52px]
-                font-bold
-                leading-[0.94]
-                tracking-[-0.055em]
-                text-white
-                sm:text-[64px]
-                md:text-[72px]
-                lg:text-[76px]
-                xl:text-[88px]
-              "
-            >
-              <motion.span
-                initial={{
-                  opacity: 0,
-                  y: 25,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.65,
-                }}
-                className="block"
-              >
-                Let&apos;s build
-              </motion.span>
-
-              <motion.span
-                initial={{
-                  opacity: 0,
-                  y: 25,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.65,
-                  delay: 0.1,
-                }}
-                className="
-                  block
-                  text-[#BCEBE8]
-                "
-              >
-                what&apos;s next
-                <span className="text-[#D7C17A]">
-                  .
-                </span>
-              </motion.span>
-            </h2>
-
-            {/* GOLD LINE */}
-
-            <motion.div
-              initial={{
-                width: 0,
-              }}
-              whileInView={{
-                width: 72,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.7,
-                delay: 0.35,
-              }}
-              className="
-                mt-7
-                h-[4px]
-                rounded-full
-                bg-gradient-to-r
-                from-[#D7C17A]
-                to-[#A88B4A]
-              "
-            />
-
-            {/* DESCRIPTION */}
-
-            <motion.p
-              initial={{
-                opacity: 0,
-                y: 18,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.7,
-                delay: 0.25,
-              }}
-              className="
-                mt-7
-                max-w-[520px]
-                text-[16px]
-                leading-7
-                text-white/70
-                sm:text-[17px]
-                sm:leading-8
-              "
-            >
-              Turn ideas into practical solutions
-              and meaningful outcomes.
-            </motion.p>
-
-            {/* BENEFITS */}
+            {/* =================================================
+                WHY IBS
+            ================================================= */}
 
             <div
               className="
                 mt-10
-                space-y-5
+                lg:mt-auto
+                lg:pt-10
               "
             >
-              {benefits.map((item, index) => {
-                const Icon = item.icon;
 
-                return (
-                  <motion.div
-                    key={item.number}
-                    initial={{
-                      opacity: 0,
-                      x: -25,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      x: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                      amount: 0.2,
-                    }}
-                    transition={{
-                      duration: 0.6,
-                      delay:
-                        0.35 + index * 0.12,
-                    }}
-                    className="
-                      group
-                      flex
-                      items-center
-                      gap-4
-                      sm:gap-5
-                    "
-                  >
+              {/* Heading */}
+
+              <div className="mb-5 flex items-center gap-3">
+
+                <span
+                  className="
+                    h-[2px]
+                    w-8
+                    rounded-full
+                    bg-gradient-to-r
+                    from-[#D7C17A]
+                    to-[#087F8C]
+                  "
+                />
+
+                <span
+                  className="
+                    text-[9px]
+                    font-bold
+                    uppercase
+                    tracking-[0.24em]
+                    text-[#BCEBE8]/80
+                  "
+                >
+                  Why IBS
+                </span>
+
+              </div>
+
+              {/* =================================================
+                  BENEFITS
+              ================================================= */}
+
+              <div
+                className="
+                  grid
+                  grid-cols-1
+                  gap-3
+                  sm:grid-cols-2
+                "
+              >
+
+                {benefits.map((item, index) => {
+                  const Icon = item.icon;
+
+                  return (
                     <motion.div
-                      whileHover={{
-                        y: -4,
-                        scale: 1.06,
+                      key={item.title}
+                      initial={{
+                        opacity: 0,
+                        y: 15,
+                      }}
+                      whileInView={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      viewport={{
+                        once: true,
+                        amount: 0.1,
                       }}
                       transition={{
-                        duration: 0.25,
+                        duration: 0.5,
+                        delay: 0.1 + index * 0.06,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      whileHover={{
+                        y: -3,
                       }}
                       className="
-                        flex
-                        h-12
-                        w-12
-                        shrink-0
-                        items-center
-                        justify-center
-                        rounded-[15px]
+                        group
+                        relative
+                        overflow-hidden
+                        rounded-[16px]
                         border
-                        border-white/10
-                        bg-white/[0.07]
-                        text-[#BCEBE8]
-                        shadow-[0_12px_30px_rgba(0,0,0,0.12)]
+                        border-white/[0.10]
+                        bg-gradient-to-br
+                        from-white/[0.075]
+                        via-[#087F8C]/[0.045]
+                        to-[#061A26]/[0.18]
                         backdrop-blur-md
                         transition-all
                         duration-300
-                        group-hover:border-[#BCEBE8]/30
-                        group-hover:bg-white/[0.12]
+                        hover:border-[#9CE5E1]/25
+                        hover:from-white/[0.10]
+                        hover:via-[#087F8C]/[0.07]
+                        hover:to-[#061A26]/[0.22]
                       "
                     >
-                      <Icon
-                        size={20}
-                        strokeWidth={1.5}
-                      />
-                    </motion.div>
 
-                    <div
-                      className="
-                        flex
-                        min-w-[42px]
-                        items-center
-                        justify-center
-                        border-l
-                        border-[#D7C17A]/60
-                        pl-4
-                      "
-                    >
+                      {/* =================================================
+                          CARD GLOW
+                      ================================================= */}
+
+                      <div
+                        className="
+                          pointer-events-none
+                          absolute
+                          -right-8
+                          -top-8
+                          h-20
+                          w-20
+                          rounded-full
+                          bg-[#70D5D1]/10
+                          blur-[30px]
+                          transition-all
+                          duration-500
+                          group-hover:scale-125
+                          group-hover:bg-[#70D5D1]/20
+                        "
+                      />
+
+                      {/* =================================================
+                          CARD CONTENT
+                      ================================================= */}
+
+                      <div
+                        className="
+                          relative
+                          z-10
+                          flex
+                          items-stretch
+                          h-full
+                        "
+              
+                      >
+
+                        {/* =================================================
+                            LIGHT TEAL ICON PANEL
+                        ================================================= */}
+
+                        <motion.div
+                          whileHover={{
+                            scale: 1.04,
+                          }}
+                          transition={{
+                            duration: 0.25,
+                          }}
+                          className="
+                            relative
+                            flex
+                            min-h-[82px]
+                            w-[58px]
+                            shrink-0
+                            items-center
+                            justify-center
+                            overflow-hidden
+                            rounded-l-[15px]
+                            border-r
+                            border-[#A9E5E1]/25
+                           bg-gradient-to-b
+from-[#071A31]
+via-[#103B57]
+to-[#087F8C]
+                            text-[#075D66]
+                            shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]
+                          "
+                        >
+
+                          {/* WHITE GLOW */}
+
+                          <span
+                            className="
+                              pointer-events-none
+                              absolute
+                              -right-5
+                              -top-5
+                              h-16
+                              w-16
+                              rounded-full
+                              bg-white/40
+                              blur-[20px]
+                              transition-all
+                              duration-500
+                              group-hover:scale-125
+                            "
+                          />
+
+                          {/* TEAL GLOW */}
+
+                          <span
+                            className="
+                              pointer-events-none
+                              absolute
+                              -bottom-5
+                              -left-5
+                              h-14
+                              w-14
+                              rounded-full
+                              bg-[#087F8C]/20
+                              blur-[18px]
+                            "
+                          />
+
+                          {/* INNER BORDER */}
+
+                          <span
+                            className="
+                              absolute
+                              inset-[6px]
+                              rounded-[10px]
+                              border
+                              border-white/45
+                              transition-all
+                              duration-300
+                              group-hover:border-white/70
+                            "
+                             style={{background:"#078c939a"}}
+                          />
+
+                          {/* ICON */}
+
+                          <Icon
+                            size={19}
+                            strokeWidth={1.5}
+                            className="
+                              relative
+                              z-10
+                              transition-transform
+                              duration-300
+                              group-hover:scale-110
+                            "
+                            style={{color:"white"}}
+                          />
+
+                        </motion.div>
+
+                        {/* =================================================
+                            TEXT
+                        ================================================= */}
+
+                        <div
+                          className="
+                            min-w-0
+                            flex-1
+                            px-3.5
+                            py-3.5
+                            pr-5
+                          "
+                        >
+
+                          <h4
+                            className="
+                              pr-4
+                              text-[9px]
+                              font-bold
+                              uppercase
+                              leading-4
+                              tracking-[0.10em]
+                              text-white/80
+                              transition-colors
+                              duration-300
+                              group-hover:text-[#BCEBE8]
+                              sm:text-[10px]
+                            "
+                          >
+                            {item.title}
+                          </h4>
+
+                          <p
+                            className="
+                              mt-1
+                              text-[10px]
+                              leading-[1.5]
+                              text-white/40
+                              transition-colors
+                              duration-300
+                              group-hover:text-white/65
+                              sm:text-[10.5px]
+                            "
+                          >
+                            {item.text}
+                          </p>
+
+                        </div>
+
+                        {/* =================================================
+                            ARROW
+                        ================================================= */}
+
+                        <ArrowUpRight
+                          size={12}
+                          strokeWidth={1.3}
+                          className="
+                            absolute
+                            right-3
+                            top-3
+                            text-white/10
+                            transition-all
+                            duration-300
+                            group-hover:-translate-y-0.5
+                            group-hover:translate-x-0.5
+                            group-hover:text-[#D7C17A]/80
+                          "
+                        />
+
+                      </div>
+
+                      {/* =================================================
+                          BOTTOM ACCENT
+                      ================================================= */}
+
                       <span
                         className="
-                          text-[27px]
-                          font-light
-                          tracking-[-0.04em]
-                          text-[#D7C17A]
+                          absolute
+                          bottom-0
+                          left-0
+                          h-[2px]
+                          w-0
+                          rounded-r-full
+                          bg-gradient-to-r
+                          from-[#087F8C]
+                          via-[#9CE5E1]
+                          to-[#D7C17A]
+                          transition-all
+                          duration-500
+                          group-hover:w-14
                         "
-                      >
-                        {item.number}
-                      </span>
-                    </div>
+                      />
 
-                    <div>
-                      <p
-                        className="
-                          text-[11px]
-                          font-bold
-                          uppercase
-                          tracking-[0.15em]
-                          text-white
-                        "
-                      >
-                        {item.title}
-                      </p>
+                    </motion.div>
+                  );
+                })}
 
-                      <p
-                        className="
-                          mt-1
-                          max-w-[390px]
-                          text-[12px]
-                          leading-5
-                          text-white/55
-                        "
-                      >
-                        {item.text}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
+              </div>
+
             </div>
+
           </motion.div>
 
           {/* =================================================
-              FORM
+              RIGHT SIDE — FORM
           ================================================= */}
 
           <motion.div
@@ -1015,10 +1268,13 @@ export default function CTASection() {
             className="
               relative
               z-[100]
-              lg:-mt-4
+              self-stretch
             "
           >
-            {/* FORM OUTER GLOW */}
+
+            {/* =================================================
+                FORM GLOW
+            ================================================= */}
 
             <motion.div
               animate={{
@@ -1040,7 +1296,9 @@ export default function CTASection() {
               "
             />
 
-            {/* FORM CARD */}
+            {/* =================================================
+                FORM CARD
+            ================================================= */}
 
             <div
               className="
@@ -1057,7 +1315,10 @@ export default function CTASection() {
                 xl:p-10
               "
             >
-              {/* Card aqua highlight */}
+
+              {/* =================================================
+                  TEAL HIGHLIGHT
+              ================================================= */}
 
               <div
                 className="
@@ -1073,7 +1334,9 @@ export default function CTASection() {
                 "
               />
 
-              {/* Card gold highlight */}
+              {/* =================================================
+                  GOLD HIGHLIGHT
+              ================================================= */}
 
               <div
                 className="
@@ -1089,7 +1352,9 @@ export default function CTASection() {
                 "
               />
 
-              {/* Metallic top line */}
+              {/* =================================================
+                  TOP LINE
+              ================================================= */}
 
               <div
                 className="
@@ -1101,12 +1366,13 @@ export default function CTASection() {
                   bg-gradient-to-r
                   from-[#063F46]
                   via-[#087F8C]
-                  via-[#D7C17A]
-                  to-[#4FAEB0]
+                  to-[#D7C17A]
                 "
               />
 
-              {/* FORM HEADER */}
+              {/* =================================================
+                  FORM HEADER
+              ================================================= */}
 
               <div
                 className="
@@ -1119,7 +1385,9 @@ export default function CTASection() {
                   gap-5
                 "
               >
+
                 <div>
+
                   <p
                     className="
                       text-[10px]
@@ -1129,7 +1397,7 @@ export default function CTASection() {
                       text-[#087F8C]
                     "
                   >
-                    LET&apos;S TALK
+                    CONTACT US
                   </p>
 
                   <h3
@@ -1143,7 +1411,7 @@ export default function CTASection() {
                       sm:text-[32px]
                     "
                   >
-                    Start a conversation.
+                    Let us discuss your priorities.
                   </h3>
 
                   <p
@@ -1155,10 +1423,17 @@ export default function CTASection() {
                       text-[#65777C]
                     "
                   >
-                    Share a few details and we&apos;ll
-                    get back to you.
+                    Tell us what you are working to achieve.
+                    Our team will review your requirements and
+                    connect you with the appropriate IBS
+                    professional.
                   </p>
+
                 </div>
+
+                {/* =================================================
+                    FORM HEADER ICON
+                ================================================= */}
 
                 <motion.div
                   animate={{
@@ -1186,6 +1461,7 @@ export default function CTASection() {
                     shadow-[0_12px_30px_rgba(8,127,140,0.10)]
                   "
                 >
+
                   <span
                     className="
                       absolute
@@ -1194,6 +1470,7 @@ export default function CTASection() {
                       border
                       border-[#C6A15B]/20
                     "
+                   
                   />
 
                   <ArrowUpRight
@@ -1201,10 +1478,14 @@ export default function CTASection() {
                     strokeWidth={1.5}
                     className="relative z-10"
                   />
+
                 </motion.div>
+
               </div>
 
-              {/* FORM */}
+              {/* =================================================
+                  FORM
+              ================================================= */}
 
               <form
                 onSubmit={handleSubmit}
@@ -1214,9 +1495,13 @@ export default function CTASection() {
                   space-y-5
                 "
               >
-                {/* NAME */}
+
+                {/* =================================================
+                    NAME
+                ================================================= */}
 
                 <div>
+
                   <label
                     htmlFor="name"
                     className="
@@ -1238,9 +1523,7 @@ export default function CTASection() {
                     type="text"
                     value={formData.name}
                     onChange={handleChange}
-                    onFocus={() =>
-                      setFocused("name")
-                    }
+                    onFocus={() => setFocused("name")}
                     onBlur={() => setFocused("")}
                     placeholder="Your name"
                     required
@@ -1257,7 +1540,6 @@ export default function CTASection() {
                       transition-all
                       duration-300
                       placeholder:text-[#A0ADB0]
-
                       ${
                         focused === "name"
                           ? "border-[#087F8C] shadow-[0_0_0_4px_rgba(8,127,140,0.08)]"
@@ -1265,11 +1547,15 @@ export default function CTASection() {
                       }
                     `}
                   />
+
                 </div>
 
-                {/* PHONE */}
+                {/* =================================================
+                    PHONE
+                ================================================= */}
 
                 <div>
+
                   <label
                     htmlFor="phone"
                     className="
@@ -1291,9 +1577,7 @@ export default function CTASection() {
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    onFocus={() =>
-                      setFocused("phone")
-                    }
+                    onFocus={() => setFocused("phone")}
                     onBlur={() => setFocused("")}
                     placeholder="+1 000 000 0000"
                     required
@@ -1310,7 +1594,6 @@ export default function CTASection() {
                       transition-all
                       duration-300
                       placeholder:text-[#A0ADB0]
-
                       ${
                         focused === "phone"
                           ? "border-[#087F8C] shadow-[0_0_0_4px_rgba(8,127,140,0.08)]"
@@ -1318,11 +1601,15 @@ export default function CTASection() {
                       }
                     `}
                   />
+
                 </div>
 
-                {/* EMAIL */}
+                {/* =================================================
+                    EMAIL
+                ================================================= */}
 
                 <div>
+
                   <label
                     htmlFor="email"
                     className="
@@ -1344,9 +1631,7 @@ export default function CTASection() {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    onFocus={() =>
-                      setFocused("email")
-                    }
+                    onFocus={() => setFocused("email")}
                     onBlur={() => setFocused("")}
                     placeholder="you@example.com"
                     required
@@ -1363,7 +1648,6 @@ export default function CTASection() {
                       transition-all
                       duration-300
                       placeholder:text-[#A0ADB0]
-
                       ${
                         focused === "email"
                           ? "border-[#087F8C] shadow-[0_0_0_4px_rgba(8,127,140,0.08)]"
@@ -1371,11 +1655,15 @@ export default function CTASection() {
                       }
                     `}
                   />
+
                 </div>
 
-                {/* COMMENT */}
+                {/* =================================================
+                    COMMENT
+                ================================================= */}
 
                 <div>
+
                   <label
                     htmlFor="comment"
                     className="
@@ -1397,9 +1685,7 @@ export default function CTASection() {
                     rows={4}
                     value={formData.comment}
                     onChange={handleChange}
-                    onFocus={() =>
-                      setFocused("comment")
-                    }
+                    onFocus={() => setFocused("comment")}
                     onBlur={() => setFocused("")}
                     placeholder="Tell us a little about your project..."
                     required
@@ -1419,7 +1705,6 @@ export default function CTASection() {
                       transition-all
                       duration-300
                       placeholder:text-[#A0ADB0]
-
                       ${
                         focused === "comment"
                           ? "border-[#087F8C] shadow-[0_0_0_4px_rgba(8,127,140,0.08)]"
@@ -1427,9 +1712,12 @@ export default function CTASection() {
                       }
                     `}
                   />
+
                 </div>
 
-                {/* SUBMIT */}
+                {/* =================================================
+                    SUBMIT BUTTON
+                ================================================= */}
 
                 <motion.button
                   type="submit"
@@ -1463,6 +1751,7 @@ export default function CTASection() {
                     hover:shadow-[0_20px_42px_rgba(8,127,140,0.32)]
                   "
                 >
+
                   {/* Shine */}
 
                   <span
@@ -1514,9 +1803,12 @@ export default function CTASection() {
                       strokeWidth={2}
                     />
                   </span>
+
                 </motion.button>
 
-                {/* PRIVACY */}
+                {/* =================================================
+                    PRIVACY
+                ================================================= */}
 
                 <div
                   className="
@@ -1527,6 +1819,7 @@ export default function CTASection() {
                     pt-1
                   "
                 >
+
                   <LockKeyhole
                     size={13}
                     strokeWidth={1.5}
@@ -1541,10 +1834,15 @@ export default function CTASection() {
                   >
                     Your information is safe with us.
                   </span>
+
                 </div>
+
               </form>
+
             </div>
+
           </motion.div>
+
         </div>
 
         {/* =====================================================
@@ -1580,8 +1878,6 @@ export default function CTASection() {
           "
         />
 
-        {/* ROTATING GOLD DETAIL */}
-
         <motion.div
           animate={{
             rotate: 360,
@@ -1611,7 +1907,9 @@ export default function CTASection() {
             className="text-[#D7C17A]"
           />
         </motion.div>
+
       </div>
+
     </section>
   );
 }
