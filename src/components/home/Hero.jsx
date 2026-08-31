@@ -293,7 +293,7 @@ export default function Hero() {
               xl:text-[84px]
             "
           >
-            Building stronger
+            Turning complex challenges 
 
             <span
               className="
@@ -306,12 +306,12 @@ export default function Hero() {
                 text-transparent
               "
             >
-              communities
+              into practical progress
             </span>
 
-            <span className="block text-white">
+            {/* <span className="block text-white">
               through innovation.
-            </span>
+            </span> */}
           </h1>
 
           {/* Divider */}
@@ -334,10 +334,7 @@ export default function Hero() {
               sm:text-[14px]
             "
           >
-            Innovative Business Solutions delivers practical,
-            forward-thinking solutions designed to help
-            organizations grow, adapt and create lasting
-            impact.
+            We combine strategic thinking, financial expertise, operational discipline, technology and technical capabilities to help organizations make better decisions and build sustainable capacity
           </p>
 
           {/* =================================================
@@ -378,7 +375,7 @@ export default function Hero() {
                 hover:bg-white
               "
             >
-              Contact Us
+              Book a Consultation
 
               <span
                 className="
@@ -401,44 +398,45 @@ export default function Hero() {
 
             {/* Secondary */}
 
-            <a
-              href="/services"
-              className="
-                group
-                inline-flex
-                items-center
-                gap-3
-                rounded-full
-                border
-                border-white/20
-                bg-white/[0.05]
-                px-6
-                py-3.5
-                text-[9px]
-                font-bold
-                uppercase
-                tracking-[0.15em]
-                text-white
-                backdrop-blur-md
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-[#087F8C]
-                hover:bg-[#087F8C]
-              "
-            >
-              Explore Services
+    <a
+  href="/services"
+  className="
+    group
+    inline-flex
+    items-center
+    gap-3
+    rounded-full
+    border
+    border-white/20
+    bg-white/[0.05]
+    px-6
+    py-3.5
+    text-[9px]
+    font-bold
+    uppercase
+    tracking-[0.15em]
+    !text-white
+    backdrop-blur-md
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:border-[#087F8C]
+    hover:bg-[#087F8C]
+    hover:!text-white
+  "
+>
+  Explore Our Services
 
-              <ArrowRight
-                size={14}
-                className="
-                  text-white
-                  transition-transform
-                  duration-300
-                  group-hover:translate-x-1
-                "
-              />
-            </a>
+  <ArrowRight
+    size={14}
+    className="
+      !text-white
+      transition-transform
+      duration-300
+      group-hover:translate-x-1
+    "
+  />
+</a>
           </div>
 
           {/* =================================================
@@ -532,7 +530,7 @@ export default function Hero() {
                   text-white
                 "
               >
-                20+
+                6+
               </p>
 
               <p
@@ -986,7 +984,7 @@ export default function Hero() {
                       text-white
                     "
                   >
-                    Innovation with purpose
+                    From Strategy to Delivery
                   </p>
                 </div>
               </div>
@@ -1005,9 +1003,7 @@ export default function Hero() {
                 text-[#B9C5CC]
               "
             >
-              Creating meaningful solutions that connect
-              people, organizations and communities through
-              innovation.
+             Consulting → Strategy, Analysis & Advice → Project Execution → Implementation & Delivery
             </p>
 
             <div className="mt-5 flex items-center gap-2">
