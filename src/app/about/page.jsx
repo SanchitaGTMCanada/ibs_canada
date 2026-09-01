@@ -1796,304 +1796,666 @@ export default function AboutPage() {
           04 — JOURNEY TIMELINE
       ===================================================== */}
 
-      <section
+    <section
+  className="
+    relative
+    overflow-hidden
+    bg-white
+    px-6
+    py-28
+    sm:px-8
+    lg:px-10
+    lg:py-36
+    xl:px-14
+  "
+  style={{padding:"70px 0px"}}
+>
+
+  
+  {/* =====================================================
+      DEEP BACKGROUND ATMOSPHERE
+  ===================================================== */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -left-40
+      top-20
+      h-[420px]
+      w-[420px]
+      rounded-full
+      bg-[#087F8C]/[0.08]
+      blur-[100px]
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-40
+      top-[35%]
+      h-[480px]
+      w-[480px]
+      rounded-full
+      bg-[#0B1F3A]/[0.07]
+      blur-[110px]
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -left-32
+      bottom-[-120px]
+      h-[400px]
+      w-[400px]
+      rounded-full
+      bg-[#C6A15B]/[0.055]
+      blur-[100px]
+    "
+  />
+
+  {/* Large decorative circles */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      left-[-120px]
+      top-[28%]
+      h-[360px]
+      w-[360px]
+      rounded-full
+      border
+      border-[#087F8C]/[0.08]
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      right-[-150px]
+      top-[58%]
+      h-[430px]
+      w-[430px]
+      rounded-full
+      border
+      border-[#C6A15B]/[0.08]
+    "
+  />
+
+  <div className="relative z-10 mx-auto max-w-[1280px]">
+
+    {/* =====================================================
+        HEADER
+    ===================================================== */}
+
+    <div className="max-w-[650px]">
+
+      <span
         className="
-          relative
-          overflow-hidden
-          bg-white
-          px-6
-          py-28
-          sm:px-8
-          lg:px-10
-          lg:py-36
-          xl:px-14
+          text-[15px]
+          font-bold
+          uppercase
+          tracking-[0.3em]
+          text-[#087F8C]
         "
       >
+        03 / The journey
+      </span>
 
-        <div className="mx-auto max-w-[1280px]">
+      <h2
+        className="
+          mt-6
+          text-[46px]
+          font-bold
+          leading-[0.98]
+          tracking-[-0.055em]
+          text-[#202832]
+          sm:text-[64px]
+        "
+      >
+        How We
 
-          <div className="max-w-[650px]">
+        <span className="block text-[#087F8C]">
+          Work
+        </span>
+      </h2>
 
-            <span
-              className="
-                text-[15px]
-                font-bold
-                uppercase
-                tracking-[0.3em]
-                text-[#087F8C]
-              "
-            >
-              03 / The journey
-            </span>
-
-            <h2
-              className="
-                mt-6
-                text-[46px]
-                font-bold
-                leading-[0.98]
-                tracking-[-0.055em]
-                text-[#202832]
-                sm:text-[64px]
-              "
-            >
-              How We
-
-              <span className="block text-[#087F8C]">
-                Work
-              </span>
-
-            </h2>
-
-          </div>
+    </div>
 
 
-          <div className="relative mt-20">
+    {/* =====================================================
+        TIMELINE
+    ===================================================== */}
 
-            {/* Timeline background */}
+    <div className="relative mt-20 lg:mt-24">
 
-            <div
-              className="
-                absolute
-                bottom-0
-                left-[20px]
-                top-0
-                w-px
-                bg-[#DCE2E7]
-                lg:left-1/2
-              "
-            />
+      {/* ===================================================
+          TIMELINE BASE LINE
+      =================================================== */}
 
-            {/* Animated progress */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-[20px]
+          top-0
+          w-px
+          bg-[#DCE2E7]
+          lg:left-1/2
+        "
+      />
+
+      {/* Animated progress */}
+
+      <motion.div
+        initial={{
+          height: 0,
+        }}
+        whileInView={{
+          height: "100%",
+        }}
+        viewport={{
+          once: true,
+          amount: 0.1,
+        }}
+        transition={{
+          duration: 2.2,
+          ease: "easeInOut",
+        }}
+        className="
+          absolute
+          left-[20px]
+          top-0
+          w-[2px]
+          bg-gradient-to-b
+          from-[#C6A15B]
+          via-[#087F8C]
+          to-[#C6A15B]
+          lg:left-1/2
+        "
+      />
+
+
+      {/* ===================================================
+          JOURNEY ITEMS
+      =================================================== */}
+
+      {[
+        {
+          year: "01",
+          title:
+            "Understand the challenge and define the desired outcome",
+          icon: Lightbulb,
+          text: "",
+        },
+        {
+          year: "02",
+          title:
+            "Assess the current state, priorities, risks and opportunities",
+          icon: Network,
+          text: "",
+        },
+        {
+          year: "03",
+          title:
+            "Develop a practical, evidence-informed approach",
+          icon: Globe2,
+          text: "",
+        },
+        {
+          year: "04",
+          title:
+            "Collaborate with client leadership and teams to implement priorities",
+          icon: Zap,
+          text: "",
+        },
+        {
+          year: "05",
+          title:
+            "Measure progress, transfer knowledge and strengthen internal capability",
+          icon: Network,
+          text: "",
+        },
+      ].map((item, index) => {
+
+        const Icon = item.icon;
+
+        return (
+          <motion.div
+            key={item.year}
+            initial={{
+              opacity: 0,
+              y: 45,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            transition={{
+              duration: 0.7,
+              delay: index * 0.1,
+              ease: "easeOut",
+            }}
+            className="
+              relative
+              grid
+              gap-8
+              pb-20
+              pl-14
+              last:pb-0
+              lg:grid-cols-2
+              lg:gap-24
+              lg:pl-0
+              lg:pb-28
+            "
+          >
+
+            {/* =================================================
+                BACKGROUND DECORATIVE CIRCLE
+            ================================================= */}
+
+         <div
+  className={`
+    pointer-events-none
+    absolute
+    top-1/2
+    hidden
+    h-[300px]
+    w-[300px]
+    -translate-y-1/2
+    lg:block
+    ${
+      index % 2 === 0
+        ? "left-[1%]"
+        : "right-[1%]"
+    }
+  `}
+>
+  {/* Outer teal soft glow */}
+
+  <div
+    className="
+      absolute
+      inset-[-2px]
+      rounded-full
+      border-[5px]
+      border-transparent
+      border-l-[#087F8C]/10
+      border-t-[#087F8C]/8
+      rotate-[25deg]
+      blur-[5px]
+    "
+  />
+
+  {/* Outer teal sharp arc */}
+
+  <div
+    className="
+      absolute
+      inset-0
+      rounded-full
+      border-[3px]
+      border-transparent
+      border-l-[#087F8C]/35
+      border-t-[#087F8C]/28
+      rotate-[25deg]
+    "
+  />
+
+
+  {/* Inner gold soft glow */}
+
+  <div
+    className="
+      absolute
+      inset-[30px]
+      rounded-full
+      border-[5px]
+      border-transparent
+      border-r-[#C6A15B]/10
+      border-b-[#C6A15B]/8
+      -rotate-[35deg]
+      blur-[5px]
+    "
+  />
+
+  {/* Inner gold sharp arc */}
+
+  <div
+    className="
+      absolute
+      inset-[30px]
+      rounded-full
+      border-[3px]
+      border-transparent
+      border-r-[#C6A15B]/32
+      border-b-[#C6A15B]/25
+      -rotate-[35deg]
+    "
+  />
+</div>
+
+            {/* =================================================
+                LARGE BACKGROUND ICON
+            ================================================= */}
+
+          <Icon
+  size={170}
+  strokeWidth={1}
+  className={`
+    pointer-events-none
+    absolute
+    top-1/2
+    hidden
+    -translate-y-1/2
+    lg:block
+    ${
+      index % 2 === 0
+        ? "left-[4%]"
+        : "right-[4%]"
+    }
+    ${
+      index % 2 === 0
+        ? "text-[#087F8C]/[0.13]"
+        : "text-[#0B1F3A]/[0.12]"
+    }
+  `}
+/>
+
+
+            {/* =================================================
+                TIMELINE NODE
+            ================================================= */}
 
             <motion.div
               initial={{
-                height: 0,
+                scale: 0,
               }}
               whileInView={{
-                height: "100%",
+                scale: 1,
               }}
               viewport={{
                 once: true,
-                amount: 0.1,
               }}
               transition={{
-                duration: 2,
-                ease: "easeInOut",
+                delay: index * 0.1 + 0.2,
+                type: "spring",
+                stiffness: 180,
               }}
               className="
                 absolute
-                left-[20px]
-                top-0
-                w-px
-                bg-gradient-to-b
-                from-[#C6A15B]
-                via-[#087F8C]
-                to-[#C6A15B]
+                left-[8px]
+                top-1
+                z-30
+                flex
+                h-6
+                w-6
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#C6A15B]
+                bg-white
+                shadow-[0_0_0_6px_rgba(255,255,255,0.9)]
                 lg:left-1/2
+                lg:-translate-x-1/2
               "
-            />
+            >
+              <motion.span
+                animate={{
+                  scale: [1, 1.3, 1],
+                  opacity: [0.7, 1, 0.7],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: index * 0.3,
+                }}
+                className="
+                  h-2
+                  w-2
+                  rounded-full
+                  bg-[#087F8C]
+                  shadow-[0_0_12px_rgba(8,127,140,0.4)]
+                "
+              />
+            </motion.div>
 
 
-            {[
-              {
-                year: "01",
-                title: "Understand the challenge and define the desired outcome",
-                icon: Lightbulb,
-                text: "",
-              },
-              {
-                year: "02",
-                title: "Assess the current state, priorities, risks and opportunities",
-                icon: Network,
-                text: "New capabilities and disciplines created a broader platform for organizations, professionals and communities.",
-              },
-              {
-                year: "03",
-                title: "Develop a practical, evidence-informed approach",
-                icon: Globe2,
-                text: "IBS evolved toward an interconnected model where partnerships and shared knowledge became central to the way we work.",
-              },
-              {
-                year: "04",
-                title: "Collaborate with client leadership and teams to implement priorities",
-                icon: Zap,
-                text: "We continue to explore new opportunities to connect people, ideas and technology around meaningful outcomes.",
-              },
-                       {
-                year: "05",
-                title: "Measure progress, transfer knowledge and strengthen internal capability",
-                icon: Zap,
-                text: "We continue to explore new opportunities to connect people, ideas and technology around meaningful outcomes.",
-              },
-            ].map((item, index) => {
+            {/* =================================================
+                YEAR
+            ================================================= */}
 
-              const Icon = item.icon;
+            <div
+              className={`
+                relative
+                z-10
+                ${
+                  index % 2 === 0
+                    ? "lg:pr-24"
+                    : "lg:order-2 lg:pl-24"
+                }
+              `}
+            >
 
-              return (
-                <motion.div
-                  key={item.year}
-                  initial={{
-                    opacity: 0,
-                    y: 40,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.2,
-                  }}
-                  transition={{
-                    duration: 0.7,
-                    delay: index * 0.1,
-                  }}
+              <div className="flex items-center gap-4">
+
+                <span
                   className="
-                    relative
-                    grid
-                    gap-8
-                    pb-20
-                    pl-14
-                    last:pb-0
-                    lg:grid-cols-2
-                    lg:gap-24
-                    lg:pl-0
+                    text-[30px]
+                    font-bold
+                    tracking-[0.2em]
+                    text-[#C6A15B]
+                    sm:text-[34px]
                   "
                 >
+                  {item.year}
+                </span>
 
-                  {/* Node */}
+                <span
+                  className="
+                    h-px
+                    flex-1
+                    bg-gradient-to-r
+                    from-[#DCE2E7]
+                    to-transparent
+                  "
+                />
 
-                  <motion.div
-                    initial={{
-                      scale: 0,
-                    }}
-                    whileInView={{
-                      scale: 1,
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      delay: index * 0.1 + 0.2,
-                      type: "spring",
-                      stiffness: 180,
-                    }}
-                    className="
-                      absolute
-                      left-[8px]
-                      top-0
-                      z-10
-                      flex
-                      h-6
-                      w-6
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-[#C6A15B]
-                      bg-white
-                      lg:left-1/2
-                      lg:-translate-x-1/2
-                    "
-                  >
-                    <span className="h-2 w-2 rounded-full bg-[#C6A15B]" />
-                  </motion.div>
+              </div>
+
+            </div>
 
 
-                  <div
-                    className={`
-                      ${
-                        index % 2 === 0
-                          ? "lg:pr-24"
-                          : "lg:order-2 lg:pl-24"
-                      }
-                    `}
-                  >
+            {/* =================================================
+                CONTENT CARD
+            ================================================= */}
 
-                    <div className="flex items-center gap-4">
+            <div
+              className={`
+                relative
+                z-10
+                ${
+                  index % 2 === 0
+                    ? "lg:pl-24"
+                    : "lg:order-1 lg:pr-24"
+                }
+              `}
+            >
 
-                      <span
-                        className="
-                          text-[11px]
-                          font-bold
-                          tracking-[0.2em]
-                          text-[#C6A15B]
-                        "
-                      >
-                        {item.year}
-                      </span>
+              <motion.div
+                whileHover={{
+                  y: -5,
+                }}
+                transition={{
+                  duration: 0.3,
+                }}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[24px]
+                  border
+                  border-[#DCE2E7]
+                  bg-white/90
+                  p-6
+                  shadow-[0_15px_45px_rgba(32,40,50,0.055)]
+                  backdrop-blur-sm
+                  transition-all
+                  duration-500
+                  hover:border-[#087F8C]/20
+                  hover:shadow-[0_22px_60px_rgba(8,127,140,0.12)]
+                  sm:p-7
+                "
+              >
 
-                      <span className="h-px flex-1 bg-[#DCE2E7]" />
+                {/* Card teal glow */}
 
-                    </div>
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    -right-16
+                    -top-16
+                    h-36
+                    w-36
+                    rounded-full
+                    bg-[#087F8C]/[0.08]
+                    blur-3xl
+                    transition-all
+                    duration-500
+                    group-hover:bg-[#087F8C]/[0.14]
+                  "
+                />
 
-                  </div>
+                {/* Card gold glow */}
 
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    -bottom-20
+                    -left-16
+                    h-40
+                    w-40
+                    rounded-full
+                    bg-[#C6A15B]/[0.06]
+                    blur-3xl
+                  "
+                />
 
-                  <div
-                    className={`
-                      ${
-                        index % 2 === 0
-                          ? "lg:pl-24"
-                          : "lg:order-1 lg:pr-24"
-                      }
-                    `}
-                  >
+                {/* Top line */}
 
-                    <div className="flex items-center gap-4">
+                <div
+                  className="
+                    absolute
+                    left-6
+                    right-6
+                    top-0
+                    h-px
+                    bg-gradient-to-r
+                    from-transparent
+                    via-[#087F8C]/40
+                    to-transparent
+                  "
+                />
+
+                {/* Content */}
+
+                <div className="relative z-10">
+
+                  <div className="flex items-center gap-4">
+
+                    {/* Icon */}
+
+                    <div
+                      className="
+                        relative
+                        flex
+                        h-16
+                        w-16
+                        shrink-0
+                        items-center
+                        justify-center
+                        overflow-hidden
+                        rounded-full
+                        border
+                        border-[#087F8C]/15
+                        bg-gradient-to-br
+                        from-[#087F8C]/15
+                        via-[#087F8C]/[0.07]
+                        to-[#0B1F3A]/[0.08]
+                        text-[#087F8C]
+                        shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]
+                        transition-all
+                        duration-500
+                        group-hover:border-[#C6A15B]/40
+                        group-hover:text-[#C6A15B]
+                      "
+                    >
 
                       <div
                         className="
-                          flex
-                          h-12
-                          w-12
-                          shrink-0
-                          items-center
-                          justify-center
+                          absolute
+                          inset-1
                           rounded-full
-                          bg-[#F6F4EF]
-                          text-[#087F8C]
+                          border
+                          border-white/60
                         "
-                      >
-                        <Icon size={19} />
-                      </div>
+                      />
 
-                      <h3
-                        className="
-                          text-[28px]
-                          font-bold
-                          tracking-[-0.035em]
-                          text-[#202832]
-                        "
-                      >
-                        {item.title}
-                      </h3>
+                      <Icon
+                        size={24}
+                        strokeWidth={1.7}
+                        className="relative z-10"
+                      />
 
                     </div>
-{/* 
-                    <p
+
+
+                    {/* Title */}
+
+                    <h3
                       className="
-                        mt-5
-                        text-[14px]
-                        leading-7
-                        text-[#68737D]
+                        text-[25px]
+                        font-bold
+                        leading-tight
+                        tracking-[-0.035em]
+                        text-[#202832]
+                        sm:text-[28px]
                       "
                     >
-                      {item.text}
-                    </p> */}
+                      {item.title}
+                    </h3>
 
                   </div>
 
-                </motion.div>
-              );
-            })}
+                </div>
 
-          </div>
+              </motion.div>
 
-        </div>
+            </div>
 
-      </section>
+          </motion.div>
+        );
+      })}
+
+    </div>
+
+  </div>
+
+</section>
 
 
       {/* =====================================================
