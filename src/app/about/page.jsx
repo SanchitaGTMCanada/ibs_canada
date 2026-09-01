@@ -2609,345 +2609,292 @@ export default function AboutPage() {
           06 — PRINCIPLES
       ===================================================== */}
 
-      <section
-        className="
-          bg-[#F6F4EF]
-          px-6
-          py-28
-          sm:px-8
-          lg:px-10
-          lg:py-36
-          xl:px-14
-        "
-      >
+  <section
+  className="
+    relative
+    overflow-hidden
+    bg-[#F6F4EF]
+    px-6
+    py-28
+    sm:px-8
+    lg:px-10
+    lg:py-36
+    xl:px-14
+  "
+>
+  {/* =====================================================
+      BACKGROUND
+  ===================================================== */}
 
-        <div className="mx-auto max-w-[1280px]">
+  <div
+    className="
+      pointer-events-none
+      absolute
+      left-[-180px]
+      top-[20%]
+      h-[500px]
+      w-[500px]
+      rounded-full
+      bg-[#087F8C]/[0.045]
+      blur-[130px]
+    "
+  />
 
-          <div
+  <div
+    className="
+      pointer-events-none
+      absolute
+      right-[-180px]
+      bottom-[5%]
+      h-[500px]
+      w-[500px]
+      rounded-full
+      bg-[#C6A15B]/[0.045]
+      blur-[130px]
+    "
+  />
+
+  {/* Fine architectural circle */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-[180px]
+      top-[12%]
+      h-[520px]
+      w-[520px]
+      rounded-full
+      border
+      border-[#0B1F3A]/[0.045]
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-[120px]
+      top-[18%]
+      h-[400px]
+      w-[400px]
+      rounded-full
+      border
+      border-[#087F8C]/[0.055]
+    "
+  />
+
+
+  <div className="relative z-10 mx-auto max-w-[1380px]">
+
+    {/* =====================================================
+        TOP HEADER
+    ===================================================== */}
+
+    <div
+      className="
+        grid
+        gap-10
+        lg:grid-cols-[0.85fr_1.15fr]
+        lg:items-end
+      "
+    >
+
+      <div>
+
+        {/* Eyebrow */}
+
+        <div className="flex items-center gap-3">
+
+          <span
             className="
-              flex
-              flex-col
-              justify-between
-              gap-10
-              lg:flex-row
-              lg:items-end
+              h-[2px]
+              w-9
+              rounded-full
+              bg-[#087F8C]
+            "
+          />
+
+          <span
+            className="
+              h-[2px]
+              w-4
+              rounded-full
+              bg-[#C6A15B]
+            "
+          />
+
+          <span
+            className="
+              text-[10px]
+              font-bold
+              uppercase
+              tracking-[0.3em]
+              text-[#087F8C]
             "
           >
-
-            <div>
-
-              <span
-                className="
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.3em]
-                  text-[#087F8C]
-                "
-              >
-                05 / Principles
-              </span>
-
-              <h2
-                className="
-                  mt-6
-                  text-[46px]
-                  font-bold
-                  leading-[0.98]
-                  tracking-[-0.055em]
-                  text-[#202832]
-                  sm:text-[62px]
-                "
-              >
-                How we
-
-                <span className="text-[#087F8C]">
-                  {" "}work.
-                </span>
-
-              </h2>
-
-            </div>
-
-            <p
-              className="
-                max-w-[420px]
-                text-[14px]
-                leading-7
-                text-[#68737D]
-              "
-            >
-              Our approach is guided by a small number of
-              principles that shape how we think, collaborate
-              and deliver.
-            </p>
-
-          </div>
-
-
-          <div className="mt-16">
-
-            {[
-              {
-                icon: Target,
-                number: "01",
-                title: "Purpose before process",
-                text: "We begin with the outcome. Process follows purpose, not the other way around.",
-              },
-              {
-                icon: Lightbulb,
-                number: "02",
-                title: "Curiosity creates progress",
-                text: "We ask questions, challenge assumptions and remain open to possibilities.",
-              },
-              {
-                icon: Handshake,
-                number: "03",
-                title: "Partnership over transaction",
-                text: "The strongest work is built through trust, transparency and shared ownership.",
-              },
-              {
-                icon: ShieldCheck,
-                number: "04",
-                title: "Integrity in every detail",
-                text: "Long-term credibility comes from doing the right thing consistently.",
-              },
-            ].map((item, index) => {
-
-              const Icon = item.icon;
-
-              return (
-                <motion.div
-                  key={item.number}
-                  initial={{
-                    opacity: 0,
-                    y: 25,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.2,
-                  }}
-                  transition={{
-                    delay: index * 0.08,
-                    duration: 0.6,
-                  }}
-                  className="
-                    group
-                    grid
-                    gap-6
-                    border-t
-                    border-[#DCE2E7]
-                    py-8
-                    lg:grid-cols-[100px_0.9fr_1.1fr_50px]
-                    lg:items-center
-                  "
-                >
-
-                  <span
-                    className="
-                      text-[11px]
-                      font-bold
-                      tracking-[0.2em]
-                      text-[#C6A15B]
-                    "
-                  >
-                    {item.number}
-                  </span>
-
-
-                  <div className="flex items-center gap-5">
-
-                    <motion.div
-                      whileHover={{
-                        rotate: 12,
-                        scale: 1.12,
-                      }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 250,
-                      }}
-                      className="
-                        flex
-                        h-12
-                        w-12
-                        shrink-0
-                        items-center
-                        justify-center
-                        rounded-full
-                        border
-                        border-[#087F8C]/20
-                        text-[#087F8C]
-                        transition-all
-                        duration-300
-                        group-hover:border-[#C6A15B]
-                        group-hover:bg-[#C6A15B]
-                        group-hover:text-[#0B1F3A]
-                      "
-                    >
-                      <Icon size={19} />
-                    </motion.div>
-
-                    <h3
-                      className="
-                        text-[20px]
-                        font-bold
-                        tracking-[-0.025em]
-                        text-[#202832]
-                        sm:text-[23px]
-                      "
-                    >
-                      {item.title}
-                    </h3>
-
-                  </div>
-
-
-                  <p
-                    className="
-                      max-w-[520px]
-                      text-[13px]
-                      leading-7
-                      text-[#68737D]
-                    "
-                  >
-                    {item.text}
-                  </p>
-
-
-                  <ArrowRight
-                    size={18}
-                    className="
-                      text-[#C6A15B]
-                      opacity-0
-                      transition-all
-                      duration-300
-                      group-hover:translate-x-1
-                      group-hover:opacity-100
-                    "
-                  />
-
-                </motion.div>
-              );
-            })}
-
-            <div className="border-t border-[#DCE2E7]" />
-
-          </div>
+            05 / Principles
+          </span>
 
         </div>
 
-      </section>
+
+        <h2
+          className="
+            mt-6
+            max-w-[650px]
+            text-[48px]
+            font-bold
+            leading-[0.94]
+            tracking-[-0.06em]
+            text-[#202832]
+            sm:text-[64px]
+            lg:text-[72px]
+          "
+        >
+          Why Clients
+
+          <span className="block text-[#087F8C]">
+            Select IBS.
+          </span>
+        </h2>
+
+        
+
+      </div>
 
 
-      {/* =====================================================
-          07 — IMPACT
-      ===================================================== */}
+      
 
-      <section
+    </div>
+
+
+    {/* =====================================================
+        PREMIUM PRINCIPLES LAYOUT
+    ===================================================== */}
+
+    <div
+      className="
+        mt-20
+        grid
+        gap-5
+        lg:grid-cols-2
+        lg:gap-6
+      "
+    >
+
+      {/* ===================================================
+          PRINCIPLE 01
+      =================================================== */}
+
+      <motion.article
+        initial={{
+          opacity: 0,
+          y: 30,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        transition={{
+          duration: 0.7,
+        }}
         className="
+          group
           relative
+          min-h-[430px]
           overflow-hidden
-          bg-white
-          px-6
-          py-28
-          sm:px-8
-          lg:px-10
-          lg:py-36
-          xl:px-14
+          rounded-[30px]
+          bg-[#0B1F3A]
+          shadow-[0_25px_70px_rgba(11,31,58,0.13)]
         "
       >
 
+        {/* Background image */}
+
+        <img
+          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85"
+          alt="Purpose driven workspace"
+          className="
+            absolute
+            inset-0
+            h-full
+            w-full
+            object-cover
+            opacity-35
+            grayscale-[20%]
+            transition-all
+            duration-700
+            group-hover:scale-105
+            group-hover:opacity-45
+          "
+        />
+
+        {/* Image overlay */}
+
         <div
           className="
-            mx-auto
-            grid
-            max-w-[1280px]
-            gap-14
-            lg:grid-cols-[0.9fr_1.1fr]
-            lg:items-center
-            lg:gap-20
+            absolute
+            inset-0
+            bg-gradient-to-t
+            from-[#071827]
+            via-[#0B1F3A]/75
+            to-[#087F8C]/20
           "
-        >
+        />
 
-          {/* IMAGE */}
+        {/* Decorative circle */}
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: -40,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.8,
-            }}
-            className="
-              relative
-              aspect-[0.9/1]
-              overflow-hidden
-              rounded-[30px]
-              bg-[#0B1F3A]
-            "
-          >
+        <div
+          className="
+            absolute
+            -right-24
+            -top-24
+            h-[300px]
+            w-[300px]
+            rounded-full
+            border
+            border-[#BCEBE8]/10
+          "
+        />
 
-            <motion.img
-              initial={{
-                scale: 1.12,
-              }}
-              whileInView={{
-                scale: 1,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 1.5,
-              }}
-              src={IMPACT_IMAGE}
-              alt="People collaborating on meaningful projects"
-              loading="lazy"
+        <div
+          className="
+            absolute
+            -right-10
+            -top-10
+            h-[170px]
+            w-[170px]
+            rounded-full
+            border
+            border-[#C6A15B]/15
+          "
+        />
+
+
+        <div className="relative z-10 flex h-full flex-col p-7 sm:p-9">
+
+          {/* Top */}
+
+          <div className="flex items-start justify-between">
+
+            <span
               className="
-                absolute
-                inset-0
-                h-full
-                w-full
-                object-cover
+                text-[12px]
+                font-bold
+                tracking-[0.25em]
+                text-[#C6A15B]
               "
-            />
+            >
+              01
+            </span>
 
             <div
               className="
-                absolute
-                inset-0
-                bg-gradient-to-t
-                from-[#0B1F3A]/75
-                via-transparent
-                to-transparent
-              "
-            />
-
-            <motion.div
-              animate={{
-                y: [0, -8, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                absolute
-                right-6
-                top-6
                 flex
                 h-12
                 w-12
@@ -2956,46 +2903,110 @@ export default function AboutPage() {
                 rounded-full
                 border
                 border-white/20
-                bg-[#0B1F3A]/50
-                text-[#C6A15B]
+                bg-white/10
+                text-[#BCEBE8]
                 backdrop-blur-md
               "
             >
-              <Target size={20} />
-            </motion.div>
+              <Target
+                size={21}
+                strokeWidth={1.5}
+              />
+            </div>
 
+          </div>
+
+
+          {/* Bottom */}
+
+          <div className="mt-auto max-w-[470px]">
 
             <div
               className="
-                absolute
-                bottom-7
-                left-7
-                right-7
-                flex
-                items-end
-                justify-between
+                mb-5
+                h-[2px]
+                w-10
+                bg-[#C6A15B]
+                transition-all
+                duration-500
+                group-hover:w-16
+              "
+            />
+
+            <h3
+              className="
+                text-[30px]
+                font-bold
+                leading-[1]
+                tracking-[-0.045em]
+                text-white
+                sm:text-[34px]
               "
             >
+            	Robust project planning and timeline management
+            </h3>
 
-              <div>
+           
 
-                <p
-                  className="
-                    text-[9px]
-                    font-bold
-                    uppercase
-                    tracking-[0.25em]
-                    text-[#C6A15B]
-                  "
-                >
-                  The outcome
-                </p>
+          </div>
 
-                <p className="mt-2 text-[20px] font-semibold text-white">
-                  Meaningful impact
-                </p>
+        </div>
 
-              </div>
+      </motion.article>
+
+
+      {/* ===================================================
+          PRINCIPLE 02
+      =================================================== */}
+
+      <motion.article
+        initial={{
+          opacity: 0,
+          y: 30,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        transition={{
+          duration: 0.7,
+          delay: 0.08,
+        }}
+        className="
+          group
+          relative
+          min-h-[430px]
+          overflow-hidden
+          rounded-[30px]
+          border
+          border-[#DCE2E7]
+          bg-white
+          shadow-[0_20px_55px_rgba(32,40,50,0.055)]
+        "
+      >
+
+        <div className="grid h-full lg:grid-cols-[0.9fr_1.1fr]">
+
+          {/* Content */}
+
+          <div className="relative z-10 flex flex-col p-7 sm:p-9">
+
+            <div className="flex items-start justify-between">
+
+              <span
+                className="
+                  text-[12px]
+                  font-bold
+                  tracking-[0.25em]
+                  text-[#C6A15B]
+                "
+              >
+                02
+              </span>
 
               <div
                 className="
@@ -3005,166 +3016,479 @@ export default function AboutPage() {
                   items-center
                   justify-center
                   rounded-full
-                  bg-[#C6A15B]
-                  text-[#0B1F3A]
+                  border
+                  border-[#087F8C]/20
+                  bg-[#087F8C]/[0.06]
+                  text-[#087F8C]
+                  transition-all
+                  duration-500
+                  group-hover:border-[#C6A15B]/40
+                  group-hover:text-[#C6A15B]
                 "
               >
-                <ArrowUpRight size={20} />
+                <Lightbulb
+                  size={21}
+                  strokeWidth={1.5}
+                />
               </div>
 
             </div>
 
-          </motion.div>
+            <div className="mt-auto">
 
+              <div
+                className="
+                  mb-5
+                  h-[2px]
+                  w-10
+                  bg-[#087F8C]
+                  transition-all
+                  duration-500
+                  group-hover:w-16
+                "
+              />
 
-          {/* CONTENT */}
+              <h3
+                className="
+                  text-[29px]
+                  font-bold
+                  leading-[1]
+                  tracking-[-0.045em]
+                  text-[#202832]
+                  sm:text-[33px]
+                "
+              >
+                	Disciplined resource allocation
+              </h3>
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: 40,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.8,
-            }}
-          >
-
-            <span
-              className="
-                text-[9px]
-                font-bold
-                uppercase
-                tracking-[0.3em]
-                text-[#087F8C]
-              "
-            >
-              06 / Impact
-            </span>
-
-            <h2
-              className="
-                mt-6
-                text-[47px]
-                font-bold
-                leading-[0.98]
-                tracking-[-0.055em]
-                text-[#202832]
-                sm:text-[62px]
-              "
-            >
-              Connect the
-
-              <span className="block text-[#087F8C]">
-                right pieces.
-              </span>
-
-            </h2>
-
-            <p
-              className="
-                mt-7
-                text-[15px]
-                leading-8
-                text-[#68737D]
-              "
-            >
-              Our role is often to connect things that
-              already have potential — people with ideas,
-              organizations with expertise, technology
-              with opportunity and communities with
-              resources.
-            </p>
-
-
-            {/* METRICS */}
-
-            <div className="mt-10 grid grid-cols-2 gap-x-8">
-
-              {[
-                {
-                  value: "01",
-                  label: "Integrated approach",
-                },
-                {
-                  value: "04",
-                  label: "Core disciplines",
-                },
-                {
-                  value: "∞",
-                  label: "Room to innovate",
-                },
-                {
-                  value: "01",
-                  label: "Shared purpose",
-                },
-              ].map((item, index) => (
-
-                <motion.div
-                  key={item.label}
-                  initial={{
-                    opacity: 0,
-                    y: 15,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    delay: index * 0.1,
-                    duration: 0.5,
-                  }}
-                  className="
-                    border-t
-                    border-[#DCE2E7]
-                    py-6
-                  "
-                >
-
-                  <div
-                    className="
-                      text-[38px]
-                      font-bold
-                      tracking-[-0.05em]
-                      text-[#087F8C]
-                    "
-                  >
-                    {item.value}
-                  </div>
-
-                  <p
-                    className="
-                      mt-2
-                      text-[9px]
-                      font-bold
-                      uppercase
-                      tracking-[0.15em]
-                      text-[#68737D]
-                    "
-                  >
-                    {item.label}
-                  </p>
-
-                </motion.div>
-
-              ))}
+            
 
             </div>
 
-          </motion.div>
+          </div>
+
+
+          {/* Image */}
+
+          <div className="relative min-h-[220px] overflow-hidden lg:min-h-0">
+
+            <img
+              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=85"
+              alt="Research and curiosity"
+              className="
+                h-full
+                w-full
+                object-cover
+                grayscale-[15%]
+                transition-transform
+                duration-700
+                group-hover:scale-105
+              "
+            />
+
+            <div
+              className="
+                absolute
+                inset-0
+                bg-gradient-to-r
+                from-white/20
+                via-transparent
+                to-[#087F8C]/15
+              "
+            />
+
+          </div>
 
         </div>
 
-      </section>
+      </motion.article>
+
+
+      {/* ===================================================
+          PRINCIPLE 03
+      =================================================== */}
+
+      <motion.article
+        initial={{
+          opacity: 0,
+          y: 30,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        transition={{
+          duration: 0.7,
+          delay: 0.16,
+        }}
+        className="
+          group
+          relative
+          min-h-[430px]
+          overflow-hidden
+          rounded-[30px]
+          border
+          border-[#DCE2E7]
+          bg-white
+          shadow-[0_20px_55px_rgba(32,40,50,0.055)]
+        "
+      >
+
+        <div className="grid h-full lg:grid-cols-[1.1fr_0.9fr]">
+
+          {/* Image */}
+
+          <div className="relative order-2 min-h-[220px] overflow-hidden lg:order-1 lg:min-h-0">
+
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85"
+              alt="Partnership and collaboration"
+              className="
+                h-full
+                w-full
+                object-cover
+                grayscale-[10%]
+                transition-transform
+                duration-700
+                group-hover:scale-105
+              "
+            />
+
+            <div
+              className="
+                absolute
+                inset-0
+                bg-gradient-to-r
+                from-[#087F8C]/20
+                via-transparent
+                to-white/10
+              "
+            />
+
+          </div>
+
+
+          {/* Content */}
+
+          <div className="relative z-10 order-1 flex flex-col p-7 sm:p-9 lg:order-2">
+
+            <div className="flex items-start justify-between">
+
+              <span
+                className="
+                  text-[12px]
+                  font-bold
+                  tracking-[0.25em]
+                  text-[#087F8C]
+                "
+              >
+                03
+              </span>
+
+              <div
+                className="
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-[#087F8C]/20
+                  bg-[#087F8C]/[0.06]
+                  text-[#087F8C]
+                  transition-all
+                  duration-500
+                  group-hover:border-[#C6A15B]/40
+                  group-hover:text-[#C6A15B]
+                "
+              >
+                <Handshake
+                  size={21}
+                  strokeWidth={1.5}
+                />
+              </div>
+
+            </div>
+
+
+            <div className="mt-auto">
+
+              <div
+                className="
+                  mb-5
+                  h-[2px]
+                  w-10
+                  bg-[#087F8C]
+                  transition-all
+                  duration-500
+                  group-hover:w-16
+                "
+              />
+
+              <h3
+                className="
+                  text-[29px]
+                  font-bold
+                  leading-[1]
+                  tracking-[-0.045em]
+                  text-[#202832]
+                  sm:text-[33px]
+                "
+              >
+              	Quality assurance and control
+              </h3>
+
+          
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </motion.article>
+
+
+      {/* ===================================================
+          PRINCIPLE 04
+      =================================================== */}
+
+      <motion.article
+        initial={{
+          opacity: 0,
+          y: 30,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        transition={{
+          duration: 0.7,
+          delay: 0.24,
+        }}
+        className="
+          group
+          relative
+          min-h-[430px]
+          overflow-hidden
+          rounded-[30px]
+          bg-[#087F8C]
+          shadow-[0_25px_65px_rgba(8,127,140,0.14)]
+        "
+      >
+
+        {/* Image */}
+
+        <img
+          src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=85"
+          alt="Integrity and professional standards"
+          className="
+            absolute
+            inset-0
+            h-full
+            w-full
+            object-cover
+            opacity-25
+            grayscale-[10%]
+            transition-all
+            duration-700
+            group-hover:scale-105
+            group-hover:opacity-35
+          "
+        />
+
+        {/* Overlay */}
+
+        <div
+          className="
+            absolute
+            inset-0
+            bg-gradient-to-br
+            from-[#087F8C]/95
+            via-[#087F8C]/80
+            to-[#0B1F3A]/95
+          "
+        />
+
+        {/* Decorative rings */}
+
+        <div
+          className="
+            absolute
+            -bottom-[140px]
+            -right-[100px]
+            h-[380px]
+            w-[380px]
+            rounded-full
+            border
+            border-white/10
+          "
+        />
+
+        <div
+          className="
+            absolute
+            -bottom-[90px]
+            -right-[50px]
+            h-[280px]
+            w-[280px]
+            rounded-full
+            border
+            border-[#C6A15B]/20
+          "
+        />
+
+
+        <div className="relative z-10 flex h-full flex-col p-7 sm:p-9">
+
+          <div className="flex items-start justify-between">
+
+            <span
+              className="
+                text-[12px]
+                font-bold
+                tracking-[0.25em]
+                text-[#C6A15B]
+              "
+            >
+              04
+            </span>
+
+            <div
+              className="
+                flex
+                h-12
+                w-12
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-white/20
+                bg-white/10
+                text-[#C6A15B]
+                backdrop-blur-md
+              "
+            >
+              <ShieldCheck
+                size={21}
+                strokeWidth={1.5}
+              />
+            </div>
+
+          </div>
+
+
+          <div className="mt-auto max-w-[500px]">
+
+            <div
+              className="
+                mb-5
+                h-[2px]
+                w-10
+                bg-[#C6A15B]
+                transition-all
+                duration-500
+                group-hover:w-16
+              "
+            />
+
+            <h3
+              className="
+                text-[30px]
+                font-bold
+                leading-[1]
+                tracking-[-0.045em]
+                text-white
+                sm:text-[34px]
+              "
+            >
+             Transparent communication and reporting
+            </h3>
+
+        
+
+          </div>
+
+        </div>
+
+      </motion.article>
+
+    </div>
+
+
+    {/* =====================================================
+        BOTTOM SIGNATURE
+    ===================================================== */}
+
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      viewport={{
+        once: true,
+      }}
+      transition={{
+        duration: 0.8,
+        delay: 0.2,
+      }}
+      className="
+        mt-14
+        flex
+        items-center
+        justify-between
+        gap-6
+        border-t
+        border-[#DCE2E7]
+        pt-7
+      "
+    >
+
+      <div className="flex items-center gap-4">
+
+        <span
+          className="
+            h-[2px]
+            w-16
+            rounded-full
+            bg-[#087F8C]
+          "
+        />
+
+        <span
+          className="
+            h-[2px]
+            w-8
+            rounded-full
+            bg-[#C6A15B]
+          "
+        />
+
+      </div>
+
+
+     
+
+    </motion.div>
+
+  </div>
+</section>
+
+      {/* =====================================================
+          07 — IMPACT
+      ===================================================== */}
+
 
 
       {/* =====================================================
