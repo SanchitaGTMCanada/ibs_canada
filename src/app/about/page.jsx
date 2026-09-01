@@ -1816,7 +1816,7 @@ export default function AboutPage() {
 
             <span
               className="
-                text-[9px]
+                text-[15px]
                 font-bold
                 uppercase
                 tracking-[0.3em]
@@ -1837,10 +1837,10 @@ export default function AboutPage() {
                 sm:text-[64px]
               "
             >
-              Built through
+              How We
 
               <span className="block text-[#087F8C]">
-                evolution.
+                Work
               </span>
 
             </h2>
@@ -1898,25 +1898,31 @@ export default function AboutPage() {
             {[
               {
                 year: "01",
-                title: "The idea",
+                title: "Understand the challenge and define the desired outcome",
                 icon: Lightbulb,
-                text: "A vision to create an organization where different areas of expertise could work together rather than operate in isolation.",
+                text: "",
               },
               {
                 year: "02",
-                title: "The expansion",
+                title: "Assess the current state, priorities, risks and opportunities",
                 icon: Network,
                 text: "New capabilities and disciplines created a broader platform for organizations, professionals and communities.",
               },
               {
                 year: "03",
-                title: "The ecosystem",
+                title: "Develop a practical, evidence-informed approach",
                 icon: Globe2,
                 text: "IBS evolved toward an interconnected model where partnerships and shared knowledge became central to the way we work.",
               },
               {
                 year: "04",
-                title: "The future",
+                title: "Collaborate with client leadership and teams to implement priorities",
+                icon: Zap,
+                text: "We continue to explore new opportunities to connect people, ideas and technology around meaningful outcomes.",
+              },
+                       {
+                year: "05",
+                title: "Measure progress, transfer knowledge and strengthen internal capability",
                 icon: Zap,
                 text: "We continue to explore new opportunities to connect people, ideas and technology around meaningful outcomes.",
               },
@@ -2065,7 +2071,7 @@ export default function AboutPage() {
                       </h3>
 
                     </div>
-
+{/* 
                     <p
                       className="
                         mt-5
@@ -2075,7 +2081,7 @@ export default function AboutPage() {
                       "
                     >
                       {item.text}
-                    </p>
+                    </p> */}
 
                   </div>
 
