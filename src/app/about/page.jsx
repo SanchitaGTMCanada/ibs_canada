@@ -160,8 +160,8 @@ export default function AboutPage() {
             pointer-events-none
             absolute
             inset-0
-            opacity-[0.035]
-            [background-image:linear-gradient(rgba(255,255,255,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.5)_1px,transparent_1px)]
+            opacity-[0.065]
+            [background-image:linear-gradient(rgba(220,226,231,0.32)_1px,transparent_1px),linear-gradient(90deg,rgba(220,226,231,0.32)_1px,transparent_1px)]
             [background-size:75px_75px]
           "
         />
@@ -381,7 +381,7 @@ export default function AboutPage() {
                 xl:text-[112px]
               "
             >
-              We build
+              Who we
 
               <motion.span
                 initial={{
@@ -398,7 +398,7 @@ export default function AboutPage() {
                 }}
                 className="block text-[#BCEBE8]"
               >
-                with purpose.
+               are 
               </motion.span>
 
             </motion.h1>
@@ -442,11 +442,7 @@ export default function AboutPage() {
                 text-white/55
                 sm:text-[18px]
               "
-            >
-              IBS Canada brings business, technology,
-              education, engineering and community
-              expertise together to transform ideas into
-              practical, meaningful outcomes.
+            >Innovative Business Solutions Ltd. is a Canadian management consulting and professional services firm serving Indigenous organizations, communities, governments and entrepreneurs in Canada and internationally. 
             </motion.p>
 
 
@@ -511,41 +507,43 @@ export default function AboutPage() {
               </Link>
 
 
-              <Link
-                href="/services"
-                className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-2
-                  rounded-full
-                  border
-                  border-white/20
-                  px-6
-                  py-3.5
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-[0.14em]
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:border-[#BCEBE8]
-                  hover:bg-white/5
-                "
-              >
-                Explore Services
+            <Link
+  href="/services"
+  className="
+    group
+    inline-flex
+    items-center
+    gap-2
+    rounded-full
+    border
+    border-white/20
+    px-6
+    py-3.5
+    text-[10px]
+    font-bold
+    uppercase
+    tracking-[0.14em]
+    text-white
+    transition-all
+    duration-300
+    hover:border-[#BCEBE8]
+    hover:bg-white/5
+  "
+>
+  <span className="text-white">
+    Explore Services
+  </span>
 
-                <ArrowUpRight
-                  size={14}
-                  className="
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                  "
-                />
-
-              </Link>
+  <ArrowUpRight
+    size={14}
+    className="
+      text-white
+      transition-transform
+      duration-300
+      group-hover:translate-x-1
+    "
+  />
+</Link>
 
             </motion.div>
 
@@ -711,11 +709,11 @@ export default function AboutPage() {
                       text-[#C6A15B]
                     "
                   >
-                    Our philosophy
+                    Our Mission
                   </p>
 
                   <p className="mt-1 text-[14px] text-white">
-                    Think beyond the obvious.
+                    To deliver culturally informed, practical business solutions.
                   </p>
 
                 </div>
@@ -848,7 +846,7 @@ export default function AboutPage() {
 
                 <span
                   className="
-                    text-[9px]
+                    text-[15px]
                     font-bold
                     uppercase
                     tracking-[0.25em]
@@ -967,8 +965,8 @@ export default function AboutPage() {
             pointer-events-none
             absolute
             inset-0
-            opacity-[0.035]
-            [background-image:linear-gradient(rgba(255,255,255,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.5)_1px,transparent_1px)]
+            opacity-[0.065]
+            [background-image:linear-gradient(rgba(220,226,231,0.32)_1px,transparent_1px),linear-gradient(90deg,rgba(220,226,231,0.32)_1px,transparent_1px)]
             [background-size:80px_80px]
           "
         />
@@ -1021,7 +1019,7 @@ export default function AboutPage() {
                   text-[#C6A15B]
                 "
               >
-                02 / Our capabilities
+                02 / Our Vision 
               </span>
 
               <h2
@@ -1052,132 +1050,254 @@ export default function AboutPage() {
                 text-white/45
               "
             >
-              IBS operates across interconnected areas of
-              expertise. Each capability can stand alone,
-              but the greatest value appears where they
-              intersect.
+             To support stronger, more capable organizations through strategic direction, financial and operational management, research, training and practical implementation support. 
             </p>
 
           </div>
 
 
           {/* =================================================
-              CONSTELLATION
+              CONSTELLATION — PREMIUM CORPORATE ECOSYSTEM
           ================================================= */}
 
-          <div
-            className="
-              relative
-              mt-20
-              min-h-[720px]
-            "
-          >
+          <div className="relative mt-20 min-h-[720px] overflow-hidden">
 
-            {/* Animated rings */}
-
+            {/* Soft atmospheric glow */}
             <motion.div
               animate={{
-                rotate: 360,
+                x: [-40, 40, -40],
+                y: [20, -20, 20],
+                scale: [1, 1.08, 1],
+                opacity: [0.08, 0.14, 0.08],
               }}
               transition={{
-                duration: 40,
+                duration: 18,
                 repeat: Infinity,
-                ease: "linear",
+                ease: "easeInOut",
               }}
-              className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-                hidden
-                h-[550px]
-                w-[550px]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                border
-                border-[#087F8C]/15
-                lg:block
-              "
+              className="pointer-events-none absolute left-1/2 top-1/2 h-[460px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#087F8C]/10 blur-[120px]"
             />
 
-            <motion.div
-              animate={{
-                rotate: -360,
-              }}
-              transition={{
-                duration: 30,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-                hidden
-                h-[370px]
-                w-[370px]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                border
-                border-[#C6A15B]/15
-                lg:block
-              "
-            />
+            {/* A few soft luxury particles */}
+            {[
+              { left: "16%", top: "24%", color: "#BCEBE8", delay: 0 },
+              { left: "84%", top: "27%", color: "#C6A15B", delay: 1.8 },
+              { left: "11%", top: "64%", color: "#5DE2E7", delay: 3.2 },
+              { left: "89%", top: "67%", color: "#BCEBE8", delay: 2.4 },
+              { left: "34%", top: "13%", color: "#C6A15B", delay: 4.1 },
+              { left: "67%", top: "86%", color: "#5DE2E7", delay: 1.1 },
+              { left: "29%", top: "87%", color: "#BCEBE8", delay: 5 },
+              { left: "73%", top: "11%", color: "#C6A15B", delay: 3.7 },
+            ].map((particle, index) => (
+              <motion.span
+                key={`luxury-particle-${index}`}
+                animate={{
+                  y: [0, -7, 0, 5, 0],
+                  opacity: [0.12, 0.5, 0.16, 0.4, 0.12],
+                  scale: [0.8, 1.1, 0.8],
+                }}
+                transition={{
+                  duration: 6 + index * 0.45,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: particle.delay,
+                }}
+                className="pointer-events-none absolute z-10 h-1 w-1 rounded-full"
+                style={{
+                  left: particle.left,
+                  top: particle.top,
+                  backgroundColor: particle.color,
+                  boxShadow: `0 0 10px ${particle.color}`,
+                }}
+              />
+            ))}
 
             {/* =================================================
-                CONNECTION LINES
+                SOLAR SYSTEM — THREE BOLD ORBITS
             ================================================= */}
 
-            <div
+            {/* Outer orbit */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 48,
+                repeat: Infinity,
+                ease: "linear",
+              }}
               className="
                 pointer-events-none
                 absolute
                 left-1/2
                 top-1/2
                 hidden
-                h-[480px]
-                w-[1px]
+                h-[570px]
+                w-[570px]
                 -translate-x-1/2
                 -translate-y-1/2
-                bg-gradient-to-b
-                from-transparent
-                via-[#087F8C]/30
-                to-transparent
+                rounded-full
                 lg:block
               "
-            />
+            >
+              <div
+                className="
+                  absolute
+                  inset-0
+                  rounded-full
+                  border-[3px]
+                  border-transparent
+                  border-t-[#5DE2E7]/80
+                  border-r-[#087F8C]/40
+                "
+              />
 
-            <div
+              {/* 4 orbiting bodies */}
+              <span className="absolute left-1/2 top-[-6px] h-3 w-3 -translate-x-1/2 rounded-full bg-[#BCEBE8] shadow-[0_0_12px_#BCEBE8]" />
+              <span className="absolute right-[7%] top-[23%] h-2.5 w-2.5 rounded-full bg-[#F0D98A] shadow-[0_0_12px_#F0D98A]" />
+              <span className="absolute bottom-[10%] left-[20%] h-2 w-2 rounded-full bg-[#5DE2E7] shadow-[0_0_10px_#5DE2E7]" />
+              <span className="absolute bottom-[24%] right-[4%] h-2 w-2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
+            </motion.div>
+
+            {/* Middle orbit */}
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{
+                duration: 38,
+                repeat: Infinity,
+                ease: "linear",
+              }}
               className="
                 pointer-events-none
                 absolute
                 left-1/2
                 top-1/2
                 hidden
-                h-[1px]
-                w-[480px]
+                h-[435px]
+                w-[435px]
                 -translate-x-1/2
                 -translate-y-1/2
-                bg-gradient-to-r
-                from-transparent
-                via-[#087F8C]/30
-                to-transparent
+                rounded-full
                 lg:block
               "
-            />
+            >
+              <div
+                className="
+                  absolute
+                  inset-0
+                  rounded-full
+                  border-[3px]
+                  border-transparent
+                  border-t-[#C6A15B]/90
+                  border-l-[#F0D98A]/35
+                "
+              />
 
+              {/* 3 orbiting bodies */}
+              <span className="absolute left-[17%] top-[-5px] h-2.5 w-2.5 rounded-full bg-[#F0D98A] shadow-[0_0_12px_#F0D98A]" />
+              <span className="absolute bottom-[8%] right-[14%] h-2 w-2 rounded-full bg-[#BCEBE8] shadow-[0_0_10px_#BCEBE8]" />
+              <span className="absolute left-[2%] top-[45%] h-2 w-2 rounded-full bg-[#5DE2E7] shadow-[0_0_10px_#5DE2E7]" />
+            </motion.div>
+
+            {/* Inner orbit */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 29,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="
+                pointer-events-none
+                absolute
+                left-1/2
+                top-1/2
+                hidden
+                h-[315px]
+                w-[315px]
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-full
+                lg:block
+              "
+            >
+              <div
+                className="
+                  absolute
+                  inset-0
+                  rounded-full
+                  border-[2px]
+                  border-transparent
+                  border-t-[#BCEBE8]/80
+                  border-b-[#087F8C]/40
+                "
+              />
+
+              {/* 3 orbiting bodies */}
+              <span className="absolute left-1/2 top-[-5px] h-2 w-2 -translate-x-1/2 rounded-full bg-[#5DE2E7] shadow-[0_0_11px_#5DE2E7]" />
+              <span className="absolute bottom-[12%] left-[8%] h-1.5 w-1.5 rounded-full bg-[#C6A15B] shadow-[0_0_9px_#C6A15B]" />
+              <span className="absolute right-[6%] top-[34%] h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
+            </motion.div>
+
+            {/* Third-ring accent — creates the solar-system depth */}
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{
+                duration: 72,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="
+                pointer-events-none
+                absolute
+                left-1/2
+                top-1/2
+                hidden
+                h-[640px]
+                w-[640px]
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-full
+                border
+                border-[#DCE2E7]/[0.025]
+                lg:block
+              "
+            >
+              <span className="absolute left-[19%] top-[-2px] h-1.5 w-1.5 rounded-full bg-[#C6A15B]/80 shadow-[0_0_8px_#C6A15B]" />
+            </motion.div>
+
+            {/* Soft central glow */}
+            <motion.div
+              animate={{
+                scale: [1, 1.08, 1],
+                opacity: [0.08, 0.16, 0.08],
+              }}
+              transition={{
+                duration: 7,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="
+                pointer-events-none
+                absolute
+                left-1/2
+                top-1/2
+                h-[360px]
+                w-[360px]
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-full
+                bg-[#087F8C]/15
+                blur-[100px]
+              "
+            />
 
             {/* =================================================
-                CENTER CORE
+                CENTRAL IBS CORE
             ================================================= */}
 
             <motion.div
               initial={{
                 opacity: 0,
-                scale: 0.7,
+                scale: 0.88,
               }}
               whileInView={{
                 opacity: 1,
@@ -1186,185 +1306,333 @@ export default function AboutPage() {
               viewport={{
                 once: true,
               }}
+              animate={{
+                boxShadow: [
+                  "0 0 45px rgba(8,127,140,0.10)",
+                  "0 0 80px rgba(8,127,140,0.24)",
+                  "0 0 45px rgba(8,127,140,0.10)",
+                ],
+              }}
               transition={{
-                duration: 1,
+                opacity: { duration: 0.8 },
+                scale: { duration: 0.8 },
+                boxShadow: {
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
               }}
               className="
                 absolute
                 left-1/2
                 top-1/2
-                z-30
+                z-40
                 flex
-                h-[155px]
-                w-[155px]
+                h-[165px]
+                w-[165px]
                 -translate-x-1/2
                 -translate-y-1/2
                 flex-col
                 items-center
                 justify-center
                 rounded-full
-                border
-                border-[#C6A15B]/50
-                bg-[#123A5A]
+                border-[2px]
+                border-[#C6A15B]/55
+                bg-gradient-to-br
+                from-[#164E61]
+                via-[#123A5A]
+                to-[#0B2942]
                 text-center
-                shadow-[0_0_100px_rgba(8,127,140,0.25)]
+                backdrop-blur-xl
               "
             >
-
-              {/* Pulsing ring */}
-
-              <motion.div
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.5, 0, 0.5],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeOut",
-                }}
+              <div
                 className="
                   pointer-events-none
                   absolute
-                  inset-[-14px]
+                  inset-[10px]
                   rounded-full
                   border
-                  border-[#087F8C]/40
+                  border-[#087F8C]/25
+                  bg-[#087F8C]/[0.08]
                 "
               />
 
-              <Sparkles
-                size={30}
-                className="text-[#C6A15B]"
-              />
+              <motion.div
+                animate={{
+                  scale: [0.96, 1.04, 0.96],
+                  opacity: [0.7, 1, 0.7],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative z-10"
+              >
+                <Sparkles
+                  size={29}
+                  strokeWidth={1.5}
+                  className="text-[#F0D98A]"
+                />
+              </motion.div>
 
               <span
                 className="
+                  relative
+                  z-10
                   mt-3
                   text-[8px]
-                  font-bold
+                  font-semibold
                   uppercase
-                  tracking-[0.25em]
+                  tracking-[0.28em]
                   text-white/40
                 "
               >
                 IBS
               </span>
 
-              <span className="mt-1 text-[14px] font-semibold text-white">
+              <span
+                className="
+                  relative
+                  z-10
+                  mt-1
+                  text-[15px]
+                  font-medium
+                  leading-6
+                  text-white
+                "
+              >
                 Integrated
                 <br />
                 Thinking
               </span>
-
             </motion.div>
 
-
             {/* =================================================
-                CAPABILITY NODES
+                CAPABILITY CARDS
             ================================================= */}
-
             {[
               {
                 icon: BriefcaseBusiness,
                 title: "Business",
                 text: "Strategy & growth",
-                position:
-                  "left-0 top-0 lg:left-[4%] lg:top-[7%]",
+                position: "left-0 top-0 lg:left-[4%] lg:top-[7%]",
+                accent: "#BCEBE8",
               },
               {
                 icon: Cpu,
                 title: "Technology",
                 text: "Digital transformation",
-                position:
-                  "right-0 top-0 lg:right-[4%] lg:top-[7%]",
+                position: "right-0 top-0 lg:right-[4%] lg:top-[7%]",
+                accent: "#BCEBE8",
               },
               {
                 icon: Lightbulb,
                 title: "Education",
                 text: "Learning & capability",
-                position:
-                  "left-0 top-[240px] lg:left-[1%] lg:top-[42%]",
+                position: "left-0 top-[240px] lg:left-[1%] lg:top-[42%]",
+                accent: "#C6A15B",
               },
               {
                 icon: Building2,
                 title: "Engineering",
                 text: "Technical expertise",
-                position:
-                  "right-0 top-[240px] lg:right-[1%] lg:top-[42%]",
+                position: "right-0 top-[240px] lg:right-[1%] lg:top-[42%]",
+                accent: "#C6A15B",
               },
               {
                 icon: Globe2,
                 title: "Community",
                 text: "Social impact",
-                position:
-                  "left-[5%] bottom-[15px] lg:left-[16%] lg:bottom-[5%]",
+                position: "left-[5%] bottom-[15px] lg:left-[16%] lg:bottom-[5%]",
+                accent: "#BCEBE8",
               },
               {
                 icon: Network,
                 title: "Partnership",
                 text: "Connected ecosystems",
-                position:
-                  "right-[5%] bottom-[15px] lg:right-[16%] lg:bottom-[5%]",
+                position: "right-[5%] bottom-[15px] lg:right-[16%] lg:bottom-[5%]",
+                accent: "#BCEBE8",
               },
             ].map((item, index) => {
-
               const Icon = item.icon;
 
               return (
                 <motion.div
                   key={item.title}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.85,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    scale: 1,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
+                  initial={{ opacity: 0, y: 18, scale: 0.97 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true }}
+                  animate={{ y: [0, -3, 0, 2, 0] }}
                   transition={{
-                    duration: 0.65,
-                    delay: 0.15 + index * 0.08,
+                    opacity: { duration: 0.7, delay: index * 0.08 },
+                    scale: { duration: 0.7, delay: index * 0.08 },
+                    y: {
+                      duration: 8 + index * 0.45,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: index * 0.35,
+                    },
                   }}
-                  whileHover={{
-                    y: -8,
-                    scale: 1.03,
-                  }}
-                  className={`
-                    absolute
-                    ${item.position}
-                    z-20
-                    w-[150px]
-                    sm:w-[195px]
-                  `}
+                  whileHover={{ y: -7, scale: 1.02 }}
+                  className={`absolute ${item.position} z-20 w-[150px] sm:w-[195px]`}
                 >
-
                   <div
                     className="
                       group
-                      rounded-[22px]
+                      relative
+                      overflow-hidden
+                      rounded-[24px]
                       border
-                      border-white/10
-                      bg-white/[0.035]
+                      border-[#BCEBE8]/20
+                      bg-gradient-to-br
+                      from-[#1A6B78]
+                      via-[#125263]
+                      to-[#0B2942]
                       p-5
-                      backdrop-blur-md
+                      shadow-[0_22px_60px_rgba(0,0,0,0.24)]
+                      backdrop-blur-xl
                       transition-all
                       duration-500
-                      hover:border-[#C6A15B]/40
-                      hover:bg-[#123A5A]
-                      hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)]
+                      hover:-translate-y-1
+                      hover:border-[#BCEBE8]/40
+                      hover:shadow-[0_28px_75px_rgba(0,0,0,0.32)]
                     "
                   >
 
+                    {/* Inner glass frame */}
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        inset-[1px]
+                        rounded-[23px]
+                        border
+                        border-white/[0.07]
+                      "
+                    />
+
+                    {/* Teal atmospheric layer */}
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        -right-12
+                        -top-14
+                        h-36
+                        w-36
+                        rounded-full
+                        bg-[#087F8C]/30
+                        blur-3xl
+                      "
+                    />
+
+                    {/* Cyan contrast layer */}
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        -left-10
+                        top-[30%]
+                        h-28
+                        w-28
+                        rounded-full
+                        bg-[#5DE2E7]/[0.10]
+                        blur-3xl
+                      "
+                    />
+
+                    {/* Gold depth layer */}
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        -bottom-12
+                        -left-10
+                        h-32
+                        w-32
+                        rounded-full
+                        bg-[#C6A15B]/[0.12]
+                        blur-3xl
+                      "
+                    />
+
+                    {/* Soft diagonal glass layer */}
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        -right-16
+                        bottom-[-34px]
+                        h-24
+                        w-52
+                        rotate-[-14deg]
+                        rounded-full
+                        border-t
+                        border-[#BCEBE8]/20
+                      "
+                    />
+
+                    {/* Premium top highlight */}
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        left-5
+                        right-5
+                        top-0
+                        h-px
+                        bg-gradient-to-r
+                        from-transparent
+                        via-[#BCEBE8]/75
+                        to-transparent
+                      "
+                    />
+
+                    {/* Moving reflection */}
                     <motion.div
-                      whileHover={{
-                        rotate: 10,
-                        scale: 1.1,
+                      animate={{ x: ["-150%", "240%"] }}
+                      transition={{
+                        duration: 10,
+                        repeat: Infinity,
+                        repeatDelay: 15,
+                        ease: "easeInOut",
+                        delay: index * 1.1,
                       }}
                       className="
+                        pointer-events-none
+                        absolute
+                        inset-y-0
+                        left-0
+                        w-[20%]
+                        -skew-x-12
+                        bg-gradient-to-r
+                        from-transparent
+                        via-white/[0.045]
+                        to-transparent
+                      "
+                    />
+
+                    {/* Icon */}
+                    <motion.div
+                      whileHover={{
+                        rotate: 8,
+                        scale: 1.06,
+                      }}
+                      animate={{
+                        opacity: [0.85, 1, 0.85],
+                      }}
+                      transition={{
+                        opacity: {
+                          duration: 5 + index * 0.4,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: index * 0.25,
+                        },
+                      }}
+                      className="
+                        relative
                         flex
                         h-11
                         w-11
@@ -1372,22 +1640,30 @@ export default function AboutPage() {
                         justify-center
                         rounded-full
                         border
-                        border-[#087F8C]/30
-                        text-[#BCEBE8]
-                        transition-colors
+                        border-white/[0.16]
+                        bg-[#0B2942]/55
+                        shadow-[0_0_24px_rgba(8,127,140,0.18)]
+                        backdrop-blur-md
+                        transition-all
                         duration-300
-                        group-hover:border-[#C6A15B]/50
-                        group-hover:text-[#C6A15B]
+                        group-hover:border-[#BCEBE8]/35
                       "
                     >
-                      <Icon size={20} />
+                      <Icon
+                        size={19}
+                        strokeWidth={1.7}
+                        style={{ color: item.accent }}
+                      />
                     </motion.div>
 
+                    {/* Card content */}
                     <h3
                       className="
+                        relative
                         mt-5
-                        text-[15px]
+                        text-[16px]
                         font-semibold
+                        tracking-[-0.02em]
                         text-white
                       "
                     >
@@ -1396,33 +1672,35 @@ export default function AboutPage() {
 
                     <p
                       className="
-                        mt-1
-                        text-[10px]
+                        relative
+                        mt-1.5
+                        text-[11px]
                         leading-5
-                        text-white/35
+                        text-[#F6F4EF]/70
                       "
                     >
                       {item.text}
                     </p>
 
+                    {/* Bottom accent */}
                     <div
                       className="
+                        relative
                         mt-4
                         flex
                         items-center
                         gap-2
-                        text-[#C6A15B]/0
+                        text-[#BCEBE8]/35
                         transition-all
                         duration-300
-                        group-hover:text-[#C6A15B]
+                        group-hover:text-[#F0D98A]
                       "
                     >
-                      <span className="h-px w-5 bg-current" />
+                      <span className="h-px w-7 bg-current" />
                       <ArrowRight size={11} />
                     </div>
 
                   </div>
-
                 </motion.div>
               );
             })}
@@ -1430,7 +1708,6 @@ export default function AboutPage() {
           </div>
 
         </div>
-
       </section>
 
 
