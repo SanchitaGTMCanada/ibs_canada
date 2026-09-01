@@ -947,15 +947,19 @@ export default function AboutPage() {
       <section
         className="
           relative
-          overflow-hidden
+          overflow-visible
           bg-[#0B1F3A]
           px-6
-          py-28
+          h-fit
+          py-24
           sm:px-8
+          sm:py-38
           lg:px-10
-          lg:py-36
+          lg:py-42
           xl:px-14
         "
+
+        style={{paddingTop:"70px 0px"}}
       >
 
         {/* Background grid */}
@@ -998,69 +1002,118 @@ export default function AboutPage() {
 
 
         <div className="relative z-10 mx-auto max-w-[1280px]">
+<div
+  className="
+    flex
+    flex-col
+    lg:flex-row
+    lg:items-end
+    lg:gap-3
+  "
+>
+  {/* Mission heading */}
 
-          <div
-            className="
-              grid
-              gap-10
-              lg:grid-cols-[0.8fr_1.2fr]
-              lg:items-end
-            "
-          >
+  <div className="shrink-0 lg:w-[270px]">
 
-            <div>
+    <span
+      className="
+        text-[9px]
+        font-bold
+        uppercase
+        tracking-[0.3em]
+        text-[#C6A15B]
+      "
+    >
+      02 / Our Vision
+    </span>
 
-              <span
-                className="
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.3em]
-                  text-[#C6A15B]
-                "
-              >
-                02 / Our Vision 
-              </span>
+    <h2
+      className="
+        mt-5
+        text-[45px]
+        font-bold
+        leading-[0.92]
+        tracking-[-0.055em]
+        text-white
+        sm:text-[60px]
+      "
+    >
+      Our
 
-              <h2
-                className="
-                  mt-6
-                  text-[45px]
-                  font-bold
-                  leading-[0.98]
-                  tracking-[-0.055em]
-                  text-white
-                  sm:text-[60px]
-                "
-              >
-                Many disciplines.
+      <span className="block text-[#BCEBE8]">
+        Mission
+      </span>
+    </h2>
 
-                <span className="block text-[#BCEBE8]">
-                  One ecosystem.
-                </span>
-              </h2>
+  </div>
 
-            </div>
 
-            <p
-              className="
-                max-w-[520px]
-                text-[15px]
-                leading-8
-                text-white/45
-              "
-            >
-             To support stronger, more capable organizations through strategic direction, financial and operational management, research, training and practical implementation support. 
-            </p>
+  {/* Mission paragraph */}
 
-          </div>
+  <p
+    className="
+      max-w-[500px]
+      pb-1
+      text-[15px]
+      leading-8
+      text-white/45
+    "
+  >
+    To support stronger, more capable organizations through strategic
+    direction, financial and operational management, research, training
+    and practical implementation support.
+  </p>
+
+</div>
+
+{/* Divider */}
+
+<div
+  className="
+    mt-5
+    flex
+    items-center
+    gap-3
+    lg:mt-5
+  "
+>
+  {/* Teal line */}
+  <span
+    className="
+      h-[2px]
+      w-20
+      rounded-full
+      bg-[#087F8C]
+    "
+  />
+
+  {/* Gold line */}
+  <span
+    className="
+      h-[2px]
+      w-90
+      rounded-full
+      bg-[#C6A15B]
+    "
+  />
+</div>
 
 
           {/* =================================================
               CONSTELLATION — PREMIUM CORPORATE ECOSYSTEM
           ================================================= */}
 
-          <div className="relative mt-20 min-h-[720px] overflow-hidden">
+          <div
+            className="
+              relative
+              mt-16
+              h-[720px]
+              overflow-visible
+              sm:mt-20
+              sm:h-[740px]
+              lg:h-[720px]
+            "
+          >
 
             {/* Soft atmospheric glow */}
             <motion.div
@@ -1129,9 +1182,14 @@ export default function AboutPage() {
                 absolute
                 left-1/2
                 top-1/2
-                hidden
-                h-[570px]
-                w-[570px]
+                h-[320px]
+                w-[320px]
+                sm:h-[390px]
+                sm:w-[390px]
+                md:h-[470px]
+                md:w-[470px]
+                lg:h-[570px]
+                lg:w-[570px]
                 -translate-x-1/2
                 -translate-y-1/2
                 rounded-full
@@ -1170,9 +1228,14 @@ export default function AboutPage() {
                 absolute
                 left-1/2
                 top-1/2
-                hidden
-                h-[435px]
-                w-[435px]
+                h-[245px]
+                w-[245px]
+                sm:h-[300px]
+                sm:w-[300px]
+                md:h-[355px]
+                md:w-[355px]
+                lg:h-[435px]
+                lg:w-[435px]
                 -translate-x-1/2
                 -translate-y-1/2
                 rounded-full
@@ -1210,9 +1273,14 @@ export default function AboutPage() {
                 absolute
                 left-1/2
                 top-1/2
-                hidden
-                h-[315px]
-                w-[315px]
+                h-[175px]
+                w-[175px]
+                sm:h-[215px]
+                sm:w-[215px]
+                md:h-[255px]
+                md:w-[255px]
+                lg:h-[315px]
+                lg:w-[315px]
                 -translate-x-1/2
                 -translate-y-1/2
                 rounded-full
@@ -1328,8 +1396,14 @@ export default function AboutPage() {
                 top-1/2
                 z-40
                 flex
-                h-[165px]
-                w-[165px]
+                h-[112px]
+                w-[112px]
+                sm:h-[128px]
+                sm:w-[128px]
+                md:h-[145px]
+                md:w-[145px]
+                lg:h-[165px]
+                lg:w-[165px]
                 -translate-x-1/2
                 -translate-y-1/2
                 flex-col
@@ -1403,9 +1477,9 @@ export default function AboutPage() {
                   text-white
                 "
               >
-                Integrated
+               Our
                 <br />
-                Thinking
+                Values
               </span>
             </motion.div>
 
@@ -1413,49 +1487,56 @@ export default function AboutPage() {
                 CAPABILITY CARDS
             ================================================= */}
             {[
-              {
-                icon: BriefcaseBusiness,
-                title: "Business",
-                text: "Strategy & growth",
-                position: "left-0 top-0 lg:left-[4%] lg:top-[7%]",
-                accent: "#BCEBE8",
-              },
-              {
-                icon: Cpu,
-                title: "Technology",
-                text: "Digital transformation",
-                position: "right-0 top-0 lg:right-[4%] lg:top-[7%]",
-                accent: "#BCEBE8",
-              },
-              {
-                icon: Lightbulb,
-                title: "Education",
-                text: "Learning & capability",
-                position: "left-0 top-[240px] lg:left-[1%] lg:top-[42%]",
-                accent: "#C6A15B",
-              },
-              {
-                icon: Building2,
-                title: "Engineering",
-                text: "Technical expertise",
-                position: "right-0 top-[240px] lg:right-[1%] lg:top-[42%]",
-                accent: "#C6A15B",
-              },
-              {
-                icon: Globe2,
-                title: "Community",
-                text: "Social impact",
-                position: "left-[5%] bottom-[15px] lg:left-[16%] lg:bottom-[5%]",
-                accent: "#BCEBE8",
-              },
-              {
-                icon: Network,
-                title: "Partnership",
-                text: "Connected ecosystems",
-                position: "right-[5%] bottom-[15px] lg:right-[16%] lg:bottom-[5%]",
-                accent: "#BCEBE8",
-              },
-            ].map((item, index) => {
+  {
+    icon: BriefcaseBusiness,
+    title: "Integrity",
+    text: "We act with integrity and build trust through sound governance and professional conduct.",
+    position: "left-[2%] top-[2%] lg:left-[2%] lg:top-[2%]",
+    accent: "#BCEBE8",
+  },
+
+  {
+    icon: Cpu,
+    title: "Service Excellence",
+    text: "We hold ourselves to high standards and consider the long-term impact of our work",
+    position: "right-[2%] top-[2%] lg:right-[2%] lg:top-[2%]",
+    accent: "#BCEBE8",
+  },
+
+  {
+    icon: Lightbulb,
+    title: "Value Creation",
+    text: "We focus on practical value, knowledge transfer and solutions that strengthen client capability.",
+    position: "left-[2%] top-[285px] lg:left-[2%] lg:top-[44%]",
+    accent: "#C6A15B",
+  },
+
+  {
+    icon: Building2,
+    title: "Excellence",
+    text: "We promote teamwork, learning, innovation and disciplined execution.",
+    position: "right-[2%] top-[285px] lg:right-[2%] lg:top-[44%]",
+    accent: "#C6A15B",
+  },
+
+  {
+  icon: Globe2,
+  title: "Respect",
+  text: "We collaborate respectfully with clients and stakeholders and recognize the importance of self-determination.",
+  position:
+    "left-[10%] bottom-[-180px] lg:left-[10%] lg:bottom-[-120px]",
+  accent: "#BCEBE8",
+},
+
+{
+  icon: Network,
+  title: "Confidentiality",
+  text: "We protect confidential information and build relationships grounded in trust.",
+  position:
+    "right-[10%] bottom-[-180px] lg:right-[10%] lg:bottom-[-120px]",
+  accent: "#BCEBE8",
+},
+].map((item, index) => {
               const Icon = item.icon;
 
               return (
@@ -1476,7 +1557,7 @@ export default function AboutPage() {
                     },
                   }}
                   whileHover={{ y: -7, scale: 1.02 }}
-                  className={`absolute ${item.position} z-20 w-[150px] sm:w-[195px]`}
+                  className={`absolute ${item.position} z-20 w-[165px] sm:w-[205px]`}
                 >
                   <div
                     className="
