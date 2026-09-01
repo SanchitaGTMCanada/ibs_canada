@@ -619,7 +619,7 @@ export default function AboutPage() {
                   duration: 1.8,
                   ease: "easeOut",
                 }}
-                src={HERO_IMAGE}
+                src="/images/about/about-who-hero.jpg"
                 alt="Business professionals collaborating"
                 loading="eager"
                 className="
@@ -2486,7 +2486,7 @@ export default function AboutPage() {
             duration: 1.6,
             ease: "easeOut",
           }}
-          src={STORY_IMAGE}
+          src="/images/about/better-que-about.jpg"
           alt="IBS team collaborating"
           loading="lazy"
           className="
@@ -2817,7 +2817,7 @@ export default function AboutPage() {
         {/* Background image */}
 
         <img
-          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85"
+          src="/images/about/why-client-plan.jpg"
           alt="Purpose driven workspace"
           className="
             absolute
@@ -3073,7 +3073,7 @@ export default function AboutPage() {
           <div className="relative min-h-[220px] overflow-hidden lg:min-h-0">
 
             <img
-              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=85"
+              src="images/about/why-client-resource.jpg"
               alt="Research and curiosity"
               className="
                 h-full
@@ -3145,7 +3145,7 @@ export default function AboutPage() {
           <div className="relative order-2 min-h-[220px] overflow-hidden lg:order-1 lg:min-h-0">
 
             <img
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85"
+              src="images/about/why-client-transparent.jpg"
               alt="Partnership and collaboration"
               className="
                 h-full
@@ -3289,7 +3289,7 @@ export default function AboutPage() {
         {/* Image */}
 
         <img
-          src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=85"
+          src="images/about/why-client-team.jpg"
           alt="Integrity and professional standards"
           className="
             absolute
