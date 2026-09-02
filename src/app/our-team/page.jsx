@@ -266,7 +266,7 @@ export default function OurTeamPage() {
         <div className="absolute inset-0">
 
           <img
-            src="/images/our-team/our-team-hero.jpg"
+            src="/images/our_team/our-team.jpg"
             alt="IBS Canada team"
             className="
               h-full
