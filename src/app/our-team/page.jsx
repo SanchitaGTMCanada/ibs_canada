@@ -1577,311 +1577,236 @@ export default function OurTeamPage() {
 
 </section>
       {/* =====================================================
-          CORE TEAM — LEADERSHIP ORBIT
+          CORE TEAM — EXECUTIVE LEADERSHIP
       ===================================================== */}
       <section
         className="relative overflow-hidden bg-[#071A2D] px-5 py-20 sm:px-8 lg:px-10 lg:py-24 xl:px-12"
       >
         {/* Ambient background */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute left-1/2 top-[45%] h-[780px] w-[780px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#087F8C]/10 blur-[110px]" />
-          <div className="absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#C6A15B]/[0.05] blur-[100px]" />
-          <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#087F8C]/[0.08] blur-[110px]" />
-          <div className="absolute left-1/2 top-[47%] hidden h-[920px] w-[920px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.035] lg:block" />
-          <div className="absolute left-1/2 top-[47%] hidden h-[710px] w-[710px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#C6A15B]/[0.09] lg:block" />
-          <div className="absolute left-1/2 top-[47%] hidden h-[515px] w-[515px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#087F8C]/[0.16] lg:block" />
+          <div className="absolute left-1/2 top-[28%] h-[720px] w-[720px] -translate-x-1/2 rounded-full bg-[#087F8C]/[0.07] blur-[120px]" />
+          <div className="absolute -left-48 top-[18%] h-[520px] w-[520px] rounded-full bg-[#C6A15B]/[0.045] blur-[110px]" />
+          <div className="absolute -right-48 bottom-[-5%] h-[560px] w-[560px] rounded-full bg-[#087F8C]/[0.055] blur-[120px]" />
+
+          {/* Subtle grid */}
+          <div
+            className="absolute inset-0 opacity-[0.035]"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px)",
+              backgroundSize: "70px 70px",
+            }}
+          />
         </div>
 
-        {/* Decorative floating icons */}
+        {/* Oversized decorative icons */}
         <motion.div
           aria-hidden="true"
-          animate={{ y: [0, -16, 0], rotate: [0, 5, 0], opacity: [0.06, 0.16, 0.06] }}
+          animate={{ y: [0, -18, 0], rotate: [0, 5, 0], opacity: [0.05, 0.11, 0.05] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="pointer-events-none absolute left-[3%] top-[16%] hidden text-[#C6A15B] lg:block"
+          className="pointer-events-none absolute left-[2%] top-[18%] hidden text-[#C6A15B] lg:block"
         >
-          <Award size={150} strokeWidth={0.6} />
+          <Award size={180} strokeWidth={0.65} />
         </motion.div>
 
         <motion.div
           aria-hidden="true"
-          animate={{ y: [0, 18, 0], rotate: [0, -6, 0], opacity: [0.05, 0.14, 0.05] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="pointer-events-none absolute bottom-[9%] right-[3%] hidden text-[#087F8C] lg:block"
+          animate={{ y: [0, 20, 0], rotate: [0, -5, 0], opacity: [0.04, 0.10, 0.04] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+          className="pointer-events-none absolute bottom-[10%] right-[2%] hidden text-[#087F8C] lg:block"
         >
-          <BrainCircuit size={170} strokeWidth={0.6} />
+          <BrainCircuit size={190} strokeWidth={0.65} />
         </motion.div>
 
-        <div className="relative z-10 mx-auto max-w-[1380px]">
-          {/* Heading */}
+        <div className="relative z-10 mx-auto max-w-[1320px]">
+          {/* Section heading */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.7 }}
-            className="mx-auto max-w-[780px] text-center"
+            className="mx-auto max-w-[820px] text-center"
           >
             <div className="flex items-center justify-center gap-3">
               <span className="h-px w-12 bg-[#C6A15B]" />
               <span className="text-[10px] font-bold uppercase tracking-[0.32em] text-[#C6A15B]">
                 Core Team
               </span>
-              <span className="h-px w-12 bg-[#C6A15B]" />
+              <span className="h-px w-12 bg-[#087F8C]" />
             </div>
 
             <h2 className="mt-5 text-[38px] font-semibold leading-[1] tracking-[-0.045em] text-white sm:text-[52px] lg:text-[62px]">
-              Leadership at the Core.
+              Leadership that
               <span className="block bg-gradient-to-r from-white via-[#D8B866] to-[#43B8BA] bg-clip-text text-transparent">
-                Strength in Every Direction.
+                drives the difference.
               </span>
             </h2>
 
-            <p className="mx-auto mt-5 max-w-[650px] text-[12px] leading-6 text-[#B9C5CF] sm:text-[13px]">
+            <p className="mx-auto mt-5 max-w-[690px] text-[12px] leading-6 text-[#B9C5CF] sm:text-[13px]">
               IBS brings together professionals across finance, strategy, governance,
               operations, technology, research, economics and technical disciplines.
             </p>
           </motion.div>
 
           {/* =====================================================
-              DESKTOP — STEPPED LEADERSHIP
-              ===================================================== */}
-          <div className="relative mx-auto mt-14 hidden w-full max-w-[1380px] xl:block">
-            {/* Animated oversized background icons */}
-            <div className="pointer-events-none absolute inset-0 -z-0 overflow-hidden rounded-[50px]">
-              <motion.div
-                aria-hidden="true"
-                animate={{ y: [0, -24, 0], rotate: [0, 8, 0], opacity: [0.16, 0.30, 0.16], scale: [1, 1.05, 1] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute left-[1%] top-[10%] text-[#087F8C]"
-              >
-                <UsersRound size={190} strokeWidth={0.65} />
-              </motion.div>
-              <motion.div
-                aria-hidden="true"
-                animate={{ y: [0, 26, 0], rotate: [0, -8, 0], opacity: [0.14, 0.28, 0.14], scale: [1, 1.06, 1] }}
-                transition={{ duration: 8, delay: 0.8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute right-[0%] top-[22%] text-[#C6A15B]"
-              >
-                <Target size={205} strokeWidth={0.65} />
-              </motion.div>
-              <motion.div
-                aria-hidden="true"
-                animate={{ y: [0, -22, 0], rotate: [0, -7, 0], opacity: [0.13, 0.27, 0.13], scale: [1, 1.05, 1] }}
-                transition={{ duration: 6.5, delay: 1.4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute left-[5%] bottom-[8%] text-[#C6A15B]"
-              >
-                <Lightbulb size={175} strokeWidth={0.65} />
-              </motion.div>
-              <motion.div
-                aria-hidden="true"
-                animate={{ y: [0, 23, 0], rotate: [0, 8, 0], opacity: [0.14, 0.29, 0.14], scale: [1, 1.06, 1] }}
-                transition={{ duration: 7.5, delay: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute right-[5%] bottom-[6%] text-[#087F8C]"
-              >
-                <BriefcaseBusiness size={185} strokeWidth={0.65} />
-              </motion.div>
-              <motion.div
-                aria-hidden="true"
-                animate={{ y: [0, -18, 0], rotate: [0, 5, 0], opacity: [0.10, 0.22, 0.10] }}
-                transition={{ duration: 9, delay: 0.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute left-[25%] top-[3%] text-[#C6A15B]"
-              >
-                <Handshake size={135} strokeWidth={0.65} />
-              </motion.div>
-              <motion.div
-                aria-hidden="true"
-                animate={{ y: [0, 18, 0], rotate: [0, -5, 0], opacity: [0.10, 0.22, 0.10] }}
-                transition={{ duration: 9.5, delay: 1.2, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute right-[25%] bottom-[2%] text-[#087F8C]"
-              >
-                <TrendingUp size={140} strokeWidth={0.65} />
-              </motion.div>
+              FEATURED PRESIDENT
+          ===================================================== */}
+          <motion.article
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.75 }}
+            className="group relative mx-auto mt-14 max-w-[980px]"
+          >
+            <div className="absolute -inset-px rounded-[30px] bg-gradient-to-r from-[#C6A15B]/70 via-[#087F8C]/70 to-[#C6A15B]/40 opacity-80" />
 
-              <div className="absolute left-1/2 top-[3%] h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-[#087F8C]/[0.055] blur-[120px]" />
-              <div className="absolute left-[-100px] bottom-[-100px] h-[400px] w-[400px] rounded-full bg-[#C6A15B]/[0.04] blur-[100px]" />
-              <div className="absolute right-[-100px] top-[20%] h-[450px] w-[450px] rounded-full bg-[#087F8C]/[0.04] blur-[110px]" />
-            </div>
+            <div className="relative overflow-hidden rounded-[30px] border border-white/10 bg-[#0B1F3A] shadow-[0_30px_90px_rgba(0,0,0,.28)]">
+              <div className="absolute inset-y-0 right-0 hidden w-[42%] bg-gradient-to-l from-[#087F8C]/20 to-transparent lg:block" />
+              <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-[#C6A15B]/10 blur-3xl" />
 
-            {/* Soft background structure */}
-            <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-[40px]">
-              <div className="absolute left-1/2 top-[8%] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#087F8C]/[0.08] blur-[100px]" />
-              <div className="absolute -left-32 bottom-10 h-[380px] w-[380px] rounded-full bg-[#C6A15B]/[0.045] blur-[90px]" />
-              <div className="absolute -right-32 top-32 h-[420px] w-[420px] rounded-full bg-[#087F8C]/[0.05] blur-[100px]" />
-            </div>
-
-            {/* Leadership spine */}
-            <div className="pointer-events-none absolute left-1/2 top-[300px] bottom-[170px] w-px -translate-x-1/2 bg-gradient-to-b from-[#C6A15B]/80 via-[#087F8C]/50 to-[#C6A15B]/20" />
-
-            {/* PRESIDENT — STEP 00 */}
-            <motion.div
-              initial={{ opacity: 0, y: -30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7 }}
-              className="relative z-10 mx-auto w-[450px]"
-            >
-              <div className="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full border border-[#C6A15B]/50 bg-[#0B1F3A] px-5 py-2 text-[8px] font-bold uppercase tracking-[0.28em] text-[#C6A15B]">
-                Step 00 · Leadership
-              </div>
-
-              <div className="rounded-[38px] border border-[#C6A15B]/50 bg-gradient-to-br from-[#0B1F3A] via-[#123A5A] to-[#087F8C] p-[2px] shadow-[0_30px_80px_rgba(0,0,0,.28)]">
-                <div className="rounded-[36px] bg-[#F6F4EF] px-10 py-10 text-center">
-                  <div className="mx-auto h-[150px] w-[150px] overflow-hidden rounded-full border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-lg">
-                    <img src={leaders[0].image} alt={leaders[0].name} className="h-full w-full object-cover" />
-                  </div>
-                  <div className="mx-auto mt-5 inline-flex items-center gap-2 rounded-full bg-[#0B1F3A] px-4 py-2 text-[8px] font-bold uppercase tracking-[0.2em] text-[#C6A15B]">
-                    <Award size={12} /> President
-                  </div>
-                  <h3 className="mt-3 text-[27px] font-semibold tracking-[-0.03em] text-[#0B1F3A]">{leaders[0].name}</h3>
-                  <p className="mt-1 text-[9px] leading-4 text-[#68737D]">{leaders[0].role}</p>
-                  <p className="mx-auto mt-4 max-w-[360px] text-[11px] leading-5 text-[#68737D]">{leaders[0].description}</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Connector */}
-            <div className="relative z-10 mx-auto h-16 w-px bg-gradient-to-b from-[#C6A15B] to-[#087F8C]" />
-
-            {/* STEP 01 — COO */}
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.6 }}
-              className="relative z-10 mx-auto w-[420px]"
-            >
-              <div className="rounded-[32px] border border-[#087F8C]/40 bg-[#123A5A] p-1 shadow-[0_22px_60px_rgba(0,0,0,.2)]">
-                <div className="rounded-[28px] bg-[#0B1F3A] px-8 py-8 text-center">
-                  <span className="text-[8px] font-bold uppercase tracking-[0.25em] text-[#C6A15B]">Step 01 · Operations</span>
-                  <div className="mx-auto mt-4 h-[105px] w-[105px] overflow-hidden rounded-full border-2 border-[#C6A15B] bg-[#DCE2E7]">
-                    <img src={leaders[1].image} alt={leaders[1].name} className="h-full w-full object-cover" />
-                  </div>
-                  <h3 className="mt-4 text-[20px] font-semibold text-white">{leaders[1].name}</h3>
-                  <p className="mt-1 text-[8px] font-semibold uppercase leading-4 tracking-[0.08em] text-[#43B8BA]">{leaders[1].role}</p>
-                  <p className="mt-2 text-[8px] font-semibold uppercase tracking-[0.1em] text-[#C6A15B]">{leaders[1].tagline}</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Connector */}
-            <div className="relative z-10 mx-auto h-14 w-px bg-gradient-to-b from-[#087F8C] to-[#C6A15B]" />
-
-            {/* STEPPED TEAM LEVELS */}
-            <div className="relative z-10 space-y-7">
-              {[
-                [leaders[2], leaders[6]],
-                [leaders[3], leaders[4], leaders[7]],
-                [leaders[5], leaders[8], leaders[9]],
-              ].map((row, rowIndex) => {
-                const icons = [Handshake, BriefcaseBusiness, UsersRound, Target, BrainCircuit, Lightbulb, ShieldCheck, Award];
-                return (
-                  <motion.div
-                    key={`step-row-${rowIndex}`}
-                    initial={{ opacity: 0, y: 28 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.55, delay: rowIndex * 0.08 }}
-                    className="relative"
-                  >
-                    {/* horizontal step rail */}
-                    <div className="pointer-events-none absolute left-[7%] right-[7%] top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-[#087F8C]/30 to-transparent" />
-
-                    <div
-                      className={
-                        row.length === 2
-                          ? "mx-auto grid max-w-[860px] grid-cols-2 gap-10"
-                          : "mx-auto grid max-w-[1120px] grid-cols-3 gap-8"
-                      }
-                    >
-                      {row.map((leader, index) => {
-                        const leaderIndex = leaders.indexOf(leader);
-                        const Icon = icons[Math.max(0, leaderIndex - 2) % icons.length];
-                        const stepNumber = String(rowIndex + 2).padStart(2, "0");
-
-                        return (
-                          <div key={leader.name} className="relative">
-                            <div className="absolute -top-3 left-7 z-20 flex h-7 min-w-7 items-center justify-center rounded-full border border-[#C6A15B]/50 bg-[#0B1F3A] px-2 text-[7px] font-bold text-[#C6A15B]">
-                              {stepNumber}
-                            </div>
-
-                            <article className="group relative min-h-[300px] overflow-hidden rounded-[26px] border border-white/10 bg-gradient-to-br from-[#0B1F3A] via-[#123A5A] to-[#087F8C] p-[1px] shadow-[0_20px_50px_rgba(0,0,0,.2)] transition-transform duration-300 hover:-translate-y-2">
-                              <div className="relative h-full overflow-hidden rounded-[25px] bg-[#F6F4EF]">
-                                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#C6A15B] via-[#087F8C] to-[#C6A15B]" />
-
-                                <div className="flex items-center gap-4 p-5">
-                                  <div className="relative h-[94px] w-[94px] shrink-0 overflow-hidden rounded-[18px] border-2 border-[#C6A15B] bg-[#DCE2E7]">
-                                    <img src={leader.image} alt={leader.name} className="h-full w-full object-cover" />
-                                    <div className="absolute bottom-0 right-0 flex h-8 w-8 items-center justify-center rounded-tl-[12px] bg-[#0B1F3A] text-[#C6A15B]">
-                                      <Icon size={13} />
-                                    </div>
-                                  </div>
-
-                                  <div className="min-w-0">
-                                    <p className="text-[7px] font-bold uppercase tracking-[0.18em] text-[#A47C2F]">Leadership Step</p>
-                                    <h3 className="mt-1 text-[18px] font-semibold leading-6 tracking-[-0.02em] text-[#0B1F3A]">{leader.name}</h3>
-                                    <p className="mt-1 text-[8px] font-bold uppercase leading-3.5 tracking-[0.06em] text-[#087F8C]">{leader.role}</p>
-                                  </div>
-                                </div>
-
-                                <div className="border-t border-[#DCE2E7] px-5 py-4">
-                                  <p className="text-[10px] leading-6 text-[#68737D]">{leader.description}</p>
-                                  <div className="mt-4 h-[2px] w-8 bg-[#C6A15B] transition-all duration-500 group-hover:w-16" />
-                                </div>
-                              </div>
-                            </article>
-                          </div>
-                        );
-                      })}
+              <div className="relative grid lg:grid-cols-[260px_1fr]">
+                <div className="flex items-center justify-center border-b border-white/10 bg-gradient-to-br from-[#123A5A] to-[#0B1F3A] p-8 lg:border-b-0 lg:border-r">
+                  <div className="relative">
+                    <div className="absolute -inset-3 rounded-[28px] border border-[#C6A15B]/20" />
+                    <div className="relative h-[190px] w-[190px] overflow-hidden rounded-[24px] border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-[0_18px_45px_rgba(0,0,0,.3)]">
+                      <img
+                        src={leaders[0].image}
+                        alt={leaders[0].name}
+                        className="h-full w-full object-cover"
+                      />
                     </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+                    <div className="absolute -bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-[#C6A15B]/50 bg-[#071A2D] px-4 py-2 text-[8px] font-bold uppercase tracking-[0.2em] text-[#C6A15B]">
+                      <Award size={12} />
+                      President
+                    </div>
+                  </div>
+                </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mx-auto mt-14 flex max-w-[920px] items-center justify-center gap-4 border-t border-white/10 pt-7"
-            >
-              <span className="h-px w-12 bg-[#C6A15B]" />
-              <span className="text-[8px] font-bold uppercase tracking-[0.28em] text-[#8FA0AD]">Strategy · Operations · Expertise · Impact</span>
-              <span className="h-px w-12 bg-[#087F8C]" />
-            </motion.div>
+                <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
+                  <div className="flex items-center gap-3">
+                    <span className="text-[8px] font-bold uppercase tracking-[0.25em] text-[#C6A15B]">
+                      Executive Leadership · 01
+                    </span>
+                    <span className="h-px w-12 bg-[#087F8C]" />
+                  </div>
+
+                  <h3 className="mt-4 text-[30px] font-semibold tracking-[-0.035em] text-white sm:text-[36px]">
+                    {leaders[0].name}
+                  </h3>
+
+                  <p className="mt-2 max-w-[650px] text-[9px] font-semibold uppercase leading-5 tracking-[0.08em] text-[#43B8BA]">
+                    {leaders[0].role}
+                  </p>
+
+                  <p className="mt-6 max-w-[700px] text-[11px] leading-6 text-[#B9C5CF] sm:text-[12px]">
+                    {leaders[0].description}
+                  </p>
+
+                  <div className="mt-7 flex items-center gap-3">
+                    <span className="h-[2px] w-10 bg-[#C6A15B] transition-all duration-500 group-hover:w-20" />
+                    <span className="text-[8px] font-bold uppercase tracking-[0.2em] text-[#718393]">
+                      Strategic Leadership
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.article>
+
+          {/* Leadership divider */}
+          <div className="mx-auto mt-8 flex max-w-[980px] items-center justify-center gap-4">
+            <span className="h-px flex-1 bg-gradient-to-r from-transparent to-white/10" />
+            <span className="h-2 w-2 rounded-full bg-[#C6A15B]" />
+            <span className="h-px flex-1 bg-gradient-to-l from-transparent to-white/10" />
           </div>
 
           {/* =====================================================
-              MOBILE / TABLET — SAME HIERARCHY, CLEAN FLOW
+              SENIOR LEADERSHIP — COO + STRATEGIC ADVISOR
           ===================================================== */}
-          <div className="mt-12 xl:hidden">
-            {/* President */}
-            <motion.article
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            {leaders.slice(1, 3).map((leader, index) => {
+              const Icon = index === 0 ? TrendingUp : Handshake;
+
+              return (
+                <motion.article
+                  key={leader.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.6, delay: index * 0.08 }}
+                  whileHover={{ y: -6 }}
+                  className="group relative overflow-hidden rounded-[26px] border border-white/10 bg-gradient-to-br from-[#0B1F3A] via-[#123A5A] to-[#0E4552] p-[1px] shadow-[0_22px_55px_rgba(0,0,0,.22)]"
+                >
+                  <div className="relative h-full overflow-hidden rounded-[25px] bg-[#0B1F3A] p-6 sm:p-7">
+                    <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-[#087F8C]/10 blur-3xl transition-transform duration-700 group-hover:scale-150" />
+
+                    <div className="relative flex gap-5">
+                      <div className="relative h-[105px] w-[105px] shrink-0 overflow-hidden rounded-[20px] border-2 border-[#C6A15B]/80 bg-[#DCE2E7]">
+                        <img
+                          src={leader.image}
+                          alt={leader.name}
+                          className="h-full w-full object-cover"
+                        />
+                        <div className="absolute bottom-0 right-0 flex h-8 w-8 items-center justify-center rounded-tl-[12px] bg-[#087F8C] text-white">
+                          <Icon size={14} />
+                        </div>
+                      </div>
+
+                      <div className="min-w-0 flex-1">
+                        <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-[#C6A15B]">
+                          {index === 0 ? "Executive Leadership · 02" : "Senior Advisory · 03"}
+                        </p>
+                        <h3 className="mt-2 text-[21px] font-semibold tracking-[-0.025em] text-white">
+                          {leader.name}
+                        </h3>
+                        <p className="mt-1 text-[8px] font-bold uppercase leading-4 tracking-[0.07em] text-[#43B8BA]">
+                          {leader.role}
+                        </p>
+                        {leader.tagline && (
+                          <p className="mt-2 text-[7px] font-semibold uppercase tracking-[0.1em] text-[#C6A15B]">
+                            {leader.tagline}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="relative mt-6 border-t border-white/10 pt-5">
+                      <p className="text-[10px] leading-6 text-[#B9C5CF]">
+                        {leader.description}
+                      </p>
+                      <div className="mt-5 h-[2px] w-9 bg-[#C6A15B] transition-all duration-500 group-hover:w-16" />
+                    </div>
+                  </div>
+                </motion.article>
+              );
+            })}
+          </div>
+
+          {/* =====================================================
+              LEADERSHIP TEAM GRID
+          ===================================================== */}
+          <div className="mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="mx-auto max-w-[390px] rounded-[32px] border border-[#C6A15B]/50 bg-gradient-to-br from-[#0B1F3A] via-[#123A5A] to-[#087F8C] p-2 shadow-[0_25px_60px_rgba(0,0,0,.25)]"
+              transition={{ duration: 0.6 }}
+              className="mb-6 flex items-center gap-4"
             >
-              <div className="rounded-[26px] bg-[#F6F4EF] px-6 py-7 text-center">
-                <div className="mx-auto h-[125px] w-[125px] overflow-hidden rounded-full border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-lg">
-                  <img src={leaders[0].image} alt={leaders[0].name} className="h-full w-full object-cover" />
-                </div>
-                <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#0B1F3A] px-4 py-1.5 text-[8px] font-bold uppercase tracking-[0.2em] text-[#C6A15B]">
-                  <Award size={12} /> President
-                </div>
-                <h3 className="mt-3 text-[21px] font-semibold text-[#0B1F3A]">{leaders[0].name}</h3>
-                <p className="mt-1 text-[9px] leading-4 text-[#68737D]">{leaders[0].role}</p>
-                <p className="mt-3 text-[10px] leading-5 text-[#68737D]">{leaders[0].description}</p>
+              <div>
+                <p className="text-[8px] font-bold uppercase tracking-[0.25em] text-[#C6A15B]">
+                  Leadership Team
+                </p>
+                <h3 className="mt-1 text-[24px] font-semibold tracking-[-0.025em] text-white sm:text-[28px]">
+                  Expertise across every discipline.
+                </h3>
               </div>
-            </motion.article>
+              <div className="hidden h-px flex-1 bg-gradient-to-r from-[#087F8C]/40 to-transparent sm:block" />
+            </motion.div>
 
-            <div className="mx-auto my-6 h-12 w-px bg-gradient-to-b from-[#C6A15B] to-[#087F8C]" />
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              {leaders.slice(1).map((leader, index) => {
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {leaders.slice(3).map((leader, index) => {
                 const icons = [
-                  TrendingUp,
-                  Handshake,
                   BriefcaseBusiness,
                   UsersRound,
                   Target,
@@ -1890,36 +1815,60 @@ export default function OurTeamPage() {
                   ShieldCheck,
                   Award,
                 ];
-                const Icon = icons[index];
+                const Icon = icons[index % icons.length];
 
                 return (
                   <motion.article
                     key={leader.name}
                     initial={{ opacity: 0, y: 25 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.15 }}
+                    viewport={{ once: true, amount: 0.12 }}
                     transition={{ duration: 0.55, delay: index * 0.05 }}
-                    whileHover={{ y: -5 }}
-                    className="group relative overflow-hidden rounded-[26px] border border-white/10 bg-[#F6F4EF] shadow-[0_15px_40px_rgba(0,0,0,.18)]"
+                    whileHover={{ y: -6 }}
+                    className="group relative overflow-hidden rounded-[24px] border border-white/10 bg-[#F6F4EF] shadow-[0_18px_45px_rgba(0,0,0,.18)]"
                   >
-                    <div className="flex items-center gap-4 bg-gradient-to-r from-[#0B1F3A] to-[#123A5A] p-4">
-                      <div className="relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#C6A15B] bg-[#DCE2E7]">
-                        <img src={leader.image} alt={leader.name} className="h-full w-full object-cover" />
+                    <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#C6A15B] via-[#087F8C] to-[#C6A15B]" />
+
+                    <div className="flex items-center gap-4 bg-gradient-to-r from-[#0B1F3A] to-[#123A5A] p-5">
+                      <div className="relative h-[82px] w-[82px] shrink-0 overflow-hidden rounded-[18px] border-2 border-[#C6A15B]/80 bg-[#DCE2E7]">
+                        <img
+                          src={leader.image}
+                          alt={leader.name}
+                          className="h-full w-full object-cover"
+                        />
                       </div>
-                      <div className="min-w-0">
-                        <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-[#087F8C] text-white">
-                          <Icon size={15} />
+
+                      <div className="min-w-0 flex-1">
+                        <div className="mb-2 flex items-center justify-between gap-2">
+                          <span className="text-[7px] font-bold uppercase tracking-[0.18em] text-[#C6A15B]">
+                            0{index + 4} / Leadership
+                          </span>
+                          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#087F8C]/40 bg-[#087F8C]/15 text-[#43B8BA]">
+                            <Icon size={13} />
+                          </span>
                         </div>
-                        <h3 className="text-[14px] font-semibold text-white">{leader.name}</h3>
-                        <p className="mt-1 text-[8px] font-semibold uppercase leading-3.5 tracking-[0.08em] text-[#43B8BA]">{leader.role}</p>
-                        {leader.tagline && (
-                          <p className="mt-1 text-[7px] font-semibold uppercase tracking-[0.1em] text-[#C6A15B]">{leader.tagline}</p>
-                        )}
+
+                        <h3 className="text-[16px] font-semibold leading-5 tracking-[-0.02em] text-white">
+                          {leader.name}
+                        </h3>
+
+                        <p className="mt-1 text-[7px] font-bold uppercase leading-3.5 tracking-[0.07em] text-[#43B8BA]">
+                          {leader.role}
+                        </p>
                       </div>
                     </div>
+
                     <div className="p-5">
-                      <p className="text-[10px] leading-5 text-[#68737D]">{leader.description}</p>
-                      <div className="mt-4 h-[2px] w-9 bg-[#C6A15B] transition-all duration-500 group-hover:w-16" />
+                      <p className="text-[10px] leading-5 text-[#68737D]">
+                        {leader.description}
+                      </p>
+
+                      <div className="mt-5 flex items-center justify-between">
+                        <span className="h-[2px] w-9 bg-[#C6A15B] transition-all duration-500 group-hover:w-16" />
+                        <span className="text-[7px] font-bold uppercase tracking-[0.2em] text-[#A47C2F]">
+                          IBS Leadership
+                        </span>
+                      </div>
                     </div>
                   </motion.article>
                 );
@@ -1927,27 +1876,32 @@ export default function OurTeamPage() {
             </div>
           </div>
 
-          {/* Bottom message */}
+          {/* Bottom statement */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="mx-auto mt-14 flex max-w-[900px] flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-center sm:flex-row sm:text-left"
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="mx-auto mt-14 flex max-w-[1000px] flex-col items-center justify-between gap-5 border-t border-white/10 pt-7 text-center sm:flex-row sm:text-left"
           >
             <div className="flex items-center gap-3">
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C6A15B]/50 bg-[#C6A15B]/10 text-[#C6A15B]">
                 <UsersRound size={15} />
               </span>
               <div>
-                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#C6A15B]">One multidisciplinary team</p>
-                <p className="mt-1 text-[10px] text-[#8FA0AD]">Different expertise. One shared purpose.</p>
+                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#C6A15B]">
+                  One multidisciplinary team
+                </p>
+                <p className="mt-1 text-[10px] text-[#8FA0AD]">
+                  Different expertise. One shared purpose.
+                </p>
               </div>
             </div>
 
             <div className="flex items-center gap-2 text-[8px] font-bold uppercase tracking-[0.22em] text-[#8FA0AD]">
               <span className="h-px w-8 bg-[#087F8C]" />
-              Expertise · Collaboration · Impact
+              Strategy · Operations · Expertise · Impact
+              <span className="h-px w-8 bg-[#C6A15B]" />
             </div>
           </motion.div>
         </div>
