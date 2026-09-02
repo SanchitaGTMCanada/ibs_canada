@@ -19,10 +19,10 @@ import { motion } from "framer-motion";
 
 const industries = [
   {
-    id: "technology",
-    title: "Technology & SaaS",
+    id: "indigenous",
+    title: "Indigenous Organizations & Communities",
     description:
-      "Digital products, software businesses and technology-driven organizations.",
+      "Supporting governance, financial management, organizational capacity, economic development, infrastructure and community priorities.",
     icon: Cpu,
     image:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=85",
@@ -30,10 +30,10 @@ const industries = [
   },
 
   {
-    id: "finance",
-    title: "Finance & Advisory",
+    id: "government",
+    title: "Government & Public Sector",
     description:
-      "Financial services, consulting and professional advisory businesses.",
+      "Helping public-sector leaders strengthen programs, governance, financial management, operational performance and project delivery.",
     icon: Landmark,
     image:
       "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
@@ -41,21 +41,10 @@ const industries = [
   },
 
   {
-    id: "healthcare",
-    title: "Healthcare",
+    id: "construction",
+    title: "Construction & Infrastructure",
     description:
-      "Healthcare providers and organizations focused on better outcomes.",
-    icon: HeartPulse,
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85",
-    className: "lg:col-span-1",
-  },
-
-  {
-    id: "real-estate",
-    title: "Real Estate & Construction",
-    description:
-      "Property, architecture, construction and development businesses.",
+      "Supporting planning, feasibility, project management, technical coordination, risk and quality across infrastructure initiatives.",
     icon: Building2,
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85",
@@ -63,24 +52,13 @@ const industries = [
   },
 
   {
-    id: "retail",
-    title: "Retail & E-commerce",
+    id: "mining",
+    title: "Mining & Resources",
     description:
-      "Consumer brands, retail businesses and digital commerce platforms.",
-    icon: ShoppingBag,
+      "Providing management, financial, technical, environmental and organizational support for resource-sector priorities.",
+    icon: HeartPulse,
     image:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85",
-    className: "lg:col-span-1",
-  },
-
-  {
-    id: "manufacturing",
-    title: "Manufacturing",
-    description:
-      "Industrial businesses focused on operations, production and growth.",
-    icon: Factory,
-    image:
-      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85",
     className: "lg:col-span-1",
   },
 
@@ -88,7 +66,7 @@ const industries = [
     id: "education",
     title: "Education",
     description:
-      "Educational institutions, learning platforms and knowledge businesses.",
+      "Supporting education organizations and workforce initiatives through strategy, training, professional development and operational improvement.",
     icon: GraduationCap,
     image:
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85",
@@ -96,10 +74,10 @@ const industries = [
   },
 
   {
-    id: "startups",
-    title: "Startups & Entrepreneurs",
+    id: "smes",
+    title: "SMEs & Businesses",
     description:
-      "Ambitious founders and growing businesses building what comes next.",
+      "Helping growing businesses improve strategy, finance, operations, technology, market development and organizational performance.",
     icon: Rocket,
     image:
       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
@@ -270,7 +248,7 @@ export default function IndustriesSection() {
                 "
               />
 
-              <span
+              {/* <span
                 className="
                   text-[10px]
                   font-bold
@@ -280,7 +258,7 @@ export default function IndustriesSection() {
                 "
               >
                 INDUSTRIES WE SERVE
-              </span>
+              </span> */}
             </div>
 
             {/* Heading */}
@@ -297,14 +275,14 @@ export default function IndustriesSection() {
                 lg:text-[68px]
               "
             >
-              Expertise that moves
+              Industries
               <span
                 className="
                   block
                   text-[#087F8C]
                 "
               >
-                across industries.
+                We Serve
               </span>
             </h2>
           </div>
@@ -334,11 +312,7 @@ export default function IndustriesSection() {
                 sm:text-[15px]
               "
             >
-              Every industry has different challenges,
-              opportunities and ways of working. We
-              bring practical expertise and tailored
-              solutions to help organizations move
-              forward.
+              Our consulting approach is shaped by the operating context of each client. We combine sector understanding with practical management, financial, technical and technology expertise
             </p>
           </div>
         </motion.div>
@@ -346,286 +320,300 @@ export default function IndustriesSection() {
         {/* =================================================
             INDUSTRY GRID
         ================================================= */}
+<div
+  className="
+    grid
+    grid-cols-1
+    gap-4
+    sm:grid-cols-2
+    lg:grid-cols-4
+    lg:grid-rows-[250px_250px_250px]
+    xl:grid-rows-[270px_270px_270px]
+  "
+>
+  {industries.slice(0, 6).map((industry, index) => {
+    const Icon = industry.icon;
+
+    const gridAreas = [
+      "lg:col-span-2 lg:row-span-2", // Card 1
+      "lg:col-span-1 lg:row-span-1", // Card 2
+      "lg:col-span-1 lg:row-span-3", // Card 3
+      "lg:col-span-1 lg:row-span-1", // Card 4
+      "lg:col-span-1 lg:row-span-1", // Card 5
+      "lg:col-span-2 lg:row-span-1", // Card 6
+    ];
+
+    return (
+      <motion.div
+        key={industry.id}
+        initial={{
+          opacity: 0,
+          y: 35,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.12,
+        }}
+        transition={{
+          duration: 0.65,
+          delay: index * 0.07,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className={`
+          group
+          relative
+          min-h-[300px]
+          lg:min-h-0
+          h-full
+          overflow-hidden
+          rounded-[24px]
+          border
+          border-white
+          bg-[#073F46]
+          shadow-[0_18px_45px_rgba(13,45,51,0.08)]
+          ${gridAreas[index]}
+        `}
+      >
+        {/* IMAGE */}
+
+        <img
+          src={industry.image}
+          alt={industry.title}
+          className="
+            absolute
+            inset-0
+            h-full
+            w-full
+            object-cover
+            transition-transform
+            duration-[900ms]
+            ease-out
+            group-hover:scale-[1.08]
+          "
+        />
+
+        {/* IMAGE COLOR TREATMENT */}
 
         <div
           className="
-            grid
-            grid-cols-1
-            gap-4
-            sm:grid-cols-2
-            lg:grid-cols-4
-            lg:auto-rows-[250px]
-            xl:auto-rows-[270px]
+            absolute
+            inset-0
+            bg-[#063F46]/10
+            mix-blend-multiply
+            transition-opacity
+            duration-500
+            group-hover:opacity-30
+          "
+        />
+
+        {/* DARK GRADIENT */}
+
+        <div
+          className="
+            absolute
+            inset-0
+            bg-gradient-to-t
+            from-[#032F35]
+            via-[#063F46]/65
+            to-transparent
+            opacity-95
+          "
+        />
+
+        {/* HOVER LIGHT */}
+
+        <motion.div
+          className="
+            absolute
+            -right-[80px]
+            -top-[80px]
+            h-[220px]
+            w-[220px]
+            rounded-full
+            bg-[#7AD9D6]/20
+            opacity-0
+            blur-[70px]
+            transition-opacity
+            duration-500
+            group-hover:opacity-100
+          "
+        />
+
+        {/* TOP ICON */}
+
+        <div
+          className="
+            absolute
+            left-5
+            top-5
+            z-10
+            flex
+            h-11
+            w-11
+            items-center
+            justify-center
+            rounded-[14px]
+            border
+            border-white/15
+            bg-white/10
+            text-[#CDEDEB]
+            backdrop-blur-md
+            transition-all
+            duration-500
+            group-hover:border-[#D7C17A]/50
+            group-hover:bg-[#D7C17A]/15
+            group-hover:text-[#D7C17A]
           "
         >
-          {industries.map((industry, index) => {
-            const Icon = industry.icon;
-
-            return (
-              <motion.div
-                key={industry.id}
-                initial={{
-                  opacity: 0,
-                  y: 35,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                  amount: 0.12,
-                }}
-                transition={{
-                  duration: 0.65,
-                  delay: index * 0.07,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className={`
-                  group
-                  relative
-                  min-h-[300px]
-                  overflow-hidden
-                  rounded-[24px]
-                  border
-                  border-white
-                  bg-[#073F46]
-                  shadow-[0_18px_45px_rgba(13,45,51,0.08)]
-                  ${industry.className}
-                `}
-              >
-                {/* IMAGE */}
-
-                <img
-                  src={industry.image}
-                  alt={industry.title}
-                  className="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    transition-transform
-                    duration-[900ms]
-                    ease-out
-                    group-hover:scale-[1.08]
-                  "
-                />
-
-                {/* IMAGE COLOR TREATMENT */}
-
-                <div
-                  className="
-                    absolute
-                    inset-0
-                    bg-[#063F46]/10
-                    mix-blend-multiply
-                    transition-opacity
-                    duration-500
-                    group-hover:opacity-30
-                  "
-                />
-
-                {/* DARK GRADIENT */}
-
-                <div
-                  className="
-                    absolute
-                    inset-0
-                    bg-gradient-to-t
-                    from-[#032F35]
-                    via-[#063F46]/65
-                    to-transparent
-                    opacity-95
-                  "
-                />
-
-                {/* HOVER LIGHT */}
-
-                <motion.div
-                  className="
-                    absolute
-                    -right-[80px]
-                    -top-[80px]
-                    h-[220px]
-                    w-[220px]
-                    rounded-full
-                    bg-[#7AD9D6]/20
-                    opacity-0
-                    blur-[70px]
-                    transition-opacity
-                    duration-500
-                    group-hover:opacity-100
-                  "
-                />
-
-                {/* TOP ICON */}
-
-                <div
-                  className="
-                    absolute
-                    left-5
-                    top-5
-                    flex
-                    h-11
-                    w-11
-                    items-center
-                    justify-center
-                    rounded-[14px]
-                    border
-                    border-white/15
-                    bg-white/10
-                    text-[#CDEDEB]
-                    backdrop-blur-md
-                    transition-all
-                    duration-500
-                    group-hover:border-[#D7C17A]/50
-                    group-hover:bg-[#D7C17A]/15
-                    group-hover:text-[#D7C17A]
-                  "
-                >
-                  <Icon
-                    size={19}
-                    strokeWidth={1.35}
-                  />
-                </div>
-
-                {/* INDUSTRY NUMBER */}
-
-                <span
-                  className="
-                    absolute
-                    right-5
-                    top-5
-                    text-[10px]
-                    font-semibold
-                    tracking-[0.18em]
-                    text-white/45
-                  "
-                >
-                  0{index + 1}
-                </span>
-
-                {/* CONTENT */}
-
-                <div
-                  className="
-                    absolute
-                    bottom-0
-                    left-0
-                    right-0
-                    p-5
-                    sm:p-6
-                  "
-                >
-                  {/* Gold line */}
-
-                  <motion.div
-                    initial={{
-                      width: 22,
-                    }}
-                    className="
-                      mb-3
-                      h-[2px]
-                      rounded-full
-                      bg-[#D7C17A]
-                      transition-all
-                      duration-500
-                      group-hover:w-14
-                    "
-                  />
-
-                  <div
-                    className="
-                      flex
-                      items-end
-                      justify-between
-                      gap-4
-                    "
-                  >
-                    <div>
-                      <h3
-                        className="
-                          text-[20px]
-                          font-semibold
-                          tracking-[-0.025em]
-                          text-white
-                          sm:text-[21px]
-                        "
-                      >
-                        {industry.title}
-                      </h3>
-
-                      <p
-                        className="
-                          mt-1.5
-                          max-w-[440px]
-                          text-[11px]
-                          leading-5
-                          text-white/60
-                          transition-colors
-                          duration-300
-                          group-hover:text-white/80
-                        "
-                      >
-                        {industry.description}
-                      </p>
-                    </div>
-
-                    {/* ARROW */}
-
-                    <div
-                      className="
-                        flex
-                        h-10
-                        w-10
-                        shrink-0
-                        translate-y-2
-                        items-center
-                        justify-center
-                        rounded-full
-                        border
-                        border-white/20
-                        bg-white/10
-                        text-white
-                        opacity-0
-                        backdrop-blur-md
-                        transition-all
-                        duration-500
-                        group-hover:translate-y-0
-                        group-hover:border-[#D7C17A]/50
-                        group-hover:bg-[#D7C17A]
-                        group-hover:text-[#063F46]
-                        group-hover:opacity-100
-                      "
-                    >
-                      <ArrowUpRight
-                        size={16}
-                        strokeWidth={1.8}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* PREMIUM BORDER */}
-
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    inset-0
-                    rounded-[24px]
-                    border
-                    border-white/0
-                    transition-all
-                    duration-500
-                    group-hover:border-white/20
-                  "
-                />
-              </motion.div>
-            );
-          })}
+          <Icon
+            size={19}
+            strokeWidth={1.35}
+          />
         </div>
+
+        {/* NUMBER */}
+
+        <span
+          className="
+            absolute
+            right-5
+            top-5
+            z-10
+            text-[10px]
+            font-semibold
+            tracking-[0.18em]
+            text-white/45
+          "
+        >
+          0{index + 1}
+        </span>
+
+        {/* CONTENT */}
+
+        <div
+          className="
+            absolute
+            bottom-0
+            left-0
+            right-0
+            z-10
+            p-5
+            sm:p-6
+          "
+        >
+          {/* GOLD LINE */}
+
+          <motion.div
+            initial={{
+              width: 22,
+            }}
+            className="
+              mb-3
+              h-[2px]
+              rounded-full
+              bg-[#D7C17A]
+              transition-all
+              duration-500
+              group-hover:w-14
+            "
+          />
+
+          <div
+            className="
+              flex
+              items-end
+              justify-between
+              gap-4
+            "
+          >
+            <div className="min-w-0">
+              <h3
+                className="
+                  text-[20px]
+                  font-semibold
+                  tracking-[-0.025em]
+                  text-white
+                  sm:text-[21px]
+                "
+              >
+                {industry.title}
+              </h3>
+
+              <p
+                className="
+                  mt-1.5
+                  max-w-[440px]
+                  text-[11px]
+                  leading-5
+                  text-white/60
+                  transition-colors
+                  duration-300
+                  group-hover:text-white/80
+                "
+              >
+                {industry.description}
+              </p>
+            </div>
+
+            {/* ARROW */}
+
+            <div
+              className="
+                flex
+                h-10
+                w-10
+                shrink-0
+                translate-y-2
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-white/20
+                bg-white/10
+                text-white
+                opacity-0
+                backdrop-blur-md
+                transition-all
+                duration-500
+                group-hover:translate-y-0
+                group-hover:border-[#D7C17A]/50
+                group-hover:bg-[#D7C17A]
+                group-hover:text-[#063F46]
+                group-hover:opacity-100
+              "
+            >
+              <ArrowUpRight
+                size={16}
+                strokeWidth={1.8}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* PREMIUM BORDER */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            z-20
+            rounded-[24px]
+            border
+            border-white/0
+            transition-all
+            duration-500
+            group-hover:border-white/20
+          "
+        />
+      </motion.div>
+    );
+  })}
+</div>
 
         {/* =================================================
             BOTTOM STATEMENT
