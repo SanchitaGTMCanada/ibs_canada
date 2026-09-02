@@ -38,51 +38,126 @@ import Header from "@/components/layout/Header";
 
 const leaders = [
   {
-    name: "John Doe",
-    role: "President & CEO",
-    image:
-      "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Biswanath Chakrabarty",
+    role: "President | FCGA (Canada), MBA (MBS, UK), CPA (CO, USA)",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     description:
-      "Leading IBS with a clear vision for sustainable growth and long-term impact.",
+      "Audits and reviews; internal controls; taxation; financial planning; business plans; feasibility studies; strategic planning; performance management; program reviews.",
   },
   {
-    name: "Jane Smith",
-    role: "Chief Operating Officer",
-    image:
-      "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Newton Grey",
+    role: "Chief Operating Officer | MSc, Tourism and Hospitality Management",
+    tagline: "Growth · Partnerships · Leadership",
+    image: "https://randomuser.me/api/portraits/men/46.jpg",
     description:
-      "Driving operational excellence through collaboration, innovation and trusted partnerships.",
+      "Business development; strategic growth; corporate relationship management; market expansion; revenue generation; strategic partnerships; leadership and team development.",
+  },
+  {
+    name: "Manik Duggar",
+    role: "Strategic Advisor",
+    image: "https://randomuser.me/api/portraits/men/52.jpg",
+    description:
+      "Policy advisory; major-project management; Northern projects; environmental and regulatory experience; international development and capacity building.",
+  },
+  {
+    name: "Isaiah Mutandiwa",
+    role: "Senior Vice President – Operations | B.Acc. Hons (UZ)",
+    image: "https://randomuser.me/api/portraits/men/40.jpg",
+    description:
+      "Audits and reviews; business process re-engineering; procedures manuals; controllership; internal controls; systems analysis; training.",
+  },
+  {
+    name: "Meera Basnyat",
+    role: "Director of Operations | MBA, CPA, CGA",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    description:
+      "Audits, reviews and compilations; internal controls; taxation.",
+  },
+  {
+    name: "Ranajit Batabyal",
+    role: "Director – Business Development",
+    image: "https://randomuser.me/api/portraits/men/62.jpg",
+    description:
+      "Accounting systems; business planning; financial analysis; budgeting; business process development; project management; corporate management; policy writing.",
+  },
+  {
+    name: "Partha Chakraborty",
+    role: "Director – IT Infrastructure",
+    image: "https://randomuser.me/api/portraits/men/68.jpg",
+    description:
+      "IT infrastructure management; vendor management; Windows server; network security and firewall; IT operations; infrastructure planning and design.",
+  },
+  {
+    name: "Paulami Gupta",
+    role: "Director of Consulting",
+    image: "https://randomuser.me/api/portraits/women/49.jpg",
+    description:
+      "Professional research and writing; business proposals and plans; project research and coordination; editing; administration; event management.",
+  },
+  {
+    name: "Edwin Luyinda",
+    role: "Engineering Specialist",
+    image: "https://randomuser.me/api/portraits/men/71.jpg",
+    description:
+      "Technical leadership; project management and oversight; compliance and standards; safety and risk management; collaboration and communication.",
+  },
+  {
+    name: "Kimberly Acheson",
+    role: "Controller & Financial Advisor to the President | BBA",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    description:
+      "Strategic financial planning; financial reporting and compliance; budgeting, forecasting and cash-flow management; risk management and internal controls; accounting operations and systems; stakeholder collaboration.",
   },
 ];
 
 const team = [
   {
-    name: "Michael Anderson",
-    role: "Senior Business Consultant",
-    image:
-      "https://randomuser.me/api/portraits/men/46.jpg",
-    icon: BriefcaseBusiness,
+    name: "Norman Yakeleya",
+    role: "Indigenous Advisor",
+    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    icon: UsersRound,
+    description:
+      "Indigenous community knowledge, governance and community context; business consulting; training and professional development.",
   },
   {
-    name: "Sarah Williams",
-    role: "Project Manager",
-    image:
-      "https://randomuser.me/api/portraits/women/65.jpg",
+    name: "Dr. Deborah Nixon",
+    role: "Senior Management Consultant | PhD, MEH, B.Comm",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
     icon: Target,
+    description:
+      "Organizational development; business and strategic planning; community consultation; market research; leadership development; change management; performance assessment; project management.",
   },
   {
-    name: "David Wilson",
-    role: "Technology Consultant",
-    image:
-      "https://randomuser.me/api/portraits/men/52.jpg",
+    name: "Agamani Chakrabarty",
+    role: "Economist | M.A, B.Comm",
+    image: "https://randomuser.me/api/portraits/women/32.jpg",
+    icon: TrendingUp,
+    description:
+      "Statistical analysis and modelling; investment research; enterprise risk modelling; economic and business analysis; data integrity; research reporting.",
+  },
+  {
+    name: "Eric Whitworth",
+    role: "Public Sector Consultant | CPA, CMA",
+    image: "https://randomuser.me/api/portraits/men/83.jpg",
+    icon: BriefcaseBusiness,
+    description:
+      "Program reviews; compliance audits; corporate training; business process re-engineering; policies and procedures; controllership; internal controls.",
+  },
+  {
+    name: "Kyle Chisholm",
+    role: "Senior Accounting Advisor | CPA, CMA, MBA",
+    image: "https://randomuser.me/api/portraits/men/54.jpg",
+    icon: Award,
+    description:
+      "Audits and reviews; compilations; internal controls; bookkeeping; strategy development; taxation; training.",
+  },
+  {
+    name: "Suman Basnyat",
+    role: "Accounting & Sage Intacct Advisor | CPA, CMA, MBA",
+    image: "https://randomuser.me/api/portraits/women/58.jpg",
     icon: BrainCircuit,
-  },
-  {
-    name: "Emily Brown",
-    role: "Community Engagement Lead",
-    image:
-      "https://randomuser.me/api/portraits/women/32.jpg",
-    icon: Handshake,
+    description:
+      "Audits and reviews; internal controls; financial procedures; taxation; financial system setup; training.",
   },
 ];
 
@@ -1502,1249 +1577,526 @@ export default function OurTeamPage() {
 
 </section>
       {/* =====================================================
-          LEADERSHIP
+          CORE TEAM — LEADERSHIP ORBIT
       ===================================================== */}
-
-{/* =========================================================
-    LEADERSHIP
-========================================================= */}
-
-<section
-  className="
-    relative
-    overflow-hidden
-    bg-[#0B1F3A]
-    px-6
-    py-20
-    sm:px-8
-    lg:px-10
-    lg:py-24
-    xl:px-12
-  "
->
-  {/* =======================================================
-      BACKGROUND IMAGE
-  ======================================================= */}
-
-  <div className="absolute inset-0">
-
-    <img
-      src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2200&q=90"
-      alt=""
-      aria-hidden="true"
-      className="
-        h-full
-        w-full
-        object-cover
-        object-center
-        opacity-20
-      "
-    />
-
-    {/* Navy image overlay */}
-
-    <div
-      className="
-        absolute
-        inset-0
-        bg-[#0B1F3A]/90
-      "
-    />
-
-    {/* Executive gradient */}
-
-    <div
-      className="
-        absolute
-        inset-0
-        bg-gradient-to-br
-        from-[#0B1F3A]
-        via-[#123A5A]/95
-        to-[#087F8C]/70
-      "
-    />
-
-    {/* Subtle image fade */}
-
-    <div
-      className="
-        absolute
-        inset-0
-        bg-gradient-to-r
-        from-[#0B1F3A]
-        via-transparent
-        to-[#087F8C]/20
-      "
-    />
-
-  </div>
-
-
-  {/* =======================================================
-      LARGE ANIMATED BACKGROUND ICONS
-  ======================================================= */}
-
-  {/* Leadership / Award */}
-
-  <motion.div
-    initial={{
-      opacity: 0,
-      scale: 0.8,
-    }}
-    whileInView={{
-      opacity: 1,
-      scale: 1,
-    }}
-    viewport={{
-      once: true,
-    }}
-    animate={{
-      y: [0, -18, 0],
-      rotate: [0, 4, 0],
-    }}
-    transition={{
-      opacity: {
-        duration: 1,
-      },
-      scale: {
-        duration: 1,
-      },
-      y: {
-        duration: 7,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-      rotate: {
-        duration: 9,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    }}
-    className="
-      pointer-events-none
-      absolute
-      -left-10
-      top-[10%]
-      z-[1]
-      hidden
-      text-[#C6A15B]/15
-      lg:block
-    "
-  >
-    <Award
-      size={190}
-      strokeWidth={0.7}
-    />
-  </motion.div>
-
-
-  {/* Strategy / Target */}
-
-  <motion.div
-    initial={{
-      opacity: 0,
-      scale: 0.8,
-    }}
-    whileInView={{
-      opacity: 1,
-      scale: 1,
-    }}
-    viewport={{
-      once: true,
-    }}
-    animate={{
-      x: [0, 20, 0],
-      y: [0, 12, 0],
-      rotate: [0, -5, 0],
-    }}
-    transition={{
-      opacity: {
-        duration: 1,
-      },
-      scale: {
-        duration: 1,
-      },
-      x: {
-        duration: 10,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-      y: {
-        duration: 8,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-      rotate: {
-        duration: 12,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    }}
-    className="
-      pointer-events-none
-      absolute
-      right-[3%]
-      top-[5%]
-      z-[1]
-      hidden
-      text-[#087F8C]/20
-      lg:block
-    "
-  >
-    <Target
-      size={240}
-      strokeWidth={0.7}
-    />
-  </motion.div>
-
-
-  {/* Collaboration / Users */}
-
-  <motion.div
-    initial={{
-      opacity: 0,
-      scale: 0.8,
-    }}
-    whileInView={{
-      opacity: 1,
-      scale: 1,
-    }}
-    viewport={{
-      once: true,
-    }}
-    animate={{
-      y: [0, 20, 0],
-      x: [0, -12, 0],
-    }}
-    transition={{
-      opacity: {
-        duration: 1,
-      },
-      scale: {
-        duration: 1,
-      },
-      y: {
-        duration: 9,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-      x: {
-        duration: 11,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    }}
-    className="
-      pointer-events-none
-      absolute
-      bottom-[4%]
-      left-[26%]
-      z-[1]
-      hidden
-      text-[#087F8C]/15
-      lg:block
-    "
-  >
-    <UsersRound
-      size={210}
-      strokeWidth={0.7}
-    />
-  </motion.div>
-
-
-  {/* Growth / Trending Up */}
-
-  <motion.div
-    initial={{
-      opacity: 0,
-      scale: 0.8,
-    }}
-    whileInView={{
-      opacity: 1,
-      scale: 1,
-    }}
-    viewport={{
-      once: true,
-    }}
-    animate={{
-      y: [0, -15, 0],
-      rotate: [0, -3, 0],
-    }}
-    transition={{
-      opacity: {
-        duration: 1,
-      },
-      scale: {
-        duration: 1,
-      },
-      y: {
-        duration: 8,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-      rotate: {
-        duration: 10,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    }}
-    className="
-      pointer-events-none
-      absolute
-      bottom-[8%]
-      right-[8%]
-      z-[1]
-      hidden
-      text-[#C6A15B]/15
-      lg:block
-    "
-  >
-    <TrendingUp
-      size={180}
-      strokeWidth={0.7}
-    />
-  </motion.div>
-
-
-  {/* Handshake */}
-
-  <motion.div
-    initial={{
-      opacity: 0,
-      scale: 0.8,
-    }}
-    whileInView={{
-      opacity: 1,
-      scale: 1,
-    }}
-    viewport={{
-      once: true,
-    }}
-    animate={{
-      y: [0, 14, 0],
-      rotate: [0, 3, 0],
-    }}
-    transition={{
-      opacity: {
-        duration: 1,
-      },
-      scale: {
-        duration: 1,
-      },
-      y: {
-        duration: 7,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-      rotate: {
-        duration: 9,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    }}
-    className="
-      pointer-events-none
-      absolute
-      left-[48%]
-      top-[8%]
-      z-[1]
-      hidden
-      text-[#C6A15B]/10
-      lg:block
-    "
-  >
-    <Handshake
-      size={150}
-      strokeWidth={0.7}
-    />
-  </motion.div>
-
-
-  {/* =======================================================
-      DECORATIVE CIRCLES
-  ======================================================= */}
-
-  <div
-    className="
-      pointer-events-none
-      absolute
-      -right-40
-      -top-40
-      z-[1]
-      h-[600px]
-      w-[600px]
-      rounded-full
-      border
-      border-[#C6A15B]/10
-    "
-  />
-
-  <div
-    className="
-      pointer-events-none
-      absolute
-      -right-20
-      -top-20
-      z-[1]
-      h-[400px]
-      w-[400px]
-      rounded-full
-      border
-      border-[#087F8C]/15
-    "
-  />
-
-
-  {/* =======================================================
-      MAIN CONTENT
-  ======================================================= */}
-
-  <div
-    className="
-      relative
-      z-10
-      mx-auto
-      max-w-[1280px]
-    "
-  >
-
-    <div
-      className="
-        grid
-        gap-14
-        lg:grid-cols-[0.82fr_1.18fr]
-        lg:items-center
-      "
-    >
-
-      {/* ===================================================
-          LEFT CONTENT
-      =================================================== */}
-
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{
-          once: true,
-          amount: 0.2,
-        }}
-        variants={stagger}
-        className="
-          relative
-          z-20
-          max-w-[560px]
-        "
+      <section
+        className="relative overflow-hidden bg-[#071A2D] px-5 py-20 sm:px-8 lg:px-10 lg:py-24 xl:px-12"
       >
-
-        {/* Label */}
-
-        <motion.div
-          variants={fadeUp}
-          className="
-            flex
-            items-center
-            gap-3
-          "
-        >
-
-          <span
-            className="
-              h-[2px]
-              w-12
-              bg-[#C6A15B]
-            "
-          />
-
-          <span
-            className="
-              text-[9px]
-              font-bold
-              uppercase
-              tracking-[0.3em]
-              text-[#C6A15B]
-            "
-          >
-            Leadership
-          </span>
-
-        </motion.div>
-
-
-        {/* Heading */}
-
-        <motion.h2
-          variants={fadeUp}
-          className="
-            mt-6
-            max-w-[520px]
-            text-[44px]
-            font-semibold
-            leading-[0.95]
-            tracking-[-0.055em]
-            text-white
-            sm:text-[56px]
-            lg:text-[64px]
-          "
-        >
-          Guiding with
-
-          <span
-            className="
-              block
-              bg-gradient-to-r
-              from-[#C6A15B]
-              via-[#D8B866]
-              to-[#087F8C]
-              bg-clip-text
-              text-transparent
-            "
-          >
-            Vision.
-          </span>
-
-        </motion.h2>
-
-
-        {/* Description */}
-
-        <motion.p
-          variants={fadeUp}
-          className="
-            mt-6
-            max-w-[430px]
-            text-[13px]
-            leading-7
-            text-[#DCE2E7]
-          "
-        >
-          Our leadership team brings experience,
-          perspective and a practical approach to
-          building long-term success.
-        </motion.p>
-
-
-        {/* CTA */}
-
-        <motion.div
-          variants={fadeUp}
-          className="mt-8"
-        >
-
-          <Link
-            href="#team"
-            className="
-              group
-              inline-flex
-              items-center
-              gap-4
-              rounded-full
-              bg-[#C6A15B]
-              px-6
-              py-3
-              text-[10px]
-              font-bold
-              uppercase
-              tracking-[0.12em]
-              text-[#0B1F3A]
-              shadow-[0_12px_30px_rgba(0,0,0,.18)]
-              transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:bg-white
-            "
-          >
-
-            Meet Our Leadership
-
-            <span
-              className="
-                flex
-                h-7
-                w-7
-                items-center
-                justify-center
-                rounded-full
-                bg-[#0B1F3A]
-                text-white
-                transition-transform
-                duration-300
-                group-hover:translate-x-1
-              "
-            >
-              <ArrowRight size={13} />
-            </span>
-
-          </Link>
-
-        </motion.div>
-
-
-        {/* =================================================
-            STATS
-        ================================================= */}
-
-        <motion.div
-          variants={fadeUp}
-          className="
-            mt-11
-            flex
-            flex-wrap
-            items-center
-            gap-7
-          "
-        >
-
-          {/* Experience */}
-
-          <div className="flex items-center gap-3">
-
-            <div
-              className="
-                flex
-                h-11
-                w-11
-                items-center
-                justify-center
-                rounded-2xl
-                border
-                border-[#C6A15B]/30
-                bg-[#0B1F3A]/70
-                text-[#C6A15B]
-                backdrop-blur-sm
-              "
-            >
-              <Award
-                size={19}
-                strokeWidth={1.4}
-              />
-            </div>
-
-            <div>
-
-              <p
-                className="
-                  text-[24px]
-                  font-semibold
-                  leading-none
-                  text-white
-                "
-              >
-                20+
-              </p>
-
-              <p
-                className="
-                  mt-1.5
-                  text-[8px]
-                  font-bold
-                  uppercase
-                  tracking-[0.18em]
-                  text-[#8FA0AD]
-                "
-              >
-                Years Experience
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* Divider */}
-
-          <span
-            className="
-              hidden
-              h-10
-              w-px
-              bg-white/15
-              sm:block
-            "
-          />
-
-
-          {/* Commitment */}
-
-          <div className="flex items-center gap-3">
-
-            <div
-              className="
-                flex
-                h-11
-                w-11
-                items-center
-                justify-center
-                rounded-2xl
-                border
-                border-[#087F8C]/40
-                bg-[#087F8C]/20
-                text-[#087F8C]
-              "
-            >
-              <Target
-                size={19}
-                strokeWidth={1.4}
-              />
-            </div>
-
-            <div>
-
-              <p
-                className="
-                  text-[24px]
-                  font-semibold
-                  leading-none
-                  text-white
-                "
-              >
-                100%
-              </p>
-
-              <p
-                className="
-                  mt-1.5
-                  text-[8px]
-                  font-bold
-                  uppercase
-                  tracking-[0.18em]
-                  text-[#8FA0AD]
-                "
-              >
-                Commitment
-              </p>
-
-            </div>
-
-          </div>
-
-        </motion.div>
-
-
-        {/* Bottom statement */}
-
-        <motion.div
-          variants={fadeUp}
-          className="
-            mt-12
-            flex
-            items-center
-            gap-3
-          "
-        >
-
-          <span
-            className="
-              h-px
-              w-16
-              bg-[#C6A15B]
-            "
-          />
-
-          <span
-            className="
-              text-[8px]
-              font-bold
-              uppercase
-              tracking-[0.25em]
-              text-[#C6A15B]
-            "
-          >
-            People · Vision · Impact
-          </span>
-
-        </motion.div>
-
-      </motion.div>
-
-
-      {/* ===================================================
-          RIGHT LEADERSHIP PANEL
-      =================================================== */}
-
-      <div
-        className="
-          relative
-          rounded-[32px]
-          bg-gradient-to-br
-          from-[#0B1F3A]
-          via-[#123A5A]
-          to-[#087F8C]
-          p-3
-          shadow-[0_30px_80px_rgba(0,0,0,.25)]
-          lg:p-4
-        "
-      >
-
-        {/* Panel highlight */}
-
-        <div
-          className="
-            pointer-events-none
-            absolute
-            inset-0
-            rounded-[32px]
-            border
-            border-white/10
-          "
-        />
-
-        {/* Gold top line */}
-
-        <div
-          className="
-            pointer-events-none
-            absolute
-            left-10
-            right-10
-            top-0
-            h-[2px]
-            bg-gradient-to-r
-            from-transparent
-            via-[#C6A15B]
-            to-transparent
-          "
-        />
-
-
-        {/* =================================================
-            CARDS
-        ================================================= */}
-
-        <div
-          className="
-            relative
-            grid
-            gap-4
-            sm:grid-cols-2
-          "
-        >
-
-          {leaders.map((leader, index) => (
-
-            <motion.article
-              key={leader.name}
-
-              initial={{
-                opacity: 0,
-                y: 35,
-              }}
-
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-
-              viewport={{
-                once: true,
-                amount: 0.2,
-              }}
-
-              transition={{
-                duration: 0.65,
-                delay: index * 0.15,
-              }}
-
-              whileHover={{
-                y: -8,
-              }}
-
-              className="
-                group
-                relative
-                overflow-hidden
-                rounded-[25px]
-                border
-                border-white/10
-                bg-[#F6F4EF]
-                shadow-[0_20px_50px_rgba(0,0,0,.20)]
-              "
-            >
-
-              {/* ===========================================
-                  IMAGE
-              =========================================== */}
-
-              <div
-                className="
-                  relative
-                  h-[300px]
-                  overflow-hidden
-                "
-              >
-
-                <img
-                  src={leader.image}
-                  alt={leader.name}
-                  className="
-                    h-full
-                    w-full
-                    object-cover
-                    object-center
-                    transition-transform
-                    duration-700
-                    group-hover:scale-110
-                  "
-                />
-
-                {/* Image overlay */}
-
-                <div
-                  className="
-                    absolute
-                    inset-0
-                    bg-gradient-to-t
-                    from-[#0B1F3A]
-                    via-[#0B1F3A]/25
-                    to-transparent
-                  "
-                />
-
-
-                {/* Leadership icon */}
-
-                <div
-                  className="
-                    absolute
-                    left-5
-                    top-5
-                    flex
-                    h-12
-                    w-12
-                    items-center
-                    justify-center
-                    rounded-2xl
-                    border
-                    border-white/20
-                    bg-[#0B1F3A]
-                    text-[#C6A15B]
-                    shadow-[0_10px_25px_rgba(0,0,0,.20)]
-                  "
-                >
-
-                  {index === 0 ? (
-                    <Award
-                      size={22}
-                      strokeWidth={1.3}
-                    />
-                  ) : (
-                    <Target
-                      size={22}
-                      strokeWidth={1.3}
-                    />
-                  )}
-
-                </div>
-
-
-                {/* Badge */}
-
-                <div
-                  className="
-                    absolute
-                    right-5
-                    top-5
-                    rounded-full
-                    border
-                    border-[#C6A15B]/50
-                    bg-[#0B1F3A]
-                    px-3
-                    py-1.5
-                    text-[8px]
-                    font-bold
-                    uppercase
-                    tracking-[0.18em]
-                    text-[#C6A15B]
-                  "
-                >
-                  Leadership
-                </div>
-
-
-                {/* Name */}
-
-                <div
-                  className="
-                    absolute
-                    bottom-5
-                    left-5
-                    right-5
-                  "
-                >
-
-                  <p
-                    className="
-                      text-[8px]
-                      font-bold
-                      uppercase
-                      tracking-[0.2em]
-                      text-[#C6A15B]
-                    "
-                  >
-                    Executive Team
-                  </p>
-
-                  <h3
-                    className="
-                      mt-2
-                      text-[23px]
-                      font-semibold
-                      tracking-[-0.035em]
-                      text-white
-                    "
-                  >
-                    {leader.name}
-                  </h3>
-
-                </div>
-
-              </div>
-
-
-              {/* ===========================================
-                  CONTENT
-              =========================================== */}
-
-              <div className="p-6">
-
-                <div
-                  className="
-                    flex
-                    items-center
-                    justify-between
-                    gap-4
-                  "
-                >
-
-                  <p
-                    className="
-                      text-[9px]
-                      font-bold
-                      uppercase
-                      tracking-[0.16em]
-                      text-[#087F8C]
-                    "
-                  >
-                    {leader.role}
-                  </p>
-
-                  <div
-                    className="
-                      flex
-                      h-9
-                      w-9
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-full
-                      bg-[#E8F3F2]
-                      text-[#087F8C]
-                      transition-all
-                      duration-300
-                      group-hover:bg-[#087F8C]
-                      group-hover:text-white
-                    "
-                  >
-                    <ArrowUpRight size={15} />
-                  </div>
-
-                </div>
-
-
-                {/* Gold divider */}
-
-                <div
-                  className="
-                    mt-5
-                    h-[2px]
-                    w-10
-                    bg-[#C6A15B]
-                    transition-all
-                    duration-500
-                    group-hover:w-16
-                  "
-                />
-
-
-                <p
-                  className="
-                    mt-4
-                    text-[11px]
-                    leading-6
-                    text-[#68737D]
-                  "
-                >
-                  {leader.description}
-                </p>
-
-
-                {/* Bottom row */}
-
-                <div
-                  className="
-                    mt-6
-                    flex
-                    items-center
-                    justify-between
-                    border-t
-                    border-[#DCE2E7]
-                    pt-4
-                  "
-                >
-
-                  <div className="flex items-center gap-2">
-
-                    <span
-                      className="
-                        flex
-                        h-7
-                        w-7
-                        items-center
-                        justify-center
-                        rounded-full
-                        bg-[#0B1F3A]
-                        text-white
-                      "
-                    >
-                      <UsersRound size={12} />
-                    </span>
-
-                    <span
-                      className="
-                        text-[8px]
-                        font-bold
-                        uppercase
-                        tracking-[0.15em]
-                        text-[#8C989E]
-                      "
-                    >
-                      IBS Canada
-                    </span>
-
-                  </div>
-
-
-                  <button
-                    type="button"
-                    aria-label={`Email ${leader.name}`}
-                    className="
-                      flex
-                      h-8
-                      w-8
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-[#DCE2E7]
-                      bg-[#F6F4EF]
-                      text-[#087F8C]
-                      transition-all
-                      duration-300
-                      hover:border-[#087F8C]
-                      hover:bg-[#087F8C]
-                      hover:text-white
-                    "
-                  >
-                    <Mail size={13} />
-                  </button>
-
-                </div>
-
-              </div>
-
-
-              {/* Bottom animated gold line */}
-
-              <div
-                className="
-                  absolute
-                  bottom-0
-                  left-0
-                  h-[3px]
-                  w-0
-                  bg-gradient-to-r
-                  from-[#C6A15B]
-                  via-[#087F8C]
-                  to-[#C6A15B]
-                  transition-all
-                  duration-700
-                  group-hover:w-full
-                "
-              />
-
-            </motion.article>
-
-          ))}
-
+        {/* Ambient background */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute left-1/2 top-[45%] h-[780px] w-[780px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#087F8C]/10 blur-[110px]" />
+          <div className="absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#C6A15B]/[0.05] blur-[100px]" />
+          <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#087F8C]/[0.08] blur-[110px]" />
+          <div className="absolute left-1/2 top-[47%] hidden h-[920px] w-[920px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.035] lg:block" />
+          <div className="absolute left-1/2 top-[47%] hidden h-[710px] w-[710px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#C6A15B]/[0.09] lg:block" />
+          <div className="absolute left-1/2 top-[47%] hidden h-[515px] w-[515px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#087F8C]/[0.16] lg:block" />
         </div>
 
-      </div>
+        {/* Decorative floating icons */}
+        <motion.div
+          aria-hidden="true"
+          animate={{ y: [0, -16, 0], rotate: [0, 5, 0], opacity: [0.06, 0.16, 0.06] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="pointer-events-none absolute left-[3%] top-[16%] hidden text-[#C6A15B] lg:block"
+        >
+          <Award size={150} strokeWidth={0.6} />
+        </motion.div>
 
-    </div>
+        <motion.div
+          aria-hidden="true"
+          animate={{ y: [0, 18, 0], rotate: [0, -6, 0], opacity: [0.05, 0.14, 0.05] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="pointer-events-none absolute bottom-[9%] right-[3%] hidden text-[#087F8C] lg:block"
+        >
+          <BrainCircuit size={170} strokeWidth={0.6} />
+        </motion.div>
 
+        <div className="relative z-10 mx-auto max-w-[1380px]">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.7 }}
+            className="mx-auto max-w-[780px] text-center"
+          >
+            <div className="flex items-center justify-center gap-3">
+              <span className="h-px w-12 bg-[#C6A15B]" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.32em] text-[#C6A15B]">
+                Core Team
+              </span>
+              <span className="h-px w-12 bg-[#C6A15B]" />
+            </div>
 
-    {/* =======================================================
-        FOOTER LABEL
-    ======================================================= */}
+            <h2 className="mt-5 text-[38px] font-semibold leading-[1] tracking-[-0.045em] text-white sm:text-[52px] lg:text-[62px]">
+              Leadership at the Core.
+              <span className="block bg-gradient-to-r from-white via-[#D8B866] to-[#43B8BA] bg-clip-text text-transparent">
+                Strength in Every Direction.
+              </span>
+            </h2>
 
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
-      transition={{
-        duration: 0.8,
-        delay: 0.25,
-      }}
-      className="
-        mt-10
-        flex
-        items-center
-        justify-between
-        border-t
-        border-white/10
-        pt-5
-      "
-    >
+            <p className="mx-auto mt-5 max-w-[650px] text-[12px] leading-6 text-[#B9C5CF] sm:text-[13px]">
+              IBS brings together professionals across finance, strategy, governance,
+              operations, technology, research, economics and technical disciplines.
+            </p>
+          </motion.div>
 
-      <span
-        className="
-          text-[8px]
-          font-bold
-          uppercase
-          tracking-[0.25em]
-          text-[#8FA0AD]
-        "
-      >
-        Executive Leadership
-      </span>
+          {/* =====================================================
+              DESKTOP — PRESIDENT + RADIAL TEAM
+              ===================================================== */}
+          <div className="relative mx-auto mt-14 hidden h-[1200px] w-full max-w-[1380px] xl:block">
+            {(() => {
+              const orbitRadius = 470;
+              const centerX = 690;
+              const centerY = 600;
+              const presidentRadius = 164;
+              const connectorStartRadius = 164;
+              const cardWidth = 205;
+              const cardHeight = 250;
+              const halfCardWidth = cardWidth / 2;
+              const halfCardHeight = cardHeight / 2;
 
-      <span
-        className="
-          bg-gradient-to-r
-          from-[#C6A15B]
-          via-[#D8B866]
-          to-[#087F8C]
-          bg-clip-text
-          text-[8px]
-          font-bold
-          uppercase
-          tracking-[0.25em]
-          text-transparent
-        "
-      >
-        People · Vision · Impact
-      </span>
+              const orbitAngles = leaders.slice(1).map((_, index) => -90 - index * 40);
 
-    </motion.div>
+              const getPoint = (angle, radius) => {
+                const radians = (angle * Math.PI) / 180;
+                return {
+                  x: centerX + Math.cos(radians) * radius,
+                  y: centerY + Math.sin(radians) * radius,
+                };
+              };
 
-  </div>
+              // Find the exact point where a radial connector meets each card edge.
+              const getCardEdgePoint = (angle) => {
+                const radians = (angle * Math.PI) / 180;
+                const ux = Math.cos(radians);
+                const uy = Math.sin(radians);
 
-</section>
+                const xDistance = Math.abs(ux) < 0.0001
+                  ? Infinity
+                  : halfCardWidth / Math.abs(ux);
+                const yDistance = Math.abs(uy) < 0.0001
+                  ? Infinity
+                  : halfCardHeight / Math.abs(uy);
+
+                const edgeDistance = Math.min(xDistance, yDistance);
+                const point = getPoint(angle, orbitRadius - edgeDistance);
+
+                return point;
+              };
+
+              const icons = [
+                TrendingUp,
+                Handshake,
+                BriefcaseBusiness,
+                UsersRound,
+                Target,
+                BrainCircuit,
+                Lightbulb,
+                ShieldCheck,
+                Award,
+              ];
+
+              return (
+                <>
+                  {/* Equal-radius orbit */}
+                  <motion.div
+                    aria-hidden="true"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+                    className="absolute left-1/2 top-1/2 h-[940px] w-[940px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#C6A15B]/20"
+                  >
+                    <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C6A15B] shadow-[0_0_20px_#C6A15B]" />
+                    <span className="absolute right-[6%] top-[24%] h-2 w-2 rounded-full bg-[#087F8C] shadow-[0_0_18px_#087F8C]" />
+                    <span className="absolute bottom-[9%] left-[28%] h-2 w-2 rounded-full bg-[#43B8BA] shadow-[0_0_18px_#43B8BA]" />
+                  </motion.div>
+
+                  {/* Secondary orbit */}
+                  <motion.div
+                    aria-hidden="true"
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 48, repeat: Infinity, ease: "linear" }}
+                    className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#087F8C]/20 border-dashed"
+                  >
+                    <span className="absolute right-0 top-1/2 h-2.5 w-2.5 -translate-y-1/2 translate-x-1/2 rounded-full bg-[#43B8BA] shadow-[0_0_22px_#43B8BA]" />
+                    <span className="absolute left-[10%] bottom-[18%] h-2 w-2 rounded-full bg-[#C6A15B] shadow-[0_0_18px_#C6A15B]" />
+                  </motion.div>
+
+                  {/* Inner orbit around the President */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.08]"
+                  />
+
+                  {/* =================================================
+                      NEWTON → PRESIDENT CONNECTION
+                      The connector sits above the President layer so it
+                      visibly touches the President ring instead of being
+                      hidden behind the center card.
+                  ================================================= */}
+                  <motion.div
+                    aria-hidden="true"
+                    initial={{ opacity: 0, scaleY: 0 }}
+                    whileInView={{ opacity: 1, scaleY: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.55, ease: "easeOut" }}
+                    className="pointer-events-none absolute left-1/2 z-[42] -translate-x-1/2 origin-bottom"
+                    style={{
+                      top: centerY - orbitRadius + halfCardHeight,
+                      height: orbitRadius - halfCardHeight - connectorStartRadius,
+                    }}
+                  >
+                    <div className="absolute left-1/2 top-0 h-full w-[3px] -translate-x-1/2 rounded-full bg-gradient-to-b from-[#C6A15B] via-[#43B8BA] to-[#C6A15B] shadow-[0_0_14px_rgba(67,184,186,.85)]" />
+                    <motion.span
+                      animate={{ y: [0, 12, 0], opacity: [0.4, 1, 0.4] }}
+                      transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                      className="absolute bottom-[-1px] left-1/2 h-3 w-3 -translate-x-1/2 translate-y-1/2 rounded-full border border-[#C6A15B] bg-[#071A2D] shadow-[0_0_18px_rgba(198,161,91,.95)]"
+                    />
+                  </motion.div>
+
+                  {/* =================================================
+                      CENTER → EVERY CARD CONNECTORS
+                      Every card uses the same 40° spacing and the
+                      connector starts at the President and terminates
+                      exactly at the corresponding card edge.
+                  ================================================= */}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 1380 1200"
+                    preserveAspectRatio="none"
+                    className="pointer-events-none absolute inset-0 z-[40] h-full w-full overflow-visible"
+                  >
+                    <defs>
+                      <linearGradient id="teamLinePremium" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stopColor="#C6A15B" stopOpacity="0.28" />
+                        <stop offset="45%" stopColor="#43B8BA" stopOpacity="0.95" />
+                        <stop offset="100%" stopColor="#C6A15B" stopOpacity="0.45" />
+                      </linearGradient>
+                      <filter id="teamLineGlow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="3" result="blur" />
+                        <feMerge>
+                          <feMergeNode in="blur" />
+                          <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                      </filter>
+                    </defs>
+
+                    {orbitAngles.map((angle, index) => {
+                      const start = getPoint(angle, connectorStartRadius);
+                      const end = getCardEdgePoint(angle);
+
+                      return (
+                        <g key={angle}>
+                          {/* soft glow */}
+                          <motion.line
+                            x1={start.x}
+                            y1={start.y}
+                            x2={end.x}
+                            y2={end.y}
+                            stroke="#43B8BA"
+                            strokeOpacity="0.22"
+                            strokeWidth="7"
+                            filter="url(#teamLineGlow)"
+                            initial={{ pathLength: 0, opacity: 0 }}
+                            whileInView={{ pathLength: 1, opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1.1, delay: 0.2 + index * 0.08 }}
+                          />
+
+                          {/* main connector */}
+                          <motion.line
+                            x1={start.x}
+                            y1={start.y}
+                            x2={end.x}
+                            y2={end.y}
+                            stroke="url(#teamLinePremium)"
+                            strokeWidth="2.2"
+                            strokeLinecap="round"
+                            strokeDasharray="4 7"
+                            initial={{ pathLength: 0, opacity: 0 }}
+                            whileInView={{ pathLength: 1, opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1.25, delay: 0.2 + index * 0.08 }}
+                          />
+
+                          {/* animated connection pulse */}
+                          <motion.circle
+                            r="4"
+                            fill="#C6A15B"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: [0, 1, 0] }}
+                            viewport={{ once: true }}
+                            animate={{
+                              cx: [start.x, end.x],
+                              cy: [start.y, end.y],
+                            }}
+                            transition={{
+                              duration: 2.8,
+                              delay: 1.3 + index * 0.15,
+                              repeat: Infinity,
+                              repeatDelay: 1.2,
+                              ease: "easeInOut",
+                            }}
+                          />
+                        </g>
+                      );
+                    })}
+                  </svg>
+
+                  {/* Connection nodes at the outer edge of every card */}
+                  {orbitAngles.map((angle, index) => {
+                    const edge = getCardEdgePoint(angle);
+                    const node = getPoint(angle, Math.max(presidentRadius + 30, orbitRadius - 145));
+
+                    return (
+                      <motion.span
+                        key={`node-${angle}`}
+                        initial={{ scale: 0, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.9 + index * 0.08, duration: 0.35 }}
+                        animate={{
+                          boxShadow: [
+                            "0 0 0 rgba(198,161,91,0)",
+                            "0 0 20px rgba(198,161,91,.8)",
+                            "0 0 0 rgba(198,161,91,0)",
+                          ],
+                        }}
+                        className="pointer-events-none absolute z-[12] h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#C6A15B] bg-[#071A2D]"
+                        style={{ left: node.x, top: node.y }}
+                      >
+                        <span
+                          className="absolute inset-0 rounded-full bg-[#C6A15B]/30 blur-[3px]"
+                          style={{ opacity: edge ? 1 : 0 }}
+                        />
+                      </motion.span>
+                    );
+                  })}
+
+                  {/* President */}
+                  <motion.article
+                    initial={{ opacity: 0, scale: 0.72, y: 20 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.25 }}
+                    transition={{ duration: 0.9, ease: "easeOut" }}
+                    whileHover={{ scale: 1.035 }}
+                    className="absolute left-1/2 top-1/2 z-30 flex h-[325px] w-[325px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[3px] border-[#C6A15B] bg-gradient-to-br from-[#0B1F3A] via-[#123A5A] to-[#087F8C] p-[9px] shadow-[0_0_90px_rgba(8,127,140,.3)]"
+                  >
+                    <motion.div
+                      aria-hidden="true"
+                      animate={{ scale: [1, 1.06, 1], opacity: [0.35, 0.7, 0.35] }}
+                      transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                      className="absolute inset-[-18px] rounded-full border border-[#C6A15B]/35"
+                    />
+                    <div className="absolute inset-[-30px] rounded-full border border-[#087F8C]/10" />
+
+                    <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-full border border-white/15 bg-[#F6F4EF] text-center">
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(8,127,140,.18),transparent_48%)]" />
+
+                      <div className="relative h-[138px] w-[138px] overflow-hidden rounded-full border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-[0_12px_35px_rgba(11,31,58,.25)]">
+                        <img
+                          src={leaders[0].image}
+                          alt={leaders[0].name}
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+
+                      <span className="relative mt-4 rounded-full bg-[#0B1F3A] px-4 py-1.5 text-[8px] font-bold uppercase tracking-[0.22em] text-[#C6A15B]">
+                        President
+                      </span>
+
+                      <h3 className="relative mt-3 px-4 text-[21px] font-semibold tracking-[-0.035em] text-[#0B1F3A]">
+                        {leaders[0].name}
+                      </h3>
+
+                      <p className="relative mt-1 max-w-[240px] px-4 text-[9px] leading-4 text-[#68737D]">
+                        {leaders[0].role}
+                      </p>
+
+                      <div className="relative mt-3 flex items-center gap-2 text-[8px] font-semibold uppercase tracking-[0.16em] text-[#087F8C]">
+                        <Award size={13} />
+                        Leadership · Strategy · Finance
+                      </div>
+                    </div>
+                  </motion.article>
+
+                  {/* =================================================
+                      NINE CORE TEAM MEMBERS — EQUAL CIRCULAR ORBIT
+                  ================================================= */}
+                  {leaders.slice(1).map((leader, index) => {
+                    const angle = orbitAngles[index];
+                    const radians = (angle * Math.PI) / 180;
+                    const x = Math.cos(radians) * orbitRadius;
+                    const y = Math.sin(radians) * orbitRadius;
+                    const Icon = icons[index];
+
+                    return (
+                      <div
+                        key={leader.name}
+                        className="absolute left-1/2 top-1/2 z-20"
+                        style={{
+                          transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+                        }}
+                      >
+                        <motion.article
+                          initial={{ opacity: 0, scale: 0.72 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true, amount: 0.12 }}
+                          transition={{ duration: 0.65, delay: 0.2 + index * 0.08, ease: "easeOut" }}
+                          whileHover={{ scale: 1.045, y: -6, zIndex: 50 }}
+                          className="group relative h-[250px] w-[205px]"
+                        >
+                          <div className="relative h-full overflow-hidden rounded-[30px] border border-[#C6A15B]/45 bg-gradient-to-br from-[#102B43] via-[#0D344A] to-[#087F8C]/90 shadow-[0_20px_55px_rgba(0,0,0,.3)] transition-all duration-500 group-hover:border-[#C6A15B] group-hover:shadow-[0_28px_70px_rgba(8,127,140,.28)]">
+                            <div className="absolute left-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-[#C6A15B] bg-[#071A2D]/90 text-[#C6A15B] shadow-[0_8px_20px_rgba(0,0,0,.22)] backdrop-blur-sm transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#C6A15B] group-hover:text-[#0B1F3A]">
+                              <Icon size={18} strokeWidth={1.35} />
+                            </div>
+
+                            <div className="relative flex items-center justify-center px-4 pb-3 pt-4">
+                              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(198,161,91,.2),transparent_58%)]" />
+                              <div className="relative h-[82px] w-[82px] overflow-hidden rounded-full border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-[0_10px_30px_rgba(0,0,0,.3)] transition-transform duration-500 group-hover:scale-105">
+                                <img
+                                  src={leader.image}
+                                  alt={leader.name}
+                                  className="h-full w-full object-cover object-center"
+                                />
+                              </div>
+                            </div>
+
+                            <div className="px-4 pb-4 pt-2 text-center">
+                              <h3 className="text-[13px] font-semibold leading-tight tracking-[-0.02em] text-white">
+                                {leader.name}
+                              </h3>
+                              <p className="mt-1.5 min-h-[30px] text-[7.5px] font-bold uppercase leading-3.5 tracking-[0.075em] text-[#43B8BA]">
+                                {leader.role}
+                              </p>
+
+                              {leader.tagline && (
+                                <div className="mx-auto mt-2 inline-flex items-center gap-1.5 rounded-full border border-[#C6A15B]/30 bg-[#C6A15B]/5 px-2.5 py-1 text-[7px] font-semibold uppercase tracking-[0.12em] text-[#C6A15B]">
+                                  <span className="h-px w-3 bg-[#C6A15B]/70" />
+                                  <span>{leader.tagline}</span>
+                                  <span className="h-px w-3 bg-[#C6A15B]/70" />
+                                </div>
+                              )}
+
+                              <div className="mx-auto mt-2.5 h-px w-8 bg-[#C6A15B] transition-all duration-500 group-hover:w-14" />
+                              <p className="mt-2.5 line-clamp-3 text-[7.8px] leading-4 text-[#C5D0D8]">
+                                {leader.description}
+                              </p>
+                            </div>
+
+                            <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-[#C6A15B] via-[#087F8C] to-[#C6A15B] opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+                          </div>
+                        </motion.article>
+                      </div>
+                    );
+                  })}
+                </>
+              );
+            })()}
+          </div>
+
+          {/* =====================================================
+              MOBILE / TABLET — SAME HIERARCHY, CLEAN FLOW
+          ===================================================== */}
+          <div className="mt-12 lg:hidden">
+            {/* President */}
+            <motion.article
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="mx-auto max-w-[390px] rounded-[32px] border border-[#C6A15B]/50 bg-gradient-to-br from-[#0B1F3A] via-[#123A5A] to-[#087F8C] p-2 shadow-[0_25px_60px_rgba(0,0,0,.25)]"
+            >
+              <div className="rounded-[26px] bg-[#F6F4EF] px-6 py-7 text-center">
+                <div className="mx-auto h-[125px] w-[125px] overflow-hidden rounded-full border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-lg">
+                  <img src={leaders[0].image} alt={leaders[0].name} className="h-full w-full object-cover" />
+                </div>
+                <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#0B1F3A] px-4 py-1.5 text-[8px] font-bold uppercase tracking-[0.2em] text-[#C6A15B]">
+                  <Award size={12} /> President
+                </div>
+                <h3 className="mt-3 text-[21px] font-semibold text-[#0B1F3A]">{leaders[0].name}</h3>
+                <p className="mt-1 text-[9px] leading-4 text-[#68737D]">{leaders[0].role}</p>
+                <p className="mt-3 text-[10px] leading-5 text-[#68737D]">{leaders[0].description}</p>
+              </div>
+            </motion.article>
+
+            <div className="mx-auto my-6 h-12 w-px bg-gradient-to-b from-[#C6A15B] to-[#087F8C]" />
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {leaders.slice(1).map((leader, index) => {
+                const icons = [
+                  TrendingUp,
+                  Handshake,
+                  BriefcaseBusiness,
+                  UsersRound,
+                  Target,
+                  BrainCircuit,
+                  Lightbulb,
+                  ShieldCheck,
+                  Award,
+                ];
+                const Icon = icons[index];
+
+                return (
+                  <motion.article
+                    key={leader.name}
+                    initial={{ opacity: 0, y: 25 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.15 }}
+                    transition={{ duration: 0.55, delay: index * 0.05 }}
+                    whileHover={{ y: -5 }}
+                    className="group relative overflow-hidden rounded-[26px] border border-white/10 bg-[#F6F4EF] shadow-[0_15px_40px_rgba(0,0,0,.18)]"
+                  >
+                    <div className="flex items-center gap-4 bg-gradient-to-r from-[#0B1F3A] to-[#123A5A] p-4">
+                      <div className="relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#C6A15B] bg-[#DCE2E7]">
+                        <img src={leader.image} alt={leader.name} className="h-full w-full object-cover" />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-[#087F8C] text-white">
+                          <Icon size={15} />
+                        </div>
+                        <h3 className="text-[14px] font-semibold text-white">{leader.name}</h3>
+                        <p className="mt-1 text-[8px] font-semibold uppercase leading-3.5 tracking-[0.08em] text-[#43B8BA]">{leader.role}</p>
+                        {leader.tagline && (
+                          <p className="mt-1 text-[7px] font-semibold uppercase tracking-[0.1em] text-[#C6A15B]">{leader.tagline}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="p-5">
+                      <p className="text-[10px] leading-5 text-[#68737D]">{leader.description}</p>
+                      <div className="mt-4 h-[2px] w-9 bg-[#C6A15B] transition-all duration-500 group-hover:w-16" />
+                    </div>
+                  </motion.article>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Bottom message */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="mx-auto mt-14 flex max-w-[900px] flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-center sm:flex-row sm:text-left"
+          >
+            <div className="flex items-center gap-3">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#C6A15B]/50 bg-[#C6A15B]/10 text-[#C6A15B]">
+                <UsersRound size={15} />
+              </span>
+              <div>
+                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#C6A15B]">One multidisciplinary team</p>
+                <p className="mt-1 text-[10px] text-[#8FA0AD]">Different expertise. One shared purpose.</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 text-[8px] font-bold uppercase tracking-[0.22em] text-[#8FA0AD]">
+              <span className="h-px w-8 bg-[#087F8C]" />
+              Expertise · Collaboration · Impact
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* =====================================================
           TEAM
@@ -2815,7 +2167,7 @@ export default function OurTeamPage() {
                   text-[#A47C2F]
                 "
               >
-                The Team
+                Advisors & Consultants
               </p>
 
               <h2
@@ -2846,8 +2198,7 @@ export default function OurTeamPage() {
                 sm:text-right
               "
             >
-              People with different strengths,
-              united by one purpose.
+              Professionals across finance, strategy, governance, operations, technology, research, economics and technical disciplines.
             </p>
 
           </div>
@@ -2860,7 +2211,7 @@ export default function OurTeamPage() {
               grid
               gap-5
               sm:grid-cols-2
-              lg:grid-cols-4
+              lg:grid-cols-3
             "
           >
 
@@ -3043,6 +2394,17 @@ export default function OurTeamPage() {
                         "
                       >
                         {person.role}
+                      </p>
+
+                      <p
+                        className="
+                          mt-3
+                          text-[10px]
+                          leading-5
+                          text-[#68737D]
+                        "
+                      >
+                        {person.description}
                       </p>
 
                       <div
