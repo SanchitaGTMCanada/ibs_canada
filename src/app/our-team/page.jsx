@@ -40,7 +40,7 @@ const leaders = [
   {
     name: "Biswanath Chakrabarty",
     role: "President | FCGA (Canada), MBA (MBS, UK), CPA (CO, USA)",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: "/images/our_team/BNC.webp",
     description:
       "Audits and reviews; internal controls; taxation; financial planning; business plans; feasibility studies; strategic planning; performance management; program reviews.",
   },
@@ -48,73 +48,67 @@ const leaders = [
     name: "Newton Grey",
     role: "Chief Operating Officer | MSc, Tourism and Hospitality Management",
     tagline: "Growth · Partnerships · Leadership",
-    image: "https://randomuser.me/api/portraits/men/46.jpg",
+    image: "/images/our_team/Newton.webp",
     description:
       "Business development; strategic growth; corporate relationship management; market expansion; revenue generation; strategic partnerships; leadership and team development.",
   },
   {
     name: "Manik Duggar",
     role: "Strategic Advisor",
-    image: "https://randomuser.me/api/portraits/men/52.jpg",
+    image: "/images/our_team/Manik-Dugger.jpg",
     description:
       "Policy advisory; major-project management; Northern projects; environmental and regulatory experience; international development and capacity building.",
   },
   {
     name: "Isaiah Mutandiwa",
     role: "Senior Vice President – Operations | B.Acc. Hons (UZ)",
-    image: "https://randomuser.me/api/portraits/men/40.jpg",
+    image: "/images/our_team/10-Isiah-Mutandiwa.webp",
     description:
       "Audits and reviews; business process re-engineering; procedures manuals; controllership; internal controls; systems analysis; training.",
   },
   {
     name: "Meera Basnyat",
     role: "Director of Operations | MBA, CPA, CGA",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: "/images/our_team/05-Meera-Basnyat.webp",
     description:
       "Audits, reviews and compilations; internal controls; taxation.",
   },
   {
     name: "Ranajit Batabyal",
     role: "Director – Business Development",
-    image: "https://randomuser.me/api/portraits/men/62.jpg",
+    image: "/images/our_team/11-Ranajit-Batabyal.webp",
     description:
       "Accounting systems; business planning; financial analysis; budgeting; business process development; project management; corporate management; policy writing.",
   },
   {
     name: "Partha Chakraborty",
     role: "Director – IT Infrastructure",
-    image: "https://randomuser.me/api/portraits/men/68.jpg",
+    image: "/images/our_team/Partha.webp",
     description:
       "IT infrastructure management; vendor management; Windows server; network security and firewall; IT operations; infrastructure planning and design.",
   },
   {
     name: "Paulami Gupta",
     role: "Director of Consulting",
-    image: "https://randomuser.me/api/portraits/women/49.jpg",
+    image: "/images/our_team/PG.webp",
     description:
       "Professional research and writing; business proposals and plans; project research and coordination; editing; administration; event management.",
   },
   {
     name: "Edwin Luyinda",
     role: "Engineering Specialist",
-    image: "https://randomuser.me/api/portraits/men/71.jpg",
+    image: "/images/our_team/Edwin.jpg",
     description:
       "Technical leadership; project management and oversight; compliance and standards; safety and risk management; collaboration and communication.",
-  },
-  {
-    name: "Kimberly Acheson",
-    role: "Controller & Financial Advisor to the President | BBA",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-    description:
-      "Strategic financial planning; financial reporting and compliance; budgeting, forecasting and cash-flow management; risk management and internal controls; accounting operations and systems; stakeholder collaboration.",
-  },
+  }
+  
 ];
 
 const team = [
   {
     name: "Norman Yakeleya",
     role: "Indigenous Advisor",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    image: "/images/our_team/NORMAN.webp",
     icon: UsersRound,
     description:
       "Indigenous community knowledge, governance and community context; business consulting; training and professional development.",
@@ -122,7 +116,7 @@ const team = [
   {
     name: "Dr. Deborah Nixon",
     role: "Senior Management Consultant | PhD, MEH, B.Comm",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    image: "/images/our_team/13-Dr.-Deborah-Nixon.webp",
     icon: Target,
     description:
       "Organizational development; business and strategic planning; community consultation; market research; leadership development; change management; performance assessment; project management.",
@@ -130,7 +124,7 @@ const team = [
   {
     name: "Agamani Chakrabarty",
     role: "Economist | M.A, B.Comm",
-    image: "https://randomuser.me/api/portraits/women/32.jpg",
+    image: "/images/our_team/15-Agamani-Chakrabarty.webp",
     icon: TrendingUp,
     description:
       "Statistical analysis and modelling; investment research; enterprise risk modelling; economic and business analysis; data integrity; research reporting.",
@@ -138,7 +132,7 @@ const team = [
   {
     name: "Eric Whitworth",
     role: "Public Sector Consultant | CPA, CMA",
-    image: "https://randomuser.me/api/portraits/men/83.jpg",
+    image: "/images/our_team/Eric.webp",
     icon: BriefcaseBusiness,
     description:
       "Program reviews; compliance audits; corporate training; business process re-engineering; policies and procedures; controllership; internal controls.",
@@ -146,7 +140,7 @@ const team = [
   {
     name: "Kyle Chisholm",
     role: "Senior Accounting Advisor | CPA, CMA, MBA",
-    image: "https://randomuser.me/api/portraits/men/54.jpg",
+    image: "/images/our_team/08-Kyle-Chisholm.webp",
     icon: Award,
     description:
       "Audits and reviews; compilations; internal controls; bookkeeping; strategy development; taxation; training.",
@@ -154,7 +148,7 @@ const team = [
   {
     name: "Suman Basnyat",
     role: "Accounting & Sage Intacct Advisor | CPA, CMA, MBA",
-    image: "https://randomuser.me/api/portraits/women/58.jpg",
+    image: "/images/our_team/09-Suman-Basnyat.webp",
     icon: BrainCircuit,
     description:
       "Audits and reviews; internal controls; financial procedures; taxation; financial system setup; training.",
@@ -272,7 +266,7 @@ export default function OurTeamPage() {
         <div className="absolute inset-0">
 
           <img
-            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2200&q=90"
+            src="/images/our-team/our-team-hero.jpg"
             alt="IBS Canada team"
             className="
               h-full
