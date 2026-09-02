@@ -1642,377 +1642,212 @@ export default function OurTeamPage() {
           </motion.div>
 
           {/* =====================================================
-              DESKTOP — PRESIDENT + RADIAL TEAM
+              DESKTOP — STEPPED LEADERSHIP
               ===================================================== */}
-          <div className="relative mx-auto mt-14 hidden h-[1280px] w-full max-w-[1380px] xl:block">
-            {(() => {
-              const orbitRadius = 500;
-              const centerX = 690;
-              const centerY = 640;
-              const presidentRadius = 170;
-              const cardWidth = 235;
-              const cardHeight = 280;
-              const halfCardWidth = cardWidth / 2;
-              const halfCardHeight = cardHeight / 2;
+          <div className="relative mx-auto mt-14 hidden w-full max-w-[1380px] xl:block">
+            {/* Animated oversized background icons */}
+            <div className="pointer-events-none absolute inset-0 -z-0 overflow-hidden rounded-[50px]">
+              <motion.div
+                aria-hidden="true"
+                animate={{ y: [0, -24, 0], rotate: [0, 8, 0], opacity: [0.16, 0.30, 0.16], scale: [1, 1.05, 1] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute left-[1%] top-[10%] text-[#087F8C]"
+              >
+                <UsersRound size={190} strokeWidth={0.65} />
+              </motion.div>
+              <motion.div
+                aria-hidden="true"
+                animate={{ y: [0, 26, 0], rotate: [0, -8, 0], opacity: [0.14, 0.28, 0.14], scale: [1, 1.06, 1] }}
+                transition={{ duration: 8, delay: 0.8, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute right-[0%] top-[22%] text-[#C6A15B]"
+              >
+                <Target size={205} strokeWidth={0.65} />
+              </motion.div>
+              <motion.div
+                aria-hidden="true"
+                animate={{ y: [0, -22, 0], rotate: [0, -7, 0], opacity: [0.13, 0.27, 0.13], scale: [1, 1.05, 1] }}
+                transition={{ duration: 6.5, delay: 1.4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute left-[5%] bottom-[8%] text-[#C6A15B]"
+              >
+                <Lightbulb size={175} strokeWidth={0.65} />
+              </motion.div>
+              <motion.div
+                aria-hidden="true"
+                animate={{ y: [0, 23, 0], rotate: [0, 8, 0], opacity: [0.14, 0.29, 0.14], scale: [1, 1.06, 1] }}
+                transition={{ duration: 7.5, delay: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute right-[5%] bottom-[6%] text-[#087F8C]"
+              >
+                <BriefcaseBusiness size={185} strokeWidth={0.65} />
+              </motion.div>
+              <motion.div
+                aria-hidden="true"
+                animate={{ y: [0, -18, 0], rotate: [0, 5, 0], opacity: [0.10, 0.22, 0.10] }}
+                transition={{ duration: 9, delay: 0.5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute left-[25%] top-[3%] text-[#C6A15B]"
+              >
+                <Handshake size={135} strokeWidth={0.65} />
+              </motion.div>
+              <motion.div
+                aria-hidden="true"
+                animate={{ y: [0, 18, 0], rotate: [0, -5, 0], opacity: [0.10, 0.22, 0.10] }}
+                transition={{ duration: 9.5, delay: 1.2, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute right-[25%] bottom-[2%] text-[#087F8C]"
+              >
+                <TrendingUp size={140} strokeWidth={0.65} />
+              </motion.div>
 
-              const orbitAngles = leaders.slice(1).map((_, index) => -90 - index * 40);
+              <div className="absolute left-1/2 top-[3%] h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-[#087F8C]/[0.055] blur-[120px]" />
+              <div className="absolute left-[-100px] bottom-[-100px] h-[400px] w-[400px] rounded-full bg-[#C6A15B]/[0.04] blur-[100px]" />
+              <div className="absolute right-[-100px] top-[20%] h-[450px] w-[450px] rounded-full bg-[#087F8C]/[0.04] blur-[110px]" />
+            </div>
 
-              const getPoint = (angle, radius) => {
-                const radians = (angle * Math.PI) / 180;
-                return {
-                  x: centerX + Math.cos(radians) * radius,
-                  y: centerY + Math.sin(radians) * radius,
-                };
-              };
+            {/* Soft background structure */}
+            <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-[40px]">
+              <div className="absolute left-1/2 top-[8%] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#087F8C]/[0.08] blur-[100px]" />
+              <div className="absolute -left-32 bottom-10 h-[380px] w-[380px] rounded-full bg-[#C6A15B]/[0.045] blur-[90px]" />
+              <div className="absolute -right-32 top-32 h-[420px] w-[420px] rounded-full bg-[#087F8C]/[0.05] blur-[100px]" />
+            </div>
 
-              // Find the exact point where a radial connector meets each card edge.
-              const getCardEdgePoint = (angle) => {
-                const radians = (angle * Math.PI) / 180;
-                const ux = Math.cos(radians);
-                const uy = Math.sin(radians);
+            {/* Leadership spine */}
+            <div className="pointer-events-none absolute left-1/2 top-[300px] bottom-[170px] w-px -translate-x-1/2 bg-gradient-to-b from-[#C6A15B]/80 via-[#087F8C]/50 to-[#C6A15B]/20" />
 
-                const xDistance = Math.abs(ux) < 0.0001
-                  ? Infinity
-                  : halfCardWidth / Math.abs(ux);
-                const yDistance = Math.abs(uy) < 0.0001
-                  ? Infinity
-                  : halfCardHeight / Math.abs(uy);
+            {/* PRESIDENT — STEP 00 */}
+            <motion.div
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.7 }}
+              className="relative z-10 mx-auto w-[450px]"
+            >
+              <div className="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full border border-[#C6A15B]/50 bg-[#0B1F3A] px-5 py-2 text-[8px] font-bold uppercase tracking-[0.28em] text-[#C6A15B]">
+                Step 00 · Leadership
+              </div>
 
-                const edgeDistance = Math.min(xDistance, yDistance);
-                const point = getPoint(angle, orbitRadius - edgeDistance);
-
-                return point;
-              };
-
-              const icons = [
-                TrendingUp,
-                Handshake,
-                BriefcaseBusiness,
-                UsersRound,
-                Target,
-                BrainCircuit,
-                Lightbulb,
-                ShieldCheck,
-                Award,
-              ];
-
-              return (
-                <>
-                  {/* Equal-radius orbit */}
-                  <motion.div
-                    aria-hidden="true"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
-                    className="absolute left-1/2 top-1/2 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#C6A15B]/20"
-                  >
-                    <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C6A15B] shadow-[0_0_20px_#C6A15B]" />
-                    <span className="absolute right-[6%] top-[24%] h-2 w-2 rounded-full bg-[#087F8C] shadow-[0_0_18px_#087F8C]" />
-                    <span className="absolute bottom-[9%] left-[28%] h-2 w-2 rounded-full bg-[#43B8BA] shadow-[0_0_18px_#43B8BA]" />
-                  </motion.div>
-
-                  {/* Secondary orbit */}
-                  <motion.div
-                    aria-hidden="true"
-                    animate={{ rotate: -360 }}
-                    transition={{ duration: 48, repeat: Infinity, ease: "linear" }}
-                    className="absolute left-1/2 top-1/2 h-[760px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#087F8C]/20 border-dashed"
-                  >
-                    <span className="absolute right-0 top-1/2 h-2.5 w-2.5 -translate-y-1/2 translate-x-1/2 rounded-full bg-[#43B8BA] shadow-[0_0_22px_#43B8BA]" />
-                    <span className="absolute left-[10%] bottom-[18%] h-2 w-2 rounded-full bg-[#C6A15B] shadow-[0_0_18px_#C6A15B]" />
-                  </motion.div>
-
-                  {/* Inner orbit around the President */}
-                  <div
-                    aria-hidden="true"
-                    className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.08]"
-                  />
-
-                  {/* =================================================
-                      EXPLICIT NEWTON → PRESIDENT CONNECTION
-                      Newton is the 12 o'clock card, so give this
-                      vertical connection its own dedicated layer.
-                      This guarantees a clean, visible connection
-                      from the President's top edge to Newton's
-                      bottom edge.
-                  ================================================= */}
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute left-1/2 z-[25] -translate-x-1/2"
-                    style={{
-                      // Newton is at 12 o'clock. Keep the connector ONLY
-                      // in the real gap between Newton's bottom edge and
-                      // Biswanath's top edge so it can never pass behind
-                      // the President card.
-                      top: centerY - orbitRadius + halfCardHeight,
-                      height: orbitRadius - halfCardHeight - presidentRadius,
-                    }}
-                  >
-                    <motion.div
-                      initial={{ scaleY: 0, opacity: 0 }}
-                      whileInView={{ scaleY: 1, opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 0.45, ease: "easeOut" }}
-                      className="absolute left-1/2 top-0 h-full w-[3px] -translate-x-1/2 origin-top rounded-full bg-gradient-to-b from-[#C6A15B] via-[#43B8BA] to-[#C6A15B] shadow-[0_0_14px_rgba(67,184,186,.8)]"
-                    />
-
-                    <motion.span
-                      initial={{ scale: 0, opacity: 0 }}
-                      whileInView={{ scale: 1, opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 1.15, duration: 0.35 }}
-                      className="absolute bottom-[-6px] left-1/2 h-3 w-3 -translate-x-1/2 rounded-full border border-[#C6A15B] bg-[#071A2D] shadow-[0_0_18px_rgba(198,161,91,.9)]"
-                    />
+              <div className="rounded-[38px] border border-[#C6A15B]/50 bg-gradient-to-br from-[#0B1F3A] via-[#123A5A] to-[#087F8C] p-[2px] shadow-[0_30px_80px_rgba(0,0,0,.28)]">
+                <div className="rounded-[36px] bg-[#F6F4EF] px-10 py-10 text-center">
+                  <div className="mx-auto h-[150px] w-[150px] overflow-hidden rounded-full border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-lg">
+                    <img src={leaders[0].image} alt={leaders[0].name} className="h-full w-full object-cover" />
                   </div>
+                  <div className="mx-auto mt-5 inline-flex items-center gap-2 rounded-full bg-[#0B1F3A] px-4 py-2 text-[8px] font-bold uppercase tracking-[0.2em] text-[#C6A15B]">
+                    <Award size={12} /> President
+                  </div>
+                  <h3 className="mt-3 text-[27px] font-semibold tracking-[-0.03em] text-[#0B1F3A]">{leaders[0].name}</h3>
+                  <p className="mt-1 text-[9px] leading-4 text-[#68737D]">{leaders[0].role}</p>
+                  <p className="mx-auto mt-4 max-w-[360px] text-[11px] leading-5 text-[#68737D]">{leaders[0].description}</p>
+                </div>
+              </div>
+            </motion.div>
 
+            {/* Connector */}
+            <div className="relative z-10 mx-auto h-16 w-px bg-gradient-to-b from-[#C6A15B] to-[#087F8C]" />
+
+            {/* STEP 01 — COO */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.6 }}
+              className="relative z-10 mx-auto w-[420px]"
+            >
+              <div className="rounded-[32px] border border-[#087F8C]/40 bg-[#123A5A] p-1 shadow-[0_22px_60px_rgba(0,0,0,.2)]">
+                <div className="rounded-[28px] bg-[#0B1F3A] px-8 py-8 text-center">
+                  <span className="text-[8px] font-bold uppercase tracking-[0.25em] text-[#C6A15B]">Step 01 · Operations</span>
+                  <div className="mx-auto mt-4 h-[105px] w-[105px] overflow-hidden rounded-full border-2 border-[#C6A15B] bg-[#DCE2E7]">
+                    <img src={leaders[1].image} alt={leaders[1].name} className="h-full w-full object-cover" />
+                  </div>
+                  <h3 className="mt-4 text-[20px] font-semibold text-white">{leaders[1].name}</h3>
+                  <p className="mt-1 text-[8px] font-semibold uppercase leading-4 tracking-[0.08em] text-[#43B8BA]">{leaders[1].role}</p>
+                  <p className="mt-2 text-[8px] font-semibold uppercase tracking-[0.1em] text-[#C6A15B]">{leaders[1].tagline}</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Connector */}
+            <div className="relative z-10 mx-auto h-14 w-px bg-gradient-to-b from-[#087F8C] to-[#C6A15B]" />
+
+            {/* STEPPED TEAM LEVELS */}
+            <div className="relative z-10 space-y-7">
+              {[
+                [leaders[2], leaders[6]],
+                [leaders[3], leaders[4], leaders[7]],
+                [leaders[5], leaders[8], leaders[9]],
+              ].map((row, rowIndex) => {
+                const icons = [Handshake, BriefcaseBusiness, UsersRound, Target, BrainCircuit, Lightbulb, ShieldCheck, Award];
+                return (
                   <motion.div
-                    aria-hidden="true"
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{ opacity: [0, 1, 0], scale: [0.5, 1.15, 0.5] }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 2.4, delay: 1.2, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut" }}
-                    className="pointer-events-none absolute left-1/2 z-[16] h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-[#C6A15B] shadow-[0_0_18px_#C6A15B]"
-                    style={{ top: centerY - 255 }}
-                  />
-
-                  {/* =================================================
-                      CENTER → EVERY CARD CONNECTORS
-                      Every card uses the same 40° spacing and the
-                      connector starts at the President and terminates
-                      exactly at the corresponding card edge.
-                  ================================================= */}
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 1380 1280"
-                    preserveAspectRatio="none"
-                    className="pointer-events-none absolute inset-0 z-[14] h-full w-full overflow-visible"
+                    key={`step-row-${rowIndex}`}
+                    initial={{ opacity: 0, y: 28 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.55, delay: rowIndex * 0.08 }}
+                    className="relative"
                   >
-                    <defs>
-                      <linearGradient id="teamLinePremium" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stopColor="#C6A15B" stopOpacity="0.28" />
-                        <stop offset="45%" stopColor="#43B8BA" stopOpacity="0.95" />
-                        <stop offset="100%" stopColor="#C6A15B" stopOpacity="0.45" />
-                      </linearGradient>
-                      <filter id="teamLineGlow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feGaussianBlur stdDeviation="3" result="blur" />
-                        <feMerge>
-                          <feMergeNode in="blur" />
-                          <feMergeNode in="SourceGraphic" />
-                        </feMerge>
-                      </filter>
-                    </defs>
+                    {/* horizontal step rail */}
+                    <div className="pointer-events-none absolute left-[7%] right-[7%] top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-[#087F8C]/30 to-transparent" />
 
-                    {orbitAngles.map((angle, index) => {
-                      const start = getPoint(angle, presidentRadius);
-                      const end = getCardEdgePoint(angle);
+                    <div
+                      className={
+                        row.length === 2
+                          ? "mx-auto grid max-w-[860px] grid-cols-2 gap-10"
+                          : "mx-auto grid max-w-[1120px] grid-cols-3 gap-8"
+                      }
+                    >
+                      {row.map((leader, index) => {
+                        const leaderIndex = leaders.indexOf(leader);
+                        const Icon = icons[Math.max(0, leaderIndex - 2) % icons.length];
+                        const stepNumber = String(rowIndex + 2).padStart(2, "0");
 
-                      return (
-                        <g key={angle}>
-                          {/* soft glow */}
-                          <motion.line
-                            x1={start.x}
-                            y1={start.y}
-                            x2={end.x}
-                            y2={end.y}
-                            stroke="#43B8BA"
-                            strokeOpacity="0.22"
-                            strokeWidth="7"
-                            filter="url(#teamLineGlow)"
-                            initial={{ pathLength: 0, opacity: 0 }}
-                            whileInView={{ pathLength: 1, opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1.1, delay: 0.2 + index * 0.08 }}
-                          />
-
-                          {/* main connector */}
-                          <motion.line
-                            x1={start.x}
-                            y1={start.y}
-                            x2={end.x}
-                            y2={end.y}
-                            stroke="url(#teamLinePremium)"
-                            strokeWidth="2.2"
-                            strokeLinecap="round"
-                            strokeDasharray="4 7"
-                            initial={{ pathLength: 0, opacity: 0 }}
-                            whileInView={{ pathLength: 1, opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1.25, delay: 0.2 + index * 0.08 }}
-                          />
-
-                          {/* animated connection pulse */}
-                          <motion.circle
-                            r="4"
-                            fill="#C6A15B"
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: [0, 1, 0] }}
-                            viewport={{ once: true }}
-                            animate={{
-                              cx: [start.x, end.x],
-                              cy: [start.y, end.y],
-                            }}
-                            transition={{
-                              duration: 2.8,
-                              delay: 1.3 + index * 0.15,
-                              repeat: Infinity,
-                              repeatDelay: 1.2,
-                              ease: "easeInOut",
-                            }}
-                          />
-                        </g>
-                      );
-                    })}
-                  </svg>
-
-                  {/* Connection nodes at the outer edge of every card */}
-                  {orbitAngles.map((angle, index) => {
-                    const edge = getCardEdgePoint(angle);
-                    const node = getPoint(angle, Math.max(presidentRadius + 30, orbitRadius - 145));
-
-                    return (
-                      <motion.span
-                        key={`node-${angle}`}
-                        initial={{ scale: 0, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.9 + index * 0.08, duration: 0.35 }}
-                        animate={{
-                          boxShadow: [
-                            "0 0 0 rgba(198,161,91,0)",
-                            "0 0 20px rgba(198,161,91,.8)",
-                            "0 0 0 rgba(198,161,91,0)",
-                          ],
-                        }}
-                        className="pointer-events-none absolute z-[12] h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#C6A15B] bg-[#071A2D]"
-                        style={{ left: node.x, top: node.y }}
-                      >
-                        <span
-                          className="absolute inset-0 rounded-full bg-[#C6A15B]/30 blur-[3px]"
-                          style={{ opacity: edge ? 1 : 0 }}
-                        />
-                      </motion.span>
-                    );
-                  })}
-
-                  {/* President */}
-                  <motion.article
-                    initial={{ opacity: 0, scale: 0.72, y: 20 }}
-                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.25 }}
-                    transition={{ duration: 0.9, ease: "easeOut" }}
-                    whileHover={{ scale: 1.035 }}
-                    className="absolute left-1/2 top-1/2 z-30 flex h-[325px] w-[325px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[3px] border-[#C6A15B] bg-gradient-to-br from-[#0B1F3A] via-[#123A5A] to-[#087F8C] p-[9px] shadow-[0_0_90px_rgba(8,127,140,.3)]"
-                  >
-                    <motion.div
-                      aria-hidden="true"
-                      animate={{ scale: [1, 1.06, 1], opacity: [0.35, 0.7, 0.35] }}
-                      transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                      className="absolute inset-[-18px] rounded-full border border-[#C6A15B]/35"
-                    />
-                    <div className="absolute inset-[-30px] rounded-full border border-[#087F8C]/10" />
-
-                    <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-full border border-white/15 bg-[#F6F4EF] text-center">
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(8,127,140,.18),transparent_48%)]" />
-
-                      <div className="relative h-[138px] w-[138px] overflow-hidden rounded-full border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-[0_12px_35px_rgba(11,31,58,.25)]">
-                        <img
-                          src={leaders[0].image}
-                          alt={leaders[0].name}
-                          className="h-full w-full object-cover object-center"
-                        />
-                      </div>
-
-                      <span className="relative mt-4 rounded-full bg-[#0B1F3A] px-4 py-1.5 text-[8px] font-bold uppercase tracking-[0.22em] text-[#C6A15B]">
-                        President
-                      </span>
-
-                      <h3 className="relative mt-3 px-4 text-[21px] font-semibold tracking-[-0.035em] text-[#0B1F3A]">
-                        {leaders[0].name}
-                      </h3>
-
-                      <p className="relative mt-1 max-w-[240px] px-4 text-[9px] leading-4 text-[#68737D]">
-                        {leaders[0].role}
-                      </p>
-
-                      <div className="relative mt-3 flex items-center gap-2 text-[8px] font-semibold uppercase tracking-[0.16em] text-[#087F8C]">
-                        <Award size={13} />
-                        Leadership · Strategy · Finance
-                      </div>
-                    </div>
-                  </motion.article>
-
-                  {/* =================================================
-                      NINE CORE TEAM MEMBERS — EQUAL CIRCULAR ORBIT
-                  ================================================= */}
-                  {leaders.slice(1).map((leader, index) => {
-                    const angle = orbitAngles[index];
-                    const radians = (angle * Math.PI) / 180;
-                    const x = Math.cos(radians) * orbitRadius;
-                    const y = Math.sin(radians) * orbitRadius;
-                    const Icon = icons[index];
-
-                    return (
-                      <div
-                        key={leader.name}
-                        className="absolute left-1/2 top-1/2 z-20"
-                        style={{
-                          transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
-                        }}
-                      >
-                        <motion.article
-                          initial={{ opacity: 0, scale: 0.72 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          viewport={{ once: true, amount: 0.12 }}
-                          transition={{ duration: 0.65, delay: 0.2 + index * 0.08, ease: "easeOut" }}
-                          whileHover={{ scale: 1.045, y: -6, zIndex: 50 }}
-                          className="group relative h-[280px] w-[235px]"
-                        >
-                          <div className="relative h-full overflow-hidden rounded-[30px] border border-[#C6A15B]/45 bg-gradient-to-br from-[#102B43] via-[#0D344A] to-[#087F8C]/90 shadow-[0_20px_55px_rgba(0,0,0,.3)] transition-all duration-500 group-hover:border-[#C6A15B] group-hover:shadow-[0_28px_70px_rgba(8,127,140,.28)]">
-                            <div className="absolute left-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-[#C6A15B] bg-[#071A2D]/90 text-[#C6A15B] shadow-[0_8px_20px_rgba(0,0,0,.22)] backdrop-blur-sm transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#C6A15B] group-hover:text-[#0B1F3A]">
-                              <Icon size={18} strokeWidth={1.35} />
+                        return (
+                          <div key={leader.name} className="relative">
+                            <div className="absolute -top-3 left-7 z-20 flex h-7 min-w-7 items-center justify-center rounded-full border border-[#C6A15B]/50 bg-[#0B1F3A] px-2 text-[7px] font-bold text-[#C6A15B]">
+                              {stepNumber}
                             </div>
 
-                            <div className="relative flex items-center justify-center px-5 pb-4 pt-5">
-                              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(198,161,91,.2),transparent_58%)]" />
-                              <div className="relative h-[94px] w-[94px] overflow-hidden rounded-full border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-[0_10px_30px_rgba(0,0,0,.3)] transition-transform duration-500 group-hover:scale-105">
-                                <img
-                                  src={leader.image}
-                                  alt={leader.name}
-                                  className="h-full w-full object-cover object-center"
-                                />
-                              </div>
-                            </div>
+                            <article className="group relative min-h-[300px] overflow-hidden rounded-[26px] border border-white/10 bg-gradient-to-br from-[#0B1F3A] via-[#123A5A] to-[#087F8C] p-[1px] shadow-[0_20px_50px_rgba(0,0,0,.2)] transition-transform duration-300 hover:-translate-y-2">
+                              <div className="relative h-full overflow-hidden rounded-[25px] bg-[#F6F4EF]">
+                                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#C6A15B] via-[#087F8C] to-[#C6A15B]" />
 
-                            <div className="px-5 pb-5 pt-3 text-center">
-                              <h3 className="text-[14px] font-semibold leading-tight tracking-[-0.02em] text-white">
-                                {leader.name}
-                              </h3>
-                              <p className="mt-1.5 min-h-[30px] text-[8px] font-bold uppercase leading-4 tracking-[0.075em] text-[#43B8BA]">
-                                {leader.role}
-                              </p>
+                                <div className="flex items-center gap-4 p-5">
+                                  <div className="relative h-[94px] w-[94px] shrink-0 overflow-hidden rounded-[18px] border-2 border-[#C6A15B] bg-[#DCE2E7]">
+                                    <img src={leader.image} alt={leader.name} className="h-full w-full object-cover" />
+                                    <div className="absolute bottom-0 right-0 flex h-8 w-8 items-center justify-center rounded-tl-[12px] bg-[#0B1F3A] text-[#C6A15B]">
+                                      <Icon size={13} />
+                                    </div>
+                                  </div>
 
-                              {leader.tagline && (
-                                <div className="mx-auto mt-2 inline-flex items-center gap-1.5 rounded-full border border-[#C6A15B]/30 bg-[#C6A15B]/5 px-2.5 py-1 text-[7.5px] font-semibold uppercase tracking-[0.12em] text-[#C6A15B]">
-                                  <span className="h-px w-3 bg-[#C6A15B]/70" />
-                                  <span>{leader.tagline}</span>
-                                  <span className="h-px w-3 bg-[#C6A15B]/70" />
+                                  <div className="min-w-0">
+                                    <p className="text-[7px] font-bold uppercase tracking-[0.18em] text-[#A47C2F]">Leadership Step</p>
+                                    <h3 className="mt-1 text-[18px] font-semibold leading-6 tracking-[-0.02em] text-[#0B1F3A]">{leader.name}</h3>
+                                    <p className="mt-1 text-[8px] font-bold uppercase leading-3.5 tracking-[0.06em] text-[#087F8C]">{leader.role}</p>
+                                  </div>
                                 </div>
-                              )}
 
-                              <div className="mx-auto mt-2.5 h-px w-8 bg-[#C6A15B] transition-all duration-500 group-hover:w-14" />
-                              <p className="mt-2.5 line-clamp-3 text-[7.8px] leading-4 text-[#C5D0D8]">
-                                {leader.description}
-                              </p>
-                            </div>
-
-                            <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-[#C6A15B] via-[#087F8C] to-[#C6A15B] opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+                                <div className="border-t border-[#DCE2E7] px-5 py-4">
+                                  <p className="text-[10px] leading-6 text-[#68737D]">{leader.description}</p>
+                                  <div className="mt-4 h-[2px] w-8 bg-[#C6A15B] transition-all duration-500 group-hover:w-16" />
+                                </div>
+                              </div>
+                            </article>
                           </div>
-                        </motion.article>
-                      </div>
-                    );
-                  })}
-                </>
-              );
-            })()}
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mx-auto mt-14 flex max-w-[920px] items-center justify-center gap-4 border-t border-white/10 pt-7"
+            >
+              <span className="h-px w-12 bg-[#C6A15B]" />
+              <span className="text-[8px] font-bold uppercase tracking-[0.28em] text-[#8FA0AD]">Strategy · Operations · Expertise · Impact</span>
+              <span className="h-px w-12 bg-[#087F8C]" />
+            </motion.div>
           </div>
 
           {/* =====================================================
@@ -2223,254 +2058,72 @@ export default function OurTeamPage() {
 
           </div>
 
-          {/* Team cards */}
+          {/* Compact expert cards */}
 
           <div
             className="
               mt-10
               grid
-              gap-5
+              gap-4
               sm:grid-cols-2
               lg:grid-cols-3
             "
           >
+            {team.map((person, index) => {
+              const Icon = person.icon;
 
-            {team.map(
-              (person, index) => {
-                const Icon = person.icon;
-
-                return (
-                  <motion.article
-                    key={person.name}
-                    initial={{
-                      opacity: 0,
-                      y: 30,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                      amount: 0.15,
-                    }}
-                    transition={{
-                      duration: 0.6,
-                      delay: index * 0.08,
-                    }}
-                    whileHover={{
-                      y: -10,
-                      scale: 1.01,
-                    }}
-                    className="
-                      group
-                      overflow-hidden
-                      rounded-[20px]
-                      border
-                      border-[#C9DDDA]
-                      bg-[#F6F4EF]
-                      shadow-[0_12px_35px_rgba(11,31,58,.07)]
-                      transition-shadow
-                      duration-500
-                      hover:shadow-[0_25px_55px_rgba(11,31,58,.15)]
-                    "
-                  >
-
-                    {/* Image */}
-
-                    <div
-                      className="
-                        relative
-                        h-[285px]
-                        overflow-hidden
-                      "
-                    >
-
+              return (
+                <motion.article
+                  key={person.name}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.55, delay: index * 0.06 }}
+                  whileHover={{ y: -6 }}
+                  className="group relative overflow-hidden rounded-[18px] border border-[#DCE2E7] bg-white shadow-[0_10px_30px_rgba(11,31,58,.06)] transition-shadow duration-300 hover:shadow-[0_18px_40px_rgba(11,31,58,.12)]"
+                >
+                  <div className="flex gap-4 p-4 sm:p-5">
+                    <div className="relative h-[112px] w-[92px] shrink-0 overflow-hidden rounded-[14px] bg-[#DCE2E7]">
                       <img
                         src={person.image}
                         alt={person.name}
-                        className="
-                          h-full
-                          w-full
-                          object-cover
-                          transition-transform
-                          duration-700
-                          group-hover:scale-110
-                        "
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-
-                      <div
-                        className="
-                          absolute
-                          inset-0
-                          bg-gradient-to-t
-                          from-[#0B1F3A]/80
-                          via-transparent
-                          to-transparent
-                          opacity-80
-                        "
-                      />
-
-                      {/* Icon */}
-
-                      <motion.div
-                        whileHover={{
-                          rotate: 12,
-                          scale: 1.1,
-                        }}
-                        className="
-                          absolute
-                          left-4
-                          top-4
-                          flex
-                          h-10
-                          w-10
-                          items-center
-                          justify-center
-                          rounded-full
-                          border
-                          border-white/20
-                          bg-[#087F8C]/90
-                          text-white
-                          backdrop-blur-md
-                        "
-                      >
-                        <Icon
-                          size={16}
-                          strokeWidth={1.5}
-                        />
-                      </motion.div>
-
-                      {/* Number */}
-
-                      <div
-                        className="
-                          absolute
-                          bottom-4
-                          left-4
-                          text-[8px]
-                          font-bold
-                          uppercase
-                          tracking-[0.2em]
-                          text-[#C6A15B]
-                        "
-                      >
-                        0{index + 1} / IBS
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/55 to-transparent" />
+                      <div className="absolute bottom-2 left-2 flex h-7 w-7 items-center justify-center rounded-lg bg-[#087F8C] text-white shadow-md">
+                        <Icon size={13} strokeWidth={1.6} />
                       </div>
-
-                      {/* Arrow */}
-
-                      <motion.div
-                        initial={{
-                          opacity: 0,
-                          scale: 0.6,
-                        }}
-                        whileHover={{
-                          opacity: 1,
-                          scale: 1,
-                        }}
-                        className="
-                          absolute
-                          bottom-4
-                          right-4
-                          flex
-                          h-10
-                          w-10
-                          items-center
-                          justify-center
-                          rounded-full
-                          bg-[#C6A15B]
-                          text-[#0B1F3A]
-                        "
-                      >
-                        <ArrowUpRight size={16} />
-                      </motion.div>
-
                     </div>
 
-                    {/* Content */}
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-start justify-between gap-2">
+                        <span className="text-[7px] font-bold uppercase tracking-[0.18em] text-[#C6A15B]">
+                          0{index + 1} / Expert
+                        </span>
+                        <ArrowUpRight size={14} className="shrink-0 text-[#087F8C]/50 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#C6A15B]" />
+                      </div>
 
-                    <div className="p-5">
-
-                      <h3
-                        className="
-                          text-[16px]
-                          font-semibold
-                          tracking-[-0.02em]
-                          text-[#202832]
-                        "
-                      >
+                      <h3 className="mt-2 text-[15px] font-semibold leading-5 tracking-[-0.025em] text-[#0B1F3A]">
                         {person.name}
                       </h3>
 
-                      <p
-                        className="
-                          mt-1.5
-                          text-[8px]
-                          font-bold
-                          uppercase
-                          tracking-[0.13em]
-                          text-[#087F8C]
-                        "
-                      >
+                      <p className="mt-1.5 line-clamp-2 text-[8px] font-bold uppercase leading-3.5 tracking-[0.09em] text-[#087F8C]">
                         {person.role}
                       </p>
 
-                      <p
-                        className="
-                          mt-3
-                          text-[10px]
-                          leading-5
-                          text-[#68737D]
-                        "
-                      >
-                        {person.description}
-                      </p>
-
-                      <div
-                        className="
-                          mt-4
-                          flex
-                          items-center
-                          justify-between
-                          border-t
-                          border-[#DCE2E7]
-                          pt-3
-                        "
-                      >
-
-                        <span
-                          className="
-                            text-[8px]
-                            uppercase
-                            tracking-[0.12em]
-                            text-[#8C989E]
-                          "
-                        >
-                          IBS Canada
-                        </span>
-
-                        <ArrowRight
-                          size={13}
-                          className="
-                            text-[#C6A15B]
-                            transition-transform
-                            duration-300
-                            group-hover:translate-x-1
-                          "
-                        />
-
-                      </div>
-
+                      <div className="mt-3 h-px w-8 bg-[#C6A15B] transition-all duration-500 group-hover:w-14" />
                     </div>
+                  </div>
 
-                  </motion.article>
-                );
-              }
-            )}
-
+                  <div className="border-t border-[#DCE2E7] px-4 py-3 sm:px-5">
+                    <p className="line-clamp-3 text-[9px] leading-[1.65] text-[#68737D]">
+                      {person.description}
+                    </p>
+                  </div>
+                </motion.article>
+              );
+            })}
           </div>
-
         </div>
 
       </section>
