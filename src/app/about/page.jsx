@@ -98,6 +98,8 @@ export default function AboutPage() {
           lg:min-h-[930px]
           lg:pt-[180px]
         "
+
+   
       >
         
 
@@ -315,6 +317,8 @@ export default function AboutPage() {
             lg:px-10
             xl:px-14
           "
+
+          
         >
 
           {/* LEFT */}
@@ -944,874 +948,1550 @@ export default function AboutPage() {
           03 — CAPABILITY CONSTELLATION
       ===================================================== */}
 
-      <section
-        className="
-          relative
-          overflow-visible
-          bg-[#0B1F3A]
-          px-6
-          h-fit
-          py-24
-          sm:px-8
-          sm:py-38
-          lg:px-10
-          lg:py-42
-          xl:px-14
-        "
+<section
+  className="
+    relative
+    overflow-hidden
+    bg-[#0B1F3A]
+    px-6
+    py-20
+    sm:px-8
+    sm:py-24
+    lg:px-10
+    lg:py-28
+    xl:px-14
+  "
+>
+  {/* =========================================================
+      BACKGROUND GRID
+  ========================================================= */}
 
-        style={{paddingTop:"70px 0px"}}
+  <div
+    className="
+      pointer-events-none
+      absolute
+      inset-0
+      opacity-[0.045]
+      [background-image:linear-gradient(rgba(220,226,231,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(220,226,231,0.35)_1px,transparent_1px)]
+      [background-size:80px_80px]
+    "
+  />
+
+  {/* =========================================================
+      DEEP BACKGROUND GLOWS
+  ========================================================= */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -left-[220px]
+      top-[18%]
+      h-[500px]
+      w-[500px]
+      rounded-full
+      bg-[#087F8C]/[0.10]
+      blur-[120px]
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-[220px]
+      top-[45%]
+      h-[520px]
+      w-[520px]
+      rounded-full
+      bg-[#123A5A]/[0.22]
+      blur-[120px]
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      bottom-[-220px]
+      left-1/2
+      h-[480px]
+      w-[680px]
+      -translate-x-1/2
+      rounded-full
+      bg-[#C6A15B]/[0.045]
+      blur-[120px]
+    "
+  />
+
+
+  {/* =========================================================
+      DECORATIVE BACKGROUND CIRCLES
+  ========================================================= */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -left-[170px]
+      top-[35%]
+      h-[430px]
+      w-[430px]
+      rounded-full
+      border
+      border-[#087F8C]/[0.08]
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -left-[135px]
+      top-[39%]
+      h-[350px]
+      w-[350px]
+      rounded-full
+      border
+      border-[#C6A15B]/[0.045]
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-[180px]
+      top-[54%]
+      h-[460px]
+      w-[460px]
+      rounded-full
+      border
+      border-[#087F8C]/[0.07]
+    "
+  />
+
+
+  {/* =========================================================
+      MAIN CONTENT
+  ========================================================= */}
+
+  <div className="relative z-10 mx-auto max-w-[1280px]">
+
+
+    {/* =======================================================
+        HEADER
+    ======================================================= */}
+
+    <div
+      className="
+        flex
+        flex-col
+        lg:flex-row
+        lg:items-end
+        lg:gap-6
+      "
+    >
+
+      <div className="shrink-0 lg:w-[275px]">
+
+        <span
+          className="
+            text-[9px]
+            font-bold
+            uppercase
+            tracking-[0.3em]
+            text-[#C6A15B]
+          "
+        >
+          02 / Our Vision
+        </span>
+
+        <h2
+          className="
+            mt-5
+            text-[44px]
+            font-bold
+            leading-[0.92]
+            tracking-[-0.055em]
+            text-white
+            sm:text-[58px]
+            lg:text-[62px]
+          "
+        >
+          Our
+
+          <span className="block text-[#BCEBE8]">
+            Mission
+          </span>
+        </h2>
+
+      </div>
+
+
+      <p
+        className="
+          mt-6
+          max-w-[500px]
+          text-[14px]
+          leading-7
+          text-white/45
+          lg:mt-0
+        "
+      >
+        To support stronger, more capable organizations through strategic
+        direction, financial and operational management, research, training
+        and practical implementation support.
+      </p>
+
+    </div>
+
+
+    {/* =======================================================
+        DIVIDER
+    ======================================================= */}
+
+    <div className="mt-7 flex items-center gap-3">
+
+      <span
+        className="
+          h-[2px]
+          w-16
+          rounded-full
+          bg-[#087F8C]
+          sm:w-20
+        "
+      />
+
+      <span
+        className="
+          h-[2px]
+          w-24
+          rounded-full
+          bg-[#C6A15B]/70
+          sm:w-32
+        "
+      />
+
+    </div>
+
+
+    {/* =======================================================
+        DESKTOP CONSTELLATION
+    ======================================================= */}
+
+    <div
+      className="
+        relative
+        mt-16
+        hidden
+        h-[760px]
+        overflow-visible
+        lg:block
+        xl:h-[780px]
+      "
+    >
+
+      {/* =====================================================
+          PARTICLES
+      ===================================================== */}
+
+      {[
+        ["15%", "16%", "#BCEBE8", 0],
+        ["85%", "17%", "#C6A15B", 1.5],
+        ["11%", "48%", "#5DE2E7", 2.5],
+        ["89%", "48%", "#BCEBE8", 3],
+        ["28%", "7%", "#C6A15B", 4],
+        ["72%", "8%", "#5DE2E7", 1],
+        ["25%", "91%", "#BCEBE8", 4.5],
+        ["75%", "91%", "#C6A15B", 2.7],
+      ].map(([left, top, color, delay], index) => (
+        <motion.span
+          key={`desktop-particle-${index}`}
+          animate={{
+            y: [0, -7, 0, 5, 0],
+            opacity: [0.12, 0.55, 0.15, 0.4, 0.12],
+            scale: [0.8, 1.15, 0.8],
+          }}
+          transition={{
+            duration: 6 + index * 0.4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay,
+          }}
+          className="
+            pointer-events-none
+            absolute
+            z-10
+            h-1
+            w-1
+            rounded-full
+          "
+          style={{
+            left,
+            top,
+            backgroundColor: color,
+            boxShadow: `0 0 10px ${color}`,
+          }}
+        />
+      ))}
+
+
+      {/* =====================================================
+          OUTER ORBIT
+      ===================================================== */}
+
+      <motion.div
+        animate={{
+          rotate: 360,
+        }}
+        transition={{
+          duration: 48,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="
+          pointer-events-none
+          absolute
+          left-1/2
+          top-1/2
+          h-[570px]
+          w-[570px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+        "
       >
 
-        {/* Background grid */}
+        <div
+          className="
+            absolute
+            inset-0
+            rounded-full
+            border-[3px]
+            border-transparent
+            border-t-[#5DE2E7]/70
+            border-r-[#087F8C]/30
+          "
+        />
+
+        <span
+          className="
+            absolute
+            left-1/2
+            top-[-6px]
+            h-3
+            w-3
+            -translate-x-1/2
+            rounded-full
+            bg-[#BCEBE8]
+            shadow-[0_0_14px_#BCEBE8]
+          "
+        />
+
+        <span
+          className="
+            absolute
+            right-[7%]
+            top-[23%]
+            h-2.5
+            w-2.5
+            rounded-full
+            bg-[#F0D98A]
+            shadow-[0_0_13px_#F0D98A]
+          "
+        />
+
+        <span
+          className="
+            absolute
+            bottom-[10%]
+            left-[20%]
+            h-2
+            w-2
+            rounded-full
+            bg-[#5DE2E7]
+            shadow-[0_0_11px_#5DE2E7]
+          "
+        />
+
+      </motion.div>
+
+
+      {/* =====================================================
+          MIDDLE ORBIT
+      ===================================================== */}
+
+      <motion.div
+        animate={{
+          rotate: -360,
+        }}
+        transition={{
+          duration: 38,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="
+          pointer-events-none
+          absolute
+          left-1/2
+          top-1/2
+          h-[435px]
+          w-[435px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+        "
+      >
+
+        <div
+          className="
+            absolute
+            inset-0
+            rounded-full
+            border-[3px]
+            border-transparent
+            border-t-[#C6A15B]/85
+            border-l-[#F0D98A]/25
+          "
+        />
+
+        <span
+          className="
+            absolute
+            left-[17%]
+            top-[-5px]
+            h-2.5
+            w-2.5
+            rounded-full
+            bg-[#F0D98A]
+            shadow-[0_0_13px_#F0D98A]
+          "
+        />
+
+        <span
+          className="
+            absolute
+            bottom-[8%]
+            right-[14%]
+            h-2
+            w-2
+            rounded-full
+            bg-[#BCEBE8]
+            shadow-[0_0_10px_#BCEBE8]
+          "
+        />
+
+      </motion.div>
+
+
+      {/* =====================================================
+          INNER ORBIT
+      ===================================================== */}
+
+      <motion.div
+        animate={{
+          rotate: 360,
+        }}
+        transition={{
+          duration: 29,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="
+          pointer-events-none
+          absolute
+          left-1/2
+          top-1/2
+          h-[315px]
+          w-[315px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+        "
+      >
+
+        <div
+          className="
+            absolute
+            inset-0
+            rounded-full
+            border-[2px]
+            border-transparent
+            border-t-[#BCEBE8]/75
+            border-b-[#087F8C]/30
+          "
+        />
+
+        <span
+          className="
+            absolute
+            left-1/2
+            top-[-5px]
+            h-2
+            w-2
+            -translate-x-1/2
+            rounded-full
+            bg-[#5DE2E7]
+            shadow-[0_0_11px_#5DE2E7]
+          "
+        />
+
+      </motion.div>
+
+
+      {/* =====================================================
+          CENTRAL GLOW
+      ===================================================== */}
+
+      <motion.div
+        animate={{
+          scale: [1, 1.08, 1],
+          opacity: [0.06, 0.13, 0.06],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="
+          pointer-events-none
+          absolute
+          left-1/2
+          top-1/2
+          h-[350px]
+          w-[350px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          bg-[#087F8C]/15
+          blur-[100px]
+        "
+      />
+
+
+      {/* =====================================================
+          CENTRAL CIRCLE
+      ===================================================== */}
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0.85,
+        }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+        }}
+        viewport={{
+          once: true,
+        }}
+        animate={{
+          boxShadow: [
+            "0 0 45px rgba(8,127,140,0.08)",
+            "0 0 80px rgba(8,127,140,0.22)",
+            "0 0 45px rgba(8,127,140,0.08)",
+          ],
+        }}
+        transition={{
+          opacity: {
+            duration: 0.8,
+          },
+          scale: {
+            duration: 0.8,
+          },
+          boxShadow: {
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          },
+        }}
+        className="
+          absolute
+          left-1/2
+          top-1/2
+          z-40
+          flex
+          h-[165px]
+          w-[165px]
+          -translate-x-1/2
+          -translate-y-1/2
+          flex-col
+          items-center
+          justify-center
+          rounded-full
+          border-[2px]
+          border-[#C6A15B]/55
+          bg-gradient-to-br
+          from-[#164E61]
+          via-[#123A5A]
+          to-[#0B2942]
+          text-center
+        "
+      >
 
         <div
           className="
             pointer-events-none
             absolute
-            inset-0
-            opacity-[0.065]
-            [background-image:linear-gradient(rgba(220,226,231,0.32)_1px,transparent_1px),linear-gradient(90deg,rgba(220,226,231,0.32)_1px,transparent_1px)]
-            [background-size:80px_80px]
-          "
-        />
-
-        {/* Aurora */}
-
-        <motion.div
-          animate={{
-            x: [0, 80, 0],
-            scale: [1, 1.12, 1],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            pointer-events-none
-            absolute
-            left-[20%]
-            top-[20%]
-            h-[400px]
-            w-[700px]
+            inset-[10px]
             rounded-full
-            bg-[#087F8C]/10
-            blur-[120px]
+            border
+            border-[#087F8C]/25
+            bg-[#087F8C]/[0.08]
           "
         />
 
+        <Sparkles
+          size={29}
+          strokeWidth={1.5}
+          className="relative z-10 text-[#F0D98A]"
+        />
 
-        <div className="relative z-10 mx-auto max-w-[1280px]">
-<div
-  className="
-    flex
-    flex-col
-    lg:flex-row
-    lg:items-end
-    lg:gap-3
-  "
->
-  {/* Mission heading */}
+        <span
+          className="
+            relative
+            z-10
+            mt-3
+            text-[8px]
+            font-semibold
+            uppercase
+            tracking-[0.28em]
+            text-white/40
+          "
+        >
+          IBS
+        </span>
 
-  <div className="shrink-0 lg:w-[270px]">
+        <span
+          className="
+            relative
+            z-10
+            mt-1
+            text-[15px]
+            font-medium
+            leading-6
+            text-white
+          "
+        >
+          Our
+          <br />
+          Values
+        </span>
 
-    <span
-      className="
-        text-[9px]
-        font-bold
-        uppercase
-        tracking-[0.3em]
-        text-[#C6A15B]
-      "
-    >
-      02 / Our Vision
-    </span>
-
-    <h2
-      className="
-        mt-5
-        text-[45px]
-        font-bold
-        leading-[0.92]
-        tracking-[-0.055em]
-        text-white
-        sm:text-[60px]
-      "
-    >
-      Our
-
-      <span className="block text-[#BCEBE8]">
-        Mission
-      </span>
-    </h2>
-
-  </div>
+      </motion.div>
 
 
-  {/* Mission paragraph */}
+      {/* =====================================================
+          DESKTOP SIX CARDS
+          POSITIONS UNCHANGED
+      ===================================================== */}
 
-  <p
-    className="
-      max-w-[500px]
-      pb-1
-      text-[15px]
-      leading-8
-      text-white/45
-    "
-  >
-    To support stronger, more capable organizations through strategic
-    direction, financial and operational management, research, training
-    and practical implementation support.
-  </p>
+      {[
+        {
+          icon: BriefcaseBusiness,
+          title: "Integrity",
+          text:
+            "We act with integrity and build trust through sound governance and professional conduct.",
+          position: "left-[10%] top-[2%]",
+          accent: "#BCEBE8",
+        },
+        {
+          icon: Cpu,
+          title: "Service Excellence",
+          text:
+            "We hold ourselves to high standards and consider the long-term impact of our work.",
+          position: "right-[10%] top-[2%]",
+          accent: "#BCEBE8",
+        },
+        {
+          icon: Lightbulb,
+          title: "Value Creation",
+          text:
+            "We focus on practical value, knowledge transfer and solutions that strengthen client capability.",
+          position: "left-[2%] top-[40%]",
+          accent: "#C6A15B",
+        },
+        {
+          icon: Building2,
+          title: "Excellence",
+          text:
+            "We promote teamwork, learning, innovation and disciplined execution.",
+          position: "right-[2%] top-[40%]",
+          accent: "#C6A15B",
+        },
+        {
+          icon: Globe2,
+          title: "Respect",
+          text:
+            "We collaborate respectfully with clients and stakeholders and recognize the importance of self-determination.",
+          position: "left-[10%] bottom-[5%]",
+          accent: "#BCEBE8",
+        },
+        {
+          icon: Network,
+          title: "Confidentiality",
+          text:
+            "We protect confidential information and build relationships grounded in trust.",
+          position: "right-[10%] bottom-[5%]",
+          accent: "#BCEBE8",
+        },
+      ].map((item, index) => {
 
-</div>
+        const Icon = item.icon;
 
-{/* Divider */}
-
-<div
-  className="
-    mt-5
-    flex
-    items-center
-    gap-3
-    lg:mt-5
-  "
->
-  {/* Teal line */}
-  <span
-    className="
-      h-[2px]
-      w-20
-      rounded-full
-      bg-[#087F8C]
-    "
-  />
-
-  {/* Gold line */}
-  <span
-    className="
-      h-[2px]
-      w-90
-      rounded-full
-      bg-[#C6A15B]
-    "
-  />
-</div>
-
-
-          {/* =================================================
-              CONSTELLATION — PREMIUM CORPORATE ECOSYSTEM
-          ================================================= */}
-
-          <div
-            className="
-              relative
-              mt-16
-              h-[720px]
-              overflow-visible
-              sm:mt-20
-              sm:h-[740px]
-              lg:h-[720px]
-            "
+        return (
+          <motion.div
+            key={`desktop-value-card-${index}`}
+            initial={{
+              opacity: 0,
+              y: 20,
+              scale: 0.97,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.1,
+            }}
+            animate={{
+              y: [0, -3, 0, 2, 0],
+            }}
+            transition={{
+              opacity: {
+                duration: 0.7,
+                delay: index * 0.08,
+              },
+              scale: {
+                duration: 0.7,
+                delay: index * 0.08,
+              },
+              y: {
+                duration: 8 + index * 0.45,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: index * 0.35,
+              },
+            }}
+            whileHover={{
+              y: -7,
+              scale: 1.02,
+            }}
+            className={`
+              absolute
+              ${item.position}
+              z-30
+              w-[175px]
+              xl:w-[205px]
+            `}
           >
 
-            {/* Soft atmospheric glow */}
-            <motion.div
-              animate={{
-                x: [-40, 40, -40],
-                y: [20, -20, 20],
-                scale: [1, 1.08, 1],
-                opacity: [0.08, 0.14, 0.08],
-              }}
-              transition={{
-                duration: 18,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="pointer-events-none absolute left-1/2 top-1/2 h-[460px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#087F8C]/10 blur-[120px]"
-            />
-
-            {/* A few soft luxury particles */}
-            {[
-              { left: "16%", top: "24%", color: "#BCEBE8", delay: 0 },
-              { left: "84%", top: "27%", color: "#C6A15B", delay: 1.8 },
-              { left: "11%", top: "64%", color: "#5DE2E7", delay: 3.2 },
-              { left: "89%", top: "67%", color: "#BCEBE8", delay: 2.4 },
-              { left: "34%", top: "13%", color: "#C6A15B", delay: 4.1 },
-              { left: "67%", top: "86%", color: "#5DE2E7", delay: 1.1 },
-              { left: "29%", top: "87%", color: "#BCEBE8", delay: 5 },
-              { left: "73%", top: "11%", color: "#C6A15B", delay: 3.7 },
-            ].map((particle, index) => (
-              <motion.span
-                key={`luxury-particle-${index}`}
-                animate={{
-                  y: [0, -7, 0, 5, 0],
-                  opacity: [0.12, 0.5, 0.16, 0.4, 0.12],
-                  scale: [0.8, 1.1, 0.8],
-                }}
-                transition={{
-                  duration: 6 + index * 0.45,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: particle.delay,
-                }}
-                className="pointer-events-none absolute z-10 h-1 w-1 rounded-full"
-                style={{
-                  left: particle.left,
-                  top: particle.top,
-                  backgroundColor: particle.color,
-                  boxShadow: `0 0 10px ${particle.color}`,
-                }}
-              />
-            ))}
-
-            {/* =================================================
-                SOLAR SYSTEM — THREE BOLD ORBITS
-            ================================================= */}
-
-            {/* Outer orbit */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 48,
-                repeat: Infinity,
-                ease: "linear",
-              }}
+            <div
               className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-                h-[320px]
-                w-[320px]
-                sm:h-[390px]
-                sm:w-[390px]
-                md:h-[470px]
-                md:w-[470px]
-                lg:h-[570px]
-                lg:w-[570px]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                lg:block
-              "
-            >
-              <div
-                className="
-                  absolute
-                  inset-0
-                  rounded-full
-                  border-[3px]
-                  border-transparent
-                  border-t-[#5DE2E7]/80
-                  border-r-[#087F8C]/40
-                "
-              />
-
-              {/* 4 orbiting bodies */}
-              <span className="absolute left-1/2 top-[-6px] h-3 w-3 -translate-x-1/2 rounded-full bg-[#BCEBE8] shadow-[0_0_12px_#BCEBE8]" />
-              <span className="absolute right-[7%] top-[23%] h-2.5 w-2.5 rounded-full bg-[#F0D98A] shadow-[0_0_12px_#F0D98A]" />
-              <span className="absolute bottom-[10%] left-[20%] h-2 w-2 rounded-full bg-[#5DE2E7] shadow-[0_0_10px_#5DE2E7]" />
-              <span className="absolute bottom-[24%] right-[4%] h-2 w-2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
-            </motion.div>
-
-            {/* Middle orbit */}
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{
-                duration: 38,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-                h-[245px]
-                w-[245px]
-                sm:h-[300px]
-                sm:w-[300px]
-                md:h-[355px]
-                md:w-[355px]
-                lg:h-[435px]
-                lg:w-[435px]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                lg:block
-              "
-            >
-              <div
-                className="
-                  absolute
-                  inset-0
-                  rounded-full
-                  border-[3px]
-                  border-transparent
-                  border-t-[#C6A15B]/90
-                  border-l-[#F0D98A]/35
-                "
-              />
-
-              {/* 3 orbiting bodies */}
-              <span className="absolute left-[17%] top-[-5px] h-2.5 w-2.5 rounded-full bg-[#F0D98A] shadow-[0_0_12px_#F0D98A]" />
-              <span className="absolute bottom-[8%] right-[14%] h-2 w-2 rounded-full bg-[#BCEBE8] shadow-[0_0_10px_#BCEBE8]" />
-              <span className="absolute left-[2%] top-[45%] h-2 w-2 rounded-full bg-[#5DE2E7] shadow-[0_0_10px_#5DE2E7]" />
-            </motion.div>
-
-            {/* Inner orbit */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 29,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-                h-[175px]
-                w-[175px]
-                sm:h-[215px]
-                sm:w-[215px]
-                md:h-[255px]
-                md:w-[255px]
-                lg:h-[315px]
-                lg:w-[315px]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                lg:block
-              "
-            >
-              <div
-                className="
-                  absolute
-                  inset-0
-                  rounded-full
-                  border-[2px]
-                  border-transparent
-                  border-t-[#BCEBE8]/80
-                  border-b-[#087F8C]/40
-                "
-              />
-
-              {/* 3 orbiting bodies */}
-              <span className="absolute left-1/2 top-[-5px] h-2 w-2 -translate-x-1/2 rounded-full bg-[#5DE2E7] shadow-[0_0_11px_#5DE2E7]" />
-              <span className="absolute bottom-[12%] left-[8%] h-1.5 w-1.5 rounded-full bg-[#C6A15B] shadow-[0_0_9px_#C6A15B]" />
-              <span className="absolute right-[6%] top-[34%] h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-            </motion.div>
-
-            {/* Third-ring accent — creates the solar-system depth */}
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{
-                duration: 72,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-                hidden
-                h-[640px]
-                w-[640px]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
+                group
+                relative
+                overflow-hidden
+                rounded-[24px]
                 border
-                border-[#DCE2E7]/[0.025]
-                lg:block
-              "
-            >
-              <span className="absolute left-[19%] top-[-2px] h-1.5 w-1.5 rounded-full bg-[#C6A15B]/80 shadow-[0_0_8px_#C6A15B]" />
-            </motion.div>
-
-            {/* Soft central glow */}
-            <motion.div
-              animate={{
-                scale: [1, 1.08, 1],
-                opacity: [0.08, 0.16, 0.08],
-              }}
-              transition={{
-                duration: 7,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-                h-[360px]
-                w-[360px]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                bg-[#087F8C]/15
-                blur-[100px]
-              "
-            />
-
-            {/* =================================================
-                CENTRAL IBS CORE
-            ================================================= */}
-
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0.88,
-              }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-              }}
-              viewport={{
-                once: true,
-              }}
-              animate={{
-                boxShadow: [
-                  "0 0 45px rgba(8,127,140,0.10)",
-                  "0 0 80px rgba(8,127,140,0.24)",
-                  "0 0 45px rgba(8,127,140,0.10)",
-                ],
-              }}
-              transition={{
-                opacity: { duration: 0.8 },
-                scale: { duration: 0.8 },
-                boxShadow: {
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                },
-              }}
-              className="
-                absolute
-                left-1/2
-                top-1/2
-                z-40
-                flex
-                h-[112px]
-                w-[112px]
-                sm:h-[128px]
-                sm:w-[128px]
-                md:h-[145px]
-                md:w-[145px]
-                lg:h-[165px]
-                lg:w-[165px]
-                -translate-x-1/2
-                -translate-y-1/2
-                flex-col
-                items-center
-                justify-center
-                rounded-full
-                border-[2px]
-                border-[#C6A15B]/55
+                border-[#BCEBE8]/20
                 bg-gradient-to-br
-                from-[#164E61]
-                via-[#123A5A]
+                from-[#1A6B78]
+                via-[#125263]
                 to-[#0B2942]
-                text-center
+                p-5
+                shadow-[0_22px_60px_rgba(0,0,0,0.24)]
                 backdrop-blur-xl
+                transition-all
+                duration-500
+                hover:border-[#BCEBE8]/40
               "
             >
+
               <div
                 className="
                   pointer-events-none
                   absolute
-                  inset-[10px]
-                  rounded-full
+                  inset-[1px]
+                  rounded-[23px]
                   border
-                  border-[#087F8C]/25
-                  bg-[#087F8C]/[0.08]
+                  border-white/[0.07]
+                "
+              />
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-12
+                  -top-14
+                  h-36
+                  w-36
+                  rounded-full
+                  bg-[#087F8C]/30
+                  blur-3xl
+                "
+              />
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -bottom-12
+                  -left-10
+                  h-32
+                  w-32
+                  rounded-full
+                  bg-[#C6A15B]/[0.12]
+                  blur-3xl
+                "
+              />
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  left-5
+                  right-5
+                  top-0
+                  h-px
+                  bg-gradient-to-r
+                  from-transparent
+                  via-[#BCEBE8]/70
+                  to-transparent
                 "
               />
 
               <motion.div
                 animate={{
-                  scale: [0.96, 1.04, 0.96],
-                  opacity: [0.7, 1, 0.7],
+                  x: ["-150%", "240%"],
                 }}
                 transition={{
-                  duration: 5,
+                  duration: 10,
                   repeat: Infinity,
+                  repeatDelay: 15,
                   ease: "easeInOut",
+                  delay: index * 1.1,
                 }}
-                className="relative z-10"
-              >
-                <Sparkles
-                  size={29}
-                  strokeWidth={1.5}
-                  className="text-[#F0D98A]"
-                />
-              </motion.div>
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-y-0
+                  left-0
+                  w-[20%]
+                  -skew-x-12
+                  bg-gradient-to-r
+                  from-transparent
+                  via-white/[0.045]
+                  to-transparent
+                "
+              />
 
-              <span
+              <motion.div
+                whileHover={{
+                  rotate: 8,
+                  scale: 1.06,
+                }}
                 className="
                   relative
-                  z-10
-                  mt-3
-                  text-[8px]
-                  font-semibold
-                  uppercase
-                  tracking-[0.28em]
-                  text-white/40
+                  flex
+                  h-11
+                  w-11
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-white/[0.16]
+                  bg-[#0B2942]/60
+                  backdrop-blur-md
                 "
               >
-                IBS
-              </span>
 
-              <span
+                <Icon
+                  size={19}
+                  strokeWidth={1.7}
+                  style={{
+                    color: item.accent,
+                  }}
+                />
+
+              </motion.div>
+
+              <h3
                 className="
                   relative
-                  z-10
-                  mt-1
-                  text-[15px]
-                  font-medium
-                  leading-6
+                  mt-5
+                  text-[16px]
+                  font-semibold
+                  tracking-[-0.02em]
                   text-white
                 "
               >
-               Our
-                <br />
-                Values
-              </span>
-            </motion.div>
+                {item.title}
+              </h3>
 
-            {/* =================================================
-                CAPABILITY CARDS
-            ================================================= */}
-            {[
-  {
-    icon: BriefcaseBusiness,
-    title: "Integrity",
-    text: "We act with integrity and build trust through sound governance and professional conduct.",
-    position: "left-[2%] top-[2%] lg:left-[2%] lg:top-[2%]",
-    accent: "#BCEBE8",
-  },
+              <p
+                className="
+                  relative
+                  mt-1.5
+                  text-[11px]
+                  leading-5
+                  text-[#F6F4EF]/70
+                "
+              >
+                {item.text}
+              </p>
 
-  {
-    icon: Cpu,
-    title: "Service Excellence",
-    text: "We hold ourselves to high standards and consider the long-term impact of our work",
-    position: "right-[2%] top-[2%] lg:right-[2%] lg:top-[2%]",
-    accent: "#BCEBE8",
-  },
+              <div
+                className="
+                  relative
+                  mt-4
+                  flex
+                  items-center
+                  gap-2
+                  text-[#BCEBE8]/35
+                "
+              >
+                <span className="h-px w-7 bg-current" />
+                <ArrowRight size={11} />
+              </div>
 
-  {
-    icon: Lightbulb,
-    title: "Value Creation",
-    text: "We focus on practical value, knowledge transfer and solutions that strengthen client capability.",
-    position: "left-[2%] top-[285px] lg:left-[2%] lg:top-[44%]",
-    accent: "#C6A15B",
-  },
+            </div>
 
-  {
-    icon: Building2,
-    title: "Excellence",
-    text: "We promote teamwork, learning, innovation and disciplined execution.",
-    position: "right-[2%] top-[285px] lg:right-[2%] lg:top-[44%]",
-    accent: "#C6A15B",
-  },
+          </motion.div>
+        );
+      })}
 
-  {
-  icon: Globe2,
-  title: "Respect",
-  text: "We collaborate respectfully with clients and stakeholders and recognize the importance of self-determination.",
-  position:
-    "left-[10%] bottom-[-180px] lg:left-[10%] lg:bottom-[-120px]",
-  accent: "#BCEBE8",
-},
+    </div>
 
-{
-  icon: Network,
-  title: "Confidentiality",
-  text: "We protect confidential information and build relationships grounded in trust.",
-  position:
-    "right-[10%] bottom-[-180px] lg:right-[10%] lg:bottom-[-120px]",
-  accent: "#BCEBE8",
-},
-].map((item, index) => {
-              const Icon = item.icon;
 
-              return (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 18, scale: 0.97 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  animate={{ y: [0, -3, 0, 2, 0] }}
-                  transition={{
-                    opacity: { duration: 0.7, delay: index * 0.08 },
-                    scale: { duration: 0.7, delay: index * 0.08 },
-                    y: {
-                      duration: 8 + index * 0.45,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: index * 0.35,
-                    },
+    {/* =======================================================
+        MOBILE / TABLET LAYOUT
+    ======================================================= */}
+
+    <div className="mt-14 lg:hidden">
+
+      {/* =====================================================
+          TOP TWO CARDS
+      ===================================================== */}
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+        {[
+          {
+            icon: BriefcaseBusiness,
+            title: "Integrity",
+            text:
+              "We act with integrity and build trust through sound governance and professional conduct.",
+            accent: "#BCEBE8",
+          },
+          {
+            icon: Cpu,
+            title: "Service Excellence",
+            text:
+              "We hold ourselves to high standards and consider the long-term impact of our work.",
+            accent: "#BCEBE8",
+          },
+        ].map((item, index) => {
+
+          const Icon = item.icon;
+
+          return (
+            <motion.div
+              key={`mobile-top-card-${index}`}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.1,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.08,
+              }}
+              className="
+                relative
+                overflow-hidden
+                rounded-[22px]
+                border
+                border-[#BCEBE8]/20
+                bg-gradient-to-br
+                from-[#1A6B78]
+                via-[#125263]
+                to-[#0B2942]
+                p-5
+                shadow-[0_18px_45px_rgba(0,0,0,0.22)]
+              "
+            >
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-12
+                  -top-12
+                  h-32
+                  w-32
+                  rounded-full
+                  bg-[#087F8C]/25
+                  blur-3xl
+                "
+              />
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -bottom-14
+                  -left-12
+                  h-32
+                  w-32
+                  rounded-full
+                  bg-[#C6A15B]/10
+                  blur-3xl
+                "
+              />
+
+              <div
+                className="
+                  relative
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-white/15
+                  bg-[#0B2942]/60
+                "
+              >
+
+                <Icon
+                  size={20}
+                  strokeWidth={1.7}
+                  style={{
+                    color: item.accent,
                   }}
-                  whileHover={{ y: -7, scale: 1.02 }}
-                  className={`absolute ${item.position} z-20 w-[165px] sm:w-[205px]`}
-                >
-                  <div
-                    className="
-                      group
-                      relative
-                      overflow-hidden
-                      rounded-[24px]
-                      border
-                      border-[#BCEBE8]/20
-                      bg-gradient-to-br
-                      from-[#1A6B78]
-                      via-[#125263]
-                      to-[#0B2942]
-                      p-5
-                      shadow-[0_22px_60px_rgba(0,0,0,0.24)]
-                      backdrop-blur-xl
-                      transition-all
-                      duration-500
-                      hover:-translate-y-1
-                      hover:border-[#BCEBE8]/40
-                      hover:shadow-[0_28px_75px_rgba(0,0,0,0.32)]
-                    "
-                  >
+                />
 
-                    {/* Inner glass frame */}
-                    <div
-                      className="
-                        pointer-events-none
-                        absolute
-                        inset-[1px]
-                        rounded-[23px]
-                        border
-                        border-white/[0.07]
-                      "
-                    />
+              </div>
 
-                    {/* Teal atmospheric layer */}
-                    <div
-                      className="
-                        pointer-events-none
-                        absolute
-                        -right-12
-                        -top-14
-                        h-36
-                        w-36
-                        rounded-full
-                        bg-[#087F8C]/30
-                        blur-3xl
-                      "
-                    />
+              <h3
+                className="
+                  relative
+                  mt-4
+                  text-[17px]
+                  font-semibold
+                  text-white
+                "
+              >
+                {item.title}
+              </h3>
 
-                    {/* Cyan contrast layer */}
-                    <div
-                      className="
-                        pointer-events-none
-                        absolute
-                        -left-10
-                        top-[30%]
-                        h-28
-                        w-28
-                        rounded-full
-                        bg-[#5DE2E7]/[0.10]
-                        blur-3xl
-                      "
-                    />
+              <p
+                className="
+                  relative
+                  mt-2
+                  text-[12px]
+                  leading-5
+                  text-white/65
+                "
+              >
+                {item.text}
+              </p>
 
-                    {/* Gold depth layer */}
-                    <div
-                      className="
-                        pointer-events-none
-                        absolute
-                        -bottom-12
-                        -left-10
-                        h-32
-                        w-32
-                        rounded-full
-                        bg-[#C6A15B]/[0.12]
-                        blur-3xl
-                      "
-                    />
+            </motion.div>
+          );
+        })}
 
-                    {/* Soft diagonal glass layer */}
-                    <div
-                      className="
-                        pointer-events-none
-                        absolute
-                        -right-16
-                        bottom-[-34px]
-                        h-24
-                        w-52
-                        rotate-[-14deg]
-                        rounded-full
-                        border-t
-                        border-[#BCEBE8]/20
-                      "
-                    />
+      </div>
 
-                    {/* Premium top highlight */}
-                    <div
-                      className="
-                        pointer-events-none
-                        absolute
-                        left-5
-                        right-5
-                        top-0
-                        h-px
-                        bg-gradient-to-r
-                        from-transparent
-                        via-[#BCEBE8]/75
-                        to-transparent
-                      "
-                    />
 
-                    {/* Moving reflection */}
-                    <motion.div
-                      animate={{ x: ["-150%", "240%"] }}
-                      transition={{
-                        duration: 10,
-                        repeat: Infinity,
-                        repeatDelay: 15,
-                        ease: "easeInOut",
-                        delay: index * 1.1,
-                      }}
-                      className="
-                        pointer-events-none
-                        absolute
-                        inset-y-0
-                        left-0
-                        w-[20%]
-                        -skew-x-12
-                        bg-gradient-to-r
-                        from-transparent
-                        via-white/[0.045]
-                        to-transparent
-                      "
-                    />
+      {/* =====================================================
+          MOBILE CENTRAL SOLAR SYSTEM
+      ===================================================== */}
 
-                    {/* Icon */}
-                    <motion.div
-                      whileHover={{
-                        rotate: 8,
-                        scale: 1.06,
-                      }}
-                      animate={{
-                        opacity: [0.85, 1, 0.85],
-                      }}
-                      transition={{
-                        opacity: {
-                          duration: 5 + index * 0.4,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                          delay: index * 0.25,
-                        },
-                      }}
-                      className="
-                        relative
-                        flex
-                        h-11
-                        w-11
-                        items-center
-                        justify-center
-                        rounded-full
-                        border
-                        border-white/[0.16]
-                        bg-[#0B2942]/55
-                        shadow-[0_0_24px_rgba(8,127,140,0.18)]
-                        backdrop-blur-md
-                        transition-all
-                        duration-300
-                        group-hover:border-[#BCEBE8]/35
-                      "
-                    >
-                      <Icon
-                        size={19}
-                        strokeWidth={1.7}
-                        style={{ color: item.accent }}
-                      />
-                    </motion.div>
+      <div
+        className="
+          relative
+          my-10
+          flex
+          h-[300px]
+          items-center
+          justify-center
+          overflow-hidden
+          sm:my-12
+          sm:h-[340px]
+        "
+      >
 
-                    {/* Card content */}
-                    <h3
-                      className="
-                        relative
-                        mt-5
-                        text-[16px]
-                        font-semibold
-                        tracking-[-0.02em]
-                        text-white
-                      "
-                    >
-                      {item.title}
-                    </h3>
+        {/* Glow */}
 
-                    <p
-                      className="
-                        relative
-                        mt-1.5
-                        text-[11px]
-                        leading-5
-                        text-[#F6F4EF]/70
-                      "
-                    >
-                      {item.text}
-                    </p>
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-1/2
+            top-1/2
+            h-[230px]
+            w-[230px]
+            -translate-x-1/2
+            -translate-y-1/2
+            rounded-full
+            bg-[#087F8C]/15
+            blur-[70px]
+          "
+        />
 
-                    {/* Bottom accent */}
-                    <div
-                      className="
-                        relative
-                        mt-4
-                        flex
-                        items-center
-                        gap-2
-                        text-[#BCEBE8]/35
-                        transition-all
-                        duration-300
-                        group-hover:text-[#F0D98A]
-                      "
-                    >
-                      <span className="h-px w-7 bg-current" />
-                      <ArrowRight size={11} />
-                    </div>
 
-                  </div>
-                </motion.div>
-              );
-            })}
+        {/* Outer orbit */}
 
-          </div>
+        <motion.div
+          animate={{
+            rotate: 360,
+          }}
+          transition={{
+            duration: 42,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="
+            absolute
+            left-1/2
+            top-1/2
+            h-[270px]
+            w-[270px]
+            -translate-x-1/2
+            -translate-y-1/2
+            rounded-full
+            border-[2px]
+            border-transparent
+            border-t-[#5DE2E7]/65
+            border-r-[#087F8C]/25
+          "
+        >
 
-        </div>
-      </section>
+          <span
+            className="
+              absolute
+              left-1/2
+              top-[-5px]
+              h-2.5
+              w-2.5
+              -translate-x-1/2
+              rounded-full
+              bg-[#BCEBE8]
+              shadow-[0_0_12px_#BCEBE8]
+            "
+          />
+
+          <span
+            className="
+              absolute
+              bottom-[12%]
+              right-[5%]
+              h-2
+              w-2
+              rounded-full
+              bg-[#C6A15B]
+              shadow-[0_0_10px_#C6A15B]
+            "
+          />
+
+        </motion.div>
+
+
+        {/* Middle orbit */}
+
+        <motion.div
+          animate={{
+            rotate: -360,
+          }}
+          transition={{
+            duration: 32,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="
+            absolute
+            left-1/2
+            top-1/2
+            h-[200px]
+            w-[200px]
+            -translate-x-1/2
+            -translate-y-1/2
+            rounded-full
+            border-[2px]
+            border-transparent
+            border-t-[#C6A15B]/80
+            border-l-[#F0D98A]/25
+          "
+        >
+
+          <span
+            className="
+              absolute
+              left-[15%]
+              top-[-4px]
+              h-2
+              w-2
+              rounded-full
+              bg-[#F0D98A]
+              shadow-[0_0_10px_#F0D98A]
+            "
+          />
+
+        </motion.div>
+
+
+        {/* Inner orbit */}
+
+        <motion.div
+          animate={{
+            rotate: 360,
+          }}
+          transition={{
+            duration: 24,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="
+            absolute
+            left-1/2
+            top-1/2
+            h-[135px]
+            w-[135px]
+            -translate-x-1/2
+            -translate-y-1/2
+            rounded-full
+            border
+            border-[#BCEBE8]/55
+            border-t-transparent
+          "
+        >
+
+          <span
+            className="
+              absolute
+              right-[5%]
+              top-[32%]
+              h-1.5
+              w-1.5
+              rounded-full
+              bg-[#5DE2E7]
+              shadow-[0_0_8px_#5DE2E7]
+            "
+          />
+
+        </motion.div>
+
+
+        {/* Mobile central circle */}
+
+        <motion.div
+          animate={{
+            scale: [1, 1.04, 1],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            relative
+            z-20
+            flex
+            h-[105px]
+            w-[105px]
+            flex-col
+            items-center
+            justify-center
+            rounded-full
+            border-[2px]
+            border-[#C6A15B]/55
+            bg-gradient-to-br
+            from-[#164E61]
+            via-[#123A5A]
+            to-[#0B2942]
+            text-center
+            shadow-[0_0_55px_rgba(8,127,140,0.18)]
+          "
+        >
+
+          <Sparkles
+            size={23}
+            strokeWidth={1.5}
+            className="text-[#F0D98A]"
+          />
+
+          <span
+            className="
+              mt-2
+              text-[7px]
+              uppercase
+              tracking-[0.28em]
+              text-white/40
+            "
+          >
+            IBS
+          </span>
+
+          <span
+            className="
+              mt-1
+              text-[13px]
+              leading-5
+              text-white
+            "
+          >
+            Our
+            <br />
+            Values
+          </span>
+
+        </motion.div>
+
+      </div>
+
+
+      {/* =====================================================
+          BOTTOM FOUR CARDS
+      ===================================================== */}
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+        {[
+          {
+            icon: Lightbulb,
+            title: "Value Creation",
+            text:
+              "We focus on practical value, knowledge transfer and solutions that strengthen client capability.",
+            accent: "#C6A15B",
+          },
+          {
+            icon: Building2,
+            title: "Excellence",
+            text:
+              "We promote teamwork, learning, innovation and disciplined execution.",
+            accent: "#C6A15B",
+          },
+          {
+            icon: Globe2,
+            title: "Respect",
+            text:
+              "We collaborate respectfully with clients and stakeholders and recognize the importance of self-determination.",
+            accent: "#BCEBE8",
+          },
+          {
+            icon: Network,
+            title: "Confidentiality",
+            text:
+              "We protect confidential information and build relationships grounded in trust.",
+            accent: "#BCEBE8",
+          },
+        ].map((item, index) => {
+
+          const Icon = item.icon;
+
+          return (
+            <motion.div
+              key={`mobile-bottom-card-${index}`}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.1,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.08,
+              }}
+              className="
+                relative
+                overflow-hidden
+                rounded-[22px]
+                border
+                border-[#BCEBE8]/20
+                bg-gradient-to-br
+                from-[#1A6B78]
+                via-[#125263]
+                to-[#0B2942]
+                p-5
+                shadow-[0_18px_45px_rgba(0,0,0,0.22)]
+              "
+            >
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-12
+                  -top-12
+                  h-32
+                  w-32
+                  rounded-full
+                  bg-[#087F8C]/25
+                  blur-3xl
+                "
+              />
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -bottom-14
+                  -left-12
+                  h-32
+                  w-32
+                  rounded-full
+                  bg-[#C6A15B]/10
+                  blur-3xl
+                "
+              />
+
+              <div
+                className="
+                  relative
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-white/15
+                  bg-[#0B2942]/60
+                "
+              >
+
+                <Icon
+                  size={20}
+                  strokeWidth={1.7}
+                  style={{
+                    color: item.accent,
+                  }}
+                />
+
+              </div>
+
+              <h3
+                className="
+                  relative
+                  mt-4
+                  text-[17px]
+                  font-semibold
+                  text-white
+                "
+              >
+                {item.title}
+              </h3>
+
+              <p
+                className="
+                  relative
+                  mt-2
+                  text-[12px]
+                  leading-5
+                  text-white/65
+                "
+              >
+                {item.text}
+              </p>
+
+            </motion.div>
+          );
+        })}
+
+      </div>
+
+    </div>
+
+
+    {/* =======================================================
+        SIGNATURE
+    ======================================================= */}
+
+    <div
+      className="
+        mt-10
+        flex
+        items-center
+        gap-3
+      "
+    >
+
+      <span
+        className="
+          h-1
+          w-1
+          rounded-full
+          bg-[#C6A15B]
+        "
+      />
+
+      <span
+        className="
+          h-px
+          w-10
+          bg-[#C6A15B]/40
+        "
+      />
+
+      <span
+        className="
+          text-[8px]
+          font-semibold
+          uppercase
+          tracking-[0.3em]
+          text-white/25
+        "
+      >
+        Stronger organizations · meaningful outcomes
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
 
 
       {/* =====================================================
           04 — JOURNEY TIMELINE
       ===================================================== */}
 
-    <section
+<section
   className="
     relative
+    h-auto
+    min-h-0
     overflow-hidden
     bg-white
     px-6
-    py-28
+    py-16
     sm:px-8
+    sm:py-20
     lg:px-10
-    lg:py-36
+    lg:py-24
     xl:px-14
   "
-  style={{padding:"70px 0px"}}
 >
 
-  
   {/* =====================================================
       DEEP BACKGROUND ATMOSPHERE
   ===================================================== */}
@@ -1858,7 +2538,9 @@ export default function AboutPage() {
     "
   />
 
-  {/* Large decorative circles */}
+  {/* =====================================================
+      LARGE DECORATIVE CIRCLES
+  ===================================================== */}
 
   <div
     className="
@@ -1888,6 +2570,10 @@ export default function AboutPage() {
     "
   />
 
+  {/* =====================================================
+      CONTENT
+  ===================================================== */}
+
   <div className="relative z-10 mx-auto max-w-[1280px]">
 
     {/* =====================================================
@@ -1898,11 +2584,12 @@ export default function AboutPage() {
 
       <span
         className="
-          text-[15px]
+          text-[12px]
           font-bold
           uppercase
           tracking-[0.3em]
           text-[#087F8C]
+          sm:text-[13px]
         "
       >
         03 / The journey
@@ -1910,13 +2597,14 @@ export default function AboutPage() {
 
       <h2
         className="
-          mt-6
-          text-[46px]
+          mt-5
+          text-[42px]
           font-bold
           leading-[0.98]
           tracking-[-0.055em]
           text-[#202832]
-          sm:text-[64px]
+          sm:text-[56px]
+          lg:text-[64px]
         "
       >
         How We
@@ -1933,7 +2621,15 @@ export default function AboutPage() {
         TIMELINE
     ===================================================== */}
 
-    <div className="relative mt-20 lg:mt-24">
+    <div
+      className="
+        relative
+        mt-14
+        h-auto
+        sm:mt-16
+        lg:mt-20
+      "
+    >
 
       {/* ===================================================
           TIMELINE BASE LINE
@@ -1951,7 +2647,9 @@ export default function AboutPage() {
         "
       />
 
-      {/* Animated progress */}
+      {/* ===================================================
+          ANIMATED PROGRESS
+      =================================================== */}
 
       <motion.div
         initial={{
@@ -1965,7 +2663,7 @@ export default function AboutPage() {
           amount: 0.1,
         }}
         transition={{
-          duration: 2.2,
+          duration: 2,
           ease: "easeInOut",
         }}
         className="
@@ -1992,35 +2690,30 @@ export default function AboutPage() {
           title:
             "Understand the challenge and define the desired outcome",
           icon: Lightbulb,
-          text: "",
         },
         {
           year: "02",
           title:
             "Assess the current state, priorities, risks and opportunities",
           icon: Network,
-          text: "",
         },
         {
           year: "03",
           title:
             "Develop a practical, evidence-informed approach",
           icon: Globe2,
-          text: "",
         },
         {
           year: "04",
           title:
             "Collaborate with client leadership and teams to implement priorities",
           icon: Zap,
-          text: "",
         },
         {
           year: "05",
           title:
             "Measure progress, transfer knowledge and strengthen internal capability",
           icon: Network,
-          text: "",
         },
       ].map((item, index) => {
 
@@ -2028,10 +2721,10 @@ export default function AboutPage() {
 
         return (
           <motion.div
-            key={item.year}
+            key={`journey-item-${index}-${item.year}`}
             initial={{
               opacity: 0,
-              y: 45,
+              y: 35,
             }}
             whileInView={{
               opacity: 1,
@@ -2039,24 +2732,24 @@ export default function AboutPage() {
             }}
             viewport={{
               once: true,
-              amount: 0.2,
+              amount: 0.15,
             }}
             transition={{
-              duration: 0.7,
-              delay: index * 0.1,
+              duration: 0.65,
+              delay: index * 0.08,
               ease: "easeOut",
             }}
             className="
               relative
               grid
-              gap-8
-              pb-20
+              gap-6
+              pb-14
               pl-14
               last:pb-0
               lg:grid-cols-2
-              lg:gap-24
+              lg:gap-20
               lg:pl-0
-              lg:pb-28
+              lg:pb-20
             "
           >
 
@@ -2064,113 +2757,115 @@ export default function AboutPage() {
                 BACKGROUND DECORATIVE CIRCLE
             ================================================= */}
 
-         <div
-  className={`
-    pointer-events-none
-    absolute
-    top-1/2
-    hidden
-    h-[300px]
-    w-[300px]
-    -translate-y-1/2
-    lg:block
-    ${
-      index % 2 === 0
-        ? "left-[1%]"
-        : "right-[1%]"
-    }
-  `}
->
-  {/* Outer teal soft glow */}
+            <div
+              className={`
+                pointer-events-none
+                absolute
+                top-1/2
+                hidden
+                h-[260px]
+                w-[260px]
+                -translate-y-1/2
+                lg:block
+                ${
+                  index % 2 === 0
+                    ? "left-[1%]"
+                    : "right-[1%]"
+                }
+              `}
+            >
 
-  <div
-    className="
-      absolute
-      inset-[-2px]
-      rounded-full
-      border-[5px]
-      border-transparent
-      border-l-[#087F8C]/10
-      border-t-[#087F8C]/8
-      rotate-[25deg]
-      blur-[5px]
-    "
-  />
+              {/* Outer teal soft glow */}
 
-  {/* Outer teal sharp arc */}
+              <div
+                className="
+                  absolute
+                  inset-[-2px]
+                  rounded-full
+                  border-[4px]
+                  border-transparent
+                  border-l-[#087F8C]/10
+                  border-t-[#087F8C]/8
+                  rotate-[25deg]
+                  blur-[5px]
+                "
+              />
 
-  <div
-    className="
-      absolute
-      inset-0
-      rounded-full
-      border-[3px]
-      border-transparent
-      border-l-[#087F8C]/35
-      border-t-[#087F8C]/28
-      rotate-[25deg]
-    "
-  />
+              {/* Outer teal sharp arc */}
 
+              <div
+                className="
+                  absolute
+                  inset-0
+                  rounded-full
+                  border-[2px]
+                  border-transparent
+                  border-l-[#087F8C]/30
+                  border-t-[#087F8C]/25
+                  rotate-[25deg]
+                "
+              />
 
-  {/* Inner gold soft glow */}
+              {/* Inner gold soft glow */}
 
-  <div
-    className="
-      absolute
-      inset-[30px]
-      rounded-full
-      border-[5px]
-      border-transparent
-      border-r-[#C6A15B]/10
-      border-b-[#C6A15B]/8
-      -rotate-[35deg]
-      blur-[5px]
-    "
-  />
+              <div
+                className="
+                  absolute
+                  inset-[30px]
+                  rounded-full
+                  border-[4px]
+                  border-transparent
+                  border-r-[#C6A15B]/10
+                  border-b-[#C6A15B]/8
+                  -rotate-[35deg]
+                  blur-[5px]
+                "
+              />
 
-  {/* Inner gold sharp arc */}
+              {/* Inner gold sharp arc */}
 
-  <div
-    className="
-      absolute
-      inset-[30px]
-      rounded-full
-      border-[3px]
-      border-transparent
-      border-r-[#C6A15B]/32
-      border-b-[#C6A15B]/25
-      -rotate-[35deg]
-    "
-  />
-</div>
+              <div
+                className="
+                  absolute
+                  inset-[30px]
+                  rounded-full
+                  border-[2px]
+                  border-transparent
+                  border-r-[#C6A15B]/28
+                  border-b-[#C6A15B]/22
+                  -rotate-[35deg]
+                "
+              />
+
+            </div>
+
 
             {/* =================================================
                 LARGE BACKGROUND ICON
             ================================================= */}
 
-          <Icon
-  size={170}
-  strokeWidth={1}
-  className={`
-    pointer-events-none
-    absolute
-    top-1/2
-    hidden
-    -translate-y-1/2
-    lg:block
-    ${
-      index % 2 === 0
-        ? "left-[4%]"
-        : "right-[4%]"
-    }
-    ${
-      index % 2 === 0
-        ? "text-[#087F8C]/[0.13]"
-        : "text-[#0B1F3A]/[0.12]"
-    }
-  `}
-/>
+            <Icon
+              size={145}
+              strokeWidth={1}
+              className={`
+                pointer-events-none
+                absolute
+                top-1/2
+                hidden
+                -translate-y-1/2
+                lg:block
+                ${
+                  index % 2 === 0
+                    ? "left-[4%]"
+                    : "right-[4%]"
+                }
+                ${
+                  index % 2 === 0
+                    ? "text-[#087F8C]/[0.10]"
+                    : "text-[#0B1F3A]/[0.09]"
+                }
+              `}
+            />
 
 
             {/* =================================================
@@ -2188,7 +2883,7 @@ export default function AboutPage() {
                 once: true,
               }}
               transition={{
-                delay: index * 0.1 + 0.2,
+                delay: index * 0.08 + 0.15,
                 type: "spring",
                 stiffness: 180,
               }}
@@ -2211,6 +2906,7 @@ export default function AboutPage() {
                 lg:-translate-x-1/2
               "
             >
+
               <motion.span
                 animate={{
                   scale: [1, 1.3, 1],
@@ -2230,6 +2926,7 @@ export default function AboutPage() {
                   shadow-[0_0_12px_rgba(8,127,140,0.4)]
                 "
               />
+
             </motion.div>
 
 
@@ -2243,8 +2940,8 @@ export default function AboutPage() {
                 z-10
                 ${
                   index % 2 === 0
-                    ? "lg:pr-24"
-                    : "lg:order-2 lg:pl-24"
+                    ? "lg:pr-20"
+                    : "lg:order-2 lg:pl-20"
                 }
               `}
             >
@@ -2253,11 +2950,11 @@ export default function AboutPage() {
 
                 <span
                   className="
-                    text-[30px]
+                    text-[27px]
                     font-bold
-                    tracking-[0.2em]
+                    tracking-[0.18em]
                     text-[#C6A15B]
-                    sm:text-[34px]
+                    sm:text-[31px]
                   "
                 >
                   {item.year}
@@ -2288,15 +2985,15 @@ export default function AboutPage() {
                 z-10
                 ${
                   index % 2 === 0
-                    ? "lg:pl-24"
-                    : "lg:order-1 lg:pr-24"
+                    ? "lg:pl-20"
+                    : "lg:order-1 lg:pr-20"
                 }
               `}
             >
 
               <motion.div
                 whileHover={{
-                  y: -5,
+                  y: -4,
                 }}
                 transition={{
                   duration: 0.3,
@@ -2305,22 +3002,22 @@ export default function AboutPage() {
                   group
                   relative
                   overflow-hidden
-                  rounded-[24px]
+                  rounded-[22px]
                   border
                   border-[#DCE2E7]
                   bg-white/90
-                  p-6
-                  shadow-[0_15px_45px_rgba(32,40,50,0.055)]
+                  p-5
+                  shadow-[0_12px_38px_rgba(32,40,50,0.05)]
                   backdrop-blur-sm
                   transition-all
                   duration-500
                   hover:border-[#087F8C]/20
-                  hover:shadow-[0_22px_60px_rgba(8,127,140,0.12)]
-                  sm:p-7
+                  hover:shadow-[0_18px_50px_rgba(8,127,140,0.10)]
+                  sm:p-6
                 "
               >
 
-                {/* Card teal glow */}
+                {/* Teal glow */}
 
                 <div
                   className="
@@ -2328,18 +3025,18 @@ export default function AboutPage() {
                     absolute
                     -right-16
                     -top-16
-                    h-36
-                    w-36
+                    h-32
+                    w-32
                     rounded-full
-                    bg-[#087F8C]/[0.08]
+                    bg-[#087F8C]/[0.07]
                     blur-3xl
                     transition-all
                     duration-500
-                    group-hover:bg-[#087F8C]/[0.14]
+                    group-hover:bg-[#087F8C]/[0.12]
                   "
                 />
 
-                {/* Card gold glow */}
+                {/* Gold glow */}
 
                 <div
                   className="
@@ -2347,10 +3044,10 @@ export default function AboutPage() {
                     absolute
                     -bottom-20
                     -left-16
-                    h-40
-                    w-40
+                    h-36
+                    w-36
                     rounded-full
-                    bg-[#C6A15B]/[0.06]
+                    bg-[#C6A15B]/[0.055]
                     blur-3xl
                   "
                 />
@@ -2366,7 +3063,7 @@ export default function AboutPage() {
                     h-px
                     bg-gradient-to-r
                     from-transparent
-                    via-[#087F8C]/40
+                    via-[#087F8C]/35
                     to-transparent
                   "
                 />
@@ -2383,8 +3080,8 @@ export default function AboutPage() {
                       className="
                         relative
                         flex
-                        h-16
-                        w-16
+                        h-14
+                        w-14
                         shrink-0
                         items-center
                         justify-center
@@ -2394,7 +3091,7 @@ export default function AboutPage() {
                         border-[#087F8C]/15
                         bg-gradient-to-br
                         from-[#087F8C]/15
-                        via-[#087F8C]/[0.07]
+                        via-[#087F8C]/[0.06]
                         to-[#0B1F3A]/[0.08]
                         text-[#087F8C]
                         shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]
@@ -2402,6 +3099,8 @@ export default function AboutPage() {
                         duration-500
                         group-hover:border-[#C6A15B]/40
                         group-hover:text-[#C6A15B]
+                        sm:h-16
+                        sm:w-16
                       "
                     >
 
@@ -2416,7 +3115,7 @@ export default function AboutPage() {
                       />
 
                       <Icon
-                        size={24}
+                        size={23}
                         strokeWidth={1.7}
                         className="relative z-10"
                       />
@@ -2428,12 +3127,13 @@ export default function AboutPage() {
 
                     <h3
                       className="
-                        text-[25px]
+                        text-[21px]
                         font-bold
                         leading-tight
                         tracking-[-0.035em]
                         text-[#202832]
-                        sm:text-[28px]
+                        sm:text-[25px]
+                        lg:text-[27px]
                       "
                     >
                       {item.title}
