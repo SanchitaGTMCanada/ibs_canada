@@ -1574,6 +1574,7 @@ export default function OurTeamPage() {
           CORE TEAM — EXECUTIVE LEADERSHIP
       ===================================================== */}
       <section
+        id="team"
         className="relative overflow-hidden bg-[#071A2D] px-5 py-20 sm:px-8 lg:px-10 lg:py-24 xl:px-12"
       >
         {/* Ambient background */}
@@ -1643,76 +1644,125 @@ export default function OurTeamPage() {
           </motion.div>
 
           {/* =====================================================
-              FEATURED PRESIDENT
+              FEATURED PRESIDENT — PREMIUM
           ===================================================== */}
           <motion.article
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.75 }}
-            className="group relative mx-auto mt-14 max-w-[980px]"
+            transition={{ duration: 0.8 }}
+            className="group relative mx-auto mt-14 max-w-[1080px]"
           >
-            <div className="absolute -inset-px rounded-[30px] bg-gradient-to-r from-[#C6A15B]/70 via-[#087F8C]/70 to-[#C6A15B]/40 opacity-80" />
+            {/* Premium gold + teal frame */}
+            <div className="absolute -inset-[1px] rounded-[32px] bg-gradient-to-r from-[#C6A15B] via-[#087F8C] to-[#C6A15B] opacity-90 blur-[1px]" />
 
-            <div className="relative overflow-hidden rounded-[30px] border border-white/10 bg-[#0B1F3A] shadow-[0_30px_90px_rgba(0,0,0,.28)]">
-              <div className="absolute inset-y-0 right-0 hidden w-[42%] bg-gradient-to-l from-[#087F8C]/20 to-transparent lg:block" />
-              <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-[#C6A15B]/10 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[32px] border border-[#C6A15B]/40 bg-gradient-to-br from-[#123A5A] via-[#0B1F3A] to-[#071A2D] shadow-[0_35px_100px_rgba(0,0,0,.38)]">
 
-              <div className="relative grid lg:grid-cols-[260px_1fr]">
-                <div className="flex items-center justify-center border-b border-white/10 bg-gradient-to-br from-[#123A5A] to-[#0B1F3A] p-8 lg:border-b-0 lg:border-r">
+              {/* Ambient highlights */}
+              <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#087F8C]/15 blur-[80px]" />
+              <div className="pointer-events-none absolute -bottom-28 left-[18%] h-64 w-64 rounded-full bg-[#C6A15B]/10 blur-[80px]" />
+
+              {/* Fine grid */}
+              <div
+                className="pointer-events-none absolute inset-0 opacity-[0.035]"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px)",
+                  backgroundSize: "46px 46px",
+                }}
+              />
+
+              <div className="relative grid lg:grid-cols-[310px_1fr]">
+
+                {/* PRESIDENT PORTRAIT */}
+                <div className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#16445D] via-[#123A5A] to-[#0B1F3A] p-9 sm:p-11">
+
+                  {/* Gold halo */}
+                  <div className="absolute h-[235px] w-[235px] rounded-full border border-[#C6A15B]/20" />
+                  <div className="absolute h-[205px] w-[205px] rounded-full border border-[#087F8C]/20" />
+
                   <div className="relative">
-                    <div className="absolute -inset-3 rounded-[28px] border border-[#C6A15B]/20" />
-                    <div className="relative h-[190px] w-[190px] overflow-hidden rounded-[24px] border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-[0_18px_45px_rgba(0,0,0,.3)]">
+                    <div className="absolute -inset-4 rounded-[30px] border border-[#C6A15B]/35" />
+
+                    <div className="relative h-[205px] w-[205px] overflow-hidden rounded-[26px] border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-[0_24px_55px_rgba(0,0,0,.38)]">
                       <img
                         src={leaders[0].image}
                         alt={leaders[0].name}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                       />
                     </div>
-                    <div className="absolute -bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-[#C6A15B]/50 bg-[#071A2D] px-4 py-2 text-[8px] font-bold uppercase tracking-[0.2em] text-[#C6A15B]">
-                      <Award size={12} />
+
+                    {/* Role badge */}
+                    <div className="absolute -bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-[#C6A15B]/70 bg-[#071A2D] px-5 py-2.5 text-[8px] font-bold uppercase tracking-[0.24em] text-[#D8B866] shadow-[0_10px_30px_rgba(0,0,0,.35)]">
+                      <Award size={13} strokeWidth={1.6} />
                       President
                     </div>
                   </div>
                 </div>
 
-                <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
+                {/* PRESIDENT DETAILS */}
+                <div className="relative flex flex-col justify-center p-8 sm:p-10 lg:p-12">
+
                   <div className="flex items-center gap-3">
-                    <span className="text-[8px] font-bold uppercase tracking-[0.25em] text-[#C6A15B]">
+                    <span className="text-[8px] font-bold uppercase tracking-[0.28em] text-[#C6A15B]">
                       Executive Leadership · 01
                     </span>
-                    <span className="h-px w-12 bg-[#087F8C]" />
+                    <span className="h-px w-16 bg-gradient-to-r from-[#C6A15B] to-[#087F8C]" />
                   </div>
 
-                  <h3 className="mt-4 text-[30px] font-semibold tracking-[-0.035em] text-white sm:text-[36px]">
-                    {leaders[0].name}
-                  </h3>
+                  <div className="mt-5 flex items-start justify-between gap-5">
+                    <div>
+                      <h3 className="text-[32px] font-semibold tracking-[-0.045em] text-white sm:text-[40px]">
+                        {leaders[0].name}
+                      </h3>
 
-                  <p className="mt-2 max-w-[650px] text-[9px] font-semibold uppercase leading-5 tracking-[0.08em] text-[#43B8BA]">
-                    {leaders[0].role}
-                  </p>
+                      <p className="mt-2 max-w-[700px] text-[9px] font-bold uppercase leading-5 tracking-[0.09em] text-[#43B8BA]">
+                        {leaders[0].role}
+                      </p>
+                    </div>
 
-                  <p className="mt-6 max-w-[700px] text-[11px] leading-6 text-[#B9C5CF] sm:text-[12px]">
+                    <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#C6A15B]/35 bg-[#C6A15B]/10 text-[#D8B866] sm:flex">
+                      <Award size={19} strokeWidth={1.4} />
+                    </div>
+                  </div>
+
+                  {/* Gold rule */}
+                  <div className="mt-6 h-[2px] w-14 bg-[#C6A15B] transition-all duration-500 group-hover:w-24" />
+
+                  <p className="mt-6 max-w-[720px] text-[11px] leading-6 text-[#DCE2E7] sm:text-[12px]">
                     {leaders[0].description}
                   </p>
 
-                  <div className="mt-7 flex items-center gap-3">
-                    <span className="h-[2px] w-10 bg-[#C6A15B] transition-all duration-500 group-hover:w-20" />
-                    <span className="text-[8px] font-bold uppercase tracking-[0.2em] text-[#718393]">
-                      Strategic Leadership
+                  {/* Bottom executive strip */}
+                  <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/10 pt-5">
+                    <div>
+                      <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-[#718393]">
+                        Role
+                      </p>
+                      <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#C6A15B]">
+                        President
+                      </p>
+                    </div>
+
+                    <span className="hidden h-8 w-px bg-white/10 sm:block" />
+
+                    <div>
+                      <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-[#718393]">
+                        Leadership Focus
+                      </p>
+                      <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#43B8BA]">
+                        Strategy · Governance · Impact
+                      </p>
+                    </div>
+
+                    <span className="ml-auto hidden text-[8px] font-bold uppercase tracking-[0.22em] text-white/25 lg:block">
+                      IBS Canada
                     </span>
                   </div>
                 </div>
               </div>
             </div>
           </motion.article>
-
-          {/* Leadership divider */}
-          <div className="mx-auto mt-8 flex max-w-[980px] items-center justify-center gap-4">
-            <span className="h-px flex-1 bg-gradient-to-r from-transparent to-white/10" />
-            <span className="h-2 w-2 rounded-full bg-[#C6A15B]" />
-            <span className="h-px flex-1 bg-gradient-to-l from-transparent to-white/10" />
-          </div>
 
           {/* =====================================================
               SENIOR LEADERSHIP — COO + STRATEGIC ADVISOR
@@ -1774,6 +1824,270 @@ export default function OurTeamPage() {
                 </motion.article>
               );
             })}
+          </div>
+
+          {/* =====================================================
+              MEET THE EXPERTS — ADVISORS & CONSULTANTS
+          ===================================================== */}
+          <div className="mt-14">
+            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+              <div>
+                <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#C6A15B]">
+                  Advisors & Consultants
+                </p>
+
+                <h3 className="mt-3 text-[34px] font-semibold leading-none tracking-[-0.045em] text-white sm:text-[42px]">
+                  Meet the{" "}
+                  <span className="text-[#43B8BA]">Experts</span>
+                </h3>
+              </div>
+
+              <p className="max-w-[330px] text-[11px] leading-5 text-[#B9C5CF] sm:text-right">
+                Professionals across finance, strategy, governance, operations,
+                technology, research, economics and technical disciplines.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {team.map((person, index) => {
+                const Icon = person.icon;
+
+                return (
+                  <motion.article
+  key={person.name}
+  initial={{ opacity: 0, y: 24 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.15 }}
+  transition={{ duration: 0.55, delay: index * 0.06 }}
+  whileHover={{ y: -6 }}
+  className="
+    group
+    relative
+    overflow-hidden
+    rounded-[24px]
+    border
+    border-[#DCE2E7]
+    bg-[#F6F4EF]
+    shadow-[0_18px_45px_rgba(0,0,0,.16)]
+    transition-all
+    duration-300
+    hover:border-[#C6A15B]/70
+    hover:shadow-[0_24px_55px_rgba(0,0,0,.22)]
+  "
+>
+  {/* =========================
+      CARD TOP / PROFILE
+  ========================= */}
+  <div
+    className="
+      relative
+      overflow-hidden
+      bg-gradient-to-br
+      from-[#123A5A]
+      via-[#0B1F3A]
+      to-[#071A2D]
+      p-5
+      sm:p-6
+    "
+  >
+    {/* subtle teal glow */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+        -right-16
+        -top-16
+        h-40
+        w-40
+        rounded-full
+        bg-[#087F8C]/15
+        blur-3xl
+        transition-transform
+        duration-700
+        group-hover:scale-150
+      "
+    />
+
+    <div className="relative flex items-start gap-5">
+      
+      {/* IMAGE */}
+      <div
+        className="
+          relative
+          h-[112px]
+          w-[92px]
+          shrink-0
+          overflow-hidden
+          rounded-[18px]
+          border-2
+          border-[#C6A15B]
+          bg-[#DCE2E7]
+          shadow-[0_12px_30px_rgba(0,0,0,.25)]
+        "
+      >
+        <img
+          src={person.image}
+          alt={person.name}
+          className="
+            h-full
+            w-full
+            object-cover
+            transition-transform
+            duration-700
+            group-hover:scale-105
+          "
+        />
+
+        {/* Teal icon */}
+        <div
+          className="
+            absolute
+            bottom-0
+            left-0
+            flex
+            h-8
+            w-8
+            items-center
+            justify-center
+            rounded-tr-[12px]
+            bg-[#087F8C]
+            text-white
+            shadow-lg
+          "
+        >
+          <Icon size={14} strokeWidth={1.6} />
+        </div>
+      </div>
+
+      {/* DETAILS */}
+      <div className="min-w-0 flex-1 pt-1">
+
+        {/* Number + arrow */}
+        <div className="flex items-start justify-between gap-3">
+          <span
+            className="
+              text-[7px]
+              font-bold
+              uppercase
+              tracking-[0.22em]
+              text-[#C6A15B]
+            "
+          >
+            0{index + 1} / Expert
+          </span>
+
+          <ArrowUpRight
+            size={16}
+            className="
+              shrink-0
+              text-[#43B8BA]
+              transition-all
+              duration-300
+              group-hover:-translate-y-1
+              group-hover:translate-x-1
+            "
+          />
+        </div>
+
+        {/* Name */}
+        <h3
+          className="
+            mt-3
+            text-[17px]
+            font-semibold
+            leading-5
+            tracking-[-0.025em]
+            text-white
+            sm:text-[18px]
+          "
+        >
+          {person.name}
+        </h3>
+
+        {/* Role */}
+        <p
+          className="
+            mt-2
+            text-[8px]
+            font-bold
+            uppercase
+            leading-4
+            tracking-[0.08em]
+            text-[#43B8BA]
+          "
+        >
+          {person.role}
+        </p>
+
+        {/* Gold accent */}
+        <div
+          className="
+            mt-4
+            h-[2px]
+            w-9
+            bg-[#C6A15B]
+            transition-all
+            duration-500
+            group-hover:w-16
+          "
+        />
+      </div>
+    </div>
+  </div>
+
+  {/* =========================
+      CARD CONTENT
+  ========================= */}
+  <div
+    className="
+      relative
+      min-h-[145px]
+      bg-[#F6F4EF]
+      p-5
+      sm:p-6
+    "
+  >
+    <p
+      className="
+        text-[10px]
+        leading-[1.8]
+        text-[#52606D]
+        sm:text-[11px]
+      "
+    >
+      {person.description}
+    </p>
+
+    {/* Bottom detail */}
+    <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between sm:left-6 sm:right-6">
+      <span
+        className="
+          text-[7px]
+          font-bold
+          uppercase
+          tracking-[0.22em]
+          text-[#A47C2F]
+        "
+      >
+        IBS / Expertise
+      </span>
+
+      <span
+        className="
+          h-[2px]
+          w-10
+          bg-[#C6A15B]
+          transition-all
+          duration-500
+          group-hover:w-16
+        "
+      />
+    </div>
+  </div>
+</motion.article>
+                );
+              })}
+            </div>
           </div>
 
           {/* =====================================================
@@ -1899,181 +2213,6 @@ export default function OurTeamPage() {
             </div>
           </motion.div>
         </div>
-      </section>
-
-      {/* =====================================================
-          TEAM
-      ===================================================== */}
-
-      <section
-        id="team"
-        className="
-          relative
-          overflow-hidden
-          bg-[#E8F3F2]
-          px-6
-          py-16
-          sm:px-8
-          lg:px-10
-          lg:py-20
-          xl:px-12
-        "
-      >
-
-        <FloatingIcon
-          Icon={UsersRound}
-          delay={0}
-          className="left-[3%] top-[20%]"
-        />
-
-        <FloatingIcon
-          Icon={BrainCircuit}
-          delay={1}
-          className="right-[3%] top-[30%]"
-        />
-
-        <FloatingIcon
-          Icon={Target}
-          delay={2}
-          className="left-[7%] bottom-[12%]"
-        />
-
-        <div
-          className="
-            relative
-            mx-auto
-            max-w-[1280px]
-          "
-        >
-
-          {/* Heading */}
-
-          <div
-            className="
-              flex
-              flex-col
-              justify-between
-              gap-5
-              sm:flex-row
-              sm:items-end
-            "
-          >
-
-            <div>
-
-              <p
-                className="
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.25em]
-                  text-[#A47C2F]
-                "
-              >
-                Advisors & Consultants
-              </p>
-
-              <h2
-                className="
-                  mt-3
-                  text-[42px]
-                  font-semibold
-                  leading-none
-                  tracking-[-0.05em]
-                  text-[#0B1F3A]
-                  sm:text-[54px]
-                "
-              >
-                Meet the{" "}
-                <span className="text-[#087F8C]">
-                  Experts
-                </span>
-              </h2>
-
-            </div>
-
-            <p
-              className="
-                max-w-[280px]
-                text-[11px]
-                leading-5
-                text-[#68737D]
-                sm:text-right
-              "
-            >
-              Professionals across finance, strategy, governance, operations, technology, research, economics and technical disciplines.
-            </p>
-
-          </div>
-
-          {/* Compact expert cards */}
-
-          <div
-            className="
-              mt-10
-              grid
-              gap-4
-              sm:grid-cols-2
-              lg:grid-cols-3
-            "
-          >
-            {team.map((person, index) => {
-              const Icon = person.icon;
-
-              return (
-                <motion.article
-                  key={person.name}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{ duration: 0.55, delay: index * 0.06 }}
-                  whileHover={{ y: -6 }}
-                  className="group relative overflow-hidden rounded-[18px] border border-[#DCE2E7] bg-white shadow-[0_10px_30px_rgba(11,31,58,.06)] transition-shadow duration-300 hover:shadow-[0_18px_40px_rgba(11,31,58,.12)]"
-                >
-                  <div className="flex gap-4 p-4 sm:p-5">
-                    <div className="relative h-[112px] w-[92px] shrink-0 overflow-hidden rounded-[14px] bg-[#DCE2E7]">
-                      <img
-                        src={person.image}
-                        alt={person.name}
-                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/55 to-transparent" />
-                      <div className="absolute bottom-2 left-2 flex h-7 w-7 items-center justify-center rounded-lg bg-[#087F8C] text-white shadow-md">
-                        <Icon size={13} strokeWidth={1.6} />
-                      </div>
-                    </div>
-
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-start justify-between gap-2">
-                        <span className="text-[7px] font-bold uppercase tracking-[0.18em] text-[#C6A15B]">
-                          0{index + 1} / Expert
-                        </span>
-                        <ArrowUpRight size={14} className="shrink-0 text-[#087F8C]/50 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#C6A15B]" />
-                      </div>
-
-                      <h3 className="mt-2 text-[15px] font-semibold leading-5 tracking-[-0.025em] text-[#0B1F3A]">
-                        {person.name}
-                      </h3>
-
-                      <p className="mt-1.5 line-clamp-2 text-[8px] font-bold uppercase leading-3.5 tracking-[0.09em] text-[#087F8C]">
-                        {person.role}
-                      </p>
-
-                      <div className="mt-3 h-px w-8 bg-[#C6A15B] transition-all duration-500 group-hover:w-14" />
-                    </div>
-                  </div>
-
-                  <div className="border-t border-[#DCE2E7] px-4 py-3 sm:px-5">
-                    <p className="line-clamp-3 text-[9px] leading-[1.65] text-[#68737D]">
-                      {person.description}
-                    </p>
-                  </div>
-                </motion.article>
-              );
-            })}
-          </div>
-        </div>
-
       </section>
 
       {/* =====================================================
