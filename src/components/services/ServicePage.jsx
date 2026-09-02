@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 import ServiceHero from "./ServiceHero";
 import ServicePrograms from "./ServicePrograms";
 import ServiceCentres from "./ServiceCentres";
@@ -11,62 +9,37 @@ import ServiceFooter from "./ServiceFooter";
 import Header from "../layout/Header";
 
 export default function ServicePage({ data }) {
-  const [reduceMotion, setReduceMotion] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    );
-
-    const updateMotion = () => {
-      setReduceMotion(mediaQuery.matches);
-    };
-
-    updateMotion();
-
-    mediaQuery.addEventListener(
-      "change",
-      updateMotion
-    );
-
-    return () => {
-      mediaQuery.removeEventListener(
-        "change",
-        updateMotion
-      );
-    };
-  }, []);
-
   return (
     <main className="overflow-hidden bg-[#F6F4EF]">
-      <Header/>
+      <Header />
+
       <ServiceHero
         data={data}
-        reduceMotion={reduceMotion}
+        reduceMotion={false}
       />
 
       <ServicePrograms
         data={data}
-        reduceMotion={reduceMotion}
+        reduceMotion={false}
       />
 
       <ServiceCentres
         data={data}
-        reduceMotion={reduceMotion}
+        reduceMotion={false}
       />
 
       <ServiceBenefits
         data={data}
-        reduceMotion={reduceMotion}
+        reduceMotion={false}
       />
 
       <RelatedServices
-        currentSlug={data.slug}
-        reduceMotion={reduceMotion}
+        currentSlug={data?.slug}
+        reduceMotion={false}
       />
 
       <ServiceFooter
-        reduceMotion={reduceMotion}
+        reduceMotion={false}
       />
     </main>
   );

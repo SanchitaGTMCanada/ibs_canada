@@ -46,11 +46,11 @@ export default function ServiceHero({
       className="
         relative
         isolate
-        min-h-[760px]
+        min-h-[680px]
         overflow-hidden
         bg-[#0B1F3A]
-        sm:min-h-[820px]
-        lg:min-h-[850px]
+        sm:min-h-[720px]
+        lg:min-h-[780px]
       "
     >
       {/* =====================================================
@@ -173,7 +173,7 @@ export default function ServiceHero({
           z-10
           mx-auto
           grid
-          min-h-[760px]
+          min-h-[680px]
           max-w-[1500px]
           items-center
           gap-14
