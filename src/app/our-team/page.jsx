@@ -1644,15 +1644,14 @@ export default function OurTeamPage() {
           {/* =====================================================
               DESKTOP — PRESIDENT + RADIAL TEAM
               ===================================================== */}
-          <div className="relative mx-auto mt-14 hidden h-[1200px] w-full max-w-[1380px] xl:block">
+          <div className="relative mx-auto mt-14 hidden h-[1280px] w-full max-w-[1380px] xl:block">
             {(() => {
-              const orbitRadius = 470;
+              const orbitRadius = 500;
               const centerX = 690;
-              const centerY = 600;
-              const presidentRadius = 164;
-              const connectorStartRadius = 164;
-              const cardWidth = 205;
-              const cardHeight = 250;
+              const centerY = 640;
+              const presidentRadius = 170;
+              const cardWidth = 235;
+              const cardHeight = 280;
               const halfCardWidth = cardWidth / 2;
               const halfCardHeight = cardHeight / 2;
 
@@ -1704,7 +1703,7 @@ export default function OurTeamPage() {
                     aria-hidden="true"
                     animate={{ rotate: 360 }}
                     transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
-                    className="absolute left-1/2 top-1/2 h-[940px] w-[940px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#C6A15B]/20"
+                    className="absolute left-1/2 top-1/2 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#C6A15B]/20"
                   >
                     <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C6A15B] shadow-[0_0_20px_#C6A15B]" />
                     <span className="absolute right-[6%] top-[24%] h-2 w-2 rounded-full bg-[#087F8C] shadow-[0_0_18px_#087F8C]" />
@@ -1716,7 +1715,7 @@ export default function OurTeamPage() {
                     aria-hidden="true"
                     animate={{ rotate: -360 }}
                     transition={{ duration: 48, repeat: Infinity, ease: "linear" }}
-                    className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#087F8C]/20 border-dashed"
+                    className="absolute left-1/2 top-1/2 h-[760px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#087F8C]/20 border-dashed"
                   >
                     <span className="absolute right-0 top-1/2 h-2.5 w-2.5 -translate-y-1/2 translate-x-1/2 rounded-full bg-[#43B8BA] shadow-[0_0_22px_#43B8BA]" />
                     <span className="absolute left-[10%] bottom-[18%] h-2 w-2 rounded-full bg-[#C6A15B] shadow-[0_0_18px_#C6A15B]" />
@@ -1729,30 +1728,51 @@ export default function OurTeamPage() {
                   />
 
                   {/* =================================================
-                      NEWTON → PRESIDENT CONNECTION
-                      The connector sits above the President layer so it
-                      visibly touches the President ring instead of being
-                      hidden behind the center card.
+                      EXPLICIT NEWTON → PRESIDENT CONNECTION
+                      Newton is the 12 o'clock card, so give this
+                      vertical connection its own dedicated layer.
+                      This guarantees a clean, visible connection
+                      from the President's top edge to Newton's
+                      bottom edge.
                   ================================================= */}
-                  <motion.div
+                  <div
                     aria-hidden="true"
-                    initial={{ opacity: 0, scaleY: 0 }}
-                    whileInView={{ opacity: 1, scaleY: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.55, ease: "easeOut" }}
-                    className="pointer-events-none absolute left-1/2 z-[42] -translate-x-1/2 origin-bottom"
+                    className="pointer-events-none absolute left-1/2 z-[25] -translate-x-1/2"
                     style={{
+                      // Newton is at 12 o'clock. Keep the connector ONLY
+                      // in the real gap between Newton's bottom edge and
+                      // Biswanath's top edge so it can never pass behind
+                      // the President card.
                       top: centerY - orbitRadius + halfCardHeight,
-                      height: orbitRadius - halfCardHeight - connectorStartRadius,
+                      height: orbitRadius - halfCardHeight - presidentRadius,
                     }}
                   >
-                    <div className="absolute left-1/2 top-0 h-full w-[3px] -translate-x-1/2 rounded-full bg-gradient-to-b from-[#C6A15B] via-[#43B8BA] to-[#C6A15B] shadow-[0_0_14px_rgba(67,184,186,.85)]" />
-                    <motion.span
-                      animate={{ y: [0, 12, 0], opacity: [0.4, 1, 0.4] }}
-                      transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                      className="absolute bottom-[-1px] left-1/2 h-3 w-3 -translate-x-1/2 translate-y-1/2 rounded-full border border-[#C6A15B] bg-[#071A2D] shadow-[0_0_18px_rgba(198,161,91,.95)]"
+                    <motion.div
+                      initial={{ scaleY: 0, opacity: 0 }}
+                      whileInView={{ scaleY: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.45, ease: "easeOut" }}
+                      className="absolute left-1/2 top-0 h-full w-[3px] -translate-x-1/2 origin-top rounded-full bg-gradient-to-b from-[#C6A15B] via-[#43B8BA] to-[#C6A15B] shadow-[0_0_14px_rgba(67,184,186,.8)]"
                     />
-                  </motion.div>
+
+                    <motion.span
+                      initial={{ scale: 0, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 1.15, duration: 0.35 }}
+                      className="absolute bottom-[-6px] left-1/2 h-3 w-3 -translate-x-1/2 rounded-full border border-[#C6A15B] bg-[#071A2D] shadow-[0_0_18px_rgba(198,161,91,.9)]"
+                    />
+                  </div>
+
+                  <motion.div
+                    aria-hidden="true"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: [0, 1, 0], scale: [0.5, 1.15, 0.5] }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 2.4, delay: 1.2, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut" }}
+                    className="pointer-events-none absolute left-1/2 z-[16] h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-[#C6A15B] shadow-[0_0_18px_#C6A15B]"
+                    style={{ top: centerY - 255 }}
+                  />
 
                   {/* =================================================
                       CENTER → EVERY CARD CONNECTORS
@@ -1762,9 +1782,9 @@ export default function OurTeamPage() {
                   ================================================= */}
                   <svg
                     aria-hidden="true"
-                    viewBox="0 0 1380 1200"
+                    viewBox="0 0 1380 1280"
                     preserveAspectRatio="none"
-                    className="pointer-events-none absolute inset-0 z-[40] h-full w-full overflow-visible"
+                    className="pointer-events-none absolute inset-0 z-[14] h-full w-full overflow-visible"
                   >
                     <defs>
                       <linearGradient id="teamLinePremium" x1="0" y1="0" x2="1" y2="1">
@@ -1782,7 +1802,7 @@ export default function OurTeamPage() {
                     </defs>
 
                     {orbitAngles.map((angle, index) => {
-                      const start = getPoint(angle, connectorStartRadius);
+                      const start = getPoint(angle, presidentRadius);
                       const end = getCardEdgePoint(angle);
 
                       return (
@@ -1944,16 +1964,16 @@ export default function OurTeamPage() {
                           viewport={{ once: true, amount: 0.12 }}
                           transition={{ duration: 0.65, delay: 0.2 + index * 0.08, ease: "easeOut" }}
                           whileHover={{ scale: 1.045, y: -6, zIndex: 50 }}
-                          className="group relative h-[250px] w-[205px]"
+                          className="group relative h-[280px] w-[235px]"
                         >
                           <div className="relative h-full overflow-hidden rounded-[30px] border border-[#C6A15B]/45 bg-gradient-to-br from-[#102B43] via-[#0D344A] to-[#087F8C]/90 shadow-[0_20px_55px_rgba(0,0,0,.3)] transition-all duration-500 group-hover:border-[#C6A15B] group-hover:shadow-[0_28px_70px_rgba(8,127,140,.28)]">
                             <div className="absolute left-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-[#C6A15B] bg-[#071A2D]/90 text-[#C6A15B] shadow-[0_8px_20px_rgba(0,0,0,.22)] backdrop-blur-sm transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#C6A15B] group-hover:text-[#0B1F3A]">
                               <Icon size={18} strokeWidth={1.35} />
                             </div>
 
-                            <div className="relative flex items-center justify-center px-4 pb-3 pt-4">
+                            <div className="relative flex items-center justify-center px-5 pb-4 pt-5">
                               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(198,161,91,.2),transparent_58%)]" />
-                              <div className="relative h-[82px] w-[82px] overflow-hidden rounded-full border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-[0_10px_30px_rgba(0,0,0,.3)] transition-transform duration-500 group-hover:scale-105">
+                              <div className="relative h-[94px] w-[94px] overflow-hidden rounded-full border-[3px] border-[#C6A15B] bg-[#DCE2E7] shadow-[0_10px_30px_rgba(0,0,0,.3)] transition-transform duration-500 group-hover:scale-105">
                                 <img
                                   src={leader.image}
                                   alt={leader.name}
@@ -1962,16 +1982,16 @@ export default function OurTeamPage() {
                               </div>
                             </div>
 
-                            <div className="px-4 pb-4 pt-2 text-center">
-                              <h3 className="text-[13px] font-semibold leading-tight tracking-[-0.02em] text-white">
+                            <div className="px-5 pb-5 pt-3 text-center">
+                              <h3 className="text-[14px] font-semibold leading-tight tracking-[-0.02em] text-white">
                                 {leader.name}
                               </h3>
-                              <p className="mt-1.5 min-h-[30px] text-[7.5px] font-bold uppercase leading-3.5 tracking-[0.075em] text-[#43B8BA]">
+                              <p className="mt-1.5 min-h-[30px] text-[8px] font-bold uppercase leading-4 tracking-[0.075em] text-[#43B8BA]">
                                 {leader.role}
                               </p>
 
                               {leader.tagline && (
-                                <div className="mx-auto mt-2 inline-flex items-center gap-1.5 rounded-full border border-[#C6A15B]/30 bg-[#C6A15B]/5 px-2.5 py-1 text-[7px] font-semibold uppercase tracking-[0.12em] text-[#C6A15B]">
+                                <div className="mx-auto mt-2 inline-flex items-center gap-1.5 rounded-full border border-[#C6A15B]/30 bg-[#C6A15B]/5 px-2.5 py-1 text-[7.5px] font-semibold uppercase tracking-[0.12em] text-[#C6A15B]">
                                   <span className="h-px w-3 bg-[#C6A15B]/70" />
                                   <span>{leader.tagline}</span>
                                   <span className="h-px w-3 bg-[#C6A15B]/70" />
@@ -1998,7 +2018,7 @@ export default function OurTeamPage() {
           {/* =====================================================
               MOBILE / TABLET — SAME HIERARCHY, CLEAN FLOW
           ===================================================== */}
-          <div className="mt-12 lg:hidden">
+          <div className="mt-12 xl:hidden">
             {/* President */}
             <motion.article
               initial={{ opacity: 0, scale: 0.9 }}
