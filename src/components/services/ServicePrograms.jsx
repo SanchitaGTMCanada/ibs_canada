@@ -18,11 +18,38 @@ const IMAGE_ONE =
 const IMAGE_TWO =
   "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=90";
 
+const IMAGE_THREE =
+  "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=90";
+
+const JOURNEY_EXTRA_IMAGES = [
+  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=90",
+  "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=90",
+  "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=90",
+  "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=90",
+];
+
+
 export default function ServicePrograms({
   data,
   reduceMotion = false,
 }) {
   const programs = data?.programs || [];
+
+  // Keep the left visual journey proportional to the amount of
+  // content shown in the dynamic right-side programs list.
+  const programCount = programs.length;
+
+  const photoCount =
+    programCount <= 6
+      ? 3
+      : Math.min(6, 3 + Math.ceil((programCount - 6) / 2));
+
+  const extraPhotoCount = Math.max(0, photoCount - 3);
+
+  // Keep the visual cards from collapsing when the desktop viewport gets
+  // narrower. Height is driven by the amount of right-side content, not
+  // by the left column width.
+  const journeyPhotoHeight = Math.max(300, Math.min(390, 330 + (programCount - 6) * 10));
 
   return (
     <section className="relative overflow-hidden bg-[#F6F4EF] px-5 py-24 sm:px-8 sm:py-28 lg:px-14 lg:py-32">
@@ -111,13 +138,13 @@ export default function ServicePrograms({
             MAIN GRID
         ====================================================== */}
 
-        <div className="grid items-stretch gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 xl:grid-cols-[0.92fr_1.08fr] xl:gap-20">
+        <div className="grid items-stretch gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12 xl:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] xl:gap-16">
 
           {/* ===================================================
-              LEFT SIDE
+              LEFT SIDE — EDITORIAL JOURNEY
           ==================================================== */}
 
-          <div className="relative flex flex-col">
+          <div className="relative flex h-full min-w-0 min-h-0 flex-col">
 
             {/* Intro */}
 
@@ -142,81 +169,150 @@ export default function ServicePrograms({
               transition={{
                 duration: 0.7,
               }}
-              className="mb-8"
+              className="mb-10"
             >
-              <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]">
-                Your learning journey
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="h-[2px] w-10 bg-[#C6A15B]" />
 
-              <p className="mt-3 max-w-[480px] text-[14px] leading-[1.8] text-[#202832]/55 sm:text-[15px]">
+                <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]">
+                  Your learning journey
+                </span>
+              </div>
+
+              <p className="mt-4 max-w-[470px] text-[14px] leading-[1.8] text-[#202832]/55 sm:text-[15px]">
                 {data?.journeyDescription ||
                   "Discover practical learning experiences that connect knowledge, confidence and meaningful professional opportunity."}
               </p>
             </motion.div>
 
             {/* =================================================
-                IMAGE AREA
+                EDITORIAL JOURNEY
             ================================================== */}
 
-            <div className="relative flex-1 pb-10">
+            <div
+              className="relative flex min-h-0 flex-1 flex-col pb-8"
+            >
 
-              {/* =================================================
-                  ROPE
-              ================================================== */}
+              {/* Soft background shapes */}
 
-              <div className="pointer-events-none absolute bottom-[34%] left-1/2 top-[35%] z-30 hidden w-[90px] -translate-x-1/2 md:block">
+              <div className="pointer-events-none absolute -left-12 top-12 h-[300px] w-[300px] rounded-full bg-[#087F8C]/[0.055]" />
+
+              <div className="pointer-events-none absolute bottom-8 right-0 h-[240px] w-[240px] rounded-full bg-[#C6A15B]/[0.07]" />
+
+              {/* Simple bold curved journey rail */}
+
+              <div className="pointer-events-none absolute bottom-[70px] left-0 top-[30px] z-20 hidden w-[110px] md:block">
                 <svg
-                  viewBox="0 0 100 400"
+                  viewBox="0 0 120 1000"
                   preserveAspectRatio="none"
                   className="h-full w-full overflow-visible"
                 >
-                  <path
-                    d="
-                      M50 0
-                      C20 38 80 62 50 100
-                      C20 138 80 162 50 200
-                      C20 238 80 262 50 300
-                      C20 338 80 362 50 400
-                    "
+                  <motion.path
+                    d="M48 0 C-10 105 106 175 48 300 C-18 425 112 505 48 635 C-16 760 112 865 52 1000"
                     fill="none"
-                    stroke="#0B1F3A"
-                    strokeOpacity="0.12"
-                    strokeWidth="8"
+                    stroke="url(#journeyGoldTeal)"
+                    strokeWidth="2.75"
+                    strokeLinecap="round"
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 1.8,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
                   />
 
-                  <motion.path
-                    d="
-                      M50 0
-                      C20 38 80 62 50 100
-                      C20 138 80 162 50 200
-                      C20 238 80 262 50 300
-                      C20 338 80 362 50 400
-                    "
-                    fill="none"
-                    stroke="#C6A15B"
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeDasharray="9 9"
-                    initial={{
-                      pathLength: 0,
-                    }}
-                    whileInView={{
-                      pathLength: 1,
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 1.7,
-                      ease: "easeInOut",
-                    }}
-                  />
+                  <defs>
+                    <linearGradient
+                      id="journeyGoldTeal"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop offset="0%" stopColor="#C6A15B" />
+                      <stop offset="48%" stopColor="#087F8C" />
+                      <stop offset="100%" stopColor="#C6A15B" />
+                    </linearGradient>
+                  </defs>
                 </svg>
+
+                {/* Bulb — fixed at the visual center of the rail */}
+                <motion.div
+                  initial={
+                    reduceMotion
+                      ? {}
+                      : { opacity: 0, scale: 0.7 }
+                  }
+                  whileInView={
+                    reduceMotion
+                      ? {}
+                      : { opacity: 1, scale: 1 }
+                  }
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.7,
+                    delay: 0.25,
+                  }}
+                  animate={
+                    reduceMotion
+                      ? {}
+                      : { y: [0, -5, 0] }
+                  }
+                  className="
+                    absolute
+                    left-[48px]
+                    top-1/2
+                    z-30
+                    flex
+                    h-[58px]
+                    w-[58px]
+                    -translate-x-1/2
+                    -translate-y-1/2
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-[#C6A15B]/75
+                    bg-[#0B1F3A]
+                    text-[#C6A15B]
+                  "
+                >
+                  <span className="absolute inset-[5px] rounded-full border border-dashed border-[#087F8C]/50" />
+                  <Lightbulb
+                    size={25}
+                    strokeWidth={1}
+                    className="relative z-10"
+                  />
+                </motion.div>
               </div>
 
-              {/* =================================================
-                  FIRST PHOTO COMPOSITION
-              ================================================== */}
+              {/* Step 01 */}
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  left-[29px]
+                  top-[42px]
+                  z-30
+                  hidden
+                  h-[26px]
+                  w-[26px]
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#0B1F3A]
+                  text-[8px]
+                  font-semibold
+                  text-[#C6A15B]
+                  md:flex
+                "
+              >
+                01
+              </div>
+
+              {/* Learn */}
 
               <motion.div
                 initial={
@@ -224,8 +320,8 @@ export default function ServicePrograms({
                     ? {}
                     : {
                         opacity: 0,
-                        x: -40,
-                        y: 25,
+                        x: -30,
+                        y: 20,
                       }
                 }
                 whileInView={
@@ -242,63 +338,40 @@ export default function ServicePrograms({
                   amount: 0.2,
                 }}
                 transition={{
-                  duration: 0.9,
+                  duration: 0.85,
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 animate={
                   reduceMotion
                     ? {}
                     : {
-                        y: [0, -5, 0],
+                        y: [0, -4, 0],
                       }
                 }
-                className="relative isolate w-[88%] sm:w-[82%]"
+                className="relative ml-[8%] w-[82%] sm:w-[78%]"
               >
-
-                {/* =================================================
-                    TEAL LAYER BEHIND PHOTO
-                ================================================== */}
-
-                <motion.div
-                  animate={
-                    reduceMotion
-                      ? {}
-                      : {
-                          x: [0, 8, 0],
-                          y: [0, -6, 0],
-                          rotate: [0, 1, 0],
-                          scale: [1, 1.025, 1],
-                        }
-                  }
-                  transition={{
-                    duration: 7,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
+                <div
                   className="
-                    pointer-events-none
                     absolute
-                    -bottom-8
-                    -left-8
+                    -bottom-6
+                    -left-6
                     z-[1]
                     h-[78%]
-                    w-[78%]
+                    w-[72%]
                     bg-[#087F8C]
                   "
                 />
-
-                {/* Photo */}
 
                 <div
                   className="
                     group
                     relative
                     z-[2]
-                    aspect-[1.15]
                     overflow-hidden
                     bg-[#0B1F3A]
-                    shadow-[0_25px_65px_rgba(11,31,58,0.2)]
+                    shadow-[0_24px_60px_rgba(11,31,58,0.18)]
                   "
+                  style={{ height: `${journeyPhotoHeight}px` }}
                 >
                   <motion.img
                     src={IMAGE_ONE}
@@ -307,8 +380,8 @@ export default function ServicePrograms({
                       reduceMotion
                         ? {}
                         : {
-                            scale: [1.06, 1.12, 1.06],
-                            x: [0, -7, 0],
+                            scale: [1.04, 1.09, 1.04],
+                            x: [0, -5, 0],
                           }
                     }
                     transition={{
@@ -319,136 +392,69 @@ export default function ServicePrograms({
                     className="h-full w-full object-cover"
                   />
 
-                  {/* Image overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/90 via-[#0B1F3A]/10 to-transparent" />
 
-                  <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0B1F3A]/85 via-[#0B1F3A]/10 to-transparent" />
-
-                  {/* Light sweep */}
-
-                  {!reduceMotion && (
-                    <motion.div
-                      initial={{
-                        x: "-130%",
-                      }}
-                      animate={{
-                        x: "130%",
-                      }}
-                      transition={{
-                        duration: 3.5,
-                        repeat: Infinity,
-                        repeatDelay: 4,
-                        ease: "easeInOut",
-                      }}
-                      className="
-                        pointer-events-none
-                        absolute
-                        inset-y-0
-                        left-0
-                        z-20
-                        w-[30%]
-                        skew-x-[-18deg]
-                        bg-gradient-to-r
-                        from-transparent
-                        via-white/20
-                        to-transparent
-                        blur-md
-                      "
-                    />
-                  )}
-
-                  {/* Content */}
-
-                  <motion.div
-                    initial={{
-                      opacity: 0,
-                      y: 15,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      delay: 0.5,
-                      duration: 0.7,
-                    }}
-                    className="absolute bottom-0 left-0 z-30 p-6 sm:p-8"
-                  >
+                  <div className="absolute bottom-0 left-0 z-10 p-6 sm:p-8">
                     <span className="text-[8px] font-semibold uppercase tracking-[0.25em] text-[#C6A15B]">
                       Step One
                     </span>
 
-                    <h3 className="mt-2 text-[28px] font-medium tracking-[-0.05em] text-white sm:text-[36px]">
+                    <h3 className="mt-1.5 text-[32px] font-medium tracking-[-0.055em] text-white sm:text-[40px]">
                       Learn.
                     </h3>
-                  </motion.div>
+                  </div>
+                </div>
+
+                <div
+                  className="
+                    absolute
+                    -right-5
+                    -top-5
+                    z-20
+                    hidden
+                    h-12
+                    w-12
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-[#C6A15B]/40
+                    bg-[#F6F4EF]/95
+                    text-[#0B1F3A]
+                    shadow-[0_10px_30px_rgba(11,31,58,0.10)]
+                    sm:flex
+                  "
+                >
+                  <GraduationCap size={19} strokeWidth={0.75} />
                 </div>
               </motion.div>
 
-              {/* =================================================
-                  CENTER ICON
-              ================================================== */}
+              {/* Step 02 */}
 
-              <motion.div
-                initial={
-                  reduceMotion
-                    ? {}
-                    : {
-                        opacity: 0,
-                        scale: 0.5,
-                      }
-                }
-                whileInView={
-                  reduceMotion
-                    ? {}
-                    : {
-                        opacity: 1,
-                        scale: 1,
-                      }
-                }
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.7,
-                  delay: 0.3,
-                }}
-                animate={
-                  reduceMotion
-                    ? {}
-                    : {
-                        y: [0, -6, 0],
-                      }
-                }
+              <div
                 className="
+                  pointer-events-none
                   absolute
-                  left-1/2
-                  top-[45%]
-                  z-40
+                  left-[6px]
+                  top-[345px]
+                  z-30
                   hidden
-                  h-16
-                  w-16
-                  -translate-x-1/2
+                  h-[26px]
+                  w-[26px]
                   items-center
                   justify-center
                   rounded-full
-                  bg-[#0B1F3A]
-                  text-[#C6A15B]
-                  shadow-[0_12px_35px_rgba(11,31,58,0.2)]
+                  bg-[#C6A15B]
+                  text-[8px]
+                  font-semibold
+                  text-[#0B1F3A]
                   md:flex
                 "
               >
-                <Lightbulb
-                  size={27}
-                  strokeWidth={0.65}
-                />
-              </motion.div>
+                02
+              </div>
 
-              {/* =================================================
-                  SECOND PHOTO COMPOSITION
-              ================================================== */}
+              {/* Grow */}
 
               <motion.div
                 initial={
@@ -456,8 +462,8 @@ export default function ServicePrograms({
                     ? {}
                     : {
                         opacity: 0,
-                        x: 40,
-                        y: 25,
+                        x: 30,
+                        y: 20,
                       }
                 }
                 whileInView={
@@ -474,64 +480,41 @@ export default function ServicePrograms({
                   amount: 0.2,
                 }}
                 transition={{
-                  duration: 0.9,
-                  delay: 0.15,
+                  duration: 0.85,
+                  delay: 0.12,
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 animate={
                   reduceMotion
                     ? {}
                     : {
-                        y: [0, 6, 0],
+                        y: [0, 5, 0],
                       }
                 }
-                className="relative isolate ml-auto mt-16 w-[88%] sm:w-[82%]"
+                className="relative ml-auto mt-20 w-[82%] sm:w-[78%]"
               >
-
-                {/* =================================================
-                    GOLD LAYER BEHIND PHOTO
-                ================================================== */}
-
-                <motion.div
-                  animate={
-                    reduceMotion
-                      ? {}
-                      : {
-                          x: [0, -8, 0],
-                          y: [0, 6, 0],
-                          rotate: [0, -1, 0],
-                          scale: [1, 1.025, 1],
-                        }
-                  }
-                  transition={{
-                    duration: 7,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
+                <div
                   className="
-                    pointer-events-none
                     absolute
-                    -right-8
-                    -top-8
+                    -right-6
+                    -top-6
                     z-[1]
                     h-[78%]
-                    w-[78%]
+                    w-[72%]
                     bg-[#C6A15B]
                   "
                 />
-
-                {/* Photo */}
 
                 <div
                   className="
                     group
                     relative
                     z-[2]
-                    aspect-[1.15]
                     overflow-hidden
                     bg-[#0B1F3A]
-                    shadow-[0_25px_65px_rgba(11,31,58,0.2)]
+                    shadow-[0_24px_60px_rgba(11,31,58,0.18)]
                   "
+                  style={{ height: `${journeyPhotoHeight}px` }}
                 >
                   <motion.img
                     src={IMAGE_TWO}
@@ -540,8 +523,8 @@ export default function ServicePrograms({
                       reduceMotion
                         ? {}
                         : {
-                            scale: [1.06, 1.12, 1.06],
-                            x: [0, 7, 0],
+                            scale: [1.04, 1.09, 1.04],
+                            x: [0, 5, 0],
                           }
                     }
                     transition={{
@@ -552,127 +535,334 @@ export default function ServicePrograms({
                     className="h-full w-full object-cover"
                   />
 
-                  {/* Image overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/90 via-[#0B1F3A]/10 to-transparent" />
 
-                  <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0B1F3A]/85 via-[#0B1F3A]/10 to-transparent" />
-
-                  {/* Light sweep */}
-
-                  {!reduceMotion && (
-                    <motion.div
-                      initial={{
-                        x: "-130%",
-                      }}
-                      animate={{
-                        x: "130%",
-                      }}
-                      transition={{
-                        duration: 3.5,
-                        repeat: Infinity,
-                        repeatDelay: 4.5,
-                        ease: "easeInOut",
-                      }}
-                      className="
-                        pointer-events-none
-                        absolute
-                        inset-y-0
-                        left-0
-                        z-20
-                        w-[30%]
-                        skew-x-[-18deg]
-                        bg-gradient-to-r
-                        from-transparent
-                        via-white/20
-                        to-transparent
-                        blur-md
-                      "
-                    />
-                  )}
-
-                  {/* Content */}
-
-                  <motion.div
-                    initial={{
-                      opacity: 0,
-                      y: 15,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      delay: 0.6,
-                      duration: 0.7,
-                    }}
-                    className="absolute bottom-0 right-0 z-30 p-6 text-right sm:p-8"
-                  >
+                  <div className="absolute bottom-0 right-0 z-10 p-6 text-right sm:p-8">
                     <span className="text-[8px] font-semibold uppercase tracking-[0.25em] text-[#C6A15B]">
                       Step Two
                     </span>
 
-                    <h3 className="mt-2 text-[28px] font-medium tracking-[-0.05em] text-white sm:text-[36px]">
+                    <h3 className="mt-1.5 text-[32px] font-medium tracking-[-0.055em] text-white sm:text-[40px]">
                       Grow.
                     </h3>
-                  </motion.div>
+                  </div>
+                </div>
+
+                <div
+                  className="
+                    absolute
+                    -left-5
+                    -top-5
+                    z-20
+                    hidden
+                    h-12
+                    w-12
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-[#087F8C]/35
+                    bg-[#F6F4EF]/95
+                    text-[#087F8C]
+                    shadow-[0_10px_30px_rgba(11,31,58,0.10)]
+                    sm:flex
+                  "
+                >
+                  <Lightbulb size={19} strokeWidth={0.75} />
                 </div>
               </motion.div>
 
-              {/* =================================================
-                  BUILD BADGE
-              ================================================== */}
+              {/* Step 03 */}
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  left-[6px]
+                  top-[75%]
+                  z-30
+                  hidden
+                  h-[26px]
+                  w-[26px]
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#087F8C]
+                  text-[8px]
+                  font-semibold
+                  text-white
+                  shadow-[0_8px_22px_rgba(8,127,140,0.2)]
+                  md:flex
+                "
+              >
+                03
+              </div>
+
+              {/* Lead */}
 
               <motion.div
+                initial={
+                  reduceMotion
+                    ? {}
+                    : {
+                        opacity: 0,
+                        x: -30,
+                        y: 20,
+                      }
+                }
+                whileInView={
+                  reduceMotion
+                    ? {}
+                    : {
+                        opacity: 1,
+                        x: 0,
+                        y: 0,
+                      }
+                }
+                viewport={{
+                  once: true,
+                  amount: 0.2,
+                }}
+                transition={{
+                  duration: 0.85,
+                  delay: 0.24,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 animate={
                   reduceMotion
                     ? {}
                     : {
-                        y: [0, -5, 0],
+                        y: [0, -4, 0],
                       }
                 }
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="
-                  absolute
-                  bottom-[-20px]
-                  left-[10%]
-                  z-40
-                  flex
-                  items-center
-                  gap-3
-                  bg-[#C6A15B]
-                  px-5
-                  py-4
-                  shadow-[0_15px_35px_rgba(11,31,58,0.15)]
-                "
+                className="relative ml-[8%] mt-20 w-[82%] sm:w-[78%]"
               >
-                <Award
-                  size={21}
-                  strokeWidth={0.7}
-                  className="text-[#0B1F3A]"
+                <div
+                  className="
+                    absolute
+                    -bottom-6
+                    -left-6
+                    z-[1]
+                    h-[78%]
+                    w-[72%]
+                    bg-[#087F8C]
+                  "
                 />
 
-                <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#0B1F3A]">
-                    Build
-                  </p>
+                <div
+                  className="
+                    group
+                    relative
+                    z-[2]
+                    overflow-hidden
+                    bg-[#0B1F3A]
+                    shadow-[0_24px_60px_rgba(11,31,58,0.18)]
+                  "
+                  style={{ height: `${journeyPhotoHeight}px` }}
+                >
+                  <motion.img
+                    src={IMAGE_THREE}
+                    alt="Professionals collaborating and leading"
+                    animate={
+                      reduceMotion
+                        ? {}
+                        : {
+                            scale: [1.04, 1.09, 1.04],
+                            x: [0, -5, 0],
+                          }
+                    }
+                    transition={{
+                      duration: 9,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="h-full w-full object-cover"
+                  />
 
-                  <p className="text-[8px] text-[#0B1F3A]/60">
-                    Your future
-                  </p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/90 via-[#0B1F3A]/10 to-transparent" />
+
+                  <div className="absolute bottom-0 left-0 z-10 p-6 sm:p-8">
+                    <span className="text-[8px] font-semibold uppercase tracking-[0.25em] text-[#C6A15B]">
+                      Step Three
+                    </span>
+
+                    <h3 className="mt-1.5 text-[32px] font-medium tracking-[-0.055em] text-white sm:text-[40px]">
+                      Lead.
+                    </h3>
+                  </div>
                 </div>
+
+                <div
+                  className="
+                    absolute
+                    -right-5
+                    -top-5
+                    z-20
+                    hidden
+                    h-12
+                    w-12
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-[#C6A15B]/40
+                    bg-[#F6F4EF]/95
+                    text-[#C6A15B]
+                    shadow-[0_10px_30px_rgba(11,31,58,0.10)]
+                    sm:flex
+                  "
+                >
+                  <Award size={19} strokeWidth={0.75} />
+                </div>
+              </motion.div>
+
+              {/* Additional journey photos — driven by program count */}
+
+              {extraPhotoCount > 0 && (
+                <div className="mt-16 space-y-14 sm:mt-20 sm:space-y-16">
+                  {JOURNEY_EXTRA_IMAGES
+                    .slice(0, extraPhotoCount)
+                    .map((image, index) => {
+                      const stepNumber = index + 4;
+                      const isEven = index % 2 === 0;
+
+                      return (
+                        <motion.div
+                          key={image}
+                          initial={
+                            reduceMotion
+                              ? {}
+                              : {
+                                  opacity: 0,
+                                  x: isEven ? -28 : 28,
+                                  y: 18,
+                                }
+                          }
+                          whileInView={
+                            reduceMotion
+                              ? {}
+                              : {
+                                  opacity: 1,
+                                  x: 0,
+                                  y: 0,
+                                }
+                          }
+                          viewport={{
+                            once: true,
+                            amount: 0.15,
+                          }}
+                          transition={{
+                            duration: 0.8,
+                            delay: index * 0.08,
+                            ease: [0.22, 1, 0.36, 1],
+                          }}
+                          className={`relative w-[82%] sm:w-[78%] ${
+                            isEven
+                              ? "ml-[8%]"
+                              : "ml-auto"
+                          }`}
+                        >
+                          <div
+                            className={`absolute z-[1] h-[72%] w-[70%] ${
+                              isEven
+                                ? "-bottom-5 -left-5 bg-[#087F8C]"
+                                : "-right-5 -top-5 bg-[#C6A15B]"
+                            }`}
+                          />
+
+                          <div className="group relative z-[2] overflow-hidden bg-[#0B1F3A] shadow-[0_24px_60px_rgba(11,31,58,0.18)]"
+                            style={{ height: `${journeyPhotoHeight}px` }}>
+                            <motion.img
+                              src={image}
+                              alt={`Learning journey step ${stepNumber}`}
+                              animate={
+                                reduceMotion
+                                  ? {}
+                                  : {
+                                      scale: [1.04, 1.08, 1.04],
+                                      x: isEven
+                                        ? [0, -5, 0]
+                                        : [0, 5, 0],
+                                    }
+                              }
+                              transition={{
+                                duration: 9,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                              }}
+                              className="h-full w-full object-cover"
+                            />
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/90 via-[#0B1F3A]/10 to-transparent" />
+
+                            <div className="absolute bottom-0 left-0 z-10 p-6 sm:p-8">
+                              <span className="text-[8px] font-semibold uppercase tracking-[0.25em] text-[#C6A15B]">
+                                Step {String(stepNumber).padStart(2, "0")}
+                              </span>
+
+                              <h3 className="mt-1.5 text-[30px] font-medium tracking-[-0.055em] text-white sm:text-[38px]">
+                                {index % 2 === 0
+                                  ? "Advance."
+                                  : "Achieve."}
+                              </h3>
+                            </div>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
+                </div>
+              )}
+
+              {/* Journey caption */}
+
+              <motion.div
+                initial={
+                  reduceMotion
+                    ? {}
+                    : {
+                        opacity: 0,
+                        y: 15,
+                      }
+                }
+                whileInView={
+                  reduceMotion
+                    ? {}
+                    : {
+                        opacity: 1,
+                        y: 0,
+                      }
+                }
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.4,
+                }}
+                className="mt-8 flex items-center gap-3 pl-[8%]"
+              >
+                <div className="h-px w-12 bg-[#C6A15B]" />
+
+                <span className="text-[8px] font-semibold uppercase tracking-[0.24em] text-[#202832]/45">
+                  Knowledge becomes possibility
+                </span>
               </motion.div>
             </div>
 
             {/* Bottom text */}
 
-            <div className="mt-12 flex items-center gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0B1F3A] text-[#C6A15B]">
+            <div className="mt-10 flex items-center gap-4">
+              <div
+                className="
+                  flex
+                  h-11
+                  w-11
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#0B1F3A]
+                  text-[#C6A15B]
+                "
+              >
                 <Users
                   size={20}
                   strokeWidth={0.7}
@@ -690,7 +880,7 @@ export default function ServicePrograms({
               RIGHT PROGRAMS
           ==================================================== */}
 
-          <div className="relative flex flex-col">
+          <div className="relative flex min-w-0 flex-col">
 
             <motion.div
               initial={
