@@ -334,30 +334,35 @@ educationTraining: {
       {
         icon: "Settings2",
         title: "Better-Informed Technical Decisions",
+        image: "/engineering/eng-1.jpg",
         text:
           "Technical planning and feasibility analysis support clearer and better-informed project decisions.",
       },
       {
         icon: "Workflow",
         title: "Improved Project Control",
+        image: "/engineering/eng-2.jpg",
         text:
           "Project monitoring and evaluation help strengthen control throughout delivery.",
       },
       {
         icon: "ShieldCheck",
         title: "Regulatory Readiness",
+        image: "/engineering/eng-3.jpg",
         text:
           "Support for industry-specific standards and regulatory requirements.",
       },
       {
         icon: "Target",
         title: "Reduced Technical Risk",
+        image: "/engineering/eng-4.jpg",
         text:
           "Risk identification and mitigation help reduce technical and delivery risk.",
       },
       {
         icon: "UsersRound",
         title: "Technical Coordination",
+        image: "/engineering/eng-5.jpg",
         text:
           "Coordination with engineering specialists supports technical integrity and implementation.",
       },
@@ -522,30 +527,35 @@ educationTraining: {
       {
         icon: "ClipboardCheck",
         title: "Clearer Project Governance",
+         image: "/infrastructure/infra (1).jpg",
         text:
           "Disciplined planning and execution create clearer accountability and project governance.",
       },
       {
         icon: "Coins",
         title: "Budget & Resource Control",
+         image: "/infrastructure/infra (2).jpg",
         text:
           "Budgeting and resource allocation support stronger control over project resources.",
       },
       {
         icon: "UsersRound",
         title: "Stakeholder Coordination",
+         image: "/infrastructure/infra (3).jpg",
         text:
           "Structured communication and engagement improve stakeholder coordination.",
       },
       {
         icon: "ShieldCheck",
         title: "Risk Management",
+         image: "/infrastructure/infra (4).jpg",
         text:
           "Risk identification and mitigation support consistent project control.",
       },
       {
         icon: "BadgeCheck",
         title: "Quality Assurance",
+         image: "/infrastructure/infra (5).jpg",
         text:
           "Quality control and assurance help support consistent delivery standards.",
       },
@@ -717,30 +727,35 @@ educationTraining: {
       {
         icon: "Network",
         title: "Reliable Technology Foundations",
+        image: "/technology/tech (1).jpg",
         text:
           "Practical IT infrastructure planning and management designed around organizational needs.",
       },
       {
         icon: "Globe2",
         title: "Improved Digital Presence",
+        image: "/technology/tech (2).jpg",
         text:
           "Website development and digital services supporting stronger organizational presence.",
       },
       {
         icon: "Settings2",
         title: "Better Operational Support",
+        image: "/technology/tech (3).jpg",
         text:
           "IT operations and vendor management supporting day-to-day organizational requirements.",
       },
       {
         icon: "Cpu",
         title: "Fit-for-Purpose Technology",
+        image: "/technology/tech (4).jpg",
         text:
           "Software and application development tailored to business and organizational needs.",
       },
       {
         icon: "Sparkles",
         title: "Creative & Digital Capability",
+        image: "/technology/tech (5).jpg",
         text:
           "Logo, graphic, creative and digital marketing services supporting communication and engagement.",
       },
@@ -927,30 +942,35 @@ educationTraining: {
       {
         icon: "Building2",
         title: "Stronger Planning & Capacity",
+         image: "/social/social (1).jpg",
         text:
           "Planning and capacity-building support designed around community and organizational priorities.",
       },
       {
         icon: "Target",
         title: "Better-Informed Development Decisions",
+         image: "/social/social (2).jpg",
         text:
           "Research, planning and assessment support informed social, economic and environmental decisions.",
       },
       {
         icon: "Leaf",
         title: "Improved Environmental Stewardship",
+         image: "/social/social (3).jpg",
         text:
           "Sustainable design, assessment and environmental management support responsible development.",
       },
       {
         icon: "ShieldCheck",
         title: "Regulatory Readiness",
+         image: "/social/social (4).jpg",
         text:
           "Support for environmental regulatory requirements and project compliance.",
       },
       {
         icon: "Handshake",
         title: "Community-Focused Development",
+         image: "/social/social (5).jpg",
         text:
           "Social and economic support focused on long-term community outcomes and collaboration.",
       },
@@ -1144,30 +1164,35 @@ educationTraining: {
       {
         icon: "BarChart3",
         title: "Improved Financial Visibility",
+        image: "/financial/finan (1).jpg",
         text:
           "Budgeting, reporting, forecasting and accounting support clearer financial information.",
       },
       {
         icon: "ShieldCheck",
         title: "Stronger Financial Controls",
+        image: "/financial/finan (2).jpg",
         text:
           "Internal controls and audit support strengthen financial accountability.",
       },
       {
         icon: "Target",
         title: "Better Decision Support",
+        image: "/financial/finan (3).jpg",
         text:
           "Reliable financial information and forward visibility support better organizational decisions.",
       },
       {
         icon: "Handshake",
         title: "Greater Funding Readiness",
+        image: "/financial/finan (4).jpg",
         text:
           "Funding research and proposal development help organizations identify and pursue appropriate funding opportunities.",
       },
       {
         icon: "BookOpen",
         title: "Accounting & Reporting Support",
+        image: "/financial/finan (5).jpg",
         text:
           "Customized accounting, bookkeeping and reporting services support organizational requirements.",
       },
@@ -1352,30 +1377,35 @@ journeyImages: [
       {
         icon: "Scale",
         title: "Clearer Decision Rights",
+        image: "/governance/gov (1).jpg",
         text:
           "Governance frameworks and organizational structures help clarify roles and decision-making responsibilities.",
       },
       {
         icon: "ShieldCheck",
         title: "Stronger Accountability",
+        image: "/governance/gov (2).jpg",
         text:
           "Policies, procedures and performance systems support stronger organizational accountability.",
       },
       {
         icon: "Network",
         title: "Effective Organizational Structures",
+        image: "/governance/gov (3).jpg",
         text:
           "Organizational management and structure support more effective operations.",
       },
       {
         icon: "Target",
         title: "Strategy & Execution Alignment",
+        image: "/governance/gov (4).jpg",
         text:
           "Strategic planning and performance management help align organizational priorities with execution.",
       },
       {
         icon: "UsersRound",
         title: "Leadership Support",
+        image: "/governance/gov (5).jpg",
         text:
           "Board, council and leadership orientation and training strengthen governance capability.",
       },
