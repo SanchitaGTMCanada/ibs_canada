@@ -537,7 +537,7 @@ export default function AboutSection() {
               "
             >
               <Image
-                src="/images/about/ibs-about.jpg"
+                src="/home/home-2.jpg"
                 alt="Innovative Business Solutions"
                 fill
                 className="

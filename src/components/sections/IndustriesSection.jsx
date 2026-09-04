@@ -25,7 +25,7 @@ const industries = [
       "Supporting governance, financial management, organizational capacity, economic development, infrastructure and community priorities.",
     icon: Cpu,
     image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=85",
+      "home/home-4.jpg",
     className: "lg:col-span-2 lg:row-span-2",
   },
 
@@ -36,7 +36,7 @@ const industries = [
       "Helping public-sector leaders strengthen programs, governance, financial management, operational performance and project delivery.",
     icon: Landmark,
     image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
+       "/home/home-8.jpg",
     className: "lg:col-span-1",
   },
 
@@ -47,7 +47,7 @@ const industries = [
       "Supporting planning, feasibility, project management, technical coordination, risk and quality across infrastructure initiatives.",
     icon: Building2,
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85",
+      "/home/home-3.jpg",
     className: "lg:col-span-1",
   },
 
@@ -58,7 +58,7 @@ const industries = [
       "Providing management, financial, technical, environmental and organizational support for resource-sector priorities.",
     icon: HeartPulse,
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85",
+      "/home/home-5.jpg",
     className: "lg:col-span-1",
   },
 
@@ -69,7 +69,7 @@ const industries = [
       "Supporting education organizations and workforce initiatives through strategy, training, professional development and operational improvement.",
     icon: GraduationCap,
     image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85",
+      "/home/home-6.jpg",
     className: "lg:col-span-1",
   },
 
@@ -80,7 +80,7 @@ const industries = [
       "Helping growing businesses improve strategy, finance, operations, technology, market development and organizational performance.",
     icon: Rocket,
     image:
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
+      "/home/home-7.jpg",
     className: "lg:col-span-2",
   },
 ];

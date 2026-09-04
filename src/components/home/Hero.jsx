@@ -11,7 +11,7 @@ import {
 
 export default function Hero() {
   const auroraImage =
-    "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&w=2400&q=90";
+    "/home/home-1.jpg";
 
   return (
     <section
