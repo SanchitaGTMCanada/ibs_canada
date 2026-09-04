@@ -8,16 +8,16 @@ educationTraining: {
   description:
     "Build the skills your organization and workforce need for what comes next. IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
 
-  image: "/education/edu-hero.jpg",
+  image: "/heroImg/Education & Training/hero.jpg",
 
-  programImg: "/education/program-lower.jpg",
+  programImg: "/programImage/program-lower.jpg",
 
   journeyImages: [
-    "/education/learn.jpg",
-    "/education/grow.jpg",
-    "/education/lead.jpg",
-    "/education/advance.jpg",
-    "/education/achieve.jpg",
+    "/journeyImg/learn.jpg",
+    "/journeyImg/grow.jpg",
+    "/journeyImg/lead.jpg",
+    "/journeyImg/advance.jpg",
+    "/journeyImg/achieve.jpg",
   ],
 
   heroIcon: "GraduationCap",
@@ -203,16 +203,17 @@ educationTraining: {
     description:
       "Engineering decisions need to be practical, compliant and aligned with project objectives. IBS supports clients through technical planning, feasibility analysis, project monitoring and risk management—helping decision-makers move from concept to implementation with greater clarity.",
 
-    image:
-      "/images/services/engineering-technical/engineering.jpg",
+     image: "/heroImg/Engineering & Technical/hero.jpg",
 
-    journeyImages: [
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1400&q=85",
-    ],
+     programImg: "/programImage/program-lower.jpg",
+
+     journeyImages: [
+    "/journeyImg/learn.jpg",
+    "/journeyImg/grow.jpg",
+    "/journeyImg/lead.jpg",
+    "/journeyImg/advance.jpg",
+    "/journeyImg/achieve.jpg",
+  ],
 
     heroIcon: "Settings2",
 
@@ -392,17 +393,16 @@ educationTraining: {
     description:
       "From project concept to delivery, strong planning and disciplined execution matter. IBS provides project management support across building renovation, modular housing, road construction and professional engineering oversight.",
 
-    image:
-      "/images/services/infrastructure/infrastructure.jpg",
+    image: "/heroImg/Infrastructure/hero.jpg",
 
+        programImg: "/programImage/program-lower.jpg",
     journeyImages: [
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1590644365607-1c5a9c5c5a9c?auto=format&fit=crop&w=1400&q=85",
-    ],
-
+    "/journeyImg/learn.jpg",
+    "/journeyImg/grow.jpg",
+    "/journeyImg/lead.jpg",
+    "/journeyImg/advance.jpg",
+    "/journeyImg/achieve.jpg",
+  ],
     heroIcon: "Building2",
 
     features: [
@@ -580,16 +580,16 @@ educationTraining: {
     description:
       "Technology should make the organization easier to run, not harder. IBS provides practical technology, IT infrastructure, digital and creative services tailored to organizational needs.",
 
-    image:
-      "/images/services/technology-innovation/technology.jpg",
+    image: "/heroImg/Technology & Innovation/hero.jpg",
+       programImg: "/programImage/program-lower.jpg",
 
-    journeyImages: [
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1400&q=85",
-    ],
+   journeyImages: [
+    "/journeyImg/learn.jpg",
+    "/journeyImg/grow.jpg",
+    "/journeyImg/lead.jpg",
+    "/journeyImg/advance.jpg",
+    "/journeyImg/achieve.jpg",
+  ],
 
     heroIcon: "Cpu",
 
@@ -776,16 +776,16 @@ educationTraining: {
     description:
       "Build stronger communities through informed planning, capacity and sustainable development. IBS supports organizations and communities on social, economic and environmental priorities, combining research, planning and implementation support.",
 
-    image:
-      "/images/services/social-economic/social-economic.jpg",
+    image: "/heroImg/Social & Economic/hero.jpg",
+       programImg: "/programImage/program-lower.jpg",
 
-    journeyImages: [
-      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=85",
-    ],
+   journeyImages: [
+    "/journeyImg/learn.jpg",
+    "/journeyImg/grow.jpg",
+    "/journeyImg/lead.jpg",
+    "/journeyImg/advance.jpg",
+    "/journeyImg/achieve.jpg",
+  ],
 
     heroIcon: "HeartHandshake",
 
@@ -986,16 +986,16 @@ educationTraining: {
     description:
       "Better financial decisions start with reliable information, disciplined controls and forward visibility. IBS helps organizations strengthen financial management through budgeting, forecasting, accounting, controls, reporting and funding support.",
 
-    image:
-      "/images/services/financial-management/financial.jpg",
+   image: "/heroImg/Financial Management/hero.jpg",
+       programImg: "/programImage/program-lower.jpg",
 
-    journeyImages: [
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=85",
-    ],
+  journeyImages: [
+    "/journeyImg/learn.jpg",
+    "/journeyImg/grow.jpg",
+    "/journeyImg/lead.jpg",
+    "/journeyImg/advance.jpg",
+    "/journeyImg/achieve.jpg",
+  ],
 
     heroIcon: "Coins",
 
@@ -1202,16 +1202,15 @@ educationTraining: {
     description:
       "Effective governance creates clarity, accountability and confidence. IBS works with boards, councils and leadership teams to strengthen governance frameworks, organizational structures, policies and performance systems.",
 
-    image:
-      "/images/services/governance/governance.jpg",
-
-    journeyImages: [
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=85",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=85",
-    ],
+   image: "/heroImg/Governance/hero.jpg",
+       programImg: "/programImage/program-lower.jpg",
+journeyImages: [
+    "/journeyImg/learn.jpg",
+    "/journeyImg/grow.jpg",
+    "/journeyImg/lead.jpg",
+    "/journeyImg/advance.jpg",
+    "/journeyImg/achieve.jpg",
+  ],
 
     heroIcon: "Scale",
 
