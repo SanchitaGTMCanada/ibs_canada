@@ -15,8 +15,7 @@ import {
 import { useRef } from "react";
 import { iconMap } from "./iconMap";
 
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=90";
+
 
 export default function ServiceHero({
   data,
@@ -28,7 +27,7 @@ export default function ServiceHero({
     target: ref,
     offset: ["start start", "end start"],
   });
-
+const HERO_IMAGE =data.image;
   const imageY = useTransform(
     scrollYProgress,
     [0, 1],

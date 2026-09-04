@@ -1,184 +1,198 @@
 export const serviceData = {
-  educationTraining: {
-    slug: "education-training",
-    label: "Education & Training",
-    title: "Education",
-    titleAccent: "& Training",
+educationTraining: {
+  slug: "education-training",
+  label: "Education & Training",
+  title: "Education",
+  titleAccent: "& Training",
 
-    description:
-      "Build the skills your organization and workforce need for what comes next. IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
+  description:
+    "Build the skills your organization and workforce need for what comes next. IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
 
-    image:
-      "/images/services/education-training/education-training.jpg",
+  image: "/education/edu-hero.jpg",
 
-    heroIcon: "GraduationCap",
+  programImg: "/education/program-lower.jpg",
 
-    features: [
-      {
-        icon: "GraduationCap",
-        title: "Diploma in Logistics Management",
-      },
-      {
-        icon: "BookOpen",
-        title: "Certificate in Logistics Management",
-      },
-      {
-        icon: "Award",
-        title: "Certified Logistics Professional",
-      },
-      {
-        icon: "Target",
-        title: "Executive Education & Leadership",
-      },
-    ],
+  journeyImages: [
+    "/education/learn.jpg",
+    "/education/grow.jpg",
+    "/education/lead.jpg",
+    "/education/advance.jpg",
+    "/education/achieve.jpg",
+  ],
 
-    journeyTitle: "Education &",
-    journeyAccent: "Training.",
+  heroIcon: "GraduationCap",
 
-    journeyDescription:
-      "IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
+  features: [
+    {
+      icon: "GraduationCap",
+      title: "Diploma in Logistics Management",
+    },
+    {
+      icon: "BookOpen",
+      title: "Certificate in Logistics Management",
+    },
+    {
+      icon: "Award",
+      title: "Certified Logistics Professional",
+    },
+    {
+      icon: "Target",
+      title: "Executive Education & Leadership",
+    },
+  ],
 
-    programs: [
-      {
-        title: "Diploma in Logistics Management",
-        description:
-          "Industry-focused education supporting practical, career-focused learning in logistics and supply chain management.",
-        icon: "GraduationCap",
-        tone: "navy",
-      },
-      {
-        title: "Certificate in Logistics Management",
-        description:
-          "Professional education supporting foundational and practical logistics capabilities.",
-        icon: "BookOpen",
-        tone: "gold",
-      },
-      {
-        title: "Certified Logistics Professional Pathway",
-        description:
-          "A professional designation pathway supporting logistics capability and career development.",
-        icon: "Award",
-        tone: "teal",
-      },
-      {
-        title: "Certified Management Consultant Program",
-        description:
-          "Professional development supporting consulting and management capability.",
-        icon: "BriefcaseBusiness",
-        tone: "gold",
-      },
-      {
-        title: "Executive Education & Leadership Development",
-        description:
-          "Leadership-focused education designed to strengthen professional and organizational capability.",
-        icon: "Target",
-        tone: "navy",
-      },
-      {
-        title: "Corporate Training & Micro-Credentials",
-        description:
-          "Practical training and micro-credentials supporting workforce readiness and professional capability development.",
-        icon: "UsersRound",
-        tone: "teal",
-      },
-    ],
+  journeyTitle: "Education &",
+  journeyAccent: "Training.",
 
-    centresTitle: "Industry",
-    centresAccent: "Applications.",
+  journeyDescription:
+    "IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
 
-    centresDescription:
-      "Education and training capabilities supporting Northern workforce development, professional services, logistics and supply chain, and education and training organizations.",
+  programs: [
+    {
+      title: "Diploma in Logistics Management",
+      description:
+        "Industry-focused education supporting practical, career-focused learning in logistics and supply chain management.",
+      icon: "GraduationCap",
+      tone: "navy",
+    },
+    {
+      title: "Certificate in Logistics Management",
+      description:
+        "Professional education supporting foundational and practical logistics capabilities.",
+      icon: "BookOpen",
+      tone: "gold",
+    },
+    {
+      title: "Certified Logistics Professional Pathway",
+      description:
+        "A professional designation pathway supporting logistics capability and career development.",
+      icon: "Award",
+      tone: "teal",
+    },
+    {
+      title: "Certified Management Consultant Program",
+      description:
+        "Professional development supporting consulting and management capability.",
+      icon: "BriefcaseBusiness",
+      tone: "gold",
+    },
+    {
+      title: "Executive Education & Leadership Development",
+      description:
+        "Leadership-focused education designed to strengthen professional and organizational capability.",
+      icon: "Target",
+      tone: "navy",
+    },
+    {
+      title: "Corporate Training & Micro-Credentials",
+      description:
+        "Practical training and micro-credentials supporting workforce readiness and professional capability development.",
+      icon: "UsersRound",
+      tone: "teal",
+    },
+  ],
 
-    centres: [
-      {
-        title: "Northern Workforce Development",
-        icon: "UsersRound",
-      },
-      {
-        title: "Education & Training",
-        icon: "GraduationCap",
-      },
-      {
-        title: "Professional Services",
-        icon: "BriefcaseBusiness",
-      },
-      {
-        title: "Logistics & Supply Chain",
-        icon: "Route",
-      },
-      {
-        title: "Professional Development",
-        icon: "Award",
-      },
-      {
-        title: "Leadership Development",
-        icon: "Target",
-      },
-      {
-        title: "Corporate Training",
-        icon: "BookOpen",
-      },
-    ],
+  centresTitle: "Industry",
+  centresAccent: "Applications.",
 
-    impactTitle: "Value to",
-    impactAccent: "Clients.",
+  centresDescription:
+    "Education and training capabilities supporting Northern workforce development, professional services, logistics and supply chain, and education and training organizations.",
 
-    impactDescription:
-      "Practical, career-focused learning that strengthens professional capability, leadership development and workforce readiness.",
+  centres: [
+    {
+      title: "Northern Workforce Development",
+      icon: "UsersRound",
+    },
+    {
+      title: "Education & Training",
+      icon: "GraduationCap",
+    },
+    {
+      title: "Professional Services",
+      icon: "BriefcaseBusiness",
+    },
+    {
+      title: "Logistics & Supply Chain",
+      icon: "Route",
+    },
+    {
+      title: "Professional Development",
+      icon: "Award",
+    },
+    {
+      title: "Leadership Development",
+      icon: "Target",
+    },
+    {
+      title: "Corporate Training",
+      icon: "BookOpen",
+    },
+  ],
 
-    benefits: [
-      {
-        icon: "GraduationCap",
-        title: "Practical, Career-Focused Learning",
-        text:
-          "Education and training designed around practical workforce and career needs.",
-      },
-      {
-        icon: "Award",
-        title: "Professional Capability Development",
-        text:
-          "Professional designation pathways and learning that strengthen individual and organizational capability.",
-      },
-      {
-        icon: "Target",
-        title: "Leadership Development",
-        text:
-          "Education and development opportunities that support stronger leadership capability.",
-      },
-      {
-        icon: "UsersRound",
-        title: "Workforce Readiness",
-        text:
-          "Training and professional development supporting workforce readiness across Northern communities.",
-      },
-      {
-        icon: "BriefcaseBusiness",
-        title: "Industry Applications",
-        text:
-          "Programs supporting Northern workforce development, education, professional services, and logistics and supply chain.",
-      },
-    ],
+  impactTitle: "Value to",
+  impactAccent: "Clients.",
 
-    industryApplications: [
-      "Northern workforce development",
-      "Education and training",
-      "Professional services",
-      "Logistics and supply chain",
-    ],
+  impactDescription:
+    "Practical, career-focused learning that strengthens professional capability, leadership development and workforce readiness.",
 
-    approach: [
-      "Define the business or project objective.",
-      "Assess current-state conditions, risks and opportunities.",
-      "Develop a practical work plan and priorities.",
-      "Support implementation with clear roles, timelines and reporting.",
-      "Transfer knowledge and help establish sustainable internal capability.",
-    ],
+  benefits: [
+    {
+      icon: "GraduationCap",
+      title: "Practical, Career-Focused Learning",
+      text:
+        "Education and training designed around practical workforce and career needs.",
+      image: "/education/benefit-grow.jpg",
+    },
+    {
+      icon: "Award",
+      title: "Professional Capability Development",
+      text:
+        "Professional designation pathways and learning that strengthen individual and organizational capability.",
+      image: "/education/achieve.jpg",
+    },
+    {
+      icon: "Target",
+      title: "Leadership Development",
+      text:
+        "Education and development opportunities that support stronger leadership capability.",
+      image: "/education/benefit-lead.jpg",
+    },
+    {
+      icon: "UsersRound",
+      title: "Workforce Readiness",
+      text:
+        "Training and professional development supporting workforce readiness across Northern communities.",
+      image: "/education/benefit-people.jpg",
+    },
+    {
+      icon: "BriefcaseBusiness",
+      title: "Industry Applications",
+      text:
+        "Programs supporting Northern workforce development, education, professional services, and logistics and supply chain.",
+      image: "/education/advance.jpg",
+    },
+  ],
 
-    cta: [
-      "Schedule a Consultation",
-      "Contact Our Team",
-    ],
-  },
+  industryApplications: [
+    "Northern workforce development",
+    "Education and training",
+    "Professional services",
+    "Logistics and supply chain",
+  ],
+
+  approach: [
+    "Define the business or project objective.",
+    "Assess current-state conditions, risks and opportunities.",
+    "Develop a practical work plan and priorities.",
+    "Support implementation with clear roles, timelines and reporting.",
+    "Transfer knowledge and help establish sustainable internal capability.",
+  ],
+
+  cta: [
+    "Schedule a Consultation",
+    "Contact Our Team",
+  ],
+},
 
   engineeringTechnical: {
     slug: "engineering-technical",
@@ -191,6 +205,14 @@ export const serviceData = {
 
     image:
       "/images/services/engineering-technical/engineering.jpg",
+
+    journeyImages: [
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1400&q=85",
+    ],
 
     heroIcon: "Settings2",
 
@@ -361,7 +383,7 @@ export const serviceData = {
     ],
   },
 
-  infrastructure: {
+    infrastructure: {
     slug: "infrastructure",
     label: "Infrastructure & Project Delivery",
     title: "Infrastructure",
@@ -372,6 +394,14 @@ export const serviceData = {
 
     image:
       "/images/services/infrastructure/infrastructure.jpg",
+
+    journeyImages: [
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1590644365607-1c5a9c5c5a9c?auto=format&fit=crop&w=1400&q=85",
+    ],
 
     heroIcon: "Building2",
 
@@ -553,6 +583,14 @@ export const serviceData = {
     image:
       "/images/services/technology-innovation/technology.jpg",
 
+    journeyImages: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1400&q=85",
+    ],
+
     heroIcon: "Cpu",
 
     features: [
@@ -729,7 +767,7 @@ export const serviceData = {
     ],
   },
 
-  socialEconomic: {
+    socialEconomic: {
     slug: "social-economic",
     label: "Social & Economic Development",
     title: "Social & Economic",
@@ -740,6 +778,14 @@ export const serviceData = {
 
     image:
       "/images/services/social-economic/social-economic.jpg",
+
+    journeyImages: [
+      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=85",
+    ],
 
     heroIcon: "HeartHandshake",
 
@@ -943,6 +989,14 @@ export const serviceData = {
     image:
       "/images/services/financial-management/financial.jpg",
 
+    journeyImages: [
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=85",
+    ],
+
     heroIcon: "Coins",
 
     features: [
@@ -1139,8 +1193,7 @@ export const serviceData = {
       "Contact Our Team",
     ],
   },
-
-  governance: {
+    governance: {
     slug: "governance",
     label: "Corporate Governance",
     title: "Corporate",
@@ -1151,6 +1204,14 @@ export const serviceData = {
 
     image:
       "/images/services/governance/governance.jpg",
+
+    journeyImages: [
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=85",
+    ],
 
     heroIcon: "Scale",
 

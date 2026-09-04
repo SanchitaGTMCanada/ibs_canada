@@ -12,28 +12,19 @@ import {
 
 import { iconMap } from "./iconMap";
 
-const IMAGE_ONE =
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=90";
-
-const IMAGE_TWO =
-  "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=90";
-
-const IMAGE_THREE =
-  "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=90";
-
-const JOURNEY_EXTRA_IMAGES = [
-  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=90",
-  "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=90",
-  "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=90",
-  "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=90",
-];
-
-
 export default function ServicePrograms({
   data,
   reduceMotion = false,
 }) {
   const programs = data?.programs || [];
+
+  // All images come from the current service object passed through props.
+  // serviceData -> ServicePage -> ServicePrograms
+  const journeyImages = data?.journeyImages || [];
+  const IMAGE_ONE = journeyImages[0];
+  const IMAGE_TWO = journeyImages[1];
+  const IMAGE_THREE = journeyImages[2];
+  const JOURNEY_EXTRA_IMAGES = journeyImages.slice(3);
 
   // Keep the left visual journey proportional to the amount of
   // content shown in the dynamic right-side programs list.
@@ -375,7 +366,7 @@ export default function ServicePrograms({
                 >
                   <motion.img
                     src={IMAGE_ONE}
-                    alt="Students learning together"
+                    alt={data?.label || "Service"}
                     animate={
                       reduceMotion
                         ? {}
@@ -1711,8 +1702,8 @@ export default function ServicePrograms({
           {/* IMAGE */}
 
           <motion.img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=90"
-            alt="Students learning together"
+            src={data?.programImg}
+            alt={data?.label || "Service"}
             animate={
               reduceMotion
                 ? {}

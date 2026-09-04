@@ -306,7 +306,7 @@ export default function ContactPage() {
                 lg:text-[76px]
               "
             >
-              Let&apos;s start a
+              Let&apos;s discuss 
 
               <span
                 className="
@@ -319,7 +319,7 @@ export default function ContactPage() {
                   text-transparent
                 "
               >
-                conversation.
+                your priorities
               </span>
 
             </motion.h1>
@@ -335,10 +335,7 @@ export default function ContactPage() {
                 text-[#DCE2E7]
               "
             >
-              Whether you have a business inquiry, partnership
-              opportunity or simply want to learn more about
-              Innovative Business Solutions, our team is here
-              to help.
+              Tell us what you are working to achieve. Our team will review your requirements and connect you with the appropriate IBS professional
             </motion.p>
 
 
@@ -379,42 +376,40 @@ export default function ContactPage() {
 
                 <Phone size={14} />
 
-                +1 867-669-0242
+               +1 867-669-0242
 
               </a>
 
 
-              <a
-                href="mailto:info@ibsgroupcanada.com"
-                className="
-                  inline-flex
-                  items-center
-                  gap-3
-                  rounded-full
-                  border
-                  border-white/20
-                  bg-white/[0.06]
-                  px-5
-                  py-3
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.12em]
-                  text-white
-                  backdrop-blur-sm
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:border-[#087F8C]
-                  hover:bg-[#087F8C]
-                "
-              >
+          <a
+  href="mailto:info@ibsgroupcanada.com"
+  className="
+    inline-flex
+    items-center
+    gap-3
+    rounded-full
+    border
+    border-[#087F8C]
+    bg-[#087F8C]
+    px-5
+    py-3
+    text-[9px]
+    font-bold
+    uppercase
+    tracking-[0.12em]
+    !text-white
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:border-[#066D78]
+    hover:bg-[#066D78]
+    hover:!text-white
+  "
+>
+  <Mail size={14} />
 
-                <Mail size={14} />
-
-                Email Us
-
-              </a>
+  Email Us
+</a>
 
             </motion.div>
 
@@ -1448,11 +1443,7 @@ export default function ContactPage() {
                 leading-6
                 text-[#68737D]
               "
-            >
-              Below you can find the media contact for
-              your specific inquiry. We trust you will
-              appreciate these contact details are intended
-              only for journalists.
+            >Media inquiries should be directed to the designated media contact. Contact details are intended for journalists and media representatives.
             </motion.p>
 
 
@@ -1787,7 +1778,7 @@ export default function ContactPage() {
                 text-[#C6A15B]
               "
             >
-              Secure Document Sharing
+              Client File Sharing
             </p>
 
 
@@ -1815,9 +1806,7 @@ export default function ContactPage() {
                 text-[#DCE2E7]
               "
             >
-              ShareFile is a secure platform used to
-              share files between you and Innovative
-              Business Solutions.
+              IBS provides secure file-sharing access for staff and clients through its designated platform. Access should be requested through the appropriate IBS file lead, manager or internal administrator.
             </p>
 
           </div>
