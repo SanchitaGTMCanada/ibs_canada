@@ -35,7 +35,7 @@ const services = [
     color: "#087F8C",
     softColor: "#E0F3F4",
     image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85",
+      "/home/home-slide (1).jpg",
   },
 
   {
@@ -48,7 +48,7 @@ const services = [
     color: "#4A789C",
     softColor: "#E5EDF4",
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=85",
+      "/home/home-slide (2).jpg",
   },
 
   {
@@ -61,7 +61,7 @@ const services = [
     color: "#C6A15B",
     softColor: "#FFF3D5",
     image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=85",
+      "/home/home-slide (3).jpg",
   },
 
   {
@@ -74,7 +74,7 @@ const services = [
     color: "#0B1F3A",
     softColor: "#E9EEF4",
     image:
-      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=85",
+      "/home/home-slide (4).jpg",
   },
 
   {
@@ -87,7 +87,7 @@ const services = [
     color: "#087F8C",
     softColor: "#E0F3F4",
     image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85",
+      "/home/home-slide (5).jpg",
   },
 
   {
@@ -100,7 +100,7 @@ const services = [
     color: "#5A7090",
     softColor: "#E9EEF5",
     image:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=85",
+      "/home/home-slide (6).jpg",
   },
 
   {
@@ -113,7 +113,7 @@ const services = [
     color: "#087F8C",
     softColor: "#E0F3F4",
     image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85",
+      "/home/home-slide (7).jpg",
   },
 
   {
@@ -126,7 +126,7 @@ const services = [
     color: "#4A789C",
     softColor: "#E5EDF4",
     image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=85",
+      "/home/home-slide (8).jpg",
   },
 
   {
@@ -139,7 +139,7 @@ const services = [
     color: "#087F8C",
     softColor: "#E0F3F4",
     image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=85",
+      "/home/home-slide (9).jpg",
   },
 ];
 
