@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -10,1706 +11,1007 @@ import {
   MapPin,
   MessageCircle,
   Phone,
-  Sparkles,
   Target,
   Users,
 } from "lucide-react";
 
-/* =========================================================
-   REUSABLE PREMIUM ANIMATED ICON
-========================================================= */
-
-function AnimatedIcon({
-  icon: Icon,
-  size = 22,
-  large = false,
-  delay = 0,
-  rotation = true,
-}) {
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        scale: 0.75,
-        y: 15,
-      }}
-      whileInView={{
-        opacity: 1,
-        scale: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.3,
-      }}
-      transition={{
-        duration: 0.8,
-        delay,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className="relative"
-    >
-
-      {/* =================================================
-          LARGE AMBIENT GOLD GLOW
-      ================================================= */}
-
-      <motion.div
-        animate={{
-          opacity: [0.15, 0.4, 0.15],
-          scale: [0.9, 1.15, 0.9],
-        }}
-        transition={{
-          duration: 3.8,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay,
-        }}
-        className={`
-          pointer-events-none
-          absolute
-          rounded-full
-          bg-[#C6A15B]/20
-          blur-2xl
-
-          ${
-            large
-              ? "-inset-6"
-              : "-inset-5"
-          }
-        `}
-      />
-
-
-      {/* =================================================
-          OUTER ORBIT
-      ================================================= */}
-
-      <motion.div
-        animate={{
-          rotate: 360,
-        }}
-        transition={{
-          duration: 16,
-          repeat: Infinity,
-          ease: "linear",
-          delay,
-        }}
-        className={`
-          pointer-events-none
-          absolute
-          rounded-full
-          border
-          border-[#C6A15B]/40
-
-          ${
-            large
-              ? "-inset-3"
-              : "-inset-2.5"
-          }
-        `}
-      >
-
-        {/* Gold orbit point */}
-
-        <motion.span
-          animate={{
-            scale: [0.8, 1.3, 0.8],
-            opacity: [0.4, 1, 0.4],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay,
-          }}
-          className="
-            absolute
-            -right-[4px]
-            top-1/2
-            h-2
-            w-2
-            -translate-y-1/2
-            rounded-full
-            bg-[#F4D58A]
-            shadow-[0_0_14px_rgba(244,213,138,0.95)]
-          "
-        />
-
-      </motion.div>
-
-
-      {/* =================================================
-          SECOND ORBIT
-      ================================================= */}
-
-      <motion.div
-        animate={{
-          rotate: -360,
-        }}
-        transition={{
-          duration: 23,
-          repeat: Infinity,
-          ease: "linear",
-          delay: delay + 0.5,
-        }}
-        className="
-          pointer-events-none
-          absolute
-          -inset-1
-          rounded-full
-          border
-          border-[#0B8995]/40
-        "
-      >
-
-        <span
-          className="
-            absolute
-            left-[5%]
-            top-[10%]
-            h-1.5
-            w-1.5
-            rounded-full
-            bg-[#18B8C2]
-            shadow-[0_0_12px_rgba(24,184,194,0.9)]
-          "
-        />
-
-      </motion.div>
-
-
-      {/* =================================================
-          MAIN ICON CONTAINER
-      ================================================= */}
-
-      <motion.div
-        animate={{
-          y: [0, -4, 0, 4, 0],
-
-          rotate: rotation
-            ? [0, 1.5, 0, -1.5, 0]
-            : 0,
-        }}
-        transition={{
-          duration: 5.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay,
-        }}
-        whileHover={{
-          scale: 1.12,
-          rotate: 4,
-        }}
-        className={`
-          group/icon
-          relative
-          flex
-          items-center
-          justify-center
-          overflow-hidden
-          rounded-full
-
-          border-2
-          border-[#C6A15B]/80
-
-          bg-gradient-to-br
-          from-[#C6A15B]/20
-          via-[#C6A15B]/[0.08]
-          to-[#0B8995]/[0.04]
-
-          text-[#F4D58A]
-
-          shadow-[0_0_25px_rgba(198,161,91,0.12)]
-
-          transition-all
-          duration-500
-
-          hover:border-[#F4D58A]
-          hover:text-[#FFE8AA]
-          hover:shadow-[0_0_40px_rgba(198,161,91,0.28)]
-
-          ${
-            large
-              ? "h-[68px] w-[68px]"
-              : "h-12 w-12"
-          }
-        `}
-      >
-
-        {/* =================================================
-            GOLD INNER BORDER
-        ================================================= */}
-
-        <span
-          className="
-            pointer-events-none
-            absolute
-            inset-[4px]
-            rounded-full
-            border
-            border-[#C6A15B]/25
-          "
-        />
-
-
-        {/* =================================================
-            MOVING LIGHT SWEEP
-        ================================================= */}
-
-        <motion.span
-          animate={{
-            x: ["-160%", "160%"],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: delay + 1,
-          }}
-          className="
-            pointer-events-none
-            absolute
-            inset-y-[-20%]
-            w-[45%]
-            rotate-[25deg]
-            bg-gradient-to-r
-            from-transparent
-            via-[#FFF2C9]/35
-            to-transparent
-            blur-[3px]
-          "
-        />
-
-
-        {/* =================================================
-            INNER GOLD GLOW
-        ================================================= */}
-
-        <motion.span
-          animate={{
-            scale: [0.8, 1.12, 0.8],
-            opacity: [0.1, 0.35, 0.1],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: delay + 0.3,
-          }}
-          className="
-            pointer-events-none
-            absolute
-            inset-3
-            rounded-full
-            bg-[#C6A15B]/25
-            blur-lg
-          "
-        />
-
-
-        {/* =================================================
-            ICON
-        ================================================= */}
-
-        <motion.span
-          animate={
-            rotation
-              ? {
-                  rotate: [0, 4, 0, -4, 0],
-                  scale: [1, 1.04, 1, 1.04, 1],
-                }
-              : {
-                  scale: [1, 1.06, 1],
-                }
-          }
-          transition={{
-            duration: 4.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: delay + 0.2,
-          }}
-          className="
-            relative
-            z-20
-            flex
-            items-center
-            justify-center
-            drop-shadow-[0_0_8px_rgba(244,213,138,0.65)]
-          "
-        >
-          <Icon
-            size={size}
-            strokeWidth={2.4}
-          />
-        </motion.span>
-
-      </motion.div>
-
-    </motion.div>
-  );
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
 export default function Footer() {
   const year = new Date().getFullYear();
 
-
-  /* =======================================================
-     EXPLORE NAVIGATION
-  ======================================================= */
-
   const navigation = [
     {
-      number: "01",
       title: "About Us",
-      description: "Who we are and what drives us.",
       href: "#about",
       icon: Users,
     },
     {
-      number: "02",
       title: "Our Services",
-      description: "Practical solutions for your needs.",
       href: "#services",
       icon: BriefcaseBusiness,
     },
     {
-      number: "03",
       title: "Our Approach",
-      description: "How we turn ideas into outcomes.",
       href: "#approach",
       icon: Compass,
     },
     {
-      number: "04",
       title: "Contact Us",
-      description: "Let's start a meaningful conversation.",
       href: "#contact",
       icon: MessageCircle,
     },
   ];
 
-
-  /* =======================================================
-     SERVICES
-  ======================================================= */
-
   const services = [
-    "Consulting",
-    "Strategy",
-    "Solutions",
-    "Partnerships",
+    {
+      title: "Consulting",
+      icon: Target,
+    },
+    {
+      title: "Strategy",
+      icon: Compass,
+    },
+    {
+      title: "Solutions",
+      icon: BriefcaseBusiness,
+    },
+    {
+      title: "Partnerships",
+      icon: Users,
+    },
   ];
-
-
-  /* =======================================================
-     SOCIALS
-  ======================================================= */
 
   const socials = [
     {
-      short: "LI",
       name: "LinkedIn",
+      short: "in",
       href: "#",
     },
     {
-      short: "IG",
       name: "Instagram",
+      short: "ig",
       href: "#",
     },
     {
-      short: "FB",
       name: "Facebook",
+      short: "f",
       href: "#",
     },
   ];
 
-
   return (
-    <footer
-      className="
-        relative
-        overflow-hidden
-        bg-[#081F38]
-        text-white
-      "
-    >
+    <footer className="relative overflow-hidden bg-[#071A2E] text-white">
 
-      {/* =====================================================
+      {/* =========================================================
           BACKGROUND
-      ===================================================== */}
+      ========================================================= */}
 
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
         {/* Main background */}
-
         <div
           className="
             absolute
             inset-0
-            bg-gradient-to-br
-            from-[#0B2945]
-            via-[#081F38]
-            to-[#06182C]
+            bg-[linear-gradient(135deg,#061525_0%,#0B1F3A_42%,#123A5A_100%)]
           "
         />
 
-
-        {/* Teal glow */}
-
-        <div
+        {/* Teal atmosphere */}
+        <motion.div
+          animate={{
+            x: [0, 45, 0],
+            y: [0, -35, 0],
+            opacity: [0.16, 0.27, 0.16],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
           className="
             absolute
-            -right-[180px]
-            -top-[180px]
-            h-[620px]
-            w-[620px]
+            -left-32
+            top-0
+            h-[460px]
+            w-[460px]
             rounded-full
-            bg-[#0B8995]/[0.07]
-            blur-[130px]
-          "
-        />
-
-
-        <div
-          className="
-            absolute
-            left-[35%]
-            top-[30%]
-            h-[300px]
-            w-[300px]
-            rounded-full
-            bg-[#0B8995]/[0.035]
+            bg-[#087F8C]/25
             blur-[120px]
           "
         />
 
-
-        {/* Gold glow */}
-
-        <div
+        {/* Gold atmosphere */}
+        <motion.div
+          animate={{
+            x: [0, -40, 0],
+            y: [0, 30, 0],
+            opacity: [0.08, 0.18, 0.08],
+          }}
+          transition={{
+            duration: 14,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
           className="
             absolute
-            -bottom-[180px]
-            -left-[150px]
+            -right-32
+            bottom-0
             h-[420px]
             w-[420px]
             rounded-full
-            bg-[#C6A15B]/[0.035]
-            blur-[130px]
+            bg-[#C6A15B]/20
+            blur-[120px]
           "
         />
 
-
-        {/* Architectural lines */}
-
+        {/* Center glow */}
         <div
           className="
             absolute
-            left-[7.5%]
+            left-1/2
+            top-1/2
+            h-[650px]
+            w-[650px]
+            -translate-x-1/2
+            -translate-y-1/2
+            rounded-full
+            bg-[#123A5A]/40
+            blur-[140px]
+          "
+        />
+
+        {/* IBS watermark */}
+        <div
+          className="
+            absolute
+            left-1/2
+            top-1/2
+            -translate-x-1/2
+            -translate-y-1/2
+            select-none
+            whitespace-nowrap
+            text-[180px]
+            font-black
+            tracking-[-0.08em]
+            text-white/[0.025]
+            sm:text-[250px]
+            lg:text-[350px]
+          "
+        >
+          IBS
+        </div>
+
+        {/* Vertical architecture */}
+        <div
+          className="
+            absolute
+            left-[7%]
             top-0
             h-full
             w-px
-            bg-white/[0.025]
+            bg-gradient-to-b
+            from-transparent
+            via-white/[0.07]
+            to-transparent
           "
         />
 
         <div
           className="
             absolute
-            right-[7.5%]
+            right-[7%]
             top-0
             h-full
             w-px
-            bg-white/[0.025]
+            bg-gradient-to-b
+            from-transparent
+            via-white/[0.07]
+            to-transparent
           "
         />
 
+        {/* Horizontal architectural line */}
+        <div
+          className="
+            absolute
+            left-0
+            right-0
+            top-[44%]
+            h-px
+            bg-gradient-to-r
+            from-transparent
+            via-[#C6A15B]/[0.12]
+            to-transparent
+          "
+        />
 
-        {/* Decorative rings */}
+        {/* Rings */}
+        <div
+          className="
+            absolute
+            -left-24
+            bottom-16
+            h-64
+            w-64
+            rounded-full
+            border
+            border-[#087F8C]/15
+          "
+        />
 
         <div
           className="
             absolute
-            -right-[190px]
-            -top-[190px]
-            h-[560px]
-            w-[560px]
+            -left-12
+            bottom-24
+            h-44
+            w-44
             rounded-full
             border
-            border-[#0B8995]/[0.12]
+            border-[#C6A15B]/15
           "
         />
 
         <div
           className="
             absolute
-            -right-[145px]
-            -top-[145px]
-            h-[470px]
-            w-[470px]
+            -right-28
+            top-16
+            h-72
+            w-72
             rounded-full
             border
-            border-[#C6A15B]/[0.09]
+            border-[#087F8C]/15
           "
         />
 
-        <div
-          className="
-            absolute
-            -right-[105px]
-            -top-[105px]
-            h-[390px]
-            w-[390px]
-            rounded-full
-            border
-            border-[#0B8995]/[0.08]
-          "
-        />
-
-
-        {/* Animated gold dot */}
-
-        <motion.span
-          animate={{
-            y: [0, -8, 0],
-            opacity: [0.25, 0.8, 0.25],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            right-[15%]
-            top-[15%]
-            h-2
-            w-2
-            rounded-full
-            bg-[#C6A15B]
-          "
-        />
-
-
-        {/* Animated teal dot */}
-
-        <motion.span
-          animate={{
-            y: [0, 7, 0],
-            opacity: [0.15, 0.65, 0.15],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            right-[27%]
-            top-[42%]
-            h-1.5
-            w-1.5
-            rounded-full
-            bg-[#0B8995]
-          "
-        />
+        {/* Decorative dots */}
+        <div className="absolute left-[14%] top-[20%] h-1.5 w-1.5 rounded-full bg-[#C6A15B]/70" />
+        <div className="absolute left-[21%] top-[70%] h-1.5 w-1.5 rounded-full bg-[#087F8C]/80" />
+        <div className="absolute right-[17%] top-[30%] h-1.5 w-1.5 rounded-full bg-[#C6A15B]/70" />
+        <div className="absolute right-[12%] bottom-[22%] h-1.5 w-1.5 rounded-full bg-[#087F8C]/80" />
 
       </div>
 
-
-      {/* =====================================================
+      {/* =========================================================
           MAIN CONTAINER
-      ===================================================== */}
+      ========================================================= */}
 
       <div
         className="
           relative
           z-10
           mx-auto
-          max-w-[1440px]
+          max-w-[1380px]
           px-6
+          py-0
           sm:px-8
           lg:px-12
           xl:px-16
         "
       >
 
-
-        {/* ===================================================
+        {/* =======================================================
             BRAND HEADER
-        =================================================== */}
+        ======================================================= */}
 
         <div
           className="
             flex
-            items-center
-            justify-between
+            flex-col
+            gap-6
             border-b
-            border-white/[0.08]
-            py-7
+            border-white/[0.12]
+            py-10
+            sm:flex-row
+            sm:items-center
+            sm:justify-between
           "
         >
 
-          {/* IBS BRAND */}
-
+          {/* Logo */}
           <a
             href="#"
             className="
               group
               flex
               items-center
-              gap-3
+              gap-5
             "
           >
-
-         
-
-
-<div
-  className="
-    flex
-    h-[90px]
-    w-[130px]
-    items-center
-    justify-center
-    overflow-hidden
-    rounded-[20px]
-    border
-    border-white/20
-    bg-white
-    shadow-[0_10px_30px_rgba(0,0,0,0.20)]
-    transition-all
-    duration-300
-    hover:scale-105
-    hover:border-[#C6A15B]/60
-  "
->
-  <img
-    src="/logo/logo.jpg"
-    alt="IBS Canada"
-    className="
-      h-full
-      w-full
-      object-contain
-      p-0
-    "
-  />
-</div>
-
-          </a>
-
-
-          {/* HEADER MESSAGE */}
-
-          <div
-            className="
-              hidden
-              items-center
-              gap-3
-
-              sm:flex
-            "
-          >
-
-            <span
-              className="
-                h-px
-                w-8
-                bg-[#C6A15B]
-              "
-            />
-
-            <span
-              className="
-                text-[9px]
-                font-semibold
-                uppercase
-                tracking-[0.25em]
-                text-[#A6B7C5]
-              "
-            >
-              Strategic thinking. Meaningful outcomes.
-            </span>
-
-          </div>
-
-        </div>
-
-
-        {/* ===================================================
-            MAIN CTA
-        =================================================== */}
-
-        <section
-          className="
-            relative
-            py-16
-
-            sm:py-20
-
-            lg:py-24
-
-            xl:py-28
-          "
-        >
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 25,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.2,
-            }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="
-              flex
-              flex-col
-              items-center
-              text-center
-            "
-          >
-
-            {/* Eyebrow */}
-
             <div
               className="
                 flex
+                h-[68px]
+                w-[100px]
                 items-center
                 justify-center
-                gap-4
-              "
-            >
-
-              <span
-                className="
-                  h-px
-                  w-9
-                  bg-[#C6A15B]
-                "
-              />
-
-              <span
-                className="
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.3em]
-                  text-[#C6A15B]
-                "
-              >
-                YOUR NEXT MOVE STARTS HERE
-              </span>
-
-              <span
-                className="
-                  h-px
-                  w-9
-                  bg-[#C6A15B]
-                "
-              />
-
-            </div>
-
-
-            {/* Heading */}
-
-            <h2
-              className="
-                mt-7
-                max-w-[1000px]
-                text-[48px]
-                font-semibold
-                leading-[0.95]
-                tracking-[-0.055em]
-                text-white
-
-                sm:text-[62px]
-
-                md:text-[72px]
-
-                lg:text-[84px]
-
-                xl:text-[96px]
-              "
-            >
-
-              Let&apos;s create{" "}
-
-              <span className="text-[#0B8995]">
-                something
-              </span>
-
-              <br />
-
-              meaningful
-              <span className="text-[#C6A15B]">
-                .
-              </span>
-
-            </h2>
-
-
-            {/* Description */}
-
-            <p
-              className="
-                mt-7
-                max-w-[570px]
-                text-[13px]
-                leading-6
-                text-[#A9B9C7]
-
-                sm:text-[14px]
-                sm:leading-7
-              "
-            >
-              Turn ideas into practical solutions and
-              meaningful outcomes. Let&apos;s build
-              something that creates lasting impact.
-            </p>
-
-
-            {/* CTA */}
-
-            <motion.a
-              href="#contact"
-              whileHover={{
-                y: -3,
-              }}
-              whileTap={{
-                scale: 0.98,
-              }}
-              className="
-                group
-                mt-8
-                inline-flex
-                items-center
-                gap-4
-                rounded-full
+                overflow-hidden
+                rounded-xl
                 border
-                border-[#C6A15B]/40
-                bg-white/[0.025]
-                px-5
-                py-3
+                border-white/20
+                bg-white
+                shadow-[0_12px_35px_rgba(0,0,0,0.3)]
                 transition-all
                 duration-300
-
-                hover:border-[#C6A15B]
-                hover:bg-[#C6A15B]/[0.06]
+                group-hover:border-[#C6A15B]
+                group-hover:shadow-[0_12px_40px_rgba(198,161,91,0.2)]
               "
             >
-
-              <motion.span
-                animate={{
-                  y: [0, -2, 0, 2, 0],
-                  rotate: [0, 3, 0, -3, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+              <img
+                src="/logo/logo.jpg"
+                alt="IBS Canada"
                 className="
-                  flex
-                  h-9
-                  w-9
-                  items-center
-                  justify-center
-                  rounded-full
-                  bg-[#C6A15B]
-                  text-[#081F38]
+                  h-full
+                  w-full
+                  object-contain
                 "
-              >
-                <ArrowUpRight size={16} />
-              </motion.span>
+              />
+            </div>
 
-              <span
+            <div>
+
+              <h2
                 className="
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.22em]
+                  text-[19px]
+                  font-extrabold
+                  tracking-[-0.025em]
                   text-white
                 "
               >
-                Let&apos;s work together
-              </span>
+                IBS Canada
+              </h2>
 
-            </motion.a>
+              <p
+                className="
+                  mt-1.5
+                  text-[10px]
+                  font-bold
+                  uppercase
+                  tracking-[0.24em]
+                  text-[#F0CB79]
+                "
+              >
+                Integrated Business Solutions
+              </p>
 
-          </motion.div>
+            </div>
+          </a>
 
-        </section>
+          {/* Feature pills */}
+          <div className="flex flex-wrap gap-3">
 
-
-        {/* ===================================================
-            EXPLORE NAVIGATION
-        =================================================== */}
-
-        <section
-          className="
-            border-t
-            border-white/[0.08]
-          "
-        >
-
-      
-
-          {/* Navigation cards */}
-
-          <div
-            className="
-              grid
-              border-t
-              border-white/[0.07]
-
-              sm:grid-cols-2
-
-              lg:grid-cols-4
-            "
-          >
-
-            {navigation.map((item, index) => {
+            {[
+              {
+                title: "Strategy",
+                icon: Target,
+              },
+              {
+                title: "Solutions",
+                icon: Compass,
+              },
+              {
+                title: "Partnerships",
+                icon: Users,
+              },
+            ].map((item) => {
               const Icon = item.icon;
 
               return (
-                <motion.a
-                  key={item.number}
-                  href={item.href}
-                  whileHover={{
-                    y: -3,
-                  }}
-                  transition={{
-                    duration: 0.25,
-                  }}
+                <div
+                  key={item.title}
                   className="
-                    group
-                    relative
                     flex
-                    min-h-[205px]
-                    flex-col
                     items-center
-                    justify-center
-                    border-b
-                    border-white/[0.08]
-                    bg-white/[0.012]
-                    px-6
-                    py-8
-                    text-center
+                    gap-2.5
+                    rounded-xl
+                    border
+                    border-white/[0.13]
+                    bg-white/[0.055]
+                    px-4
+                    py-2.5
+                    shadow-[0_8px_25px_rgba(0,0,0,0.12)]
                     transition-all
                     duration-300
-
-                    sm:border-r
-
-                    lg:min-h-[220px]
-
-                    hover:bg-[#0B8995]/[0.045]
+                    hover:border-[#C6A15B]/50
+                    hover:bg-[#C6A15B]/[0.08]
                   "
                 >
 
-                  {/* Number */}
+                  <Icon
+                    className="
+                      h-4
+                      w-4
+                      text-[#F0CB79]
+                    "
+                  />
 
                   <span
                     className="
-                      absolute
-                      left-5
-                      top-5
-                      text-[8px]
-                      font-medium
-                      tracking-[0.15em]
-                      text-[#71889B]
-                      transition-colors
-                      duration-300
-
-                      group-hover:text-[#C6A15B]
-                    "
-                  >
-                    {item.number}
-                  </span>
-
-
-                  {/* Animated Gold Icon */}
-
-                  <AnimatedIcon
-                    icon={Icon}
-                    size={20}
-                    large
-                    delay={index * 0.45}
-                  />
-
-
-                  {/* Title */}
-
-                  <h3
-                    className="
-                      mt-5
-                      text-[15px]
-                      font-medium
-                      tracking-[-0.015em]
-                      text-[#E6EDF2]
-                      transition-colors
-                      duration-300
-
-                      group-hover:text-white
+                      text-[10px]
+                      font-bold
+                      uppercase
+                      tracking-[0.12em]
+                      text-white/70
                     "
                   >
                     {item.title}
-                  </h3>
-
-
-                  {/* Description */}
-
-                  <p
-                    className="
-                      mt-2
-                      max-w-[200px]
-                      text-[10px]
-                      leading-5
-                      text-[#9AABBA]
-                      transition-colors
-                      duration-300
-
-                      group-hover:text-[#C1CDD7]
-                    "
-                  >
-                    {item.description}
-                  </p>
-
-
-                  {/* Arrow */}
-
-                  <span
-                    className="
-                      absolute
-                      bottom-5
-                      right-5
-                      flex
-                      h-7
-                      w-7
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-white/[0.1]
-                      text-[#72899B]
-                      transition-all
-                      duration-300
-
-                      group-hover:border-[#C6A15B]/45
-                      group-hover:text-[#C6A15B]
-                    "
-                  >
-                    <ArrowUpRight size={12} />
                   </span>
 
-
-                  {/* Bottom gold line */}
-
-                  <span
-                    className="
-                      absolute
-                      bottom-0
-                      left-1/2
-                      h-[2px]
-                      w-0
-                      -translate-x-1/2
-                      bg-[#C6A15B]
-                      transition-all
-                      duration-500
-
-                      group-hover:w-[45%]
-                    "
-                  />
-
-                </motion.a>
+                </div>
               );
             })}
 
           </div>
 
-        </section>
+        </div>
 
+        {/* =======================================================
+            CONTENT
+        ======================================================= */}
 
-        {/* ===================================================
-            LOWER INFORMATION
-        =================================================== */}
-
-        <section
+        <div
           className="
-            border-t
-            border-white/[0.08]
-            bg-[#0A2944]/60
+            grid
+            gap-12
+            py-12
+            sm:grid-cols-2
+            lg:grid-cols-[1.25fr_0.85fr_0.85fr_1fr]
+            lg:gap-14
           "
         >
 
-          <div
-            className="
-              grid
+          {/* =====================================================
+              ABOUT IBS
+          ===================================================== */}
 
-              sm:grid-cols-2
+          <div>
 
-              lg:grid-cols-4
-            "
-          >
-
-
-            {/* =================================================
-                BRAND
-            ================================================= */}
-
-            <div
+            <h3
               className="
-                flex
-                min-h-[235px]
-                flex-col
-                items-center
-                justify-center
-                border-b
-                border-white/[0.07]
-                px-6
-                py-10
-                text-center
-
-                sm:border-r
-
-                lg:border-b-0
+                mb-5
+                text-[11px]
+                font-black
+                uppercase
+                tracking-[0.22em]
+                text-[#F0CB79]
               "
             >
+              About IBS
+            </h3>
 
-              <AnimatedIcon
-                icon={Target}
-                size={19}
-                delay={0}
-                rotation={false}
-              />
-
-
-              <p
-                className="
-                  mt-5
-                  text-[28px]
-                  font-semibold
-                  leading-none
-                  tracking-[-0.05em]
-                  text-white
-                "
-              >
-                IBS
-              </p>
-
-
-              <p
-                className="
-                  mt-1
-                  text-[7px]
-                  font-bold
-                  uppercase
-                  tracking-[0.35em]
-                  text-[#C6A15B]
-                "
-              >
-                CANADA
-              </p>
-
-
-              <p
-                className="
-                  mt-4
-                  max-w-[210px]
-                  text-[10px]
-                  leading-5
-                  text-[#9AABBA]
-                "
-              >
-                Strategic thinking.
-                <br />
-                Practical execution.
-                <br />
-                Meaningful outcomes.
-              </p>
-
-            </div>
-
-
-            {/* =================================================
-                SERVICES
-            ================================================= */}
-
-            <div
+            <p
               className="
-                flex
-                min-h-[235px]
-                flex-col
-                items-center
-                justify-center
-                border-b
-                border-white/[0.07]
-                px-6
-                py-10
-                text-center
-
-                sm:border-r
-
-                lg:border-b-0
+                max-w-[340px]
+                text-[14px]
+                font-medium
+                leading-7
+                text-white/70
               "
             >
+              Integrated business solutions designed to help
+              organizations move forward with clarity,
+              strategy and confidence.
+            </p>
 
-              <AnimatedIcon
-                icon={BriefcaseBusiness}
-                size={17}
-                delay={0.25}
-              />
+            <div className="mt-7 space-y-4">
 
-
-              <p
+              {/* Email */}
+              <a
+                href="mailto:info@ibsgroupcanada.com"
                 className="
-                  mt-4
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.25em]
-                  text-[#0B8995]
-                "
-              >
-                SERVICES
-              </p>
-
-
-              <div
-                className="
-                  mt-4
+                  group
                   flex
-                  flex-col
                   items-center
-                  gap-2.5
+                  gap-4
+                  text-white/65
+                  transition-all
+                  duration-300
+                  hover:text-white
                 "
               >
 
-                {services.map((service) => (
-                  <a
-                    key={service}
-                    href="#services"
-                    className="
-                      group
-                      flex
-                      items-center
-                      gap-1.5
-                      text-[11px]
-                      text-[#A4B3C0]
-                      transition-colors
-                      duration-300
-
-                      hover:text-white
-                    "
-                  >
-
-                    {service}
-
-                    <ArrowUpRight
-                      size={10}
-                      className="
-                        -translate-x-1
-                        opacity-0
-                        transition-all
-                        duration-300
-
-                        group-hover:translate-x-0
-                        group-hover:opacity-100
-                        group-hover:text-[#C6A15B]
-                      "
-                    />
-
-                  </a>
-                ))}
-
-              </div>
-
-            </div>
-
-
-            {/* =================================================
-                CONTACT
-            ================================================= */}
-
-            <div
-              className="
-                flex
-                min-h-[235px]
-                flex-col
-                items-center
-                justify-center
-                border-b
-                border-white/[0.07]
-                px-6
-                py-10
-                text-center
-
-                sm:border-r
-
-                lg:border-b-0
-              "
-            >
-
-              <AnimatedIcon
-                icon={MessageCircle}
-                size={17}
-                delay={0.5}
-              />
-
-
-              <p
-                className="
-                  mt-4
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.25em]
-                  text-[#0B8995]
-                "
-              >
-                CONTACT
-              </p>
-
-
-              <div
-                className="
-                  mt-4
-                  flex
-                  flex-col
-                  items-center
-                  gap-3
-                "
-              >
-
-                <a
-                  href="mailto:hello@example.com"
+                <span
                   className="
                     flex
+                    h-10
+                    w-10
+                    shrink-0
                     items-center
-                    gap-2
-                    text-[11px]
-                    text-[#A4B3C0]
-                    transition-colors
+                    justify-center
+                    rounded-xl
+                    border
+                    border-[#087F8C]/35
+                    bg-[#087F8C]/10
+                    transition-all
                     duration-300
-
-                    hover:text-white
+                    group-hover:border-[#C6A15B]/60
+                    group-hover:bg-[#C6A15B]/10
                   "
                 >
-
                   <Mail
-                    size={13}
-                    className="text-[#C6A15B]"
+                    className="
+                      h-4
+                      w-4
+                      text-[#35B7C0]
+                      transition-colors
+                      group-hover:text-[#F0CB79]
+                    "
                   />
+                </span>
 
-                  hello@example.com
+                <span className="text-[13px] font-medium">
+                  info@ibsgroupcanada.com
+                </span>
 
-                </a>
+              </a>
 
-
-                <a
-                  href="tel:+10000000000"
-                  className="
-                    flex
-                    items-center
-                    gap-2
-                    text-[11px]
-                    text-[#A4B3C0]
-                    transition-colors
-                    duration-300
-
-                    hover:text-white
-                  "
-                >
-
-                  <Phone
-                    size={13}
-                    className="text-[#C6A15B]"
-                  />
-
-                  +1 000 000 0000
-
-                </a>
-
-
-                <div
-                  className="
-                    flex
-                    items-center
-                    gap-2
-                    text-[11px]
-                    text-[#A4B3C0]
-                  "
-                >
-
-                  <MapPin
-                    size={13}
-                    className="text-[#C6A15B]"
-                  />
-
-                  Canada
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            {/* =================================================
-                SOCIAL
-            ================================================= */}
-
-            <div
-              className="
-                flex
-                min-h-[235px]
-                flex-col
-                items-center
-                justify-center
-                px-6
-                py-10
-                text-center
-              "
-            >
-
-              <AnimatedIcon
-                icon={Sparkles}
-                size={17}
-                delay={0.75}
-              />
-
-
-              <p
-                className="
-                  mt-4
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.25em]
-                  text-[#0B8995]
-                "
-              >
-                FOLLOW US
-              </p>
-
-
+              {/* Location */}
               <div
                 className="
-                  mt-4
                   flex
-                  gap-2
+                  items-center
+                  gap-4
+                  text-white/65
                 "
               >
 
-                {socials.map((social, index) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.href}
-                    aria-label={social.name}
-                    title={social.name}
-                    animate={{
-                      y: [0, -2, 0, 2, 0],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: index * 0.3,
-                    }}
-                    whileHover={{
-                      y: -4,
-                    }}
+                <span
+                  className="
+                    flex
+                    h-10
+                    w-10
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-[#087F8C]/35
+                    bg-[#087F8C]/10
+                  "
+                >
+                  <MapPin
                     className="
-                      flex
-                      h-9
-                      w-9
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-[#C6A15B]/25
-                      text-[8px]
-                      font-bold
-                      tracking-[0.05em]
-                      text-[#A4B3C0]
-                      transition-all
-                      duration-300
-
-                      hover:border-[#C6A15B]
-                      hover:bg-[#C6A15B]
-                      hover:text-[#081F38]
+                      h-4
+                      w-4
+                      text-[#35B7C0]
                     "
-                  >
-                    {social.short}
-                  </motion.a>
-                ))}
+                  />
+                </span>
+
+                <span className="text-[13px] font-medium">
+                  Canada
+                </span>
 
               </div>
 
-
-              <p
+              {/* Phone */}
+              <a
+                href="tel:+1"
                 className="
-                  mt-4
-                  max-w-[180px]
-                  text-[10px]
-                  leading-5
-                  text-[#8499AB]
+                  group
+                  flex
+                  items-center
+                  gap-4
+                  text-white/65
+                  transition-all
+                  duration-300
+                  hover:text-white
                 "
               >
-                Follow our latest ideas
-                and updates.
-              </p>
+
+                <span
+                  className="
+                    flex
+                    h-10
+                    w-10
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-[#087F8C]/35
+                    bg-[#087F8C]/10
+                    transition-all
+                    duration-300
+                    group-hover:border-[#C6A15B]/60
+                    group-hover:bg-[#C6A15B]/10
+                  "
+                >
+                  <Phone
+                    className="
+                      h-4
+                      w-4
+                      text-[#35B7C0]
+                      transition-colors
+                      group-hover:text-[#F0CB79]
+                    "
+                  />
+                </span>
+
+                <span className="text-[13px] font-medium">
+                  Connect with IBS
+                </span>
+
+              </a>
 
             </div>
 
           </div>
 
-        </section>
+          {/* =====================================================
+              EXPLORE
+          ===================================================== */}
 
+          <div>
 
-        {/* ===================================================
+            <h3
+              className="
+                mb-5
+                text-[11px]
+                font-black
+                uppercase
+                tracking-[0.22em]
+                text-[#F0CB79]
+              "
+            >
+              Explore
+            </h3>
+
+            <div className="space-y-2.5">
+
+              {navigation.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <a
+                    key={item.title}
+                    href={item.href}
+                    className="
+                      group
+                      flex
+                      items-center
+                      gap-3
+                      rounded-xl
+                      border
+                      border-transparent
+                      px-2
+                      py-2.5
+                      text-white/65
+                      transition-all
+                      duration-300
+                      hover:border-white/[0.08]
+                      hover:bg-white/[0.045]
+                      hover:text-white
+                    "
+                  >
+
+                    <Icon
+                      className="
+                        h-[18px]
+                        w-[18px]
+                        text-[#2BB5BF]
+                        transition-colors
+                        duration-300
+                        group-hover:text-[#F0CB79]
+                      "
+                    />
+
+                    <span
+                      className="
+                        text-[13px]
+                        font-semibold
+                      "
+                    >
+                      {item.title}
+                    </span>
+
+                    <ArrowUpRight
+                      className="
+                        ml-auto
+                        h-4
+                        w-4
+                        opacity-0
+                        transition-all
+                        duration-300
+                        group-hover:translate-x-1
+                        group-hover:-translate-y-1
+                        group-hover:opacity-100
+                        group-hover:text-[#F0CB79]
+                      "
+                    />
+
+                  </a>
+                );
+              })}
+
+            </div>
+
+          </div>
+
+          {/* =====================================================
+              SERVICES
+          ===================================================== */}
+
+          <div>
+
+            <h3
+              className="
+                mb-5
+                text-[11px]
+                font-black
+                uppercase
+                tracking-[0.22em]
+                text-[#F0CB79]
+              "
+            >
+              Services
+            </h3>
+
+            <div className="space-y-3">
+
+              {services.map((service) => {
+                const Icon = service.icon;
+
+                return (
+                  <div
+                    key={service.title}
+                    className="
+                      group
+                      flex
+                      items-center
+                      gap-3
+                      rounded-xl
+                      border
+                      border-transparent
+                      px-2
+                      py-2
+                      transition-all
+                      duration-300
+                      hover:border-white/[0.08]
+                      hover:bg-white/[0.045]
+                    "
+                  >
+
+                    <span
+                      className="
+                        flex
+                        h-9
+                        w-9
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-lg
+                        border
+                        border-[#087F8C]/30
+                        bg-[#087F8C]/10
+                        transition-all
+                        duration-300
+                        group-hover:border-[#C6A15B]/50
+                        group-hover:bg-[#C6A15B]/10
+                      "
+                    >
+
+                      <Icon
+                        className="
+                          h-4
+                          w-4
+                          text-[#35B7C0]
+                          transition-colors
+                          duration-300
+                          group-hover:text-[#F0CB79]
+                        "
+                      />
+
+                    </span>
+
+                    <span
+                      className="
+                        text-[13px]
+                        font-semibold
+                        text-white/65
+                        transition-colors
+                        duration-300
+                        group-hover:text-white
+                      "
+                    >
+                      {service.title}
+                    </span>
+
+                  </div>
+                );
+              })}
+
+            </div>
+
+          </div>
+
+          {/* =====================================================
+              CONNECT
+          ===================================================== */}
+
+          <div>
+
+            <h3
+              className="
+                mb-5
+                text-[11px]
+                font-black
+                uppercase
+                tracking-[0.22em]
+                text-[#F0CB79]
+              "
+            >
+              Connect
+            </h3>
+
+            <p
+              className="
+                max-w-[270px]
+                text-[14px]
+                font-medium
+                leading-6
+                text-white/65
+              "
+            >
+              Have a business challenge?
+              Let&apos;s start a conversation.
+            </p>
+
+            {/* CTA */}
+            <a
+              href="#contact"
+              className="
+                group
+                mt-6
+                inline-flex
+                items-center
+                gap-3
+                rounded-xl
+                border
+                border-[#C6A15B]/60
+                bg-[#C6A15B]/10
+                px-5
+                py-3.5
+                shadow-[0_10px_30px_rgba(198,161,91,0.08)]
+                transition-all
+                duration-300
+                hover:-translate-y-0.5
+                hover:border-[#F0CB79]
+                hover:bg-[#C6A15B]/20
+                hover:shadow-[0_12px_35px_rgba(198,161,91,0.16)]
+              "
+            >
+
+              <span
+                className="
+                  text-[11px]
+                  font-black
+                  uppercase
+                  tracking-[0.16em]
+                  text-[#F0CB79]
+                "
+              >
+                Let&apos;s Talk
+              </span>
+
+              <ArrowUpRight
+                className="
+                  h-4
+                  w-4
+                  text-[#F0CB79]
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                  group-hover:-translate-y-1
+                "
+              />
+
+            </a>
+
+            {/* Social buttons */}
+            <div className="mt-7 flex items-center gap-3">
+
+              {socials.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  aria-label={social.name}
+                  className="
+                    group
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-white/[0.13]
+                    bg-white/[0.045]
+                    text-[12px]
+                    font-black
+                    uppercase
+                    text-white/55
+                    shadow-[0_8px_20px_rgba(0,0,0,0.12)]
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-[#C6A15B]/70
+                    hover:bg-[#C6A15B]/15
+                    hover:text-[#F0CB79]
+                  "
+                >
+                  {social.short}
+                </a>
+              ))}
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* =======================================================
             BOTTOM BAR
-        =================================================== */}
+        ======================================================= */}
 
         <div
           className="
             flex
             flex-col
-            items-center
-            gap-4
+            gap-5
             border-t
-            border-white/[0.08]
-            py-5
-            text-center
-
+            border-white/[0.12]
+            py-7
             sm:flex-row
+            sm:items-center
             sm:justify-between
-            sm:text-left
           "
         >
 
-          {/* Copyright */}
-
           <p
             className="
-              text-[9px]
-              text-[#7890A2]
+              text-[10px]
+              font-medium
+              uppercase
+              tracking-[0.13em]
+              text-white/45
             "
           >
-            © {year} IBS Canada. All rights reserved.
+            © {year} Integrated Business Solutions.
+            All rights reserved.
           </p>
 
+          <div className="flex items-center gap-6">
 
-          {/* Center IBS mark */}
-
-          <div
-            className="
-              flex
-              items-center
-              gap-2
-            "
-          >
-
-            <span
+            <a
+              href="/privacy-policy"
               className="
-                h-px
-                w-7
-                bg-[#C6A15B]/40
-              "
-            />
-
-            <motion.span
-              animate={{
-                opacity: [0.45, 1, 0.45],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                text-[7px]
+                text-[10px]
                 font-bold
                 uppercase
-                tracking-[0.3em]
-                text-[#C6A15B]
-              "
-            >
-              IBS
-            </motion.span>
-
-            <span
-              className="
-                h-px
-                w-7
-                bg-[#C6A15B]/40
-              "
-            />
-
-          </div>
-
-
-          {/* Legal */}
-
-          <div
-            className="
-              flex
-              items-center
-              gap-4
-            "
-          >
-
-            <a
-              href="#privacy"
-              className="
-                text-[9px]
-                text-[#7890A2]
+                tracking-[0.12em]
+                text-white/45
                 transition-colors
-                duration-300
-
-                hover:text-white
+                hover:text-[#F0CB79]
               "
             >
-              Privacy Policy
+              Privacy
             </a>
 
-
-            <span
-              className="
-                h-1
-                w-1
-                rounded-full
-                bg-[#C6A15B]/60
-              "
-            />
-
-
             <a
-              href="#terms"
+              href="/terms"
               className="
-                text-[9px]
-                text-[#7890A2]
+                text-[10px]
+                font-bold
+                uppercase
+                tracking-[0.12em]
+                text-white/45
                 transition-colors
-                duration-300
-
-                hover:text-white
+                hover:text-[#F0CB79]
               "
             >
-              Terms &amp; Conditions
+              Terms
             </a>
 
           </div>
@@ -1718,21 +1020,182 @@ export default function Footer() {
 
       </div>
 
-
-      {/* =====================================================
-          BOTTOM GOLD LINE
-      ===================================================== */}
+      {/* =========================================================
+          LEFT BOTTOM PAGE FOLD
+      ========================================================= */}
 
       <div
         className="
+          pointer-events-none
           absolute
           bottom-0
           left-0
-          h-[2px]
-          w-full
+          z-20
+          h-[80px]
+          w-[80px]
+          overflow-hidden
+          sm:h-[96px]
+          sm:w-[96px]
+        "
+      >
+
+        <motion.div
+          animate={{
+            rotate: [-1, 3, -1],
+            scale: [1, 1.025, 1],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            -bottom-[35px]
+            -left-[35px]
+            h-[84px]
+            w-[84px]
+            rotate-45
+            border-r
+            border-t
+            border-[#C6A15B]/80
+            bg-gradient-to-br
+            from-[#164B68]
+            via-[#0B1F3A]
+            to-[#061525]
+            shadow-[0_-10px_30px_rgba(0,0,0,0.3)]
+          "
+        />
+
+        <div
+          className="
+            absolute
+            bottom-0
+            left-0
+            h-[3px]
+            w-[78px]
+            bg-gradient-to-r
+            from-[#C6A15B]
+            to-transparent
+          "
+        />
+
+        <div
+          className="
+            absolute
+            bottom-0
+            left-0
+            h-[78px]
+            w-[3px]
+            bg-gradient-to-t
+            from-[#C6A15B]
+            to-transparent
+          "
+        />
+
+      </div>
+
+      {/* =========================================================
+          RIGHT BOTTOM PAGE FOLD
+      ========================================================= */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          bottom-0
+          right-0
+          z-20
+          h-[80px]
+          w-[80px]
+          overflow-hidden
+          sm:h-[96px]
+          sm:w-[96px]
+        "
+      >
+
+        <motion.div
+          animate={{
+            rotate: [1, -3, 1],
+            scale: [1, 1.025, 1],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+          className="
+            absolute
+            -bottom-[35px]
+            -right-[35px]
+            h-[84px]
+            w-[84px]
+            -rotate-45
+            border-l
+            border-t
+            border-[#C6A15B]/80
+            bg-gradient-to-bl
+            from-[#164B68]
+            via-[#0B1F3A]
+            to-[#061525]
+            shadow-[0_-10px_30px_rgba(0,0,0,0.3)]
+          "
+        />
+
+        <div
+          className="
+            absolute
+            bottom-0
+            right-0
+            h-[3px]
+            w-[78px]
+            bg-gradient-to-l
+            from-[#C6A15B]
+            to-transparent
+          "
+        />
+
+        <div
+          className="
+            absolute
+            bottom-0
+            right-0
+            h-[78px]
+            w-[3px]
+            bg-gradient-to-t
+            from-[#C6A15B]
+            to-transparent
+          "
+        />
+
+      </div>
+
+      {/* =========================================================
+          PREMIUM BOTTOM LINE
+      ========================================================= */}
+
+      <motion.div
+        animate={{
+          opacity: [0.45, 1, 0.45],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="
+          pointer-events-none
+          absolute
+          bottom-0
+          left-1/2
+          z-30
+          h-[3px]
+          w-[55%]
+          -translate-x-1/2
           bg-gradient-to-r
           from-transparent
-          via-[#C6A15B]/80
+          via-[#C6A15B]
           to-transparent
         "
       />
@@ -1740,3 +1203,4 @@ export default function Footer() {
     </footer>
   );
 }
+
