@@ -1,209 +1,204 @@
 export const serviceData = {
-educationTraining: {
-  slug: "education-training",
-  label: "Education & Training",
-  title: "Education",
-  titleAccent: "& Training",
+  educationTraining: {
+    slug: "education-training",
+    label: "Education & Training",
+    title: "Education",
+    titleAccent: "& Training",
 
-  description:
-    "Build the skills your organization and workforce need for what comes next. IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
-
-  image: "/heroImg/Education & Training/hero.jpg",
-
-  programImg: "/programImage/program-lower.jpg",
-
-  journeyImages: [
-    "/journeyImg/learn.jpg",
-    "/journeyImg/grow.jpg",
-    "/journeyImg/lead.jpg",
-    "/journeyImg/advance.jpg",
-    "/journeyImg/achieve.jpg",
-  ],
-
-  heroIcon: "GraduationCap",
-
-  features: [
-    {
-      icon: "GraduationCap",
-      title: "Diploma in Logistics Management",
-    },
-    {
-      icon: "BookOpen",
-      title: "Certificate in Logistics Management",
-    },
-    {
-      icon: "Award",
-      title: "Certified Logistics Professional",
-    },
-    {
-      icon: "Target",
-      title: "Executive Education & Leadership",
-    },
-  ],
-
-  journeyTitle: "Education &",
-  journeyAccent: "Training.",
-
-  journeyDescription:
-    "IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
-
-programs: [
-  {
-    title: "Logo design services",
     description:
-      "Industry-focused education supporting practical, career-focused learning in logistics and supply chain management.",
-    icon: "GraduationCap",
-    tone: "navy",
-    link: "https://gtmcanada.com/logo-design/",
+      "Build the skills your organization and workforce need for what comes next. IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
+
+    image: "/heroImg/Education & Training/hero.jpg",
+
+    programImg: "/programImage/program-lower.jpg",
+
+    journeyImages: [
+      "/journeyImg/learn.jpg",
+      "/journeyImg/grow.jpg",
+      "/journeyImg/lead.jpg",
+      "/journeyImg/advance.jpg",
+      "/journeyImg/achieve.jpg",
+    ],
+
+    heroIcon: "GraduationCap",
+
+    features: [
+      {
+        icon: "GraduationCap",
+        title: "Diploma in Logistics Management",
+      },
+      {
+        icon: "BookOpen",
+        title: "Certificate in Logistics Management",
+      },
+      {
+        icon: "Award",
+        title: "Certified Logistics Professional",
+      },
+      {
+        icon: "Target",
+        title: "Executive Education & Leadership",
+      },
+    ],
+
+    journeyTitle: "Education &",
+    journeyAccent: "Training.",
+
+    journeyDescription:
+      "IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
+
+    programs: [
+      {
+        title: "Logo design services",
+        description:
+          "Industry-focused education supporting practical, career-focused learning in logistics and supply chain management.",
+        icon: "GraduationCap",
+        tone: "navy",
+        link: "https://gtmcanada.com/logo-design/",
+      },
+      {
+        title: "Web development services",
+        description:
+          "Professional education supporting foundational and practical logistics capabilities.",
+        icon: "BookOpen",
+        tone: "gold",
+        link: "https://gtmcanada.com/web-development-services/",
+      },
+      {
+        title: "Creative design services",
+        description:
+          "A professional designation pathway supporting logistics capability and career development.",
+        icon: "Award",
+        tone: "teal",
+        link: "https://gtmcanada.com/creative-design-services/",
+      },
+      {
+        title: "Digital marketing services",
+        description:
+          "Professional development supporting consulting and management capability.",
+        icon: "BriefcaseBusiness",
+        tone: "gold",
+        link: "https://gtmcanada.com/digital-marketing-services/",
+      },
+      {
+        title: "IT infrastructure services",
+        description:
+          "Leadership-focused education designed to strengthen professional and organizational capability.",
+        icon: "Target",
+        tone: "navy",
+        link: "https://gtmcanada.com/it-infrastructure-services/",
+      },
+      {
+        title: "Software development services",
+        description:
+          "Practical training and micro-credentials supporting workforce readiness and professional capability development.",
+        icon: "UsersRound",
+        tone: "teal",
+        link: "https://gtmcanada.com/software-development-services/",
+      },
+    ],
+
+    centresTitle: "Industry",
+    centresAccent: "Applications.",
+
+    centresDescription:
+      "Education and training capabilities supporting Northern workforce development, professional services, logistics and supply chain, and education and training organizations.",
+
+    centres: [
+      {
+        title: "Northern Workforce Development",
+        icon: "UsersRound",
+      },
+      {
+        title: "Education & Training",
+        icon: "GraduationCap",
+      },
+      {
+        title: "Professional Services",
+        icon: "BriefcaseBusiness",
+      },
+      {
+        title: "Logistics & Supply Chain",
+        icon: "Route",
+      },
+      {
+        title: "Professional Development",
+        icon: "Award",
+      },
+      {
+        title: "Leadership Development",
+        icon: "Target",
+      },
+      {
+        title: "Corporate Training",
+        icon: "BookOpen",
+      },
+    ],
+
+    impactTitle: "Value to",
+    impactAccent: "Clients.",
+
+    impactDescription:
+      "Practical, career-focused learning that strengthens professional capability, leadership development and workforce readiness.",
+
+    benefits: [
+      {
+        icon: "GraduationCap",
+        title: "Practical, Career-Focused Learning",
+        text:
+          "Education and training designed around practical workforce and career needs.",
+        image: "/education/benefit-grow.jpg",
+      },
+      {
+        icon: "Award",
+        title: "Professional Capability Development",
+        text:
+          "Professional designation pathways and learning that strengthen individual and organizational capability.",
+        image: "/education/achieve.jpg",
+      },
+      {
+        icon: "Target",
+        title: "Leadership Development",
+        text:
+          "Education and development opportunities that support stronger leadership capability.",
+        image: "/education/benefit-lead.jpg",
+      },
+      {
+        icon: "UsersRound",
+        title: "Workforce Readiness",
+        text:
+          "Training and professional development supporting workforce readiness across Northern communities.",
+        image: "/education/benefit-people.jpg",
+      },
+      {
+        icon: "BriefcaseBusiness",
+        title: "Industry Applications",
+        text:
+          "Programs supporting Northern workforce development, education, professional services, and logistics and supply chain.",
+        image: "/education/advance.jpg",
+      },
+    ],
+
+    industryApplications: [
+      "Northern workforce development",
+      "Education and training",
+      "Professional services",
+      "Logistics and supply chain",
+    ],
+
+    approach: [
+      "Define the business or project objective.",
+      "Assess current-state conditions, risks and opportunities.",
+      "Develop a practical work plan and priorities.",
+      "Support implementation with clear roles, timelines and reporting.",
+      "Transfer knowledge and help establish sustainable internal capability.",
+    ],
+
+    cta: [
+      "Schedule a Consultation",
+      "Contact Our Team",
+    ],
   },
-
-  {
-    title: "Web development services",
-    description:
-      "Professional education supporting foundational and practical logistics capabilities.",
-    icon: "BookOpen",
-    tone: "gold",
-    link: "https://gtmcanada.com/web-development-services/",
-  },
-
-  {
-    title: "Creative design services",
-    description:
-      "A professional designation pathway supporting logistics capability and career development.",
-    icon: "Award",
-    tone: "teal",
-    link: "https://gtmcanada.com/creative-design-services/",
-  },
-
-  {
-    title: "Digital marketing services",
-    description:
-      "Professional development supporting consulting and management capability.",
-    icon: "BriefcaseBusiness",
-    tone: "gold",
-    link: "https://gtmcanada.com/digital-marketing-services/",
-  },
-
-  {
-    title: "IT infrastructure services",
-    description:
-      "Leadership-focused education designed to strengthen professional and organizational capability.",
-    icon: "Target",
-    tone: "navy",
-    link: "https://gtmcanada.com/it-infrastructure-services/",
-  },
-
-  {
-    title: "Software development services",
-    description:
-      "Practical training and micro-credentials supporting workforce readiness and professional capability development.",
-    icon: "UsersRound",
-    tone: "teal",
-    link: "https://gtmcanada.com/software-development-services/",
-  },
-],
-
-  centresTitle: "Industry",
-  centresAccent: "Applications.",
-
-  centresDescription:
-    "Education and training capabilities supporting Northern workforce development, professional services, logistics and supply chain, and education and training organizations.",
-
-  centres: [
-    {
-      title: "Northern Workforce Development",
-      icon: "UsersRound",
-    },
-    {
-      title: "Education & Training",
-      icon: "GraduationCap",
-    },
-    {
-      title: "Professional Services",
-      icon: "BriefcaseBusiness",
-    },
-    {
-      title: "Logistics & Supply Chain",
-      icon: "Route",
-    },
-    {
-      title: "Professional Development",
-      icon: "Award",
-    },
-    {
-      title: "Leadership Development",
-      icon: "Target",
-    },
-    {
-      title: "Corporate Training",
-      icon: "BookOpen",
-    },
-  ],
-
-  impactTitle: "Value to",
-  impactAccent: "Clients.",
-
-  impactDescription:
-    "Practical, career-focused learning that strengthens professional capability, leadership development and workforce readiness.",
-
-  benefits: [
-    {
-      icon: "GraduationCap",
-      title: "Practical, Career-Focused Learning",
-      text:
-        "Education and training designed around practical workforce and career needs.",
-      image: "/education/benefit-grow.jpg",
-    },
-    {
-      icon: "Award",
-      title: "Professional Capability Development",
-      text:
-        "Professional designation pathways and learning that strengthen individual and organizational capability.",
-      image: "/education/achieve.jpg",
-    },
-    {
-      icon: "Target",
-      title: "Leadership Development",
-      text:
-        "Education and development opportunities that support stronger leadership capability.",
-      image: "/education/benefit-lead.jpg",
-    },
-    {
-      icon: "UsersRound",
-      title: "Workforce Readiness",
-      text:
-        "Training and professional development supporting workforce readiness across Northern communities.",
-      image: "/education/benefit-people.jpg",
-    },
-    {
-      icon: "BriefcaseBusiness",
-      title: "Industry Applications",
-      text:
-        "Programs supporting Northern workforce development, education, professional services, and logistics and supply chain.",
-      image: "/education/advance.jpg",
-    },
-  ],
-
-  industryApplications: [
-    "Northern workforce development",
-    "Education and training",
-    "Professional services",
-    "Logistics and supply chain",
-  ],
-
-  approach: [
-    "Define the business or project objective.",
-    "Assess current-state conditions, risks and opportunities.",
-    "Develop a practical work plan and priorities.",
-    "Support implementation with clear roles, timelines and reporting.",
-    "Transfer knowledge and help establish sustainable internal capability.",
-  ],
-
-  cta: [
-    "Schedule a Consultation",
-    "Contact Our Team",
-  ],
-},
 
   engineeringTechnical: {
     slug: "engineering-technical",
@@ -214,17 +209,17 @@ programs: [
     description:
       "Engineering decisions need to be practical, compliant and aligned with project objectives. IBS supports clients through technical planning, feasibility analysis, project monitoring and risk management—helping decision-makers move from concept to implementation with greater clarity.",
 
-     image: "/heroImg/Engineering & Technical/hero.jpg",
+    image: "/heroImg/Engineering & Technical/hero.jpg",
 
-     programImg: "/programImage/program-lower.jpg",
+    programImg: "/programImage/program-lower.jpg",
 
-     journeyImages: [
-    "/journeyImg/learn.jpg",
-    "/journeyImg/grow.jpg",
-    "/journeyImg/lead.jpg",
-    "/journeyImg/advance.jpg",
-    "/journeyImg/achieve.jpg",
-  ],
+    journeyImages: [
+      "/journeyImg/learn.jpg",
+      "/journeyImg/grow.jpg",
+      "/journeyImg/lead.jpg",
+      "/journeyImg/advance.jpg",
+      "/journeyImg/achieve.jpg",
+    ],
 
     heroIcon: "Settings2",
 
@@ -260,6 +255,7 @@ programs: [
           "Technical planning and feasibility analysis to support informed project decisions.",
         icon: "Settings2",
         tone: "navy",
+        link: "https://gtmcanada.com/technical-planning-feasibility-analysis/",
       },
       {
         title: "Project Monitoring & Evaluation",
@@ -267,6 +263,7 @@ programs: [
           "Project monitoring and evaluation to strengthen project control and delivery.",
         icon: "Workflow",
         tone: "gold",
+        link: "https://gtmcanada.com/project-monitoring-evaluation/",
       },
       {
         title: "Standards & Regulatory Compliance",
@@ -274,6 +271,7 @@ programs: [
           "Support for industry-specific standards and regulatory compliance.",
         icon: "ShieldCheck",
         tone: "teal",
+        link: "https://gtmcanada.com/standards-regulatory-compliance/",
       },
       {
         title: "Technical Coordination",
@@ -281,6 +279,7 @@ programs: [
           "Technical coordination with engineering specialists to support project integrity.",
         icon: "UsersRound",
         tone: "gold",
+        link: "https://gtmcanada.com/technical-coordination/",
       },
       {
         title: "Risk Identification & Mitigation",
@@ -288,6 +287,7 @@ programs: [
           "Identification and mitigation of technical and delivery risks.",
         icon: "Target",
         tone: "navy",
+        link: "https://gtmcanada.com/risk-identification-mitigation/",
       },
       {
         title: "Implementation Support",
@@ -295,6 +295,7 @@ programs: [
           "Practical technical support as projects move from planning into implementation.",
         icon: "ClipboardCheck",
         tone: "teal",
+        link: "https://gtmcanada.com/implementation-support/",
       },
     ],
 
@@ -400,7 +401,7 @@ programs: [
     ],
   },
 
-    infrastructure: {
+  infrastructure: {
     slug: "infrastructure",
     label: "Infrastructure & Project Delivery",
     title: "Infrastructure",
@@ -411,14 +412,16 @@ programs: [
 
     image: "/heroImg/Infrastructure/hero.jpg",
 
-        programImg: "/programImage/program-lower.jpg",
+    programImg: "/programImage/program-lower.jpg",
+
     journeyImages: [
-    "/journeyImg/learn.jpg",
-    "/journeyImg/grow.jpg",
-    "/journeyImg/lead.jpg",
-    "/journeyImg/advance.jpg",
-    "/journeyImg/achieve.jpg",
-  ],
+      "/journeyImg/learn.jpg",
+      "/journeyImg/grow.jpg",
+      "/journeyImg/lead.jpg",
+      "/journeyImg/advance.jpg",
+      "/journeyImg/achieve.jpg",
+    ],
+
     heroIcon: "Building2",
 
     features: [
@@ -453,6 +456,7 @@ programs: [
           "Comprehensive project planning and execution support.",
         icon: "ClipboardCheck",
         tone: "navy",
+        link: "https://gtmcanada.com/project-planning-execution/",
       },
       {
         title: "Risk Management & Mitigation",
@@ -460,6 +464,7 @@ programs: [
           "Risk management and mitigation throughout project delivery.",
         icon: "ShieldCheck",
         tone: "gold",
+        link: "https://gtmcanada.com/risk-management-mitigation/",
       },
       {
         title: "Budgeting & Resource Allocation",
@@ -467,6 +472,7 @@ programs: [
           "Budget and resource control to support disciplined project delivery.",
         icon: "Coins",
         tone: "teal",
+        link: "https://gtmcanada.com/budgeting-resource-allocation/",
       },
       {
         title: "Stakeholder Communication & Engagement",
@@ -474,6 +480,7 @@ programs: [
           "Stakeholder communication and engagement across project activities.",
         icon: "UsersRound",
         tone: "gold",
+        link: "https://gtmcanada.com/stakeholder-communication-engagement/",
       },
       {
         title: "Quality Control & Assurance",
@@ -481,6 +488,7 @@ programs: [
           "Quality control and assurance measures throughout project delivery.",
         icon: "BadgeCheck",
         tone: "navy",
+        link: "https://gtmcanada.com/quality-control-assurance/",
       },
       {
         title: "Technical & Delivery Coordination",
@@ -488,6 +496,7 @@ programs: [
           "Coordination with technical and delivery partners.",
         icon: "HardHat",
         tone: "teal",
+        link: "https://gtmcanada.com/technical-delivery-coordination/",
       },
     ],
 
@@ -538,35 +547,35 @@ programs: [
       {
         icon: "ClipboardCheck",
         title: "Clearer Project Governance",
-         image: "/infrastructure/infra (1).jpg",
+        image: "/infrastructure/infra (1).jpg",
         text:
           "Disciplined planning and execution create clearer accountability and project governance.",
       },
       {
         icon: "Coins",
         title: "Budget & Resource Control",
-         image: "/infrastructure/infra (2).jpg",
+        image: "/infrastructure/infra (2).jpg",
         text:
           "Budgeting and resource allocation support stronger control over project resources.",
       },
       {
         icon: "UsersRound",
         title: "Stakeholder Coordination",
-         image: "/infrastructure/infra (3).jpg",
+        image: "/infrastructure/infra (3).jpg",
         text:
           "Structured communication and engagement improve stakeholder coordination.",
       },
       {
         icon: "ShieldCheck",
         title: "Risk Management",
-         image: "/infrastructure/infra (4).jpg",
+        image: "/infrastructure/infra (4).jpg",
         text:
           "Risk identification and mitigation support consistent project control.",
       },
       {
         icon: "BadgeCheck",
         title: "Quality Assurance",
-         image: "/infrastructure/infra (5).jpg",
+        image: "/infrastructure/infra (5).jpg",
         text:
           "Quality control and assurance help support consistent delivery standards.",
       },
@@ -602,15 +611,16 @@ programs: [
       "Technology should make the organization easier to run, not harder. IBS provides practical technology, IT infrastructure, digital and creative services tailored to organizational needs.",
 
     image: "/heroImg/Technology & Innovation/hero.jpg",
-       programImg: "/programImage/program-lower.jpg",
 
-   journeyImages: [
-    "/journeyImg/learn.jpg",
-    "/journeyImg/grow.jpg",
-    "/journeyImg/lead.jpg",
-    "/journeyImg/advance.jpg",
-    "/journeyImg/achieve.jpg",
-  ],
+    programImg: "/programImage/program-lower.jpg",
+
+    journeyImages: [
+      "/journeyImg/learn.jpg",
+      "/journeyImg/grow.jpg",
+      "/journeyImg/lead.jpg",
+      "/journeyImg/advance.jpg",
+      "/journeyImg/achieve.jpg",
+    ],
 
     heroIcon: "Cpu",
 
@@ -646,6 +656,7 @@ programs: [
           "Practical planning and management of IT infrastructure aligned with organizational needs.",
         icon: "Network",
         tone: "navy",
+        link: "https://gtmcanada.com/it-infrastructure-planning-management/",
       },
       {
         title: "Network Security & Firewall Support",
@@ -653,6 +664,7 @@ programs: [
           "Network security and firewall support to strengthen technology foundations.",
         icon: "ShieldCheck",
         tone: "teal",
+        link: "https://gtmcanada.com/network-security-firewall-support/",
       },
       {
         title: "IT Operations & Vendor Management",
@@ -660,6 +672,7 @@ programs: [
           "Support for IT operations and vendor management.",
         icon: "Settings2",
         tone: "navy",
+        link: "https://gtmcanada.com/it-operations-vendor-management/",
       },
       {
         title: "Website Development",
@@ -667,6 +680,7 @@ programs: [
           "Website development supporting a reliable and effective digital presence.",
         icon: "Globe2",
         tone: "teal",
+        link: "https://gtmcanada.com/web-development-services/",
       },
       {
         title: "Software & Application Development",
@@ -674,6 +688,7 @@ programs: [
           "Software and application development tailored to organizational requirements.",
         icon: "Cpu",
         tone: "navy",
+        link: "https://gtmcanada.com/software-development-services/",
       },
       {
         title: "Logo, Graphic & Creative Services",
@@ -681,6 +696,7 @@ programs: [
           "Logo, graphic and creative services designed to strengthen organizational communication and brand presence.",
         icon: "Sparkles",
         tone: "teal",
+        link: "https://gtmcanada.com/creative-design-services/",
       },
       {
         title: "Digital Marketing",
@@ -688,6 +704,7 @@ programs: [
           "Digital marketing services supporting engagement and digital reach.",
         icon: "BarChart3",
         tone: "gold",
+        link: "https://gtmcanada.com/digital-marketing-services/",
       },
     ],
 
@@ -793,7 +810,7 @@ programs: [
     ],
   },
 
-    socialEconomic: {
+  socialEconomic: {
     slug: "social-economic",
     label: "Social & Economic Development",
     title: "Social & Economic",
@@ -803,15 +820,16 @@ programs: [
       "Build stronger communities through informed planning, capacity and sustainable development. IBS supports organizations and communities on social, economic and environmental priorities, combining research, planning and implementation support.",
 
     image: "/heroImg/Social & Economic/hero.jpg",
-       programImg: "/programImage/program-lower.jpg",
 
-   journeyImages: [
-    "/journeyImg/learn.jpg",
-    "/journeyImg/grow.jpg",
-    "/journeyImg/lead.jpg",
-    "/journeyImg/advance.jpg",
-    "/journeyImg/achieve.jpg",
-  ],
+    programImg: "/programImage/program-lower.jpg",
+
+    journeyImages: [
+      "/journeyImg/learn.jpg",
+      "/journeyImg/grow.jpg",
+      "/journeyImg/lead.jpg",
+      "/journeyImg/advance.jpg",
+      "/journeyImg/achieve.jpg",
+    ],
 
     heroIcon: "HeartHandshake",
 
@@ -847,6 +865,7 @@ programs: [
           "Housing strategies designed to support community needs and development priorities.",
         icon: "Building2",
         tone: "navy",
+        link: "https://gtmcanada.com/housing-strategies/",
       },
       {
         title: "Capacity Building",
@@ -854,6 +873,7 @@ programs: [
           "Capacity building support to strengthen organizational and community capabilities.",
         icon: "UsersRound",
         tone: "teal",
+        link: "https://gtmcanada.com/capacity-building/",
       },
       {
         title: "Social Policy",
@@ -861,6 +881,7 @@ programs: [
           "Social policy support aligned with community-focused development priorities.",
         icon: "Scale",
         tone: "navy",
+        link: "https://gtmcanada.com/social-policy/",
       },
       {
         title: "Land Claims Negotiations Support",
@@ -868,6 +889,7 @@ programs: [
           "Structured support for land claims negotiations and related priorities.",
         icon: "Handshake",
         tone: "teal",
+        link: "https://gtmcanada.com/land-claims-negotiations-support/",
       },
       {
         title: "Environmental Assessment",
@@ -875,6 +897,7 @@ programs: [
           "Environmental assessments supporting informed development decisions.",
         icon: "Globe2",
         tone: "navy",
+        link: "https://gtmcanada.com/environmental-assessment/",
       },
       {
         title: "Sustainable Design Solutions",
@@ -882,6 +905,7 @@ programs: [
           "Sustainable design approaches intended to support responsible development.",
         icon: "Leaf",
         tone: "gold",
+        link: "https://gtmcanada.com/sustainable-design-solutions/",
       },
       {
         title: "Sustainability Reporting & Watershed Management",
@@ -889,6 +913,7 @@ programs: [
           "Support for sustainability reporting and watershed management.",
         icon: "BarChart3",
         tone: "teal",
+        link: "https://gtmcanada.com/sustainability-reporting-watershed-management/",
       },
       {
         title: "Environmental Regulatory Compliance",
@@ -896,6 +921,7 @@ programs: [
           "Support for environmental regulatory requirements throughout the project lifecycle.",
         icon: "ShieldCheck",
         tone: "navy",
+        link: "https://gtmcanada.com/environmental-regulatory-compliance/",
       },
       {
         title: "Environmental Risk Mitigation",
@@ -903,6 +929,7 @@ programs: [
           "Environmental risk identification and mitigation support.",
         icon: "Target",
         tone: "gold",
+        link: "https://gtmcanada.com/environmental-risk-mitigation/",
       },
     ],
 
@@ -953,35 +980,35 @@ programs: [
       {
         icon: "Building2",
         title: "Stronger Planning & Capacity",
-         image: "/social/social (1).jpg",
+        image: "/social/social (1).jpg",
         text:
           "Planning and capacity-building support designed around community and organizational priorities.",
       },
       {
         icon: "Target",
         title: "Better-Informed Development Decisions",
-         image: "/social/social (2).jpg",
+        image: "/social/social (2).jpg",
         text:
           "Research, planning and assessment support informed social, economic and environmental decisions.",
       },
       {
         icon: "Leaf",
         title: "Improved Environmental Stewardship",
-         image: "/social/social (3).jpg",
+        image: "/social/social (3).jpg",
         text:
           "Sustainable design, assessment and environmental management support responsible development.",
       },
       {
         icon: "ShieldCheck",
         title: "Regulatory Readiness",
-         image: "/social/social (4).jpg",
+        image: "/social/social (4).jpg",
         text:
           "Support for environmental regulatory requirements and project compliance.",
       },
       {
         icon: "Handshake",
         title: "Community-Focused Development",
-         image: "/social/social (5).jpg",
+        image: "/social/social (5).jpg",
         text:
           "Social and economic support focused on long-term community outcomes and collaboration.",
       },
@@ -1017,16 +1044,17 @@ programs: [
     description:
       "Better financial decisions start with reliable information, disciplined controls and forward visibility. IBS helps organizations strengthen financial management through budgeting, forecasting, accounting, controls, reporting and funding support.",
 
-   image: "/heroImg/Financial Management/hero.jpg",
-       programImg: "/programImage/program-lower.jpg",
+    image: "/heroImg/Financial Management/hero.jpg",
 
-  journeyImages: [
-    "/journeyImg/learn.jpg",
-    "/journeyImg/grow.jpg",
-    "/journeyImg/lead.jpg",
-    "/journeyImg/advance.jpg",
-    "/journeyImg/achieve.jpg",
-  ],
+    programImg: "/programImage/program-lower.jpg",
+
+    journeyImages: [
+      "/journeyImg/learn.jpg",
+      "/journeyImg/grow.jpg",
+      "/journeyImg/lead.jpg",
+      "/journeyImg/advance.jpg",
+      "/journeyImg/achieve.jpg",
+    ],
 
     heroIcon: "Coins",
 
@@ -1062,6 +1090,7 @@ programs: [
           "Budget development and management to support disciplined financial planning.",
         icon: "BarChart3",
         tone: "navy",
+        link: "https://gtmcanada.com/budget-development-management/",
       },
       {
         title: "Variance Reporting",
@@ -1069,6 +1098,7 @@ programs: [
           "Variance reporting to provide clearer financial visibility and decision support.",
         icon: "Workflow",
         tone: "teal",
+        link: "https://gtmcanada.com/variance-reporting/",
       },
       {
         title: "Cash-Flow Projections",
@@ -1076,6 +1106,7 @@ programs: [
           "Cash-flow projections supporting forward financial visibility.",
         icon: "Coins",
         tone: "navy",
+        link: "https://gtmcanada.com/cash-flow-projections/",
       },
       {
         title: "Financial Forecasting",
@@ -1083,6 +1114,7 @@ programs: [
           "Financial forecasting to support informed organizational decisions.",
         icon: "Target",
         tone: "gold",
+        link: "https://gtmcanada.com/financial-forecasting/",
       },
       {
         title: "Internal Control Development",
@@ -1090,6 +1122,7 @@ programs: [
           "Development of internal controls to strengthen financial accountability.",
         icon: "ShieldCheck",
         tone: "teal",
+        link: "https://gtmcanada.com/internal-control-development/",
       },
       {
         title: "Internal & Forensic Audit Support",
@@ -1097,6 +1130,7 @@ programs: [
           "Internal and forensic audit support.",
         icon: "ShieldCheck",
         tone: "navy",
+        link: "https://gtmcanada.com/internal-forensic-audit-support/",
       },
       {
         title: "Board, Council & Executive Reporting",
@@ -1104,6 +1138,7 @@ programs: [
           "Financial reporting support for boards, councils and executives.",
         icon: "BookOpen",
         tone: "gold",
+        link: "https://gtmcanada.com/board-council-executive-reporting/",
       },
       {
         title: "Accounting & Bookkeeping",
@@ -1111,6 +1146,7 @@ programs: [
           "Accounting and bookkeeping support tailored to organizational requirements.",
         icon: "BookOpen",
         tone: "teal",
+        link: "https://gtmcanada.com/accounting-bookkeeping/",
       },
       {
         title: "Financial Policies & Procedures",
@@ -1118,6 +1154,7 @@ programs: [
           "Development of financial policies and procedures.",
         icon: "Scale",
         tone: "navy",
+        link: "https://gtmcanada.com/financial-policies-procedures/",
       },
       {
         title: "Funding Research & Proposal Development",
@@ -1125,6 +1162,7 @@ programs: [
           "Funding research and proposal development to improve funding readiness.",
         icon: "Handshake",
         tone: "gold",
+        link: "https://gtmcanada.com/funding-research-proposal-development/",
       },
     ],
 
@@ -1229,7 +1267,8 @@ programs: [
       "Contact Our Team",
     ],
   },
-    governance: {
+
+  governance: {
     slug: "governance",
     label: "Corporate Governance",
     title: "Corporate",
@@ -1238,15 +1277,17 @@ programs: [
     description:
       "Effective governance creates clarity, accountability and confidence. IBS works with boards, councils and leadership teams to strengthen governance frameworks, organizational structures, policies and performance systems.",
 
-   image: "/heroImg/Governance/hero.jpg",
-       programImg: "/programImage/program-lower.jpg",
-journeyImages: [
-    "/journeyImg/learn.jpg",
-    "/journeyImg/grow.jpg",
-    "/journeyImg/lead.jpg",
-    "/journeyImg/advance.jpg",
-    "/journeyImg/achieve.jpg",
-  ],
+    image: "/heroImg/Governance/hero.jpg",
+
+    programImg: "/programImage/program-lower.jpg",
+
+    journeyImages: [
+      "/journeyImg/learn.jpg",
+      "/journeyImg/grow.jpg",
+      "/journeyImg/lead.jpg",
+      "/journeyImg/advance.jpg",
+      "/journeyImg/achieve.jpg",
+    ],
 
     heroIcon: "Scale",
 
@@ -1282,6 +1323,7 @@ journeyImages: [
           "Governance and organizational structure support to strengthen accountability and effective decision-making.",
         icon: "Network",
         tone: "navy",
+        link: "https://gtmcanada.com/governance-organizational-structure/",
       },
       {
         title: "Board & Council Orientation and Training",
@@ -1289,6 +1331,7 @@ journeyImages: [
           "Orientation and training designed to strengthen board and council governance capabilities.",
         icon: "UsersRound",
         tone: "gold",
+        link: "https://gtmcanada.com/board-council-orientation-training/",
       },
       {
         title: "Strategic Planning",
@@ -1296,6 +1339,7 @@ journeyImages: [
           "Strategic planning aligned with organizational objectives and long-term growth.",
         icon: "Target",
         tone: "teal",
+        link: "https://gtmcanada.com/strategic-planning/",
       },
       {
         title: "Performance Measurement & Management",
@@ -1303,6 +1347,7 @@ journeyImages: [
           "Performance measurement and management to improve organizational effectiveness.",
         icon: "BarChart3",
         tone: "gold",
+        link: "https://gtmcanada.com/performance-measurement-management/",
       },
       {
         title: "Policy & Procedure Development",
@@ -1310,6 +1355,7 @@ journeyImages: [
           "Policies and procedures that provide clear organizational direction and operational consistency.",
         icon: "BookOpen",
         tone: "navy",
+        link: "https://gtmcanada.com/policy-procedure-development/",
       },
       {
         title: "Organizational Management",
@@ -1317,6 +1363,7 @@ journeyImages: [
           "Organizational management support focused on planning, resources and strategic objectives.",
         icon: "Settings2",
         tone: "teal",
+        link: "https://gtmcanada.com/organizational-management/",
       },
       {
         title: "Human Resources Management",
@@ -1324,6 +1371,7 @@ journeyImages: [
           "Support for organizational human resource management and staffing requirements.",
         icon: "UsersRound",
         tone: "gold",
+        link: "https://gtmcanada.com/human-resources-management/",
       },
       {
         title: "Program Development & Review",
@@ -1331,6 +1379,7 @@ journeyImages: [
           "Program development and review supporting organizational effectiveness.",
         icon: "Workflow",
         tone: "navy",
+        link: "https://gtmcanada.com/program-development-review/",
       },
       {
         title: "Business Plans & Feasibility Studies",
@@ -1338,6 +1387,7 @@ journeyImages: [
           "Business planning and feasibility support for informed organizational decisions.",
         icon: "BarChart3",
         tone: "teal",
+        link: "https://gtmcanada.com/business-plans-feasibility-studies/",
       },
     ],
 
