@@ -12,6 +12,10 @@ import {
 
 import { iconMap } from "./iconMap";
 
+
+import Link from "next/link";
+
+
 export default function ServicePrograms({
   data,
   reduceMotion = false,
@@ -951,295 +955,270 @@ export default function ServicePrograms({
                 "
               />
 
-              <div className="space-y-5 sm:space-y-6">
+            <div className="space-y-5 sm:space-y-6">
+  {programs.map((program, index) => {
+    const Icon =
+      iconMap[program.icon] ||
+      GraduationCap;
 
-                {programs.map(
-                  (program, index) => {
-                    const Icon =
-                      iconMap[
-                        program.icon
-                      ] ||
-                      GraduationCap;
+    const isGold =
+      program.tone === "gold";
 
-                    const isGold =
-                      program.tone === "gold";
+    const isTeal =
+      program.tone === "teal";
 
-                    const isTeal =
-                      program.tone === "teal";
+    const accent =
+      isGold
+        ? "#C6A15B"
+        : isTeal
+        ? "#087F8C"
+        : "#0B1F3A";
 
-                    const accent =
-                      isGold
-                        ? "#C6A15B"
-                        : isTeal
-                        ? "#087F8C"
-                        : "#0B1F3A";
-
-                    return (
-                      <motion.div
-                        key={program.title}
-                        initial={
-                          reduceMotion
-                            ? {}
-                            : {
-                                opacity: 0,
-                                x: 30,
-                              }
-                        }
-                        whileInView={
-                          reduceMotion
-                            ? {}
-                            : {
-                                opacity: 1,
-                                x: 0,
-                              }
-                        }
-                        viewport={{
-                          once: true,
-                          amount: 0.15,
-                        }}
-                        transition={{
-                          duration: 0.65,
-                          delay:
-                            index * 0.1,
-                        }}
-                        className="relative"
-                      >
-
-                        {/* Timeline icon */}
-
-                        <motion.div
-                          whileHover={
-                            reduceMotion
-                              ? {}
-                              : {
-                                  scale: 1.12,
-                                  rotate: 7,
-                                }
-                          }
-                          className="absolute left-0 top-7 z-20 hidden h-[52px] w-[52px] items-center justify-center md:flex"
-                        >
-                          <motion.div
-                            animate={
-                              reduceMotion
-                                ? {}
-                                : {
-                                    rotate: 360,
-                                  }
-                            }
-                            transition={{
-                              duration:
-                                10 +
-                                index * 2,
-                              repeat:
-                                Infinity,
-                              ease: "linear",
-                            }}
-                            className="absolute inset-0 rounded-full border border-dashed border-[#0B1F3A]/25"
-                          />
-
-                          <div
-                            className="relative flex h-[38px] w-[38px] items-center justify-center rounded-full text-white shadow-lg"
-                            style={{
-                              backgroundColor:
-                                accent,
-                            }}
-                          >
-                            <Icon
-                              size={19}
-                              strokeWidth={0.7}
-                            />
-                          </div>
-                        </motion.div>
-
-                        {/* Program card */}
-
-                        <motion.div
-                          whileHover={
-                            reduceMotion
-                              ? {}
-                              : {
-                                  x: 7,
-                                  y: -2,
-                                }
-                          }
-                          className="
-                            group
-                            relative
-                            ml-0
-                            overflow-hidden
-                            border
-                            border-[#DCE2E7]
-                            bg-white
-                            p-6
-                            shadow-[0_12px_35px_rgba(11,31,58,0.05)]
-                            transition-all
-                            duration-500
-                            hover:border-[#087F8C]/30
-                            hover:shadow-[0_20px_55px_rgba(11,31,58,0.1)]
-                            md:ml-[72px]
-                            md:p-8
-                          "
-                        >
-
-                          <div
-                            className="
-                              absolute
-                              left-0
-                              top-0
-                              h-[3px]
-                              w-0
-                              bg-gradient-to-r
-                              from-[#087F8C]
-                              via-[#C6A15B]
-                              to-transparent
-                              transition-all
-                              duration-500
-                              group-hover:w-full
-                            "
-                          />
-
-                          <div className="relative z-10 flex gap-5">
-
-                            {/* Mobile icon */}
-
-                            <div
-                              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white md:hidden"
-                              style={{
-                                backgroundColor:
-                                  accent,
-                              }}
-                            >
-                              <Icon
-                                size={20}
-                                strokeWidth={0.7}
-                              />
-                            </div>
-
-                            <div className="min-w-0 flex-1">
-
-                              <div className="mb-4 flex items-center gap-3">
-                                <span
-                                  className="h-2 w-2 rounded-full"
-                                  style={{
-                                    backgroundColor:
-                                      accent,
-                                  }}
-                                />
-
-                                <span className="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#202832]/40">
-                                  Professional
-                                  pathway
-                                </span>
-                              </div>
-
-                              <h3 className="text-[22px] font-medium leading-[1.1] tracking-[-0.04em] text-[#0B1F3A] transition-colors duration-300 group-hover:text-[#087F8C] sm:text-[28px]">
-                                {program.title}
-                              </h3>
-
-                              <p className="mt-4 max-w-[680px] text-[12px] leading-[1.8] text-[#202832]/60 sm:text-[14px]">
-                                {program.description}
-                              </p>
-
-                              <motion.div
-                                whileHover={
-                                  reduceMotion
-                                    ? {}
-                                    : {
-                                        x: 5,
-                                      }
-                                }
-                                className="mt-5 inline-flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.18em]"
-                                style={{
-                                  color: accent,
-                                }}
-                              >
-                                Explore program
-
-                                <span
-                                  className="flex h-7 w-7 items-center justify-center rounded-full border"
-                                  style={{
-                                    borderColor:
-                                      accent,
-                                  }}
-                                >
-                                  <ArrowUpRight
-                                    size={13}
-                                    strokeWidth={
-                                      0.8
-                                    }
-                                  />
-                                </span>
-                              </motion.div>
-                            </div>
-
-                            {/* Desktop icon */}
-
-                            <motion.div
-                              animate={
-                                reduceMotion
-                                  ? {}
-                                  : {
-                                      y: [
-                                        0,
-                                        -5,
-                                        0,
-                                      ],
-                                    }
-                              }
-                              transition={{
-                                duration:
-                                  3.5 +
-                                  index * 0.4,
-                                repeat:
-                                  Infinity,
-                                ease: "easeInOut",
-                              }}
-                              className="relative hidden h-20 w-20 shrink-0 items-center justify-center md:flex"
-                            >
-                              <motion.div
-                                animate={
-                                  reduceMotion
-                                    ? {}
-                                    : {
-                                        rotate:
-                                          -360,
-                                      }
-                                }
-                                transition={{
-                                  duration:
-                                    12 +
-                                    index * 2,
-                                  repeat:
-                                    Infinity,
-                                  ease: "linear",
-                                }}
-                                className="absolute inset-0 rounded-full border border-dashed border-[#087F8C]/25"
-                              />
-
-                              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#F6F4EF] text-[#C6A15B] transition-all duration-500 group-hover:bg-[#0B1F3A]">
-                                <Icon
-                                  size={27}
-                                  strokeWidth={0.55}
-                                />
-                              </div>
-                            </motion.div>
-
-                          </div>
-
-                          <div
-                            className="absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500 group-hover:w-24"
-                            style={{
-                              backgroundColor:
-                                accent,
-                            }}
-                          />
-                        </motion.div>
-                      </motion.div>
-                    );
+    return (
+      <motion.div
+        key={program.title}
+        initial={
+          reduceMotion
+            ? {}
+            : {
+                opacity: 0,
+                x: 30,
+              }
+        }
+        whileInView={
+          reduceMotion
+            ? {}
+            : {
+                opacity: 1,
+                x: 0,
+              }
+        }
+        viewport={{
+          once: true,
+          amount: 0.15,
+        }}
+        transition={{
+          duration: 0.65,
+          delay: index * 0.1,
+        }}
+        className="relative"
+      >
+        {/* Timeline icon */}
+        <motion.div
+          whileHover={
+            reduceMotion
+              ? {}
+              : {
+                  scale: 1.12,
+                  rotate: 7,
+                }
+          }
+          className="absolute left-0 top-7 z-20 hidden h-[52px] w-[52px] items-center justify-center md:flex"
+        >
+          <motion.div
+            animate={
+              reduceMotion
+                ? {}
+                : {
+                    rotate: 360,
                   }
-                )}
+            }
+            transition={{
+              duration: 10 + index * 2,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute inset-0 rounded-full border border-dashed border-[#0B1F3A]/25"
+          />
 
+          <div
+            className="relative flex h-[38px] w-[38px] items-center justify-center rounded-full text-white shadow-lg"
+            style={{
+              backgroundColor: accent,
+            }}
+          >
+            <Icon
+              size={19}
+              strokeWidth={0.7}
+            />
+          </div>
+        </motion.div>
+
+        {/* Program card */}
+        <motion.div
+          whileHover={
+            reduceMotion
+              ? {}
+              : {
+                  x: 7,
+                  y: -2,
+                }
+          }
+          className="
+            group
+            relative
+            ml-0
+            overflow-hidden
+            border
+            border-[#DCE2E7]
+            bg-white
+            p-6
+            shadow-[0_12px_35px_rgba(11,31,58,0.05)]
+            transition-all
+            duration-500
+            hover:border-[#087F8C]/30
+            hover:shadow-[0_20px_55px_rgba(11,31,58,0.1)]
+            md:ml-[72px]
+            md:p-8
+          "
+        >
+          {/* Top gradient line */}
+          <div
+            className="
+              absolute
+              left-0
+              top-0
+              h-[3px]
+              w-0
+              bg-gradient-to-r
+              from-[#087F8C]
+              via-[#C6A15B]
+              to-transparent
+              transition-all
+              duration-500
+              group-hover:w-full
+            "
+          />
+
+          <div className="relative z-10 flex gap-5">
+
+            {/* Mobile icon */}
+            <div
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white md:hidden"
+              style={{
+                backgroundColor: accent,
+              }}
+            >
+              <Icon
+                size={20}
+                strokeWidth={0.7}
+              />
+            </div>
+
+            <div className="min-w-0 flex-1">
+
+              {/* Category */}
+              <div className="mb-4 flex items-center gap-3">
+                <span
+                  className="h-2 w-2 rounded-full"
+                  style={{
+                    backgroundColor: accent,
+                  }}
+                />
+
+                <span className="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#202832]/40">
+                  Professional pathway
+                </span>
               </div>
+
+              {/* Title */}
+              <h3 className="text-[22px] font-medium leading-[1.1] tracking-[-0.04em] text-[#0B1F3A] transition-colors duration-300 group-hover:text-[#087F8C] sm:text-[28px]">
+                {program.title}
+              </h3>
+
+              {/* Description */}
+              <p className="mt-4 max-w-[680px] text-[12px] leading-[1.8] text-[#202832]/60 sm:text-[14px]">
+                {program.description}
+              </p>
+
+              {/* Explore Program Link */}
+              <Link
+                href={program.link}
+                className="inline-block"
+              >
+                <motion.div
+                  whileHover={
+                    reduceMotion
+                      ? {}
+                      : {
+                          x: 5,
+                        }
+                  }
+                  className="mt-5 inline-flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.18em]"
+                  style={{
+                    color: accent,
+                  }}
+                >
+                  Explore program
+
+                  <span
+                    className="flex h-7 w-7 items-center justify-center rounded-full border"
+                    style={{
+                      borderColor: accent,
+                    }}
+                  >
+                    <ArrowUpRight
+                      size={13}
+                      strokeWidth={0.8}
+                    />
+                  </span>
+                </motion.div>
+              </Link>
+            </div>
+
+            {/* Desktop icon */}
+            <motion.div
+              animate={
+                reduceMotion
+                  ? {}
+                  : {
+                      y: [0, -5, 0],
+                    }
+              }
+              transition={{
+                duration: 3.5 + index * 0.4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative hidden h-20 w-20 shrink-0 items-center justify-center md:flex"
+            >
+              <motion.div
+                animate={
+                  reduceMotion
+                    ? {}
+                    : {
+                        rotate: -360,
+                      }
+                }
+                transition={{
+                  duration: 12 + index * 2,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="absolute inset-0 rounded-full border border-dashed border-[#087F8C]/25"
+              />
+
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#F6F4EF] text-[#C6A15B] transition-all duration-500 group-hover:bg-[#0B1F3A]">
+                <Icon
+                  size={27}
+                  strokeWidth={0.55}
+                />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom accent */}
+          <div
+            className="absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500 group-hover:w-24"
+            style={{
+              backgroundColor: accent,
+            }}
+          />
+        </motion.div>
+      </motion.div>
+    );
+  })}
+</div>
             </div>
           </div>
         </div>

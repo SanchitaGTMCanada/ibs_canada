@@ -47,50 +47,61 @@ educationTraining: {
   journeyDescription:
     "IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
 
-  programs: [
-    {
-      title: "Diploma in Logistics Management",
-      description:
-        "Industry-focused education supporting practical, career-focused learning in logistics and supply chain management.",
-      icon: "GraduationCap",
-      tone: "navy",
-    },
-    {
-      title: "Certificate in Logistics Management",
-      description:
-        "Professional education supporting foundational and practical logistics capabilities.",
-      icon: "BookOpen",
-      tone: "gold",
-    },
-    {
-      title: "Certified Logistics Professional Pathway",
-      description:
-        "A professional designation pathway supporting logistics capability and career development.",
-      icon: "Award",
-      tone: "teal",
-    },
-    {
-      title: "Certified Management Consultant Program",
-      description:
-        "Professional development supporting consulting and management capability.",
-      icon: "BriefcaseBusiness",
-      tone: "gold",
-    },
-    {
-      title: "Executive Education & Leadership Development",
-      description:
-        "Leadership-focused education designed to strengthen professional and organizational capability.",
-      icon: "Target",
-      tone: "navy",
-    },
-    {
-      title: "Corporate Training & Micro-Credentials",
-      description:
-        "Practical training and micro-credentials supporting workforce readiness and professional capability development.",
-      icon: "UsersRound",
-      tone: "teal",
-    },
-  ],
+programs: [
+  {
+    title: "Logo design services",
+    description:
+      "Industry-focused education supporting practical, career-focused learning in logistics and supply chain management.",
+    icon: "GraduationCap",
+    tone: "navy",
+    link: "https://gtmcanada.com/logo-design/",
+  },
+
+  {
+    title: "Web development services",
+    description:
+      "Professional education supporting foundational and practical logistics capabilities.",
+    icon: "BookOpen",
+    tone: "gold",
+    link: "https://gtmcanada.com/web-development-services/",
+  },
+
+  {
+    title: "Creative design services",
+    description:
+      "A professional designation pathway supporting logistics capability and career development.",
+    icon: "Award",
+    tone: "teal",
+    link: "https://gtmcanada.com/creative-design-services/",
+  },
+
+  {
+    title: "Digital marketing services",
+    description:
+      "Professional development supporting consulting and management capability.",
+    icon: "BriefcaseBusiness",
+    tone: "gold",
+    link: "https://gtmcanada.com/digital-marketing-services/",
+  },
+
+  {
+    title: "IT infrastructure services",
+    description:
+      "Leadership-focused education designed to strengthen professional and organizational capability.",
+    icon: "Target",
+    tone: "navy",
+    link: "https://gtmcanada.com/it-infrastructure-services/",
+  },
+
+  {
+    title: "Software development services",
+    description:
+      "Practical training and micro-credentials supporting workforce readiness and professional capability development.",
+    icon: "UsersRound",
+    tone: "teal",
+    link: "https://gtmcanada.com/software-development-services/",
+  },
+],
 
   centresTitle: "Industry",
   centresAccent: "Applications.",
