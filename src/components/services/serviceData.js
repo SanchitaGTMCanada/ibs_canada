@@ -12,6 +12,11 @@ export const serviceData = {
 
     programImg: "/programImage/program-lower.jpg",
 
+    journeyLogo : "/logo/pinc.png",
+   
+journeyLogoLink: "https://pi-nc.org/",
+journeyLogoAlt: "pinc",
+
     journeyImages: [
       "/journeyImg/learn.jpg",
       "/journeyImg/grow.jpg",
@@ -216,6 +221,11 @@ export const serviceData = {
     programImg: "/programImage/program-lower.jpg",
 
     journeyLogo: "/logo/aurora-construction.png",
+
+     
+   
+journeyLogoLink: "https://auroraconstruction.ca/",
+journeyLogoAlt: "aurora-construction",
 
     journeyImages: [
       "/journeyImg/learn.jpg",

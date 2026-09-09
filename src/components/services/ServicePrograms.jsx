@@ -204,10 +204,10 @@ export default function ServicePrograms({
     className="shrink-0"
   >
     <a
-      href="https://auroraconstruction.ca/"
+      href={data?.journeyLogoLink || "#"}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Visit Aurora Construction"
+      aria-label={`Visit ${data?.journeyLogoAlt || "company website"}`}
       className="block"
     >
       <div
@@ -245,7 +245,7 @@ export default function ServicePrograms({
 
         <img
           src={data.journeyLogo}
-          alt="Aurora Construction"
+          alt={data?.journeyLogoAlt || "Company logo"}
           className="
             relative
             z-10
