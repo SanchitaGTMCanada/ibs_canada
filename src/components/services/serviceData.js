@@ -47,56 +47,58 @@ export const serviceData = {
     journeyDescription:
       "IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
 
-    programs: [
-      {
-        title: "Logo design services",
-        description:
-          "Industry-focused education supporting practical, career-focused learning in logistics and supply chain management.",
-        icon: "GraduationCap",
-        tone: "navy",
-        link: "https://gtmcanada.com/logo-design/",
-      },
-      {
-        title: "Web development services",
-        description:
-          "Professional education supporting foundational and practical logistics capabilities.",
-        icon: "BookOpen",
-        tone: "gold",
-        link: "https://gtmcanada.com/web-development-services/",
-      },
-      {
-        title: "Creative design services",
-        description:
-          "A professional designation pathway supporting logistics capability and career development.",
-        icon: "Award",
-        tone: "teal",
-        link: "https://gtmcanada.com/creative-design-services/",
-      },
-      {
-        title: "Digital marketing services",
-        description:
-          "Professional development supporting consulting and management capability.",
-        icon: "BriefcaseBusiness",
-        tone: "gold",
-        link: "https://gtmcanada.com/digital-marketing-services/",
-      },
-      {
-        title: "IT infrastructure services",
-        description:
-          "Leadership-focused education designed to strengthen professional and organizational capability.",
-        icon: "Target",
-        tone: "navy",
-        link: "https://gtmcanada.com/it-infrastructure-services/",
-      },
-      {
-        title: "Software development services",
-        description:
-          "Practical training and micro-credentials supporting workforce readiness and professional capability development.",
-        icon: "UsersRound",
-        tone: "teal",
-        link: "https://gtmcanada.com/software-development-services/",
-      },
-    ],
+  
+
+      programs: [
+    {
+      title: "Diploma in Logistics Management",
+      description:
+        "Industry-focused education supporting practical, career-focused learning in logistics and supply chain management.",
+      icon: "GraduationCap",
+      tone: "navy",
+       link: "https://gtmcanada.com/logo-design/",
+    },
+    {
+      title: "Certificate in Logistics Management",
+      description:
+        "Professional education supporting foundational and practical logistics capabilities.",
+      icon: "BookOpen",
+      tone: "gold",
+       link: "https://gtmcanada.com/logo-design/",
+    },
+    {
+      title: "Certified Logistics Professional Pathway",
+      description:
+        "A professional designation pathway supporting logistics capability and career development.",
+      icon: "Award",
+      tone: "teal",
+       link: "https://gtmcanada.com/logo-design/",
+    },
+    {
+      title: "Certified Management Consultant Program",
+      description:
+        "Professional development supporting consulting and management capability.",
+      icon: "BriefcaseBusiness",
+      tone: "gold",
+       link: "https://gtmcanada.com/logo-design/",
+    },
+    {
+      title: "Executive Education & Leadership Development",
+      description:
+        "Leadership-focused education designed to strengthen professional and organizational capability.",
+      icon: "Target",
+      tone: "navy",
+       link: "https://gtmcanada.com/logo-design/",
+    },
+    {
+      title: "Corporate Training & Micro-Credentials",
+      description:
+        "Practical training and micro-credentials supporting workforce readiness and professional capability development.",
+      icon: "UsersRound",
+      tone: "teal",
+       link: "https://gtmcanada.com/logo-design/",
+    },
+  ],
 
     centresTitle: "Industry",
     centresAccent: "Applications.",
@@ -649,62 +651,54 @@ export const serviceData = {
     journeyDescription:
       "IBS provides practical technology, IT infrastructure, digital and creative services tailored to organizational needs.",
 
-    programs: [
+     programs: [
       {
-        title: "IT Infrastructure Planning & Management",
+        title: "Logo design services",
         description:
-          "Practical planning and management of IT infrastructure aligned with organizational needs.",
-        icon: "Network",
+          "Industry-focused education supporting practical, career-focused learning in logistics and supply chain management.",
+        icon: "GraduationCap",
         tone: "navy",
-        link: "https://gtmcanada.com/it-infrastructure-planning-management/",
+        link: "https://gtmcanada.com/logo-design/",
       },
       {
-        title: "Network Security & Firewall Support",
+        title: "Web development services",
         description:
-          "Network security and firewall support to strengthen technology foundations.",
-        icon: "ShieldCheck",
-        tone: "teal",
-        link: "https://gtmcanada.com/network-security-firewall-support/",
-      },
-      {
-        title: "IT Operations & Vendor Management",
-        description:
-          "Support for IT operations and vendor management.",
-        icon: "Settings2",
-        tone: "navy",
-        link: "https://gtmcanada.com/it-operations-vendor-management/",
-      },
-      {
-        title: "Website Development",
-        description:
-          "Website development supporting a reliable and effective digital presence.",
-        icon: "Globe2",
-        tone: "teal",
+          "Professional education supporting foundational and practical logistics capabilities.",
+        icon: "BookOpen",
+        tone: "gold",
         link: "https://gtmcanada.com/web-development-services/",
       },
       {
-        title: "Software & Application Development",
+        title: "Creative design services",
         description:
-          "Software and application development tailored to organizational requirements.",
-        icon: "Cpu",
-        tone: "navy",
-        link: "https://gtmcanada.com/software-development-services/",
-      },
-      {
-        title: "Logo, Graphic & Creative Services",
-        description:
-          "Logo, graphic and creative services designed to strengthen organizational communication and brand presence.",
-        icon: "Sparkles",
+          "A professional designation pathway supporting logistics capability and career development.",
+        icon: "Award",
         tone: "teal",
         link: "https://gtmcanada.com/creative-design-services/",
       },
       {
-        title: "Digital Marketing",
+        title: "Digital marketing services",
         description:
-          "Digital marketing services supporting engagement and digital reach.",
-        icon: "BarChart3",
+          "Professional development supporting consulting and management capability.",
+        icon: "BriefcaseBusiness",
         tone: "gold",
         link: "https://gtmcanada.com/digital-marketing-services/",
+      },
+      {
+        title: "IT infrastructure services",
+        description:
+          "Leadership-focused education designed to strengthen professional and organizational capability.",
+        icon: "Target",
+        tone: "navy",
+        link: "https://gtmcanada.com/it-infrastructure-services/",
+      },
+      {
+        title: "Software development services",
+        description:
+          "Practical training and micro-credentials supporting workforce readiness and professional capability development.",
+        icon: "UsersRound",
+        tone: "teal",
+        link: "https://gtmcanada.com/software-development-services/",
       },
     ],
 
