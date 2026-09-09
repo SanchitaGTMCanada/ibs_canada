@@ -1519,7 +1519,7 @@ export const relatedServices = [
     key: "infrastructure",
   },
   {
-    title: "Technology & Innovation",
+    title: "Technology & IT Services",
     href: "/services/technology-innovation",
     icon: "Cpu",
     key: "technologyInnovation",

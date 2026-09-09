@@ -114,7 +114,7 @@ const services = [
   },
   {
     number: "04",
-    title: "Technology & Innovation",
+    title: "Technology & IT Services",
     slug: "technology-innovation",
     description:
       "Using technology, innovation and digital thinking to create stronger systems, better processes and new opportunities.",

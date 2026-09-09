@@ -9,7 +9,7 @@ export const serviceMenu = [
   "Education & Training",
   "Engineering & Technical",
   "Infrastructure",
-  "Technology & Innovation",
+  "Technology & IT Services",
   "Social & Economic",
   "Financial Management",
   "Governance",

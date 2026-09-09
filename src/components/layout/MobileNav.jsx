@@ -51,7 +51,7 @@ const services = [
   },
   {
     number: "04",
-    title: "Technology & Innovation",
+    title: "Technology & IT Services",
     href: "/services/technology-innovation",
   },
   {
