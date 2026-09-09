@@ -6,7 +6,7 @@ export const serviceData = {
     titleAccent: "& Training",
 
     description:
-      "Build the skills your organization and workforce need for what comes next. IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
+      "The Polytechnic Institute of Northern Canada is a private educational institution established by the IBS Group of Companies, driven by a profound sense of social responsibility. We welcome learners from all backgrounds, its mission is centred on addressing the longstanding educational challenges faced by residents of remote northern communities—particularly those with predominantly Indigenous populations.",
 
     image: "/heroImg/Education & Training/hero.jpg",
 
@@ -45,7 +45,7 @@ export const serviceData = {
     journeyAccent: "Training.",
 
     journeyDescription:
-      "IBS supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs.",
+      "PI-NC supports professional growth through industry-focused education, professional designation pathways and corporate training, with a particular focus on logistics, leadership and Northern workforce needs. ",
 
   
 
