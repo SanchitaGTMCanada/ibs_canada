@@ -215,6 +215,8 @@ export const serviceData = {
 
     programImg: "/programImage/program-lower.jpg",
 
+    journeyLogo: "/logo/aurora-construction.png",
+
     journeyImages: [
       "/journeyImg/learn.jpg",
       "/journeyImg/grow.jpg",
@@ -248,7 +250,7 @@ export const serviceData = {
     journeyAccent: "Technical Services.",
 
     journeyDescription:
-      "IBS supports clients through technical planning, feasibility analysis, project monitoring and risk management—helping decision-makers move from concept to implementation with greater clarity.",
+      "Aurora Construction’s commitment to supporting Indigenous communities is at the heart of our mission. We work closely with these communities, providing culturally sensitive and sustainable housing solutions that address their specific needs. ",
 
     programs: [
       {

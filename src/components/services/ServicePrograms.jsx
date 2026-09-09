@@ -143,42 +143,131 @@ export default function ServicePrograms({
 
             {/* Intro */}
 
-            <motion.div
-              initial={
-                reduceMotion
-                  ? {}
-                  : {
-                      opacity: 0,
-                      y: 20,
-                    }
-              }
-              whileInView={
-                reduceMotion
-                  ? {}
-                  : {
-                      opacity: 1,
-                      y: 0,
-                    }
-              }
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.7,
-              }}
-              className="mb-10"
-            >
-              <div className="flex items-center gap-3">
-                <span className="h-[2px] w-10 bg-[#C6A15B]" />
 
-                <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]">
-                  Your learning journey
-                </span>
-              </div>
+<motion.div
+  initial={
+    reduceMotion
+      ? {}
+      : {
+          opacity: 0,
+          y: 20,
+        }
+  }
+  whileInView={
+    reduceMotion
+      ? {}
+      : {
+          opacity: 1,
+          y: 0,
+        }
+  }
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.7,
+  }}
+  className="mb-10"
+>
+  <div className="flex items-center gap-3">
+    <span className="h-[2px] w-10 bg-[#C6A15B]" />
 
-              <p className="mt-4 max-w-[470px] text-[14px] leading-[1.8] text-[#202832]/55 sm:text-[15px]">
-                {data?.journeyDescription ||
-                  "Discover practical learning experiences that connect knowledge, confidence and meaningful professional opportunity."}
-              </p>
-            </motion.div>
+    <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]">
+      Your learning journey
+    </span>
+  </div>
+
+  {/* Logo + Description */}
+  <div className="mt-6 flex items-center gap-6">
+    {/* Aurora Construction Logo */}
+{data?.journeyLogo && (
+  <motion.div
+    initial={
+      reduceMotion
+        ? {}
+        : {
+            opacity: 0,
+            scale: 0.9,
+          }
+    }
+    whileInView={
+      reduceMotion
+        ? {}
+        : {
+            opacity: 1,
+            scale: 1,
+          }
+    }
+    viewport={{ once: true }}
+    transition={{
+      duration: 0.6,
+      delay: 0.15,
+    }}
+    className="shrink-0"
+  >
+    <a
+      href="https://auroraconstruction.ca/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Aurora Construction"
+      className="block"
+    >
+      <div
+        className="
+          relative
+          flex
+          h-[100px]
+          w-[100px]
+          items-center
+          justify-center
+          overflow-hidden
+          rounded-full
+          border
+          border-[#C6A15B]/25
+          bg-[#F6F4EF]
+          shadow-[0_12px_35px_rgba(11,31,58,0.08)]
+          transition-all
+          duration-500
+          hover:scale-105
+          hover:border-[#087F8C]/40
+          hover:shadow-[0_16px_40px_rgba(11,31,58,0.14)]
+        "
+      >
+        <div
+          className="
+            absolute
+            inset-2
+            rounded-full
+            bg-gradient-to-br
+            from-[#087F8C]/10
+            via-white
+            to-[#C6A15B]/15
+          "
+        />
+
+        <img
+          src={data.journeyLogo}
+          alt="Aurora Construction"
+          className="
+            relative
+            z-10
+            h-[68px]
+            w-[68px]
+            object-contain
+          "
+        />
+      </div>
+    </a>
+  </motion.div>
+)}
+
+    {/* Journey Description */}
+    <p className="max-w-[470px] text-[14px] leading-[1.8] text-[#202832]/55 sm:text-[15px]">
+      {data?.journeyDescription ||
+        "Discover practical learning experiences that connect knowledge, confidence and meaningful professional opportunity."}
+    </p>
+  </div>
+</motion.div>
+
+
 
             {/* =================================================
                 EDITORIAL JOURNEY
