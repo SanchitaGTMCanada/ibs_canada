@@ -209,7 +209,7 @@ export const serviceData = {
     titleAccent: "& Technical",
 
     description:
-      "Engineering decisions need to be practical, compliant and aligned with project objectives. IBS supports clients through technical planning, feasibility analysis, project monitoring and risk management—helping decision-makers move from concept to implementation with greater clarity.",
+      "At Aurora Construction, we are dedicated to alleviating the housing crisis in Western and Northern Canadian communities through our expertise in small to medium-sized construction projects (of up to $50Mn). Specializing in Western and Northern construction, we understand the unique challenges posed by harsh climates and remote locations. ",
 
     image: "/heroImg/Engineering & Technical/hero.jpg",
 
