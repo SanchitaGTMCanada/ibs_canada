@@ -10,8 +10,11 @@ import {
 } from "lucide-react";
 
 export default function Hero() {
-  const auroraImage =
+  const aurora_mid_img =
     "/home/home-1.jpg";
+
+     const auroraImage =
+  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=2400&q=85";
 
   return (
     <section
@@ -806,7 +809,7 @@ export default function Hero() {
             "
           >
             <img
-              src={auroraImage}
+              src={aurora_mid_img}
               alt="Northern lights over the Canadian landscape"
               className="
                 absolute
