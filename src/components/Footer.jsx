@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -29,11 +28,7 @@ export default function Footer() {
       href: "#services",
       icon: BriefcaseBusiness,
     },
-    {
-      title: "Our Approach",
-      href: "#approach",
-      icon: Compass,
-    },
+  
     {
       title: "Contact Us",
       href: "#contact",
@@ -62,21 +57,94 @@ export default function Footer() {
 
   const socials = [
     {
-      name: "LinkedIn",
-      short: "in",
-      href: "#",
-    },
-    {
       name: "Instagram",
-      short: "ig",
-      href: "#",
+      href: "https://www.instagram.com/ibsgroupcanada/",
+      type: "instagram",
     },
     {
-      name: "Facebook",
-      short: "f",
-      href: "#",
+      name: "X",
+      href: "https://x.com/ibsgroupcanada",
+      type: "x",
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/company/ibsgroupcanada/",
+      type: "linkedin",
     },
   ];
+
+  /* =========================================================
+     SOCIAL ICONS
+  ========================================================= */
+
+  const SocialIcon = ({ type }) => {
+    if (type === "instagram") {
+      return (
+        <svg
+          viewBox="0 0 24 24"
+          className="h-[18px] w-[18px]"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="18"
+            rx="5"
+            stroke="currentColor"
+            strokeWidth="1.8"
+          />
+
+          <circle
+            cx="12"
+            cy="12"
+            r="4.2"
+            stroke="currentColor"
+            strokeWidth="1.8"
+          />
+
+          <circle
+            cx="17.4"
+            cy="6.7"
+            r="1"
+            fill="currentColor"
+          />
+        </svg>
+      );
+    }
+
+    if (type === "linkedin") {
+      return (
+        <svg
+          viewBox="0 0 24 24"
+          className="h-[18px] w-[18px]"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path d="M5.2 8.3H2.4V21h2.8V8.3ZM3.8 3C2.8 3 2 3.8 2 4.8s.8 1.8 1.8 1.8 1.8-.8 1.8-1.8S4.8 3 3.8 3ZM21.6 13.7c0-3.8-2-5.7-4.8-5.7-2.2 0-3.2 1.2-3.8 2v-1.7h-2.8V21H13v-6.3c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 1.9 2.1 3.5V21h4v-7.3Z" />
+        </svg>
+      );
+    }
+
+    if (type === "x") {
+      return (
+        <svg
+          viewBox="0 0 24 24"
+          className="h-[17px] w-[17px]"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path d="M18.244 2H21.5l-7.11 8.13L22.75 22h-6.55l-5.13-6.71L5.2 22H1.94l7.6-8.69L1.5 2h6.72l4.64 6.14L18.244 2Zm-1.15 17.88h1.81L7.22 4h-1.94l11.814 15.88Z" />
+        </svg>
+      );
+    }
+
+    return null;
+  };
 
   return (
     <footer className="relative overflow-hidden bg-[#071A2E] text-white">
@@ -151,7 +219,7 @@ export default function Footer() {
             left-1/2
             top-1/2
             h-[650px]
-            w-[650px]
+      
             -translate-x-1/2
             -translate-y-1/2
             rounded-full
@@ -282,9 +350,8 @@ export default function Footer() {
           relative
           z-10
           mx-auto
-          max-w-[1380px]
+          
           px-6
-          py-0
           sm:px-8
           lg:px-12
           xl:px-16
@@ -311,13 +378,8 @@ export default function Footer() {
 
           {/* Logo */}
           <a
-            href="#"
-            className="
-              group
-              flex
-              items-center
-              gap-5
-            "
+            href="/"
+            className="group flex items-center gap-5"
           >
             <div
               className="
@@ -341,16 +403,11 @@ export default function Footer() {
               <img
                 src="/logo/logo.jpg"
                 alt="IBS Canada"
-                className="
-                  h-full
-                  w-full
-                  object-contain
-                "
+                className="h-full w-full object-contain"
               />
             </div>
 
             <div>
-
               <h2
                 className="
                   text-[19px]
@@ -374,13 +431,11 @@ export default function Footer() {
               >
                 Integrated Business Solutions
               </p>
-
             </div>
           </a>
 
           {/* Feature pills */}
           <div className="flex flex-wrap gap-3">
-
             {[
               {
                 title: "Strategy",
@@ -417,14 +472,7 @@ export default function Footer() {
                     hover:bg-[#C6A15B]/[0.08]
                   "
                 >
-
-                  <Icon
-                    className="
-                      h-4
-                      w-4
-                      text-[#F0CB79]
-                    "
-                  />
+                  <Icon className="h-4 w-4 text-[#F0CB79]" />
 
                   <span
                     className="
@@ -437,13 +485,10 @@ export default function Footer() {
                   >
                     {item.title}
                   </span>
-
                 </div>
               );
             })}
-
           </div>
-
         </div>
 
         {/* =======================================================
@@ -466,7 +511,6 @@ export default function Footer() {
           ===================================================== */}
 
           <div>
-
             <h3
               className="
                 mb-5
@@ -510,7 +554,6 @@ export default function Footer() {
                   hover:text-white
                 "
               >
-
                 <span
                   className="
                     flex
@@ -543,7 +586,6 @@ export default function Footer() {
                 <span className="text-[13px] font-medium">
                   info@ibsgroupcanada.com
                 </span>
-
               </a>
 
               {/* Location */}
@@ -555,7 +597,6 @@ export default function Footer() {
                   text-white/65
                 "
               >
-
                 <span
                   className="
                     flex
@@ -582,7 +623,6 @@ export default function Footer() {
                 <span className="text-[13px] font-medium">
                   Canada
                 </span>
-
               </div>
 
               {/* Phone */}
@@ -599,7 +639,6 @@ export default function Footer() {
                   hover:text-white
                 "
               >
-
                 <span
                   className="
                     flex
@@ -632,11 +671,9 @@ export default function Footer() {
                 <span className="text-[13px] font-medium">
                   Connect with IBS
                 </span>
-
               </a>
 
             </div>
-
           </div>
 
           {/* =====================================================
@@ -644,7 +681,6 @@ export default function Footer() {
           ===================================================== */}
 
           <div>
-
             <h3
               className="
                 mb-5
@@ -659,7 +695,6 @@ export default function Footer() {
             </h3>
 
             <div className="space-y-2.5">
-
               {navigation.map((item) => {
                 const Icon = item.icon;
 
@@ -685,7 +720,6 @@ export default function Footer() {
                       hover:text-white
                     "
                   >
-
                     <Icon
                       className="
                         h-[18px]
@@ -720,13 +754,10 @@ export default function Footer() {
                         group-hover:text-[#F0CB79]
                       "
                     />
-
                   </a>
                 );
               })}
-
             </div>
-
           </div>
 
           {/* =====================================================
@@ -734,7 +765,6 @@ export default function Footer() {
           ===================================================== */}
 
           <div>
-
             <h3
               className="
                 mb-5
@@ -749,7 +779,6 @@ export default function Footer() {
             </h3>
 
             <div className="space-y-3">
-
               {services.map((service) => {
                 const Icon = service.icon;
 
@@ -772,7 +801,6 @@ export default function Footer() {
                       hover:bg-white/[0.045]
                     "
                   >
-
                     <span
                       className="
                         flex
@@ -791,18 +819,15 @@ export default function Footer() {
                         group-hover:bg-[#C6A15B]/10
                       "
                     >
-
                       <Icon
                         className="
                           h-4
                           w-4
                           text-[#35B7C0]
                           transition-colors
-                          duration-300
                           group-hover:text-[#F0CB79]
                         "
                       />
-
                     </span>
 
                     <span
@@ -817,13 +842,10 @@ export default function Footer() {
                     >
                       {service.title}
                     </span>
-
                   </div>
                 );
               })}
-
             </div>
-
           </div>
 
           {/* =====================================================
@@ -831,7 +853,6 @@ export default function Footer() {
           ===================================================== */}
 
           <div>
-
             <h3
               className="
                 mb-5
@@ -855,7 +876,7 @@ export default function Footer() {
               "
             >
               Have a business challenge?
-              Let&apos;s start a conversation.
+              Let's start a conversation.
             </p>
 
             {/* CTA */}
@@ -882,7 +903,6 @@ export default function Footer() {
                 hover:shadow-[0_12px_35px_rgba(198,161,91,0.16)]
               "
             >
-
               <span
                 className="
                   text-[11px]
@@ -892,7 +912,7 @@ export default function Footer() {
                   text-[#F0CB79]
                 "
               >
-                Let&apos;s Talk
+                Let's Talk
               </span>
 
               <ArrowUpRight
@@ -906,49 +926,64 @@ export default function Footer() {
                   group-hover:-translate-y-1
                 "
               />
-
             </a>
 
-            {/* Social buttons */}
-            <div className="mt-7 flex items-center gap-3">
+            {/* =================================================
+                SOCIAL MEDIA
+            ================================================= */}
 
-              {socials.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  aria-label={social.name}
-                  className="
-                    group
-                    flex
-                    h-11
-                    w-11
-                    items-center
-                    justify-center
-                    rounded-xl
-                    border
-                    border-white/[0.13]
-                    bg-white/[0.045]
-                    text-[12px]
-                    font-black
-                    uppercase
-                    text-white/55
-                    shadow-[0_8px_20px_rgba(0,0,0,0.12)]
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
-                    hover:border-[#C6A15B]/70
-                    hover:bg-[#C6A15B]/15
-                    hover:text-[#F0CB79]
-                  "
-                >
-                  {social.short}
-                </a>
-              ))}
+            <div className="mt-7">
 
+              <p
+                className="
+                  mb-3
+                  text-[9px]
+                  font-bold
+                  uppercase
+                  tracking-[0.18em]
+                  text-white/35
+                "
+              >
+                Follow IBS
+              </p>
+
+              <div className="flex items-center gap-3">
+
+                {socials.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="
+                      group
+                      flex
+                      h-11
+                      w-11
+                      items-center
+                      justify-center
+                      rounded-xl
+                      border
+                      border-white/[0.13]
+                      bg-white/[0.045]
+                      text-white/55
+                      shadow-[0_8px_20px_rgba(0,0,0,0.12)]
+                      transition-all
+                      duration-300
+                      hover:-translate-y-1
+                      hover:border-[#C6A15B]/70
+                      hover:bg-[#C6A15B]/15
+                      hover:text-[#F0CB79]
+                    "
+                  >
+                    <SocialIcon type={social.type} />
+                  </a>
+                ))}
+
+              </div>
             </div>
-
           </div>
-
         </div>
 
         {/* =======================================================
@@ -968,7 +1003,6 @@ export default function Footer() {
             sm:justify-between
           "
         >
-
           <p
             className="
               text-[10px]
@@ -1015,7 +1049,6 @@ export default function Footer() {
             </a>
 
           </div>
-
         </div>
 
       </div>
@@ -1038,7 +1071,6 @@ export default function Footer() {
           sm:w-[96px]
         "
       >
-
         <motion.div
           animate={{
             rotate: [-1, 3, -1],
@@ -1092,7 +1124,6 @@ export default function Footer() {
             to-transparent
           "
         />
-
       </div>
 
       {/* =========================================================
@@ -1113,7 +1144,6 @@ export default function Footer() {
           sm:w-[96px]
         "
       >
-
         <motion.div
           animate={{
             rotate: [1, -3, 1],
@@ -1168,7 +1198,6 @@ export default function Footer() {
             to-transparent
           "
         />
-
       </div>
 
       {/* =========================================================
@@ -1203,4 +1232,3 @@ export default function Footer() {
     </footer>
   );
 }
-

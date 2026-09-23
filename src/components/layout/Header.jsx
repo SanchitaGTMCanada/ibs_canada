@@ -2,18 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-
-import {
-  Menu,
-  X,
-  ArrowUpRight,
-} from "lucide-react";
-
-import {
-  AnimatePresence,
-  motion,
-} from "framer-motion";
-
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 import DesktopNav from "./DesktopNav";
@@ -83,7 +73,6 @@ export default function Header() {
       const previousScrollY = lastScrollY.current;
 
       /* Always show navbar at top */
-
       if (currentScrollY <= 40) {
         setNavbarVisible(true);
         lastScrollY.current = currentScrollY;
@@ -91,7 +80,6 @@ export default function Header() {
       }
 
       /* Ignore tiny movements */
-
       const scrollDifference = Math.abs(
         currentScrollY - previousScrollY
       );
@@ -101,14 +89,12 @@ export default function Header() {
       }
 
       /* Scrolling down */
-
       if (currentScrollY > previousScrollY) {
         setNavbarVisible(false);
         setMobileOpen(false);
       }
 
       /* Scrolling up */
-
       else if (currentScrollY < previousScrollY) {
         setNavbarVisible(true);
       }
@@ -116,19 +102,12 @@ export default function Header() {
       lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener(
-      "scroll",
-      handleScroll,
-      {
-        passive: true,
-      }
-    );
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
     return () => {
-      window.removeEventListener(
-        "scroll",
-        handleScroll
-      );
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -137,8 +116,7 @@ export default function Header() {
   ===================================================== */
 
   useEffect(() => {
-    document.body.style.overflow =
-      mobileOpen ? "hidden" : "";
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
 
     return () => {
       document.body.style.overflow = "";
@@ -178,7 +156,6 @@ export default function Header() {
           lg:pt-8
         "
       >
-
         {/* =================================================
             NAVBAR PILL
         ================================================= */}
@@ -207,7 +184,6 @@ export default function Header() {
             width: "100%",
           }}
         >
-
           {/* =================================================
               BACKGROUND DECORATION
           ================================================= */}
@@ -222,7 +198,6 @@ export default function Header() {
               rounded-[30px]
             "
           >
-
             {/* BASE */}
 
             <div
@@ -235,7 +210,6 @@ export default function Header() {
                 to-[#F6F4EF]
               "
             />
-
 
             {/* TEAL GLOW */}
 
@@ -262,7 +236,6 @@ export default function Header() {
               }}
             />
 
-
             {/* GOLD GLOW */}
 
             <motion.div
@@ -288,7 +261,6 @@ export default function Header() {
               }}
             />
 
-
             {/* TEAL CIRCLE */}
 
             <div
@@ -303,7 +275,6 @@ export default function Header() {
                 border-[#087F8C]/20
               "
             />
-
 
             {/* GOLD CIRCLE */}
 
@@ -320,7 +291,6 @@ export default function Header() {
               "
             />
 
-
             {/* DOT PATTERN */}
 
             <div
@@ -336,11 +306,9 @@ export default function Header() {
               style={{
                 backgroundImage:
                   "radial-gradient(#087F8C 1.2px, transparent 1.2px)",
-                backgroundSize:
-                  "14px 14px",
+                backgroundSize: "14px 14px",
               }}
             />
-
 
             {/* GOLD DOTS */}
 
@@ -380,7 +348,6 @@ export default function Header() {
               "
             />
 
-
             {/* LEFT GOLD DOT */}
 
             <div
@@ -394,7 +361,6 @@ export default function Header() {
                 bg-[#C6A15B]/40
               "
             />
-
 
             {/* TEAL LINE */}
 
@@ -411,9 +377,7 @@ export default function Header() {
                 to-transparent
               "
             />
-
           </div>
-
 
           {/* =================================================
               NAVBAR CONTENT
@@ -428,7 +392,6 @@ export default function Header() {
               items-center
             "
           >
-
             {/* =================================================
                 LOGO
             ================================================= */}
@@ -447,7 +410,6 @@ export default function Header() {
                 overflow-hidden
               "
             >
-
               <Image
                 src="/logo/logo.jpg"
                 alt="IBS Group Canada"
@@ -461,9 +423,7 @@ export default function Header() {
                   object-left
                 "
               />
-
             </Link>
-
 
             {/* =================================================
                 CENTER NAVIGATION
@@ -479,13 +439,8 @@ export default function Header() {
                 md:block
               "
             >
-
-              <DesktopNav
-                services={serviceLinks}
-              />
-
+              <DesktopNav services={serviceLinks} />
             </div>
-
 
             {/* =================================================
                 RIGHT SIDE
@@ -498,11 +453,71 @@ export default function Header() {
                 ml-auto
                 flex
                 items-center
-                gap-3
+                gap-2
               "
             >
+              {/* =================================================
+                  FUNDING PROGRAM
+              ================================================= */}
+<Link
+  href="https://funding-project-kz1n.vercel.app/"
+  className="
+    group
+    hidden
+    items-center
+    gap-1.5
+    rounded-full
+    bg-gradient-to-r
+    from-[#087F8C]
+    to-[#0B6F78]
+    px-3.5
+    py-2
+    text-[13px]
+    font-medium
+    !text-white
+    shadow-[0_5px_18px_rgba(8,127,140,0.20)]
+    transition-all
+    duration-300
+    hover:-translate-y-0.5
+    hover:from-[#0B6F78]
+    hover:to-[#0B1F3A]
+    hover:shadow-[0_8px_24px_rgba(8,127,140,0.28)]
+    md:inline-flex
+  "
+>
+  <span className="!text-white">
+    Funding Program
+  </span>
 
-              {/* CONTACT */}
+  <span
+    className="
+      flex
+      h-6
+      w-6
+      items-center
+      justify-center
+      rounded-full
+      bg-white/20
+      !text-white
+      backdrop-blur-sm
+      transition-all
+      duration-300
+      group-hover:bg-white/30
+      group-hover:-translate-y-0.5
+      group-hover:translate-x-0.5
+    "
+  >
+    <ArrowUpRight
+      size={12}
+      strokeWidth={2}
+      className="!text-white"
+    />
+  </span>
+</Link>
+
+              {/* =================================================
+                  CONTACT US
+              ================================================= */}
 
               <Link
                 href="/contact"
@@ -510,25 +525,24 @@ export default function Header() {
                   group
                   hidden
                   items-center
-                  gap-2
+                  gap-1.5
                   rounded-full
                   bg-[#087F8C]
-                  px-5
-                  py-3
-                  text-[15px]
+                  px-3.5
+                  py-2
+                  text-[13px]
                   font-medium
                   !text-white
-                  shadow-[0_8px_25px_rgba(8,127,140,0.18)]
+                  shadow-[0_5px_16px_rgba(8,127,140,0.16)]
                   transition-all
                   duration-300
                   hover:-translate-y-0.5
                   hover:bg-[#0B1F3A]
-                  hover:shadow-[0_12px_30px_rgba(11,31,58,0.2)]
+                  hover:shadow-[0_8px_22px_rgba(11,31,58,0.18)]
                   hover:!text-white
                   md:inline-flex
                 "
               >
-
                 <span className="!text-white">
                   Contact Us
                 </span>
@@ -536,8 +550,8 @@ export default function Header() {
                 <span
                   className="
                     flex
-                    h-7
-                    w-7
+                    h-6
+                    w-6
                     items-center
                     justify-center
                     rounded-full
@@ -549,19 +563,17 @@ export default function Header() {
                     group-hover:translate-x-0.5
                   "
                 >
-
                   <ArrowUpRight
-                    size={15}
+                    size={12}
                     strokeWidth={2}
                     className="!text-white"
                   />
-
                 </span>
-
               </Link>
 
-
-              {/* MOBILE MENU */}
+              {/* =================================================
+                  MOBILE MENU
+              ================================================= */}
 
               <button
                 type="button"
@@ -590,14 +602,11 @@ export default function Header() {
                   md:hidden
                 "
               >
-
                 <AnimatePresence
                   mode="wait"
                   initial={false}
                 >
-
                   {mobileOpen ? (
-
                     <motion.span
                       key="close"
                       initial={{
@@ -615,9 +624,7 @@ export default function Header() {
                     >
                       <X size={21} />
                     </motion.span>
-
                   ) : (
-
                     <motion.span
                       key="menu"
                       initial={{
@@ -635,39 +642,26 @@ export default function Header() {
                     >
                       <Menu size={21} />
                     </motion.span>
-
                   )}
-
                 </AnimatePresence>
-
               </button>
-
             </div>
-
           </div>
-
         </div>
-
       </motion.header>
-
 
       {/* =================================================
           MOBILE NAVIGATION
       ================================================= */}
 
       <AnimatePresence>
-
         {mobileOpen && (
-
           <MobileNav
             onClose={() => setMobileOpen(false)}
             services={serviceLinks}
           />
-
         )}
-
       </AnimatePresence>
-
     </>
   );
 }

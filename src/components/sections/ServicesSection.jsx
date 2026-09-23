@@ -25,34 +25,34 @@ import {
 } from "framer-motion";
 
 const services = [
+  // {
+  //   number: "01",
+  //   title: "Consulting",
+  //   shortTitle: "Consulting",
+  //   description:
+  //     "Helping leaders make informed decisions and move forward with confidence through strategic, operational, financial, governance and growth-focused consulting.",
+  //   icon: Compass,
+  //   color: "#087F8C",
+  //   softColor: "#E0F3F4",
+  //   image:
+  //     "/home/home-slide (1).jpg",
+  // },
+
+  // {
+  //   number: "02",
+  //   title: "Project Execution",
+  //   shortTitle: "Project Execution",
+  //   description:
+  //     "Turning strategy and plans into coordinated action through disciplined project planning, resource management, risk control, stakeholder coordination and implementation support.",
+  //   icon: HardHat,
+  //   color: "#4A789C",
+  //   softColor: "#E5EDF4",
+  //   image:
+  //     "/home/home-slide (2).jpg",
+  // },
+
   {
     number: "01",
-    title: "Consulting",
-    shortTitle: "Consulting",
-    description:
-      "Helping leaders make informed decisions and move forward with confidence through strategic, operational, financial, governance and growth-focused consulting.",
-    icon: Compass,
-    color: "#087F8C",
-    softColor: "#E0F3F4",
-    image:
-      "/home/home-slide (1).jpg",
-  },
-
-  {
-    number: "02",
-    title: "Project Execution",
-    shortTitle: "Project Execution",
-    description:
-      "Turning strategy and plans into coordinated action through disciplined project planning, resource management, risk control, stakeholder coordination and implementation support.",
-    icon: HardHat,
-    color: "#4A789C",
-    softColor: "#E5EDF4",
-    image:
-      "/home/home-slide (2).jpg",
-  },
-
-  {
-    number: "03",
     title: "Financial Management",
     shortTitle: "Financial",
     description:
@@ -65,7 +65,7 @@ const services = [
   },
 
   {
-    number: "04",
+    number: "02",
     title: "Corporate Governance",
     shortTitle: "Governance",
     description:
@@ -78,7 +78,7 @@ const services = [
   },
 
   {
-    number: "05",
+    number: "03",
     title: "Technology & IT Services",
     shortTitle: "Technology & IT",
     description:
@@ -91,7 +91,7 @@ const services = [
   },
 
   {
-    number: "06",
+    number: "04",
     title: "Education & Training",
     shortTitle: "Education",
     description:
@@ -104,7 +104,7 @@ const services = [
   },
 
   {
-    number: "07",
+    number: "05",
     title: "Social & Economic Development",
     shortTitle: "Social & Economic",
     description:
@@ -117,7 +117,7 @@ const services = [
   },
 
   {
-    number: "08",
+    number: "06",
     title: "Engineering & Technical Services",
     shortTitle: "Engineering",
     description:
@@ -130,7 +130,7 @@ const services = [
   },
 
   {
-    number: "09",
+    number: "07",
     title: "Infrastructure & Project Delivery",
     shortTitle: "Infrastructure",
     description:
@@ -1684,397 +1684,7 @@ export default function ServicesSection() {
             PREMIUM BOTTOM CTA
         ===================================================== */}
 
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.3,
-          }}
-          transition={{
-            duration: 0.8,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="
-            group
-            relative
-            mt-7
-            overflow-hidden
-            rounded-[30px]
-            border
-            border-[#C8D9D7]
-            bg-gradient-to-br
-            from-[#063F46]
-            via-[#087F8C]
-            to-[#4FAEB0]
-            px-6
-            py-6
-            shadow-[0_18px_55px_rgba(73,61,39,0.10)]
-            sm:px-8
-            sm:py-7
-            lg:px-10
-            lg:py-8
-          "
-        >
-          {/* =================================================
-              PREMIUM GLOW
-          ================================================= */}
-
-          <div
-            className="
-              pointer-events-none
-              absolute
-              -right-[100px]
-              -top-[120px]
-              h-[300px]
-              w-[300px]
-              rounded-full
-              bg-[#087F8C]/[0.07]
-              blur-[90px]
-            "
-          />
-
-          <motion.div
-            animate={{
-              scale: [1, 1.08, 1],
-              opacity: [0.15, 0.25, 0.15],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="
-              pointer-events-none
-              absolute
-              -bottom-[100px]
-              left-[20%]
-              h-[250px]
-              w-[250px]
-              rounded-full
-              bg-[#C6A15B]/10
-              blur-[90px]
-            "
-          />
-
-          {/* Decorative pattern */}
-
-          <div
-            className="
-              pointer-events-none
-              absolute
-              right-7
-              top-7
-              h-[130px]
-              w-[180px]
-              opacity-[0.12]
-              [background-image:radial-gradient(#087F8C_1px,transparent_1px)]
-              [background-size:12px_12px]
-            "
-          />
-
-          {/* Gold top accent */}
-
-          <motion.div
-            initial={{
-              width: 0,
-            }}
-            whileInView={{
-              width: "130px",
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.9,
-              delay: 0.2,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="
-              absolute
-              left-0
-              top-0
-              h-[3px]
-              rounded-r-full
-              bg-[#B58B3A]
-            "
-          />
-
-          {/* =================================================
-              CTA CONTENT
-          ================================================= */}
-
-          <div
-            className="
-              relative
-              z-10
-              flex
-              flex-col
-              gap-6
-              lg:flex-row
-              lg:items-center
-              lg:justify-between
-            "
-          >
-            {/* LEFT */}
-
-            <div
-              className="
-                flex
-                items-center
-                gap-4
-              "
-            >
-              {/* Premium icon */}
-
-              <motion.div
-                whileHover={{
-                  scale: 1.06,
-                  rotate: 4,
-                }}
-                transition={{
-                  duration: 0.3,
-                }}
-                className="
-                  relative
-                  flex
-                  h-[58px]
-                  w-[58px]
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-[18px]
-                  border
-                  border-white/20
-                  bg-white/10
-                  shadow-[0_10px_30px_rgba(0,0,0,0.12)]
-                  backdrop-blur-md
-                "
-              >
-                <span
-                  className="
-                    absolute
-                    inset-[7px]
-                    rounded-[13px]
-                    border
-                    border-white/10
-                  "
-                />
-
-                <Handshake
-                  size={25}
-                  strokeWidth={1.4}
-                  className="
-                    relative
-                    z-10
-                    text-[#D7C17A]
-                  "
-                />
-              </motion.div>
-
-              <div>
-                {/* Eyebrow */}
-
-                <div
-                  className="
-                    flex
-                    items-center
-                    gap-2
-                  "
-                >
-                  <span
-                    className="
-                      h-[6px]
-                      w-[6px]
-                      rounded-full
-                      bg-[#D7C17A]
-                      shadow-[0_0_10px_rgba(215,193,122,0.7)]
-                    "
-                  />
-
-                  <span
-                    className="
-                      text-[9px]
-                      font-bold
-                      uppercase
-                      tracking-[0.25em]
-                      text-[#D7C17A]
-                    "
-                  >
-                    Let's work together
-                  </span>
-                </div>
-
-                {/* Heading */}
-
-                <h3
-                  className="
-                    mt-1.5
-                    text-[21px]
-                    font-semibold
-                    tracking-[-0.035em]
-                    text-white
-                    sm:text-[24px]
-                  "
-                >
-                  One partner.
-
-                  <span
-                    className="
-                      ml-1.5
-                      text-[#B9E8E5]
-                    "
-                  >
-                    Multiple capabilities.
-                  </span>
-                </h3>
-
-                {/* Description */}
-
-                <p
-                  className="
-                    mt-1
-                    max-w-[560px]
-                    text-[12px]
-                    leading-5
-                    text-white/65
-                    sm:text-[13px]
-                  "
-                >
-                  Tailored professional support for
-                  organizations and entrepreneurs.
-                </p>
-              </div>
-            </div>
-
-            {/* =================================================
-                CTA BUTTON
-            ================================================= */}
-
-            <Link
-              href="/contact"
-              className="
-                group/cta
-                relative
-                inline-flex
-                shrink-0
-                items-center
-                justify-center
-                gap-3
-                overflow-hidden
-                rounded-full
-                border
-                border-white/20
-                bg-white
-                px-5
-                py-3
-                text-[11px]
-                font-bold
-                uppercase
-                tracking-[0.1em]
-                !text-[#064951]
-                shadow-[0_12px_30px_rgba(0,0,0,0.14)]
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-[#D7C17A]
-                hover:bg-[#D7C17A]
-                hover:shadow-[0_18px_38px_rgba(0,0,0,0.18)]
-              "
-            >
-              {/* Shine */}
-
-              <span
-                className="
-                  pointer-events-none
-                  absolute
-                  inset-y-0
-                  -left-[80%]
-                  w-[45%]
-                  rotate-[20deg]
-                  bg-white/50
-                  blur-md
-                  transition-all
-                  duration-700
-                  group-hover/cta:left-[130%]
-                "
-              />
-
-              <span
-                className="
-                  relative
-                  z-10
-                  !text-[#064951]
-                "
-              >
-                Let's work together
-              </span>
-
-              <span
-                className="
-                  relative
-                  z-10
-                  flex
-                  h-8
-                  w-8
-                  items-center
-                  justify-center
-                  rounded-full
-                  bg-[#087F8C]
-                  text-white
-                  transition-all
-                  duration-300
-                  group-hover/cta:translate-x-1
-                  group-hover/cta:bg-[#0B1F3A]
-                "
-              >
-                <ArrowUpRight
-                  size={15}
-                  strokeWidth={2}
-                />
-              </span>
-            </Link>
-          </div>
-
-          {/* =================================================
-              BOTTOM DETAILS
-          ================================================= */}
-
-          <div
-            className="
-              pointer-events-none
-              absolute
-              bottom-0
-              left-[15%]
-              h-[1px]
-              w-[240px]
-              bg-gradient-to-r
-              from-transparent
-              via-[#B58B3A]/35
-              to-transparent
-            "
-          />
-
-          <div
-            className="
-              pointer-events-none
-              absolute
-              bottom-0
-              right-0
-              h-[2px]
-              w-[150px]
-              bg-gradient-to-l
-              from-[#087F8C]/50
-              to-transparent
-            "
-          />
-        </motion.div>
+       
       </div>
     </section>
   );
