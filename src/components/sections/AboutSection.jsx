@@ -419,12 +419,12 @@ export default function AboutSection() {
 
               <span
                 className="
-                  text-[10px]
+                  text-[13px]
                   font-bold
                   uppercase
                   tracking-[0.25em]
                   text-[#087F8C]
-                  sm:text-[11px]
+                  sm:text-[13px]
                 "
               >
                 What We Help Clients Achieve
@@ -648,7 +648,7 @@ export default function AboutSection() {
               >
                 <span
                   className="
-                    text-[9px]
+                    text-[14px]
                     font-semibold
                     uppercase
                     tracking-[0.2em]
@@ -1140,12 +1140,12 @@ export default function AboutSection() {
 
                 <span
                   className="
-                    text-[9px]
+                    text-[12px]
                     font-bold
                     uppercase
                     tracking-[0.25em]
                     text-[#087F8C]
-                    sm:text-[10px]
+                    sm:text-[12px]
                   "
                 >
                   Integrated Cross-Cutting Capabilities
@@ -1350,7 +1350,7 @@ export default function AboutSection() {
 
                 <span
                   className="
-                    text-[8px]
+                    text-[14px]
                     font-bold
                     uppercase
                     tracking-[0.2em]
@@ -1632,7 +1632,7 @@ export default function AboutSection() {
 
                 <span
                   className="
-                    text-[9px]
+                    text-[14px]
                     font-bold
                     uppercase
                     tracking-[0.22em]
@@ -1653,16 +1653,7 @@ export default function AboutSection() {
                 />
               </div>
 
-              <span
-                className="
-                  text-[9px]
-                  font-bold
-                  tracking-[0.18em]
-                  text-[#C6A15B]
-                "
-              >
-                01 — 04
-              </span>
+            
             </div>
 
             {/* =================================================
@@ -1955,7 +1946,7 @@ export default function AboutSection() {
                     <div className="mt-7">
                       <span
                         className="
-                          text-[8px]
+                          text-[14px]
                           font-bold
                           uppercase
                           tracking-[0.22em]
@@ -2089,11 +2080,11 @@ export default function AboutSection() {
               >
                 <p
                   className="
-                    max-w-[1000px]
-                    text-[12px]
+                    max-w-[750px]
+                    text-[15px]
                     leading-6
                     text-white/60
-                    sm:text-[13px]
+                    sm:text-[15px]
                   "
                 >
                   Consulting and Project Execution are two cross-cutting
@@ -2123,7 +2114,7 @@ export default function AboutSection() {
 
                   <span
                     className="
-                      text-[8px]
+                      text-[12px]
                       font-bold
                       uppercase
                       tracking-[0.2em]
