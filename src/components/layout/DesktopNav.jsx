@@ -30,11 +30,7 @@ const navigation = [
   {
     label: "Our Team",
     href: "/our-team",
-  },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
+  }
 ];
 
 /* =========================================================

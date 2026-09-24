@@ -270,7 +270,7 @@ export default function Hero() {
 
             <span
               className="
-                text-[9px]
+                text-[12px]
                 font-bold
                 uppercase
                 tracking-[0.32em]
@@ -331,10 +331,10 @@ export default function Hero() {
             className="
               mt-6
               max-w-[570px]
-              text-[13px]
+              text-[17px]
               leading-7
               text-[#DCE2E7]
-              sm:text-[14px]
+              sm:text-[17px]
             "
           >
             We combine strategic thinking, financial expertise, operational discipline, technology and technical capabilities to help organizations make better decisions and build sustainable capacity
@@ -365,8 +365,8 @@ export default function Hero() {
                 rounded-full
                 bg-[#C6A15B]
                 px-6
-                py-3.5
-                text-[9px]
+                py-2
+                text-[12px]
                 font-bold
                 uppercase
                 tracking-[0.15em]
@@ -414,7 +414,7 @@ export default function Hero() {
     bg-white/[0.05]
     px-6
     py-3.5
-    text-[9px]
+    text-[12px]
     font-bold
     uppercase
     tracking-[0.15em]
@@ -518,7 +518,7 @@ export default function Hero() {
                   />
                 </div>
 
-                <span className="text-[8px] font-bold tracking-[0.2em] text-white/30">
+                <span className="text-[13px] font-bold tracking-[0.2em] text-white/30">
                   01
                 </span>
               </div>
@@ -539,7 +539,7 @@ export default function Hero() {
               <p
                 className="
                   mt-2
-                  text-[8px]
+                  text-[10px]
                   font-bold
                   uppercase
                   tracking-[0.18em]
@@ -612,7 +612,7 @@ export default function Hero() {
                   />
                 </div>
 
-                <span className="text-[8px] font-bold tracking-[0.2em] text-white/30">
+                <span className="text-[13px] font-bold tracking-[0.2em] text-white/30">
                   02
                 </span>
               </div>
@@ -633,7 +633,7 @@ export default function Hero() {
               <p
                 className="
                   mt-2
-                  text-[8px]
+                  text-[10px]
                   font-bold
                   uppercase
                   tracking-[0.18em]
@@ -712,7 +712,7 @@ export default function Hero() {
                   />
                 </div>
 
-                <span className="text-[8px] font-bold tracking-[0.2em] text-white/30">
+                <span className="text-[13px] font-bold tracking-[0.2em] text-white/30">
                   03
                 </span>
               </div>
@@ -733,7 +733,7 @@ export default function Hero() {
               <p
                 className="
                   mt-2
-                  text-[8px]
+                  text-[10px]
                   font-bold
                   uppercase
                   tracking-[0.18em]
@@ -900,7 +900,7 @@ export default function Hero() {
 
               <span
                 className="
-                  text-[7px]
+                  text-[10px]
                   font-semibold
                   uppercase
                   tracking-[0.18em]
@@ -970,7 +970,7 @@ export default function Hero() {
       <div>
         <p
           className="
-            text-[8px]
+            text-[12px]
             font-bold
             uppercase
             tracking-[0.2em]
@@ -983,7 +983,7 @@ export default function Hero() {
         <p
           className="
             mt-1
-            text-[10px]
+            text-[12px]
             font-medium
             text-white
           "
@@ -1095,7 +1095,7 @@ export default function Hero() {
       >
         <span
           className="
-            text-[8px]
+            text-[12px]
             font-bold
             uppercase
             tracking-[0.25em]
