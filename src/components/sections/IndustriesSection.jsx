@@ -547,7 +547,7 @@ export default function IndustriesSection() {
                 className="
                   mt-1.5
                   max-w-[440px]
-                  text-[11px]
+                  text-[14px]
                   leading-5
                   text-white/60
                   transition-colors
@@ -681,7 +681,7 @@ export default function IndustriesSection() {
 
             <p
               className="
-                text-[12px]
+                text-[14px]
                 font-medium
                 text-[#53666B]
               "

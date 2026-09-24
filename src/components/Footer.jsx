@@ -514,7 +514,7 @@ export default function Footer() {
             <h3
               className="
                 mb-5
-                text-[11px]
+                text-[14px]
                 font-black
                 uppercase
                 tracking-[0.22em]
@@ -684,7 +684,7 @@ export default function Footer() {
             <h3
               className="
                 mb-5
-                text-[11px]
+                text-[12px]
                 font-black
                 uppercase
                 tracking-[0.22em]
@@ -768,7 +768,7 @@ export default function Footer() {
             <h3
               className="
                 mb-5
-                text-[11px]
+                text-[12px]
                 font-black
                 uppercase
                 tracking-[0.22em]
@@ -856,7 +856,7 @@ export default function Footer() {
             <h3
               className="
                 mb-5
-                text-[11px]
+                text-[12px]
                 font-black
                 uppercase
                 tracking-[0.22em]
@@ -937,7 +937,7 @@ export default function Footer() {
               <p
                 className="
                   mb-3
-                  text-[9px]
+                  text-[12px]
                   font-bold
                   uppercase
                   tracking-[0.18em]
