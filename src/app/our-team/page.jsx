@@ -454,7 +454,7 @@ export default function OurTeamPage() {
 
                 <span
                   className="
-                    text-[9px]
+                    text-[14px]
                     font-bold
                     uppercase
                     tracking-[0.32em]
@@ -499,10 +499,10 @@ export default function OurTeamPage() {
                 className="
                   mt-7
                   max-w-[620px]
-                  text-[12px]
+                  text-[17px]
                   leading-6
                   text-[#DCE2E7]
-                  sm:text-[13px]
+                  sm:text-[17px]
                 "
               >
                 Meet the multidisciplinary professionals who bring together
@@ -531,7 +531,7 @@ export default function OurTeamPage() {
                     bg-[#087F8C]
                     px-6
                     py-3
-                    text-[9px]
+                    text-[13px]
                     font-bold
                     uppercase
                     tracking-[0.18em]
@@ -542,6 +542,7 @@ export default function OurTeamPage() {
                     hover:-translate-y-1
                     hover:bg-[#096F78]
                   "
+                  style={{color:"white"}}
                 >
                   Meet the team
                   <ArrowDown size={14} />
@@ -559,7 +560,7 @@ export default function OurTeamPage() {
                     bg-white/[0.06]
                     px-6
                     py-3
-                    text-[9px]
+                    text-[13px]
                     font-bold
                     uppercase
                     tracking-[0.18em]
@@ -569,6 +570,7 @@ export default function OurTeamPage() {
                     duration-300
                     hover:bg-white/[0.12]
                   "
+                  style={{color:"white"}}
                 >
                   Our principles
                   <ArrowRight size={14} />
@@ -895,7 +897,7 @@ export default function OurTeamPage() {
 
                 <span
                   className="
-                    text-[10px]
+                    text-[15px]
                     font-bold
                     uppercase
                     tracking-[0.32em]
@@ -946,10 +948,10 @@ export default function OurTeamPage() {
                   mx-auto
                   mt-5
                   max-w-[690px]
-                  text-[12px]
+                  text-[17px]
                   leading-6
                   text-[#B9C5CF]
-                  sm:text-[13px]
+                  sm:text-[17px]
                 "
               >
                 IBS brings together professionals across finance, strategy,
@@ -1225,7 +1227,7 @@ export default function OurTeamPage() {
 
                       <span
                         className="
-                          text-[8px]
+                          text-[12px]
                           font-bold
                           uppercase
                           tracking-[0.28em]
