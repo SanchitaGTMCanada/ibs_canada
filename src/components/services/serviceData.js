@@ -18,11 +18,11 @@ journeyLogoLink: "https://pi-nc.org/",
 journeyLogoAlt: "pinc",
 
     journeyImages: [
-      "/journeyImg/learn.jpg",
-      "/journeyImg/grow.jpg",
-      "/journeyImg/lead.jpg",
-      "/journeyImg/advance.jpg",
-      "/journeyImg/achieve.jpg",
+      "/journeyImg/pinc/dlm.png",
+      "/journeyImg/pinc/clm.png",
+      "/journeyImg/pinc/eeld.png",
+      "/journeyImg/pinc/cclp.png",
+      "/journeyImg/pinc/pmp.png",
     ],
 
     heroIcon: "GraduationCap",
@@ -58,7 +58,7 @@ journeyLogoAlt: "pinc",
     {
       title: "Diploma in Logistics Management",
       description:
-        "Industry-focused education supporting practical, career-focused learning in logistics and supply chain management.",
+        "Students learn from instructors with real-world experience and develop connections with employers through work-integrated learning. ",
       icon: "GraduationCap",
       tone: "navy",
        link: "https://gtmcanada.com/logo-design/",
@@ -66,39 +66,39 @@ journeyLogoAlt: "pinc",
     {
       title: "Certificate in Logistics Management",
       description:
-        "Professional education supporting foundational and practical logistics capabilities.",
+        "Students engage with real-world logistics scenarios and gain job-relevant training that can support employment across Northern Canada and beyond.",
       icon: "BookOpen",
       tone: "gold",
        link: "https://gtmcanada.com/logo-design/",
     },
-    {
-      title: "Certified Logistics Professional Pathway",
-      description:
-        "A professional designation pathway supporting logistics capability and career development.",
-      icon: "Award",
-      tone: "teal",
-       link: "https://gtmcanada.com/logo-design/",
-    },
+    // {
+    //   title: "Certified Logistics Professional Pathway",
+    //   description:
+    //     "A professional designation pathway supporting logistics capability and career development.",
+    //   icon: "Award",
+    //   tone: "teal",
+    //    link: "https://gtmcanada.com/logo-design/",
+    // },
     {
       title: "Certified Management Consultant Program",
       description:
-        "Professional development supporting consulting and management capability.",
+        "The program provides students with access to CMC-Canada membership, recognized coursework, and a pathway toward the CMC designation, the internationally recognized professional credential for management consultants.",
       icon: "BriefcaseBusiness",
       tone: "gold",
        link: "https://gtmcanada.com/logo-design/",
     },
     {
-      title: "Executive Education & Leadership Development",
+      title: "CITT-Certified Logistics Professional",
       description:
-        "Leadership-focused education designed to strengthen professional and organizational capability.",
+        "Through this pathway, students develop practical knowledge and skills in logistics, transportation, business operations, and supply chain management while working toward a recognized professional designation.",
       icon: "Target",
       tone: "navy",
        link: "https://gtmcanada.com/logo-design/",
     },
     {
-      title: "Corporate Training & Micro-Credentials",
+      title: "Project Management Professional Program",
       description:
-        "Practical training and micro-credentials supporting workforce readiness and professional capability development.",
+        "Designed for Indigenous development corporations, territorial and public-sector organizations, businesses, professional and community organizations, mining companies, and industry and infrastructure employers seeking stronger internal project capability.",
       icon: "UsersRound",
       tone: "teal",
        link: "https://gtmcanada.com/logo-design/",
