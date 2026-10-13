@@ -1,59 +1,11 @@
+
 "use client";
 
 import { motion } from "framer-motion";
-
-import {
-  ArrowUpRight,
-  BriefcaseBusiness,
-  Compass,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Phone,
-  Target,
-  Users,
-} from "lucide-react";
+import { ArrowUp, MapPin, Sparkles } from "lucide-react";
 
 export default function Footer() {
   const year = new Date().getFullYear();
-
-  const navigation = [
-    {
-      title: "About Us",
-      href: "#about",
-      icon: Users,
-    },
-    {
-      title: "Our Services",
-      href: "#services",
-      icon: BriefcaseBusiness,
-    },
-  
-    {
-      title: "Contact Us",
-      href: "#contact",
-      icon: MessageCircle,
-    },
-  ];
-
-  const services = [
-    {
-      title: "Consulting",
-      icon: Target,
-    },
-    {
-      title: "Strategy",
-      icon: Compass,
-    },
-    {
-      title: "Solutions",
-      icon: BriefcaseBusiness,
-    },
-    {
-      title: "Partnerships",
-      icon: Users,
-    },
-  ];
 
   const socials = [
     {
@@ -73,10 +25,6 @@ export default function Footer() {
     },
   ];
 
-  /* =========================================================
-     SOCIAL ICONS
-  ========================================================= */
-
   const SocialIcon = ({ type }) => {
     if (type === "instagram") {
       return (
@@ -84,7 +32,6 @@ export default function Footer() {
           viewBox="0 0 24 24"
           className="h-[18px] w-[18px]"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
         >
           <rect
@@ -96,7 +43,6 @@ export default function Footer() {
             stroke="currentColor"
             strokeWidth="1.8"
           />
-
           <circle
             cx="12"
             cy="12"
@@ -104,13 +50,7 @@ export default function Footer() {
             stroke="currentColor"
             strokeWidth="1.8"
           />
-
-          <circle
-            cx="17.4"
-            cy="6.7"
-            r="1"
-            fill="currentColor"
-          />
+          <circle cx="17.4" cy="6.7" r="1" fill="currentColor" />
         </svg>
       );
     }
@@ -121,7 +61,6 @@ export default function Footer() {
           viewBox="0 0 24 24"
           className="h-[18px] w-[18px]"
           fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
         >
           <path d="M5.2 8.3H2.4V21h2.8V8.3ZM3.8 3C2.8 3 2 3.8 2 4.8s.8 1.8 1.8 1.8 1.8-.8 1.8-1.8S4.8 3 3.8 3ZM21.6 13.7c0-3.8-2-5.7-4.8-5.7-2.2 0-3.2 1.2-3.8 2v-1.7h-2.8V21H13v-6.3c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 1.9 2.1 3.5V21h4v-7.3Z" />
@@ -135,7 +74,6 @@ export default function Footer() {
           viewBox="0 0 24 24"
           className="h-[17px] w-[17px]"
           fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
         >
           <path d="M18.244 2H21.5l-7.11 8.13L22.75 22h-6.55l-5.13-6.71L5.2 22H1.94l7.6-8.69L1.5 2h6.72l4.64 6.14L18.244 2Zm-1.15 17.88h1.81L7.22 4h-1.94l11.814 15.88Z" />
@@ -146,1089 +84,170 @@ export default function Footer() {
     return null;
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <footer className="relative overflow-hidden bg-[#071A2E] text-white">
+    <footer className="relative isolate w-full overflow-hidden bg-[#071A29] text-white">
+      {/* AMBIENT BACKGROUND DECORATION */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+      >
+        <div className="absolute -left-32 -top-36 h-[300px] w-[300px] rounded-full bg-[#087F8C]/15 blur-[110px]" />
+        <div className="absolute -right-24 top-0 h-[260px] w-[260px] rounded-full bg-[#2374A8]/15 blur-[100px]" />
+        <div className="absolute bottom-0 left-1/2 h-[180px] w-[420px] -translate-x-1/2 rounded-full bg-[#087F8C]/10 blur-[100px]" />
 
-      {/* =========================================================
-          BACKGROUND
-      ========================================================= */}
-
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-
-        {/* Main background */}
         <div
-          className="
-            absolute
-            inset-0
-            bg-[linear-gradient(135deg,#061525_0%,#0B1F3A_42%,#123A5A_100%)]
-          "
-        />
-
-        {/* Teal atmosphere */}
-        <motion.div
-          animate={{
-            x: [0, 45, 0],
-            y: [0, -35, 0],
-            opacity: [0.16, 0.27, 0.16],
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage:
+              "radial-gradient(rgba(255,255,255,0.9) 0.7px, transparent 0.7px)",
+            backgroundSize: "22px 22px",
           }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            -left-32
-            top-0
-            h-[460px]
-            w-[460px]
-            rounded-full
-            bg-[#087F8C]/25
-            blur-[120px]
-          "
         />
-
-        {/* Gold atmosphere */}
-        <motion.div
-          animate={{
-            x: [0, -40, 0],
-            y: [0, 30, 0],
-            opacity: [0.08, 0.18, 0.08],
-          }}
-          transition={{
-            duration: 14,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            -right-32
-            bottom-0
-            h-[420px]
-            w-[420px]
-            rounded-full
-            bg-[#C6A15B]/20
-            blur-[120px]
-          "
-        />
-
-        {/* Center glow */}
-        <div
-          className="
-            absolute
-            left-1/2
-            top-1/2
-            h-[650px]
-      
-            -translate-x-1/2
-            -translate-y-1/2
-            rounded-full
-            bg-[#123A5A]/40
-            blur-[140px]
-          "
-        />
-
-        {/* IBS watermark */}
-        <div
-          className="
-            absolute
-            left-1/2
-            top-1/2
-            -translate-x-1/2
-            -translate-y-1/2
-            select-none
-            whitespace-nowrap
-            text-[180px]
-            font-black
-            tracking-[-0.08em]
-            text-white/[0.025]
-            sm:text-[250px]
-            lg:text-[350px]
-          "
-        >
-          IBS
-        </div>
-
-        {/* Vertical architecture */}
-        <div
-          className="
-            absolute
-            left-[7%]
-            top-0
-            h-full
-            w-px
-            bg-gradient-to-b
-            from-transparent
-            via-white/[0.07]
-            to-transparent
-          "
-        />
-
-        <div
-          className="
-            absolute
-            right-[7%]
-            top-0
-            h-full
-            w-px
-            bg-gradient-to-b
-            from-transparent
-            via-white/[0.07]
-            to-transparent
-          "
-        />
-
-        {/* Horizontal architectural line */}
-        <div
-          className="
-            absolute
-            left-0
-            right-0
-            top-[44%]
-            h-px
-            bg-gradient-to-r
-            from-transparent
-            via-[#C6A15B]/[0.12]
-            to-transparent
-          "
-        />
-
-        {/* Rings */}
-        <div
-          className="
-            absolute
-            -left-24
-            bottom-16
-            h-64
-            w-64
-            rounded-full
-            border
-            border-[#087F8C]/15
-          "
-        />
-
-        <div
-          className="
-            absolute
-            -left-12
-            bottom-24
-            h-44
-            w-44
-            rounded-full
-            border
-            border-[#C6A15B]/15
-          "
-        />
-
-        <div
-          className="
-            absolute
-            -right-28
-            top-16
-            h-72
-            w-72
-            rounded-full
-            border
-            border-[#087F8C]/15
-          "
-        />
-
-        {/* Decorative dots */}
-        <div className="absolute left-[14%] top-[20%] h-1.5 w-1.5 rounded-full bg-[#C6A15B]/70" />
-        <div className="absolute left-[21%] top-[70%] h-1.5 w-1.5 rounded-full bg-[#087F8C]/80" />
-        <div className="absolute right-[17%] top-[30%] h-1.5 w-1.5 rounded-full bg-[#C6A15B]/70" />
-        <div className="absolute right-[12%] bottom-[22%] h-1.5 w-1.5 rounded-full bg-[#087F8C]/80" />
-
       </div>
 
-      {/* =========================================================
-          MAIN CONTAINER
-      ========================================================= */}
+      {/* TOP ACCENT LINE */}
+      <div className="relative h-[3px] w-full overflow-hidden bg-white/[0.04]">
+        <motion.div
+          initial={{ x: "-100%" }}
+          whileInView={{ x: "0%" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="h-full w-full bg-gradient-to-r from-transparent via-[#087F8C] to-[#2374A8]"
+        />
+      </div>
 
-      <div
-        className="
-          relative
-          z-10
-          mx-auto
-          
-          px-6
-          sm:px-8
-          lg:px-12
-          xl:px-16
-        "
-      >
+      {/* TOP INFORMATION BAR */}
+      <div className="relative border-b border-white/[0.09]">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-8 px-6 py-10 sm:px-8 md:grid-cols-[1fr_1.4fr_1fr] md:gap-8 lg:px-12 lg:py-12">
+          {/* LOGO */}
+        <motion.a
+  href="/"
+  aria-label="IBS Canada home"
+  initial={{ opacity: 0, y: 12 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5 }}
+  className="group flex items-center justify-center md:justify-start"
+>
+  <div className="relative rounded-xl border border-white/[0.08] bg-white/[0.035] p-3 transition-all duration-300 group-hover:border-[#087F8C]/40 group-hover:bg-white/[0.06]">
+    <div className="pointer-events-none absolute -inset-2 -z-10 rounded-2xl bg-[#087F8C]/10 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
 
-        {/* =======================================================
-            BRAND HEADER
-        ======================================================= */}
+    <img
+      src="/logo/logo.jpg"
+      alt="IBS Canada"
+      className="h-[68px] max-w-[250px] object-contain"
+    />
+  </div>
+</motion.a>
 
-        <div
-          className="
-            flex
-            flex-col
-            gap-6
-            border-b
-            border-white/[0.12]
-            py-10
-            sm:flex-row
-            sm:items-center
-            sm:justify-between
-          "
-        >
+          {/* ADDRESS */}
+    <motion.div
+  initial={{ opacity: 0, y: 12 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, delay: 0.1 }}
+  className="flex w-full min-w-0 items-start justify-start gap-4"
+>
+  <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#087F8C]/25 bg-[#087F8C]/10 text-[#55C4CA]">
+    <MapPin className="h-5 w-5" strokeWidth={1.8} />
+  </div>
 
-          {/* Logo */}
-          <a
-            href="/"
-            className="group flex items-center gap-5"
+  <div className="min-w-0 flex-1">
+    <div className="mb-2 flex items-center gap-2">
+      <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#55C4CA]" />
+
+      <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#55C4CA]">
+        Visit Our Office
+      </p>
+    </div>
+
+    <address className="w-full not-italic text-[13px] font-medium leading-[1.9] text-white/70 sm:text-[14px]">
+      EPR Yellowknife Building, P.O. Box 20072, 2nd Floor,
+      4910 – 50th Street, Yellowknife, NT X1A 3X8
+    </address>
+  </div>
+</motion.div>
+
+          {/* SOCIAL LINKS */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col items-center gap-4 md:items-end"
           >
-            <div
-              className="
-                flex
-                h-[68px]
-                w-[100px]
-                items-center
-                justify-center
-                overflow-hidden
-                rounded-xl
-                border
-                border-white/20
-                bg-white
-                shadow-[0_12px_35px_rgba(0,0,0,0.3)]
-                transition-all
-                duration-300
-                group-hover:border-[#C6A15B]
-                group-hover:shadow-[0_12px_40px_rgba(198,161,91,0.2)]
-              "
-            >
-              <img
-                src="/logo/logo.jpg"
-                alt="IBS Canada"
-                className="h-full w-full object-contain"
-              />
-            </div>
-
-            <div>
-              <h2
-                className="
-                  text-[19px]
-                  font-extrabold
-                  tracking-[-0.025em]
-                  text-white
-                "
-              >
-                IBS Canada
-              </h2>
-
-              <p
-                className="
-                  mt-1.5
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-[0.24em]
-                  text-[#F0CB79]
-                "
-              >
-                Integrated Business Solutions
-              </p>
-            </div>
-          </a>
-
-          {/* Feature pills */}
-          <div className="flex flex-wrap gap-3">
-            {[
-              {
-                title: "Strategy",
-                icon: Target,
-              },
-              {
-                title: "Solutions",
-                icon: Compass,
-              },
-              {
-                title: "Partnerships",
-                icon: Users,
-              },
-            ].map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="
-                    flex
-                    items-center
-                    gap-2.5
-                    rounded-xl
-                    border
-                    border-white/[0.13]
-                    bg-white/[0.055]
-                    px-4
-                    py-2.5
-                    shadow-[0_8px_25px_rgba(0,0,0,0.12)]
-                    transition-all
-                    duration-300
-                    hover:border-[#C6A15B]/50
-                    hover:bg-[#C6A15B]/[0.08]
-                  "
-                >
-                  <Icon className="h-4 w-4 text-[#F0CB79]" />
-
-                  <span
-                    className="
-                      text-[10px]
-                      font-bold
-                      uppercase
-                      tracking-[0.12em]
-                      text-white/70
-                    "
-                  >
-                    {item.title}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* =======================================================
-            CONTENT
-        ======================================================= */}
-
-        <div
-          className="
-            grid
-            gap-12
-            py-12
-            sm:grid-cols-2
-            lg:grid-cols-[1.25fr_0.85fr_0.85fr_1fr]
-            lg:gap-14
-          "
-        >
-
-          {/* =====================================================
-              ABOUT IBS
-          ===================================================== */}
-
-          <div>
-            <h3
-              className="
-                mb-5
-                text-[14px]
-                font-black
-                uppercase
-                tracking-[0.22em]
-                text-[#F0CB79]
-              "
-            >
-              About IBS
-            </h3>
-
-            <p
-              className="
-                max-w-[340px]
-                text-[14px]
-                font-medium
-                leading-7
-                text-white/70
-              "
-            >
-              Integrated business solutions designed to help
-              organizations move forward with clarity,
-              strategy and confidence.
+            <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-white/45">
+              Connect With Us
             </p>
 
-            <div className="mt-7 space-y-4">
-
-              {/* Email */}
-              <a
-                href="mailto:info@ibsgroupcanada.com"
-                className="
-                  group
-                  flex
-                  items-center
-                  gap-4
-                  text-white/65
-                  transition-all
-                  duration-300
-                  hover:text-white
-                "
-              >
-                <span
-                  className="
-                    flex
-                    h-10
-                    w-10
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-xl
-                    border
-                    border-[#087F8C]/35
-                    bg-[#087F8C]/10
-                    transition-all
-                    duration-300
-                    group-hover:border-[#C6A15B]/60
-                    group-hover:bg-[#C6A15B]/10
-                  "
+            <div className="flex items-center gap-3">
+              {socials.map((social, index) => (
+                <motion.a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
+                  title={social.name}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.25 + index * 0.1 }}
+                  whileHover={{ y: -4, scale: 1.06 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="group relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-white/[0.12] bg-white/[0.045] text-white/75 shadow-lg shadow-black/10 transition-colors duration-300 hover:border-[#087F8C]/60 hover:bg-[#087F8C]/15 hover:text-[#70D6DB]"
                 >
-                  <Mail
-                    className="
-                      h-4
-                      w-4
-                      text-[#35B7C0]
-                      transition-colors
-                      group-hover:text-[#F0CB79]
-                    "
-                  />
-                </span>
-
-                <span className="text-[13px] font-medium">
-                  info@ibsgroupcanada.com
-                </span>
-              </a>
-
-              {/* Location */}
-              <div
-                className="
-                  flex
-                  items-center
-                  gap-4
-                  text-white/65
-                "
-              >
-                <span
-                  className="
-                    flex
-                    h-10
-                    w-10
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-xl
-                    border
-                    border-[#087F8C]/35
-                    bg-[#087F8C]/10
-                  "
-                >
-                  <MapPin
-                    className="
-                      h-4
-                      w-4
-                      text-[#35B7C0]
-                    "
-                  />
-                </span>
-
-                <span className="text-[13px] font-medium">
-                  Canada
-                </span>
-              </div>
-
-              {/* Phone */}
-              <a
-                href="tel:+1"
-                className="
-                  group
-                  flex
-                  items-center
-                  gap-4
-                  text-white/65
-                  transition-all
-                  duration-300
-                  hover:text-white
-                "
-              >
-                <span
-                  className="
-                    flex
-                    h-10
-                    w-10
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-xl
-                    border
-                    border-[#087F8C]/35
-                    bg-[#087F8C]/10
-                    transition-all
-                    duration-300
-                    group-hover:border-[#C6A15B]/60
-                    group-hover:bg-[#C6A15B]/10
-                  "
-                >
-                  <Phone
-                    className="
-                      h-4
-                      w-4
-                      text-[#35B7C0]
-                      transition-colors
-                      group-hover:text-[#F0CB79]
-                    "
-                  />
-                </span>
-
-                <span className="text-[13px] font-medium">
-                  Connect with IBS
-                </span>
-              </a>
-
+                  <span className="pointer-events-none absolute inset-x-2 bottom-0 h-[2px] scale-x-0 bg-[#55C4CA] transition-transform duration-300 group-hover:scale-x-100" />
+                  <SocialIcon type={social.type} />
+                </motion.a>
+              ))}
             </div>
-          </div>
+          </motion.div>
+        </div>
+      </div>
 
-          {/* =====================================================
-              EXPLORE
-          ===================================================== */}
-
-          <div>
-            <h3
-              className="
-                mb-5
-                text-[12px]
-                font-black
-                uppercase
-                tracking-[0.22em]
-                text-[#F0CB79]
-              "
-            >
-              Explore
-            </h3>
-
-            <div className="space-y-2.5">
-              {navigation.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <a
-                    key={item.title}
-                    href={item.href}
-                    className="
-                      group
-                      flex
-                      items-center
-                      gap-3
-                      rounded-xl
-                      border
-                      border-transparent
-                      px-2
-                      py-2.5
-                      text-white/65
-                      transition-all
-                      duration-300
-                      hover:border-white/[0.08]
-                      hover:bg-white/[0.045]
-                      hover:text-white
-                    "
-                  >
-                    <Icon
-                      className="
-                        h-[18px]
-                        w-[18px]
-                        text-[#2BB5BF]
-                        transition-colors
-                        duration-300
-                        group-hover:text-[#F0CB79]
-                      "
-                    />
-
-                    <span
-                      className="
-                        text-[13px]
-                        font-semibold
-                      "
-                    >
-                      {item.title}
-                    </span>
-
-                    <ArrowUpRight
-                      className="
-                        ml-auto
-                        h-4
-                        w-4
-                        opacity-0
-                        transition-all
-                        duration-300
-                        group-hover:translate-x-1
-                        group-hover:-translate-y-1
-                        group-hover:opacity-100
-                        group-hover:text-[#F0CB79]
-                      "
-                    />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* =====================================================
-              SERVICES
-          ===================================================== */}
-
-          <div>
-            <h3
-              className="
-                mb-5
-                text-[12px]
-                font-black
-                uppercase
-                tracking-[0.22em]
-                text-[#F0CB79]
-              "
-            >
-              Services
-            </h3>
-
-            <div className="space-y-3">
-              {services.map((service) => {
-                const Icon = service.icon;
-
-                return (
-                  <div
-                    key={service.title}
-                    className="
-                      group
-                      flex
-                      items-center
-                      gap-3
-                      rounded-xl
-                      border
-                      border-transparent
-                      px-2
-                      py-2
-                      transition-all
-                      duration-300
-                      hover:border-white/[0.08]
-                      hover:bg-white/[0.045]
-                    "
-                  >
-                    <span
-                      className="
-                        flex
-                        h-9
-                        w-9
-                        shrink-0
-                        items-center
-                        justify-center
-                        rounded-lg
-                        border
-                        border-[#087F8C]/30
-                        bg-[#087F8C]/10
-                        transition-all
-                        duration-300
-                        group-hover:border-[#C6A15B]/50
-                        group-hover:bg-[#C6A15B]/10
-                      "
-                    >
-                      <Icon
-                        className="
-                          h-4
-                          w-4
-                          text-[#35B7C0]
-                          transition-colors
-                          group-hover:text-[#F0CB79]
-                        "
-                      />
-                    </span>
-
-                    <span
-                      className="
-                        text-[13px]
-                        font-semibold
-                        text-white/65
-                        transition-colors
-                        duration-300
-                        group-hover:text-white
-                      "
-                    >
-                      {service.title}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* =====================================================
-              CONNECT
-          ===================================================== */}
-
-          <div>
-            <h3
-              className="
-                mb-5
-                text-[12px]
-                font-black
-                uppercase
-                tracking-[0.22em]
-                text-[#F0CB79]
-              "
-            >
-              Connect
-            </h3>
-
-            <p
-              className="
-                max-w-[270px]
-                text-[14px]
-                font-medium
-                leading-6
-                text-white/65
-              "
-            >
-              Have a business challenge?
-              Let's start a conversation.
+      {/* COPYRIGHT BAR */}
+      <div className="relative">
+        <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-8 lg:px-12">
+          <div className="flex flex-col items-center justify-between gap-3 py-6 pr-0 text-center sm:flex-row sm:pr-14 sm:text-left">
+            <p className="text-[11px] font-medium leading-5 text-white/50 sm:text-[12px]">
+              © {year} Integrated Business Solutions. All rights reserved.
             </p>
 
-            {/* CTA */}
-            <a
-              href="#contact"
-              className="
-                group
-                mt-6
-                inline-flex
-                items-center
-                gap-3
-                rounded-xl
-                border
-                border-[#C6A15B]/60
-                bg-[#C6A15B]/10
-                px-5
-                py-3.5
-                shadow-[0_10px_30px_rgba(198,161,91,0.08)]
-                transition-all
-                duration-300
-                hover:-translate-y-0.5
-                hover:border-[#F0CB79]
-                hover:bg-[#C6A15B]/20
-                hover:shadow-[0_12px_35px_rgba(198,161,91,0.16)]
-              "
-            >
-              <span
-                className="
-                  text-[11px]
-                  font-black
-                  uppercase
-                  tracking-[0.16em]
-                  text-[#F0CB79]
-                "
+            <p className="text-[11px] font-medium leading-5 text-white/50 sm:text-[12px]">
+              Website Designed &amp; Maintained By{" "}
+              <a
+                href="https://gtmcanada.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-white/80 transition-colors duration-200 hover:text-[#55C4CA]"
               >
-                Let's Talk
-              </span>
-
-              <ArrowUpRight
-                className="
-                  h-4
-                  w-4
-                  text-[#F0CB79]
-                  transition-transform
-                  duration-300
-                  group-hover:translate-x-1
-                  group-hover:-translate-y-1
-                "
-              />
-            </a>
-
-            {/* =================================================
-                SOCIAL MEDIA
-            ================================================= */}
-
-            <div className="mt-7">
-
-              <p
-                className="
-                  mb-3
-                  text-[12px]
-                  font-bold
-                  uppercase
-                  tracking-[0.18em]
-                  text-white/35
-                "
-              >
-                Follow IBS
-              </p>
-
-              <div className="flex items-center gap-3">
-
-                {socials.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.name}
-                    className="
-                      group
-                      flex
-                      h-11
-                      w-11
-                      items-center
-                      justify-center
-                      rounded-xl
-                      border
-                      border-white/[0.13]
-                      bg-white/[0.045]
-                      text-white/55
-                      shadow-[0_8px_20px_rgba(0,0,0,0.12)]
-                      transition-all
-                      duration-300
-                      hover:-translate-y-1
-                      hover:border-[#C6A15B]/70
-                      hover:bg-[#C6A15B]/15
-                      hover:text-[#F0CB79]
-                    "
-                  >
-                    <SocialIcon type={social.type} />
-                  </a>
-                ))}
-
-              </div>
-            </div>
+                GTM Canada
+              </a>
+            </p>
           </div>
         </div>
-
-        {/* =======================================================
-            BOTTOM BAR
-        ======================================================= */}
-
-        <div
-          className="
-            flex
-            flex-col
-            gap-5
-            border-t
-            border-white/[0.12]
-            py-7
-            sm:flex-row
-            sm:items-center
-            sm:justify-between
-          "
-        >
-          <p
-            className="
-              text-[10px]
-              font-medium
-              uppercase
-              tracking-[0.13em]
-              text-white/45
-            "
-          >
-            © {year} Integrated Business Solutions.
-            All rights reserved.
-          </p>
-
-          <div className="flex items-center gap-6">
-
-            <a
-              href="/privacy-policy"
-              className="
-                text-[10px]
-                font-bold
-                uppercase
-                tracking-[0.12em]
-                text-white/45
-                transition-colors
-                hover:text-[#F0CB79]
-              "
-            >
-              Privacy
-            </a>
-
-            <a
-              href="/terms"
-              className="
-                text-[10px]
-                font-bold
-                uppercase
-                tracking-[0.12em]
-                text-white/45
-                transition-colors
-                hover:text-[#F0CB79]
-              "
-            >
-              Terms
-            </a>
-
-          </div>
-        </div>
-
       </div>
 
-      {/* =========================================================
-          LEFT BOTTOM PAGE FOLD
-      ========================================================= */}
-
-      <div
-        className="
-          pointer-events-none
-          absolute
-          bottom-0
-          left-0
-          z-20
-          h-[80px]
-          w-[80px]
-          overflow-hidden
-          sm:h-[96px]
-          sm:w-[96px]
-        "
+      {/* BACK TO TOP */}
+      <motion.button
+        type="button"
+        onClick={scrollToTop}
+        aria-label="Back to top"
+        title="Back to top"
+        whileHover={{ y: -4, scale: 1.05 }}
+        whileTap={{ scale: 0.94 }}
+        className="absolute bottom-5 right-5 z-20 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-[#D52B1E] text-white shadow-[0_8px_30px_rgba(213,43,30,0.28)] transition-colors duration-300 hover:bg-[#B92319] sm:bottom-5 sm:right-8 sm:h-[50px] sm:w-[50px]"
       >
-        <motion.div
-          animate={{
-            rotate: [-1, 3, -1],
-            scale: [1, 1.025, 1],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            -bottom-[35px]
-            -left-[35px]
-            h-[84px]
-            w-[84px]
-            rotate-45
-            border-r
-            border-t
-            border-[#C6A15B]/80
-            bg-gradient-to-br
-            from-[#164B68]
-            via-[#0B1F3A]
-            to-[#061525]
-            shadow-[0_-10px_30px_rgba(0,0,0,0.3)]
-          "
-        />
-
-        <div
-          className="
-            absolute
-            bottom-0
-            left-0
-            h-[3px]
-            w-[78px]
-            bg-gradient-to-r
-            from-[#C6A15B]
-            to-transparent
-          "
-        />
-
-        <div
-          className="
-            absolute
-            bottom-0
-            left-0
-            h-[78px]
-            w-[3px]
-            bg-gradient-to-t
-            from-[#C6A15B]
-            to-transparent
-          "
-        />
-      </div>
-
-      {/* =========================================================
-          RIGHT BOTTOM PAGE FOLD
-      ========================================================= */}
-
-      <div
-        className="
-          pointer-events-none
-          absolute
-          bottom-0
-          right-0
-          z-20
-          h-[80px]
-          w-[80px]
-          overflow-hidden
-          sm:h-[96px]
-          sm:w-[96px]
-        "
-      >
-        <motion.div
-          animate={{
-            rotate: [1, -3, 1],
-            scale: [1, 1.025, 1],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-          className="
-            absolute
-            -bottom-[35px]
-            -right-[35px]
-            h-[84px]
-            w-[84px]
-            -rotate-45
-            border-l
-            border-t
-            border-[#C6A15B]/80
-            bg-gradient-to-bl
-            from-[#164B68]
-            via-[#0B1F3A]
-            to-[#061525]
-            shadow-[0_-10px_30px_rgba(0,0,0,0.3)]
-          "
-        />
-
-        <div
-          className="
-            absolute
-            bottom-0
-            right-0
-            h-[3px]
-            w-[78px]
-            bg-gradient-to-l
-            from-[#C6A15B]
-            to-transparent
-          "
-        />
-
-        <div
-          className="
-            absolute
-            bottom-0
-            right-0
-            h-[78px]
-            w-[3px]
-            bg-gradient-to-t
-            from-[#C6A15B]
-            to-transparent
-          "
-        />
-      </div>
-
-      {/* =========================================================
-          PREMIUM BOTTOM LINE
-      ========================================================= */}
-
-      <motion.div
-        animate={{
-          opacity: [0.45, 1, 0.45],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          bottom-0
-          left-1/2
-          z-30
-          h-[3px]
-          w-[55%]
-          -translate-x-1/2
-          bg-gradient-to-r
-          from-transparent
-          via-[#C6A15B]
-          to-transparent
-        "
-      />
-
+        <ArrowUp className="h-5 w-5" strokeWidth={2.5} />
+      </motion.button>
     </footer>
   );
 }

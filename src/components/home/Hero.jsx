@@ -18,21 +18,22 @@ export default function Hero() {
   return (
     <section
       className="
-        relative
-        min-h-[760px]
-        overflow-hidden
-        bg-[#0B1F3A]
-        px-6
-        pb-20
-        pt-32
-        sm:px-8
-        sm:pt-36
-        lg:min-h-[820px]
-        lg:px-10
-        lg:pb-24
-        lg:pt-40
-        xl:px-12
-      "
+  relative
+  min-h-[760px]
+  overflow-hidden
+  bg-[#0B1F3A]
+  pl-0
+  pr-6
+  pb-20
+  pt-32
+  sm:pr-8
+  sm:pt-36
+  lg:min-h-[820px]
+  lg:pr-10
+  lg:pb-24
+  lg:pt-40
+  xl:pr-12
+"
     >
       {/* =====================================================
           BACKGROUND

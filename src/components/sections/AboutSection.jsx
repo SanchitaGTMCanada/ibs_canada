@@ -18,9 +18,12 @@ import {
   Compass,
   Lightbulb,
   Rocket,
+  Building2
 } from "lucide-react";
-
 import { motion } from "framer-motion";
+
+
+
 
 /* =========================================================
    CLIENT OUTCOMES
@@ -158,10 +161,10 @@ export default function AboutSection() {
         relative
         overflow-hidden
         bg-white
-        py-16
-        sm:py-20
-        lg:py-24
-        xl:py-28
+        py-10
+        sm:py-10
+        lg:py-10
+        xl:py-10
       "
     >
       {/* =====================================================
@@ -376,115 +379,42 @@ export default function AboutSection() {
             lg:gap-16
           "
         >
-          <motion.div
-            variants={revealUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{
-              once: true,
-              amount: 0.3,
-            }}
-          >
-            <div className="flex items-center gap-3">
-              <span
-                className="
-                  relative
-                  flex
-                  h-[9px]
-                  w-[9px]
-                  items-center
-                  justify-center
-                "
-              >
-                <span
-                  className="
-                    absolute
-                    inset-0
-                    rounded-full
-                    bg-[#087F8C]/30
-                    blur-[4px]
-                  "
-                />
+          
 
-                <span
-                  className="
-                    relative
-                    h-[7px]
-                    w-[7px]
-                    rounded-full
-                    bg-[#C6A15B]
-                  "
-                />
-              </span>
 
-              <span
-                className="
-                  text-[13px]
-                  font-bold
-                  uppercase
-                  tracking-[0.25em]
-                  text-[#087F8C]
-                  sm:text-[13px]
-                "
-              >
-                What We Help Clients Achieve
-              </span>
-            </div>
+<motion.div
+  variants={revealUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{
+    once: true,
+    amount: 0.25,
+  }}
+>
+  <h2
+    className="
+      max-w-[900px]
+      text-[38px]
+      font-extrabold
+      leading-[1.08]
+      tracking-[-0.04em]
+      text-[#0B2438]
+      sm:text-[46px]
+      lg:text-[54px]
+      xl:text-[60px]
+    "
+  >
+    <span className="block whitespace-nowrap">
+      What We Help Clients
+    </span>
+    <span className="block whitespace-nowrap">
+      Achieve
+    </span>
+  </h2>
+</motion.div>
 
-            <div
-              className="
-                mt-7
-                hidden
-                h-px
-                w-[150px]
-                bg-gradient-to-r
-                from-[#087F8C]
-                to-transparent
-                lg:block
-              "
-            />
-          </motion.div>
 
-          <motion.div
-            variants={revealUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{
-              once: true,
-              amount: 0.25,
-            }}
-          >
-            <h2
-              className="
-                max-w-[900px]
-                text-[39px]
-                font-semibold
-                leading-[1.02]
-                tracking-[-0.055em]
-                text-[#202832]
-                sm:text-[50px]
-                md:text-[58px]
-                lg:text-[66px]
-                xl:text-[74px]
-              "
-            >
-              What We Help
-              <br />
 
-              <span
-                className="
-                  bg-gradient-to-r
-                  from-[#087F8C]
-                  via-[#168A95]
-                  to-[#C6A15B]
-                  bg-clip-text
-                  text-transparent
-                "
-              >
-                Clients Achieve
-              </span>
-            </h2>
-          </motion.div>
         </div>
 
         {/* =====================================================
@@ -589,13 +519,13 @@ export default function AboutSection() {
                 bottom-0
                 right-[2%]
                 z-10
-                min-h-[245px]
-                w-[48%]
+                min-h-[45px]
+                w-[28%]
                 overflow-hidden
                 rounded-[30px]
                 border-[8px]
                 border-white
-                shadow-[0_25px_60px_rgba(11,31,58,0.18)]
+                shadow-[0_45px_80px_rgba(11,31,58,0.18)]
               "
             >
               <div
@@ -635,46 +565,56 @@ export default function AboutSection() {
                 "
               />
 
-              <div
-                className="
-                  relative
-                  flex
-                  min-h-[230px]
-                  flex-col
-                  justify-between
-                  p-6
-                  sm:p-7
-                "
-              >
-                <span
-                  className="
-                    text-[14px]
-                    font-semibold
-                    uppercase
-                    tracking-[0.2em]
-                    text-[#C6A15B]
-                  "
-                >
-                  IBS
-                </span>
+      
 
-                <p
-                  className="
-                    max-w-[220px]
-                    text-[19px]
-                    font-semibold
-                    leading-6
-                    text-white
-                    sm:text-[21px]
-                  "
-                >
-                  Practical strategies,
-                  <br />
-                  stronger operations,
-                  <br />
-                  sustainable capacity.
-                </p>
-              </div>
+<div
+  className="
+    relative
+    flex
+    min-h-[110px]
+    flex-col
+    justify-between
+    overflow-hidden
+    p-3
+    sm:p-4
+  "
+>
+  <span
+    className="
+      text-[10px]
+      font-semibold
+      uppercase
+      tracking-[0.2em]
+      text-[#087F8C]
+    "
+  >
+    IBS
+  </span>
+
+  <motion.div
+    className="flex items-center justify-center"
+    animate={{
+      y: [0, -5, 0],
+      rotate: [0, 2, -2, 0],
+    }}
+    transition={{
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  >
+    <Building2
+      size={52}
+      strokeWidth={1.5}
+      className="
+        text-[#087F8C]
+        drop-shadow-[0_5px_12px_rgba(8,127,140,0.20)]
+      "
+    />
+  </motion.div>
+</div>
+
+
             </motion.div>
 
             {/* =================================================
@@ -1152,981 +1092,386 @@ export default function AboutSection() {
                 </span>
               </motion.div>
 
-              <motion.h3
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.1,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="
-                  relative
-                  mt-5
-                  max-w-[620px]
-                  text-[38px]
-                  font-semibold
-                  leading-[0.98]
-                  tracking-[-0.055em]
-                  text-[#202832]
-                  sm:text-[48px]
-                  lg:text-[56px]
-                  xl:text-[62px]
-                "
-              >
-                <span className="block">
-                  From Strategy
-                </span>
+<motion.h3
+  initial={{
+    opacity: 0,
+    y: 20,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+  }}
+  transition={{
+    duration: 0.8,
+    delay: 0.1,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+  className="
+    relative
+    mt-5
+    max-w-[900px]
+    text-[38px]
+    font-extrabold
+    leading-[1.08]
+    tracking-[-0.04em]
+    text-[#0B2438]
+    sm:text-[46px]
+    lg:text-[54px]
+    xl:text-[60px]
+  "
+>
+  <span className="block whitespace-nowrap">
+    From Strategy
+  </span>
 
-                <span className="relative mt-1 block w-fit">
-                  <span
-                    className="
-                      pointer-events-none
-                      absolute
-                      inset-0
-                      bg-gradient-to-r
-                      from-[#087F8C]/20
-                      via-[#087F8C]/10
-                      to-[#C6A15B]/20
-                      blur-[18px]
-                    "
-                  />
+  <span className="block whitespace-nowrap">
+    to Delivery
+  </span>
+</motion.h3>
 
-                  <span
-                    className="
-                      relative
-                      bg-gradient-to-r
-                      from-[#087F8C]
-                      via-[#087F8C]
-                      to-[#C6A15B]
-                      bg-clip-text
-                      text-transparent
-                    "
-                  >
-                    to Delivery
-                  </span>
-
-                  <motion.span
-                    initial={{
-                      width: 0,
-                    }}
-                    whileInView={{
-                      width: "100%",
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 0.9,
-                      delay: 0.6,
-                    }}
-                    className="
-                      absolute
-                      -bottom-2
-                      left-0
-                      h-[2px]
-                      rounded-full
-                      bg-gradient-to-r
-                      from-[#087F8C]
-                      via-[#C6A15B]
-                      to-transparent
-                    "
-                  />
-                </span>
-              </motion.h3>
             </div>
 
             {/* =================================================
                 RIGHT DESCRIPTION
             ================================================= */}
 
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: 25,
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.8,
-                delay: 0.2,
-              }}
-              className="
-                relative
-                z-10
-                lg:pb-2
-              "
-            >
-              <div
-                className="
-                  absolute
-                  -left-6
-                  top-0
-                  hidden
-                  h-full
-                  w-[2px]
-                  rounded-full
-                  bg-gradient-to-b
-                  from-[#087F8C]
-                  via-[#C6A15B]
-                  to-transparent
-                  lg:block
-                "
-              />
+           <motion.div
+  initial={{ opacity: 0, x: 25 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="relative z-10 lg:pb-0"
+>
+  <div className="absolute -left-4 top-0 hidden h-full w-[2px] rounded-full bg-gradient-to-b from-[#087F8C] via-[#C6A15B] to-transparent lg:block" />
 
-              <div
-                className="
-                  flex
-                  items-start
-                  gap-4
-                "
-              >
-                <span
-                  className="
-                    mt-[-5px]
-                    bg-gradient-to-b
-                    from-[#C6A15B]
-                    to-[#087F8C]
-                    bg-clip-text
-                    text-[38px]
-                    font-serif
-                    leading-none
-                    text-transparent
-                  "
-                >
-                  “
-                </span>
+  <div className="flex items-start gap-2">
+    <span className="mt-[-2px] bg-gradient-to-b from-[#C6A15B] to-[#087F8C] bg-clip-text font-serif text-[24px] leading-none text-transparent">
+      “
+    </span>
 
-                <p
-                  className="
-                    max-w-[700px]
-                    text-[15px]
-                    font-medium
-                    leading-7
-                    text-[#68737D]
-                    sm:text-[16px]
-                    lg:text-[17px]
-                    lg:leading-8
-                  "
-                >
-                  IBS supports clients across the full journey—from
-                  understanding the challenge and developing a practical
-                  strategy to executing priorities and building lasting
-                  organizational capability.
-                </p>
-              </div>
+    <p className="max-w-[460px] text-[12px] font-medium leading-5 text-[#68737D] sm:text-[13px]">
+      IBS supports clients from understanding challenges to developing
+      strategies, executing priorities, and building lasting organizational
+      capability.
+    </p>
+  </div>
 
-              <div
-                className="
-                  mt-6
-                  flex
-                  items-center
-                  gap-3
-                  pl-[38px]
-                "
-              >
-                <span
-                  className="
-                    h-[5px]
-                    w-[5px]
-                    rounded-full
-                    bg-[#087F8C]
-                  "
-                />
+  <div className="mt-3 flex items-center gap-2 pl-6">
+    <span className="h-1 w-1 rounded-full bg-[#087F8C]" />
 
-                <span
-                  className="
-                    text-[14px]
-                    font-bold
-                    uppercase
-                    tracking-[0.2em]
-                    text-[#202832]/35
-                  "
-                >
-                  Strategy · Execution · Capability
-                </span>
-              </div>
-            </motion.div>
+    <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#202832]/40">
+      Strategy · Execution · Capability
+    </span>
+  </div>
+</motion.div>
           </div>
 
           {/* =================================================
               PREMIUM JOURNEY CARD
           ================================================= */}
 
-          <div
+         
+<div
   className="
-  relative
-  mt-12
-  overflow-hidden
-  rounded-[40px]
-  border
-  border-white/[0.12]
-  bg-gradient-to-br
-  from-[#071A30]
-  via-[#0B3150]
-  to-[#087F8C]
-  px-5
-  py-10
-  shadow-[0_35px_100px_rgba(11,31,58,0.35)]
-  sm:px-8
-  sm:py-12
-  lg:px-12
-  lg:py-14
-"
-            
-          >
-            {/* =================================================
-                BACKGROUND GLOW
-            ================================================= */}
+    relative mt-8 overflow-hidden rounded-[28px]
+    border border-white/[0.12]
+    bg-gradient-to-br from-[#071A30] via-[#0B3150] to-[#087F8C]
+    px-5 py-7 sm:px-7 sm:py-8 lg:px-10 lg:py-9
+    shadow-[0_25px_70px_rgba(11,31,58,0.30)]
+  "
+>
+  {/* BACKGROUND GLOW */}
+  <div
+    className="pointer-events-none absolute -right-20 -top-24 h-[280px] w-[280px] rounded-full bg-[#087F8C]/20 blur-[80px]"
+  />
 
-            <div
-              className="
-                pointer-events-none
-                absolute
-                -right-[130px]
-                -top-[150px]
-                h-[430px]
-                w-[430px]
-                rounded-full
-                bg-[#087F8C]/20
-                blur-[110px]
-              "
-            />
+  <div
+    className="pointer-events-none absolute -bottom-24 -left-20 h-[280px] w-[280px] rounded-full bg-[#C6A15B]/10 blur-[80px]"
+  />
 
-            <div
-              className="
-                pointer-events-none
-                absolute
-                -bottom-[170px]
-                -left-[140px]
-                h-[430px]
-                w-[430px]
-                rounded-full
-                bg-[#C6A15B]/14
-                blur-[110px]
-              "
-            />
+  {/* LARGE BACKGROUND CIRCLES */}
+  <motion.div
+    animate={{
+      x: [0, 12, 0],
+      y: [0, -8, 0],
+      scale: [1, 1.03, 1],
+    }}
+    transition={{
+      duration: 12,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="pointer-events-none absolute -left-[130px] top-[30px] h-[300px] w-[300px] rounded-full border border-[#087F8C]/[0.11] bg-[#087F8C]/[0.025]"
+  />
 
-            {/* =================================================
-                LARGE BACKGROUND CIRCLES
-            ================================================= */}
+  <motion.div
+    animate={{
+      x: [0, -12, 0],
+      y: [0, 10, 0],
+      scale: [1, 1.04, 1],
+    }}
+    transition={{
+      duration: 14,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="pointer-events-none absolute -right-[120px] -top-5 h-[280px] w-[280px] rounded-full border border-[#C6A15B]/[0.10] bg-[#C6A15B]/[0.025]"
+  />
 
+  {/* CENTER CIRCLES */}
+  <motion.div
+    animate={{
+      scale: [1, 1.03, 1],
+      opacity: [0.3, 0.5, 0.3],
+    }}
+    transition={{
+      duration: 10,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="pointer-events-none absolute left-1/2 top-1/2 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.055]"
+  />
+
+  <div className="pointer-events-none absolute left-1/2 top-1/2 h-[150px] w-[150px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#087F8C]/[0.07]" />
+
+  {/* FLOATING CIRCLES */}
+  <motion.div
+    animate={{
+      y: [0, -10, 0],
+      opacity: [0.25, 0.5, 0.25],
+    }}
+    transition={{
+      duration: 7,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="pointer-events-none absolute right-[27%] top-[30px] h-[50px] w-[50px] rounded-full border border-[#087F8C]/[0.13] bg-[#087F8C]/[0.03]"
+  />
+
+  <motion.div
+    animate={{
+      y: [0, 8, 0],
+      x: [0, -6, 0],
+      opacity: [0.25, 0.45, 0.25],
+    }}
+    transition={{
+      duration: 8,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="pointer-events-none absolute bottom-[25px] left-[22%] h-[42px] w-[42px] rounded-full border border-[#C6A15B]/[0.13] bg-[#C6A15B]/[0.03]"
+  />
+
+  <div className="pointer-events-none absolute bottom-[15%] right-[12%] h-[5px] w-[5px] rounded-full bg-[#C6A15B]/50 shadow-[0_0_12px_rgba(198,161,91,0.6)]" />
+
+  {/* INNER BORDER */}
+  <div className="pointer-events-none absolute inset-[1px] rounded-[27px] border border-white/[0.06]" />
+
+  {/* CARD HEADER */}
+  <div className="relative z-20 flex items-center justify-between">
+    <div className="flex items-center gap-3">
+      <span className="h-[5px] w-[5px] rounded-full bg-[#C6A15B] shadow-[0_0_12px_rgba(198,161,91,0.8)]" />
+
+      <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 sm:text-[12px]">
+        Our Approach
+      </span>
+
+      <span className="hidden h-px w-8 bg-white/10 sm:block" />
+    </div>
+  </div>
+
+  {/* JOURNEY FLOW */}
+  <div className="relative z-10 mt-8">
+    {/* DESKTOP CONNECTING LINE */}
+    <div className="pointer-events-none absolute left-[11%] right-[11%] top-[51px] hidden lg:block">
+      <div className="absolute left-0 right-0 top-1/2 h-[8px] -translate-y-1/2 rounded-full bg-[#087F8C]/20 blur-[8px]" />
+
+      <div className="absolute left-0 right-0 top-1/2 h-[2px] -translate-y-1/2 rounded-full bg-white/10" />
+
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{
+          once: true,
+          amount: 0.3,
+        }}
+        transition={{
+          duration: 2,
+          delay: 0.35,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="absolute left-0 right-0 top-1/2 h-[3px] origin-left -translate-y-1/2 rounded-full bg-gradient-to-r from-[#087F8C] via-[#C6A15B] to-[#087F8C]"
+      />
+
+      <motion.span
+        initial={{
+          left: "0%",
+          opacity: 0,
+        }}
+        whileInView={{
+          left: "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 2.2,
+          delay: 0.55,
+          ease: "easeInOut",
+        }}
+        className="absolute top-1/2 h-[7px] w-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_16px_rgba(78,168,176,1)]"
+      />
+    </div>
+
+    {/* STEPS */}
+    <div className="grid gap-8 lg:grid-cols-4 lg:gap-0">
+      {journeySteps.map((step, index) => (
+        <motion.div
+          key={step.number}
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 0.6,
+            delay: index * 0.12,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="group relative text-center"
+        >
+          {/* STEP CIRCLE */}
+          <div className="relative mx-auto w-fit">
             <motion.div
               animate={{
-                x: [0, 18, 0],
-                y: [0, -12, 0],
-                scale: [1, 1.04, 1],
+                scale: [1, 1.12, 1],
+                opacity: [0.08, 0.2, 0.08],
               }}
               transition={{
-                duration: 12,
+                duration: 3.2,
                 repeat: Infinity,
+                delay: index * 0.4,
                 ease: "easeInOut",
               }}
-              className="
-                pointer-events-none
-                absolute
-                -left-[190px]
-                top-[40px]
-                h-[460px]
-                w-[460px]
-                rounded-full
-                border
-                border-[#087F8C]/[0.11]
-                bg-[#087F8C]/[0.025]
-              "
+              className={`absolute inset-[-12px] rounded-full bg-gradient-to-br ${step.gradient} blur-[14px]`}
             />
 
             <motion.div
-              animate={{
-                x: [0, -20, 0],
-                y: [0, 15, 0],
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                duration: 14,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                -right-[180px]
-                top-[-20px]
-                h-[430px]
-                w-[430px]
-                rounded-full
-                border
-                border-[#C6A15B]/[0.10]
-                bg-[#C6A15B]/[0.025]
-              "
-            />
-
-            {/* =================================================
-                CENTER CIRCLES
-            ================================================= */}
-
-            <motion.div
-              animate={{
-                scale: [1, 1.035, 1],
-                opacity: [0.35, 0.55, 0.35],
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-                h-[360px]
-                w-[360px]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                border
-                border-white/[0.055]
-              "
-            />
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                left-1/2
-                top-1/2
-                h-[210px]
-                w-[210px]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                border
-                border-[#087F8C]/[0.07]
-              "
-            />
-
-            {/* =================================================
-                SMALL FLOATING CIRCLES
-            ================================================= */}
-
-            <motion.div
-              animate={{
-                y: [0, -14, 0],
-                opacity: [0.25, 0.55, 0.25],
-              }}
-              transition={{
-                duration: 7,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                right-[27%]
-                top-[45px]
-                h-[72px]
-                w-[72px]
-                rounded-full
-                border
-                border-[#087F8C]/[0.13]
-                bg-[#087F8C]/[0.03]
-              "
-            />
-
-            <motion.div
-              animate={{
-                y: [0, 12, 0],
-                x: [0, -8, 0],
-                opacity: [0.25, 0.5, 0.25],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                pointer-events-none
-                absolute
-                bottom-[30px]
-                left-[22%]
-                h-[58px]
-                w-[58px]
-                rounded-full
-                border
-                border-[#C6A15B]/[0.13]
-                bg-[#C6A15B]/[0.03]
-              "
-            />
-
-            {/* =================================================
-                SUBTLE DOT
-            ================================================= */}
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                right-[12%]
-                bottom-[18%]
-                h-[6px]
-                w-[6px]
-                rounded-full
-                bg-[#C6A15B]/50
-                shadow-[0_0_15px_rgba(198,161,91,0.6)]
-              "
-            />
-
-            {/* =================================================
-                INNER BORDER
-            ================================================= */}
-
-            <div
-              className="
-                pointer-events-none
-                absolute
-                inset-[1px]
-                rounded-[39px]
-                border
-                border-white/[0.06]
-              "
-            />
-
-            {/* =================================================
-                CARD HEADER
-            ================================================= */}
-
-            <div
-              className="
-                relative
-                z-20
-                flex
-                items-center
-                justify-between
-              "
+              whileHover={{ scale: 1.05 }}
+              className={`relative flex h-[100px] w-[100px] items-center justify-center rounded-full border border-white/25 bg-gradient-to-br ${step.gradient} shadow-[0_18px_40px_rgba(0,0,0,0.30)] transition-all duration-500 sm:h-[112px] sm:w-[112px]`}
             >
-              <div className="flex items-center gap-3">
-                <span
-                  className="
-                    h-[6px]
-                    w-[6px]
-                    rounded-full
-                    bg-[#C6A15B]
-                    shadow-[0_0_14px_rgba(198,161,91,0.8)]
-                  "
-                />
+              {/* GLASS RING */}
+              <div className="absolute inset-[6px] rounded-full border border-white/20 bg-white/[0.06] backdrop-blur-sm" />
 
-                <span
-                  className="
-                    text-[14px]
-                    font-bold
-                    uppercase
-                    tracking-[0.22em]
-                    text-white/45
-                  "
-                >
-                  Our Approach
-                </span>
+              {/* INNER CIRCLE */}
+              <div className="absolute inset-[14px] rounded-full border border-white/[0.07]" />
 
-                <span
-                  className="
-                    hidden
-                    h-px
-                    w-10
-                    bg-white/10
-                    sm:block
-                  "
-                />
-              </div>
+              {/* NUMBER */}
+              <span className="relative z-10 text-[25px] font-bold tracking-[-0.06em] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)] sm:text-[28px]">
+                {step.number}
+              </span>
 
-            
-            </div>
-
-            {/* =================================================
-                JOURNEY FLOW
-            ================================================= */}
-
-            <div
-              className="
-                relative
-                z-10
-                mt-12
-              "
-            >
-              {/* =================================================
-                  DESKTOP CONNECTING STRING
-              ================================================= */}
-
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  left-[11%]
-                  right-[11%]
-                  top-[67px]
-                  hidden
-                  lg:block
-                "
-              >
-                {/* Glow */}
-
-                <div
-                  className="
-                    absolute
-                    left-0
-                    right-0
-                    top-1/2
-                    h-[12px]
-                    -translate-y-1/2
-                    rounded-full
-                    bg-[#087F8C]/20
-                    blur-[10px]
-                  "
-                />
-
-                {/* Base */}
-
-                <div
-                  className="
-                    absolute
-                    left-0
-                    right-0
-                    top-1/2
-                    h-[2px]
-                    -translate-y-1/2
-                    rounded-full
-                    bg-white/10
-                  "
-                />
-
-                {/* Animated gradient */}
-
-                <motion.div
-                  initial={{
-                    scaleX: 0,
-                  }}
-                  whileInView={{
-                    scaleX: 1,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.3,
-                  }}
-                  transition={{
-                    duration: 2,
-                    delay: 0.35,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="
-                    absolute
-                    left-0
-                    right-0
-                    top-1/2
-                    h-[3px]
-                    origin-left
-                    -translate-y-1/2
-                    rounded-full
-                    bg-gradient-to-r
-                    from-[#087F8C]
-                    via-[#C6A15B]
-                    to-[#087F8C]
-                  "
-                />
-
-                {/* Moving light */}
-
-                <motion.span
-                  initial={{
-                    left: "0%",
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    left: "100%",
-                    opacity: [0, 1, 1, 0],
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    duration: 2.2,
-                    delay: 0.55,
-                    ease: "easeInOut",
-                  }}
-                  className="
-                    absolute
-                    top-1/2
-                    h-[9px]
-                    w-[9px]
-                    -translate-x-1/2
-                    -translate-y-1/2
-                    rounded-full
-                    bg-white
-                    shadow-[0_0_20px_rgba(78,168,176,1)]
-                  "
-                />
-              </div>
-
-              {/* =================================================
-                  STEPS
-              ================================================= */}
-
-              <div
-                className="
-                  grid
-                  gap-12
-                  lg:grid-cols-4
-                  lg:gap-0
-                "
-              >
-                {journeySteps.map((step, index) => (
-                  <motion.div
-                    key={step.number}
-                    initial={{
-                      opacity: 0,
-                      y: 35,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                      amount: 0.2,
-                    }}
-                    transition={{
-                      duration: 0.7,
-                      delay: index * 0.16,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    className="
-                      group
-                      relative
-                      text-center
-                    "
-                  >
-                    {/* =================================================
-                        STEP CIRCLE
-                    ================================================= */}
-
-                    <div className="relative mx-auto w-fit">
-                      {/* Outer animated glow */}
-
-                      <motion.div
-                        animate={{
-                          scale: [1, 1.16, 1],
-                          opacity: [0.08, 0.22, 0.08],
-                        }}
-                        transition={{
-                          duration: 3.2,
-                          repeat: Infinity,
-                          delay: index * 0.45,
-                          ease: "easeInOut",
-                        }}
-                        className={`
-                          absolute
-                          inset-[-17px]
-                          rounded-full
-                          bg-gradient-to-br
-                          ${step.gradient}
-                          blur-[18px]
-                        `}
-                      />
-
-                      {/* Main circle */}
-
-                      <motion.div
-                        whileHover={{
-                          scale: 1.07,
-                        }}
-                        className={`
-                          relative
-                          flex
-                          h-[124px]
-                          w-[124px]
-                          items-center
-                          justify-center
-                          rounded-full
-                          border
-                          border-white/25
-                          bg-gradient-to-br
-                          ${step.gradient}
-                          shadow-[0_25px_60px_rgba(0,0,0,0.35)]
-                          transition-all
-                          duration-500
-                          sm:h-[140px]
-                          sm:w-[140px]
-                        `}
-                      >
-                        {/* Glass ring */}
-
-                        <div
-                          className="
-                            absolute
-                            inset-[7px]
-                            rounded-full
-                            border
-                            border-white/20
-                            bg-white/[0.06]
-                            backdrop-blur-sm
-                          "
-                        />
-
-                        {/* Inner circle */}
-
-                        <div
-                          className="
-                            absolute
-                            inset-[18px]
-                            rounded-full
-                            border
-                            border-white/[0.07]
-                          "
-                        />
-
-                        {/* Number */}
-
-                        <span
-                          className="
-                            relative
-                            z-10
-                            text-[28px]
-                            font-bold
-                            tracking-[-0.06em]
-                            text-white
-                            drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]
-                            sm:text-[31px]
-                          "
-                        >
-                          {step.number}
-                        </span>
-
-                        {/* Gold indicator */}
-
-                        <motion.span
-                          animate={{
-                            scale: [1, 1.4, 1],
-                            opacity: [0.65, 1, 0.65],
-                          }}
-                          transition={{
-                            duration: 2.4,
-                            repeat: Infinity,
-                            delay: index * 0.35,
-                          }}
-                          className="
-                            absolute
-                            bottom-[22px]
-                            h-[5px]
-                            w-[5px]
-                            rounded-full
-                            bg-[#C6A15B]
-                            shadow-[0_0_14px_rgba(198,161,91,0.9)]
-                          "
-                        />
-                      </motion.div>
-                    </div>
-
-                    {/* =================================================
-                        STEP CONTENT
-                    ================================================= */}
-
-                    <div className="mt-7">
-                      <span
-                        className="
-                          text-[14px]
-                          font-bold
-                          uppercase
-                          tracking-[0.22em]
-                          text-[#4EA8B0]
-                        "
-                      >
-                        Step {step.number}
-                      </span>
-
-                      <h4
-                        className="
-                          mx-auto
-                          mt-2
-                          max-w-[220px]
-                          text-[16px]
-                          font-semibold
-                          leading-[1.35]
-                          tracking-[-0.02em]
-                          text-white
-                          transition-colors
-                          duration-300
-                          group-hover:text-[#C6A15B]
-                          sm:text-[17px]
-                        "
-                      >
-                        {step.title}
-                      </h4>
-
-                      <motion.div
-                        initial={{
-                          width: 18,
-                        }}
-                        whileInView={{
-                          width: 40,
-                        }}
-                        viewport={{
-                          once: true,
-                        }}
-                        transition={{
-                          duration: 0.5,
-                          delay: 0.5 + index * 0.16,
-                        }}
-                        className="
-                          mx-auto
-                          mt-4
-                          h-[2px]
-                          rounded-full
-                          bg-gradient-to-r
-                          from-[#087F8C]
-                          to-[#C6A15B]
-                        "
-                      />
-                    </div>
-
-                    {/* =================================================
-                        MOBILE CONNECTOR
-                    ================================================= */}
-
-                    {index < journeySteps.length - 1 && (
-                      <motion.div
-                        initial={{
-                          height: 0,
-                        }}
-                        whileInView={{
-                          height: 46,
-                        }}
-                        viewport={{
-                          once: true,
-                        }}
-                        transition={{
-                          duration: 0.5,
-                          delay: 0.5 + index * 0.16,
-                        }}
-                        className="
-                          absolute
-                          bottom-[-50px]
-                          left-1/2
-                          w-[2px]
-                          -translate-x-1/2
-                          bg-gradient-to-b
-                          from-[#087F8C]
-                          to-[#C6A15B]
-                          shadow-[0_0_10px_rgba(8,127,140,0.55)]
-                          lg:hidden
-                        "
-                      />
-                    )}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* =================================================
-                EXPLANATION
-            ================================================= */}
-
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 15,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.7,
-                delay: 0.75,
-              }}
-              className="
-                relative
-                z-20
-                mt-12
-                border-t
-                border-white/[0.10]
-                pt-6
-              "
-            >
-              <div
-                className="
-                  flex
-                  flex-col
-                  gap-5
-                  lg:flex-row
-                  lg:items-center
-                  lg:justify-between
-                "
-              >
-                <p
-                  className="
-                    max-w-[750px]
-                    text-[15px]
-                    leading-6
-                    text-white/60
-                    sm:text-[15px]
-                  "
-                >
-                  Consulting and Project Execution are two cross-cutting
-                  IBS capabilities. They should not be treated as isolated
-                  service lines; instead, they should connect the full IBS
-                  offering from strategic advice and analysis through
-                  implementation, delivery and capability transfer.
-                </p>
-
-                <div
-                  className="
-                    flex
-                    shrink-0
-                    items-center
-                    gap-3
-                  "
-                >
-                  <span
-                    className="
-                      h-[6px]
-                      w-[6px]
-                      rounded-full
-                      bg-[#C6A15B]
-                      shadow-[0_0_14px_rgba(198,161,91,0.8)]
-                    "
-                  />
-
-                  <span
-                    className="
-                      text-[12px]
-                      font-bold
-                      uppercase
-                      tracking-[0.2em]
-                      text-white/60
-                    "
-                  >
-                    Strategy / Execution / Capability
-                  </span>
-                </div>
-              </div>
+              {/* GLOWING INDICATOR */}
+              <motion.span
+                animate={{
+                  scale: [1, 1.3, 1],
+                  opacity: [0.65, 1, 0.65],
+                }}
+                transition={{
+                  duration: 2.4,
+                  repeat: Infinity,
+                  delay: index * 0.3,
+                }}
+                className="absolute bottom-[17px] h-[4px] w-[4px] rounded-full bg-[#C6A15B] shadow-[0_0_12px_rgba(198,161,91,0.9)]"
+              />
             </motion.div>
           </div>
+
+          {/* STEP CONTENT */}
+          <div className="mt-4">
+            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#4EA8B0]">
+              Step {step.number}
+            </span>
+
+            <h4 className="mx-auto mt-1 max-w-[200px] text-[14px] font-semibold leading-[1.35] tracking-[-0.02em] text-white transition-colors duration-300 group-hover:text-[#C6A15B] sm:text-[15px]">
+              {step.title}
+            </h4>
+
+            <motion.div
+              initial={{ width: 16 }}
+              whileInView={{ width: 30 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: 0.4 + index * 0.12,
+              }}
+              className="mx-auto mt-3 h-[2px] rounded-full bg-gradient-to-r from-[#087F8C] to-[#C6A15B]"
+            />
+          </div>
+
+          {/* MOBILE CONNECTOR */}
+          {index < journeySteps.length - 1 && (
+            <motion.div
+              initial={{ height: 0 }}
+              whileInView={{ height: 30 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.4,
+                delay: 0.4 + index * 0.12,
+              }}
+              className="absolute bottom-[-34px] left-1/2 w-[2px] -translate-x-1/2 bg-gradient-to-b from-[#087F8C] to-[#C6A15B] shadow-[0_0_8px_rgba(8,127,140,0.55)] lg:hidden"
+            />
+          )}
+        </motion.div>
+      ))}
+    </div>
+  </div>
+
+  {/* EXPLANATION */}
+  <motion.div
+    initial={{
+      opacity: 0,
+      y: 10,
+    }}
+    whileInView={{
+      opacity: 1,
+      y: 0,
+    }}
+    viewport={{ once: true }}
+    transition={{
+      duration: 0.6,
+      delay: 0.6,
+    }}
+    className="relative z-20 mt-8 border-t border-white/[0.10] pt-4"
+  >
+    <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <p className="max-w-[750px] text-[13px] leading-5 text-white/60 sm:text-[14px]">
+        Consulting and Project Execution are two cross-cutting IBS
+        capabilities. They connect the full IBS offering, from strategic
+        advice and analysis through implementation, delivery, and capability
+        transfer.
+      </p>
+
+      <div className="flex shrink-0 items-center gap-2.5">
+        <span className="h-[5px] w-[5px] rounded-full bg-[#C6A15B] shadow-[0_0_12px_rgba(198,161,91,0.8)]" />
+
+        <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/60 sm:text-[11px]">
+          Strategy / Execution / Capability
+        </span>
+      </div>
+    </div>
+  </motion.div>
+</div>
+
         </motion.div>
 
         {/* =====================================================

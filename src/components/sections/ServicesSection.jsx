@@ -288,14 +288,7 @@ export default function ServicesSection() {
                 gap-3
               "
             >
-              <span
-                className="
-                  h-[3px]
-                  w-10
-                  rounded-full
-                  bg-[#C6A15B]
-                "
-              />
+              
 
               <span
                 className="
@@ -319,121 +312,30 @@ export default function ServicesSection() {
               />
             </motion.div>
 
-            <h2
-              className="
-                relative
-                max-w-[900px]
-                text-[42px]
-                font-bold
-                leading-[0.98]
-                tracking-[-0.055em]
-                text-[#202832]
-                sm:text-[54px]
-                md:text-[64px]
-                lg:text-[68px]
-                xl:text-[78px]
-                2xl:text-[84px]
-              "
-            >
-              <span className="block">
-                Expertise that
-              </span>
+  
+<h2
+  className="
+    relative
+    max-w-[900px]
+    text-[38px]
+    font-extrabold
+    leading-[1.08]
+    tracking-[-0.04em]
+    text-[#0B2438]
+    sm:text-[46px]
+    lg:text-[54px]
+    xl:text-[60px]
+  "
+>
+  <span className="block whitespace-nowrap">
+    Expertise that
+  </span>
 
-              <span
-                className="
-                  relative
-                  mt-2
-                  block
-                "
-              >
-                <span>
-                  moves you
-                </span>
+  <span className="block whitespace-nowrap">
+    moves you forward
+  </span>
+</h2>
 
-                <span
-                  className="
-                    relative
-                    ml-3
-                    inline-block
-                    text-[#087F8C]
-                  "
-                >
-                  <span
-                    className="
-                      absolute
-                      -bottom-1
-                      -left-3
-                      -right-3
-                      top-[15%]
-                      -z-10
-                      rounded-[12px]
-                      bg-[#087F8C]/[0.075]
-                    "
-                  />
-
-                  forward
-
-                  <motion.span
-                    initial={{
-                      width: 0,
-                    }}
-                    whileInView={{
-                      width:
-                        "calc(100% + 18px)",
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 1,
-                      delay: 0.5,
-                      ease: [
-                        0.22,
-                        1,
-                        0.36,
-                        1,
-                      ],
-                    }}
-                    className="
-                      absolute
-                      bottom-[-10px]
-                      left-[-2px]
-                      h-[4px]
-                      rounded-full
-                      bg-[#C6A15B]
-                    "
-                  />
-                </span>
-
-                <motion.span
-                  initial={{
-                    scale: 0,
-                    opacity: 0,
-                  }}
-                  whileInView={{
-                    scale: 1,
-                    opacity: 1,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    duration: 0.4,
-                    delay: 0.9,
-                  }}
-                  className="
-                    absolute
-                    -right-8
-                    bottom-2
-                    h-3
-                    w-3
-                    rounded-full
-                    bg-[#C6A15B]
-                    shadow-[0_0_0_6px_rgba(198,161,91,0.10)]
-                  "
-                />
-              </span>
-            </h2>
 
             <motion.p
               initial={{
@@ -573,7 +475,7 @@ export default function ServicesSection() {
             className="
               relative
               flex
-              min-h-[320px]
+              min-h-[200px]
               items-center
               justify-center
               lg:min-h-[360px]

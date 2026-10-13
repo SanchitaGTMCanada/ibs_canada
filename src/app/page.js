@@ -19,7 +19,7 @@ export default function Home() {
         <AboutSection />
         <ServicesSection />
         {/* <CTASection/> */}
-        <IndustriesSection/>
+        {/* <IndustriesSection/> */}
        
         <Footer/>
 
