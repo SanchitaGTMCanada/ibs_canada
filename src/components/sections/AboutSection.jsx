@@ -1152,11 +1152,11 @@ export default function AboutSection() {
       “
     </span>
 
-    <p className="max-w-[460px] text-[12px] font-medium leading-5 text-[#68737D] sm:text-[13px]">
-      IBS supports clients from understanding challenges to developing
-      strategies, executing priorities, and building lasting organizational
-      capability.
-    </p>
+   <p className="max-w-[460px] text-[18px] font-medium leading-7 text-[#68737D] sm:text-[16px] sm:leading-6">
+  IBS supports clients from understanding challenges to developing
+  strategies, executing priorities, and building lasting organizational
+  capability.
+</p>
   </div>
 
   <div className="mt-3 flex items-center gap-2 pl-6">

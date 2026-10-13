@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -8,10 +9,6 @@ import Image from "next/image";
 
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
-
-/* =========================================================
-   SERVICE LINKS
-========================================================= */
 
 const serviceLinks = [
   {
@@ -57,14 +54,7 @@ export default function Header() {
 
   const lastScrollY = useRef(0);
 
-  /* =====================================================
-     SCROLL BEHAVIOUR
-
-     Scroll DOWN → hide navbar
-     Scroll UP   → show navbar
-     Top         → always show
-  ===================================================== */
-
+  // Show navbar when scrolling up and hide it when scrolling down.
   useEffect(() => {
     lastScrollY.current = window.scrollY;
 
@@ -72,14 +62,12 @@ export default function Header() {
       const currentScrollY = window.scrollY;
       const previousScrollY = lastScrollY.current;
 
-      /* Always show navbar at top */
       if (currentScrollY <= 40) {
         setNavbarVisible(true);
         lastScrollY.current = currentScrollY;
         return;
       }
 
-      /* Ignore tiny movements */
       const scrollDifference = Math.abs(
         currentScrollY - previousScrollY
       );
@@ -88,14 +76,10 @@ export default function Header() {
         return;
       }
 
-      /* Scrolling down */
       if (currentScrollY > previousScrollY) {
         setNavbarVisible(false);
         setMobileOpen(false);
-      }
-
-      /* Scrolling up */
-      else if (currentScrollY < previousScrollY) {
+      } else if (currentScrollY < previousScrollY) {
         setNavbarVisible(true);
       }
 
@@ -111,10 +95,7 @@ export default function Header() {
     };
   }, []);
 
-  /* =====================================================
-     MOBILE BODY LOCK
-  ===================================================== */
-
+  // Prevent background scrolling while the mobile menu is open.
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
 
@@ -125,10 +106,7 @@ export default function Header() {
 
   return (
     <>
-      {/* =================================================
-          FLOATING HEADER
-      ================================================= */}
-
+      {/* FLOATING HEADER */}
       <motion.header
         initial={{
           opacity: 1,
@@ -156,10 +134,7 @@ export default function Header() {
           lg:pt-8
         "
       >
-        {/* =================================================
-            NAVBAR PILL
-        ================================================= */}
-
+        {/* NAVBAR PILL */}
         <div
           className="
             ibs-container
@@ -184,10 +159,7 @@ export default function Header() {
             width: "100%",
           }}
         >
-          {/* =================================================
-              BACKGROUND DECORATION
-          ================================================= */}
-
+          {/* BACKGROUND DECORATION */}
           <div
             className="
               pointer-events-none
@@ -199,7 +171,6 @@ export default function Header() {
             "
           >
             {/* BASE */}
-
             <div
               className="
                 absolute
@@ -212,7 +183,6 @@ export default function Header() {
             />
 
             {/* TEAL GLOW */}
-
             <motion.div
               className="
                 absolute
@@ -237,7 +207,6 @@ export default function Header() {
             />
 
             {/* GOLD GLOW */}
-
             <motion.div
               className="
                 absolute
@@ -262,7 +231,6 @@ export default function Header() {
             />
 
             {/* TEAL CIRCLE */}
-
             <div
               className="
                 absolute
@@ -277,7 +245,6 @@ export default function Header() {
             />
 
             {/* GOLD CIRCLE */}
-
             <div
               className="
                 absolute
@@ -292,7 +259,6 @@ export default function Header() {
             />
 
             {/* DOT PATTERN */}
-
             <div
               className="
                 absolute
@@ -311,59 +277,16 @@ export default function Header() {
             />
 
             {/* GOLD DOTS */}
+            <div className="absolute right-[35px] top-[18px] h-[5px] w-[5px] rounded-full bg-[#C6A15B]/60" />
 
-            <div
-              className="
-                absolute
-                right-[35px]
-                top-[18px]
-                h-[5px]
-                w-[5px]
-                rounded-full
-                bg-[#C6A15B]/60
-              "
-            />
+            <div className="absolute right-[50px] top-[30px] h-[3px] w-[3px] rounded-full bg-[#087F8C]/50" />
 
-            <div
-              className="
-                absolute
-                right-[50px]
-                top-[30px]
-                h-[3px]
-                w-[3px]
-                rounded-full
-                bg-[#087F8C]/50
-              "
-            />
-
-            <div
-              className="
-                absolute
-                right-[25px]
-                top-[34px]
-                h-[3px]
-                w-[3px]
-                rounded-full
-                bg-[#C6A15B]/50
-              "
-            />
+            <div className="absolute right-[25px] top-[34px] h-[3px] w-[3px] rounded-full bg-[#C6A15B]/50" />
 
             {/* LEFT GOLD DOT */}
-
-            <div
-              className="
-                absolute
-                bottom-[17px]
-                left-[210px]
-                h-[4px]
-                w-[4px]
-                rounded-full
-                bg-[#C6A15B]/40
-              "
-            />
+            <div className="absolute bottom-[17px] left-[210px] h-[4px] w-[4px] rounded-full bg-[#C6A15B]/40" />
 
             {/* TEAL LINE */}
-
             <div
               className="
                 absolute
@@ -379,10 +302,7 @@ export default function Header() {
             />
           </div>
 
-          {/* =================================================
-              NAVBAR CONTENT
-          ================================================= */}
-
+          {/* NAVBAR CONTENT */}
           <div
             className="
               relative
@@ -392,10 +312,7 @@ export default function Header() {
               items-center
             "
           >
-            {/* =================================================
-                LOGO
-            ================================================= */}
-
+            {/* LOGO */}
             <Link
               href="/"
               onClick={() => setMobileOpen(false)}
@@ -425,10 +342,7 @@ export default function Header() {
               />
             </Link>
 
-            {/* =================================================
-                CENTER NAVIGATION
-            ================================================= */}
-
+            {/* CENTER NAVIGATION */}
             <div
               className="
                 absolute
@@ -436,16 +350,54 @@ export default function Header() {
                 z-[999]
                 hidden
                 -translate-x-1/2
-                md:block
+                items-center
+                gap-6
+                md:flex
               "
             >
               <DesktopNav services={serviceLinks} />
+
+              {/* CONTACT US - REGULAR MENU ITEM */}
+           <Link
+  href="/contact"
+  onClick={() => setMobileOpen(false)}
+  className="
+    group
+    relative
+    whitespace-nowrap
+    py-2
+    text-[14px]
+    font-medium
+    text-[#43515C]
+    transition-colors
+    duration-300
+    hover:text-[#C6A15B]
+  "
+>
+  Contact Us
+
+  {/* Animated golden bottom underline */}
+  <span
+    className="
+      absolute
+      bottom-0
+      left-0
+      h-[2px]
+      w-full
+      origin-left
+      scale-x-0
+      rounded-full
+      bg-[#C6A15B]
+      transition-transform
+      duration-300
+      ease-out
+      group-hover:scale-x-100
+    "
+  />
+</Link>
             </div>
 
-            {/* =================================================
-                RIGHT SIDE
-            ================================================= */}
-
+            {/* RIGHT SIDE */}
             <div
               className="
                 relative
@@ -456,95 +408,35 @@ export default function Header() {
                 gap-2
               "
             >
-              {/* =================================================
-                  FUNDING PROGRAM
-              ================================================= */}
-<Link
-  href="https://funding-project-kz1n.vercel.app/"
-  className="
-    group
-    hidden
-    items-center
-    gap-1.5
-    rounded-full
-    bg-gradient-to-r
-    from-[#087F8C]
-    to-[#0B6F78]
-    px-3.5
-    py-2
-    text-[13px]
-    font-medium
-    !text-white
-    shadow-[0_5px_18px_rgba(8,127,140,0.20)]
-    transition-all
-    duration-300
-    hover:-translate-y-0.5
-    hover:from-[#0B6F78]
-    hover:to-[#0B1F3A]
-    hover:shadow-[0_8px_24px_rgba(8,127,140,0.28)]
-    md:inline-flex
-  "
->
-  <span className="!text-white">
-    Funding Program
-  </span>
-
-  <span
-    className="
-      flex
-      h-6
-      w-6
-      items-center
-      justify-center
-      rounded-full
-      bg-white/20
-      !text-white
-      backdrop-blur-sm
-      transition-all
-      duration-300
-      group-hover:bg-white/30
-      group-hover:-translate-y-0.5
-      group-hover:translate-x-0.5
-    "
-  >
-    <ArrowUpRight
-      size={12}
-      strokeWidth={2}
-      className="!text-white"
-    />
-  </span>
-</Link>
-
-              {/* =================================================
-                  CONTACT US
-              ================================================= */}
-
+              {/* FUNDING PROGRAM */}
               <Link
-                href="/contact"
+                href="https://funding-project-kz1n.vercel.app/"
                 className="
                   group
                   hidden
                   items-center
                   gap-1.5
                   rounded-full
-                  bg-[#087F8C]
+                  bg-gradient-to-r
+                  from-[#087F8C]
+                  to-[#0B6F78]
                   px-3.5
                   py-2
                   text-[13px]
                   font-medium
                   !text-white
-                  shadow-[0_5px_16px_rgba(8,127,140,0.16)]
+                  shadow-[0_5px_18px_rgba(8,127,140,0.20)]
                   transition-all
                   duration-300
                   hover:-translate-y-0.5
-                  hover:bg-[#0B1F3A]
-                  hover:shadow-[0_8px_22px_rgba(11,31,58,0.18)]
-                  hover:!text-white
+                  hover:from-[#0B6F78]
+                  hover:to-[#0B1F3A]
+                  hover:shadow-[0_8px_24px_rgba(8,127,140,0.28)]
                   md:inline-flex
                 "
               >
                 <span className="!text-white">
-                  Contact Us
+                  Funding Program
                 </span>
 
                 <span
@@ -555,10 +447,12 @@ export default function Header() {
                     items-center
                     justify-center
                     rounded-full
-                    bg-[#0B1F3A]
+                    bg-white/20
                     !text-white
-                    transition-transform
+                    backdrop-blur-sm
+                    transition-all
                     duration-300
+                    group-hover:bg-white/30
                     group-hover:-translate-y-0.5
                     group-hover:translate-x-0.5
                   "
@@ -571,10 +465,7 @@ export default function Header() {
                 </span>
               </Link>
 
-              {/* =================================================
-                  MOBILE MENU
-              ================================================= */}
-
+              {/* MOBILE MENU BUTTON */}
               <button
                 type="button"
                 aria-label={
@@ -582,9 +473,8 @@ export default function Header() {
                     ? "Close navigation"
                     : "Open navigation"
                 }
-                onClick={() =>
-                  setMobileOpen(!mobileOpen)
-                }
+                aria-expanded={mobileOpen}
+                onClick={() => setMobileOpen(!mobileOpen)}
                 className="
                   relative
                   z-[220]
@@ -602,10 +492,7 @@ export default function Header() {
                   md:hidden
                 "
               >
-                <AnimatePresence
-                  mode="wait"
-                  initial={false}
-                >
+                <AnimatePresence mode="wait" initial={false}>
                   {mobileOpen ? (
                     <motion.span
                       key="close"
@@ -650,10 +537,7 @@ export default function Header() {
         </div>
       </motion.header>
 
-      {/* =================================================
-          MOBILE NAVIGATION
-      ================================================= */}
-
+      {/* MOBILE NAVIGATION */}
       <AnimatePresence>
         {mobileOpen && (
           <MobileNav
