@@ -22,7 +22,7 @@ const industries = [
     id: "indigenous",
     title: "Indigenous Organizations & Communities",
     description:
-      "Supporting governance, financial management, organizational capacity, economic development, infrastructure and community priorities.",
+      "Supporting Indigenous organizations with governance, financial management, funding, risk management, economic development, and organizational capacity building.",
     icon: Cpu,
     image:
       "home/home-4.jpg",
@@ -33,7 +33,7 @@ const industries = [
     id: "government",
     title: "Government & Public Sector",
     description:
-      "Helping public-sector leaders strengthen programs, governance, financial management, operational performance and project delivery.",
+      "Strengthening public-sector performance through financial management, audits, risk management, strategic advisory, program support, and organizational improvement.",
     icon: Landmark,
     image:
        "/home/home-8.jpg",
