@@ -86,662 +86,253 @@ export default function AboutPage() {
       {/* =====================================================
           01 — HERO
       ===================================================== */}
-<Header/>
-      <section
-        className="
-          relative
-          min-h-[900px]
-          overflow-hidden
-          bg-[#0B1F3A]
-          pt-[155px]
-          sm:pt-[165px]
-          lg:min-h-[930px]
-          lg:pt-[180px]
-        "
+
+{/* =====================================================
+    01 — HERO WITH FULL BACKGROUND IMAGE
+===================================================== */}
+
+<Header />
+
+<section className="relative isolate flex min-h-[780px] items-center overflow-hidden bg-[#0B1F3A]  sm:min-h-[820px]  lg:min-h-[900px] ">
+
+  {/* =================================================
+      FULL-WIDTH BACKGROUND IMAGE
+  ================================================= */}
+
+  <div className="absolute inset-0 -z-30">
+    <img
+      src="/images/about/about-who-hero.jpg"
+      alt=""
+      aria-hidden="true"
+      fetchPriority="high"
+      className="h-full w-full object-cover object-center"
+    />
+  </div>
+
+ {/* =================================================
+    GRADIENT OVERLAY — CONTENT READABILITY
+================================================= */}
+{/* LIGHT OVERLAY — SLIGHTLY STRONGER */}
+<div className="pointer-events-none absolute inset-0 -z-20 bg-gradient-to-r from-[#EEF5F8]/60 via-[#EEF5F8]/35 via-45% to-[#EEF5F8]/8" />
+
+{/* BOTTOM SHADING */}
+<div className="pointer-events-none absolute inset-0 -z-20 bg-gradient-to-t from-[#0B2438]/25 via-transparent to-white/[0.03]" />
+
+{/* SUBTLE WHITE HIGHLIGHT */}
+<div className="pointer-events-none absolute inset-0 -z-20 bg-white/[0.03]" />
+
+  {/* =================================================
+      AMBIENT LIGHT
+  ================================================= */}
+
+  <motion.div
+    animate={{
+      x: [0, 60, 0],
+      y: [0, -25, 0],
+      scale: [1, 1.1, 1],
+    }}
+    transition={{
+      duration: 18,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="pointer-events-none absolute -left-[220px] top-[5%] -z-10 h-[500px] w-[500px] rounded-full bg-[#087F8C]/20 blur-[140px]"
+  />
+
+  <motion.div
+    animate={{
+      x: [0, -50, 0],
+      y: [0, 30, 0],
+      scale: [1, 1.08, 1],
+    }}
+    transition={{
+      duration: 20,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="pointer-events-none absolute -right-[180px] top-[25%] -z-10 h-[420px] w-[420px] rounded-full bg-[#C6A15B]/15 blur-[130px]"
+  />
+
+  {/* =================================================
+      SUBTLE GRID
+  ================================================= */}
+
+  <div className="pointer-events-none absolute inset-0 -z-10 opacity-[0.045] [background-image:linear-gradient(rgba(220,226,231,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(220,226,231,0.4)_1px,transparent_1px)] [background-size:75px_75px]" />
+
+  {/* =================================================
+      GIANT BACKGROUND IBS
+  ================================================= */}
+
+  <motion.div
+    initial={{ opacity: 0, x: -60 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1.3 }}
+    className="pointer-events-none absolute bottom-[-45px] left-[-12px] -z-10 select-none text-[180px] font-black leading-none tracking-[-0.1em] text-white/[0.045] sm:bottom-[-65px] sm:text-[260px] lg:bottom-[-90px] lg:text-[390px]"
+  >
+    IBS
+  </motion.div>
+
+  {/* =================================================
+      VERTICAL ACCENT
+  ================================================= */}
+
+  <div className="pointer-events-none absolute bottom-0 right-[10%] top-0 hidden w-px bg-white/[0.10] lg:block" />
+
+  {/* =================================================
+      FLOATING DECORATIVE ICONS
+  ================================================= */}
+
+  <motion.div
+    animate={{
+      y: [0, -14, 0],
+      rotate: [0, 5, 0],
+    }}
+    transition={{
+      duration: 7,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="pointer-events-none absolute left-[5%] top-[30%] hidden lg:block"
+  >
+    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#C6A15B]/30 bg-[#0B1F3A]/40 text-[#C6A15B]/80 backdrop-blur-md">
+      <Lightbulb size={25} />
+    </div>
+  </motion.div>
+
+  <motion.div
+    animate={{
+      y: [0, 16, 0],
+      rotate: [0, -5, 0],
+    }}
+    transition={{
+      duration: 8,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="pointer-events-none absolute right-[5%] top-[60%] hidden lg:block"
+  >
+    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#087F8C]/40 bg-[#0B1F3A]/40 text-[#BCEBE8]/80 backdrop-blur-md">
+      <Network size={28} />
+    </div>
+  </motion.div>
+
+  {/* =================================================
+      HERO CONTENT — SINGLE COLUMN
+  ================================================= */}
+
+  <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-12 sm:px-8 sm:pb-22 lg:px-10 lg:pb-22 xl:px-14">
+
+    <div className="max-w-[900px]">
+
+   {/* EYEBROW */}
+<motion.div
+  initial="hidden"
+  animate="visible"
+  variants={fadeLeft}
+  transition={{ duration: 0.7 }}
+  className="flex items-center gap-4"
+>
+  <span className="text-[13px] font-extrabold uppercase tracking-[0.22em] text-[#0B2438] drop-shadow-[0_1px_1px_rgba(255,255,255,0.3)] sm:text-[14px]">
+    About IBS Canada
+  </span>
+</motion.div>
+
+{/* MAIN HEADING */}
+<motion.h1
+  initial="hidden"
+  animate="visible"
+  variants={fadeLeft}
+  transition={{
+    delay: 0.12,
+    duration: 0.9,
+  }}
+  className="mt-8 text-[44px] font-bold leading-[1.02] tracking-[-0.05em] text-[#0B2438] drop-shadow-[0_3px_8px_rgba(255,255,255,0.45)] sm:mt-10 sm:text-[56px] md:text-[68px] lg:text-[76px] xl:text-[88px]"
+>
+  Who we
+
+  <motion.span
+    initial={{ opacity: 0, x: -20 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{
+      delay: 0.5,
+      duration: 0.8,
+    }}
+    className="block text-[#0B2438]"
+  >
+    are
+  </motion.span>
+</motion.h1>
+
+  
+
+{/* DESCRIPTION */}
+<motion.p
+  initial="hidden"
+  animate="visible"
+  variants={fadeLeft}
+  transition={{
+    delay: 0.35,
+    duration: 0.8,
+  }}
+  className="mt-7 max-w-[700px] text-[15px] font-bold leading-7 text-[#43515C] sm:mt-8 sm:text-[17px] sm:leading-8 lg:text-[18px]"
+>
+  Innovative Business Solutions Ltd. is a Canadian management consulting
+  and professional services firm serving Indigenous organizations,
+  communities, governments and entrepreneurs in Canada and internationally.
+</motion.p>
+      {/* CTA BUTTONS */}
+   <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{
+    delay: 0.7,
+    duration: 0.7,
+  }}
+  className="mt-8 flex flex-wrap gap-4 sm:mt-10"
+>
+  {/* DISCOVER IBS */}
+  <Link
+    href="#story"
+    className="group inline-flex items-center gap-3 rounded-full bg-[#087F8C] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-md shadow-[#087F8C]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#066A75] sm:px-6 sm:py-3.5"
+  style={{color:"white"}}
+  
+  >
+    Discover IBS
+
+    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 text-white transition-transform duration-300 group-hover:translate-y-1">
+      <ArrowDown size={13} />
+    </span>
+  </Link>
+
+  {/* EXPLORE SERVICES */}
+  <Link
+    href="/services"
+    className="group inline-flex items-center gap-2 rounded-full border border-[#087F8C] bg-[#087F8C] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-md shadow-[#087F8C]/20 transition-all duration-300 hover:-translate-y-1 hover:border-[#066A75] hover:bg-[#066A75] sm:px-6 sm:py-3.5"
+  style={{color:"white"}}
+  
+  >
+    <span >Explore Services</span>
+
+    <ArrowUpRight
+      size={14}
+      className="transition-transform duration-300 group-hover:translate-x-1"
+    />
+  </Link>
+</motion.div>
 
    
-      >
-        
 
-        {/* =================================================
-            BACKGROUND LIGHT
-        ================================================= */}
+    </div>
+  </div>
 
-        <motion.div
-          animate={{
-            x: [0, 80, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.08, 1],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            pointer-events-none
-            absolute
-            -left-[250px]
-            -top-[180px]
-            h-[600px]
-            w-[600px]
-            rounded-full
-            bg-[#087F8C]/20
-            blur-[140px]
-          "
-        />
+  {/* =================================================
+      BOTTOM FADE INTO NEXT SECTION
+  ================================================= */}
 
-        <motion.div
-          animate={{
-            x: [0, -70, 0],
-            y: [0, 40, 0],
-            scale: [1, 1.12, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            pointer-events-none
-            absolute
-            -right-[250px]
-            top-[10%]
-            h-[550px]
-            w-[550px]
-            rounded-full
-            bg-[#C6A15B]/10
-            blur-[130px]
-          "
-        />
+  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0B1F3A] to-transparent" />
 
-        {/* Grid */}
+</section>
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            inset-0
-            opacity-[0.065]
-            [background-image:linear-gradient(rgba(220,226,231,0.32)_1px,transparent_1px),linear-gradient(90deg,rgba(220,226,231,0.32)_1px,transparent_1px)]
-            [background-size:75px_75px]
-          "
-        />
-
-        {/* Giant IBS */}
-
-        <motion.div
-          initial={{
-            opacity: 0,
-            x: -80,
-          }}
-          animate={{
-            opacity: 1,
-            x: 0,
-          }}
-          transition={{
-            duration: 1.5,
-          }}
-          className="
-            pointer-events-none
-            absolute
-            bottom-[-80px]
-            left-[-20px]
-            select-none
-            text-[190px]
-            font-black
-            leading-none
-            tracking-[-0.1em]
-            text-white/[0.025]
-            sm:text-[270px]
-            lg:text-[400px]
-          "
-        >
-          IBS
-        </motion.div>
-
-        {/* Vertical accent */}
-
-        <div
-          className="
-            pointer-events-none
-            absolute
-            bottom-0
-            right-[11%]
-            top-0
-            hidden
-            w-px
-            bg-white/[0.06]
-            lg:block
-          "
-        />
-
-        {/* =================================================
-            FLOATING ICONS
-        ================================================= */}
-
-        <motion.div
-          animate={{
-            y: [0, -15, 0],
-            rotate: [0, 5, 0],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            pointer-events-none
-            absolute
-            left-[5%]
-            top-[35%]
-            hidden
-            lg:block
-          "
-        >
-          <div
-            className="
-              flex
-              h-14
-              w-14
-              items-center
-              justify-center
-              rounded-2xl
-              border
-              border-[#C6A15B]/20
-              bg-white/[0.03]
-              text-[#C6A15B]/50
-              backdrop-blur-md
-            "
-          >
-            <Lightbulb size={25} />
-          </div>
-        </motion.div>
-
-        <motion.div
-          animate={{
-            y: [0, 18, 0],
-            rotate: [0, -6, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            pointer-events-none
-            absolute
-            right-[4%]
-            top-[58%]
-            hidden
-            lg:block
-          "
-        >
-          <div
-            className="
-              flex
-              h-16
-              w-16
-              items-center
-              justify-center
-              rounded-full
-              border
-              border-[#087F8C]/25
-              bg-white/[0.03]
-              text-[#BCEBE8]/50
-              backdrop-blur-md
-            "
-          >
-            <Network size={28} />
-          </div>
-        </motion.div>
-
-        {/* =================================================
-            HERO CONTENT
-        ================================================= */}
-
-        <div
-          className="
-            relative
-            z-10
-            mx-auto
-            grid
-            max-w-[1400px]
-            gap-14
-            px-6
-            pb-28
-            sm:px-8
-            lg:grid-cols-[0.85fr_1.15fr]
-            lg:items-center
-            lg:gap-16
-            lg:px-10
-            xl:px-14
-          "
-
-          
-        >
-
-          {/* LEFT */}
-
-          <div>
-
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeLeft}
-              transition={{
-                duration: 0.7,
-              }}
-              className="flex items-center gap-4"
-            >
-
-              <motion.span
-                initial={{
-                  width: 0,
-                }}
-                animate={{
-                  width: 48,
-                }}
-                transition={{
-                  delay: 0.3,
-                  duration: 0.7,
-                }}
-                className="h-[2px] bg-[#C6A15B]"
-              />
-
-              <span
-                className="
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-[0.3em]
-                  text-[#BCEBE8]
-                "
-              >
-                About IBS Canada
-              </span>
-
-            </motion.div>
-
-
-            <motion.h1
-              initial="hidden"
-              animate="visible"
-              variants={fadeLeft}
-              transition={{
-                delay: 0.12,
-                duration: 0.9,
-              }}
-              className="
-                mt-9
-                max-w-[720px]
-                text-[58px]
-                font-bold
-                leading-[0.9]
-                tracking-[-0.07em]
-                text-white
-                sm:text-[78px]
-                lg:text-[92px]
-                xl:text-[112px]
-              "
-            >
-              Who we
-
-              <motion.span
-                initial={{
-                  opacity: 0,
-                  x: -20,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                }}
-                transition={{
-                  delay: 0.5,
-                  duration: 0.8,
-                }}
-                className="block text-[#BCEBE8]"
-              >
-               are 
-              </motion.span>
-
-            </motion.h1>
-
-
-            <motion.div
-              initial={{
-                width: 0,
-              }}
-              animate={{
-                width: 75,
-              }}
-              transition={{
-                delay: 0.7,
-                duration: 0.7,
-              }}
-              className="
-                mt-9
-                h-[3px]
-                rounded-full
-                bg-gradient-to-r
-                from-[#C6A15B]
-                to-[#087F8C]
-              "
-            />
-
-
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={fadeLeft}
-              transition={{
-                delay: 0.35,
-                duration: 0.8,
-              }}
-              className="
-                mt-8
-                max-w-[560px]
-                text-[16px]
-                leading-8
-                text-white/55
-                sm:text-[18px]
-              "
-            >Innovative Business Solutions Ltd. is a Canadian management consulting and professional services firm serving Indigenous organizations, communities, governments and entrepreneurs in Canada and internationally. 
-            </motion.p>
-
-
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                delay: 0.7,
-                duration: 0.7,
-              }}
-              className="mt-9 flex flex-wrap gap-4"
-            >
-
-              <Link
-                href="#story"
-                className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-3
-                  rounded-full
-                  bg-[#C6A15B]
-                  px-6
-                  py-3.5
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#0B1F3A]
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:bg-[#D7C17A]
-                "
-              >
-                Discover IBS
-
-                <span
-                  className="
-                    flex
-                    h-7
-                    w-7
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#0B1F3A]
-                    text-white
-                    transition-transform
-                    duration-300
-                    group-hover:translate-y-1
-                  "
-                >
-                  <ArrowDown size={13} />
-                </span>
-
-              </Link>
-
-
-            <Link
-  href="/services"
-  className="
-    group
-    inline-flex
-    items-center
-    gap-2
-    rounded-full
-    border
-    border-white/20
-    px-6
-    py-3.5
-    text-[10px]
-    font-bold
-    uppercase
-    tracking-[0.14em]
-    text-white
-    transition-all
-    duration-300
-    hover:border-[#BCEBE8]
-    hover:bg-white/5
-  "
->
-  <span className="text-white">
-    Explore Services
-  </span>
-
-  <ArrowUpRight
-    size={14}
-    className="
-      text-white
-      transition-transform
-      duration-300
-      group-hover:translate-x-1
-    "
-  />
-</Link>
-
-            </motion.div>
-
-          </div>
-
-
-          {/* =================================================
-              HERO IMAGE
-          ================================================= */}
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.92,
-              x: 60,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              x: 0,
-            }}
-            transition={{
-              duration: 1.2,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="relative"
-          >
-
-            {/* Animated frame */}
-
-            <motion.div
-              animate={{
-                rotate: [0, 1.5, 0, -1.5, 0],
-              }}
-              transition={{
-                duration: 15,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                absolute
-                -bottom-5
-                -left-5
-                h-full
-                w-full
-                rounded-[34px]
-                border
-                border-[#C6A15B]/25
-              "
-            />
-
-            <div
-              className="
-                relative
-                aspect-[1.05/1]
-                overflow-hidden
-                rounded-[34px]
-                border
-                border-white/15
-                bg-[#123A5A]
-                shadow-[0_40px_100px_rgba(0,0,0,0.3)]
-              "
-            >
-
-              <motion.img
-                initial={{
-                  scale: 1.12,
-                }}
-                animate={{
-                  scale: 1,
-                }}
-                transition={{
-                  duration: 1.8,
-                  ease: "easeOut",
-                }}
-                src="/images/about/about-who-hero.jpg"
-                alt="Business professionals collaborating"
-                loading="eager"
-                className="
-                  absolute
-                  inset-0
-                  h-full
-                  w-full
-                  object-cover
-                  transition-transform
-                  duration-[1600ms]
-                  hover:scale-105
-                "
-              />
-
-              <div
-                className="
-                  absolute
-                  inset-0
-                  bg-gradient-to-tr
-                  from-[#0B1F3A]/75
-                  via-transparent
-                  to-[#087F8C]/10
-                "
-              />
-
-              {/* Corner icon */}
-
-              <motion.div
-                animate={{
-                  y: [0, -8, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="
-                  absolute
-                  right-6
-                  top-6
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-white/20
-                  bg-[#0B1F3A]/50
-                  text-[#C6A15B]
-                  backdrop-blur-md
-                "
-              >
-                <Sparkles size={19} />
-              </motion.div>
-
-
-              {/* Image caption */}
-
-              <div
-                className="
-                  absolute
-                  bottom-6
-                  left-6
-                  right-6
-                  flex
-                  items-end
-                  justify-between
-                  gap-5
-                  rounded-[20px]
-                  border
-                  border-white/15
-                  bg-[#0B1F3A]/65
-                  p-5
-                  backdrop-blur-xl
-                "
-              >
-
-                <div>
-
-                  <p
-                    className="
-                      text-[9px]
-                      font-bold
-                      uppercase
-                      tracking-[0.2em]
-                      text-[#C6A15B]
-                    "
-                  >
-                    Our Mission
-                  </p>
-
-                  <p className="mt-1 text-[14px] text-white">
-                    To deliver culturally informed, practical business solutions.
-                  </p>
-
-                </div>
-
-                <span
-                  className="
-                    text-[40px]
-                    font-bold
-                    leading-none
-                    text-white/10
-                  "
-                >
-                  01
-                </span>
-
-              </div>
-
-            </div>
-
-          </motion.div>
-
-        </div>
-
-      </section>
 
 
       {/* =====================================================
