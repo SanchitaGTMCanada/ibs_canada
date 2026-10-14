@@ -475,43 +475,43 @@ export default function AboutPage() {
 
             <div>
 
-              <h2
-                className="
-                  max-w-[1000px]
-                  text-[43px]
-                  font-bold
-                  leading-[1.05]
-                  tracking-[-0.055em]
-                  text-[#202832]
-                  sm:text-[60px]
-                  lg:text-[76px]
-                "
-              >
-                Progress happens when
+         <h2
+  className="
+    max-w-[1000px]
+    text-[43px]
+    font-bold
+    leading-[1.05]
+    tracking-[-0.055em]
+    text-[#0B2438]
+    sm:text-[60px]
+    lg:text-[76px]
+  "
+>
+  Progress happens when
 
-                <motion.span
-                  initial={{
-                    opacity: 0,
-                    x: -20,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    delay: 0.25,
-                    duration: 0.8,
-                  }}
-                  className="text-[#087F8C]"
-                >
-                  {" "}different ideas
-                </motion.span>{" "}
+  <motion.span
+    initial={{
+      opacity: 0,
+      x: -20,
+    }}
+    whileInView={{
+      opacity: 1,
+      x: 0,
+    }}
+    viewport={{
+      once: true,
+    }}
+    transition={{
+      delay: 0.25,
+      duration: 0.8,
+    }}
+    className="text-[#0B2438]"
+  >
+    {" "}different ideas
+  </motion.span>{" "}
 
-                start moving together.
-              </h2>
+  start moving together.
+</h2>
 
 
               <div className="mt-12 grid gap-8 md:grid-cols-2">
@@ -592,11 +592,7 @@ export default function AboutPage() {
           <span className="text-[#B9F0E8]">Mission</span>
         </h2>
 
-        {/* Accent lines */}
-        <div className="mt-6 flex items-center gap-2.5">
-          <span className="h-[2px] w-12 rounded-full bg-[#00B8C4]" />
-          <span className="h-[2px] w-20 rounded-full bg-[#C69A45]" />
-        </div>
+       
 
         <p className="mt-5 max-w-[300px] text-[12px] leading-6 text-[#AAB8CA] sm:text-[13px]">
           Turning strategic thinking into practical progress for stronger,
@@ -782,23 +778,23 @@ export default function AboutPage() {
       </span>
 
       <h2
-        className="
-          mt-5
-          text-[42px]
-          font-bold
-          leading-[0.98]
-          tracking-[-0.055em]
-          text-[#202832]
-          sm:text-[56px]
-          lg:text-[64px]
-        "
-      >
-        How We
+  className="
+    mt-5
+    text-[42px]
+    font-bold
+    leading-[0.98]
+    tracking-[-0.055em]
+    text-[#0B2438]
+    sm:text-[56px]
+    lg:text-[64px]
+  "
+>
+  How We
 
-        <span className="block text-[#087F8C]">
-          Work
-        </span>
-      </h2>
+  <span className="block text-[#0B2438]">
+    Work
+  </span>
+</h2>
 
     </div>
 
@@ -1286,25 +1282,25 @@ export default function AboutPage() {
         </div>
 
 
-        <h2
-          className="
-            mt-6
-            max-w-[650px]
-            text-[48px]
-            font-bold
-            leading-[0.94]
-            tracking-[-0.06em]
-            text-[#202832]
-            sm:text-[64px]
-            lg:text-[72px]
-          "
-        >
-          Why Clients
+       <h2
+  className="
+    mt-6
+    max-w-[650px]
+    text-[48px]
+    font-bold
+    leading-[0.94]
+    tracking-[-0.06em]
+    text-[#0B2438]
+    sm:text-[64px]
+    lg:text-[72px]
+  "
+>
+  Why Clients
 
-          <span className="block text-[#087F8C]">
-            Select IBS.
-          </span>
-        </h2>
+  <span className="block text-[#0B2438]">
+    Select IBS.
+  </span>
+</h2>
 
         
 
