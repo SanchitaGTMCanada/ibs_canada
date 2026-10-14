@@ -366,10 +366,7 @@ export default function ServicesSection() {
                 sm:text-[16px]
               "
             >
-              From strategy and technology to
-              infrastructure and financial management,
-              our capabilities come together to create
-              practical solutions with lasting impact.
+              Our cross-cutting capabilities provide end-to-end support for the A–Z of your business needs, delivering practical solutions that address immediate challenges while building lasting capacity for growth.
             </motion.p>
 
             <motion.div

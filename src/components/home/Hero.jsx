@@ -394,7 +394,7 @@ export default function Hero() {
         [-webkit-text-stroke:1px_#66727B]
       "
     >
-      Turning complex challenges
+      Transforming challenges 
     </span>
 
     {/* SOLID BLUE TEXT */}
@@ -407,7 +407,7 @@ export default function Hero() {
         drop-shadow-[0_5px_7px_rgba(11,36,56,0.18)]
       "
     >
-      Turning complex challenges
+      Transforming challenges 
     </span>
   </span>
 
@@ -422,7 +422,7 @@ export default function Hero() {
         [-webkit-text-stroke:1px_#66727B]
       "
     >
-      into practical progress
+      into strengths
     </span>
 
     {/* SOLID BLUE TEXT */}
@@ -435,7 +435,7 @@ export default function Hero() {
         drop-shadow-[0_5px_7px_rgba(11,36,56,0.18)]
       "
     >
-      into practical progress
+      into strengths
     </span>
   </span>
 </h1>
@@ -471,10 +471,7 @@ export default function Hero() {
     sm:text-[17px]
   "
 >
-  We combine strategic thinking, financial expertise, operational
-  discipline, technology and technical capabilities to help
-  organizations make better decisions and build sustainable
-  capacity.
+ Through a systematic cycle of needs assessment, strategy development, stakeholder engagement, execution, results measurement, and continuous learning, we help our clients turn challenges into strengths and ideas into results.
 </p>
 
           {/* =================================================

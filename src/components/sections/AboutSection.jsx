@@ -1153,9 +1153,7 @@ export default function AboutSection() {
     </span>
 
    <p className="max-w-[460px] text-[18px] font-medium leading-7 text-[#68737D] sm:text-[16px] sm:leading-6">
-  IBS supports clients from understanding challenges to developing
-  strategies, executing priorities, and building lasting organizational
-  capability.
+ IBS supports clients throughout the journey—from understanding their needs and developing practical strategies to implementing solutions, measuring results, and building the capacity to sustain progress.
 </p>
   </div>
 
