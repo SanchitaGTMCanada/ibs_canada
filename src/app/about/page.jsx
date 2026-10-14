@@ -118,7 +118,7 @@ export default function AboutPage() {
 
   <div className="absolute inset-0 -z-30">
     <img
-      src="/images/about/about-who-hero.jpg"
+      src="/images/about/about-hero.jpg"
       alt=""
       aria-hidden="true"
       fetchPriority="high"
@@ -558,104 +558,98 @@ export default function AboutPage() {
 
 
 
+{/* Our Mission Section */}
+<section className="relative isolate overflow-hidden bg-[#0B2438] px-5 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14">
+  {/* Background grid */}
+  <div
+    className="pointer-events-none absolute inset-0 opacity-[0.06]"
+    style={{
+      backgroundImage:
+        "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
+      backgroundSize: "56px 56px",
+    }}
+  />
 
+  {/* Ambient glow */}
+  <div className="pointer-events-none absolute -left-24 top-8 h-48 w-48 rounded-full bg-[#2374A8]/15 blur-[80px]" />
+  <div className="pointer-events-none absolute -bottom-20 right-0 h-52 w-52 rounded-full bg-[#00B8C4]/10 blur-[80px]" />
 
-
-<section className="relative isolate overflow-hidden bg-[#F4F8FC] px-5 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28 xl:px-14">
-  {/* BACKGROUND ATMOSPHERE */}
-  <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-br from-white via-[#F0F6FC] to-[#E7F7F5]" />
-    <div className="absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#14B8A6]/15 blur-[110px]" />
-    <div className="absolute -right-40 top-[15%] h-[480px] w-[480px] rounded-full bg-[#87C5E8]/30 blur-[120px]" />
-    <div className="absolute right-[15%] top-[42%] h-[360px] w-[360px] rounded-full bg-[#5EEAD4]/15 blur-[120px]" />
-    <div className="absolute bottom-0 left-1/3 h-[300px] w-[500px] rounded-full bg-white/80 blur-[100px]" />
-    <div className="absolute -bottom-32 right-1/4 h-[350px] w-[350px] rounded-full bg-[#0D9488]/10 blur-[110px]" />
-
-    <div
-      className="absolute inset-0 opacity-[0.2]"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(35,116,168,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(20,184,166,0.07) 1px, transparent 1px)",
-        backgroundSize: "56px 56px",
-      }}
-    />
-
-    <div className="absolute -right-28 top-24 h-[420px] w-[420px] rounded-full border border-[#14B8A6]/20" />
-    <div className="absolute -right-12 top-40 h-[290px] w-[290px] rounded-full border border-[#2374A8]/15" />
-    <div className="absolute -left-32 bottom-20 h-[350px] w-[350px] rounded-full border border-[#14B8A6]/15" />
-  </div>
-
-  <div className="relative z-10 mx-auto max-w-[1280px]">
-    {/* SECTION HEADER */}
-    <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-16">
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.7 }}
-      >
-        <div className="inline-flex items-center gap-3 rounded-full border border-[#14B8A6]/25 bg-white/85 px-4 py-2 shadow-sm backdrop-blur-md">
-          <span className="h-2 w-2 rounded-full bg-[#14B8A6] shadow-[0_0_10px_rgba(20,184,166,0.55)]" />
-          <span className="text-[10px] font-extrabold uppercase tracking-[0.24em] text-[#0F766E] sm:text-[11px]">
-            02 / Our Mission &amp; Values
-          </span>
-        </div>
-
-        <h2 className="mt-6 text-[43px] font-bold leading-[0.98] tracking-[-0.055em] text-[#0B2438] sm:text-[58px] lg:text-[68px]">
-          Purpose in
-          <span className="mt-1 block bg-gradient-to-r from-[#2374A8] via-[#0D9488] to-[#14B8A6] bg-clip-text text-transparent">
-            every action.
-          </span>
-        </h2>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.7, delay: 0.12 }}
-        className="max-w-[600px] lg:justify-self-end"
-      >
-        <p className="text-[15px] font-medium leading-7 text-[#43515C] sm:text-[17px] sm:leading-8">
-          To support stronger, more capable organizations through strategic
-          direction, financial and operational management, research, training
-          and practical implementation support.
-        </p>
-
-        <div className="mt-6 flex items-center gap-3">
-       
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#43515C]/80">
-            Our guiding principles
-          </span>
-        </div>
-      </motion.div>
-    </div>
-
- 
-
-
-
-
-
-
-
-    {/* CLOSING SIGNATURE */}
+  <div className="relative mx-auto max-w-[1200px]">
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="mt-12 flex flex-wrap items-center gap-3 border-t border-[#0B2438]/10 pt-6 sm:mt-16 sm:pt-8"
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="grid items-center gap-7 md:grid-cols-[0.9fr_1.1fr] md:gap-10 lg:gap-14"
     >
-      <span className="h-2 w-2 rounded-full bg-[#14B8A6] shadow-[0_0_10px_rgba(20,184,166,0.45)]" />
-      <span className="h-px w-8 bg-[#14B8A6]/60" />
-      <span className="h-px w-5 bg-[#2374A8]/60" />
-      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#43515C]/75">
-        Stronger organizations · Meaningful outcomes
-      </p>
+      {/* Left column */}
+      <div>
+      
+
+        <h2 className="text-[42px] font-semibold leading-[0.92] tracking-[-0.06em] text-white sm:text-[52px] md:text-[58px] lg:text-[64px]">
+         Our
+          <br />
+          <span className="text-[#B9F0E8]">Mission</span>
+        </h2>
+
+        {/* Accent lines */}
+        <div className="mt-6 flex items-center gap-2.5">
+          <span className="h-[2px] w-12 rounded-full bg-[#00B8C4]" />
+          <span className="h-[2px] w-20 rounded-full bg-[#C69A45]" />
+        </div>
+
+        <p className="mt-5 max-w-[300px] text-[12px] leading-6 text-[#AAB8CA] sm:text-[13px]">
+          Turning strategic thinking into practical progress for stronger,
+          more capable organizations.
+        </p>
+      </div>
+
+      {/* Right column */}
+      <motion.div
+        initial={{ opacity: 0, x: 16 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+        className="relative"
+      >
+        {/* Corner accents */}
+        <div className="absolute -right-1.5 -top-1.5 h-10 w-10 rounded-tr-xl border-r border-t border-[#C69A45]/60" />
+        <div className="absolute -bottom-1.5 -left-1.5 h-10 w-10 rounded-bl-xl border-b border-l border-[#00B8C4]/60" />
+
+        <div className="relative rounded-xl border border-white/10 bg-white/[0.045] p-5 shadow-[0_16px_50px_rgba(0,0,0,0.12)] backdrop-blur-sm sm:p-7 lg:p-8">
+          {/* Card label */}
+          <div className="mb-5 flex items-center justify-between gap-3">
+            <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#B9F0E8]">
+              What drives us
+            </span>
+            <span className="h-1.5 w-1.5 rounded-full bg-[#00B8C4] shadow-[0_0_10px_rgba(0,184,196,0.6)]" />
+          </div>
+
+          <div className="mb-5 h-px w-full bg-gradient-to-r from-[#00B8C4]/70 via-white/10 to-transparent" />
+
+          <p className="text-[15px] font-light leading-[1.8] tracking-[-0.01em] text-white sm:text-[17px] lg:text-[18px]">
+            To support stronger, more capable organizations through{" "}
+            <span className="font-medium text-[#B9F0E8]">
+              strategic direction
+            </span>
+            , financial and operational management, research, training and
+            practical implementation support.
+          </p>
+
+          {/* Bottom detail */}
+          <div className="mt-6 flex items-center gap-3">
+            <span className="h-6 w-[2px] rounded-full bg-[#00B8C4]" />
+            <p className="text-[10px] leading-5 text-[#AAB8CA] sm:text-[11px]">
+              Strategy, expertise and execution working together.
+            </p>
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   </div>
 </section>
+
+
 
 
 
@@ -1055,7 +1049,7 @@ export default function AboutPage() {
           className="
             absolute
             inset-0
-            bg-[#0B1F3A]/65
+            bg-[#0B1F3A]/25
           "
         />
 
@@ -1064,7 +1058,7 @@ export default function AboutPage() {
             absolute
             inset-0
             bg-gradient-to-r
-            from-[#0B1F3A]/95
+            from-[#0B1F3A]/35
             via-[#0B1F3A]/50
             to-transparent
           "
