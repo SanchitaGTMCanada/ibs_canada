@@ -377,7 +377,7 @@ export default function OurTeamPage() {
           <div className="absolute inset-0">
 
             <img
-              src="/images/our_team/our-team.jpg"
+              src="/home/ibs-hero.png"
               alt="IBS Canada team"
               className="
                 h-full
@@ -483,6 +483,7 @@ export default function OurTeamPage() {
       variants={fadeUp}
       className="
         mt-9
+          font-medium
         max-w-[620px]
         text-[18px]
         leading-8
@@ -1621,10 +1622,8 @@ export default function OurTeamPage() {
                       sm:text-[30px]
                     "
                   >
-                    Meet the{" "}
-                    <span className="text-[#087F8C]">
-                      Experts
-                    </span>
+                    Meet the Experts{" "}
+                 
                   </h3>
 
                 </div>
