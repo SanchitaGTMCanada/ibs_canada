@@ -110,7 +110,7 @@ export default function AboutPage() {
 
 <Header />
 
-<section className="relative isolate flex min-h-[780px] items-center overflow-hidden bg-[#0B1F3A]  sm:min-h-[820px]  lg:min-h-[900px] ">
+<section className="relative isolate flex min-h-[700px] items-center overflow-hidden bg-[#0B1F3A]  sm:min-h-[700px]  lg:min-h-[700px] ">
 
   {/* =================================================
       FULL-WIDTH BACKGROUND IMAGE
@@ -237,7 +237,7 @@ export default function AboutPage() {
       HERO CONTENT — SINGLE COLUMN
   ================================================= */}
 
-  <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-12 sm:px-8 sm:pb-22 lg:px-10 lg:pb-22 xl:px-14">
+  <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6  sm:px-8  lg:px-10  xl:px-14 mt-25">
 
     <div className="max-w-[900px]">
 
@@ -356,24 +356,74 @@ export default function AboutPage() {
           02 — MANIFESTO
       ===================================================== */}
 
-      <section
-        id="story"
-        className="
-          relative
-          overflow-hidden
-          bg-[#F6F4EF]
-          px-6
-          py-12
-          sm:px-8
-          lg:px-10
-          lg:py-12
-          xl:px-14
-        "
-      >
+    
 
-        {/* Decorative large circle */}
+<section
+  id="story"
+  className="
+    relative
+    overflow-hidden
+    bg-[#F6F4EF]
+    px-5
+    py-8
+    sm:px-7
+    lg:px-10
+    lg:py-10
+    xl:px-14
+    font-[var(--font-manrope)]
+  "
+>
+  {/* Decorative circle */}
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.7,
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+    }}
+    viewport={{
+      once: true,
+    }}
+    transition={{
+      duration: 1,
+    }}
+    className="
+      pointer-events-none
+      absolute
+      -right-[140px]
+      top-[10%]
+      h-[320px]
+      w-[320px]
+      rounded-full
+      border
+      border-[#087F8C]/10
+    "
+  />
 
-        <motion.div
+  <div className="mx-auto max-w-[1280px]">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      variants={reveal}
+      transition={{
+        duration: 0.8,
+      }}
+      className="
+        grid
+        gap-8
+        lg:grid-cols-[0.35fr_1.65fr]
+        lg:gap-12
+      "
+    >
+      {/* Section label */}
+      <div>
+        <motion.span
           initial={{
             opacity: 0,
             scale: 0.7,
@@ -386,170 +436,113 @@ export default function AboutPage() {
             once: true,
           }}
           transition={{
-            duration: 1,
+            duration: 0.7,
           }}
           className="
-            pointer-events-none
-            absolute
-            -right-[180px]
-            top-[10%]
-            h-[450px]
-            w-[450px]
-            rounded-full
-            border
-            border-[#087F8C]/10
+            block
+            text-[72px]
+            font-bold
+            leading-none
+            tracking-[-0.08em]
+            text-[#087F8C]/10
+            sm:text-[90px]
           "
-        />
+        >
+          01
+        </motion.span>
 
-        <div className="mx-auto max-w-[1280px]">
+        <div className="mt-3 flex items-center gap-3">
+          <span className="h-px w-8 bg-[#C6A15B]" />
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{
-              once: true,
-              amount: 0.2,
-            }}
-            variants={reveal}
-            transition={{
-              duration: 0.8,
-            }}
+          <span
             className="
-              grid
-              gap-14
-              lg:grid-cols-[0.35fr_1.65fr]
-              lg:gap-20
+              text-[12px]
+              font-bold
+              uppercase
+              tracking-[0.2em]
+              text-[#087F8C]
             "
           >
-
-            <div>
-
-              <motion.span
-                initial={{
-                  opacity: 0,
-                  scale: 0.7,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.7,
-                }}
-                className="
-                  block
-                  text-[90px]
-                  font-bold
-                  leading-none
-                  tracking-[-0.08em]
-                  text-[#087F8C]/10
-                  sm:text-[120px]
-                "
-              >
-                01
-              </motion.span>
-
-              <div className="mt-5 flex items-center gap-3">
-
-                <span className="h-px w-10 bg-[#C6A15B]" />
-
-                <span
-                  className="
-                    text-[15px]
-                    font-bold
-                    uppercase
-                    tracking-[0.25em]
-                    text-[#087F8C]
-                  "
-                >
-                  Why IBS exists
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div>
-
-         <h2
-  className="
-    max-w-[1000px]
-    text-[43px]
-    font-bold
-    leading-[1.05]
-    tracking-[-0.055em]
-    text-[#0B2438]
-    sm:text-[60px]
-    lg:text-[76px]
-  "
->
-  Progress happens when
-
-  <motion.span
-    initial={{
-      opacity: 0,
-      x: -20,
-    }}
-    whileInView={{
-      opacity: 1,
-      x: 0,
-    }}
-    viewport={{
-      once: true,
-    }}
-    transition={{
-      delay: 0.25,
-      duration: 0.8,
-    }}
-    className="text-[#0B2438]"
-  >
-    {" "}different ideas
-  </motion.span>{" "}
-
-  start moving together.
-</h2>
-
-
-              <div className="mt-12 grid gap-8 md:grid-cols-2">
-
-                <p
-                  className="
-                    text-[15px]
-                    leading-8
-                    text-[#68737D]
-                  "
-                >
-                  We created IBS around a simple belief:
-                  complex challenges rarely have simple,
-                  isolated answers.
-                </p>
-
-                <p
-                  className="
-                    text-[15px]
-                    leading-8
-                    text-[#68737D]
-                  "
-                >
-                  By combining different disciplines,
-                  perspectives and experiences, we help
-                  organizations see possibilities that may
-                  otherwise remain disconnected.
-                </p>
-
-              </div>
-
-            </div>
-
-          </motion.div>
-
+            Why IBS exists
+          </span>
         </div>
+      </div>
 
-      </section>
+      {/* Main content */}
+      <div>
+        <h2
+          className="
+            max-w-[900px]
+            text-[36px]
+            font-bold
+            leading-[1.12]
+            tracking-[-0.045em]
+            text-[#0B2438]
+            sm:text-[46px]
+            lg:text-[58px]
+          "
+        >
+          Progress happens when{" "}
+
+          <motion.span
+            initial={{
+              opacity: 0,
+              x: -20,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              delay: 0.25,
+              duration: 0.8,
+            }}
+            className="text-[#0B2438]"
+          >
+            different ideas
+          </motion.span>{" "}
+
+          start moving together.
+        </h2>
+
+        {/* Description */}
+        <div className="mt-7 grid gap-5 md:grid-cols-2 md:gap-8">
+          <p
+            className="
+              text-[15px]
+              leading-[1.7]
+              text-[#68737D]
+              sm:text-[16px]
+            "
+          >
+            We created IBS around a simple belief:
+            complex challenges rarely have simple,
+            isolated answers.
+          </p>
+
+          <p
+            className="
+              text-[15px]
+              leading-[1.7]
+              text-[#68737D]
+              sm:text-[16px]
+            "
+          >
+            By combining different disciplines,
+            perspectives and experiences, we help
+            organizations see possibilities that may
+            otherwise remain disconnected.
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+
 
 
       {/* =====================================================
@@ -559,7 +552,22 @@ export default function AboutPage() {
 
 
 {/* Our Mission Section */}
-<section className="relative isolate overflow-hidden bg-[#0B2438] px-5 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14">
+
+<section
+  className="
+    relative
+    isolate
+    overflow-hidden
+    bg-[#0B2438]
+    px-5
+    py-8
+    sm:px-8
+    sm:py-10
+    lg:px-12
+    lg:py-10
+    font-[var(--font-manrope)]
+  "
+>
   {/* Background grid */}
   <div
     className="pointer-events-none absolute inset-0 opacity-[0.06]"
@@ -572,6 +580,7 @@ export default function AboutPage() {
 
   {/* Ambient glow */}
   <div className="pointer-events-none absolute -left-24 top-8 h-48 w-48 rounded-full bg-[#2374A8]/15 blur-[80px]" />
+
   <div className="pointer-events-none absolute -bottom-20 right-0 h-52 w-52 rounded-full bg-[#00B8C4]/10 blur-[80px]" />
 
   <div className="relative mx-auto max-w-[1200px]">
@@ -580,23 +589,49 @@ export default function AboutPage() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="grid items-center gap-7 md:grid-cols-[0.9fr_1.1fr] md:gap-10 lg:gap-14"
+      className="
+        grid
+        items-center
+        gap-7
+        md:grid-cols-[0.9fr_1.1fr]
+        md:gap-10
+        lg:gap-14
+      "
     >
       {/* Left column */}
       <div>
-      
-
-        <h2 className="text-[42px] font-semibold leading-[0.92] tracking-[-0.06em] text-white sm:text-[52px] md:text-[58px] lg:text-[64px]">
-         Our
+        <h2
+          className="
+            text-[36px]
+            font-bold
+            leading-[1.02]
+            tracking-[-0.045em]
+            text-white
+            sm:text-[46px]
+            md:text-[52px]
+            lg:text-[58px]
+          "
+        >
+          Our
           <br />
-          <span className="text-[#B9F0E8]">Mission</span>
+          <span className="text-[#B9F0E8]">
+            Mission
+          </span>
         </h2>
 
-       
-
-        <p className="mt-5 max-w-[300px] text-[12px] leading-6 text-[#AAB8CA] sm:text-[13px]">
-          Turning strategic thinking into practical progress for stronger,
-          more capable organizations.
+        <p
+          className="
+            mt-5
+            max-w-[340px]
+            text-[15px]
+            leading-[1.7]
+            text-[#AAB8CA]
+            sm:text-[16px]
+          "
+        >
+          Turning strategic thinking into practical
+          progress for stronger, more capable
+          organizations.
         </p>
       </div>
 
@@ -605,38 +640,82 @@ export default function AboutPage() {
         initial={{ opacity: 0, x: 16 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+        transition={{
+          duration: 0.6,
+          delay: 0.1,
+          ease: "easeOut",
+        }}
         className="relative"
       >
         {/* Corner accents */}
         <div className="absolute -right-1.5 -top-1.5 h-10 w-10 rounded-tr-xl border-r border-t border-[#C69A45]/60" />
+
         <div className="absolute -bottom-1.5 -left-1.5 h-10 w-10 rounded-bl-xl border-b border-l border-[#00B8C4]/60" />
 
-        <div className="relative rounded-xl border border-white/10 bg-white/[0.045] p-5 shadow-[0_16px_50px_rgba(0,0,0,0.12)] backdrop-blur-sm sm:p-7 lg:p-8">
+        {/* Mission card */}
+        <div
+          className="
+            relative
+            rounded-xl
+            border
+            border-white/10
+            bg-white/[0.045]
+            p-5
+            shadow-[0_16px_50px_rgba(0,0,0,0.12)]
+            backdrop-blur-sm
+            sm:p-6
+            lg:p-7
+          "
+        >
           {/* Card label */}
-          <div className="mb-5 flex items-center justify-between gap-3">
-            <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#B9F0E8]">
+          <div className="mb-4 flex items-center justify-between gap-3">
+            <span
+              className="
+                text-[11px]
+                font-semibold
+                uppercase
+                tracking-[0.2em]
+                text-[#B9F0E8]
+              "
+            >
               What drives us
             </span>
+
             <span className="h-1.5 w-1.5 rounded-full bg-[#00B8C4] shadow-[0_0_10px_rgba(0,184,196,0.6)]" />
           </div>
 
+          {/* Divider */}
           <div className="mb-5 h-px w-full bg-gradient-to-r from-[#00B8C4]/70 via-white/10 to-transparent" />
 
-          <p className="text-[15px] font-light leading-[1.8] tracking-[-0.01em] text-white sm:text-[17px] lg:text-[18px]">
-            To support stronger, more capable organizations through{" "}
-            <span className="font-medium text-[#B9F0E8]">
+          {/* Mission statement */}
+          <p
+            className="
+              text-[16px]
+              font-light
+              leading-[1.75]
+              tracking-[-0.01em]
+              text-white
+              sm:text-[17px]
+              lg:text-[18px]
+            "
+          >
+            To support stronger, more capable
+            organizations through{" "}
+            <span className="font-semibold text-[#B9F0E8]">
               strategic direction
             </span>
-            , financial and operational management, research, training and
-            practical implementation support.
+            , financial and operational management,
+            research, training and practical
+            implementation support.
           </p>
 
           {/* Bottom detail */}
-          <div className="mt-6 flex items-center gap-3">
-            <span className="h-6 w-[2px] rounded-full bg-[#00B8C4]" />
-            <p className="text-[10px] leading-5 text-[#AAB8CA] sm:text-[11px]">
-              Strategy, expertise and execution working together.
+          <div className="mt-5 flex items-center gap-3">
+            <span className="h-6 w-[2px] shrink-0 rounded-full bg-[#00B8C4]" />
+
+            <p className="text-[12px] leading-[1.7] text-[#AAB8CA] sm:text-[13px]">
+              Strategy, expertise and execution working
+              together.
             </p>
           </div>
         </div>
@@ -657,6 +736,8 @@ export default function AboutPage() {
           04 — JOURNEY TIMELINE
       ===================================================== */}
 
+
+
 <section
   className="
     relative
@@ -664,159 +745,73 @@ export default function AboutPage() {
     min-h-0
     overflow-hidden
     bg-white
-    px-6
-    py-16
+    px-5
+    py-8
     sm:px-8
-    sm:py-20
+    sm:py-10
     lg:px-10
-    lg:py-24
+    lg:py-10
     xl:px-14
+    font-[var(--font-manrope)]
   "
 >
+  {/* ================================================
+      BACKGROUND ATMOSPHERE
+  ================================================ */}
 
-  {/* =====================================================
-      DEEP BACKGROUND ATMOSPHERE
-  ===================================================== */}
+  <div className="pointer-events-none absolute -left-40 top-20 h-[320px] w-[320px] rounded-full bg-[#087F8C]/[0.08] blur-[100px]" />
 
-  <div
-    className="
-      pointer-events-none
-      absolute
-      -left-40
-      top-20
-      h-[420px]
-      w-[420px]
-      rounded-full
-      bg-[#087F8C]/[0.08]
-      blur-[100px]
-    "
-  />
+  <div className="pointer-events-none absolute -right-40 top-[35%] h-[360px] w-[360px] rounded-full bg-[#2374A8]/[0.08] blur-[110px]" />
 
-  <div
-    className="
-      pointer-events-none
-      absolute
-      -right-40
-      top-[35%]
-      h-[480px]
-      w-[480px]
-      rounded-full
-      bg-[#0B1F3A]/[0.07]
-      blur-[110px]
-    "
-  />
+  <div className="pointer-events-none absolute -left-32 bottom-[-120px] h-[300px] w-[300px] rounded-full bg-[#087F8C]/[0.05] blur-[100px]" />
 
-  <div
-    className="
-      pointer-events-none
-      absolute
-      -left-32
-      bottom-[-120px]
-      h-[400px]
-      w-[400px]
-      rounded-full
-      bg-[#C6A15B]/[0.055]
-      blur-[100px]
-    "
-  />
+  {/* Decorative circles */}
+  <div className="pointer-events-none absolute left-[-120px] top-[28%] h-[300px] w-[300px] rounded-full border border-[#087F8C]/[0.10]" />
 
-  {/* =====================================================
-      LARGE DECORATIVE CIRCLES
-  ===================================================== */}
+  <div className="pointer-events-none absolute right-[-150px] top-[58%] h-[350px] w-[350px] rounded-full border border-[#2374A8]/[0.10]" />
 
-  <div
-    className="
-      pointer-events-none
-      absolute
-      left-[-120px]
-      top-[28%]
-      h-[360px]
-      w-[360px]
-      rounded-full
-      border
-      border-[#087F8C]/[0.08]
-    "
-  />
-
-  <div
-    className="
-      pointer-events-none
-      absolute
-      right-[-150px]
-      top-[58%]
-      h-[430px]
-      w-[430px]
-      rounded-full
-      border
-      border-[#C6A15B]/[0.08]
-    "
-  />
-
-  {/* =====================================================
-      CONTENT
-  ===================================================== */}
+  {/* ================================================
+      MAIN CONTENT
+  ================================================ */}
 
   <div className="relative z-10 mx-auto max-w-[1280px]">
 
-    {/* =====================================================
-        HEADER
-    ===================================================== */}
-
-    <div className="max-w-[650px]">
-
-      <span
-        className="
-          text-[12px]
-          font-bold
-          uppercase
-          tracking-[0.3em]
-          text-[#087F8C]
-          sm:text-[13px]
-        "
-      >
+    {/* Section heading */}
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="max-w-[650px]"
+    >
+      <span className="text-[12px] font-bold uppercase tracking-[0.25em] text-[#087F8C] sm:text-[13px]">
         03 / The journey
       </span>
 
       <h2
-  className="
-    mt-5
-    text-[42px]
-    font-bold
-    leading-[0.98]
-    tracking-[-0.055em]
-    text-[#0B2438]
-    sm:text-[56px]
-    lg:text-[64px]
-  "
->
-  How We
+        className="
+          mt-3
+          text-[36px]
+          font-bold
+          leading-[1.05]
+          tracking-[-0.045em]
+          text-[#0B2438]
+          sm:text-[46px]
+          lg:text-[58px]
+        "
+      >
+        How We Work
+       
+      </h2>
+    </motion.div>
 
-  <span className="block text-[#0B2438]">
-    Work
-  </span>
-</h2>
+    {/* ================================================
+        TIMELINE AND CARDS
+    ================================================ */}
 
-    </div>
+    <div className="relative mt-7 sm:mt-8 lg:mt-10">
 
-
-    {/* =====================================================
-        TIMELINE
-    ===================================================== */}
-
-    <div
-      className="
-        relative
-        mt-14
-        h-auto
-        sm:mt-16
-        lg:mt-20
-      "
-    >
-
-      {/* ===================================================
-          TIMELINE BASE LINE
-      =================================================== */}
-
+      {/* Timeline base */}
       <div
         className="
           absolute
@@ -829,21 +824,11 @@ export default function AboutPage() {
         "
       />
 
-      {/* ===================================================
-          ANIMATED PROGRESS
-      =================================================== */}
-
+      {/* Animated timeline progress */}
       <motion.div
-        initial={{
-          height: 0,
-        }}
-        whileInView={{
-          height: "100%",
-        }}
-        viewport={{
-          once: true,
-          amount: 0.1,
-        }}
+        initial={{ height: 0 }}
+        whileInView={{ height: "100%" }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{
           duration: 2,
           ease: "easeInOut",
@@ -854,1179 +839,612 @@ export default function AboutPage() {
           top-0
           w-[2px]
           bg-gradient-to-b
-          from-[#C6A15B]
+          from-[#2374A8]
           via-[#087F8C]
-          to-[#C6A15B]
+          to-[#2374A8]
           lg:left-1/2
         "
       />
 
+      {/* ================================================
+          VALUE CARDS
+      ================================================ */}
 
-      {/* ===================================================
-          JOURNEY ITEMS
-      =================================================== */}
-
-    
-
-{/* SIX NAVY + WHITE VALUE CARDS */}
-
-
-{/* SIX NAVY + WHITE VALUE CARDS */}
-<div className="mt-8 grid gap-4 sm:grid-cols-2 lg:mt-10 lg:grid-cols-3">
-  {[
-    {
-      icon: ShieldCheck,
-      number: "01",
-      title: "Integrity",
-      detail: "Trust & governance",
-      text: "We act with integrity and build trust through sound governance and professional conduct.",
-    },
-    {
-      icon: Award,
-      number: "02",
-      title: "Service Excellence",
-      detail: "Quality & accountability",
-      text: "We hold ourselves to high standards and consider the long-term impact of our work.",
-    },
-    {
-      icon: Lightbulb,
-      number: "03",
-      title: "Value Creation",
-      detail: "Ideas into impact",
-      text: "We focus on practical value, knowledge transfer and solutions that strengthen client capability.",
-    },
-    {
-      icon: TrendingUp,
-      number: "04",
-      title: "Excellence",
-      detail: "Continuous improvement",
-      text: "We promote teamwork, learning, innovation and disciplined execution.",
-    },
-    {
-      icon: Handshake,
-      number: "05",
-      title: "Respect",
-      detail: "People & partnerships",
-      text: "We collaborate respectfully with clients and stakeholders and recognize the importance of self-determination.",
-    },
-    {
-      icon: LockKeyhole,
-      number: "06",
-      title: "Confidentiality",
-      detail: "Privacy & trust",
-      text: "We protect confidential information and build relationships grounded in trust.",
-    },
-  ].map((item, index) => {
-    const IconComponent = item.icon;
-
-    return (
-<motion.div
-  key={item.number}
-  initial={{ opacity: 0, y: 24 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.15 }}
-  transition={{
-    duration: 0.55,
-    delay: index * 0.07,
-  }}
-  whileHover={{ y: -3 }}
-  className="group relative isolate overflow-hidden rounded-[24px] border border-[#D6E3ED] bg-white p-6 shadow-[0_8px_28px_rgba(11,36,56,0.06)] transition-all duration-300 hover:border-[#2374A8]/40 hover:shadow-[0_14px_36px_rgba(11,36,56,0.10)] sm:p-7"
->
-  {/* Navy and blue top accent */}
-  <div className="absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#0B2438] via-[#2374A8] to-[#D6E3ED]" />
-
-  {/* Decorative background circle */}
-  <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full border border-[#2374A8]/10 transition-transform duration-500 group-hover:scale-110" />
-
-  {/* Icon and number */}
-  <div className="relative flex items-start justify-between gap-4">
-    {/* Dynamic item icon */}
-    <div className="flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-[18px] border border-[#2374A8]/20 bg-gradient-to-br from-[#0B2438] to-[#2374A8] text-white shadow-[0_6px_16px_rgba(11,36,56,0.18)] transition-all duration-300 group-hover:rounded-full group-hover:from-[#2374A8] group-hover:to-[#0B2438]">
-      {typeof item.icon === "string" ? (
-        <span className="text-[26px] leading-none">{item.icon}</span>
-      ) : (
-        (() => {
+      <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:mt-6 lg:grid-cols-3 lg:gap-6">
+        {[
+          {
+            icon: ShieldCheck,
+            number: "01",
+            title: "Integrity",
+            detail: "Trust & governance",
+            text: "We act with integrity and build trust through sound governance and professional conduct.",
+            theme: "navy",
+          },
+          {
+            icon: Award,
+            number: "02",
+            title: "Service Excellence",
+            detail: "Quality & accountability",
+            text: "We hold ourselves to high standards and consider the long-term impact of our work.",
+            theme: "ice",
+          },
+          {
+            icon: Lightbulb,
+            number: "03",
+            title: "Value Creation",
+            detail: "Ideas into impact",
+            text: "We focus on practical value, knowledge transfer and solutions that strengthen client capability.",
+            theme: "teal",
+          },
+          {
+            icon: TrendingUp,
+            number: "04",
+            title: "Excellence",
+            detail: "Continuous improvement",
+            text: "We promote teamwork, learning, innovation and disciplined execution.",
+            theme: "ice",
+          },
+          {
+            icon: Handshake,
+            number: "05",
+            title: "Respect",
+            detail: "People & partnerships",
+            text: "We collaborate respectfully with clients and stakeholders and recognize the importance of self-determination.",
+            theme: "navy",
+          },
+          {
+            icon: LockKeyhole,
+            number: "06",
+            title: "Confidentiality",
+            detail: "Privacy & trust",
+            text: "We protect confidential information and build relationships grounded in trust.",
+            theme: "ice",
+          },
+        ].map((item, index) => {
           const IconComponent = item.icon;
-          return IconComponent ? (
-            <IconComponent size={25} strokeWidth={1.8} />
-          ) : null;
-        })()
-      )}
+
+          const themes = {
+            navy: {
+              card: "bg-[#0B2438] border-[#0B2438]",
+              number: "text-white/10",
+              title: "text-white",
+              body: "text-[#D1DFEA]",
+              detail: "text-[#B9F0E8]",
+              corner: "bg-[#087F8C]",
+              icon: "text-white",
+              arrow:
+                "border-[#B9F0E8]/70 text-white group-hover:bg-[#B9F0E8] group-hover:text-[#0B2438]",
+              divider: "bg-[#00B8C4]",
+            },
+            ice: {
+              card: "bg-[#E5F0F5] border-[#C9DDE8]",
+              number: "text-[#0B2438]/10",
+              title: "text-[#0B2438]",
+              body: "text-[#43515C]",
+              detail: "text-[#17647D]",
+              corner: "bg-[#0B2438]",
+              icon: "text-white",
+              arrow:
+                "border-[#2374A8] text-[#0B2438] group-hover:bg-[#0B2438] group-hover:text-white",
+              divider: "bg-[#087F8C]",
+            },
+            teal: {
+              card: "bg-[#075563] border-[#075563]",
+              number: "text-white/10",
+              title: "text-white",
+              body: "text-[#D3EBEF]",
+              detail: "text-[#B9F0E8]",
+              corner: "bg-[#2374A8]",
+              icon: "text-white",
+              arrow:
+                "border-[#B9F0E8] text-white group-hover:bg-[#B9F0E8] group-hover:text-[#0B2438]",
+              divider: "bg-[#00B8C4]",
+            },
+          };
+
+          const style = themes[item.theme];
+
+          return (
+            <motion.article
+              key={item.number}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.07,
+              }}
+              whileHover={{ y: -5 }}
+              className={`
+                group relative isolate flex min-h-[285px]
+                flex-col overflow-hidden rounded-[22px]
+                border p-5 shadow-[0_8px_24px_rgba(11,36,56,0.08)]
+                transition-shadow duration-300
+                hover:shadow-[0_16px_35px_rgba(11,36,56,0.16)]
+                sm:min-h-[295px] sm:p-6
+                ${style.card}
+              `}
+            >
+              {/* Half-round corner */}
+              <div
+                className={`
+                  pointer-events-none absolute -right-1 -top-1
+                  h-[116px] w-[116px] rounded-bl-[100%]
+                  transition-all duration-500
+                  group-hover:h-[132px] group-hover:w-[132px]
+                  ${style.corner}
+                `}
+              />
+
+              {/* Corner ring */}
+              <div className="pointer-events-none absolute right-3 top-3 h-[76px] w-[76px] rounded-full border border-white/20" />
+
+              {/* Icon inside curved corner */}
+              <div
+                className={`
+                  absolute right-6 top-6 z-10
+                  flex h-12 w-12 items-center justify-center
+                  ${style.icon}
+                `}
+              >
+                <IconComponent size={29} strokeWidth={1.7} />
+              </div>
+
+              {/* Number */}
+              <span
+                className={`
+                  relative z-10 text-[52px] font-bold
+                  leading-none tracking-[-0.07em]
+                  sm:text-[58px] ${style.number}
+                `}
+              >
+                {item.number}
+              </span>
+
+              {/* Title */}
+              <h3
+                className={`
+                  relative z-10 mt-5 max-w-[85%]
+                  text-[20px] font-bold leading-snug
+                  tracking-[-0.035em] sm:text-[22px]
+                  ${style.title}
+                `}
+              >
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p
+                className={`
+                  relative z-10 mt-3 max-w-[340px]
+                  text-[14px] leading-[1.8] sm:text-[15px]
+                  ${style.body}
+                `}
+              >
+                {item.text}
+              </p>
+
+              {/* Footer */}
+              <div className="relative z-10 mt-auto flex items-end justify-between gap-3 pt-5">
+                <div className="min-w-0">
+                  <div className={`mb-3 h-[2px] w-12 ${style.divider}`} />
+
+                  <span
+                    className={`
+                      text-[10px] font-bold uppercase
+                      leading-relaxed tracking-[0.12em]
+                      sm:text-[11px] ${style.detail}
+                    `}
+                  >
+                    {item.detail}
+                  </span>
+                </div>
+
+                {/* Arrow */}
+                <span
+                  className={`
+                    flex h-10 w-10 shrink-0 items-center
+                    justify-center rounded-full border
+                    transition-all duration-300 ${style.arrow}
+                  `}
+                >
+                  <ArrowRight size={17} />
+                </span>
+              </div>
+
+              {/* Animated bottom accent */}
+              <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#2374A8] to-[#00B8C4] transition-all duration-500 group-hover:w-full" />
+            </motion.article>
+          );
+        })}
+      </div>
     </div>
-
-    {/* Number */}
-    <span className="text-[12px] font-bold tracking-[0.12em] text-[#2374A8]/60">
-      {item.number}
-    </span>
   </div>
-
-  {/* Title */}
-  <h4 className="relative mt-6 text-[19px] font-bold tracking-[-0.025em] text-[#0B2438] sm:text-[21px]">
-    {item.title}
-  </h4>
-
-  {/* Description */}
-  <p className="relative mt-3 min-h-[76px] text-[13px] leading-6 text-[#43515C] sm:text-[14px] sm:leading-7">
-    {item.text}
-  </p>
-
-  {/* Bottom details */}
-  <div className="relative mt-6 flex items-center justify-between gap-3 border-t border-[#0B2438]/10 pt-5">
-    <div className="flex items-center gap-2">
-      <span className="h-2 w-2 rounded-full bg-[#2374A8]" />
-
-      <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-[#2374A8]">
-        {item.detail}
-      </span>
-    </div>
-
-    {/* Arrow */}
-    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#D6E3ED] bg-[#F4F8FC] text-[#0B2438] transition-all duration-300 group-hover:border-[#0B2438] group-hover:bg-[#0B2438] group-hover:text-white">
-      <ArrowRight size={15} />
-    </span>
-  </div>
-</motion.div>
-    );
-  })}
-</div>
-
-
-
-
-
-    </div>
-
-  </div>
-
 </section>
+
+
 
 
       {/* =====================================================
           05 — IMAGE MANIFESTO
       ===================================================== */}
 
-      <section
+  
+
+<section
+  className="
+    relative
+    h-[430px]
+    overflow-hidden
+    bg-[#0B1F3A]
+    sm:h-[490px]
+    lg:h-[420px]
+    font-[var(--font-manrope)]
+  "
+>
+  {/* Background image */}
+  <motion.img
+    initial={{ scale: 1.12 }}
+    whileInView={{ scale: 1 }}
+    viewport={{ once: true }}
+    transition={{
+      duration: 1.6,
+      ease: "easeOut",
+    }}
+    src="/images/about/better-que-about.jpg"
+    alt="IBS team collaborating"
+    loading="lazy"
+    className="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+    "
+  />
+
+  {/* Image overlays */}
+  <div className="absolute inset-0 bg-[#0B1F3A]/30" />
+
+  <div
+    className="
+      absolute
+      inset-0
+      bg-gradient-to-r
+      from-[#0B1F3A]/70
+      via-[#0B1F3A]/45
+      to-transparent
+    "
+  />
+
+  {/* Content */}
+  <div
+    className="
+      relative
+      z-10
+      mx-auto
+      flex
+      h-full
+      max-w-[1280px]
+      items-center
+      px-5
+      sm:px-7
+      lg:px-10
+      xl:px-14
+    "
+  >
+    <motion.div
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="max-w-[850px]"
+    >
+      <span
         className="
-          relative
-          h-[650px]
-          overflow-hidden
-          bg-[#0B1F3A]
-          sm:h-[720px]
+          text-[12px]
+          font-bold
+          uppercase
+          tracking-[0.25em]
+          text-[#B9F0E8]
         "
       >
+        04 / Our belief
+      </span>
 
-        <motion.img
-          initial={{
-            scale: 1.12,
-          }}
-          whileInView={{
-            scale: 1,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 1.6,
-            ease: "easeOut",
-          }}
-          src="/images/about/better-que-about.jpg"
-          alt="IBS team collaborating"
-          loading="lazy"
-          className="
-            absolute
-            inset-0
-            h-full
-            w-full
-            object-cover
-          "
-        />
+      <h2
+        className="
+          mt-3
+          text-[40px]
+          font-bold
+          leading-[1.04]
+          tracking-[-0.05em]
+          text-white
+          sm:text-[56px]
+          lg:text-[72px]
+        "
+      >
+        Better questions
+        <span className="block text-[#B9F0E8]">
+          create better futures.
+        </span>
+      </h2>
 
-        <div
-          className="
-            absolute
-            inset-0
-            bg-[#0B1F3A]/25
-          "
-        />
+      <p
+        className="
+          mt-4
+          max-w-[600px]
+          text-[15px]
+          leading-[1.7]
+          text-white/80
+          sm:text-[17px]
+        "
+      >
+        We are not interested in simply providing
+        answers. We want to understand the question,
+        challenge assumptions and discover what is
+        possible beyond the obvious.
+      </p>
+    </motion.div>
+  </div>
+</section>
 
-        <div
-          className="
-            absolute
-            inset-0
-            bg-gradient-to-r
-            from-[#0B1F3A]/35
-            via-[#0B1F3A]/50
-            to-transparent
-          "
-        />
-
-        <div
-          className="
-            relative
-            z-10
-            mx-auto
-            flex
-            h-full
-            max-w-[1280px]
-            items-center
-            px-6
-            sm:px-8
-            lg:px-10
-            xl:px-14
-          "
-        >
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: -40,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.9,
-            }}
-            className="max-w-[850px]"
-          >
-
-            <span
-              className="
-                text-[10px]
-                font-bold
-                uppercase
-                tracking-[0.3em]
-                text-[#C6A15B]
-              "
-            >
-              04 / Our belief
-            </span>
-
-            <h2
-              className="
-                mt-7
-                text-[48px]
-                font-bold
-                leading-[0.95]
-                tracking-[-0.06em]
-                text-white
-                sm:text-[70px]
-                lg:text-[88px]
-              "
-            >
-              Better questions
-
-              <span className="block text-[#BCEBE8]">
-                create better futures.
-              </span>
-            </h2>
-
-            <p
-              className="
-                mt-8
-                max-w-[600px]
-                text-[15px]
-                leading-7
-                text-white/55
-                sm:text-[17px]
-              "
-            >
-              We are not interested in simply providing
-              answers. We want to understand the question,
-              challenge assumptions and discover what is
-              possible beyond the obvious.
-            </p>
-
-          </motion.div>
-
-        </div>
-
-      </section>
 
 
       {/* =====================================================
           06 — PRINCIPLES
       ===================================================== */}
 
-  <section
+
+<section
   className="
     relative
     overflow-hidden
     bg-[#F6F4EF]
-    px-6
-    py-28
+    px-5
+    py-8
     sm:px-8
+    sm:py-10
     lg:px-10
-    lg:py-36
+    lg:py-10
     xl:px-14
+    font-[var(--font-manrope)]
   "
 >
-  {/* =====================================================
-      BACKGROUND
-  ===================================================== */}
+  {/* Background atmosphere */}
+  <div className="pointer-events-none absolute -left-40 top-[20%] h-[350px] w-[350px] rounded-full bg-[#087F8C]/[0.045] blur-[110px]" />
 
-  <div
-    className="
-      pointer-events-none
-      absolute
-      left-[-180px]
-      top-[20%]
-      h-[500px]
-      w-[500px]
-      rounded-full
-      bg-[#087F8C]/[0.045]
-      blur-[130px]
-    "
-  />
+  <div className="pointer-events-none absolute -right-40 bottom-[5%] h-[350px] w-[350px] rounded-full bg-[#087F8C]/[0.045] blur-[110px]" />
 
-  <div
-    className="
-      pointer-events-none
-      absolute
-      right-[-180px]
-      bottom-[5%]
-      h-[500px]
-      w-[500px]
-      rounded-full
-      bg-[#C6A15B]/[0.045]
-      blur-[130px]
-    "
-  />
+  {/* Decorative circles */}
+  <div className="pointer-events-none absolute -right-[140px] top-[12%] h-[420px] w-[420px] rounded-full border border-[#0B2438]/[0.045]" />
 
-  {/* Fine architectural circle */}
-
-  <div
-    className="
-      pointer-events-none
-      absolute
-      -right-[180px]
-      top-[12%]
-      h-[520px]
-      w-[520px]
-      rounded-full
-      border
-      border-[#0B1F3A]/[0.045]
-    "
-  />
-
-  <div
-    className="
-      pointer-events-none
-      absolute
-      -right-[120px]
-      top-[18%]
-      h-[400px]
-      w-[400px]
-      rounded-full
-      border
-      border-[#087F8C]/[0.055]
-    "
-  />
-
+  <div className="pointer-events-none absolute -right-[100px] top-[18%] h-[320px] w-[320px] rounded-full border border-[#087F8C]/[0.055]" />
 
   <div className="relative z-10 mx-auto max-w-[1380px]">
 
-    {/* =====================================================
-        TOP HEADER
-    ===================================================== */}
-
-    <div
-      className="
-        grid
-        gap-10
-        lg:grid-cols-[0.85fr_1.15fr]
-        lg:items-end
-      "
-    >
-
+    {/* Header */}
+    <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
       <div>
-
-        {/* Eyebrow */}
-
         <div className="flex items-center gap-3">
+          <span className="h-[2px] w-9 rounded-full bg-[#087F8C]" />
+          <span className="h-[2px] w-4 rounded-full bg-[#2374A8]" />
 
-          <span
-            className="
-              h-[2px]
-              w-9
-              rounded-full
-              bg-[#087F8C]
-            "
-          />
-
-          <span
-            className="
-              h-[2px]
-              w-4
-              rounded-full
-              bg-[#C6A15B]
-            "
-          />
-
-          <span
-            className="
-              text-[10px]
-              font-bold
-              uppercase
-              tracking-[0.3em]
-              text-[#087F8C]
-            "
-          >
+          <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#087F8C] sm:text-[12px]">
             05 / Principles
           </span>
-
         </div>
 
-
-       <h2
-  className="
-    mt-6
-    max-w-[650px]
-    text-[48px]
-    font-bold
-    leading-[0.94]
-    tracking-[-0.06em]
-    text-[#0B2438]
-    sm:text-[64px]
-    lg:text-[72px]
-  "
->
-  Why Clients
-
-  <span className="block text-[#0B2438]">
-    Select IBS.
-  </span>
-</h2>
-
-        
-
+        <h2
+          className="
+            mt-3
+            max-w-[650px]
+            text-[36px]
+            font-bold
+            leading-[1.02]
+            tracking-[-0.045em]
+            text-[#0B2438]
+            sm:text-[48px]
+            lg:text-[58px]
+          "
+        >
+          Why Clients
+          <span className="block">Select IBS.</span>
+        </h2>
       </div>
-
-
-      
-
     </div>
 
+    {/* Principles grid */}
+    <div className="mt-8 grid gap-4 lg:mt-8 lg:grid-cols-2 lg:gap-5">
 
-    {/* =====================================================
-        PREMIUM PRINCIPLES LAYOUT
-    ===================================================== */}
-
-    <div
-      className="
-        mt-20
-        grid
-        gap-5
-        lg:grid-cols-2
-        lg:gap-6
-      "
-    >
-
-      {/* ===================================================
-          PRINCIPLE 01
-      =================================================== */}
-
+      {/* Principle 01 */}
       <motion.article
-        initial={{
-          opacity: 0,
-          y: 30,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        viewport={{
-          once: true,
-          amount: 0.2,
-        }}
-        transition={{
-          duration: 0.7,
-        }}
-        className="
-          group
-          relative
-          min-h-[430px]
-          overflow-hidden
-          rounded-[30px]
-          bg-[#0B1F3A]
-          shadow-[0_25px_70px_rgba(11,31,58,0.13)]
-        "
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="group relative min-h-[280px] overflow-hidden rounded-[24px] bg-[#0B1F3A] shadow-[0_16px_40px_rgba(11,31,58,0.12)] transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(11,31,58,0.18)] sm:min-h-[300px]"
       >
-
-        {/* Background image */}
-
         <img
           src="/images/about/why-client-plan.jpg"
           alt="Purpose driven workspace"
-          className="
-            absolute
-            inset-0
-            h-full
-            w-full
-            object-cover
-            opacity-35
-            grayscale-[20%]
-            transition-all
-            duration-700
-            group-hover:scale-105
-            group-hover:opacity-45
-          "
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover opacity-35 grayscale-[20%] transition-all duration-700 group-hover:scale-105 group-hover:opacity-45"
         />
 
-        {/* Image overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#071827] via-[#0B1F3A]/75 to-[#087F8C]/20" />
 
-        <div
-          className="
-            absolute
-            inset-0
-            bg-gradient-to-t
-            from-[#071827]
-            via-[#0B1F3A]/75
-            to-[#087F8C]/20
-          "
-        />
+        <div className="absolute -right-20 -top-20 h-[220px] w-[220px] rounded-full border border-[#B9F0E8]/10" />
 
-        {/* Decorative circle */}
-
-        <div
-          className="
-            absolute
-            -right-24
-            -top-24
-            h-[300px]
-            w-[300px]
-            rounded-full
-            border
-            border-[#BCEBE8]/10
-          "
-        />
-
-        <div
-          className="
-            absolute
-            -right-10
-            -top-10
-            h-[170px]
-            w-[170px]
-            rounded-full
-            border
-            border-[#C6A15B]/15
-          "
-        />
-
-
-        <div className="relative z-10 flex h-full flex-col p-7 sm:p-9">
-
-          {/* Top */}
-
+        <div className="relative z-10 flex h-full min-h-[280px] flex-col p-4 sm:min-h-[300px] sm:p-6">
           <div className="flex items-start justify-between">
-
-            <span
-              className="
-                text-[12px]
-                font-bold
-                tracking-[0.25em]
-                text-[#C6A15B]
-              "
-            >
+            <span className="text-[12px] font-bold tracking-[0.2em] text-[#B9F0E8]">
               01
             </span>
 
-            <div
-              className="
-                flex
-                h-12
-                w-12
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/20
-                bg-white/10
-                text-[#BCEBE8]
-                backdrop-blur-md
-              "
-            >
-              <Target
-                size={21}
-                strokeWidth={1.5}
-              />
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-[#B9F0E8] backdrop-blur-md">
+              <Target size={20} strokeWidth={1.5} />
             </div>
-
           </div>
-
-
-          {/* Bottom */}
 
           <div className="mt-auto max-w-[470px]">
+            <div className="mb-3 h-[2px] w-10 bg-[#00B8C4] transition-all duration-500 group-hover:w-16" />
 
-            <div
-              className="
-                mb-5
-                h-[2px]
-                w-10
-                bg-[#C6A15B]
-                transition-all
-                duration-500
-                group-hover:w-16
-              "
-            />
-
-            <h3
-              className="
-                text-[30px]
-                font-bold
-                leading-[1]
-                tracking-[-0.045em]
-                text-white
-                sm:text-[34px]
-              "
-            >
-            	Robust project planning and timeline management
+            <h3 className="text-[24px] font-bold leading-[1.08] tracking-[-0.04em] text-white sm:text-[28px]">
+              Robust project planning and timeline management
             </h3>
-
-           
-
           </div>
-
         </div>
-
       </motion.article>
 
-
-      {/* ===================================================
-          PRINCIPLE 02
-      =================================================== */}
-
+      {/* Principle 02 */}
       <motion.article
-        initial={{
-          opacity: 0,
-          y: 30,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        viewport={{
-          once: true,
-          amount: 0.2,
-        }}
-        transition={{
-          duration: 0.7,
-          delay: 0.08,
-        }}
-        className="
-          group
-          relative
-          min-h-[430px]
-          overflow-hidden
-          rounded-[30px]
-          border
-          border-[#DCE2E7]
-          bg-white
-          shadow-[0_20px_55px_rgba(32,40,50,0.055)]
-        "
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, delay: 0.08 }}
+        className="group relative min-h-[280px] overflow-hidden rounded-[24px] border border-[#D6E3ED] bg-white shadow-[0_12px_35px_rgba(11,36,56,0.05)] transition-shadow duration-300 hover:shadow-[0_18px_40px_rgba(11,36,56,0.10)] sm:min-h-[300px]"
       >
-
-        <div className="grid h-full lg:grid-cols-[0.9fr_1.1fr]">
-
+        <div className="grid h-full min-h-[280px] lg:min-h-[300px] lg:grid-cols-[0.9fr_1.1fr]">
           {/* Content */}
-
-          <div className="relative z-10 flex flex-col p-7 sm:p-9">
-
+          <div className="relative z-10 flex flex-col p-4 sm:p-6">
             <div className="flex items-start justify-between">
-
-              <span
-                className="
-                  text-[12px]
-                  font-bold
-                  tracking-[0.25em]
-                  text-[#C6A15B]
-                "
-              >
+              <span className="text-[12px] font-bold tracking-[0.2em] text-[#2374A8]">
                 02
               </span>
 
-              <div
-                className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-[#087F8C]/20
-                  bg-[#087F8C]/[0.06]
-                  text-[#087F8C]
-                  transition-all
-                  duration-500
-                  group-hover:border-[#C6A15B]/40
-                  group-hover:text-[#C6A15B]
-                "
-              >
-                <Lightbulb
-                  size={21}
-                  strokeWidth={1.5}
-                />
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#087F8C]/20 bg-[#087F8C]/[0.07] text-[#087F8C] transition-colors duration-300 group-hover:bg-[#0B2438] group-hover:text-white">
+                <Lightbulb size={20} strokeWidth={1.5} />
               </div>
-
             </div>
 
-            <div className="mt-auto">
+            <div className="mt-auto pt-5">
+              <div className="mb-3 h-[2px] w-10 bg-[#087F8C] transition-all duration-500 group-hover:w-16" />
 
-              <div
-                className="
-                  mb-5
-                  h-[2px]
-                  w-10
-                  bg-[#087F8C]
-                  transition-all
-                  duration-500
-                  group-hover:w-16
-                "
-              />
-
-              <h3
-                className="
-                  text-[29px]
-                  font-bold
-                  leading-[1]
-                  tracking-[-0.045em]
-                  text-[#202832]
-                  sm:text-[33px]
-                "
-              >
-                	Disciplined resource allocation
+              <h3 className="text-[24px] font-bold leading-[1.08] tracking-[-0.04em] text-[#0B2438] sm:text-[28px]">
+                Disciplined resource allocation
               </h3>
-
-            
-
             </div>
-
           </div>
-
 
           {/* Image */}
-
-          <div className="relative min-h-[220px] overflow-hidden lg:min-h-0">
-
+          <div className="relative min-h-[180px] overflow-hidden lg:min-h-0">
             <img
-              src="images/about/why-client-resource.jpg"
-              alt="Research and curiosity"
-              className="
-                h-full
-                w-full
-                object-cover
-                grayscale-[15%]
-                transition-transform
-                duration-700
-                group-hover:scale-105
-              "
+              src="/images/about/why-client-resource.jpg"
+              alt="Research and resource planning"
+              loading="lazy"
+              className="h-full w-full object-cover grayscale-[15%] transition-transform duration-700 group-hover:scale-105"
             />
 
-            <div
-              className="
-                absolute
-                inset-0
-                bg-gradient-to-r
-                from-white/20
-                via-transparent
-                to-[#087F8C]/15
-              "
-            />
-
+            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-[#087F8C]/20" />
           </div>
-
         </div>
-
       </motion.article>
 
-
-      {/* ===================================================
-          PRINCIPLE 03
-      =================================================== */}
-
+      {/* Principle 03 */}
       <motion.article
-        initial={{
-          opacity: 0,
-          y: 30,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        viewport={{
-          once: true,
-          amount: 0.2,
-        }}
-        transition={{
-          duration: 0.7,
-          delay: 0.16,
-        }}
-        className="
-          group
-          relative
-          min-h-[430px]
-          overflow-hidden
-          rounded-[30px]
-          border
-          border-[#DCE2E7]
-          bg-white
-          shadow-[0_20px_55px_rgba(32,40,50,0.055)]
-        "
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, delay: 0.16 }}
+        className="group relative min-h-[280px] overflow-hidden rounded-[24px] border border-[#D6E3ED] bg-white shadow-[0_12px_35px_rgba(11,36,56,0.05)] transition-shadow duration-300 hover:shadow-[0_18px_40px_rgba(11,36,56,0.10)] sm:min-h-[300px]"
       >
-
-        <div className="grid h-full lg:grid-cols-[1.1fr_0.9fr]">
-
+        <div className="grid h-full min-h-[280px] lg:min-h-[300px] lg:grid-cols-[1.1fr_0.9fr]">
           {/* Image */}
-
-          <div className="relative order-2 min-h-[220px] overflow-hidden lg:order-1 lg:min-h-0">
-
+          <div className="relative order-2 min-h-[180px] overflow-hidden lg:order-1 lg:min-h-0">
             <img
-              src="images/about/why-client-transparent.jpg"
+              src="/images/about/why-client-transparent.jpg"
               alt="Partnership and collaboration"
-              className="
-                h-full
-                w-full
-                object-cover
-                grayscale-[10%]
-                transition-transform
-                duration-700
-                group-hover:scale-105
-              "
+              loading="lazy"
+              className="h-full w-full object-cover grayscale-[10%] transition-transform duration-700 group-hover:scale-105"
             />
 
-            <div
-              className="
-                absolute
-                inset-0
-                bg-gradient-to-r
-                from-[#087F8C]/20
-                via-transparent
-                to-white/10
-              "
-            />
-
+            <div className="absolute inset-0 bg-gradient-to-r from-[#087F8C]/15 via-transparent to-white/10" />
           </div>
 
-
           {/* Content */}
-
-          <div className="relative z-10 order-1 flex flex-col p-7 sm:p-9 lg:order-2">
-
+          <div className="relative z-10 order-1 flex flex-col p-4 sm:p-6 lg:order-2">
             <div className="flex items-start justify-between">
-
-              <span
-                className="
-                  text-[12px]
-                  font-bold
-                  tracking-[0.25em]
-                  text-[#087F8C]
-                "
-              >
+              <span className="text-[12px] font-bold tracking-[0.2em] text-[#087F8C]">
                 03
               </span>
 
-              <div
-                className="
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-[#087F8C]/20
-                  bg-[#087F8C]/[0.06]
-                  text-[#087F8C]
-                  transition-all
-                  duration-500
-                  group-hover:border-[#C6A15B]/40
-                  group-hover:text-[#C6A15B]
-                "
-              >
-                <Handshake
-                  size={21}
-                  strokeWidth={1.5}
-                />
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#087F8C]/20 bg-[#087F8C]/[0.07] text-[#087F8C] transition-colors duration-300 group-hover:bg-[#0B2438] group-hover:text-white">
+                <Handshake size={20} strokeWidth={1.5} />
               </div>
-
             </div>
 
+            <div className="mt-auto pt-5">
+              <div className="mb-3 h-[2px] w-10 bg-[#087F8C] transition-all duration-500 group-hover:w-16" />
 
-            <div className="mt-auto">
-
-              <div
-                className="
-                  mb-5
-                  h-[2px]
-                  w-10
-                  bg-[#087F8C]
-                  transition-all
-                  duration-500
-                  group-hover:w-16
-                "
-              />
-
-              <h3
-                className="
-                  text-[29px]
-                  font-bold
-                  leading-[1]
-                  tracking-[-0.045em]
-                  text-[#202832]
-                  sm:text-[33px]
-                "
-              >
-              	Quality assurance and control
+              <h3 className="text-[24px] font-bold leading-[1.08] tracking-[-0.04em] text-[#0B2438] sm:text-[28px]">
+                Quality assurance and control
               </h3>
-
-          
-
             </div>
-
           </div>
-
         </div>
-
       </motion.article>
 
-
-      {/* ===================================================
-          PRINCIPLE 04
-      =================================================== */}
-
+      {/* Principle 04 */}
       <motion.article
-        initial={{
-          opacity: 0,
-          y: 30,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        viewport={{
-          once: true,
-          amount: 0.2,
-        }}
-        transition={{
-          duration: 0.7,
-          delay: 0.24,
-        }}
-        className="
-          group
-          relative
-          min-h-[430px]
-          overflow-hidden
-          rounded-[30px]
-          bg-[#087F8C]
-          shadow-[0_25px_65px_rgba(8,127,140,0.14)]
-        "
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, delay: 0.24 }}
+        className="group relative min-h-[280px] overflow-hidden rounded-[24px] bg-[#087F8C] shadow-[0_16px_40px_rgba(8,127,140,0.12)] transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(8,127,140,0.20)] sm:min-h-[300px]"
       >
-
-        {/* Image */}
-
         <img
-          src="images/about/why-client-team.jpg"
+          src="/images/about/why-client-team.jpg"
           alt="Integrity and professional standards"
-          className="
-            absolute
-            inset-0
-            h-full
-            w-full
-            object-cover
-            opacity-25
-            grayscale-[10%]
-            transition-all
-            duration-700
-            group-hover:scale-105
-            group-hover:opacity-35
-          "
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover opacity-25 grayscale-[10%] transition-all duration-700 group-hover:scale-105 group-hover:opacity-35"
         />
 
-        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#087F8C]/95 via-[#087F8C]/80 to-[#0B1F3A]/95" />
 
-        <div
-          className="
-            absolute
-            inset-0
-            bg-gradient-to-br
-            from-[#087F8C]/95
-            via-[#087F8C]/80
-            to-[#0B1F3A]/95
-          "
-        />
+        <div className="absolute -bottom-[100px] -right-[70px] h-[280px] w-[280px] rounded-full border border-white/10" />
 
-        {/* Decorative rings */}
+        <div className="absolute -bottom-[65px] -right-[35px] h-[210px] w-[210px] rounded-full border border-[#B9F0E8]/20" />
 
-        <div
-          className="
-            absolute
-            -bottom-[140px]
-            -right-[100px]
-            h-[380px]
-            w-[380px]
-            rounded-full
-            border
-            border-white/10
-          "
-        />
-
-        <div
-          className="
-            absolute
-            -bottom-[90px]
-            -right-[50px]
-            h-[280px]
-            w-[280px]
-            rounded-full
-            border
-            border-[#C6A15B]/20
-          "
-        />
-
-
-        <div className="relative z-10 flex h-full flex-col p-7 sm:p-9">
-
+        <div className="relative z-10 flex h-full min-h-[280px] flex-col p-4 sm:min-h-[300px] sm:p-6">
           <div className="flex items-start justify-between">
-
-            <span
-              className="
-                text-[12px]
-                font-bold
-                tracking-[0.25em]
-                text-[#C6A15B]
-              "
-            >
+            <span className="text-[12px] font-bold tracking-[0.2em] text-[#B9F0E8]">
               04
             </span>
 
-            <div
-              className="
-                flex
-                h-12
-                w-12
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/20
-                bg-white/10
-                text-[#C6A15B]
-                backdrop-blur-md
-              "
-            >
-              <ShieldCheck
-                size={21}
-                strokeWidth={1.5}
-              />
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-[#B9F0E8] backdrop-blur-md">
+              <ShieldCheck size={20} strokeWidth={1.5} />
             </div>
-
           </div>
-
 
           <div className="mt-auto max-w-[500px]">
+            <div className="mb-3 h-[2px] w-10 bg-[#B9F0E8] transition-all duration-500 group-hover:w-16" />
 
-            <div
-              className="
-                mb-5
-                h-[2px]
-                w-10
-                bg-[#C6A15B]
-                transition-all
-                duration-500
-                group-hover:w-16
-              "
-            />
-
-            <h3
-              className="
-                text-[30px]
-                font-bold
-                leading-[1]
-                tracking-[-0.045em]
-                text-white
-                sm:text-[34px]
-              "
-            >
-             Transparent communication and reporting
+            <h3 className="text-[24px] font-bold leading-[1.08] tracking-[-0.04em] text-white sm:text-[28px]">
+              Transparent communication and reporting
             </h3>
-
-        
-
           </div>
-
         </div>
-
       </motion.article>
-
     </div>
 
-
-    {/* =====================================================
-        BOTTOM SIGNATURE
-    ===================================================== */}
-
+    {/* Bottom signature */}
     <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
-      transition={{
-        duration: 0.8,
-        delay: 0.2,
-      }}
-      className="
-        mt-14
-        flex
-        items-center
-        justify-between
-        gap-6
-        border-t
-        border-[#DCE2E7]
-        pt-7
-      "
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="mt-6 flex items-center justify-between gap-6 border-t border-[#D6E3ED] pt-4"
     >
-
-      <div className="flex items-center gap-4">
-
-        <span
-          className="
-            h-[2px]
-            w-16
-            rounded-full
-            bg-[#087F8C]
-          "
-        />
-
-        <span
-          className="
-            h-[2px]
-            w-8
-            rounded-full
-            bg-[#C6A15B]
-          "
-        />
-
+      <div className="flex items-center gap-3">
+        <span className="h-[2px] w-12 rounded-full bg-[#087F8C]" />
+        <span className="h-[2px] w-6 rounded-full bg-[#2374A8]" />
       </div>
-
-
-     
-
     </motion.div>
-
   </div>
 </section>
+
+
 
       {/* =====================================================
           07 — IMPACT
