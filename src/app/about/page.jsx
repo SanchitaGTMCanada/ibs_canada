@@ -110,7 +110,7 @@ export default function AboutPage() {
 
 <Header />
 
-<section className="relative isolate flex min-h-[700px] items-center overflow-hidden bg-[#0B1F3A]  sm:min-h-[700px]  lg:min-h-[700px] ">
+<section className="relative isolate flex min-h-[650px] items-center overflow-hidden bg-[#0B1F3A]  sm:min-h-[650px]  lg:min-h-[650px] ">
 
   {/* =================================================
       FULL-WIDTH BACKGROUND IMAGE
