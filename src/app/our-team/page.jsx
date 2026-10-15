@@ -29,12 +29,12 @@ import Header from "@/components/layout/Header";
   IBS — OUR TEAM
   =========================================================
 
-  Royal Navy       #0B1F3A
+  Royal Navy       #0B2438
   Executive Teal   #087F8C
-  Heritage Gold   #C6A15B
-  Charcoal Ink    #202832
-  Ivory Mist      #F6F4EF
-  Silver Mist     #DCE2E7
+  Heritage Gold   #2374A8
+  Charcoal Ink    #0B2438
+  Ivory Mist      #FAFBFA
+  Silver Mist     #DCEAF0
 */
 
 const leaders = [
@@ -184,7 +184,7 @@ function FoldingPaper({ variant = "light" }) {
           top-0
           h-[92px]
           w-[92px]
-          bg-[#DCE2E7]/90
+          bg-[#DCEAF0]/90
           shadow-[-10px_10px_24px_rgba(11,31,58,.20)]
         "
         style={{
@@ -200,7 +200,7 @@ function FoldingPaper({ variant = "light" }) {
           top-0
           h-[74px]
           w-[74px]
-          ${isLight ? "bg-[#F6F4EF]" : "bg-[#FFFFFF]"}
+          ${isLight ? "bg-[#FAFBFA]" : "bg-[#FFFFFF]"}
           shadow-[-8px_8px_18px_rgba(11,31,58,.18)]
           transition-all
           duration-500
@@ -239,7 +239,7 @@ function FoldingPaper({ variant = "light" }) {
           top-0
           h-[48px]
           w-[48px]
-          bg-[#0B1F3A]
+          bg-[#EEF5F8]
         "
         style={{
           clipPath: "polygon(100% 0, 100% 100%, 0 100%)",
@@ -256,7 +256,7 @@ function FoldingPaper({ variant = "light" }) {
           h-[2px]
           w-[38px]
           rotate-45
-          bg-[#C6A15B]
+          bg-[#2374A8]
           transition-all
           duration-500
           group-hover:w-[44px]
@@ -351,7 +351,7 @@ function FloatingIcon({
 export default function OurTeamPage() {
   return (
     <>
-      <main className="overflow-hidden bg-[#F6F4EF] text-[#202832]">
+      <main className="overflow-hidden bg-[#FAFBFA] text-[#0B2438] font-[var(--font-manrope)] ">
 
         {/* =====================================================
             HERO
@@ -362,12 +362,12 @@ export default function OurTeamPage() {
         <section
           className="
             relative
-            min-h-[calc(100svh-80px)]
+           min-h-[650px] sm:min-h-[650px]  lg:min-h-[650px]
             w-full
             overflow-hidden
-            bg-[#0B1F3A]
+            bg-[#EEF5F8]
           "
-          style={{ paddingTop: "75px" }}
+          style={{ paddingTop: "68px" }}
         >
 
           {/* ===================================================
@@ -391,7 +391,7 @@ export default function OurTeamPage() {
               className="
                 absolute
                 inset-0
-                bg-[#0B1F3A]/10
+                bg-[#EEF5F8]/[0.03]
               "
             />
 
@@ -400,10 +400,10 @@ export default function OurTeamPage() {
                 absolute
                 inset-0
                 bg-gradient-to-r
-                from-[#0B1F3A]/96
-                via-[#0B1F3A]/78
+                from-[#FFFFFF]/86
+                via-[#EEF5F8]/10
                 via-[46%]
-                to-[#0B1F3A]/5
+                to-[#FFFFFF]/[0.02]
               "
             />
 
@@ -414,7 +414,7 @@ export default function OurTeamPage() {
                 bottom-0
                 h-44
                 bg-gradient-to-t
-                from-[#0B1F3A]
+                from-[#EEF5F8]
                 to-transparent
               "
             />
@@ -422,165 +422,125 @@ export default function OurTeamPage() {
           </div>
 
           {/* Hero content */}
-          <div
-            className="
-              relative
-              z-10
-              mx-auto
-              flex
-              min-h-[calc(100svh-155px)]
-              max-w-[1320px]
-              items-center
-              px-5
-              py-20
-              sm:px-8
-              lg:px-10
-              xl:px-12
-            "
-          >
+      
+<div
+  className="
+    relative
+    z-10
+    mx-auto
+    flex
+    min-h-[540px]
+    max-w-[1320px]
+    items-center
+    px-5
+    py-24
+    sm:px-8
+    lg:px-10
+    xl:px-12
+  "
+>
+  <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={stagger}
+    className="max-w-[720px]"
+  >
+    <motion.div
+      variants={fadeUp}
+      className="flex items-center gap-3"
+    >
+      <span
+        className="
+          text-[16px]
+          font-bold
+          uppercase
+          tracking-[0.32em]
+          text-[#2374A8]
+        "
+      >
+        IBS Canada
+      </span>
+    </motion.div>
 
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={stagger}
-              className="max-w-[720px]"
-            >
+    <motion.h1
+      variants={fadeUp}
+      className="
+        mt-10
+        text-[40px]
+        font-semibold
+        leading-[1.08]
+        tracking-[-0.045em]
+        text-[#0B2438]
+        sm:mt-12
+        sm:text-[52px]
+        lg:text-[64px]
+      "
+    >
+      Our <span className="ml-3">Team.</span>
+    </motion.h1>
 
-              <motion.div
-                variants={fadeUp}
-                className="flex items-center gap-3"
-              >
-                <span className="h-px w-10 bg-[#C6A15B]" />
+    <motion.p
+      variants={fadeUp}
+      className="
+        mt-9
+        max-w-[620px]
+        text-[18px]
+        leading-8
+        text-[#43515C]
+        sm:mt-10
+        sm:text-[19px]
+      "
+    >
+      Meet the multidisciplinary professionals who bring together
+      finance, strategy, governance, operations, technology,
+      research, economics and technical expertise.
+    </motion.p>
 
-                <span
-                  className="
-                    text-[14px]
-                    font-bold
-                    uppercase
-                    tracking-[0.32em]
-                    text-[#D8B866]
-                  "
-                >
-                  IBS Canada
-                </span>
-              </motion.div>
+    <motion.div
+      variants={fadeUp}
+      className="
+        mt-12
+        flex
+        flex-wrap
+        items-center
+        gap-5
+        sm:mt-14
+      "
+    >
+      <a
+        href="#team"
+        className="
+          inline-flex
+          items-center
+          gap-3
+          rounded-full
+          bg-[#087F8C]
+          px-7
+          py-3.5
+          text-[15px]
+          font-bold
+          uppercase
+          tracking-[0.12em]
+          text-white
+          shadow-[0_15px_35px_rgba(8,127,140,.20)]
+          transition-all
+          duration-300
+          hover:-translate-y-1
+          hover:bg-[#096F78]
+        "
+        style={{color:"white"}}
+      >
+        Meet the team
+        <ArrowDown size={15} />
+      </a>
 
-              <motion.h1
-                variants={fadeUp}
-                className="
-                  mt-6
-                  text-[48px]
-                  font-semibold
-                  leading-[0.94]
-                  tracking-[-0.055em]
-                  text-white
-                  sm:text-[66px]
-                  lg:text-[82px]
-                "
-              >
-                Our
-                <span
-                  className="
-                    block
-                    bg-gradient-to-r
-                    from-white
-                    via-[#D8B866]
-                    to-[#43B8BA]
-                    bg-clip-text
-                    text-transparent
-                  "
-                >
-                  Team.
-                </span>
-              </motion.h1>
+     
 
-              <motion.p
-                variants={fadeUp}
-                className="
-                  mt-7
-                  max-w-[620px]
-                  text-[17px]
-                  leading-6
-                  text-[#DCE2E7]
-                  sm:text-[17px]
-                "
-              >
-                Meet the multidisciplinary professionals who bring together
-                finance, strategy, governance, operations, technology,
-                research, economics and technical expertise.
-              </motion.p>
 
-              <motion.div
-                variants={fadeUp}
-                className="
-                  mt-9
-                  flex
-                  flex-wrap
-                  items-center
-                  gap-3
-                "
-              >
+    </motion.div>
+  </motion.div>
+</div>
 
-                <a
-                  href="#team"
-                  className="
-                    inline-flex
-                    items-center
-                    gap-3
-                    rounded-full
-                    bg-[#087F8C]
-                    px-6
-                    py-3
-                    text-[13px]
-                    font-bold
-                    uppercase
-                    tracking-[0.18em]
-                    text-white
-                    shadow-[0_15px_35px_rgba(8,127,140,.25)]
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
-                    hover:bg-[#096F78]
-                  "
-                  style={{color:"white"}}
-                >
-                  Meet the team
-                  <ArrowDown size={14} />
-                </a>
-
-                <a
-                  href="#values"
-                  className="
-                    inline-flex
-                    items-center
-                    gap-3
-                    rounded-full
-                    border
-                    border-white/20
-                    bg-white/[0.06]
-                    px-6
-                    py-3
-                    text-[13px]
-                    font-bold
-                    uppercase
-                    tracking-[0.18em]
-                    text-white
-                    backdrop-blur-sm
-                    transition-all
-                    duration-300
-                    hover:bg-white/[0.12]
-                  "
-                  style={{color:"white"}}
-                >
-                  Our principles
-                  <ArrowRight size={14} />
-                </a>
-
-              </motion.div>
-
-            </motion.div>
-
-          </div>
 
         </section>
 
@@ -600,13 +560,13 @@ export default function OurTeamPage() {
           className="
             relative
             overflow-hidden
-            bg-[#071A2D]
+            bg-[#EEF5F8]
             px-3
             py-3
             sm:px-5
-            sm:py-5
+            sm:py-4
             lg:px-6
-            lg:py-6
+            lg:py-5
             xl:px-7
           "
         >
@@ -619,7 +579,7 @@ export default function OurTeamPage() {
               z-0
               bg-gradient-to-r
       from-[#087F8C]
-      via-[#F0C75E]
+      via-[#2374A8]
       to-[#087F8C]
             "
           />
@@ -629,13 +589,13 @@ export default function OurTeamPage() {
             className="
               relative
               overflow-hidden
-              rounded-[30px]
-              bg-[#071A2D]
+              rounded-[20px]
+              bg-[#EEF5F8]
               px-5
-              py-20
+              py-8
               sm:px-8
               lg:px-10
-              lg:py-24
+              lg:py-10
               xl:px-12
             "
           >
@@ -665,8 +625,8 @@ export default function OurTeamPage() {
                 inset-0
                 bg-gradient-to-br
                 from-[#087F8C]/80
-                via-[#123A5A]/72
-                to-[#0B1F3A]/90
+                via-[#E5F0F5]/72
+                to-[#FAFBFA]/95
               "
             />
 
@@ -674,7 +634,7 @@ export default function OurTeamPage() {
               className="
                 absolute
                 inset-0
-                bg-[#071A2D]/35
+                bg-[#EEF5F8]/35
               "
             />
 
@@ -702,7 +662,7 @@ export default function OurTeamPage() {
                 h-[520px]
                 w-[520px]
                 rounded-full
-                bg-[#C6A15B]/[0.06]
+                bg-[#2374A8]/[0.06]
                 blur-[110px]
               "
             />
@@ -744,10 +704,10 @@ export default function OurTeamPage() {
               absolute
               inset-0
               z-[5]
-              rounded-[30px]
+              rounded-[20px]
               border-[3px]
-        border-[#F0C75E]
-        shadow-[inset_0_0_0_1px_#C6A15B,inset_0_0_28px_rgba(240,199,94,.22)]
+        border-[#2374A8]
+        shadow-[inset_0_0_0_1px_#2374A8,inset_0_0_28px_rgba(240,199,94,.22)]
             "
           />
 
@@ -760,7 +720,7 @@ export default function OurTeamPage() {
               z-[5]
               rounded-[25px]
               border
-              border-[#C6A15B]/75
+              border-[#2374A8]/75
             "
           />
 
@@ -776,7 +736,7 @@ export default function OurTeamPage() {
               h-[3px]
               bg-gradient-to-r
               from-transparent
-              via-[#C6A15B]
+              via-[#2374A8]
               to-transparent
               shadow-[0_0_18px_rgba(198,161,91,.8)]
             "
@@ -820,7 +780,7 @@ export default function OurTeamPage() {
               left-[2%]
               top-[18%]
               hidden
-              text-[#C6A15B]
+              text-[#2374A8]
               lg:block
             "
           >
@@ -862,104 +822,7 @@ export default function OurTeamPage() {
 
           <div className="relative z-10 mx-auto max-w-[1320px]">
 
-            {/* Section heading */}
-
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 25,
-              }}
-
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-
-              viewport={{
-                once: true,
-                amount: 0.25,
-              }}
-
-              transition={{
-                duration: 0.7,
-              }}
-
-              className="
-                mx-auto
-                max-w-[820px]
-                text-center
-              "
-            >
-
-              <div className="flex items-center justify-center gap-3">
-
-                <span className="h-px w-12 bg-[#C6A15B]" />
-
-                <span
-                  className="
-                    text-[15px]
-                    font-bold
-                    uppercase
-                    tracking-[0.32em]
-                    text-[#C6A15B]
-                  "
-                >
-                  Core Team
-                </span>
-
-                <span className="h-px w-12 bg-[#087F8C]" />
-
-              </div>
-
-
-              <h2
-                className="
-                  mt-5
-                  text-[38px]
-                  font-semibold
-                  leading-[1]
-                  tracking-[-0.045em]
-                  text-white
-                  sm:text-[52px]
-                  lg:text-[62px]
-                "
-              >
-                Leadership that
-
-                <span
-                  className="
-                    block
-                    bg-gradient-to-r
-                    from-white
-                    via-[#D8B866]
-                    to-[#43B8BA]
-                    bg-clip-text
-                    text-transparent
-                  "
-                >
-                  drives the difference.
-                </span>
-
-              </h2>
-
-
-              <p
-                className="
-                  mx-auto
-                  mt-5
-                  max-w-[690px]
-                  text-[17px]
-                  leading-6
-                  text-[#B9C5CF]
-                  sm:text-[17px]
-                "
-              >
-                IBS brings together professionals across finance, strategy,
-                governance, operations, technology, research, economics and
-                technical disciplines.
-              </p>
-
-            </motion.div>
+           
 
 
             {/* =====================================================
@@ -990,7 +853,7 @@ export default function OurTeamPage() {
                 group
                 relative
                 mx-auto
-                mt-14
+                mt-7
                 max-w-[1080px]
               "
             >
@@ -1001,11 +864,11 @@ export default function OurTeamPage() {
                 className="
                   absolute
                   -inset-[1px]
-                  rounded-[32px]
+                  rounded-[20px]
                   bg-gradient-to-r
-                  from-[#C6A15B]
+                  from-[#2374A8]
                   via-[#087F8C]
-                  to-[#C6A15B]
+                  to-[#2374A8]
                   opacity-90
                   blur-[1px]
                 "
@@ -1016,14 +879,14 @@ export default function OurTeamPage() {
                 className="
                   relative
                   overflow-hidden
-                  rounded-[32px]
+                  rounded-[20px]
                   border
-                  border-[#C6A15B]/40
+                  border-[#2374A8]/40
                   bg-gradient-to-br
-                  from-[#123A5A]
-                  via-[#0B1F3A]
-                  to-[#071A2D]
-                  shadow-[0_35px_100px_rgba(0,0,0,.38)]
+                  from-[#E5F0F5]
+                  via-[#FAFBFA]
+                  to-[#EEF5F8]
+                  shadow-[0_18px_45px_rgba(11,36,56,.10)]
                 "
               >
 
@@ -1057,7 +920,7 @@ export default function OurTeamPage() {
                     h-64
                     w-64
                     rounded-full
-                    bg-[#C6A15B]/10
+                    bg-[#2374A8]/10
                     blur-[80px]
                   "
                 />
@@ -1092,11 +955,11 @@ export default function OurTeamPage() {
                       justify-center
                       overflow-hidden
                       bg-gradient-to-br
-                      from-[#16445D]
-                      via-[#123A5A]
-                      to-[#0B1F3A]
-                      p-9
-                      sm:p-11
+                      from-[#D7EAF0]
+                      via-[#E5F0F5]
+                      to-[#E5F0F5]
+                      p-5
+                      sm:p-6
                     "
                   >
 
@@ -1109,7 +972,7 @@ export default function OurTeamPage() {
                         w-[235px]
                         rounded-full
                         border
-                        border-[#C6A15B]/20
+                        border-[#2374A8]/20
                       "
                     />
 
@@ -1131,9 +994,9 @@ export default function OurTeamPage() {
                         className="
                           absolute
                           -inset-4
-                          rounded-[30px]
+                          rounded-[20px]
                           border
-                          border-[#C6A15B]/35
+                          border-[#2374A8]/35
                         "
                       />
 
@@ -1144,10 +1007,10 @@ export default function OurTeamPage() {
                           h-[205px]
                           w-[205px]
                           overflow-hidden
-                          rounded-[26px]
+                          rounded-[20px]
                           border-[3px]
-                          border-[#C6A15B]
-                          bg-[#DCE2E7]
+                          border-[#2374A8]
+                          bg-[#DCEAF0]
                           shadow-[0_24px_55px_rgba(0,0,0,.38)]
                         "
                       >
@@ -1182,15 +1045,15 @@ export default function OurTeamPage() {
                           whitespace-nowrap
                           rounded-full
                           border
-                          border-[#C6A15B]/70
-                          bg-[#071A2D]
+                          border-[#2374A8]/70
+                          bg-[#EEF5F8]
                           px-5
                           py-2.5
-                          text-[8px]
+                          text-[11px]
                           font-bold
                           uppercase
                           tracking-[0.24em]
-                          text-[#D8B866]
+                          text-[#2374A8]
                           shadow-[0_10px_30px_rgba(0,0,0,.35)]
                         "
                       >
@@ -1217,9 +1080,9 @@ export default function OurTeamPage() {
                       flex
                       flex-col
                       justify-center
-                      p-8
-                      sm:p-10
-                      lg:p-12
+                      p-6
+                      sm:p-6
+                      lg:p-7
                     "
                   >
 
@@ -1227,11 +1090,11 @@ export default function OurTeamPage() {
 
                       <span
                         className="
-                          text-[12px]
+                          text-[14px]
                           font-bold
                           uppercase
                           tracking-[0.28em]
-                          text-[#C6A15B]
+                          text-[#2374A8]
                         "
                       >
                         Executive Leadership · 01
@@ -1242,7 +1105,7 @@ export default function OurTeamPage() {
                           h-px
                           w-16
                           bg-gradient-to-r
-                          from-[#C6A15B]
+                          from-[#2374A8]
                           to-[#087F8C]
                         "
                       />
@@ -1256,7 +1119,7 @@ export default function OurTeamPage() {
                         flex
                         items-start
                         justify-between
-                        gap-5
+                        gap-4
                       "
                     >
 
@@ -1264,11 +1127,11 @@ export default function OurTeamPage() {
 
                         <h3
                           className="
-                            text-[32px]
+                            text-[26px]
                             font-semibold
                             tracking-[-0.045em]
-                            text-white
-                            sm:text-[40px]
+                            text-[#0B2438]
+                            sm:text-[32px]
                           "
                         >
                           {leaders[0].name}
@@ -1278,12 +1141,12 @@ export default function OurTeamPage() {
                           className="
                             mt-2
                             max-w-[700px]
-                            text-[9px]
+                            text-[12px]
                             font-bold
                             uppercase
                             leading-5
                             tracking-[0.09em]
-                            text-[#43B8BA]
+                            text-[#087F8C]
                           "
                         >
                           {leaders[0].role}
@@ -1302,9 +1165,9 @@ export default function OurTeamPage() {
                           justify-center
                           rounded-full
                           border
-                          border-[#C6A15B]/35
-                          bg-[#C6A15B]/10
-                          text-[#D8B866]
+                          border-[#2374A8]/35
+                          bg-[#2374A8]/10
+                          text-[#2374A8]
                           sm:flex
                         "
                       >
@@ -1324,7 +1187,7 @@ export default function OurTeamPage() {
                         mt-6
                         h-[2px]
                         w-14
-                        bg-[#C6A15B]
+                        bg-[#2374A8]
                         transition-all
                         duration-500
                         group-hover:w-24
@@ -1336,10 +1199,10 @@ export default function OurTeamPage() {
                       className="
                         mt-6
                         max-w-[720px]
-                        text-[11px]
-                        leading-6
-                        text-[#DCE2E7]
-                        sm:text-[12px]
+                        text-[15px]
+                        leading-[1.7]
+                        text-[#43515C]
+                        sm:text-[16px]
                       "
                     >
                       {leaders[0].description}
@@ -1350,14 +1213,14 @@ export default function OurTeamPage() {
 
                     <div
                       className="
-                        mt-8
+                        mt-6
                         flex
                         flex-wrap
                         items-center
                         gap-x-8
                         gap-y-3
                         border-t
-                        border-white/10
+                        border-[#DCEAF0]
                         pt-5
                       "
                     >
@@ -1366,11 +1229,11 @@ export default function OurTeamPage() {
 
                         <p
                           className="
-                            text-[7px]
+                            text-[10px]
                             font-bold
                             uppercase
                             tracking-[0.2em]
-                            text-[#C6A15B]
+                            text-[#2374A8]
                           "
                         >
                           Leadership
@@ -1379,8 +1242,8 @@ export default function OurTeamPage() {
                         <p
                           className="
                             mt-1
-                            text-[9px]
-                            text-[#8FA0AD]
+                            text-[12px]
+                            text-[#68737D]
                           "
                         >
                           Strategy & Advisory
@@ -1393,11 +1256,11 @@ export default function OurTeamPage() {
 
                         <p
                           className="
-                            text-[7px]
+                            text-[10px]
                             font-bold
                             uppercase
                             tracking-[0.2em]
-                            text-[#C6A15B]
+                            text-[#2374A8]
                           "
                         >
                           Expertise
@@ -1406,8 +1269,8 @@ export default function OurTeamPage() {
                         <p
                           className="
                             mt-1
-                            text-[9px]
-                            text-[#8FA0AD]
+                            text-[12px]
+                            text-[#68737D]
                           "
                         >
                           Finance · Governance · Strategy
@@ -1430,7 +1293,7 @@ export default function OurTeamPage() {
                 SENIOR LEADERSHIP — COO + STRATEGIC ADVISOR
             ===================================================== */}
 
-            <div className="mt-14">
+            <div className="mt-7">
 
               <div
                 className="
@@ -1445,11 +1308,11 @@ export default function OurTeamPage() {
 
                   <p
                     className="
-                      text-[9px]
+                      text-[12px]
                       font-bold
                       uppercase
                       tracking-[0.25em]
-                      text-[#C6A15B]
+                      text-[#2374A8]
                     "
                   >
                     Senior Leadership
@@ -1458,11 +1321,11 @@ export default function OurTeamPage() {
                   <h3
                     className="
                       mt-2
-                      text-[28px]
+                      text-[26px]
                       font-semibold
                       tracking-[-0.035em]
-                      text-white
-                      sm:text-[34px]
+                      text-[#0B2438]
+                      sm:text-[26px]
                     "
                   >
                     Strategic leadership.
@@ -1488,7 +1351,7 @@ export default function OurTeamPage() {
               <div
                 className="
                   grid
-                  gap-5
+                  gap-4
                   lg:grid-cols-2
                 "
               >
@@ -1532,14 +1395,14 @@ export default function OurTeamPage() {
                         group
                         relative
                         overflow-hidden
-                        rounded-[26px]
+                        rounded-[20px]
                         border
-                        border-white/10
+                        border-[#DCEAF0]
                         bg-gradient-to-br
-                        from-[#0B1F3A]
-                        via-[#123A5A]
-                        to-[#071A2D]
-                        shadow-[0_22px_55px_rgba(0,0,0,.25)]
+                        from-[#EEF5F8]
+                        via-[#E5F0F5]
+                        to-[#EEF5F8]
+                        shadow-[0_12px_30px_rgba(11,36,56,.08)]
                       "
                     >
 
@@ -1553,9 +1416,9 @@ export default function OurTeamPage() {
                           top-0
                           h-[3px]
                           bg-gradient-to-r
-                          from-[#C6A15B]
+                          from-[#2374A8]
                           via-[#087F8C]
-                          to-[#C6A15B]
+                          to-[#2374A8]
                         "
                       />
 
@@ -1565,11 +1428,11 @@ export default function OurTeamPage() {
                           relative
                           flex
                           flex-col
-                          gap-5
-                          p-6
+                          gap-4
+                          p-5
                           sm:flex-row
                           sm:items-center
-                          sm:p-7
+                          sm:p-6
                         "
                       >
 
@@ -1582,8 +1445,8 @@ export default function OurTeamPage() {
                             overflow-hidden
                             rounded-[20px]
                             border-2
-                            border-[#C6A15B]
-                            bg-[#DCE2E7]
+                            border-[#2374A8]
+                            bg-[#DCEAF0]
                             shadow-[0_15px_35px_rgba(0,0,0,.25)]
                           "
                         >
@@ -1617,11 +1480,11 @@ export default function OurTeamPage() {
 
                             <span
                               className="
-                                text-[7px]
+                                text-[10px]
                                 font-bold
                                 uppercase
                                 tracking-[0.2em]
-                                text-[#C6A15B]
+                                text-[#2374A8]
                               "
                             >
                               0{index + 2} / Leadership
@@ -1639,7 +1502,7 @@ export default function OurTeamPage() {
                                 border
                                 border-[#087F8C]/40
                                 bg-[#087F8C]/15
-                                text-[#43B8BA]
+                                text-[#087F8C]
                               "
                             >
                               <Icon size={16} />
@@ -1655,7 +1518,7 @@ export default function OurTeamPage() {
                               font-semibold
                               leading-6
                               tracking-[-0.035em]
-                              text-white
+                              text-[#0B2438]
                             "
                           >
                             {leader.name}
@@ -1665,12 +1528,12 @@ export default function OurTeamPage() {
                           <p
                             className="
                               mt-2
-                              text-[8px]
+                              text-[11px]
                               font-bold
                               uppercase
                               leading-4
                               tracking-[0.08em]
-                              text-[#43B8BA]
+                              text-[#087F8C]
                             "
                           >
                             {leader.role}
@@ -1682,7 +1545,7 @@ export default function OurTeamPage() {
                               mt-4
                               h-[2px]
                               w-10
-                              bg-[#C6A15B]
+                              bg-[#2374A8]
                               transition-all
                               duration-500
                               group-hover:w-20
@@ -1693,9 +1556,10 @@ export default function OurTeamPage() {
                           <p
                             className="
                               mt-4
-                              text-[10px]
-                              leading-5
-                              text-[#B9C5CF]
+                              text-[15px]
+                              leading-[1.65]
+                              text-[#43515C]
+                              sm:text-[16px]
                             "
                           >
                             {leader.description}
@@ -1719,14 +1583,14 @@ export default function OurTeamPage() {
                 MEET THE EXPERTS — ADVISORS & CONSULTANTS
             ===================================================== */}
 
-            <div className="mt-14">
+            <div className="mt-7">
 
               <div
                 className="
                   flex
                   flex-col
                   justify-between
-                  gap-5
+                  gap-4
                   sm:flex-row
                   sm:items-end
                 "
@@ -1736,11 +1600,11 @@ export default function OurTeamPage() {
 
                   <p
                     className="
-                      text-[9px]
+                      text-[12px]
                       font-bold
                       uppercase
                       tracking-[0.25em]
-                      text-[#C6A15B]
+                      text-[#2374A8]
                     "
                   >
                     Advisors & Consultants
@@ -1749,16 +1613,16 @@ export default function OurTeamPage() {
                   <h3
                     className="
                       mt-3
-                      text-[34px]
+                      text-[26px]
                       font-semibold
                       leading-none
                       tracking-[-0.045em]
-                      text-white
-                      sm:text-[42px]
+                      text-[#0B2438]
+                      sm:text-[30px]
                     "
                   >
                     Meet the{" "}
-                    <span className="text-[#43B8BA]">
+                    <span className="text-[#087F8C]">
                       Experts
                     </span>
                   </h3>
@@ -1766,26 +1630,14 @@ export default function OurTeamPage() {
                 </div>
 
 
-                <p
-                  className="
-                    max-w-[330px]
-                    text-[11px]
-                    leading-5
-                    text-[#B9C5CF]
-                    sm:text-right
-                  "
-                >
-                  Professionals across finance, strategy, governance,
-                  operations, technology, research, economics and technical
-                  disciplines.
-                </p>
+             
 
               </div>
 
 
               <div
                 className="
-                  mt-8
+                  mt-6
                   grid
                   gap-4
                   sm:grid-cols-2
@@ -1829,15 +1681,15 @@ export default function OurTeamPage() {
                         group
                         relative
                         overflow-hidden
-                        rounded-[24px]
+                        rounded-[20px]
                         border
-                        border-[#DCE2E7]
-                        bg-[#F6F4EF]
-                        shadow-[0_18px_45px_rgba(0,0,0,.16)]
+                        border-[#DCEAF0]
+                        bg-[#FAFBFA]
+                        shadow-[0_10px_26px_rgba(11,36,56,.07)]
                         transition-all
                         duration-300
-                        hover:border-[#C6A15B]/70
-                        hover:shadow-[0_24px_55px_rgba(0,0,0,.22)]
+                        hover:border-[#2374A8]/70
+                        hover:shadow-[0_14px_32px_rgba(11,36,56,.10)]
                       "
                     >
 
@@ -1853,11 +1705,11 @@ export default function OurTeamPage() {
                           relative
                           overflow-hidden
                           bg-gradient-to-br
-                          from-[#123A5A]
-                          via-[#0B1F3A]
-                          to-[#071A2D]
-                          p-5
-                          sm:p-6
+                          from-[#E5F0F5]
+                          via-[#FAFBFA]
+                          to-[#EEF5F8]
+                          p-4
+                          sm:p-5
                         "
                       >
 
@@ -1886,7 +1738,7 @@ export default function OurTeamPage() {
                             relative
                             flex
                             items-start
-                            gap-5
+                            gap-4
                           "
                         >
 
@@ -1895,14 +1747,14 @@ export default function OurTeamPage() {
                           <div
                             className="
                               relative
-                              h-[112px]
-                              w-[92px]
+                              h-[100px]
+                              w-[82px]
                               shrink-0
                               overflow-hidden
                               rounded-[18px]
                               border-2
-                              border-[#C6A15B]
-                              bg-[#DCE2E7]
+                              border-[#2374A8]
+                              bg-[#DCEAF0]
                               shadow-[0_12px_30px_rgba(0,0,0,.25)]
                             "
                           >
@@ -1935,7 +1787,7 @@ export default function OurTeamPage() {
                                 justify-center
                                 rounded-tr-[12px]
                                 bg-[#087F8C]
-                                text-white
+                                text-[#0B2438]
                                 shadow-lg
                               "
                             >
@@ -1971,11 +1823,11 @@ export default function OurTeamPage() {
 
                               <span
                                 className="
-                                  text-[7px]
+                                  text-[10px]
                                   font-bold
                                   uppercase
                                   tracking-[0.22em]
-                                  text-[#C6A15B]
+                                  text-[#2374A8]
                                 "
                               >
                                 0{index + 1} / Expert
@@ -1986,7 +1838,7 @@ export default function OurTeamPage() {
                                 size={16}
                                 className="
                                   shrink-0
-                                  text-[#43B8BA]
+                                  text-[#087F8C]
                                   transition-all
                                   duration-300
                                   group-hover:-translate-y-1
@@ -2002,12 +1854,12 @@ export default function OurTeamPage() {
                             <h3
                               className="
                                 mt-3
-                                text-[17px]
+                                text-[18px]
                                 font-semibold
                                 leading-5
                                 tracking-[-0.025em]
-                                text-white
-                                sm:text-[18px]
+                                text-[#0B2438]
+                                sm:text-[19px]
                               "
                             >
                               {person.name}
@@ -2019,12 +1871,12 @@ export default function OurTeamPage() {
                             <p
                               className="
                                 mt-2
-                                text-[8px]
+                                text-[11px]
                                 font-bold
                                 uppercase
                                 leading-4
                                 tracking-[0.08em]
-                                text-[#43B8BA]
+                                text-[#087F8C]
                               "
                             >
                               {person.role}
@@ -2038,7 +1890,7 @@ export default function OurTeamPage() {
                                 mt-4
                                 h-[2px]
                                 w-9
-                                bg-[#C6A15B]
+                                bg-[#2374A8]
                                 transition-all
                                 duration-500
                                 group-hover:w-16
@@ -2057,19 +1909,21 @@ export default function OurTeamPage() {
                       <div
                         className="
                           relative
-                          min-h-[145px]
-                          bg-[#F6F4EF]
-                          p-5
-                          sm:p-6
+                          flex
+                          h-full
+                          flex-col
+                          bg-[#FAFBFA]
+                          p-4
+                          sm:p-5
                         "
                       >
 
                         <p
                           className="
-                            text-[10px]
-                            leading-[1.8]
-                            text-[#52606D]
-                            sm:text-[11px]
+                            text-[15px]
+                            leading-[1.7]
+                            text-[#43515C]
+                            sm:text-[16px]
                           "
                         >
                           {person.description}
@@ -2080,25 +1934,20 @@ export default function OurTeamPage() {
 
                         <div
                           className="
-                            absolute
-                            bottom-5
-                            left-5
-                            right-5
+                            mt-5
                             flex
                             items-center
                             justify-between
-                            sm:left-6
-                            sm:right-6
                           "
                         >
 
                           <span
                             className="
-                              text-[7px]
+                              text-[10px]
                               font-bold
                               uppercase
                               tracking-[0.22em]
-                              text-[#A47C2F]
+                              text-[#087F8C]
                             "
                           >
                             IBS / Expertise
@@ -2109,7 +1958,7 @@ export default function OurTeamPage() {
                             className="
                               h-[2px]
                               w-10
-                              bg-[#C6A15B]
+                              bg-[#2374A8]
                               transition-all
                               duration-500
                               group-hover:w-16
@@ -2134,7 +1983,7 @@ export default function OurTeamPage() {
                 LEADERSHIP TEAM GRID
             ===================================================== */}
 
-            <div className="mt-12">
+            <div className="mt-8">
 
               <motion.div
                 initial={{
@@ -2167,11 +2016,11 @@ export default function OurTeamPage() {
 
                   <p
                     className="
-                      text-[8px]
+                      text-[11px]
                       font-bold
                       uppercase
                       tracking-[0.25em]
-                      text-[#C6A15B]
+                      text-[#2374A8]
                     "
                   >
                     Leadership Team
@@ -2180,11 +2029,11 @@ export default function OurTeamPage() {
                   <h3
                     className="
                       mt-1
-                      text-[24px]
+                      text-[26px]
                       font-semibold
                       tracking-[-0.025em]
-                      text-white
-                      sm:text-[28px]
+                      text-[#0B2438]
+                      sm:text-[26px]
                     "
                   >
                     Expertise across every discipline.
@@ -2211,7 +2060,7 @@ export default function OurTeamPage() {
               <div
                 className="
                   grid
-                  gap-5
+                  gap-4
                   md:grid-cols-2
                   xl:grid-cols-3
                 "
@@ -2264,10 +2113,10 @@ export default function OurTeamPage() {
                         group
                         relative
                         overflow-hidden
-                        rounded-[24px]
+                        rounded-[20px]
                         border
-                        border-white/10
-                        bg-[#F6F4EF]
+                        border-[#DCEAF0]
+                        bg-[#FAFBFA]
                         shadow-[0_18px_45px_rgba(0,0,0,.18)]
                       "
                     >
@@ -2284,9 +2133,9 @@ export default function OurTeamPage() {
                           top-0
                           h-[3px]
                           bg-gradient-to-r
-                          from-[#C6A15B]
+                          from-[#2374A8]
                           via-[#087F8C]
-                          to-[#C6A15B]
+                          to-[#2374A8]
                         "
                       />
 
@@ -2297,8 +2146,8 @@ export default function OurTeamPage() {
                           items-center
                           gap-4
                           bg-gradient-to-r
-                          from-[#0B1F3A]
-                          to-[#123A5A]
+                          from-[#EEF5F8]
+                          to-[#E5F0F5]
                           p-5
                         "
                       >
@@ -2306,14 +2155,14 @@ export default function OurTeamPage() {
                         <div
                           className="
                             relative
-                            h-[82px]
-                            w-[82px]
+                            h-[76px]
+                            w-[76px]
                             shrink-0
                             overflow-hidden
                             rounded-[18px]
                             border-2
-                            border-[#C6A15B]/80
-                            bg-[#DCE2E7]
+                            border-[#2374A8]/80
+                            bg-[#DCEAF0]
                           "
                         >
 
@@ -2349,11 +2198,11 @@ export default function OurTeamPage() {
 
                             <span
                               className="
-                                text-[7px]
+                                text-[10px]
                                 font-bold
                                 uppercase
                                 tracking-[0.18em]
-                                text-[#C6A15B]
+                                text-[#2374A8]
                               "
                             >
                               0{index + 4} / Leadership
@@ -2372,7 +2221,7 @@ export default function OurTeamPage() {
                                 border
                                 border-[#087F8C]/40
                                 bg-[#087F8C]/15
-                                text-[#43B8BA]
+                                text-[#087F8C]
                               "
                             >
                               <Icon size={13} />
@@ -2383,11 +2232,11 @@ export default function OurTeamPage() {
 
                           <h3
                             className="
-                              text-[16px]
+                              text-[18px]
                               font-semibold
                               leading-5
                               tracking-[-0.02em]
-                              text-white
+                              text-[#0B2438]
                             "
                           >
                             {leader.name}
@@ -2397,12 +2246,12 @@ export default function OurTeamPage() {
                           <p
                             className="
                               mt-1
-                              text-[7px]
+                              text-[10px]
                               font-bold
                               uppercase
                               leading-3.5
                               tracking-[0.07em]
-                              text-[#43B8BA]
+                              text-[#087F8C]
                             "
                           >
                             {leader.role}
@@ -2413,13 +2262,14 @@ export default function OurTeamPage() {
                       </div>
 
 
-                      <div className="p-5">
+                      <div className="p-4">
 
                         <p
                           className="
-                            text-[10px]
-                            leading-5
-                            text-[#68737D]
+                            text-[15px]
+                            leading-[1.65]
+                            text-[#43515C]
+                            sm:text-[16px]
                           "
                         >
                           {leader.description}
@@ -2428,7 +2278,7 @@ export default function OurTeamPage() {
 
                         <div
                           className="
-                            mt-5
+                            mt-4
                             flex
                             items-center
                             justify-between
@@ -2439,7 +2289,7 @@ export default function OurTeamPage() {
                             className="
                               h-[2px]
                               w-9
-                              bg-[#C6A15B]
+                              bg-[#2374A8]
                               transition-all
                               duration-500
                               group-hover:w-16
@@ -2448,11 +2298,11 @@ export default function OurTeamPage() {
 
                           <span
                             className="
-                              text-[7px]
+                              text-[10px]
                               font-bold
                               uppercase
                               tracking-[0.2em]
-                              text-[#A47C2F]
+                              text-[#087F8C]
                             "
                           >
                             IBS Leadership
@@ -2472,122 +2322,6 @@ export default function OurTeamPage() {
             </div>
 
 
-            {/* Bottom statement */}
-
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 15,
-              }}
-
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-
-              viewport={{
-                once: true,
-              }}
-
-              transition={{
-                duration: 0.7,
-                delay: 0.15,
-              }}
-
-              className="
-                mx-auto
-                mt-14
-                flex
-                max-w-[1000px]
-                flex-col
-                items-center
-                justify-between
-                gap-5
-                border-t
-                border-white/10
-                pt-7
-                text-center
-                sm:flex-row
-                sm:text-left
-              "
-            >
-
-              <div
-                className="
-                  flex
-                  items-center
-                  gap-3
-                "
-              >
-
-                <span
-                  className="
-                    flex
-                    h-9
-                    w-9
-                    items-center
-                    justify-center
-                    rounded-full
-                    border
-                    border-[#C6A15B]/50
-                    bg-[#C6A15B]/10
-                    text-[#C6A15B]
-                  "
-                >
-                  <UsersRound size={15} />
-                </span>
-
-                <div>
-
-                  <p
-                    className="
-                      text-[9px]
-                      font-bold
-                      uppercase
-                      tracking-[0.2em]
-                      text-[#C6A15B]
-                    "
-                  >
-                    One multidisciplinary team
-                  </p>
-
-                  <p
-                    className="
-                      mt-1
-                      text-[10px]
-                      text-[#8FA0AD]
-                    "
-                  >
-                    Different expertise. One shared purpose.
-                  </p>
-
-                </div>
-
-              </div>
-
-
-              <div
-                className="
-                  flex
-                  items-center
-                  gap-2
-                  text-[8px]
-                  font-bold
-                  uppercase
-                  tracking-[0.22em]
-                  text-[#8FA0AD]
-                "
-              >
-
-                <span className="h-px w-8 bg-[#087F8C]" />
-
-                Strategy · Operations · Expertise · Impact
-
-                <span className="h-px w-8 bg-[#C6A15B]" />
-
-              </div>
-
-            </motion.div>
 
           </div>
 
