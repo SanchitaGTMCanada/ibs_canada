@@ -491,7 +491,7 @@ export default function ContactPage() {
 
                 <span
                   className="
-                    text-[9px]
+                    text-[14px]
                     font-bold
                     uppercase
                     tracking-[0.28em]
@@ -526,7 +526,7 @@ export default function ContactPage() {
                 className="
                   mt-4
                   max-w-[480px]
-                  text-[12px]
+                  text-[17px]
                   leading-6
                   text-[#68737D]
                 "
@@ -565,7 +565,7 @@ export default function ContactPage() {
                     className="
                       mb-2
                       block
-                      text-[9px]
+                      text-[14px]
                       font-bold
                       uppercase
                       tracking-[0.15em]
@@ -856,17 +856,10 @@ export default function ContactPage() {
                 "
               >
 
-                <span
-                  className="
-                    h-[2px]
-                    w-10
-                    bg-[#C6A15B]
-                  "
-                />
 
                 <span
                   className="
-                    text-[9px]
+                    text-[14px]
                     font-bold
                     uppercase
                     tracking-[0.28em]
@@ -907,7 +900,7 @@ export default function ContactPage() {
                 className="
                   mt-5
                   max-w-[420px]
-                  text-[12px]
+                  text-[17px]
                   leading-6
                   text-[#DCE2E7]
                 "
@@ -971,7 +964,7 @@ export default function ContactPage() {
                         <span
                           className="
                             block
-                            text-[8px]
+                            text-[14px]
                             font-bold
                             uppercase
                             tracking-[0.18em]
@@ -985,7 +978,7 @@ export default function ContactPage() {
                           className="
                             mt-1
                             block
-                            text-[12px]
+                            text-[14px]
                             text-white
                           "
                         >
@@ -1050,7 +1043,7 @@ export default function ContactPage() {
 
                   <p
                     className="
-                      text-[9px]
+                      text-[14px]
                       font-bold
                       uppercase
                       tracking-[0.18em]
@@ -1063,7 +1056,7 @@ export default function ContactPage() {
                   <p
                     className="
                       mt-2
-                      text-[11px]
+                      text-[14px]
                       leading-5
                       text-[#DCE2E7]
                     "
