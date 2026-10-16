@@ -21,6 +21,15 @@ import {
   ShieldCheck,
   UsersRound,
 } from "lucide-react";
+
+import {
+
+  Files,
+  FolderOpen,
+  CloudUpload,
+  LockKeyhole,
+  
+} from "lucide-react";
 import Header from "@/components/layout/Header";
 
 import Footer from "@/components/Footer";
@@ -1441,393 +1450,451 @@ export default function ContactPage() {
           SHAREFILE
       ===================================================== */}
 
-      <section
+     <section
+  className="
+    relative
+    overflow-hidden
+    bg-[#EEF5F8]
+    px-6
+    py-10
+    text-[#43515C]
+    sm:px-8
+    lg:px-10
+    lg:py-14
+    xl:px-12
+  "
+>
+  {/* Background geometry */}
+  <div
+    className="
+      pointer-events-none
+      absolute
+      right-0
+      top-0
+      h-full
+      w-[45%]
+      bg-gradient-to-l
+      from-white/80
+      to-transparent
+    "
+  />
+
+  {/* Decorative background icons */}
+<div className="pointer-events-none absolute inset-0 overflow-hidden">
+  <FileLock2
+    className="
+      absolute
+      -left-10
+      top-20
+      h-36
+      w-36
+      rotate-[-15deg]
+      text-[#0B2438]/[0.07]
+      sm:h-48
+      sm:w-48
+      lg:h-60
+      lg:w-60
+    "
+    strokeWidth={1}
+  />
+
+  <ShieldCheck
+    className="
+      absolute
+      right-[8%]
+      top-16
+      h-28
+      w-28
+      rotate-[12deg]
+      text-[#0B2438]/[0.08]
+      sm:h-40
+      sm:w-40
+      lg:h-52
+      lg:w-52
+    "
+    strokeWidth={1}
+  />
+
+  <FolderOpen
+    className="
+      absolute
+      -right-8
+      top-[45%]
+      h-32
+      w-32
+      rotate-[-12deg]
+      text-[#0B2438]/[0.06]
+      sm:h-44
+      sm:w-44
+      lg:h-56
+      lg:w-56
+    "
+    strokeWidth={1}
+  />
+
+  <CloudUpload
+    className="
+      absolute
+      bottom-8
+      left-[12%]
+      h-28
+      w-28
+      rotate-[8deg]
+      text-[#0B2438]/[0.07]
+      sm:h-40
+      sm:w-40
+      lg:h-48
+      lg:w-48
+    "
+    strokeWidth={1}
+  />
+
+  <Files
+    className="
+      absolute
+      bottom-10
+      right-[28%]
+      hidden
+      h-32
+      w-32
+      rotate-[-8deg]
+      text-[#0B2438]/[0.06]
+      md:block
+      lg:h-44
+      lg:w-44
+    "
+    strokeWidth={1}
+  />
+</div>
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-32
+      -top-32
+      h-[500px]
+      w-[500px]
+      rounded-full
+      border
+      border-[#087F8C]/15
+    "
+  />
+
+  <div className="relative mx-auto max-w-[1280px]">
+    {/* Intro */}
+    <div className="mx-auto max-w-[820px] text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         className="
-          relative
-          overflow-hidden
-          bg-[#0B1F3A]
-          px-6
-          py-20
-          text-white
-          sm:px-8
-          lg:px-10
-          lg:py-24
-          xl:px-12
+          mx-auto
+          flex
+          h-20
+          w-20
+          items-center
+          justify-center
+          rounded-[24px]
+          bg-white
+          text-[#087F8C]
+          shadow-[0_12px_35px_rgba(11,36,56,0.10)]
         "
       >
+        <FileLock2 size={42} strokeWidth={1.5} />
+      </motion.div>
 
-        {/* Background geometry */}
+      <p
+        className="
+          mt-7
+          text-[11px]
+          font-bold
+          uppercase
+          tracking-[0.3em]
+          text-[#087F8C]
+          sm:text-[12px]
+        "
+      >
+        Client File Sharing
+      </p>
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            right-0
-            top-0
-            h-full
-            w-[45%]
-            bg-gradient-to-l
-            from-[#123A5A]
-            to-transparent
-          "
-        />
+      <h2
+        className="
+          mt-4
+          text-[44px]
+          font-semibold
+          leading-tight
+          tracking-[-0.04em]
+          text-[#0B2438]
+          sm:text-[54px]
+          lg:text-[60px]
+        "
+      >
+        ShareFile
+      </h2>
 
-        <div
-          className="
-            pointer-events-none
-            absolute
-            -right-32
-            -top-32
-            h-[500px]
-            w-[500px]
-            rounded-full
-            border
-            border-[#087F8C]/20
-          "
-        />
+      <p
+        className="
+          mx-auto
+          mt-5
+          max-w-[700px]
+          text-[15px]
+          font-medium
+          leading-7
+          text-[#43515C]
+          sm:text-[17px]
+          sm:leading-8
+          lg:text-[18px]
+        "
+      >
+        IBS provides secure file-sharing access for staff and clients through its designated platform. Access should be requested through the appropriate IBS file lead, manager or internal administrator.
+      </p>
+    </div>
 
-
-        <div
-          className="
-            relative
-            mx-auto
-            max-w-[1280px]
-          "
-        >
-
-          {/* Intro */}
-
-          <div
+    {/* Information cards */}
+    <div
+      className="
+        mx-auto
+        mt-14
+        grid
+        max-w-[1050px]
+        gap-6
+        md:grid-cols-2
+      "
+    >
+      {/* Staff card */}
+      <div
+        className="
+          rounded-[24px]
+          border
+          border-[#D7E5EC]
+          bg-white
+          p-7
+          shadow-[0_10px_35px_rgba(11,36,56,0.05)]
+          sm:p-9
+        "
+      >
+        <div className="flex items-center gap-4">
+          <span
             className="
-              mx-auto
-              max-w-[780px]
-              text-center
+              flex
+              h-12
+              w-12
+              shrink-0
+              items-center
+              justify-center
+              rounded-xl
+              bg-[#E0F1F3]
+              text-[#087F8C]
             "
           >
+            <UsersRound size={22} />
+          </span>
 
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              className="
-                mx-auto
-                flex
-                h-20
-                w-20
-                items-center
-                justify-center
-                rounded-[24px]
-                bg-white
-                text-[#087F8C]
-                shadow-[0_20px_50px_rgba(0,0,0,.25)]
-              "
-            >
-              <FileLock2
-                size={38}
-                strokeWidth={1.2}
-              />
-            </motion.div>
-
-
-            <p
-              className="
-                mt-7
-                text-[9px]
-                font-bold
-                uppercase
-                tracking-[0.3em]
-                text-[#C6A15B]
-              "
-            >
-              Client File Sharing
-            </p>
-
-
-            <h2
-              className="
-                mt-4
-                text-[40px]
-                font-semibold
-                leading-none
-                tracking-[-0.05em]
-                sm:text-[52px]
-              "
-            >
-              ShareFile
-            </h2>
-
-
-            <p
-              className="
-                mx-auto
-                mt-5
-                max-w-[680px]
-                text-[12px]
-                leading-6
-                text-[#DCE2E7]
-              "
-            >
-              IBS provides secure file-sharing access for staff and clients through its designated platform. Access should be requested through the appropriate IBS file lead, manager or internal administrator.
-            </p>
-
-          </div>
-
-
-          {/* Information cards */}
-
-          <div
+          <h3
             className="
-              mx-auto
-              mt-12
-              grid
-              max-w-[1050px]
-              gap-4
-              md:grid-cols-2
+              text-[19px]
+              font-semibold
+              leading-snug
+              text-[#0B2438]
+              sm:text-[21px]
             "
           >
-
-            <div
-              className="
-                rounded-[24px]
-                border
-                border-white/10
-                bg-white/[0.05]
-                p-7
-              "
-            >
-
-              <div className="flex items-center gap-3">
-
-                <span
-                  className="
-                    flex
-                    h-10
-                    w-10
-                    items-center
-                    justify-center
-                    rounded-xl
-                    bg-[#087F8C]
-                  "
-                >
-                  <UsersRound size={17} />
-                </span>
-
-                <h3
-                  className="
-                    text-[15px]
-                    font-semibold
-                  "
-                >
-                  Are you an IBS Staff?
-                </h3>
-
-              </div>
-
-
-              <p
-                className="
-                  mt-5
-                  text-[11px]
-                  leading-6
-                  text-[#B9C5CC]
-                "
-              >
-                Please keep your User ID and Password
-                handy. Please e-mail your requirement
-                to your supervisor who will forward the
-                requisition to the in-house ShareFile
-                system administrator to get you the
-                requested access.
-              </p>
-
-            </div>
-
-
-            <div
-              className="
-                rounded-[24px]
-                border
-                border-white/10
-                bg-white/[0.05]
-                p-7
-              "
-            >
-
-              <div className="flex items-center gap-3">
-
-                <span
-                  className="
-                    flex
-                    h-10
-                    w-10
-                    items-center
-                    justify-center
-                    rounded-xl
-                    bg-[#C6A15B]
-                    text-[#0B1F3A]
-                  "
-                >
-                  <Handshake size={17} />
-                </span>
-
-                <h3
-                  className="
-                    text-[15px]
-                    font-semibold
-                  "
-                >
-                  Are you a Client?
-                </h3>
-
-              </div>
-
-
-              <p
-                className="
-                  mt-5
-                  text-[11px]
-                  leading-6
-                  text-[#B9C5CC]
-                "
-              >
-                This is hassle-free for you. Please
-                contact your File Lead or Manager,
-                Operational Support at +1 867-669-0242,
-                who will assist you to get access to
-                ShareFile.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* What you need to do */}
-
-          <div
-            className="
-              mx-auto
-              mt-5
-              max-w-[1050px]
-              rounded-[24px]
-              border
-              border-[#087F8C]/20
-              bg-gradient-to-r
-              from-[#123A5A]
-              to-[#0B1F3A]
-              p-7
-            "
-          >
-
-            <div className="flex items-center gap-3">
-
-              <span
-                className="
-                  flex
-                  h-10
-                  w-10
-                  items-center
-                  justify-center
-                  rounded-xl
-                  bg-[#087F8C]
-                "
-              >
-                <CheckCircle2 size={17} />
-              </span>
-
-              <h3
-                className="
-                  text-[15px]
-                  font-semibold
-                "
-              >
-                What you need to do
-              </h3>
-
-            </div>
-
-
-            <div
-              className="
-                mt-5
-                grid
-                gap-3
-                text-[11px]
-                leading-6
-                text-[#B9C5CC]
-                sm:grid-cols-2
-              "
-            >
-
-              <p>
-                • You are required to save your document
-                in a particular folder of which you have
-                been given access to.
-              </p>
-
-              <p>
-                • You can simply drag and drop or import
-                any document to the folder you have been
-                given access to.
-              </p>
-
-            </div>
-
-
-            <div className="mt-7">
-
-              <a
-                href="#sharefile"
-                className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-3
-                  rounded-full
-                  bg-white
-                  px-6
-                  py-3
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#0B1F3A]
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:bg-[#C6A15B]
-                "
-              >
-
-                Login to ShareFile
-
-                <ArrowUpRight
-                  size={14}
-                  className="
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                    group-hover:-translate-y-1
-                  "
-                />
-
-              </a>
-
-            </div>
-
-          </div>
-
+            Are you an IBS Staff?
+          </h3>
         </div>
 
-      </section>
+        <p
+          className="
+            mt-6
+            text-[14px]
+            leading-7
+            text-[#43515C]
+            sm:text-[16px]
+            sm:leading-8
+          "
+        >
+          Please keep your User ID and Password
+          handy. Please e-mail your requirement
+          to your supervisor who will forward the
+          requisition to the in-house ShareFile
+          system administrator to get you the
+          requested access.
+        </p>
+      </div>
+
+      {/* Client card */}
+      <div
+        className="
+          rounded-[24px]
+          border
+          border-[#D7E5EC]
+          bg-white
+          p-7
+          shadow-[0_10px_35px_rgba(11,36,56,0.05)]
+          sm:p-9
+        "
+      >
+        <div className="flex items-center gap-4">
+          <span
+            className="
+              flex
+              h-12
+              w-12
+              shrink-0
+              items-center
+              justify-center
+              rounded-xl
+              bg-[#E0F1F3]
+              text-[#087F8C]
+            "
+          >
+            <Handshake size={22} />
+          </span>
+
+          <h3
+            className="
+              text-[19px]
+              font-semibold
+              leading-snug
+              text-[#0B2438]
+              sm:text-[21px]
+            "
+          >
+            Are you a Client?
+          </h3>
+        </div>
+
+        <p
+          className="
+            mt-6
+            text-[14px]
+            leading-7
+            text-[#43515C]
+            sm:text-[16px]
+            sm:leading-8
+          "
+        >
+          This is hassle-free for you. Please
+          contact your File Lead or Manager,
+          Operational Support at +1 867-669-0242,
+          who will assist you to get access to
+          ShareFile.
+        </p>
+      </div>
+    </div>
+
+    {/* What you need to do */}
+    <div
+      className="
+        mx-auto
+        mt-6
+        max-w-[1050px]
+        rounded-[24px]
+        border
+        border-[#CFE2E9]
+        bg-white
+        p-7
+        shadow-[0_10px_35px_rgba(11,36,56,0.05)]
+        sm:p-9
+      "
+    >
+      <div className="flex items-center gap-4">
+        <span
+          className="
+            flex
+            h-12
+            w-12
+            shrink-0
+            items-center
+            justify-center
+            rounded-xl
+            bg-[#E0F1F3]
+            text-[#087F8C]
+          "
+        >
+          <CheckCircle2 size={22} />
+        </span>
+
+        <h3
+          className="
+            text-[19px]
+            font-semibold
+            text-[#0B2438]
+            sm:text-[22px]
+          "
+        >
+          What you need to do
+        </h3>
+      </div>
+
+      <div
+        className="
+          mt-6
+          grid
+          gap-5
+          text-[14px]
+          leading-7
+          text-[#43515C]
+          sm:grid-cols-2
+          sm:text-[16px]
+          sm:leading-8
+        "
+      >
+        <p>
+          • You are required to save your document
+          in a particular folder of which you have
+          been given access to.
+        </p>
+
+        <p>
+          • You can simply drag and drop or import
+          any document to the folder you have been
+          given access to.
+        </p>
+      </div>
+
+      <div className="mt-8">
+        <a
+          href="#sharefile"
+          className="
+            group
+            inline-flex
+            items-center
+            gap-3
+            rounded-full
+            bg-[#087F8C]
+            px-7
+            py-4
+            text-[11px]
+            font-bold
+            uppercase
+            tracking-[0.12em]
+            text-white
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:bg-[#066D78]
+            sm:text-[12px]
+          "
+          style={{color: 'white'}}
+        >
+          Login to ShareFile
+
+          <ArrowUpRight
+            size={17}
+            className="
+              transition-transform
+              duration-300
+              group-hover:translate-x-1
+              group-hover:-translate-y-1
+            "
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
       {/* =====================================================
