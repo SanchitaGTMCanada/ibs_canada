@@ -1905,10 +1905,10 @@ export default function ContactPage() {
         className="
           bg-[#F6F4EF]
           px-6
-          py-20
+          py-10
           sm:px-8
           lg:px-10
-          lg:py-24
+          lg:py-14
           xl:px-12
         "
       >
@@ -1935,17 +1935,10 @@ export default function ContactPage() {
                 "
               >
 
-                <span
-                  className="
-                    h-[2px]
-                    w-10
-                    bg-[#C6A15B]
-                  "
-                />
 
                 <span
                   className="
-                    text-[9px]
+                    text-[14px]
                     font-bold
                     uppercase
                     tracking-[0.28em]
@@ -1980,7 +1973,7 @@ export default function ContactPage() {
                 className="
                   mt-5
                   max-w-[400px]
-                  text-[12px]
+                  text-[17px]
                   leading-6
                   text-[#68737D]
                 "
@@ -2002,112 +1995,135 @@ export default function ContactPage() {
                 sm:grid-cols-2
               "
             >
+{offices.map((office) => {
+  const Icon = office.icon;
 
-              {offices.map((office) => {
+  return (
+    <div
+      key={office.label}
+      className="
+        group
+        relative
+        isolate
+        overflow-hidden
+        rounded-[22px]
+        border
+        border-[#D7E5EC]
+        bg-gradient-to-br
+        from-white
+        to-[#EEF5F8]
+        p-5
+        shadow-[0_8px_25px_rgba(11,36,56,0.05)]
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:border-[#087F8C]/40
+        hover:shadow-[0_16px_35px_rgba(11,36,56,0.10)]
+        sm:p-6
+      "
+    >
+      {/* Decorative corner */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-8
+          -top-8
+          -z-10
+          h-24
+          w-24
+          rounded-full
+          bg-[#E0F1F3]
+          transition-transform
+          duration-500
+          group-hover:scale-125
+        "
+      />
 
-                const Icon = office.icon;
+      {/* Icon */}
+      <div
+        className="
+          flex
+          h-11
+          w-11
+          items-center
+          justify-center
+          rounded-[14px]
+          bg-[#E0F1F3]
+          text-[#087F8C]
+          transition-all
+          duration-300
+          group-hover:bg-[#087F8C]
+          group-hover:text-white
+        "
+      >
+        <Icon size={21} strokeWidth={1.6} />
+      </div>
 
-                return (
-                  <div
-                    key={office.label}
-                    className="
-                      group
-                      relative
-                      overflow-hidden
-                      rounded-[26px]
-                      border
-                      border-[#DCE2E7]
-                      bg-white
-                      p-7
-                      shadow-[0_18px_50px_rgba(11,31,58,.06)]
-                      transition-all
-                      duration-300
-                      hover:-translate-y-2
-                      hover:shadow-[0_25px_60px_rgba(11,31,58,.10)]
-                    "
-                  >
+      {/* Office name */}
+      <h3
+        className="
+          mt-4
+          text-[17px]
+          font-bold
+          leading-snug
+          text-[#0B2438]
+          transition-colors
+          duration-300
+          group-hover:text-[#087F8C]
+          sm:text-[18px]
+        "
+      >
+        {office.label}
+      </h3>
 
-                    {/* Fold */}
+      {/* Accent */}
+      <div
+        className="
+          mt-3
+          h-[3px]
+          w-9
+          rounded-full
+          bg-[#087F8C]
+          transition-all
+          duration-300
+          group-hover:w-14
+        "
+      />
 
-                    <div
-                      className="
-                        absolute
-                        right-0
-                        top-0
-                        h-[65px]
-                        w-[65px]
-                        bg-[#DCE2E7]
-                      "
-                      style={{
-                        clipPath:
-                          "polygon(0 0, 100% 0, 100% 100%)",
-                      }}
-                    />
+      {/* Address */}
+      <div
+        className="
+          mt-4
+          space-y-1
+          text-[12px]
+          leading-5
+          text-[#43515C]
+          sm:text-[13px]
+        "
+      >
+        {office.address.map((line) => (
+          <p key={line}>{line}</p>
+        ))}
+      </div>
 
-
-                    <div
-                      className="
-                        flex
-                        h-12
-                        w-12
-                        items-center
-                        justify-center
-                        rounded-2xl
-                        bg-[#E8F3F2]
-                        text-[#087F8C]
-                      "
-                    >
-                      <Icon
-                        size={21}
-                        strokeWidth={1.3}
-                      />
-                    </div>
-
-
-                    <h3
-                      className="
-                        mt-6
-                        text-[16px]
-                        font-semibold
-                        text-[#0B1F3A]
-                      "
-                    >
-                      {office.label}
-                    </h3>
-
-
-                    <div
-                      className="
-                        mt-4
-                        h-[2px]
-                        w-9
-                        bg-[#C6A15B]
-                      "
-                    />
-
-
-                    <div
-                      className="
-                        mt-5
-                        space-y-1
-                        text-[11px]
-                        leading-5
-                        text-[#68737D]
-                      "
-                    >
-
-                      {office.address.map((line) => (
-                        <p key={line}>
-                          {line}
-                        </p>
-                      ))}
-
-                    </div>
-
-                  </div>
-                );
-
-              })}
+      {/* Bottom hover accent */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          h-[3px]
+          w-0
+          bg-[#087F8C]
+          transition-all
+          duration-300
+          group-hover:w-full
+        "
+      />
+    </div>
+  );
+})}
 
             </div>
 
