@@ -1089,10 +1089,10 @@ export default function ContactPage() {
           overflow-hidden
           bg-[#DCE2E7]
           px-6
-          py-20
+          py-10
           sm:px-8
           lg:px-10
-          lg:py-24
+          lg:py-14
           xl:px-12
         "
       >
@@ -1161,17 +1161,11 @@ export default function ContactPage() {
               "
             >
 
-              <span
-                className="
-                  h-[2px]
-                  w-10
-                  bg-[#C6A15B]
-                "
-              />
+             
 
               <span
                 className="
-                  text-[9px]
+                  text-[14px]
                   font-bold
                   uppercase
                   tracking-[0.28em]
@@ -1214,7 +1208,7 @@ export default function ContactPage() {
               className="
                 mt-5
                 max-w-[570px]
-                text-[12px]
+                text-[17px]
                 leading-6
                 text-[#68737D]
               "
@@ -1275,7 +1269,7 @@ export default function ContactPage() {
                   <p
                     className="
                       mt-1
-                      text-[9px]
+                      text-[14px]
                       font-bold
                       uppercase
                       tracking-[0.18em]
@@ -1295,7 +1289,7 @@ export default function ContactPage() {
                   mt-6
                   grid
                   gap-3
-                  text-[11px]
+                  text-[14px]
                   text-[#68737D]
                   sm:grid-cols-2
                 "
@@ -1408,7 +1402,7 @@ export default function ContactPage() {
 
                 <p
                   className="
-                    text-[8px]
+                    text-[14px]
                     font-bold
                     uppercase
                     tracking-[0.25em]
