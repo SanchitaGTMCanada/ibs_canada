@@ -372,10 +372,10 @@ export default function ContactPage() {
           relative
           bg-[#F6F4EF]
           px-6
-          py-20
+          py-10
           sm:px-8
           lg:px-10
-          lg:py-28
+          lg:py-18
           xl:px-12
         "
       >
