@@ -310,7 +310,7 @@ export default function AboutPage() {
   {/* DISCOVER IBS */}
   <Link
     href="#story"
-    className="group inline-flex items-center gap-3 rounded-full bg-[#087F8C] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-md shadow-[#087F8C]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#066A75] sm:px-6 sm:py-3.5"
+    className="group inline-flex items-center gap-3 rounded-full bg-[#087F8C] px-5 py-3 text-[14px] font-bold uppercase tracking-[0.14em] text-white shadow-md shadow-[#087F8C]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#066A75] sm:px-6 sm:py-3.5"
   style={{color:"white"}}
   
   >
@@ -324,7 +324,7 @@ export default function AboutPage() {
   {/* EXPLORE SERVICES */}
   <Link
     href="/services"
-    className="group inline-flex items-center gap-2 rounded-full border border-[#087F8C] bg-[#087F8C] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-md shadow-[#087F8C]/20 transition-all duration-300 hover:-translate-y-1 hover:border-[#066A75] hover:bg-[#066A75] sm:px-6 sm:py-3.5"
+    className="group inline-flex items-center gap-2 rounded-full border border-[#087F8C] bg-[#087F8C] px-5 py-3 text-[14px] font-bold uppercase tracking-[0.14em] text-white shadow-md shadow-[#087F8C]/20 transition-all duration-300 hover:-translate-y-1 hover:border-[#066A75] hover:bg-[#066A75] sm:px-6 sm:py-3.5"
   style={{color:"white"}}
   
   >

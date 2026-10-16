@@ -151,8 +151,9 @@ export default function ContactPage() {
 <section
   className="
     relative
+    isolate
     overflow-hidden
-    bg-[#0B1F3A]
+    bg-[#FAFBFA]
     px-6
     pb-16
     pt-36
@@ -162,423 +163,204 @@ export default function ContactPage() {
     lg:pb-20
     lg:pt-44
     xl:px-12
+      min-h-[650px] sm:min-h-[650px]  lg:min-h-[650px]
   "
 >
-
-        {/* Background image */}
-
-        <div className="absolute inset-0">
-
-          <img
-            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2200&q=90"
-            alt=""
-            aria-hidden="true"
-            className="
-              h-full
-              w-full
-              object-cover
-              opacity-20
-            "
-          />
-
-          <div
-            className="
-              absolute
-              inset-0
-              bg-gradient-to-r
-              from-[#0B1F3A]
-              via-[#0B1F3A]/95
-              to-[#123A5A]/75
-            "
-          />
-
-          <div
-            className="
-              absolute
-              inset-0
-              bg-gradient-to-t
-              from-[#0B1F3A]
-              via-transparent
-              to-transparent
-            "
-          />
-
-        </div>
+  {/* Full background image */}
+  <div className="absolute inset-0 -z-20">
+    <img
+      src="/images/about/about-hero.jpg"
+      alt=""
+      aria-hidden="true"
+      className="h-full w-full object-cover"
+    />
+  </div>
 
 
-        {/* Decorative circles */}
+  <div
+    className="
+      pointer-events-none
+      absolute
+      inset-0
+      -z-10
+      bg-gradient-to-r
+      from-white/75
+      via-white/35
+      to-[#EEF5F8]/15
+    "
+  />
 
-        <div
+  {/* Decorative circles */}
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-40
+      -top-40
+      -z-10
+      h-[520px]
+      w-[520px]
+      rounded-full
+      border
+      border-[#0B2438]/10
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-20
+      -top-20
+      -z-10
+      h-[350px]
+      w-[350px]
+      rounded-full
+      border
+      border-[#2374A8]/20
+    "
+  />
+
+  {/* Hero content */}
+  <div
+    className="
+      relative
+      z-10
+      mx-auto
+      max-w-[1280px]
+    "
+  >
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={stagger}
+      className="max-w-[750px]"
+    >
+      {/* Eyebrow */}
+      <motion.div
+        variants={fadeUp}
+        className="flex items-center gap-3"
+      >
+    
+
+        <span
           className="
-            pointer-events-none
-            absolute
-            -right-40
-            -top-40
-            h-[520px]
-            w-[520px]
-            rounded-full
-            border
-            border-[#C6A15B]/10
-          "
-        />
-
-        <div
-          className="
-            pointer-events-none
-            absolute
-            -right-20
-            -top-20
-            h-[350px]
-            w-[350px]
-            rounded-full
-            border
-            border-[#087F8C]/20
-          "
-        />
-
-
-        {/* Hero content */}
-
-        <div
-          className="
-            relative
-            z-10
-            mx-auto
-            grid
-            max-w-[1280px]
-            gap-12
-            lg:grid-cols-[1fr_0.85fr]
-            lg:items-center
+            text-[13px]
+            font-bold
+            uppercase
+            tracking-[0.32em]
+            text-[#0B2438]
           "
         >
+          Get In Touch
+        </span>
+      </motion.div>
 
-          {/* Left */}
+      {/* Main heading */}
+      <motion.h1
+        variants={fadeUp}
+        className="
+          mt-6
+          text-[46px]
+          font-semibold
+          leading-[0.98]
+          tracking-[-0.055em]
+          text-[#0B2438]
+          sm:text-[62px]
+          lg:text-[76px]
+        "
+      >
+        Let&apos;s discuss
+        <span className="block text-[#0B2438]">
+          your priorities
+        </span>
+      </motion.h1>
 
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={stagger}
-            className="max-w-[650px]"
-          >
+      {/* Description */}
+      <motion.p
+        variants={fadeUp}
+        className="
+  mt-7
+  max-w-[700px]
+  text-[15px]
+  font-bold
+  leading-7
+  text-[#43515C]
+  sm:mt-8
+  sm:text-[17px]
+  sm:leading-8
+  lg:text-[18px]
+"
+      >
+        Tell us what you are working to achieve. Our team will review
+        your requirements and connect you with the appropriate IBS
+        professional
+      </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              className="
-                flex
-                items-center
-                gap-3
-              "
-            >
-
-              <span
-                className="
-                  h-[2px]
-                  w-12
-                  bg-[#C6A15B]
-                "
-              />
-
-              <span
-                className="
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.32em]
-                  text-[#C6A15B]
-                "
-              >
-                Get In Touch
-              </span>
-
-            </motion.div>
-
-
-            <motion.h1
-              variants={fadeUp}
-              className="
-                mt-6
-                text-[46px]
-                font-semibold
-                leading-[0.95]
-                tracking-[-0.055em]
-                text-white
-                sm:text-[62px]
-                lg:text-[76px]
-              "
-            >
-              Let&apos;s discuss 
-
-              <span
-                className="
-                  block
-                  bg-gradient-to-r
-                  from-[#C6A15B]
-                  via-[#D8B866]
-                  to-[#087F8C]
-                  bg-clip-text
-                  text-transparent
-                "
-              >
-                your priorities
-              </span>
-
-            </motion.h1>
-
-
-            <motion.p
-              variants={fadeUp}
-              className="
-                mt-7
-                max-w-[540px]
-                text-[13px]
-                leading-7
-                text-[#DCE2E7]
-              "
-            >
-              Tell us what you are working to achieve. Our team will review your requirements and connect you with the appropriate IBS professional
-            </motion.p>
-
-
-            {/* Quick contact */}
-
-            <motion.div
-              variants={fadeUp}
-              className="
-                mt-9
-                flex
-                flex-wrap
-                gap-3
-              "
-            >
-
-              <a
-                href="tel:+18676690242"
-                className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-3
-                  rounded-full
-                  bg-[#C6A15B]
-                  px-5
-                  py-3
-                  text-[9px]
-                  font-bold
-                  uppercase
-                  tracking-[0.12em]
-                  text-[#0B1F3A]
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:bg-white
-                "
-              >
-
-                <Phone size={14} />
-
-               +1 867-669-0242
-
-              </a>
-
-
-          <a
-  href="mailto:info@ibsgroupcanada.com"
-  className="
-    inline-flex
-    items-center
-    gap-3
-    rounded-full
-    border
-    border-[#087F8C]
-    bg-[#087F8C]
-    px-5
-    py-3
-    text-[9px]
-    font-bold
-    uppercase
-    tracking-[0.12em]
-    !text-white
-    transition-all
-    duration-300
-    hover:-translate-y-1
-    hover:border-[#066D78]
-    hover:bg-[#066D78]
-    hover:!text-white
-  "
+   {/* Quick contact */}
+<motion.div
+  variants={fadeUp}
+  className="mt-9 flex flex-wrap gap-3"
 >
-  <Mail size={14} />
+  <a
+    href="tel:+18676690242"
+    className="
+      group
+      inline-flex
+      items-center
+      gap-3
+      rounded-full
+      bg-[#087F8C]
+      px-5
+      py-3
+      text-[14px]
+      font-bold
+      uppercase
+      tracking-[0.12em]
+      text-white
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:bg-[#066D78]
+    "
+    style={{color:"white"}}
+  >
+    <Phone size={14} />
+    +1 867-669-0242
+  </a>
 
-  Email Us
-</a>
-
-            </motion.div>
-
-          </motion.div>
-
-
-          {/* Right visual */}
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: 50,
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-            }}
-            transition={{
-              duration: 0.8,
-            }}
-            className="
-              relative
-              mx-auto
-              w-full
-              max-w-[500px]
-            "
-          >
-
-            {/* Main image */}
-
-            <div
-              className="
-                relative
-                overflow-hidden
-                rounded-[30px]
-                border
-                border-white/15
-                bg-[#123A5A]
-                p-2
-                shadow-[0_30px_80px_rgba(0,0,0,.30)]
-              "
-            >
-
-              <div
-                className="
-                  relative
-                  h-[330px]
-                  overflow-hidden
-                  rounded-[24px]
-                "
-              >
-
-                <img
-                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=90"
-                  alt="Business professionals discussing a project"
-                  className="
-                    h-full
-                    w-full
-                    object-cover
-                  "
-                />
-
-                <div
-                  className="
-                    absolute
-                    inset-0
-                    bg-gradient-to-t
-                    from-[#0B1F3A]/80
-                    via-transparent
-                    to-transparent
-                  "
-                />
-
-
-                {/* Floating card */}
-
-                <div
-                  className="
-                    absolute
-                    bottom-5
-                    left-5
-                    right-5
-                    rounded-2xl
-                    border
-                    border-white/15
-                    bg-[#0B1F3A]/90
-                    p-5
-                    backdrop-blur-md
-                  "
-                >
-
-                  <div className="flex items-center gap-4">
-
-                    <div
-                      className="
-                        flex
-                        h-11
-                        w-11
-                        shrink-0
-                        items-center
-                        justify-center
-                        rounded-xl
-                        bg-[#C6A15B]
-                        text-[#0B1F3A]
-                      "
-                    >
-                      <MessageSquare
-                        size={20}
-                        strokeWidth={1.5}
-                      />
-                    </div>
-
-                    <div>
-
-                      <p
-                        className="
-                          text-[8px]
-                          font-bold
-                          uppercase
-                          tracking-[0.2em]
-                          text-[#C6A15B]
-                        "
-                      >
-                        We&apos;re here to help
-                      </p>
-
-                      <p
-                        className="
-                          mt-1
-                          text-[12px]
-                          text-white
-                        "
-                      >
-                        Tell us what you&apos;re working on.
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            {/* Gold corner */}
-
-            <div
-              className="
-                absolute
-                -bottom-4
-                -left-4
-                h-24
-                w-24
-                bg-[#C6A15B]
-              "
-              style={{
-                clipPath:
-                  "polygon(0 100%, 0 0, 100% 100%)",
-              }}
-            />
-
-          </motion.div>
-
-        </div>
-
-      </section>
+  <a
+    href="mailto:info@ibsgroupcanada.com"
+    className="
+      inline-flex
+      items-center
+      gap-3
+      rounded-full
+      border
+      border-[#087F8C]
+      bg-[#087F8C]
+      px-5
+      py-3
+      text-[14px]
+      font-bold
+      uppercase
+      tracking-[0.12em]
+      text-white
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:border-[#066D78]
+      hover:bg-[#066D78]
+    "
+    style={{color:"white"}}
+  >
+    <Mail size={14} />
+    Email Us
+  </a>
+</motion.div>
+    </motion.div>
+  </div>
+</section>
 
 
       {/* =====================================================
