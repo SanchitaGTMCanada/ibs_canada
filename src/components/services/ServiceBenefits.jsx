@@ -327,17 +327,11 @@ export default function ServiceBenefits({
                 gap-3
               "
             >
-              <span
-                className="
-                  h-[2px]
-                  w-10
-                  bg-[#087F8C]
-                "
-              />
+              
 
               <span
                 className="
-                  text-[9px]
+                  text-[17px]
                   font-semibold
                   uppercase
                   tracking-[0.28em]
@@ -436,7 +430,7 @@ export default function ServiceBenefits({
 
               <span
                 className="
-                  text-[8px]
+                  text-[17px]
                   font-semibold
                   uppercase
                   tracking-[0.24em]

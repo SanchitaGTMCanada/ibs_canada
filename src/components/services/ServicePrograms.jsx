@@ -80,9 +80,9 @@ export default function ServicePrograms({
                 transition={{ duration: 0.7 }}
                 className="flex items-center gap-3"
               >
-                <span className="h-[2px] w-10 bg-[#087F8C]" />
+               
 
-                <span className="text-[9px] font-semibold uppercase tracking-[0.25em] text-[#087F8C]">
+                <span className="text-[17px] font-semibold uppercase tracking-[0.25em] text-[#087F8C]">
                   Learning Journey
                 </span>
               </motion.div>
@@ -311,9 +311,9 @@ export default function ServicePrograms({
               className="mb-10"
             >
               <div className="flex items-center gap-3">
-                <span className="h-[2px] w-10 bg-[#C6A15B]" />
+              
 
-                <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]">
+                <span className="text-[17px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]">
                   Your learning journey
                 </span>
               </div>
@@ -1036,7 +1036,7 @@ export default function ServicePrograms({
                 />
               </div>
 
-              <p className="max-w-[350px] text-[11px] leading-[1.7] text-[#202832]/55">
+              <p className="max-w-[350px] text-[17px] leading-[1.7] text-[#202832]/55">
                 Practical education connecting
                 people, skills and opportunity.
               </p>
@@ -1074,7 +1074,7 @@ export default function ServicePrograms({
               }}
               className="mb-8"
             >
-              <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]">
+              <span className="text-[17px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]">
                 Choose your pathway
               </span>
 
@@ -1289,7 +1289,7 @@ export default function ServicePrograms({
                                 }}
                               />
 
-                              <span className="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#202832]/40">
+                              <span className="text-[17px] font-semibold uppercase tracking-[0.2em] text-[#202832]/40">
                                 Professional pathway
                               </span>
                             </div>
@@ -1617,18 +1617,12 @@ export default function ServicePrograms({
                     gap-3
                   "
                 >
-                  <span
-                    className="
-                      h-[2px]
-                      w-10
-                      bg-[#C6A15B]
-                    "
-                  />
+                
 
                   <span
                     className="
-                      text-[8px]
-                      font-semibold
+                      text-[17px]
+                      font-bold
                       uppercase
                       tracking-[0.3em]
                       text-[#C6A15B]

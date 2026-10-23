@@ -371,254 +371,203 @@ export default function ServicesPage() {
             HERO
         ===================================================== */}
 
-        <section className="relative overflow-hidden bg-[#0B1F3A]">
-
-          {/* GLOW */}
-
-          <div className="pointer-events-none absolute -right-[220px] -top-[180px] h-[500px] w-[500px] rounded-full bg-[#087F8C]/20 blur-[120px] sm:h-[700px] sm:w-[700px]" />
-
-          <div className="pointer-events-none absolute -bottom-[220px] -left-[200px] h-[450px] w-[450px] rounded-full bg-[#C6A15B]/10 blur-[120px]" />
-
-
-          {/* LARGE NUMBER */}
-
-          <div className="pointer-events-none absolute right-[-50px] top-[8%] hidden select-none text-white/[0.025] lg:block">
-
-            <span className="text-[34vw] font-medium leading-none tracking-[-0.1em]">
-              01
-            </span>
-
-          </div>
-
-
-          {/* ORBIT */}
-
-          <motion.div
-            className="pointer-events-none absolute right-[-100px] top-[15%] hidden text-[#087F8C]/10 xl:block"
-            animate={{
-              rotate: 360,
-            }}
-            transition={{
-              duration: 50,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
-            <Network
-              size={600}
-              strokeWidth={0.25}
-            />
-          </motion.div>
-
-
-          {/* FLOATING ICONS */}
-
-          <div className="hidden lg:block">
-
-            <FloatingIcon
-              icon={Sparkles}
-              size={90}
-              duration={5}
-              className="absolute right-[42%] top-[16%] text-[#C6A15B]/40"
-            />
-
-            <FloatingIcon
-              icon={Lightbulb}
-              size={80}
-              duration={7}
-              className="absolute bottom-[17%] right-[6%] text-[#087F8C]/45"
-            />
-
-            <FloatingIcon
-              icon={Compass}
-              size={60}
-              duration={6}
-              className="absolute left-[5%] top-[35%] text-[#C6A15B]/25"
-            />
-
-          </div>
-
-
-          {/* HERO GRID */}
-
-          <div className="relative z-10 mx-auto grid max-w-[1450px] items-center gap-12 px-4 pb-20 pt-28 min-[360px]:px-5 sm:gap-16 sm:px-8 sm:pb-24 sm:pt-32 lg:min-h-[780px] lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12 lg:py-28">
-
-            {/* LEFT */}
-
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: {},
-                visible: {
-                  transition: {
-                    staggerChildren: 0.1,
-                  },
-                },
-              }}
-              className="min-w-0"
-            >
-
-              <motion.div variants={fadeUp}>
-                <SectionLabel light>
-                  Our Services
-                </SectionLabel>
-              </motion.div>
-
-
-              <motion.h1
-                variants={fadeUp}
-                className="mt-7 break-words text-[53px] font-medium leading-[0.82] tracking-[-0.075em] text-white min-[360px]:text-[59px] sm:text-[78px] md:text-[92px] lg:text-[110px] xl:text-[125px]"
-              >
-
-                Solutions
-
-                <span className="block text-[#C6A15B]">
-                  built for
-                </span>
-
-                <span className="block">
-                  impact.
-                </span>
-
-              </motion.h1>
-
-
-              <motion.div
-                variants={fadeUp}
-                className="mt-7 flex gap-2"
-              >
-
-                <span className="h-[3px] w-14 bg-[#C6A15B]" />
-
-                <span className="h-[3px] w-6 bg-[#087F8C]" />
-
-                <span className="h-[3px] w-3 bg-white/20" />
-
-              </motion.div>
-
-
-              <motion.p
-                variants={fadeUp}
-                className="mt-6 max-w-[650px] text-[15px] leading-[1.85] text-[#C4D1D6] sm:mt-8 sm:text-[18px] sm:leading-[1.9]"
-              >
-                We provide culturally tailored business solutions across
-                education, technical services, infrastructure, technology,
-                economic development, financial management and governance.
-              </motion.p>
-
-
-              <motion.div
-                variants={fadeUp}
-                className="mt-8 flex items-center gap-4 sm:mt-10"
-              >
-
-                <span className="flex h-10 w-10 items-center justify-center border border-[#C6A15B]/40 text-[#C6A15B] sm:h-12 sm:w-12">
-                  <ArrowDown size={17} />
-                </span>
-
-                <span className="text-[8px] font-bold uppercase tracking-[0.22em] text-white/40 sm:text-[9px]">
-                  Explore our capabilities
-                </span>
-
-              </motion.div>
-
-            </motion.div>
-
-
-            {/* RIGHT IMAGE */}
-
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0.94,
-                x: 35,
-              }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-                x: 0,
-              }}
-              transition={{
-                duration: 1.1,
-                ease,
-              }}
-              className="relative w-full min-w-0"
-            >
-
-              <div className="relative mx-auto w-[91%] sm:w-[88%] lg:w-full">
-
-                <div className="absolute -right-3 -top-3 h-full w-full border border-[#C6A15B]/50 sm:-right-5 sm:-top-5" />
-
-                <div className="absolute -bottom-5 -left-5 h-[45%] w-[45%] bg-[#087F8C] sm:-bottom-7 sm:-left-7" />
-
-
-                <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                    rotate: [0, 5, 0, -5, 0],
-                  }}
-                  transition={{
-                    duration: 7,
-                    repeat: Infinity,
-                  }}
-                  className="absolute -right-5 top-[13%] z-30 text-[#C6A15B] sm:-right-8"
-                >
-
-                  <Network
-                    className="h-[65px] w-[65px] sm:h-[90px] sm:w-[90px] lg:h-[115px] lg:w-[115px]"
-                    strokeWidth={0.35}
-                  />
-
-                </motion.div>
-
-
-                <div className="relative z-10 aspect-[0.9] overflow-hidden">
-
-                  <img
-                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=90"
-                    alt="Professionals collaborating"
-                    className="h-full w-full object-cover"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A] via-[#0B1F3A]/15 to-transparent" />
-
-                  <div className="absolute left-0 top-0 h-full w-[4px] bg-[#C6A15B]" />
-
-
-                  <div className="absolute bottom-0 left-0 p-5 sm:p-8">
-
-                    <div className="flex items-end gap-3">
-
-                      <span className="text-[68px] font-medium leading-none tracking-[-0.1em] text-[#C6A15B] sm:text-[90px]">
-                        07
-                      </span>
-
-                      <div className="pb-1">
-
-                        <p className="text-[7px] font-bold uppercase tracking-[0.25em] text-[#C6A15B] sm:text-[9px]">
-                          Service Areas
-                        </p>
-
-                        <p className="mt-1 text-[12px] text-white sm:text-[15px]">
-                          One purpose. Many capabilities.
-                        </p>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
+<section className="relative isolate overflow-hidden bg-[#EEF5F8]">
+  {/* Full background image */}
+  <div className="absolute inset-0 -z-20">
+    <img
+      src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2200&q=90"
+      alt=""
+      aria-hidden="true"
+      className="h-full w-full object-cover"
+    />
+  </div>
+
+  {/* Light overlay for readable navy text */}
+  <div className="pointer-events-none absolute inset-0 -z-10 bg-white/85" />
+  <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-white/95 via-white/85 to-[#EEF5F8]/70" />
+
+  {/* Glow */}
+  <div className="pointer-events-none absolute -right-[220px] -top-[180px] h-[500px] w-[500px] rounded-full bg-[#087F8C]/10 blur-[120px] sm:h-[700px] sm:w-[700px]" />
+
+  <div className="pointer-events-none absolute -bottom-[220px] -left-[200px] h-[450px] w-[450px] rounded-full bg-[#2374A8]/10 blur-[120px]" />
+
+  {/* Large number */}
+  <div className="pointer-events-none absolute right-[-50px] top-[8%] hidden select-none text-[#0B2438]/[0.035] lg:block">
+    <span className="text-[34vw] font-medium leading-none tracking-[-0.1em]">
+      01
+    </span>
+  </div>
+
+  {/* Orbit */}
+  <motion.div
+    className="pointer-events-none absolute right-[-100px] top-[15%] hidden text-[#0B2438]/[0.08] xl:block"
+    animate={{ rotate: 360 }}
+    transition={{
+      duration: 50,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+  >
+    <Network size={600} strokeWidth={0.25} />
+  </motion.div>
+
+  {/* Floating icons */}
+  <div className="pointer-events-none hidden lg:block">
+    <FloatingIcon
+      icon={Sparkles}
+      size={90}
+      duration={5}
+      className="absolute right-[42%] top-[16%] text-[#2374A8]/35"
+    />
+
+    <FloatingIcon
+      icon={Lightbulb}
+      size={80}
+      duration={7}
+      className="absolute bottom-[17%] right-[6%] text-[#087F8C]/35"
+    />
+
+    <FloatingIcon
+      icon={Compass}
+      size={60}
+      duration={6}
+      className="absolute left-[5%] top-[35%] text-[#2374A8]/25"
+    />
+  </div>
+
+  {/* Hero grid */}
+  <div className="relative z-10 mx-auto grid max-w-[1450px] items-center gap-12 px-4 pb-20 pt-28 min-[360px]:px-5 sm:gap-16 sm:px-8 sm:pb-24 sm:pt-32 lg:min-h-[780px] lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12 lg:py-28">
+    {/* Left content */}
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {},
+        visible: {
+          transition: { staggerChildren: 0.1 },
+        },
+      }}
+      className="min-w-0"
+    >
+      <motion.div variants={fadeUp}>
+        <SectionLabel>
+          Our Services
+        </SectionLabel>
+      </motion.div>
+
+      <motion.h1
+        variants={fadeUp}
+        className="mt-7 break-words text-[53px] font-semibold leading-[0.88] tracking-[-0.075em] text-[#0B2438] min-[360px]:text-[59px] sm:text-[78px] md:text-[92px] lg:text-[110px] xl:text-[125px]"
+      >
+        Solutions
+
+        <span className="block text-[#0B2438]">
+          built for
+        </span>
+
+        <span className="block text-[#0B2438]">
+          impact.
+        </span>
+      </motion.h1>
+
+      <motion.div
+        variants={fadeUp}
+        className="mt-7 flex gap-2"
+      >
+        <span className="h-[3px] w-14 bg-[#087F8C]" />
+        <span className="h-[3px] w-6 bg-[#2374A8]" />
+        <span className="h-[3px] w-3 bg-[#0B2438]/20" />
+      </motion.div>
+
+      <motion.p
+        variants={fadeUp}
+        className="mt-6 max-w-[650px] text-[15px] font-medium leading-[1.85] text-[#43515C] sm:mt-8 sm:text-[18px] sm:leading-[1.9]"
+      >
+        We provide culturally tailored business solutions across
+        education, technical services, infrastructure, technology,
+        economic development, financial management and governance.
+      </motion.p>
+
+      <motion.div
+        variants={fadeUp}
+        className="mt-8 flex items-center gap-4 sm:mt-10"
+      >
+        <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#087F8C]/30 bg-white/70 text-[#087F8C] sm:h-12 sm:w-12">
+          <ArrowDown size={19} />
+        </span>
+
+        <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#43515C] sm:text-[10px]">
+          Explore our capabilities
+        </span>
+      </motion.div>
+    </motion.div>
+
+    {/* Right image */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.94, x: 35 }}
+      animate={{ opacity: 1, scale: 1, x: 0 }}
+      transition={{ duration: 1.1, ease }}
+      className="relative w-full min-w-0"
+    >
+      <div className="relative mx-auto w-[91%] sm:w-[88%] lg:w-full">
+        {/* Decorative borders */}
+        <div className="absolute -right-3 -top-3 h-full w-full border border-[#087F8C]/40 sm:-right-5 sm:-top-5" />
+
+        <div className="absolute -bottom-5 -left-5 h-[45%] w-[45%] rounded-bl-2xl bg-[#087F8C] sm:-bottom-7 sm:-left-7" />
+
+        {/* Floating network icon */}
+        <motion.div
+          animate={{
+            y: [0, -10, 0],
+            rotate: [0, 5, 0, -5, 0],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+          }}
+          className="absolute -right-5 top-[13%] z-30 text-[#087F8C] sm:-right-8"
+        >
+          <Network
+            className="h-[65px] w-[65px] sm:h-[90px] sm:w-[90px] lg:h-[115px] lg:w-[115px]"
+            strokeWidth={0.35}
+          />
+        </motion.div>
+
+        <div className="relative z-10 aspect-[0.9] overflow-hidden rounded-sm border border-white/60 shadow-[0_25px_70px_rgba(11,36,56,0.16)]">
+          <img
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=90"
+            alt="Professionals collaborating"
+            className="h-full w-full object-cover"
+          />
+
+          {/* Light image overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B2438]/80 via-[#0B2438]/10 to-transparent" />
+
+          <div className="absolute left-0 top-0 h-full w-[4px] bg-[#087F8C]" />
+
+          {/* Image caption */}
+          <div className="absolute bottom-0 left-0 p-5 sm:p-8">
+            <div className="flex items-end gap-3">
+              <span className="text-[68px] font-semibold leading-none tracking-[-0.1em] text-white sm:text-[90px]">
+                07
+              </span>
+
+              <div className="pb-1">
+                <p className="text-[8px] font-bold uppercase tracking-[0.25em] text-white/90 sm:text-[10px]">
+                  Service Areas
+                </p>
+
+                <p className="mt-1 text-[13px] font-medium text-white sm:text-[16px]">
+                  One purpose. Many capabilities.
+                </p>
               </div>
-
-            </motion.div>
-
+            </div>
           </div>
-
-        </section>
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
 
         {/* =====================================================

@@ -7,6 +7,7 @@ import ServiceBenefits from "./ServiceBenefits";
 import RelatedServices from "./RelatedServices";
 import ServiceFooter from "./ServiceFooter";
 import Header from "../layout/Header";
+import Footer from "../Footer";
 
 export default function ServicePage({ data }) {
   return (
@@ -33,14 +34,14 @@ export default function ServicePage({ data }) {
         reduceMotion={false}
       />
 
-      <RelatedServices
+      {/* <RelatedServices
         currentSlug={data?.slug}
         reduceMotion={false}
-      />
+      /> */}
 
-      <ServiceFooter
-        reduceMotion={false}
-      />
+ 
+
+ <Footer />
     </main>
   );
 }

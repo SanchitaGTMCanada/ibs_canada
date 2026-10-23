@@ -438,17 +438,11 @@ export default function ServiceCentres({
             {/* Label */}
 
             <div className="flex items-center gap-3">
-              <span
-                className="
-                  h-[2px]
-                  w-10
-                  bg-[#C6A15B]
-                "
-              />
+             
 
               <span
                 className="
-                  text-[9px]
+                  text-[17px]
                   font-semibold
                   uppercase
                   tracking-[0.27em]
@@ -581,7 +575,7 @@ export default function ServiceCentres({
 
               <span
                 className="
-                  text-[8px]
+                  text-[12px]
                   font-semibold
                   uppercase
                   tracking-[0.22em]
@@ -1369,7 +1363,7 @@ export default function ServiceCentres({
                           transition-colors
                           duration-500
                           group-hover:text-white
-                          sm:text-[9px]
+                          sm:text-[15px]
                         "
                       >
                         {
