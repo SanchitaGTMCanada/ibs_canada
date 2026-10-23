@@ -69,30 +69,6 @@ export default function ServiceHero({
         "
       />
 
-      {/* Light bluish overlays */}
-
-      <div
-        className="
-          pointer-events-none
-          absolute
-          inset-0
-          z-0
-          bg-white/25
-        "
-      />
-
-      <div
-        className="
-          pointer-events-none
-          absolute
-          inset-0
-          z-0
-          bg-gradient-to-r
-          from-white/40
-          via-white/15
-          to-[#EEF5F8]/50
-        "
-      />
 
       {/* =====================================================
           LARGE TEAL GLOW

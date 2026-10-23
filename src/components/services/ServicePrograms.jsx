@@ -55,7 +55,7 @@ export default function ServicePrograms({
             HEADER
         ====================================================== */}
 
-        <div className="mb-14 max-w-[1450px] sm:mb-16 lg:mb-20">
+        <div className="mb-2 max-w-[1450px] sm:mb-6 lg:mb-2">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-6">
 
             <div className="min-w-0 lg:max-w-[780px]">
@@ -112,7 +112,8 @@ export default function ServicePrograms({
   }}
   className="
     mt-7
-    max-w-[780px]
+    max-w-none
+    whitespace-nowrap
     text-[38px]
     font-extrabold
     leading-[1.08]
@@ -123,10 +124,9 @@ export default function ServicePrograms({
     xl:text-[60px]
   "
 >
-  {data?.journeyTitle || "Your journey"}
-
-  <span className="block text-[#087F8C]">
-    {data?.journeyAccent || "starts here."}
+  Your journey{" "}
+  <span className="inline text-[#087F8C]">
+    starts here.
   </span>
 </motion.h2>
 
@@ -326,9 +326,7 @@ export default function ServicePrograms({
               <div className="flex items-center gap-3">
               
 
-                <span className="text-[17px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]">
-                  Your learning journey
-                </span>
+               
               </div>
 
               {/* Journey Description */}
@@ -1086,8 +1084,10 @@ export default function ServicePrograms({
                 duration: 0.7,
               }}
               className="mb-8"
+
+              style={{marginLeft:"80px "}}
             >
-              <span className="text-[17px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]">
+              <span className="text-[17px] font-semibold uppercase tracking-[0.22em] text-[#C6A15B]" >
                 Choose your pathway
               </span>
 
@@ -1307,16 +1307,15 @@ export default function ServicePrograms({
                               </span>
                             </div>
 
-                            {/* Title */}
-                            <h3 className="text-[22px] font-medium leading-[1.1] tracking-[-0.04em] text-[#0B1F3A] transition-colors duration-300 group-hover:text-[#087F8C] sm:text-[28px]">
-                              {program.title}
-                            </h3>
+                          {/* Title */}
+<h3 className="text-[28px] font-extrabold leading-[1.08] tracking-[-0.04em] text-[#0B1F3A] sm:text-[26px] lg:text-[24px] xl:text-[20px]">
+  {program.title}
+</h3>
 
-                            {/* Description */}
-                            <p className="mt-4 max-w-[680px] text-[12px] leading-[1.8] text-[#202832]/60 sm:text-[14px]">
-                              {program.description}
-                            </p>
-
+{/* Description */}
+<p className="mt-6 max-w-[570px] text-[17px] font-medium leading-7 tracking-[0.005em] text-[#202832]/70">
+  {program.description}
+</p>
                             {/* Explore Program Link */}
                             <Link
                               href={program.link}
