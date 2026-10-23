@@ -101,7 +101,7 @@ const offices = [
     icon: Building2,
     label: "Corporate Headquarters",
     address: [
-      "ERP Corporate Building",
+      "EPR Yellowknife Building",
       "P.O. Box 20072, 2nd Floor,",
       "4910 – 50th Street, Yellowknife,",
       "NT X1A 3X8",

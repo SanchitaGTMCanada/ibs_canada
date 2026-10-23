@@ -147,31 +147,59 @@ export default function Footer() {
   </div>
 </motion.a>
 
-          {/* ADDRESS */}
-    <motion.div
+ {/* ADDRESS */}
+<motion.div
   initial={{ opacity: 0, y: 12 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 0.5, delay: 0.1 }}
   className="flex w-full min-w-0 items-start justify-start gap-4"
 >
+  {/* Location Icon */}
   <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#087F8C]/25 bg-[#087F8C]/10 text-[#55C4CA]">
     <MapPin className="h-5 w-5" strokeWidth={1.8} />
   </div>
 
+  {/* Address Content */}
   <div className="min-w-0 flex-1">
-    <div className="mb-2 flex items-center gap-2">
-      <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#55C4CA]" />
+    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-[#55C4CA]">
+      Visit Our Offices
+    </p>
 
-      <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#55C4CA]">
-        Visit Our Office
-      </p>
+    {/* Addresses - Flex Row */}
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-5">
+      {/* Corporate Headquarters */}
+      <div className="min-w-0">
+        <h4 className="mb-2 text-[12px] font-bold tracking-wide text-white sm:text-[13px]">
+          Corporate Headquarters
+        </h4>
+
+        <address className="not-italic text-[13px] font-medium leading-[1.9] text-white/70 sm:text-[14px]">
+          EPR Yellowknife Building
+          <br />
+          P.O. Box 20072, 2nd Floor
+          <br />
+          4910 – 50th Street, Yellowknife
+          <br />
+          NT X1A 3X8
+        </address>
+      </div>
+
+      {/* British Columbia Address */}
+      <div className="min-w-0">
+        <h4 className="mb-2 text-[12px] font-bold tracking-wide text-white sm:text-[13px]">
+          British Columbia Address
+        </h4>
+
+        <address className="not-italic text-[13px] font-medium leading-[1.9] text-white/70 sm:text-[14px]">
+          208-7238 137 Street
+          <br />
+          Surrey BC
+          <br />
+          V3W 1V3
+        </address>
+      </div>
     </div>
-
-    <address className="w-full not-italic text-[13px] font-medium leading-[1.9] text-white/70 sm:text-[14px]">
-      EPR Yellowknife Building, P.O. Box 20072, 2nd Floor,
-      4910 – 50th Street, Yellowknife, NT X1A 3X8
-    </address>
   </div>
 </motion.div>
 
