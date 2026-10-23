@@ -455,45 +455,45 @@ export default function ServiceCentres({
 
             {/* Heading */}
 
-            <h2
-              className="
-                mt-7
-                max-w-[580px]
-                text-[52px]
-                font-medium
-                leading-[0.84]
-                tracking-[-0.07em]
-                text-white
-                sm:text-[70px]
-                lg:text-[84px]
-              "
-            >
-              {data.centresTitle}
+      
+<h2
+  className="
+    mt-7
+    max-w-[580px]
+    text-[38px]
+    font-extrabold
+    leading-[1.08]
+    tracking-[-0.04em]
+    text-white
+    sm:text-[46px]
+    lg:text-[54px]
+    xl:text-[60px]
+  "
+>
+  {data.centresTitle}
 
-              <span
-                className="
-                  block
-                  text-[#C6A15B]
-                "
-              >
-                {data.centresAccent}
-              </span>
-            </h2>
+  <span className="block text-[#C6A15B]">
+    {data.centresAccent}
+  </span>
+</h2>
 
-            {/* Description */}
+{/* Description */}
 
-            <p
-              className="
-                mt-8
-                max-w-[460px]
-                text-[14px]
-                leading-[1.9]
-                text-[#DCE2E7]/55
-                sm:text-[16px]
-              "
-            >
-              {data.centresDescription}
-            </p>
+<p
+  className="
+    mt-6
+    max-w-[570px]
+    text-[17px]
+    font-medium
+    leading-7
+    tracking-[0.005em]
+    text-[#DCE2E7]/75
+    sm:text-[17px]
+  "
+>
+  {data.centresDescription}
+</p>
+
 
             {/* Accent line */}
 

@@ -1,3 +1,4 @@
+
 "use client";
 
 import {
@@ -6,12 +7,8 @@ import {
   useTransform,
 } from "framer-motion";
 
-import { ArrowDown, GraduationCap } from "lucide-react";
-
+import { ArrowDown } from "lucide-react";
 import { useRef } from "react";
-import { iconMap } from "./iconMap";
-
-
 
 export default function ServiceHero({
   data,
@@ -23,46 +20,83 @@ export default function ServiceHero({
     target: ref,
     offset: ["start start", "end start"],
   });
-const HERO_IMAGE = data.image;
+
+  const HERO_IMAGE = data.image;
+
   const imageY = useTransform(
     scrollYProgress,
     [0, 1],
     ["0%", "12%"]
   );
 
-  const features = data?.features || [];
-
   return (
     <section
       ref={ref}
       className="
         relative
-        isolate
-        min-h-[680px]
+        min-h-[660px]
         overflow-hidden
-        bg-[#EEF5F8]
-        sm:min-h-[720px]
-        lg:min-h-[780px]
+        bg-[#0B1F3A]
+        pl-0
+        pr-6
+        pb-20
+        pt-32
+        sm:pr-8
+        sm:pt-36
+        lg:min-h-[620px]
+        lg:pr-10
+        lg:pb-24
+        lg:pt-40
+        xl:pr-12
       "
     >
       {/* =====================================================
           BACKGROUND
       ====================================================== */}
 
-      {/* Full-section background image */}
       <motion.img
         style={{ y: imageY }}
         src={HERO_IMAGE}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 z-0 h-[112%] w-full object-cover"
+        className="
+          absolute
+          inset-0
+          z-0
+          h-[112%]
+          w-full
+          object-cover
+        "
       />
 
-      {/* Light bluish overlays keep navy text readable */}
-      <div className="pointer-events-none absolute inset-0 z-0 bg-white/25" />
-      <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/40 via-white/15 to-[#EEF5F8]50" />
+      {/* Light bluish overlays */}
 
-      {/* Large teal glow */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          z-0
+          bg-white/25
+        "
+      />
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          z-0
+          bg-gradient-to-r
+          from-white/40
+          via-white/15
+          to-[#EEF5F8]/50
+        "
+      />
+
+      {/* =====================================================
+          LARGE TEAL GLOW
+      ====================================================== */}
 
       <motion.div
         animate={
@@ -93,7 +127,9 @@ const HERO_IMAGE = data.image;
         "
       />
 
-      {/* Blue glow */}
+      {/* =====================================================
+          BLUE GLOW
+      ====================================================== */}
 
       <motion.div
         animate={
@@ -123,7 +159,9 @@ const HERO_IMAGE = data.image;
         "
       />
 
-      {/* Decorative floating circle */}
+      {/* =====================================================
+          DECORATIVE FLOATING CIRCLE
+      ====================================================== */}
 
       <motion.div
         animate={
@@ -162,26 +200,54 @@ const HERO_IMAGE = data.image;
         className="
           relative
           z-10
+          mx-auto
           grid
-          min-h-[680px]
+      
           w-full
+          max-w-[1280px]
           items-center
-          px-5
-          pb-24
-          pt-32
-          sm:min-h-[820px]
-          sm:px-8
-lg:px-10
-          lg:pt-36
-          xl:px-14
         "
       >
         {/* =================================================
-            LEFT SIDE
+            LEFT CONTENT
         ================================================== */}
 
-        <div className="relative z-20">
-          {/* Label */}
+        <motion.div
+          initial={
+            reduceMotion
+              ? {}
+              : {
+                  opacity: 0,
+                  y: 35,
+                }
+          }
+          animate={
+            reduceMotion
+              ? {}
+              : {
+                  opacity: 1,
+                  y: 0,
+                }
+          }
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="
+            relative
+            z-20
+            max-w-[670px]
+            px-5
+            sm:px-8
+            lg:px-10
+            xl:px-14
+          "
+
+          style={{paddingLeft:"0px"}}
+        >
+          {/* =================================================
+              EYEBROW
+          ================================================== */}
 
           <motion.div
             initial={
@@ -203,37 +269,35 @@ lg:px-10
             transition={{
               duration: 0.8,
             }}
-            className="
-              flex
-              items-center
-              gap-3
-            "
+            className="flex items-center gap-3"
           >
-            {/* <span
-              className="
-                h-[2px]
-                w-10
-                bg-[#2374A8]
-              "
-            /> */}
-
             <span
               className="
-                text-[17px]
-                font-bold
+                relative
+                inline-block
+                text-[14px]
+                font-extrabold
                 uppercase
-                tracking-[0.28em]
-                text-[#2374A8]
-                sm:text-[17px]
+                tracking-[0.32em]
+                text-[#0A5264]
+                drop-shadow-[0_1px_0_#FFFFFF]
+                drop-shadow-[1px_2px_0_#D9E0E5]
+                drop-shadow-[2px_3px_0_#AAB4BC]
+                drop-shadow-[3px_4px_0_#71808C]
+                drop-shadow-[4px_6px_7px_rgba(11,31,58,0.28)]
+                transition-all
+                duration-300
               "
-
-              style={{marginLeft:"10px"}}
+              style={{ marginLeft: "10px" }}
             >
               {data.label}
             </span>
           </motion.div>
 
-          {/* Main heading */}
+          {/* =================================================
+              HEADING
+              Same responsive typography as homepage
+          ================================================== */}
 
           <motion.h1
             initial={
@@ -259,63 +323,83 @@ lg:px-10
             }}
             className="
               mt-7
-              mb-5
               max-w-[780px]
-              text-[58px]
-              font-medium
-              leading-[0.86]
-              tracking-[-0.075em]
-              text-[#0B2438]
-              sm:text-[82px]
-              md:text-[96px]
-              lg:text-[108px]
-              xl:text-[122px]
+              text-[38px]
+              font-extrabold
+              leading-[1.08]
+              tracking-[-0.04em]
+              sm:text-[46px]
+              lg:text-[54px]
+              xl:text-[60px]
             "
           >
-            {data.title}
+            <span className="relative inline-block">
+              {/* SILVER OUTLINE */}
 
-            <span
-              className="
-                block
-                text-[#0B2438]
-              "
-            >
-              {data.titleAccent}
+              <span
+                aria-hidden="true"
+                className="
+                  absolute
+                  inset-0
+                  text-[#66727B]
+                  [-webkit-text-stroke:1px_#66727B]
+                "
+              >
+                {data.title}
+              </span>
+
+              {/* SOLID BLUE TITLE */}
+
+              <span
+                className="
+                  relative
+                  z-10
+                  text-[#0B2438]
+                  drop-shadow-[0_2px_2px_rgba(11,36,56,0.20)]
+                  drop-shadow-[0_5px_7px_rgba(11,36,56,0.18)]
+                "
+              >
+                {data.title}
+              </span>
             </span>
+
+            {data.titleAccent && (
+              <span className="relative block">
+                {/* SILVER OUTLINE */}
+
+                <span
+                  aria-hidden="true"
+                  className="
+                    absolute
+                    inset-0
+                    text-[#66727B]
+                    [-webkit-text-stroke:1px_#66727B]
+                  "
+                >
+                  {data.titleAccent}
+                </span>
+
+                {/* SOLID BLUE ACCENT */}
+
+                <span
+                  className="
+                    relative
+                    z-10
+                    text-[#0B2438]
+                    drop-shadow-[0_2px_2px_rgba(11,36,56,0.20)]
+                    drop-shadow-[0_5px_7px_rgba(11,36,56,0.18)]
+                  "
+                >
+                  {data.titleAccent}
+                </span>
+              </span>
+            )}
           </motion.h1>
 
-          {/* Animated accent */}
-{/* 
-          <motion.div
-            initial={
-              reduceMotion
-                ? {}
-                : {
-                    width: 0,
-                  }
-            }
-            animate={
-              reduceMotion
-                ? {}
-                : {
-                    width: 115,
-                  }
-            }
-            transition={{
-              duration: 0.9,
-              delay: 0.45,
-            }}
-            className="
-              mt-8
-              h-[3px]
-              bg-gradient-to-r
-              from-[#2374A8]
-              via-[#2374A8]
-              to-[#087F8C]
-            "
-          /> */}
-
-          {/* Description */}
+          {/* =================================================
+              DESCRIPTION
+              Same typography as homepage
+          ================================================== */}
 
           <motion.p
             initial={
@@ -339,28 +423,22 @@ lg:px-10
               delay: 0.55,
             }}
             className="
-              mt-7
-              max-w-[620px]
-              text-[14px]
-              leading-[1.9]
-              text-[#43515C]
+              mt-6
+              max-w-[570px]
+              text-[17px]
+              font-medium
+              leading-7
+              tracking-[0.005em]
+              text-[#19344F]
+              drop-shadow-[0_1px_0_rgba(255,255,255,0.75)]
+              drop-shadow-[0_2px_3px_rgba(11,31,58,0.18)]
+              drop-shadow-[0_0_10px_rgba(198,161,91,0.10)]
               sm:text-[17px]
             "
           >
             {data.description}
           </motion.p>
-
-          {/* =================================================
-              FEATURE ICONS
-
-              IMPORTANT:
-              NO BOX
-              NO GRID
-              NO VERTICAL BORDER
-              NO HORIZONTAL BORDER
-          ================================================== */}
-{/*  */}
-        </div>
+        </motion.div>
       </div>
 
       {/* =====================================================

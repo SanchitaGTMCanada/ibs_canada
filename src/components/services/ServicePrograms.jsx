@@ -48,7 +48,7 @@ export default function ServicePrograms({
   );
 
   return (
-    <section className="relative overflow-hidden bg-[#F6F4EF] px-5 py-24 sm:px-8 sm:py-28 lg:px-14 lg:py-32">
+    <section className="relative overflow-hidden bg-[#F6F4EF] px-5 py-24 sm:px-8 sm:py-18 lg:px-14 lg:py-12">
       <div className="relative z-10 mx-auto max-w-[1450px]">
 
         {/* =====================================================
@@ -87,36 +87,49 @@ export default function ServicePrograms({
                 </span>
               </motion.div>
 
-              <motion.h2
-                initial={
-                  reduceMotion
-                    ? {}
-                    : {
-                        opacity: 0,
-                        y: 30,
-                      }
-                }
-                whileInView={
-                  reduceMotion
-                    ? {}
-                    : {
-                        opacity: 1,
-                        y: 0,
-                      }
-                }
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.1,
-                }}
-                className="mt-7 max-w-[780px] text-[50px] font-medium leading-[0.88] tracking-[-0.07em] text-[#0B1F3A] sm:text-[68px] lg:text-[82px] xl:text-[88px]"
-              >
-                {data?.journeyTitle || "Your journey"}
+        
+<motion.h2
+  initial={
+    reduceMotion
+      ? {}
+      : {
+          opacity: 0,
+          y: 30,
+        }
+  }
+  whileInView={
+    reduceMotion
+      ? {}
+      : {
+          opacity: 1,
+          y: 0,
+        }
+  }
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.8,
+    delay: 0.1,
+  }}
+  className="
+    mt-7
+    max-w-[780px]
+    text-[38px]
+    font-extrabold
+    leading-[1.08]
+    tracking-[-0.04em]
+    text-[#0B1F3A]
+    sm:text-[46px]
+    lg:text-[54px]
+    xl:text-[60px]
+  "
+>
+  {data?.journeyTitle || "Your journey"}
 
-                <span className="block text-[#087F8C]">
-                  {data?.journeyAccent || "starts here."}
-                </span>
-              </motion.h2>
+  <span className="block text-[#087F8C]">
+    {data?.journeyAccent || "starts here."}
+  </span>
+</motion.h2>
+
 
               <motion.div
                 initial={{ width: 0 }}
@@ -1634,92 +1647,96 @@ export default function ServicePrograms({
 
                 {/* HEADING */}
 
-                <motion.h3
-                  initial={
-                    reduceMotion
-                      ? {}
-                      : {
-                          opacity: 0,
-                          y: 25,
-                        }
-                  }
-                  whileInView={
-                    reduceMotion
-                      ? {}
-                      : {
-                          opacity: 1,
-                          y: 0,
-                        }
-                  }
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    duration: 0.85,
-                    delay: 0.15,
-                  }}
-                  className="
-                    mt-7
-                    max-w-[650px]
-                    text-[46px]
-                    font-medium
-                    leading-[0.86]
-                    tracking-[-0.07em]
-                    text-white
-                    sm:text-[60px]
-                    lg:text-[68px]
-                    xl:text-[80px]
-                  "
-                >
-                  Learning should
+       
+<motion.h3
+  initial={
+    reduceMotion
+      ? {}
+      : {
+          opacity: 0,
+          y: 25,
+        }
+  }
+  whileInView={
+    reduceMotion
+      ? {}
+      : {
+          opacity: 1,
+          y: 0,
+        }
+  }
+  viewport={{
+    once: true,
+  }}
+  transition={{
+    duration: 0.85,
+    delay: 0.15,
+  }}
+  className="
+    mt-7
+    max-w-[650px]
+    text-[38px]
+    font-extrabold
+    leading-[1.08]
+    tracking-[-0.04em]
+    text-white
+    sm:text-[46px]
+    lg:text-[54px]
+    xl:text-[60px]
+  "
+>
+  Learning should
 
-                  <span className="block text-[#C6A15B]">
-                    change
-                  </span>
+  <span className="block text-[#C6A15B]">
+    change
+  </span>
 
-                  <span className="block text-white">
-                    what comes next.
-                  </span>
-                </motion.h3>
+  <span className="block text-white">
+    what comes next.
+  </span>
+</motion.h3>
 
-                {/* DESCRIPTION */}
+{/* DESCRIPTION */}
 
-                <motion.p
-                  initial={
-                    reduceMotion
-                      ? {}
-                      : {
-                          opacity: 0,
-                          y: 15,
-                        }
-                  }
-                  whileInView={
-                    reduceMotion
-                      ? {}
-                      : {
-                          opacity: 1,
-                          y: 0,
-                        }
-                  }
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    duration: 0.7,
-                    delay: 0.35,
-                  }}
-                  className="
-                    mt-7
-                    max-w-[430px]
-                    text-[12px]
-                    leading-[1.85]
-                    text-white/55
-                    sm:text-[14px]
-                  "
-                >
-                  Turn knowledge into capability, confidence
-                  and meaningful opportunity.
-                </motion.p>
+<motion.p
+  initial={
+    reduceMotion
+      ? {}
+      : {
+          opacity: 0,
+          y: 15,
+        }
+  }
+  whileInView={
+    reduceMotion
+      ? {}
+      : {
+          opacity: 1,
+          y: 0,
+        }
+  }
+  viewport={{
+    once: true,
+  }}
+  transition={{
+    duration: 0.7,
+    delay: 0.35,
+  }}
+  className="
+    mt-6
+    max-w-[570px]
+    text-[17px]
+    font-medium
+    leading-7
+    tracking-[0.005em]
+    text-white/75
+    sm:text-[17px]
+  "
+>
+  Turn knowledge into capability, confidence
+  and meaningful opportunity.
+</motion.p>
+
 
                 {/* SMALL ACCENT */}
 

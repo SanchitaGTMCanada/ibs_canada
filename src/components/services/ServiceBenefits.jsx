@@ -166,10 +166,10 @@ export default function ServiceBenefits({
         via-[#F3F1EA]
         to-[#DCE8E9]
         px-5
-        py-24
+        py-14
         sm:px-8
         lg:px-14
-        lg:py-32
+        lg:py-12
       "
     >
       {/* ========================================================
@@ -342,47 +342,39 @@ export default function ServiceBenefits({
               </span>
             </div>
 
-            <h2
-              className="
-                mt-7
-                max-w-[800px]
-                text-[54px]
-                font-medium
-                leading-[0.84]
-                tracking-[-0.075em]
-                text-[#0B1F3A]
-                sm:text-[74px]
-                lg:text-[96px]
-              "
-            >
-              {data.impactTitle}
+<h2
+  className="
+    mt-7
+    max-w-[800px]
+    text-[38px]
+    font-extrabold
+    leading-[1.08]
+    tracking-[-0.04em]
+    text-[#0B1F3A]
+    sm:text-[46px]
+    lg:text-[54px]
+    xl:text-[60px]
+  "
+>
+  {data.impactTitle}
 
-              <span
-                className="
-                  block
-                  text-[#087F8C]
-                "
-              >
-                {data.impactAccent}
-              </span>
+  <span className="block text-[#087F8C]">
+    {data.impactAccent}
+  </span>
 
-              {data.impactSecond && (
-                <>
-                  <span className="block">
-                    {data.impactSecond}
-                  </span>
+  {data.impactSecond && (
+    <>
+      <span className="block">
+        {data.impactSecond}
+      </span>
 
-                  <span
-                    className="
-                      block
-                      text-[#C6A15B]
-                    "
-                  >
-                    {data.impactSecondAccent}
-                  </span>
-                </>
-              )}
-            </h2>
+      <span className="block text-[#C6A15B]">
+        {data.impactSecondAccent}
+      </span>
+    </>
+  )}
+</h2>
+
           </motion.div>
 
           {/* Description */}
@@ -458,8 +450,7 @@ export default function ServiceBenefits({
         {/* ======================================================
             FEATURE AREA
         ======================================================= */}
-
-        <div
+<div
           className="
             mt-20
             grid
@@ -738,13 +729,14 @@ export default function ServiceBenefits({
                     className="
                       mt-6
                       max-w-[680px]
-                      text-[34px]
-                      font-medium
-                      leading-[0.95]
-                      tracking-[-0.05em]
+                      text-[38px]
+                      font-extrabold
+                      leading-[1.08]
+                      tracking-[-0.04em]
                       text-white
                       sm:text-[46px]
-                      lg:text-[58px]
+                      lg:text-[54px]
+                      xl:text-[60px]
                     "
                   >
                     {
@@ -756,12 +748,13 @@ export default function ServiceBenefits({
 
                   <p
                     className="
-                      mt-5
-                      max-w-[590px]
-                      text-[12px]
-                      leading-[1.8]
-                      text-white/55
-                      sm:text-[14px]
+                      mt-6
+                      max-w-[570px]
+                      text-[17px]
+                      font-medium
+                      leading-7
+                      tracking-[0.005em]
+                      text-white/75
                     "
                   >
                     {
