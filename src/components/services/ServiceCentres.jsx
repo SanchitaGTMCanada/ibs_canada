@@ -523,7 +523,7 @@ export default function ServiceCentres({
 
             {/* Connected pathways */}
 
-            <motion.div
+            {/* <motion.div
               initial={
                 reduceMotion
                   ? {}
@@ -584,7 +584,7 @@ export default function ServiceCentres({
               >
                 Connected pathways
               </span>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* ====================================================
@@ -1399,50 +1399,6 @@ export default function ServiceCentres({
                 FLOATING ACCENT
             =================================================== */}
 
-            <motion.div
-              animate={
-                reduceMotion
-                  ? {}
-                  : {
-                      x: [
-                        0,
-                        5,
-                        0,
-                      ],
-                      y: [
-                        0,
-                        -4,
-                        0,
-                      ],
-                    }
-              }
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                absolute
-                bottom-[8%]
-                right-[7%]
-                z-50
-                flex
-                h-9
-                w-9
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-[#C6A15B]/35
-                bg-[#07182D]/80
-                text-[#C6A15B]
-                backdrop-blur-sm
-              "
-            >
-              <span className="text-[14px]">
-                ↗
-              </span>
-            </motion.div>
           </div>
         </div>
       </div>

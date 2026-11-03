@@ -830,464 +830,386 @@ export default function OurTeamPage() {
                 FEATURED PRESIDENT — PREMIUM
             ===================================================== */}
 
-            <motion.article
-              initial={{
-                opacity: 0,
-                y: 35,
-              }}
+          <motion.article
+  initial={{
+    opacity: 0,
+    y: 35,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+    amount: 0.2,
+  }}
+  transition={{
+    duration: 0.8,
+  }}
+  className="
+    group
+    relative
+    mx-auto
+    mt-7
+    max-w-[1080px]
+  "
+>
+  {/* SECTION HEADING - OUTSIDE CARD */}
+  <div className="mb-5 flex items-center gap-3">
+    <span
+      className="
+        text-[14px]
+        font-bold
+        uppercase
+        tracking-[0.28em]
+        text-[#2374A8]
+      "
+    >
+      Executive Leadership
+    </span>
 
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
+    <span
+      className="
+        h-px
+        w-16
+        bg-gradient-to-r
+        from-[#2374A8]
+        to-[#087F8C]
+      "
+    />
+  </div>
 
-              viewport={{
-                once: true,
-                amount: 0.2,
-              }}
+  {/* MAIN CARD */}
+  <div className="relative">
+    {/* Premium gold + teal frame */}
+    <div
+      className="
+        absolute
+        -inset-[1px]
+        rounded-[20px]
+        bg-gradient-to-r
+        from-[#2374A8]
+        via-[#087F8C]
+        to-[#2374A8]
+        opacity-90
+        blur-[1px]
+      "
+    />
 
-              transition={{
-                duration: 0.8,
-              }}
+    <div
+      className="
+        relative
+        overflow-hidden
+        rounded-[20px]
+        border
+        border-[#2374A8]/40
+        bg-gradient-to-br
+        from-[#E5F0F5]
+        via-[#FAFBFA]
+        to-[#EEF5F8]
+        shadow-[0_18px_45px_rgba(11,36,56,.10)]
+      "
+    >
+      <FoldingPaper variant="dark" />
 
+      {/* Ambient highlights */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-24
+          -top-24
+          h-72
+          w-72
+          rounded-full
+          bg-[#087F8C]/15
+          blur-[80px]
+        "
+      />
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -bottom-28
+          left-[18%]
+          h-64
+          w-64
+          rounded-full
+          bg-[#2374A8]/10
+          blur-[80px]
+        "
+      />
+
+      {/* Fine grid */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          opacity-[0.035]
+        "
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px)",
+          backgroundSize: "46px 46px",
+        }}
+      />
+
+      <div className="relative grid lg:grid-cols-[310px_1fr]">
+
+        {/* PRESIDENT PORTRAIT */}
+        <div
+          className="
+            relative
+            flex
+            items-center
+            justify-center
+            overflow-hidden
+            bg-gradient-to-br
+            from-[#D7EAF0]
+            via-[#E5F0F5]
+            to-[#E5F0F5]
+            p-5
+            sm:p-6
+          "
+        >
+          {/* Gold halo */}
+          <div
+            className="
+              absolute
+              h-[235px]
+              w-[235px]
+              rounded-full
+              border
+              border-[#2374A8]/20
+            "
+          />
+
+          <div
+            className="
+              absolute
+              h-[205px]
+              w-[205px]
+              rounded-full
+              border
+              border-[#087F8C]/20
+            "
+          />
+
+          <div className="relative">
+            <div
               className="
-                group
+                absolute
+                -inset-4
+                rounded-[20px]
+                border
+                border-[#2374A8]/35
+              "
+            />
+
+            <div
+              className="
                 relative
-                mx-auto
-                mt-7
-                max-w-[1080px]
+                h-[205px]
+                w-[205px]
+                overflow-hidden
+                rounded-[20px]
+                border-[3px]
+                border-[#2374A8]
+                bg-[#DCEAF0]
+                shadow-[0_24px_55px_rgba(0,0,0,.38)]
               "
             >
-
-              {/* Premium gold + teal frame */}
-
-              <div
+              <img
+                src={leaders[0].image}
+                alt={leaders[0].name}
                 className="
-                  absolute
-                  -inset-[1px]
-                  rounded-[20px]
-                  bg-gradient-to-r
-                  from-[#2374A8]
-                  via-[#087F8C]
-                  to-[#2374A8]
-                  opacity-90
-                  blur-[1px]
+                  h-full
+                  w-full
+                  object-cover
+                  transition-transform
+                  duration-700
+                  group-hover:scale-[1.04]
                 "
               />
+            </div>
 
+            {/* Role badge */}
+            <div
+              className="
+                absolute
+                -bottom-4
+                left-1/2
+                flex
+                -translate-x-1/2
+                items-center
+                gap-2
+                whitespace-nowrap
+                rounded-full
+                border
+                border-[#2374A8]/70
+                bg-[#EEF5F8]
+                px-5
+                py-2.5
+                text-[11px]
+                font-bold
+                uppercase
+                tracking-[0.24em]
+                text-[#2374A8]
+                shadow-[0_10px_30px_rgba(0,0,0,.35)]
+              "
+            >
+              <Award size={13} strokeWidth={1.6} />
+              President
+            </div>
+          </div>
+        </div>
 
-              <div
+        {/* PRESIDENT DETAILS */}
+        <div
+          className="
+            relative
+            flex
+            flex-col
+            justify-center
+            p-6
+            sm:p-6
+            lg:p-7
+          "
+        >
+          <div className="mt-5 flex items-start justify-between gap-4">
+            <div>
+              <h3
                 className="
-                  relative
-                  overflow-hidden
-                  rounded-[20px]
-                  border
-                  border-[#2374A8]/40
-                  bg-gradient-to-br
-                  from-[#E5F0F5]
-                  via-[#FAFBFA]
-                  to-[#EEF5F8]
-                  shadow-[0_18px_45px_rgba(11,36,56,.10)]
+                  text-[26px]
+                  font-semibold
+                  tracking-[-0.045em]
+                  text-[#0B2438]
+                  sm:text-[32px]
                 "
               >
-
-                {/* Folding paper */}
-
-                <FoldingPaper variant="dark" />
-
-
-                {/* Ambient highlights */}
-
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    -right-24
-                    -top-24
-                    h-72
-                    w-72
-                    rounded-full
-                    bg-[#087F8C]/15
-                    blur-[80px]
-                  "
-                />
-
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    -bottom-28
-                    left-[18%]
-                    h-64
-                    w-64
-                    rounded-full
-                    bg-[#2374A8]/10
-                    blur-[80px]
-                  "
-                />
-
-
-                {/* Fine grid */}
-
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    inset-0
-                    opacity-[0.035]
-                  "
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px)",
-                    backgroundSize: "46px 46px",
-                  }}
-                />
-
-
-                <div className="relative grid lg:grid-cols-[310px_1fr]">
-
-                  {/* PRESIDENT PORTRAIT */}
-
-                  <div
-                    className="
-                      relative
-                      flex
-                      items-center
-                      justify-center
-                      overflow-hidden
-                      bg-gradient-to-br
-                      from-[#D7EAF0]
-                      via-[#E5F0F5]
-                      to-[#E5F0F5]
-                      p-5
-                      sm:p-6
-                    "
-                  >
-
-                    {/* Gold halo */}
-
-                    <div
-                      className="
-                        absolute
-                        h-[235px]
-                        w-[235px]
-                        rounded-full
-                        border
-                        border-[#2374A8]/20
-                      "
-                    />
-
-                    <div
-                      className="
-                        absolute
-                        h-[205px]
-                        w-[205px]
-                        rounded-full
-                        border
-                        border-[#087F8C]/20
-                      "
-                    />
-
-
-                    <div className="relative">
-
-                      <div
-                        className="
-                          absolute
-                          -inset-4
-                          rounded-[20px]
-                          border
-                          border-[#2374A8]/35
-                        "
-                      />
-
-
-                      <div
-                        className="
-                          relative
-                          h-[205px]
-                          w-[205px]
-                          overflow-hidden
-                          rounded-[20px]
-                          border-[3px]
-                          border-[#2374A8]
-                          bg-[#DCEAF0]
-                          shadow-[0_24px_55px_rgba(0,0,0,.38)]
-                        "
-                      >
-
-                        <img
-                          src={leaders[0].image}
-                          alt={leaders[0].name}
-                          className="
-                            h-full
-                            w-full
-                            object-cover
-                            transition-transform
-                            duration-700
-                            group-hover:scale-[1.04]
-                          "
-                        />
-
-                      </div>
-
-
-                      {/* Role badge */}
-
-                      <div
-                        className="
-                          absolute
-                          -bottom-4
-                          left-1/2
-                          flex
-                          -translate-x-1/2
-                          items-center
-                          gap-2
-                          whitespace-nowrap
-                          rounded-full
-                          border
-                          border-[#2374A8]/70
-                          bg-[#EEF5F8]
-                          px-5
-                          py-2.5
-                          text-[11px]
-                          font-bold
-                          uppercase
-                          tracking-[0.24em]
-                          text-[#2374A8]
-                          shadow-[0_10px_30px_rgba(0,0,0,.35)]
-                        "
-                      >
-
-                        <Award
-                          size={13}
-                          strokeWidth={1.6}
-                        />
-
-                        President
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-
-                  {/* PRESIDENT DETAILS */}
-
-                  <div
-                    className="
-                      relative
-                      flex
-                      flex-col
-                      justify-center
-                      p-6
-                      sm:p-6
-                      lg:p-7
-                    "
-                  >
-
-                    <div className="flex items-center gap-3">
-
-                      <span
-                        className="
-                          text-[14px]
-                          font-bold
-                          uppercase
-                          tracking-[0.28em]
-                          text-[#2374A8]
-                        "
-                      >
-                        Executive Leadership · 01
-                      </span>
-
-                      <span
-                        className="
-                          h-px
-                          w-16
-                          bg-gradient-to-r
-                          from-[#2374A8]
-                          to-[#087F8C]
-                        "
-                      />
-
-                    </div>
-
-
-                    <div
-                      className="
-                        mt-5
-                        flex
-                        items-start
-                        justify-between
-                        gap-4
-                      "
-                    >
-
-                      <div>
-
-                        <h3
-                          className="
-                            text-[26px]
-                            font-semibold
-                            tracking-[-0.045em]
-                            text-[#0B2438]
-                            sm:text-[32px]
-                          "
-                        >
-                          {leaders[0].name}
-                        </h3>
-
-                        <p
-                          className="
-                            mt-2
-                            max-w-[700px]
-                            text-[12px]
-                            font-bold
-                            uppercase
-                            leading-5
-                            tracking-[0.09em]
-                            text-[#087F8C]
-                          "
-                        >
-                          {leaders[0].role}
-                        </p>
-
-                      </div>
-
-
-                      <div
-                        className="
-                          hidden
-                          h-11
-                          w-11
-                          shrink-0
-                          items-center
-                          justify-center
-                          rounded-full
-                          border
-                          border-[#2374A8]/35
-                          bg-[#2374A8]/10
-                          text-[#2374A8]
-                          sm:flex
-                        "
-                      >
-                        <Award
-                          size={19}
-                          strokeWidth={1.4}
-                        />
-                      </div>
-
-                    </div>
-
-
-                    {/* Gold rule */}
-
-                    <div
-                      className="
-                        mt-6
-                        h-[2px]
-                        w-14
-                        bg-[#2374A8]
-                        transition-all
-                        duration-500
-                        group-hover:w-24
-                      "
-                    />
-
-
-                    <p
-                      className="
-                        mt-6
-                        max-w-[720px]
-                        text-[15px]
-                        leading-[1.7]
-                        text-[#43515C]
-                        sm:text-[16px]
-                      "
-                    >
-                      {leaders[0].description}
-                    </p>
-
-
-                    {/* Bottom executive strip */}
-
-                    <div
-                      className="
-                        mt-6
-                        flex
-                        flex-wrap
-                        items-center
-                        gap-x-8
-                        gap-y-3
-                        border-t
-                        border-[#DCEAF0]
-                        pt-5
-                      "
-                    >
-
-                      <div>
-
-                        <p
-                          className="
-                            text-[10px]
-                            font-bold
-                            uppercase
-                            tracking-[0.2em]
-                            text-[#2374A8]
-                          "
-                        >
-                          Leadership
-                        </p>
-
-                        <p
-                          className="
-                            mt-1
-                            text-[12px]
-                            text-[#68737D]
-                          "
-                        >
-                          Strategy & Advisory
-                        </p>
-
-                      </div>
-
-
-                      <div>
-
-                        <p
-                          className="
-                            text-[10px]
-                            font-bold
-                            uppercase
-                            tracking-[0.2em]
-                            text-[#2374A8]
-                          "
-                        >
-                          Expertise
-                        </p>
-
-                        <p
-                          className="
-                            mt-1
-                            text-[12px]
-                            text-[#68737D]
-                          "
-                        >
-                          Finance · Governance · Strategy
-                        </p>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </motion.article>
+                {leaders[0].name}
+              </h3>
+
+              <p
+                className="
+                  mt-2
+                  max-w-[700px]
+                  text-[12px]
+                  font-bold
+                  uppercase
+                  leading-5
+                  tracking-[0.09em]
+                  text-[#087F8C]
+                "
+              >
+                {leaders[0].role}
+              </p>
+            </div>
+
+            <div
+              className="
+                hidden
+                h-11
+                w-11
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#2374A8]/35
+                bg-[#2374A8]/10
+                text-[#2374A8]
+                sm:flex
+              "
+            >
+              <Award size={19} strokeWidth={1.4} />
+            </div>
+          </div>
+
+          {/* Gold rule */}
+          <div
+            className="
+              mt-6
+              h-[2px]
+              w-14
+              bg-[#2374A8]
+              transition-all
+              duration-500
+              group-hover:w-24
+            "
+          />
+
+          <p
+            className="
+              mt-6
+              max-w-[720px]
+              text-[15px]
+              leading-[1.7]
+              text-[#43515C]
+              sm:text-[16px]
+            "
+          >
+            {leaders[0].description}
+          </p>
+
+          {/* Bottom executive strip */}
+          <div
+            className="
+              mt-6
+              flex
+              flex-wrap
+              items-center
+              gap-x-8
+              gap-y-3
+              border-t
+              border-[#DCEAF0]
+              pt-5
+            "
+          >
+            <div>
+              <p
+                className="
+                  text-[10px]
+                  font-bold
+                  uppercase
+                  tracking-[0.2em]
+                  text-[#2374A8]
+                "
+              >
+                Leadership
+              </p>
+
+              <p className="mt-1 text-[12px] text-[#68737D]">
+                Strategy & Advisory
+              </p>
+            </div>
+
+            <div>
+              <p
+                className="
+                  text-[10px]
+                  font-bold
+                  uppercase
+                  tracking-[0.2em]
+                  text-[#2374A8]
+                "
+              >
+                Expertise
+              </p>
+
+              <p className="mt-1 text-[12px] text-[#68737D]">
+                Finance · Governance · Strategy
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</motion.article>
 
 
             {/* =====================================================
@@ -1470,46 +1392,7 @@ export default function OurTeamPage() {
 
                         <div className="min-w-0 flex-1">
 
-                          <div
-                            className="
-                              flex
-                              items-center
-                              justify-between
-                              gap-3
-                            "
-                          >
-
-                            <span
-                              className="
-                                text-[10px]
-                                font-bold
-                                uppercase
-                                tracking-[0.2em]
-                                text-[#2374A8]
-                              "
-                            >
-                              0{index + 2} / Leadership
-                            </span>
-
-                            <span
-                              className="
-                                flex
-                                h-9
-                                w-9
-                                shrink-0
-                                items-center
-                                justify-center
-                                rounded-full
-                                border
-                                border-[#087F8C]/40
-                                bg-[#087F8C]/15
-                                text-[#087F8C]
-                              "
-                            >
-                              <Icon size={16} />
-                            </span>
-
-                          </div>
+                          
 
 
                           <h3
@@ -1644,334 +1527,241 @@ export default function OurTeamPage() {
                 "
               >
 
-                {team.map((person, index) => {
+          {team.map((person, index) => {
+  const Icon = person.icon;
 
-                  const Icon = person.icon;
+  return (
+    <motion.article
+      key={person.name}
+      initial={{
+        opacity: 0,
+        y: 24,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.15,
+      }}
+      transition={{
+        duration: 0.55,
+        delay: index * 0.06,
+      }}
+      whileHover={{
+        y: -6,
+      }}
+      className="
+        group
+        relative
+        overflow-hidden
+        rounded-[20px]
+        border
+        border-[#DCEAF0]
+        bg-[#FAFBFA]
+        shadow-[0_10px_26px_rgba(11,36,56,.07)]
+        transition-all
+        duration-300
+        hover:border-[#2374A8]/70
+        hover:shadow-[0_14px_32px_rgba(11,36,56,.10)]
+      "
+    >
+      {/* Folding paper */}
+      <FoldingPaper />
 
-                  return (
-                    <motion.article
-                      key={person.name}
+      {/* CARD TOP / PROFILE */}
+      <div
+        className="
+          relative
+          overflow-hidden
+          bg-gradient-to-br
+          from-[#E5F0F5]
+          via-[#FAFBFA]
+          to-[#EEF5F8]
+          p-4
+          sm:p-5
+        "
+      >
+        {/* Subtle teal glow */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            -right-16
+            -top-16
+            h-40
+            w-40
+            rounded-full
+            bg-[#087F8C]/15
+            blur-3xl
+            transition-transform
+            duration-700
+            group-hover:scale-150
+          "
+        />
 
-                      initial={{
-                        opacity: 0,
-                        y: 24,
-                      }}
+        <div
+          className="
+            relative
+            flex
+            items-start
+            gap-4
+          "
+        >
+          {/* IMAGE */}
+          <div
+            className="
+              relative
+              h-[100px]
+              w-[82px]
+              shrink-0
+              overflow-hidden
+              rounded-[18px]
+              border-2
+              border-[#2374A8]
+              bg-[#DCEAF0]
+              shadow-[0_12px_30px_rgba(0,0,0,.25)]
+            "
+          >
+            <img
+              src={person.image}
+              alt={person.name}
+              className="
+                h-full
+                w-full
+                object-cover
+                transition-transform
+                duration-700
+                group-hover:scale-105
+              "
+            />
 
-                      whileInView={{
-                        opacity: 1,
-                        y: 0,
-                      }}
+            {/* Teal icon */}
+            <div
+              className="
+                absolute
+                bottom-0
+                left-0
+                flex
+                h-8
+                w-8
+                items-center
+                justify-center
+                rounded-tr-[12px]
+                bg-[#087F8C]
+                text-[#0B2438]
+                shadow-lg
+              "
+            >
+              <Icon
+                size={14}
+                strokeWidth={1.6}
+              />
+            </div>
+          </div>
 
-                      viewport={{
-                        once: true,
-                        amount: 0.15,
-                      }}
+          {/* DETAILS */}
+          <div
+            className="
+              min-w-0
+              flex-1
+              pt-1
+            "
+          >
+            {/* Name */}
+            <h3
+              className="
+                mt-3
+                text-[18px]
+                font-semibold
+                leading-5
+                tracking-[-0.025em]
+                text-[#0B2438]
+                sm:text-[19px]
+              "
+            >
+              {person.name}
+            </h3>
 
-                      transition={{
-                        duration: 0.55,
-                        delay: index * 0.06,
-                      }}
+            {/* Role */}
+            <p
+              className="
+                mt-2
+                text-[11px]
+                font-bold
+                uppercase
+                leading-4
+                tracking-[0.08em]
+                text-[#087F8C]
+              "
+            >
+              {person.role}
+            </p>
 
-                      whileHover={{
-                        y: -6,
-                      }}
+            {/* Blue accent */}
+            <div
+              className="
+                mt-4
+                h-[2px]
+                w-9
+                bg-[#2374A8]
+                transition-all
+                duration-500
+                group-hover:w-16
+              "
+            />
+          </div>
+        </div>
+      </div>
 
-                      className="
-                        group
-                        relative
-                        overflow-hidden
-                        rounded-[20px]
-                        border
-                        border-[#DCEAF0]
-                        bg-[#FAFBFA]
-                        shadow-[0_10px_26px_rgba(11,36,56,.07)]
-                        transition-all
-                        duration-300
-                        hover:border-[#2374A8]/70
-                        hover:shadow-[0_14px_32px_rgba(11,36,56,.10)]
-                      "
-                    >
+      {/* CARD CONTENT */}
+      <div
+        className="
+          relative
+          flex
+          h-full
+          flex-col
+          bg-[#FAFBFA]
+          p-4
+          sm:p-5
+        "
+      >
+        <p
+          className="
+            text-[15px]
+            leading-[1.7]
+            text-[#43515C]
+            sm:text-[16px]
+          "
+        >
+          {person.description}
+        </p>
 
-                      {/* Folding paper */}
-
-                      <FoldingPaper />
-
-
-                      {/* CARD TOP / PROFILE */}
-
-                      <div
-                        className="
-                          relative
-                          overflow-hidden
-                          bg-gradient-to-br
-                          from-[#E5F0F5]
-                          via-[#FAFBFA]
-                          to-[#EEF5F8]
-                          p-4
-                          sm:p-5
-                        "
-                      >
-
-                        {/* subtle teal glow */}
-
-                        <div
-                          className="
-                            pointer-events-none
-                            absolute
-                            -right-16
-                            -top-16
-                            h-40
-                            w-40
-                            rounded-full
-                            bg-[#087F8C]/15
-                            blur-3xl
-                            transition-transform
-                            duration-700
-                            group-hover:scale-150
-                          "
-                        />
-
-
-                        <div
-                          className="
-                            relative
-                            flex
-                            items-start
-                            gap-4
-                          "
-                        >
-
-                          {/* IMAGE */}
-
-                          <div
-                            className="
-                              relative
-                              h-[100px]
-                              w-[82px]
-                              shrink-0
-                              overflow-hidden
-                              rounded-[18px]
-                              border-2
-                              border-[#2374A8]
-                              bg-[#DCEAF0]
-                              shadow-[0_12px_30px_rgba(0,0,0,.25)]
-                            "
-                          >
-
-                            <img
-                              src={person.image}
-                              alt={person.name}
-                              className="
-                                h-full
-                                w-full
-                                object-cover
-                                transition-transform
-                                duration-700
-                                group-hover:scale-105
-                              "
-                            />
-
-
-                            {/* Teal icon */}
-
-                            <div
-                              className="
-                                absolute
-                                bottom-0
-                                left-0
-                                flex
-                                h-8
-                                w-8
-                                items-center
-                                justify-center
-                                rounded-tr-[12px]
-                                bg-[#087F8C]
-                                text-[#0B2438]
-                                shadow-lg
-                              "
-                            >
-                              <Icon
-                                size={14}
-                                strokeWidth={1.6}
-                              />
-                            </div>
-
-                          </div>
-
-
-                          {/* DETAILS */}
-
-                          <div
-                            className="
-                              min-w-0
-                              flex-1
-                              pt-1
-                            "
-                          >
-
-                            {/* Number + arrow */}
-
-                            <div
-                              className="
-                                flex
-                                items-start
-                                justify-between
-                                gap-3
-                              "
-                            >
-
-                              <span
-                                className="
-                                  text-[10px]
-                                  font-bold
-                                  uppercase
-                                  tracking-[0.22em]
-                                  text-[#2374A8]
-                                "
-                              >
-                                0{index + 1} / Expert
-                              </span>
-
-
-                              <ArrowUpRight
-                                size={16}
-                                className="
-                                  shrink-0
-                                  text-[#087F8C]
-                                  transition-all
-                                  duration-300
-                                  group-hover:-translate-y-1
-                                  group-hover:translate-x-1
-                                "
-                              />
-
-                            </div>
-
-
-                            {/* Name */}
-
-                            <h3
-                              className="
-                                mt-3
-                                text-[18px]
-                                font-semibold
-                                leading-5
-                                tracking-[-0.025em]
-                                text-[#0B2438]
-                                sm:text-[19px]
-                              "
-                            >
-                              {person.name}
-                            </h3>
-
-
-                            {/* Role */}
-
-                            <p
-                              className="
-                                mt-2
-                                text-[11px]
-                                font-bold
-                                uppercase
-                                leading-4
-                                tracking-[0.08em]
-                                text-[#087F8C]
-                              "
-                            >
-                              {person.role}
-                            </p>
-
-
-                            {/* Gold accent */}
-
-                            <div
-                              className="
-                                mt-4
-                                h-[2px]
-                                w-9
-                                bg-[#2374A8]
-                                transition-all
-                                duration-500
-                                group-hover:w-16
-                              "
-                            />
-
-                          </div>
-
-                        </div>
-
-                      </div>
-
-
-                      {/* CARD CONTENT */}
-
-                      <div
-                        className="
-                          relative
-                          flex
-                          h-full
-                          flex-col
-                          bg-[#FAFBFA]
-                          p-4
-                          sm:p-5
-                        "
-                      >
-
-                        <p
-                          className="
-                            text-[15px]
-                            leading-[1.7]
-                            text-[#43515C]
-                            sm:text-[16px]
-                          "
-                        >
-                          {person.description}
-                        </p>
-
-
-                        {/* Bottom detail */}
-
-                        <div
-                          className="
-                            mt-5
-                            flex
-                            items-center
-                            justify-between
-                          "
-                        >
-
-                          <span
-                            className="
-                              text-[10px]
-                              font-bold
-                              uppercase
-                              tracking-[0.22em]
-                              text-[#087F8C]
-                            "
-                          >
-                            IBS / Expertise
-                          </span>
-
-
-                          <span
-                            className="
-                              h-[2px]
-                              w-10
-                              bg-[#2374A8]
-                              transition-all
-                              duration-500
-                              group-hover:w-16
-                            "
-                          />
-
-                        </div>
-
-                      </div>
-
-                    </motion.article>
-                  );
-
-                })}
+        {/* Bottom detail - only accent line */}
+        <div
+          className="
+            mt-5
+            flex
+            items-center
+            justify-end
+          "
+        >
+          <span
+            className="
+              h-[2px]
+              w-10
+              bg-[#2374A8]
+              transition-all
+              duration-500
+              group-hover:w-16
+            "
+          />
+        </div>
+      </div>
+    </motion.article>
+  );
+})}
 
               </div>
 
@@ -2064,257 +1854,160 @@ export default function OurTeamPage() {
                   xl:grid-cols-3
                 "
               >
+{leaders.slice(3).map((leader, index) => {
+  return (
+    <motion.article
+      key={leader.name}
+      initial={{
+        opacity: 0,
+        y: 25,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.12,
+      }}
+      transition={{
+        duration: 0.55,
+        delay: index * 0.05,
+      }}
+      whileHover={{
+        y: -6,
+      }}
+      className="
+        group
+        relative
+        overflow-hidden
+        rounded-[20px]
+        border
+        border-[#DCEAF0]
+        bg-[#FAFBFA]
+        shadow-[0_18px_45px_rgba(0,0,0,.18)]
+      "
+    >
+      {/* Folding paper */}
+      <FoldingPaper />
 
-                {leaders.slice(3).map((leader, index) => {
+      <div
+        className="
+          absolute
+          inset-x-0
+          top-0
+          h-[3px]
+          bg-gradient-to-r
+          from-[#2374A8]
+          via-[#087F8C]
+          to-[#2374A8]
+        "
+      />
 
-                  const icons = [
-                    BriefcaseBusiness,
-                    UsersRound,
-                    Target,
-                    BrainCircuit,
-                    Lightbulb,
-                    ShieldCheck,
-                    Award,
-                  ];
+      <div
+        className="
+          flex
+          items-center
+          gap-4
+          bg-gradient-to-r
+          from-[#EEF5F8]
+          to-[#E5F0F5]
+          p-5
+        "
+      >
+        <div
+          className="
+            relative
+            h-[76px]
+            w-[76px]
+            shrink-0
+            overflow-hidden
+            rounded-[18px]
+            border-2
+            border-[#2374A8]/80
+            bg-[#DCEAF0]
+          "
+        >
+          <img
+            src={leader.image}
+            alt={leader.name}
+            className="
+              h-full
+              w-full
+              object-cover
+            "
+          />
+        </div>
 
-                  const Icon =
-                    icons[index % icons.length];
+        <div
+          className="
+            min-w-0
+            flex-1
+          "
+        >
+          <h3
+            className="
+              text-[18px]
+              font-semibold
+              leading-5
+              tracking-[-0.02em]
+              text-[#0B2438]
+            "
+          >
+            {leader.name}
+          </h3>
 
-                  return (
-                    <motion.article
-                      key={leader.name}
+          <p
+            className="
+              mt-1
+              text-[10px]
+              font-bold
+              uppercase
+              leading-3.5
+              tracking-[0.07em]
+              text-[#087F8C]
+            "
+          >
+            {leader.role}
+          </p>
+        </div>
+      </div>
 
-                      initial={{
-                        opacity: 0,
-                        y: 25,
-                      }}
+      <div className="p-4">
+        <p
+          className="
+            text-[15px]
+            leading-[1.65]
+            text-[#43515C]
+            sm:text-[16px]
+          "
+        >
+          {leader.description}
+        </p>
 
-                      whileInView={{
-                        opacity: 1,
-                        y: 0,
-                      }}
-
-                      viewport={{
-                        once: true,
-                        amount: 0.12,
-                      }}
-
-                      transition={{
-                        duration: 0.55,
-                        delay: index * 0.05,
-                      }}
-
-                      whileHover={{
-                        y: -6,
-                      }}
-
-                      className="
-                        group
-                        relative
-                        overflow-hidden
-                        rounded-[20px]
-                        border
-                        border-[#DCEAF0]
-                        bg-[#FAFBFA]
-                        shadow-[0_18px_45px_rgba(0,0,0,.18)]
-                      "
-                    >
-
-                      {/* Folding paper */}
-
-                      <FoldingPaper />
-
-
-                      <div
-                        className="
-                          absolute
-                          inset-x-0
-                          top-0
-                          h-[3px]
-                          bg-gradient-to-r
-                          from-[#2374A8]
-                          via-[#087F8C]
-                          to-[#2374A8]
-                        "
-                      />
-
-
-                      <div
-                        className="
-                          flex
-                          items-center
-                          gap-4
-                          bg-gradient-to-r
-                          from-[#EEF5F8]
-                          to-[#E5F0F5]
-                          p-5
-                        "
-                      >
-
-                        <div
-                          className="
-                            relative
-                            h-[76px]
-                            w-[76px]
-                            shrink-0
-                            overflow-hidden
-                            rounded-[18px]
-                            border-2
-                            border-[#2374A8]/80
-                            bg-[#DCEAF0]
-                          "
-                        >
-
-                          <img
-                            src={leader.image}
-                            alt={leader.name}
-                            className="
-                              h-full
-                              w-full
-                              object-cover
-                            "
-                          />
-
-                        </div>
-
-
-                        <div
-                          className="
-                            min-w-0
-                            flex-1
-                          "
-                        >
-
-                          <div
-                            className="
-                              mb-2
-                              flex
-                              items-center
-                              justify-between
-                              gap-2
-                            "
-                          >
-
-                            <span
-                              className="
-                                text-[10px]
-                                font-bold
-                                uppercase
-                                tracking-[0.18em]
-                                text-[#2374A8]
-                              "
-                            >
-                              0{index + 4} / Leadership
-                            </span>
-
-
-                            <span
-                              className="
-                                flex
-                                h-7
-                                w-7
-                                shrink-0
-                                items-center
-                                justify-center
-                                rounded-full
-                                border
-                                border-[#087F8C]/40
-                                bg-[#087F8C]/15
-                                text-[#087F8C]
-                              "
-                            >
-                              <Icon size={13} />
-                            </span>
-
-                          </div>
-
-
-                          <h3
-                            className="
-                              text-[18px]
-                              font-semibold
-                              leading-5
-                              tracking-[-0.02em]
-                              text-[#0B2438]
-                            "
-                          >
-                            {leader.name}
-                          </h3>
-
-
-                          <p
-                            className="
-                              mt-1
-                              text-[10px]
-                              font-bold
-                              uppercase
-                              leading-3.5
-                              tracking-[0.07em]
-                              text-[#087F8C]
-                            "
-                          >
-                            {leader.role}
-                          </p>
-
-                        </div>
-
-                      </div>
-
-
-                      <div className="p-4">
-
-                        <p
-                          className="
-                            text-[15px]
-                            leading-[1.65]
-                            text-[#43515C]
-                            sm:text-[16px]
-                          "
-                        >
-                          {leader.description}
-                        </p>
-
-
-                        <div
-                          className="
-                            mt-4
-                            flex
-                            items-center
-                            justify-between
-                          "
-                        >
-
-                          <span
-                            className="
-                              h-[2px]
-                              w-9
-                              bg-[#2374A8]
-                              transition-all
-                              duration-500
-                              group-hover:w-16
-                            "
-                          />
-
-                          <span
-                            className="
-                              text-[10px]
-                              font-bold
-                              uppercase
-                              tracking-[0.2em]
-                              text-[#087F8C]
-                            "
-                          >
-                            IBS Leadership
-                          </span>
-
-                        </div>
-
-                      </div>
-
-                    </motion.article>
-                  );
-
-                })}
+        <div
+          className="
+            mt-4
+            flex
+            items-center
+            justify-between
+          "
+        >
+          <span
+            className="
+              h-[2px]
+              w-9
+              bg-[#2374A8]
+              transition-all
+              duration-500
+              group-hover:w-16
+            "
+          />
+        </div>
+      </div>
+    </motion.article>
+  );
+})}
 
               </div>
 

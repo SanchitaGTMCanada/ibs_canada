@@ -8,6 +8,8 @@ import {
   Award,
   Users,
   Lightbulb,
+  
+
 } from "lucide-react";
 
 import { iconMap } from "./iconMap";
@@ -1047,10 +1049,10 @@ export default function ServicePrograms({
                 />
               </div>
 
-              <p className="max-w-[350px] text-[17px] leading-[1.7] text-[#202832]/55">
-                Practical education connecting
-                people, skills and opportunity.
-              </p>
+             <p className="max-w-[350px] text-[17px] leading-[1.7] text-[#202832]/55">
+  Building stronger communities through strategic
+  partnerships, expertise and practical solutions.
+</p>
             </div>
           </div>
 
@@ -2126,10 +2128,10 @@ export default function ServicePrograms({
                       shadow-[0_8px_25px_rgba(198,161,91,0.3)]
                     "
                   >
-                    <ArrowUpRight
-                      size={18}
-                      strokeWidth={1}
-                    />
+   <Sparkles
+  size={19}
+  strokeWidth={1.5}
+/>
                   </motion.div>
                 </div>
 

@@ -457,13 +457,13 @@ export default function AboutSection() {
                 absolute
                 left-0
                 top-0
-                h-[82%]
-                w-[78%]
+                h-[100%]
+                w-[98%]
                 overflow-hidden
                 rounded-[36px]
                 bg-[#F6F4EF]
                 shadow-[0_30px_80px_rgba(11,31,58,0.14)]
-                sm:w-[72%]
+                sm:w-[80%]
               "
             >
               <Image
@@ -498,7 +498,7 @@ export default function AboutSection() {
                 FLOATING PANEL
             ================================================= */}
 
-            <motion.div
+            {/* <motion.div
               initial={{
                 opacity: 0,
                 y: 45,
@@ -615,7 +615,7 @@ export default function AboutSection() {
 </div>
 
 
-            </motion.div>
+            </motion.div> */}
 
             {/* =================================================
                 IBS CIRCLE
@@ -1157,13 +1157,13 @@ export default function AboutSection() {
 </p>
   </div>
 
-  <div className="mt-3 flex items-center gap-2 pl-6">
+  {/* <div className="mt-3 flex items-center gap-2 pl-6">
     <span className="h-1 w-1 rounded-full bg-[#087F8C]" />
 
     <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#202832]/40">
       Strategy · Execution · Capability
     </span>
-  </div>
+  </div> */}
 </motion.div>
           </div>
 
@@ -1459,13 +1459,13 @@ export default function AboutSection() {
         transfer.
       </p>
 
-      <div className="flex shrink-0 items-center gap-2.5">
+      {/* <div className="flex shrink-0 items-center gap-2.5">
         <span className="h-[5px] w-[5px] rounded-full bg-[#C6A15B] shadow-[0_0_12px_rgba(198,161,91,0.8)]" />
 
         <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/60 sm:text-[11px]">
           Strategy / Execution / Capability
         </span>
-      </div>
+      </div> */}
     </div>
   </motion.div>
 </div>

@@ -421,44 +421,6 @@ export default function ServiceHero({
           SCROLL INDICATOR
       ====================================================== */}
 
-      <motion.div
-        animate={
-          reduceMotion
-            ? {}
-            : {
-                y: [0, 7, 0],
-              }
-        }
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="
-          absolute
-          bottom-7
-          left-1/2
-          z-30
-          hidden
-          -translate-x-1/2
-          items-center
-          gap-3
-          text-[#43515C]/75
-          lg:flex
-        "
-      >
-        <ArrowDown size={14} />
-
-        <span
-          className="
-            text-[8px]
-            uppercase
-            tracking-[0.3em]
-          "
-        >
-          Explore
-        </span>
-      </motion.div>
     </section>
   );
 }

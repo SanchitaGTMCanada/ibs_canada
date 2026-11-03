@@ -79,7 +79,7 @@ const contactDetails = [
   },
   {
     icon: Clock3,
-    label: "Availability",
+    label: "Round the clock",
     value: "Monday – Friday",
     href: null,
   },
@@ -1647,7 +1647,7 @@ export default function ContactPage() {
           lg:text-[18px]
         "
       >
-        IBS provides secure file-sharing access for staff and clients through its designated platform. Access should be requested through the appropriate IBS file lead, manager or internal administrator.
+        IBS provides secure file-sharing access for staff and clients through its designated platform. 
       </p>
     </div>
 
@@ -1700,7 +1700,7 @@ export default function ContactPage() {
               sm:text-[21px]
             "
           >
-            Are you an IBS Staff?
+            Are you an Employee?
           </h3>
         </div>
 
@@ -1714,12 +1714,7 @@ export default function ContactPage() {
             sm:leading-8
           "
         >
-          Please keep your User ID and Password
-          handy. Please e-mail your requirement
-          to your supervisor who will forward the
-          requisition to the in-house ShareFile
-          system administrator to get you the
-          requested access.
+          Please email your supervisor with your User ID and Password for access.
         </p>
       </div>
 
@@ -1775,124 +1770,298 @@ export default function ContactPage() {
             sm:leading-8
           "
         >
-          This is hassle-free for you. Please
-          contact your File Lead or Manager,
-          Operational Support at +1 867-669-0242,
-          who will assist you to get access to
-          ShareFile.
+          Please contact your designated File Lead or our Manager of Operational Support at +1 867-669-0242 for assistance to secure access.
         </p>
       </div>
     </div>
 
     {/* What you need to do */}
-    <div
-      className="
-        mx-auto
-        mt-6
-        max-w-[1050px]
-        rounded-[24px]
-        border
-        border-[#CFE2E9]
-        bg-white
-        p-7
-        shadow-[0_10px_35px_rgba(11,36,56,0.05)]
-        sm:p-9
-      "
-    >
-      <div className="flex items-center gap-4">
-        <span
+ <div
+  className="
+    group
+    relative
+    mx-auto
+    mt-6
+    max-w-[1050px]
+    overflow-hidden
+    rounded-[22px]
+    border
+    border-[#DCEAF0]
+    bg-gradient-to-br
+    from-[#F0F7FA]
+    via-white
+    to-[#EAF4F6]
+    p-6
+    shadow-[0_14px_40px_rgba(11,36,56,.08)]
+    transition-all
+    duration-500
+    hover:shadow-[0_20px_50px_rgba(11,36,56,.12)]
+    sm:p-9
+  "
+>
+  {/* Decorative accent */}
+  <div
+    className="
+      absolute
+      left-0
+      top-0
+      h-full
+      w-[4px]
+      bg-gradient-to-b
+      from-[#2374A8]
+      via-[#087F8C]
+      to-[#2374A8]
+    "
+  />
+
+  {/* Decorative glow */}
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-20
+      -top-20
+      h-64
+      w-64
+      rounded-full
+      bg-[#087F8C]/[0.07]
+      blur-[70px]
+    "
+  />
+
+  <div className="relative">
+
+    {/* Heading */}
+    <div className="flex items-center gap-4">
+
+      <div
+        className="
+          flex
+          h-12
+          w-12
+          shrink-0
+          items-center
+          justify-center
+          rounded-[15px]
+          border
+          border-[#087F8C]/20
+          bg-[#087F8C]/10
+          text-[#087F8C]
+          shadow-sm
+          transition-transform
+          duration-300
+          group-hover:scale-105
+        "
+      >
+        <CheckCircle2 size={23} strokeWidth={1.8} />
+      </div>
+
+      <div>
+        <p
           className="
-            flex
-            h-12
-            w-12
-            shrink-0
-            items-center
-            justify-center
-            rounded-xl
-            bg-[#E0F1F3]
+            mb-1
+            text-[10px]
+            font-bold
+            uppercase
+            tracking-[0.22em]
             text-[#087F8C]
           "
         >
-          <CheckCircle2 size={22} />
-        </span>
+          Quick Guide
+        </p>
 
         <h3
           className="
-            text-[19px]
+            text-[20px]
             font-semibold
+            tracking-[-0.025em]
             text-[#0B2438]
-            sm:text-[22px]
+            sm:text-[23px]
           "
         >
           What you need to do
         </h3>
       </div>
 
+    </div>
+
+    {/* Content */}
+    <div
+      className="
+        mt-7
+        grid
+        gap-4
+        sm:grid-cols-2
+      "
+    >
+
+      {/* Step 1 */}
       <div
         className="
-          mt-6
-          grid
-          gap-5
-          text-[14px]
-          leading-7
-          text-[#43515C]
-          sm:grid-cols-2
-          sm:text-[16px]
-          sm:leading-8
+          flex
+          items-start
+          gap-4
+          rounded-[16px]
+          border
+          border-[#DCEAF0]
+          bg-white/80
+          p-5
+          transition-all
+          duration-300
+          hover:border-[#087F8C]/40
+          hover:shadow-[0_8px_22px_rgba(11,36,56,.05)]
         "
       >
-        <p>
-          • You are required to save your document
-          in a particular folder of which you have
-          been given access to.
-        </p>
-
-        <p>
-          • You can simply drag and drop or import
-          any document to the folder you have been
-          given access to.
-        </p>
-      </div>
-
-      <div className="mt-8">
-        <a
-          href="#sharefile"
+        <span
           className="
-            group
-            inline-flex
+            flex
+            h-8
+            w-8
+            shrink-0
             items-center
-            gap-3
+            justify-center
             rounded-full
-            bg-[#087F8C]
-            px-7
-            py-4
-            text-[11px]
+            bg-[#E5F0F5]
+            text-[12px]
             font-bold
-            uppercase
-            tracking-[0.12em]
-            text-white
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:bg-[#066D78]
-            sm:text-[12px]
+            text-[#2374A8]
           "
-          style={{color: 'white'}}
         >
-          Login to ShareFile
+          01
+        </span>
 
-          <ArrowUpRight
-            size={17}
-            className="
-              transition-transform
-              duration-300
-              group-hover:translate-x-1
-              group-hover:-translate-y-1
-            "
-          />
-        </a>
+        <p
+          className="
+            text-[14px]
+            leading-7
+            text-[#43515C]
+            sm:text-[15px]
+          "
+        >
+          Simply save your document in the designated folder.
+        </p>
       </div>
+
+      {/* Step 2 */}
+      <div
+        className="
+          flex
+          items-start
+          gap-4
+          rounded-[16px]
+          border
+          border-[#DCEAF0]
+          bg-white/80
+          p-5
+          transition-all
+          duration-300
+          hover:border-[#087F8C]/40
+          hover:shadow-[0_8px_22px_rgba(11,36,56,.05)]
+        "
+      >
+        <span
+          className="
+            flex
+            h-8
+            w-8
+            shrink-0
+            items-center
+            justify-center
+            rounded-full
+            bg-[#E5F0F5]
+            text-[12px]
+            font-bold
+            text-[#2374A8]
+          "
+        >
+          02
+        </span>
+
+        <p
+          className="
+            text-[14px]
+            leading-7
+            text-[#43515C]
+            sm:text-[15px]
+          "
+        >
+          Drag and drop or import any document for hassle-free and secure storage.
+        </p>
+      </div>
+
     </div>
+
+    {/* Bottom action */}
+    <div
+      className="
+        mt-7
+        flex
+        flex-wrap
+        items-center
+        justify-between
+        gap-5
+        border-t
+        border-[#DCEAF0]
+        pt-6
+      "
+    >
+
+      <div>
+        <p className="text-[14px] font-semibold text-[#0B2438]">
+          Ready to get started?
+        </p>
+
+        <p className="mt-1 text-[12px] text-[#68737D]">
+          Access your secure document storage.
+        </p>
+      </div>
+
+    <a
+  href="https://epryellowknife.sharefile.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    group/btn
+    inline-flex
+    items-center
+    gap-3
+    rounded-full
+    bg-[#087F8C]
+    px-7
+    py-3.5
+    text-[11px]
+    font-bold
+    uppercase
+    tracking-[0.12em]
+    text-white
+    shadow-[0_8px_20px_rgba(8,127,140,.20)]
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:bg-[#066D78]
+    hover:shadow-[0_12px_25px_rgba(8,127,140,.28)]
+    sm:text-[12px]
+  "
+  style={{ color: "#ffffff" }}
+>
+  Login to ShareFile
+
+  <ArrowUpRight
+    size={17}
+    className="
+      text-white
+      transition-transform
+      duration-300
+      group-hover/btn:translate-x-1
+      group-hover/btn:-translate-y-1
+    "
+  />
+</a>
+
+    </div>
+
+  </div>
+</div>
   </div>
 </section>
 

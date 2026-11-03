@@ -1489,7 +1489,7 @@ export default function ServicesSection() {
                     BOTTOM CONTENT
                 ================================================= */}
 
-                <div
+                {/* <div
                   className="
                     flex
                     flex-wrap
@@ -1573,7 +1573,7 @@ export default function ServicesSection() {
                       />
                     </span>
                   </Link>
-                </div>
+                </div> */}
               </motion.div>
             </AnimatePresence>
           </motion.div>

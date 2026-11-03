@@ -599,7 +599,7 @@ export default function Hero() {
       {/* =====================================================
           SCROLL INDICATOR
       ====================================================== */}
-
+{/* 
       <motion.div
         initial={{
           opacity: 0,
@@ -648,7 +648,7 @@ export default function Hero() {
             bg-[#C6A15B]
           "
         />
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }

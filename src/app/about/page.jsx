@@ -19,6 +19,7 @@ import {
   Target,
   UsersRound,
   Zap,
+  CheckCircle2
 } from "lucide-react";
 
 
@@ -785,7 +786,7 @@ export default function AboutPage() {
       className="max-w-[650px]"
     >
       <span className="text-[12px] font-bold uppercase tracking-[0.25em] text-[#087F8C] sm:text-[13px]">
-        03 / The journey
+        03 / Our Principles
       </span>
 
       <h2
@@ -847,7 +848,7 @@ export default function AboutPage() {
       />
 
       {/* ================================================
-          VALUE CARDS
+           CARDS
       ================================================ */}
 
       <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:mt-6 lg:grid-cols-3 lg:gap-6">
@@ -1041,15 +1042,16 @@ export default function AboutPage() {
                 </div>
 
                 {/* Arrow */}
-                <span
-                  className={`
-                    flex h-10 w-10 shrink-0 items-center
-                    justify-center rounded-full border
-                    transition-all duration-300 ${style.arrow}
-                  `}
-                >
-                  <ArrowRight size={17} />
-                </span>
+                {/* Value indicator */}
+<span
+  className={`
+    flex h-10 w-10 shrink-0 items-center
+    justify-center rounded-full border
+    transition-all duration-300 ${style.arrow}
+  `}
+>
+  <CheckCircle2 size={19} strokeWidth={1.8} />
+</span>
               </div>
 
               {/* Animated bottom accent */}
@@ -1231,7 +1233,7 @@ export default function AboutPage() {
           <span className="h-[2px] w-4 rounded-full bg-[#2374A8]" />
 
           <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#087F8C] sm:text-[12px]">
-            05 / Principles
+            05 / Our Approach
           </span>
         </div>
 

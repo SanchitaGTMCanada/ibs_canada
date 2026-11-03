@@ -6,83 +6,101 @@ import { ArrowUp, MapPin, Sparkles } from "lucide-react";
 
 export default function Footer() {
   const year = new Date().getFullYear();
+const socials = [
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/ibsgroupcanada/",
+    type: "instagram",
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/ibsgroupcanada/",
+    type: "facebook",
+  },
+  {
+    name: "X",
+    href: "https://x.com/ibsgroupcanada",
+    type: "x",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/ibsgroupcanada/",
+    type: "linkedin",
+  },
+];
 
-  const socials = [
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/ibsgroupcanada/",
-      type: "instagram",
-    },
-    {
-      name: "X",
-      href: "https://x.com/ibsgroupcanada",
-      type: "x",
-    },
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/company/ibsgroupcanada/",
-      type: "linkedin",
-    },
-  ];
+const SocialIcon = ({ type }) => {
+  if (type === "instagram") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className="h-[18px] w-[18px]"
+        fill="none"
+        aria-hidden="true"
+      >
+        <rect
+          x="3"
+          y="3"
+          width="18"
+          height="18"
+          rx="5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="4.2"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+        <circle cx="17.4" cy="6.7" r="1" fill="currentColor" />
+      </svg>
+    );
+  }
 
-  const SocialIcon = ({ type }) => {
-    if (type === "instagram") {
-      return (
-        <svg
-          viewBox="0 0 24 24"
-          className="h-[18px] w-[18px]"
-          fill="none"
-          aria-hidden="true"
-        >
-          <rect
-            x="3"
-            y="3"
-            width="18"
-            height="18"
-            rx="5"
-            stroke="currentColor"
-            strokeWidth="1.8"
-          />
-          <circle
-            cx="12"
-            cy="12"
-            r="4.2"
-            stroke="currentColor"
-            strokeWidth="1.8"
-          />
-          <circle cx="17.4" cy="6.7" r="1" fill="currentColor" />
-        </svg>
-      );
-    }
+  // Facebook
+  if (type === "facebook") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className="h-[20px] w-[20px]"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V21h3.4Z" />
+      </svg>
+    );
+  }
 
-    if (type === "linkedin") {
-      return (
-        <svg
-          viewBox="0 0 24 24"
-          className="h-[18px] w-[18px]"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M5.2 8.3H2.4V21h2.8V8.3ZM3.8 3C2.8 3 2 3.8 2 4.8s.8 1.8 1.8 1.8 1.8-.8 1.8-1.8S4.8 3 3.8 3ZM21.6 13.7c0-3.8-2-5.7-4.8-5.7-2.2 0-3.2 1.2-3.8 2v-1.7h-2.8V21H13v-6.3c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 1.9 2.1 3.5V21h4v-7.3Z" />
-        </svg>
-      );
-    }
+  if (type === "linkedin") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className="h-[18px] w-[18px]"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M5.2 8.3H2.4V21h2.8V8.3ZM3.8 3C2.8 3 2 3.8 2 4.8s.8 1.8 1.8 1.8 1.8-.8 1.8-1.8S4.8 3 3.8 3ZM21.6 13.7c0-3.8-2-5.7-4.8-5.7-2.2 0-3.2 1.2-3.8 2v-1.7h-2.8V21H13v-6.3c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 1.9 2.1 3.5V21h4v-7.3Z" />
+      </svg>
+    );
+  }
 
-    if (type === "x") {
-      return (
-        <svg
-          viewBox="0 0 24 24"
-          className="h-[17px] w-[17px]"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M18.244 2H21.5l-7.11 8.13L22.75 22h-6.55l-5.13-6.71L5.2 22H1.94l7.6-8.69L1.5 2h6.72l4.64 6.14L18.244 2Zm-1.15 17.88h1.81L7.22 4h-1.94l11.814 15.88Z" />
-        </svg>
-      );
-    }
+  if (type === "x") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className="h-[17px] w-[17px]"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M18.244 2H21.5l-7.11 8.13L22.75 22h-6.55l-5.13-6.71L5.2 22H1.94l7.6-8.69L1.5 2h6.72l4.64 6.14L18.244 2Zm-1.15 17.88h1.81L7.22 4h-1.94l11.814 15.88Z" />
+      </svg>
+    );
+  }
 
-    return null;
-  };
+  return null;
+};
 
   const scrollToTop = () => {
     window.scrollTo({
