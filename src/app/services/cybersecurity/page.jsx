@@ -347,7 +347,7 @@ export default function CybersecurityPage() {
         {/* Image 1 — Main Cybersecurity Image */}
         <div className="absolute left-3 top-0 z-10 w-[78%] overflow-hidden shadow-[0_18px_40px_rgba(16,42,67,.18)]">
           <img
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85"
+            src="/cyber/c-2.jpg"
             alt="Cybersecurity professional working at a computer"
             className="h-[240px] w-full object-cover sm:h-[280px]"
           />
@@ -362,7 +362,7 @@ export default function CybersecurityPage() {
         {/* Image 2 — Server Security */}
         <div className="absolute right-0 top-[190px] z-20 w-[53%] overflow-hidden border-[7px] border-[#F5F3EE] shadow-[0_16px_35px_rgba(16,42,67,.16)]">
           <img
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=85"
+            src="/cyber/c-1.jpg"
             alt="Secure server infrastructure"
             className="h-[160px] w-full object-cover"
           />
@@ -371,7 +371,7 @@ export default function CybersecurityPage() {
         {/* Image 3 — Digital Protection */}
         <div className="absolute left-0 top-[350px] z-10 w-[62%] overflow-hidden border-[7px] border-[#F5F3EE] shadow-[0_16px_35px_rgba(16,42,67,.16)]">
           <img
-            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=85"
+            src="/cyber/c-3.jpg"
             alt="Cybersecurity digital technology"
             className="h-[175px] w-full object-cover"
           />
@@ -380,7 +380,7 @@ export default function CybersecurityPage() {
         {/* Image 4 — Data Security */}
         <div className="absolute right-0 top-[530px] z-20 w-[65%] overflow-hidden border-[7px] border-[#F5F3EE] shadow-[0_16px_35px_rgba(16,42,67,.16)]">
           <img
-            src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=85"
+            src="/cyber/c-4.jpg"
             alt="Digital security and data protection"
             className="h-[170px] w-full object-cover"
           />
@@ -389,7 +389,7 @@ export default function CybersecurityPage() {
         {/* Image 5 — Technology Team */}
         <div className="absolute left-2 top-[690px] z-10 w-[55%] overflow-hidden border-[7px] border-[#F5F3EE] shadow-[0_16px_35px_rgba(16,42,67,.16)]">
           <img
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=85"
+            src="/cyber/c-5.jpg"
             alt="Technology team working together"
             className="h-[145px] w-full object-cover"
           />
