@@ -11,6 +11,7 @@ import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 
 const serviceLinks = [
+ 
   {
     number: "01",
     title: "Education & Training",
@@ -45,6 +46,11 @@ const serviceLinks = [
     number: "07",
     title: "Governance",
     href: "/services/governance",
+  },
+    {
+    number: "08",
+    title: "Cybersecurity",
+    href: "/services/cybersecurity",
   },
 ];
 

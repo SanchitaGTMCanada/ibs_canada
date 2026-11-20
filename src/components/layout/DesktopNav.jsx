@@ -73,6 +73,11 @@ const services = [
     title: "Governance",
     href: "/services/governance",
   },
+   {
+    number: "08",
+    title: "Cybersecurity",
+    href: "/services/cybersecurity",
+  },
 ];
 
 /* =========================================================

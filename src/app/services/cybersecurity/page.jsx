@@ -1,5 +1,7 @@
 "use client";
 
+import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
 import { useState } from "react";
 
 const services = [
@@ -209,49 +211,92 @@ export default function CybersecurityPage() {
   const [activeFaq, setActiveFaq] = useState(0);
   const [activeApproach, setActiveApproach] = useState(0);
 
-  return (
-    <main className="overflow-hidden bg-[#F5F3EE] text-[#102A43]">
-      {/* HERO — editorial split layout */}
-      <section className="relative isolate min-h-[540px] overflow-hidden bg-[#F5F3EE]">
-        <div className="absolute inset-0 -z-10">
-          <img
-            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=85"
-            alt=""
-            className="h-full w-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#F5F3EE] via-[#F5F3EE]/95 to-[#F5F3EE]/25" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#F5F3EE]/50 via-transparent to-white/10" />
-        </div>
+  return (<>
+  <Header/>
+   <main className="overflow-hidden bg-[#F5F3EE] text-[#102A43]">
+      
+  
 
-        <div className="mx-auto flex min-h-[540px] max-w-[1380px] items-center px-5 py-20 sm:px-9 lg:px-14">
-          <div className="max-w-[570px]">
-            <Eyebrow>Technology & Digital Protection</Eyebrow>
-            <h1 className="text-[46px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#102A43] sm:text-6xl lg:text-[75px]">
-              Cybersecurity
-            </h1>
-            <p className="mt-5 max-w-lg text-xl font-medium leading-7 text-[#167F86] sm:text-2xl">
-             Protect Your Business. Strengthen Your Security. Build Cyber Resilience.
-            </p>
-            <p className="mt-5 max-w-[510px] text-base leading-7 text-[#526273] sm:text-lg">
-             Advanced Cybersecurity Solutions for a Safer Digital Future
-            </p>
-            <p className="mt-3 max-w-[510px] text-base leading-7 text-[#526273] sm:text-lg">
-             At Innovative Business Solutions (IBS), we help organizations strengthen their cybersecurity posture through proactive risk management, advanced threat detection, endpoint protection, and security operations solutions.
-By combining cybersecurity expertise with advanced security technologies, including solutions powered by Arctic Wolf, we help businesses identify vulnerabilities, respond to emerging threats, and build a more resilient digital environment.
-            </p>
-            <a
-              href="#cyber-services"
-              className="mt-7 inline-flex items-center gap-3 border-b border-[#167F86] pb-2 text-[15px] font-bold uppercase tracking-[0.18em] text-[#102A43] transition hover:gap-5 hover:text-[#167F86]"
-            >
-              Schedule a Cybersecurity Consultation <Arrow />
-            </a>
-          </div>
-        </div>
-        <div className="absolute bottom-5 right-8 hidden items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.25em] text-[#526273] sm:flex">
-          <span className="h-px w-10 bg-[#167F86]" />
-          IBS Canada
-        </div>
-      </section>
+
+{/* HERO — editorial split layout */}
+
+{/* HERO — Cybersecurity */}
+
+{/* HERO — Cybersecurity */}
+<section className="relative isolate min-h-[600px] overflow-hidden bg-[#F5F3EE]">
+
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=85"
+      alt=""
+      className="h-full w-full object-cover object-center"
+    />
+
+    {/* White / Cream Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-r from-[#F5F3EE]/[98%] via-[#F5F3EE]/[88%] via-50% to-[#F5F3EE]/[25%]" />
+
+    {/* Soft Overall Brightness */}
+    <div className="absolute inset-0 bg-gradient-to-t from-[#F5F3EE]/40 via-[#F5F3EE]/10 to-[#FFFFFF]/30" />
+  </div>
+
+  {/* Hero Content */}
+  <div className="relative z-10 mx-auto flex min-h-[600px] max-w-[1380px] items-center px-5 pt-28 pb-16 sm:px-9 sm:pt-32 lg:px-14 lg:pt-36 lg:pb-20">
+
+    <div className="w-full max-w-[800px]">
+
+      {/* Eyebrow */}
+      <div className="mb-6">
+        <Eyebrow>Technology & Digital Protection</Eyebrow>
+      </div>
+
+      {/* Main Heading */}
+      <h1 className="text-[46px] font-bold leading-[1.05] tracking-[-0.045em] text-[#142F46] sm:text-[60px] lg:text-[72px]">
+        Cybersecurity
+      </h1>
+
+      {/* Subtitle */}
+      <p className="mt-5 max-w-[700px] text-[20px] font-medium leading-[1.45] text-[#173A57] sm:text-[23px]">
+        Protect Your Business. Strengthen Your Security. Build Cyber Resilience.
+      </p>
+
+      {/* Supporting Heading */}
+      <p className="mt-5 max-w-[750px] text-[18px] leading-[1.6] text-[#173A57] sm:text-[21px]">
+        Advanced Cybersecurity Solutions for a Safer Digital Future
+      </p>
+
+      {/* Description */}
+      <p className="mt-3 max-w-[800px] text-[17px] leading-[1.6] text-[#173A57] sm:text-[20px]">
+        At Innovative Business Solutions (IBS), we help organizations strengthen their cybersecurity posture through proactive risk management, advanced threat detection, endpoint protection, and security operations solutions.
+        By combining cybersecurity expertise with advanced security technologies, including solutions powered by Arctic Wolf, we help businesses identify vulnerabilities, respond to emerging threats, and build a more resilient digital environment.
+      </p>
+
+      {/* CTA Button */}
+      <a
+        href="#cyber-services"
+        className="mt-8 inline-flex items-center justify-center gap-3 rounded-full bg-[#0D8990] px-8 py-4 text-[14px] font-bold uppercase tracking-[0.12em] !text-white shadow-lg shadow-[#0D8990]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#08747B] hover:!text-white"
+      >
+        Schedule a Cybersecurity Consultation
+        <span className="!text-white">
+          <Arrow />
+        </span>
+      </a>
+
+    </div>
+  </div>
+
+  {/* Bottom Label */}
+  <div className="absolute bottom-5 right-8 z-10 hidden items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.25em] text-[#526273] sm:flex">
+    <span className="h-px w-10 bg-[#167F86]" />
+    IBS Canada
+  </div>
+
+</section>
+
+
+
+
+
 
       {/* INTRO / LEARNING JOURNEY-INSPIRED SERVICE STORY */}
       <section className="relative overflow-hidden bg-[#F5F3EE] px-5 py-16 sm:px-8 lg:py-24">
@@ -690,5 +735,8 @@ Whether you are looking to strengthen endpoint protection, implement managed sec
         </div>
       </section>
     </main>
+    <Footer/>
+  </>
+   
   );
 }
