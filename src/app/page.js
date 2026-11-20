@@ -4,7 +4,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import CTASection from "@/components/sections/CTASection";
 import Footer from "@/components/Footer";
-import IndustriesSection from "@/components/sections/IndustriesSection";
+import PricingDownloadSection from "@/components/part/PricingDownloadSection";
 
 
 
@@ -20,6 +20,7 @@ export default function Home() {
         <ServicesSection />
         {/* <CTASection/> */}
         {/* <IndustriesSection/> */}
+        <PricingDownloadSection/>
        
         <Footer/>
 

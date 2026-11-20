@@ -40,46 +40,45 @@ const navigation = [
 const services = [
   {
     number: "01",
+    title: "Cybersecurity",
+    href: "/services/cybersecurity",
+  },
+  {
+    number: "02",
     title: "Education & Training",
     href: "/services/education-training",
   },
   {
-    number: "02",
+    number: "03",
     title: "Engineering & Technical",
     href: "/services/engineering-technical",
   },
   {
-    number: "03",
-    title: "Infrastructure",
-    href: "/services/infrastructure",
-  },
-  {
     number: "04",
-    title: "Technology & IT Services",
-    href: "/services/technology-innovation",
-  },
-  {
-    number: "05",
-    title: "Social & Economic",
-    href: "/services/social-economic",
-  },
-  {
-    number: "06",
     title: "Financial Management",
     href: "/services/financial-management",
   },
   {
-    number: "07",
+    number: "05",
     title: "Governance",
     href: "/services/governance",
   },
-   {
+  {
+    number: "06",
+    title: "Infrastructure",
+    href: "/services/infrastructure",
+  },
+  {
+    number: "07",
+    title: "Social & Economic",
+    href: "/services/social-economic",
+  },
+  {
     number: "08",
-    title: "Cybersecurity",
-    href: "/services/cybersecurity",
+    title: "Technology & IT Services",
+    href: "/services/technology-innovation",
   },
 ];
-
 /* =========================================================
    COMPONENT
 ========================================================= */
